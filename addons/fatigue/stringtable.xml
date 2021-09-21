@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_Extended_Environment">
+
+	<!-- ####################################################################################### -->
+	<Package name="TFSRHS_Fatigue">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Fatigue">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFSRHS_Fatigue_Title">
+				<Original>TFSRHS Fatigue</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Fatigue_Author">
+				<Original>TFSRHS</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Fatigue_Url">
+				<Original>https://github.com/TFSRHSmod/TFSRHS</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Categories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFSRHS_Fatigue_CBA_Category">
+				<Original>TFSRHS Fatigue</Original>
+				<German>TFSRHS Ausdauer</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFSRHS_Fatigue_CBA_Category_core">
+				<Original>core</Original>
+				<German>Allgemeines</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFSRHS_Fatigue_CBA_Global_Sounds_Title">
+				<Original>Global Sounds</Original>
+				<German>Globale Sounds</German>
+			</Key>
+			<Key ID="STR_TFSRHS_Fatigue_CBA_Global_Sounds_Tip">
+				<Original>Heavy breathing (exhaustion) can be heard from players nearby.</Original>
+				<German>Schweres Atmen (Erschöpfung), kann von Spielern in der Nähe gehört werden.</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>

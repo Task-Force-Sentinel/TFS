@@ -1,0 +1,15 @@
+PREP(openedZeus);
+PREP(openedZeusServer);
+PREP(toggleAllStaticsZeus);
+PREP(toggleAllStaticsZeusServer);
+PREP(toggleAllUnitsZeus);
+PREP(toggleAllUnitsZeusServer);
+//PREP(toggleACRESpectator);
+PREP(ConfigZeus);
+PREP(moduleAISpawnsEastZeus);
+PREP(moduleAISpawnsIndepZeus);
+PREP(moduleAISpawnsWestZeus);
+PREP(moduleCivilianSpawnsZeus);
+PREP(moduleSafeZoneZeus);
+PREP(canBeFOB);
+PREP(canBeMedFacility);

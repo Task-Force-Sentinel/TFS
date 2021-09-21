@@ -1,0 +1,2 @@
+PREP(moveInventory);
+PREP(saveDroppedWeapons);

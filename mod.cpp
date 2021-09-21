@@ -1,0 +1,10 @@
+name = "Task Force Sentinel Custom v0";
+picture = "";
+description = "Project Template";
+logo = "";
+logoOver = "";
+tooltip = "Task Force Sentinel Custom v0";
+tooltipOwned = "Task Force Sentinel Owned";
+overview = "Task Force Sentinel Custom v0";
+author = "Task Force Sentinel Team";
+overviewPicture = "";

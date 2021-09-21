@@ -1,0 +1,1 @@
+#include "\z\tfsrhs\addons\common\script_component.hpp"

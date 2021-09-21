@@ -1,0 +1,1 @@
+#include "\z\tfsrhs\addons\nightvision\script_component.hpp"

@@ -1,0 +1,11 @@
+PREP(addZone);
+PREP(checkOxygen);
+PREP(createZone);
+PREP(detectorBeepPFH);
+PREP(getFatigue);
+PREP(handleDamage);
+PREP(init);
+PREP(setUpDeconShower);
+PREP(startOxygen);
+PREP(threatPFH);
+PREP(toggleShower);

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="Arma_eXtended_Environment">
+	
+	<!-- ####################################################################################### -->
+	<Package name="TFSRHS_Main">
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Main">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFSRHS_Main_Title">
+				<Original>TFSRHS Main</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Main_Author">
+				<Original>TFSRHS</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Main_URL">
+				<Original>https://github.com/TFSRHSmod/TFSRHS</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_main_http">
+				<Original>https://github.com/TFSRHSmod/TFSRHS</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="EditorCategories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFSRHS_EdCat">
+				<Original>TFSRHS</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="FactionClasses">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFSRHS_FactionClass">
+				<Original>TFSRHS</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+	</Package>
+	<!-- ####################################################################################### -->
+	
+	<!-- ####################################################################################### -->
+	<Package name="TFSRHS">
+		
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Addon">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFSRHS_Addon_Author">
+				<Original>TFSRHS</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_Title">
+				<Original>Arma eXtended Environment</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_Name">
+				<Original>Arma eXtended Environment 1.3.0</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_Short">
+				<Original>TFSRHS</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_Description">
+				<Original>Bugtracker: https://github.com/TFSRHSmod/TFSRHS/issues</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_Tooltip">
+				<Original>TFSRHS</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_Logo">
+				<Original>\z\tfsrhs\addons\media\images\logo_tfsrhs_small_ca.paa</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_Logo_Over">
+				<Original>\z\tfsrhs\addons\media\images\logo_tfsrhs_small_glow_ca.paa</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_Logo_Small">
+				<Original>\z\tfsrhs\addons\media\images\logo_sm_ca.paa</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_Picture">
+				<Original>\z\tfsrhs\addons\media\images\cow.paa</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_Overview">
+				<Original>Arma eXtended Environment, also known as TFSRHS, adds a variety of additional functions and features on top of Arma3, CBA and the ACE3 framework.</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_Footnote">
+				<Original>&lt;br /&gt;&lt;br /&gt;&lt;t color='#999999'&gt;Arma eXtended Environment - Copyright &copy; 2019 by TFSRHS&lt;t /&gt;</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_Action">
+				<Original>Website</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_URL">
+				<Original>http://tfsrhsmod.userscreen.net</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_URL_Issues">
+				<Original>https://github.com/TFSRHSmod/TFSRHS/issues</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_URL_Releases">
+				<Original>https://github.com/TFSRHSmod/TFSRHS/releases</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_URL_Version">
+				<Original>http://tfsrhsmod.userscreen.net/version.html</Original>
+			</Key>
+			<Key ID="STR_TFSRHS_Addon_URL_Wiki">
+				<Original>https://github.com/TFSRHSmod/TFSRHS/wiki</Original>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		
+	</Package>
+	<!-- ####################################################################################### -->
+	
+</Project>
