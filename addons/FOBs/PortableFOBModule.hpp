@@ -2,8 +2,8 @@ class TFSRHS_ModulePortableFOB_Camp: Module_F
 {
 	scope = 2;
 	displayName = "Portable FOB - Camp";
-	icon = "\z\tfsrhs\addons\media\images\logo_sm_ca.paa";
-	category = QUOTE(PREFIX);
+	icon = "\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa";
+	category = "Task Force Sentinel";
 	function = "TFSRHS_fnc_modulePortableFOB_Camp";
 	functionPriority = 2;
 	isGlobal = 0;
@@ -51,8 +51,8 @@ class TFSRHS_ModulePortableFOB_Small: Module_F
 {
 	scope = 2;
 	displayName = "Portable FOB - Small";
-	icon = "\z\tfsrhs\addons\media\images\logo_sm_ca.paa";
-	category = QUOTE(PREFIX);
+	icon = "\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa";
+	category = "Task Force Sentinel";
 	function = "TFSRHS_fnc_modulePortableFOB_Small";
 	functionPriority = 2;
 	isGlobal = 0;
@@ -112,8 +112,8 @@ class TFSRHS_ModulePortableFOB_Medium: Module_F
 {
 	scope = 2;
 	displayName = "Portable FOB - Medium";
-	icon = "\z\tfsrhs\addons\media\images\logo_sm_ca.paa";
-	category = QUOTE(PREFIX);
+	icon = "\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa";
+	category = "Task Force Sentinel";
 	function = "TFSRHS_fnc_modulePortableFOB_Medium";
 	functionPriority = 2;
 	isGlobal = 0;
@@ -179,8 +179,8 @@ class TFSRHS_ModulePortableFOB_Large: Module_F
 {
 	scope = 2;
 	displayName = "Portable FOB - Large";
-	icon = "\z\tfsrhs\addons\media\images\logo_sm_ca.paa";
-	category = QUOTE(PREFIX);
+	icon = "\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa";
+	category = "Task Force Sentinel";
 	function = "TFSRHS_fnc_modulePortableFOB_Large";
 	functionPriority = 2;
 	isGlobal = 0;

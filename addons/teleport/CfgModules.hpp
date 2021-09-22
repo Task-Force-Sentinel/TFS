@@ -18,7 +18,7 @@ class CfgVehicles
         // Standard object definitions
         scope = 2; // Editor visibility; 2 will show it in the menu, 1 will hide it.
         displayName = "Map-Click Teleport"; // Name displayed in the menu
-        icon = "\z\tfsrhs\addons\media\images\logo_sm_ca.paa"; // Map icon. Delete this entry to use the default icon
+        icon = "\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa"; // Map icon. Delete this entry to use the default icon
         category = "TFSRHS";
         function = QFUNC(init);
         functionPriority = 1;
@@ -88,7 +88,7 @@ class CfgVehicles
         // Standard object definitions
         scope = 2; // Editor visibility; 2 will show it in the menu, 1 will hide it.
         displayName = "Deploy in Parachute"; // Name displayed in the menu
-        icon = "\z\tfsrhs\addons\media\images\logo_sm_ca.paa"; // Map icon. Delete this entry to use the default icon
+        icon = "\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa"; // Map icon. Delete this entry to use the default icon
         category = "TFSRHS";
         function = QFUNC(deployInit);
         functionPriority = 1;

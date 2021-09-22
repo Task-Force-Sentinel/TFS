@@ -3,7 +3,7 @@ class TFSRHS_ModuleIED: Module_F
 	scope = 2;
 	displayName = "Create IED";
 	icon = "a3\ui_f\data\GUI\Cfg\Hints\IEDs_CA.paa"; //todo: find better icon
-	category = QUOTE(PREFIX);
+	category = "Task Force Sentinel";
 	function = "TFSRHS_fnc_moduleMakeIED";
 	functionPriority = 2;
 	isGlobal = 1;

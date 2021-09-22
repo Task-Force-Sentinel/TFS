@@ -3,7 +3,7 @@ class TFSRHS_ModuleMedical: Module_F
 	scope = 2;
 	displayName = "Medical Facility";
 	icon = "\z\tfsrhs\addons\media\images\icons\Medical Area.paa";
-	category = QUOTE(PREFIX);
+	category = "Task Force Sentinel";
 	function = "TFSRHS_fnc_moduleMedicalFacility";
 	functionPriority = 4;
 	isGlobal = 1;

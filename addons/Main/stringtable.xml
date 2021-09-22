@@ -71,13 +71,13 @@
 				<Original>TFSRHS</Original>
 			</Key>
 			<Key ID="STR_TFSRHS_Addon_Logo">
-				<Original>\z\tfsrhs\addons\media\images\logo_tfsrhs_small_ca.paa</Original>
+				<Original>\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa</Original>
 			</Key>
 			<Key ID="STR_TFSRHS_Addon_Logo_Over">
-				<Original>\z\tfsrhs\addons\media\images\logo_tfsrhs_small_glow_ca.paa</Original>
+				<Original>\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa</Original>
 			</Key>
 			<Key ID="STR_TFSRHS_Addon_Logo_Small">
-				<Original>\z\tfsrhs\addons\media\images\logo_sm_ca.paa</Original>
+				<Original>\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa</Original>
 			</Key>
 			<Key ID="STR_TFSRHS_Addon_Picture">
 				<Original>\z\tfsrhs\addons\media\images\cow.paa</Original>

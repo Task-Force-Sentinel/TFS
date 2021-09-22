@@ -5,7 +5,7 @@ class TFSRHS_ModuleAmbientSound: Module_F {
 	scope = 2;
 	
 	displayName = "$STR_TFSRHS_Module_AmbientSound_DisplayName";
-	category = QUOTE(PREFIX);
+	category = "Task Force Sentinel";
 	author = AUTHOR;
 	icon = "\z\tfsrhs\addons\modules\data\icons\module_sound_0_ca.paa";
 	

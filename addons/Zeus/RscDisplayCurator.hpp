@@ -37,7 +37,7 @@ class RscDisplayCurator {
                 {
                     idc=99578;
                     x="(safezoneW - 25 * (((safezoneW / safezoneH) min 1.2) / 40)) / 2 - 0.5 * (((safezoneW / safezoneH) min 1.2) / 40)";
-                    text="\z\tfsrhs\addons\media\images\logo_sm_ca.paa";
+                    text="\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa";
                     y="0 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
                     w="1 * (((safezoneW / safezoneH) min 1.2) / 40)";
                     h="1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";

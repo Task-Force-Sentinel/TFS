@@ -3,7 +3,7 @@ class TFSRHS_ModuleSafeZone: Module_F
 	scope = 2;
 	displayName = "Safe Zone";
 	icon = "\z\tfsrhs\addons\media\images\icons\Safe_Zone.paa";
-	category = QUOTE(PREFIX);
+	category = "Task Force Sentinel";
 	function = "TFSRHS_fnc_moduleSafeZone";
 	functionPriority = 4;
 	isGlobal = 0;

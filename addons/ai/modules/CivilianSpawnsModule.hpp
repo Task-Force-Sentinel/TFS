@@ -3,7 +3,7 @@ class TFSRHS_ModuleCivilianSpawns: Module_F
 	scope = 2;
 	displayName = "AI Spawn - Civilian";
 	icon = "\z\tfsrhs\addons\media\images\Icons\AI CIV.paa";
-	category = QUOTE(PREFIX);
+	category = "Task Force Sentinel";
 	function = "TFSRHS_fnc_moduleCivilianSpawns";
 	functionPriority = 2;
 	isGlobal = 0;

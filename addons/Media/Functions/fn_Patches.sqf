@@ -24,16 +24,13 @@ params [
 
 private ["_PatchClass"];
 call {
-	if (_Section == "ds990") exitwith {_PatchClass = "ds990";};
-	if (_Section == "da991") exitwith {_PatchClass = "da991";};
-	if (_Section == "da992") exitwith {_PatchClass = "da992";};
-	if (_Section == "da993") exitwith {_PatchClass = "da993";};
-	if (_Section == "da994") exitwith {_PatchClass = "da994";};
-	if (_Section == "da995") exitwith {_PatchClass = "da995";};
-	if (_Section == "da996") exitwith {_PatchClass = "da996";};
-	if (_Section == "da997") exitwith {_PatchClass = "da997";};
-	if (_Section == "da998") exitwith {_PatchClass = "da998";};
-	if (_Section == "ds999") exitwith {_PatchClass = "ds999";};
+	if (_Section == "HeadhunterHHC") exitwith {_PatchClass = "Logo";};
+	if (_Section == "Headhunter1") exitwith {_PatchClass = "Logo";};
+	if (_Section == "Headhunter2") exitwith {_PatchClass = "Logo";};
+	if (_Section == "Headhunter3") exitwith {_PatchClass = "Logo";};
+	if (_Section == "Arrow") exitwith {_PatchClass = "Logo";};
+	if (_Section == "Outlaw") exitwith {_PatchClass = "Logo";};
+	if (_Section == "Sentinel") exitwith {_PatchClass = "Logo";};
 	_PatchClass = "bolo";
 };
 

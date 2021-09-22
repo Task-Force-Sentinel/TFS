@@ -34,8 +34,8 @@ class CfgVehicles {
 		_generalMacro="Box_NATO_AmmoVeh_F";
 		hiddenSelectionsTextures[]=
 		{
-			"z\tfsrhs\addons\Equipment\data\tfsrhsbox_signs_ca.paa",
-            "z\tfsrhs\addons\Equipment\data\ammotfsrhs_co.paa",
+			"z\tfsrhs\addons\Equipment\data\ammobox_signs_ca.paa",
+            "z\tfsrhs\addons\Equipment\data\ammotfs_co.paa",
 		};
         class TransportMagazines
 		{
@@ -78,8 +78,8 @@ class CfgVehicles {
 		_generalMacro="Box_NATO_AmmoVeh_F";
 		hiddenSelectionsTextures[]=
 		{
-            "z\tfsrhs\addons\Equipment\data\tfsrhsbox_signs_ca.paa",
-			"z\tfsrhs\addons\Equipment\data\ammotfsrhsA_co.paa"
+            "z\tfsrhs\addons\Equipment\data\ammobox_signs_caa.paa",
+			"z\tfsrhs\addons\Equipment\data\ammotfsA_co.paa"
 		};
         class TransportMagazines
 		{
@@ -93,95 +93,7 @@ class CfgVehicles {
 		transportAmmo=30000;
 		supplyRadius=10;
     };
-	class CLASS(TFSRHS_Carsenal): NATO_Box_Base {
-        scope = 2;
-        author = AUTHOR;
-        mapSize=1.53;
-		class SimpleObject
-		{
-			eden=1;
-			animate[]={};
-			hide[]={};
-			verticalOffset=0.79000002;
-			verticalOffsetWorld=0;
-		};
-        displayName = "TFSRHS Casual Arsenal";
-        model="A3\Weapons_F\Ammoboxes\AmmoVeh_F";
-		icon="iconCrateVeh";
-		slingLoadCargoMemoryPoints[]=
-		{
-			"SlingLoadCargo1",
-			"SlingLoadCargo2",
-			"SlingLoadCargo3",
-			"SlingLoadCargo4"
-		};
-        class EventHandlers: EventHandlers
-        {
-        };
-        editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_AmmoVeh_F.jpg";
-		_generalMacro="Box_NATO_AmmoVeh_F";
-		hiddenSelectionsTextures[]=
-		{
-            "z\tfsrhs\addons\Equipment\data\tfsrhsbox_signs_ca.paa",
-			"z\tfsrhs\addons\Equipment\data\ammotfsrhsCA_co.paa"
-		};
-        class TransportMagazines
-		{
-		};
-		class TransportWeapons
-		{
-		};
-		class TransportItems
-		{
-		};
-		transportAmmo=30000;
-		supplyRadius=10;
-    };
-	class CLASS(TFSRHS_Iarsenal): NATO_Box_Base {
-        scope = 2;
-        author = AUTHOR;
-        mapSize=1.53;
-		class SimpleObject
-		{
-			eden=1;
-			animate[]={};
-			hide[]={};
-			verticalOffset=0.79000002;
-			verticalOffsetWorld=0;
-			init="[this,10,true,true] call TFSRHS_fnc_AmmoCrate;";
-		};
-        displayName = "TFSRHS Incognito Arsenal";
-        model="A3\Weapons_F\Ammoboxes\AmmoVeh_F";
-		icon="iconCrateVeh";
-		slingLoadCargoMemoryPoints[]=
-		{
-			"SlingLoadCargo1",
-			"SlingLoadCargo2",
-			"SlingLoadCargo3",
-			"SlingLoadCargo4"
-		};
-        class EventHandlers: EventHandlers
-        {
-        };
-        editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Box_NATO_AmmoVeh_F.jpg";
-		_generalMacro="Box_NATO_AmmoVeh_F";
-		hiddenSelectionsTextures[]=
-		{
-            "z\tfsrhs\addons\Equipment\data\tfsrhsbox_signs_ca.paa",
-			"z\tfsrhs\addons\Equipment\data\ammotfsrhsIA_co.paa"
-		};
-        class TransportMagazines
-		{
-		};
-		class TransportWeapons
-		{
-		};
-		class TransportItems
-		{
-		};
-		transportAmmo=30000;
-		supplyRadius=10;
-    };
+
 	class ACE_Item_Vector;
 
     class TFSRHS_Item_Vector_Designator: ACE_Item_Vector {

@@ -3,7 +3,7 @@ class GVAR(wavespawn) : Module_F {
     scope = 2; // Editor visibility; 2 will show it in the menu, 1 will hide it.
     displayName = "Wave Spawner"; // Name displayed in the menu
 
-    category = QUOTE(PREFIX);
+    category = "Task Force Sentinel";
     icon = "\a3\ui_f\data\Map\Markers\Military\warning_CA.paa";
     // Name of function triggered once conditions are met
     function = QFUNC(waveInit);

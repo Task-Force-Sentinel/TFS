@@ -4,7 +4,7 @@ class GVAR(huntModule) : Module_F
     scope = 2; // Editor visibility; 2 will show it in the menu, 1 will hide it.
     displayName = "AI Hunt"; // Name displayed in the menu
 
-    category = QUOTE(PREFIX);
+    category = "Task Force Sentinel";
     icon = "\a3\ui_f\data\Map\Respawn\icon_dead_ca.paa";
     // Name of function triggered once conditions are met
     function = QFUNC(hunt);

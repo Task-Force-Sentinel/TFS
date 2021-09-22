@@ -3,7 +3,7 @@ class TFSRHS_ModuleAISpawnsIndependent: Module_F
 	scope = 2;
 	displayName = "AI Spawn - Independent";
 	icon = "\z\tfsrhs\addons\media\images\icons\AI INDEP.paa";
-	category = QUOTE(PREFIX);
+	category = "Task Force Sentinel";
 	function = "TFSRHS_fnc_moduleAISpawns";
 	functionPriority = 2;
 	isGlobal = 0;

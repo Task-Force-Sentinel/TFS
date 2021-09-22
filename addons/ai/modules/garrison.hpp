@@ -3,7 +3,7 @@ class GVAR(garrison) : Module_F
 {
     scope = 1;
     displayName = "Garrison (Legacy)";
-    category = QUOTE(PREFIX);
+    category = "Task Force Sentinel";
     icon = "\a3\ui_f\data\Map\VehicleIcons\iconLogic_ca.paa";
     function = QFUNC(garrison);
     // 0 for server only execution, 1 for global execution, 2 for persistent global execution
@@ -55,8 +55,8 @@ class GVAR(garrisonQuantity) : Module_F
 {
     scope = 2;
     displayName = "Garrison";
-    category = QUOTE(PREFIX);
-    icon = "\z\tfsrhs\addons\media\images\logo_sm_ca.paa";
+    category = "Task Force Sentinel";
+    icon = "\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa";
     function = QFUNC(garrisonQuantity);
     // 0 for server only execution, 1 for global execution, 2 for persistent global execution
     isGlobal = 0;

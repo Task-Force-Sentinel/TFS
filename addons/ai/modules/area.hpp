@@ -2,7 +2,7 @@ class GVAR(area) : Module_F
 {
     scope = 2;
     displayName = "TFSRHS Area";
-    category = QUOTE(PREFIX);
+    category = "Task Force Sentinel";
     icon = "\z\tfsrhs\addons\media\images\Icons\icon_map.paa";
     function = QFUNC(emptyFunction);
     // 0 for server only execution, 1 for global execution, 2 for persistent global execution

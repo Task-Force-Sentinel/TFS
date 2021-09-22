@@ -50,7 +50,7 @@ class CfgFactionClasses
 	class NO_CATEGORY;
 	class TFSRHS_CommandCentre: NO_CATEGORY
 	{
-		displayName = "TFSRHS Command Centre";
+		displayName = "TF Sentinel Command Center";
 	};
 };
 

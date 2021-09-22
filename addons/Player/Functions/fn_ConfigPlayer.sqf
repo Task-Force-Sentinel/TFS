@@ -33,16 +33,13 @@ params [
 if (_Section isEqualto -1) exitwith {};
 
 call {
-	if (_Section isEqualto 0) exitwith {_Section = "ds990"};
-	if (_Section isEqualto 1) exitwith {_Section = "da991"};
-	if (_Section isEqualto 2) exitwith {_Section = "da992"};
-	if (_Section isEqualto 3) exitwith {_Section = "da993"};
-	if (_Section isEqualto 4) exitwith {_Section = "ds994"};
-	if (_Section isEqualto 5) exitwith {_Section = "da995"};
-	if (_Section isEqualto 6) exitwith {_Section = "da996"};
-	if (_Section isEqualto 7) exitwith {_Section = "ds997"};
-	if (_Section isEqualto 8) exitwith {_Section = "da998"};
-	if (_Section isEqualto 9) exitwith {_Section = "ds999"};
+	if (_Section isEqualto 0) exitwith {_Section = "Headhunter1"};
+	if (_Section isEqualto 1) exitwith {_Section = "Headhunter2"};
+	if (_Section isEqualto 2) exitwith {_Section = "Headhunter3"};
+	if (_Section isEqualto 3) exitwith {_Section = "HeadhunterHHC"};
+	if (_Section isEqualto 4) exitwith {_Section = "Arrow"};
+	if (_Section isEqualto 5) exitwith {_Section = "Outlaw"};
+	if (_Section isEqualto 6) exitwith {_Section = "Sentinel"};
 	if (_Section isEqualto 10) exitwith {_Section = "bolo"};
 };
 
@@ -61,44 +58,32 @@ if (local _unit) then {
 		private ["_ShortRange", "_LongRange"];
 
 		call {
-			if (_Section == "ds990") exitwith {
+			if (_Section == "HeadhunterHHC") exitwith {
 				_ShortRange = ["101", "102", "103", "104", "105", "106", "99", "69"];
 				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
 			};
-			if (_Section == "da991") exitwith {
+			if (_Section == "Headhunter1") exitwith {
 				_ShortRange = ["111", "112", "113", "114", "115", "116", "99", "69"];
 				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
 			};
-			if (_Section == "da992") exitwith {
+			if (_Section == "Headhunter2") exitwith {
 				_ShortRange = ["121", "122", "123", "124", "125", "126", "99", "69"];
 				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
 			};
-			if (_Section == "da993") exitwith {
+			if (_Section == "Headhunter3") exitwith {
 				_ShortRange = ["131", "132", "133", "134", "135", "136", "99", "69"];
 				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
 			};
-			if (_Section == "ds994") exitwith {
+			if (_Section == "Arrow") exitwith {
 				_ShortRange = ["141", "142", "143", "144", "145", "146", "99", "69"];
 				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
 			};
-			if (_Section == "da995") exitwith {
+			if (_Section == "Outlaw") exitwith {
 				_ShortRange = ["151", "152", "153", "154", "155", "156", "99", "69"];
 				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
 			};
-            if (_Section == "da996") exitwith {
+            if (_Section == "Sentinel") exitwith {
 				_ShortRange = ["161", "162", "163", "164", "165", "166", "99", "69"];
-				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
-			};
-            if (_Section == "da997") exitwith {
-				_ShortRange = ["171", "172", "173", "174", "175", "176", "99", "69"];
-				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
-			};
-            if (_Section == "da998") exitwith {
-				_ShortRange = ["181", "182", "183", "184", "185", "186", "99", "69"];
-				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
-			};
-            if (_Section == "ds999") exitwith {
-				_ShortRange = ["191", "192", "193", "194", "195", "196", "99", "69"];
 				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
 			};
             if (_Section == "bolo") exitwith {
@@ -154,7 +139,7 @@ if (local _unit) then {
 //========== SideChat Config
 if (hasinterface) then {
 	if ((isClass (configFile >> "CfgPatches" >> "task_force_radio")) && (EnableSideChat)) then {
-		if ((_Section == "Command") || (_Section == "ds999")) then {
+		if ((_Section == "Command") || (_Section == "Outlaw")) then {
 			1 enablechannel [true, false];
 		};
 	};

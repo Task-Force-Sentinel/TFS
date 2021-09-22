@@ -9,7 +9,7 @@
 #define VERSION_AR MAJOR,MINOR,PATCH
 
 #define AUTHOR TFSRHS
-#define LOGO_PATH "\z\tfsrhs\addons\media\images\logo_sm_ca.paa"
+#define LOGO_PATH "\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa"
 
 #define URL https://armadocs.purplesmoke.info/
 #define NAME TFSRHS

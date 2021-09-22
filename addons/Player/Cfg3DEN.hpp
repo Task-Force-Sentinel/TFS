@@ -18,10 +18,10 @@ class Cfg3DEN {
                     style = "0x02";
                     x = "48 * (pixelW * pixelGrid * 0.50)";
                     w = "75 * (pixelW * pixelGrid * 0.50)";
-                    h = "5 * (pixelH * pixelGrid * 0.50)";
-                    rows = 1;
-                    columns = 12;
-                    strings[] = {"None", "990", "991", "992", "993", "994", "995", "996","997", "998", "999", "Bolo"};
+                    h = "15 * (pixelH * pixelGrid * 0.50)";
+                    rows = 3;
+                    columns = 3;
+                    strings[] = {"None", "Headhunter 1", "Headhunter 2", "Headhunter 3", "Headhunter HHC", "Arrow", "Outlaw", "Sentinel", "bolo"};
                 };
             };
         };

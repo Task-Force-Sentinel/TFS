@@ -2,7 +2,7 @@ class CfgVehicles {
     class ACE_Module;
     class GVAR(Module): ACE_Module {
         author = AUTHOR;
-        category = QUOTE(PREFIX);
+        category = "Task Force Sentinel";
         displayName = CSTRING(Range);
         function = QFUNC(moduleInit);
         scope = 2;
