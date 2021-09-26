@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\chat\script_component.hpp"
+#include "\z\tfs\addons\chat\script_component.hpp"
 /*
- * Name = TFSRHS_chat_fnc_findMatch
+ * Name = TFS_chat_fnc_findMatch
  * Author = Commy2
  *
  * Arguments:

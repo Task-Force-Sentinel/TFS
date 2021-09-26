@@ -8,39 +8,39 @@ params ["_mode",["_params",[]]];
 fn_removeUnitFromBrief = {
     params ["_channel", "_unit"];
     
-    _list = (_unit get3DENAttribute "TFSRHS_Briefinglist") params ["_value"];
+    _list = (_unit get3DENAttribute "TFS_Briefinglist") params ["_value"];
     if (_value isEqualType []) then {
         //Is default do nothing
-        _//unit set3DENAttribute ["TFSRHS_Channellist",str []];
+        _//unit set3DENAttribute ["TFS_Channellist",str []];
     } else {
         _value = call compile _value;
         _value = _value - [_channel];
-        _unit set3DENAttribute ["TFSRHS_Briefinglist",str _value];
+        _unit set3DENAttribute ["TFS_Briefinglist",str _value];
     };
 };
 
 fn_removeGroupFromBrief = {
     params ["_channel", "_group"];
 
-    _list = (_group get3DENAttribute "TFSRHS_Briefinglist") params ["_value"];
+    _list = (_group get3DENAttribute "TFS_Briefinglist") params ["_value"];
     if (_value isEqualType []) then {
         //Is Default do nothing
-        //_group set3DENAttribute ["TFSRHS_ChannellistLeader",str []];
+        //_group set3DENAttribute ["TFS_ChannellistLeader",str []];
     } else {
         _value = call compile _value;
         _value = _value - [_curSel];
-        _group set3DENAttribute ["TFSRHS_Briefinglist",str _value];
+        _group set3DENAttribute ["TFS_Briefinglist",str _value];
     };
 
     
-    _list = (_group get3DENAttribute "TFSRHS_Briefinglist") params ["_value"];
+    _list = (_group get3DENAttribute "TFS_Briefinglist") params ["_value"];
     if (_value isEqualType []) then {
         //is default do nothing
-        //_group set3DENAttribute ["TFSRHS_Channellist",str []];
+        //_group set3DENAttribute ["TFS_Channellist",str []];
     } else {
         _value = call compile _value;
         _value = _value - [_curSel];
-        _group set3DENAttribute ["TFSRHS_Briefinglist",str _value];
+        _group set3DENAttribute ["TFS_Briefinglist",str _value];
     };
     // do units
     {
@@ -61,7 +61,7 @@ switch _mode do {
         {
             cacheAllPlayerGroups pushBackUnique (group _x);
         } forEach _playableUnits;
-        BriefingArray = ("TFSRHS_MissionBriefingAttributes" get3DENMissionAttribute "TFSRHS_Briefing");
+        BriefingArray = ("TFS_MissionBriefingAttributes" get3DENMissionAttribute "TFS_Briefing");
         if (BriefingArray isEqualType "") then { BriefingArray = call compile BriefingArray;};
         if (isNil "BriefingArray") then {            
             BriefingArray = [
@@ -76,7 +76,7 @@ switch _mode do {
                 _x params ["","_conditions"];
                 {
                     if (_x isEqualType 0) then {
-                        _conditions set [_forEachIndex, (_x call TFSRHS_common_fnc_numToSide)];
+                        _conditions set [_forEachIndex, (_x call TFS_common_fnc_numToSide)];
                     };
                 } forEach (_conditions);
             } forEach BriefingArray;
@@ -111,7 +111,7 @@ switch _mode do {
             _x params ["","_conditions"];
             {
                 if (_x isEqualType east) then {
-                    _conditions set [_forEachIndex, (_x call TFSRHS_common_fnc_sideToNum)];
+                    _conditions set [_forEachIndex, (_x call TFS_common_fnc_sideToNum)];
                 };
             } forEach (_conditions);
         } forEach _array;
@@ -163,7 +163,7 @@ switch _mode do {
         fn_BriefTreeProcessUnit = {
             params ["_ctrlTree", "_treeRoot", "_doSpeak", "_unit"];        
             private _roleDesc = ((_unit get3DENAttribute "description") select 0);
-            private _color = (side _unit) call TFSRHS_common_fnc_sideToColor;
+            private _color = (side _unit) call TFS_common_fnc_sideToColor;
             
             if (_roleDesc == "") then {
                 _roleDesc =  getText (configfile >> "CfgVehicles" >> (typeOf _unit) >> "displayName");
@@ -180,7 +180,7 @@ switch _mode do {
                 
                         
             if (!_doSpeak) then {
-                private _unitChanList = (_unit get3DENAttribute "TFSRHS_Briefinglist") select 0;
+                private _unitChanList = (_unit get3DENAttribute "TFS_Briefinglist") select 0;
                 if (_unitChanList isEqualType "") then {
                     _unitChanList = call compile _unitChanList;
                 };
@@ -190,10 +190,10 @@ switch _mode do {
             };
             private _returnCode = 3;
             if (_doSpeak) then {
-                _ctrlTree tvSetPictureRight [_location, "z\tfsrhs\addons\briefing\UI\check_small_ca.paa"];
+                _ctrlTree tvSetPictureRight [_location, "z\tfs\addons\briefing\UI\check_small_ca.paa"];
                 _returnCode = 0;
             } else {
-                _ctrlTree tvSetPictureRight [_location, "z\tfsrhs\addons\briefing\UI\plus_small_ca.paa"];
+                _ctrlTree tvSetPictureRight [_location, "z\tfs\addons\briefing\UI\plus_small_ca.paa"];
             };
             
             //0: All, Partial: 1, Leader: 2, None: 3
@@ -207,7 +207,7 @@ switch _mode do {
             private _render = _side != sideLogic; // Do not render for Zeus Group
             private _location = +_treeRoot;
             if (_render) then {
-                private _color = _side call TFSRHS_common_fnc_sideToColor;
+                private _color = _side call TFS_common_fnc_sideToColor;
                 private _grpIdx = _ctrlTree tvAdd [ _treeRoot, groupID _group];
                 _location = _location + [_grpIdx];
                 private _grpIcon = "\a3\Ui_f\data\Map\Markers\NATO\n_unknown.paa";
@@ -226,7 +226,7 @@ switch _mode do {
             };
             
             if (!_doSpeak) then {
-                private _grpChanList = (_group get3DENAttribute "TFSRHS_Briefinglist") select 0;
+                private _grpChanList = (_group get3DENAttribute "TFS_Briefinglist") select 0;
                 if (_grpChanList isEqualType "") then {
                     _grpChanList = call compile _grpChanList;
                 };
@@ -253,19 +253,19 @@ switch _mode do {
             private _returnCode = 3;
             if (_doSpeak) then {
                 if (_render) then {
-                    _ctrlTree tvSetPictureRight [_location, "z\tfsrhs\addons\briefing\UI\check_small_ca.paa"];
+                    _ctrlTree tvSetPictureRight [_location, "z\tfs\addons\briefing\UI\check_small_ca.paa"];
                 };
                 _returnCode = 0;
             } else {
                 if (_hasSpeaker) then {
                     if (_render) then {
-                        _ctrlTree tvSetPictureRight [_location, "z\tfsrhs\addons\briefing\UI\plus_small_ca.paa"];
+                        _ctrlTree tvSetPictureRight [_location, "z\tfs\addons\briefing\UI\plus_small_ca.paa"];
                         _ctrlTree tvExpand _location;
                     };
                     _returnCode = 1;
                 } else {
                     if (_render) then {
-                        _ctrlTree tvSetPictureRight [_location, "z\tfsrhs\addons\briefing\UI\plus_small_ca.paa"];
+                        _ctrlTree tvSetPictureRight [_location, "z\tfs\addons\briefing\UI\plus_small_ca.paa"];
                         _ctrlTree tvExpand _location;
                     };
                 };
@@ -307,20 +307,20 @@ switch _mode do {
             
             if (_doSpeak) then {
                 if (_render) then {
-                    _ctrlTree tvSetPictureRight [_location, "z\tfsrhs\addons\briefing\UI\check_small_ca.paa"];
+                    _ctrlTree tvSetPictureRight [_location, "z\tfs\addons\briefing\UI\check_small_ca.paa"];
                 };
                 _returnCode = 0;
             } else {
                 if (_hasSpeaker) then {
                     if (_render) then {
-                        _ctrlTree tvSetPictureRight [_location, "z\tfsrhs\addons\briefing\UI\plus_small_ca.paa"];
+                        _ctrlTree tvSetPictureRight [_location, "z\tfs\addons\briefing\UI\plus_small_ca.paa"];
                         _ctrlTree tvExpand _location;
                     };
                     _returnCode = 1;
                 } else {
                     if (_render) then {
                         _ctrlTree tvExpand _location;
-                        _ctrlTree tvSetPictureRight [_location, "z\tfsrhs\addons\briefing\UI\plus_small_ca.paa"];
+                        _ctrlTree tvSetPictureRight [_location, "z\tfs\addons\briefing\UI\plus_small_ca.paa"];
                     };
                 };
             };
@@ -332,9 +332,9 @@ switch _mode do {
         {
             private _side = _x;
             private _doSpeak = false;
-            private _location = [(_ctrlTree tvAdd [[], _side call TFSRHS_common_fnc_sideToString])];
+            private _location = [(_ctrlTree tvAdd [[], _side call TFS_common_fnc_sideToString])];
             
-            _ctrlTree tvSetPicture [_location, _side call TFSRHS_common_fnc_sideToTexture];
+            _ctrlTree tvSetPicture [_location, _side call TFS_common_fnc_sideToTexture];
             _ctrlTree tvSetValue [_location, BriefingTree_data pushBack _side];
             if (_side in _BriefConditions) then {
                 _doSpeak = true;
@@ -351,13 +351,13 @@ switch _mode do {
             } forEach _factions;
             
             if (_doSpeak) then {
-                _ctrlTree tvSetPictureRight [_location, "z\tfsrhs\addons\briefing\UI\check_small_ca.paa"];
+                _ctrlTree tvSetPictureRight [_location, "z\tfs\addons\briefing\UI\check_small_ca.paa"];
             } else {
                 if (_hasSpeaker) then {
-                    _ctrlTree tvSetPictureRight [_location, "z\tfsrhs\addons\briefing\UI\plus_small_ca.paa"];
+                    _ctrlTree tvSetPictureRight [_location, "z\tfs\addons\briefing\UI\plus_small_ca.paa"];
                     _ctrlTree tvExpand _location;
                 } else {
-                    _ctrlTree tvSetPictureRight [_location, "z\tfsrhs\addons\briefing\UI\plus_small_ca.paa"];
+                    _ctrlTree tvSetPictureRight [_location, "z\tfs\addons\briefing\UI\plus_small_ca.paa"];
                     _ctrlTree tvExpand _location;
                 };
             };
@@ -460,13 +460,13 @@ switch _mode do {
                 _condition pushBackUnique _entity;
             } else {
                 if (_entity isEqualType grpNull or _entity isEqualType objNull) then {
-                    _list = (_entity get3DENAttribute "TFSRHS_Briefinglist") params ["_value"];
+                    _list = (_entity get3DENAttribute "TFS_Briefinglist") params ["_value"];
                     if (_value isEqualType []) then {
-                        _entity set3DENAttribute ["TFSRHS_Briefinglist",str [_curSel]];
+                        _entity set3DENAttribute ["TFS_Briefinglist",str [_curSel]];
                     } else {
                         _value = call compile _value;
                         _value pushBackUnique _curSel;
-                        _entity set3DENAttribute ["TFSRHS_Briefinglist",str _value];
+                        _entity set3DENAttribute ["TFS_Briefinglist",str _value];
                     };
                 };
             };
@@ -491,7 +491,7 @@ switch _mode do {
                 _BriefEntry set [1,_condition - [_entity]];
                 if (_entity isEqualType east) then {
                     //Find and remove matching faction groups
-                    private _sideNum = _entity call TFSRHS_common_fnc_sideToNum;
+                    private _sideNum = _entity call TFS_common_fnc_sideToNum;
                     {
                         if (_x isEqualType "") then {
                             if (_sideNum == getNumber (configfile >> "CfgFactionClasses" >> _x >> "side")) then {
@@ -532,13 +532,13 @@ switch _mode do {
             _x params ["","_conditions"];
             {
                 if (_x isEqualType east) then {
-                    _conditions set [_forEachIndex, (_x call TFSRHS_common_fnc_sideToNum)];
+                    _conditions set [_forEachIndex, (_x call TFS_common_fnc_sideToNum)];
                 };
             } forEach (_conditions);
         } forEach _array;
 
         private _string = str _array;
-        set3DENMissionAttributes [["TFSRHS_MissionBriefingAttributes","TFSRHS_Briefing",_string]];
+        set3DENMissionAttributes [["TFS_MissionBriefingAttributes","TFS_Briefing",_string]];
     };
 };
 

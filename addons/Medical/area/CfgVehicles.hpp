@@ -10,12 +10,12 @@ class CfgVehicles {
 		
 		class ACE_SelfActions {
 			class ACE_Equipment {
-				class TFSRHS_Medical_Area_Action_Construct {
-					displayName = "$STR_TFSRHS_Medical_Area_Action_Construct";
-					condition = "[_player] call TFSRHS_medical_area_fnc_canConstruct";
-					statement = "[_player] call TFSRHS_medical_area_fnc_doConstruct";
+				class TFS_Medical_Area_Action_Construct {
+					displayName = "$STR_TFS_Medical_Area_Action_Construct";
+					condition = "[_player] call TFS_medical_area_fnc_canConstruct";
+					statement = "[_player] call TFS_medical_area_fnc_doConstruct";
 					exceptions[] = {"isNotInside", "isNotSitting", "isNotSwimming"};
-					icon = "\z\tfsrhs\addons\medical\data\icons\medical_cross_ca.paa";
+					icon = "\z\tfs\addons\medical\data\icons\medical_cross_ca.paa";
 					showDisabled = 0;
 				};
 			};
@@ -26,16 +26,16 @@ class CfgVehicles {
 	// MEDICAL AREA
 	
 	class Item_Base_F;
-	class TFSRHS_Item_MedicArea: Item_Base_F {
+	class TFS_Item_MedicArea: Item_Base_F {
 		scope = 2;
 		scopeArsenal = 2;
 		scopeCurator = 2;
-		author = "$STR_TFSRHS_Medical_Area_Author";
-		displayName = "$STR_TFSRHS_Item_Medical_Area_DisplayName";
-		editorPreview = "\z\tfsrhs\addons\medical\area\data\previews\medical_area.jpg";
+		author = "$STR_TFS_Medical_Area_Author";
+		displayName = "$STR_TFS_Item_Medical_Area_DisplayName";
+		editorPreview = "\z\tfs\addons\medical\area\data\previews\medical_area.jpg";
 		vehicleClass = "Items";
 		class TransportItems {
-			MACRO_ADDITEM(TFSRHS_MedicArea,1);
+			MACRO_ADDITEM(TFS_MedicArea,1);
 		};
 	};
 	

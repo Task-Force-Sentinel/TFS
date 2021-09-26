@@ -1,10 +1,10 @@
-class TFSRHS_ModuleCommsTower: Module_F
+class TFS_ModuleCommsTower: Module_F
 {
 	scope = 2;
 	displayName = "Comms Tower";
-	icon = "\z\tfsrhs\addons\media\images\icons\RadioTower.paa";
-	category = "TFSRHS_CommandCentre";
-	function = "TFSRHS_fnc_moduleCommsTower";
+	icon = "\z\tfs\addons\media\images\icons\RadioTower.paa";
+	category = "TFS_CommandCentre";
+	function = "TFS_fnc_moduleCommsTower";
 	functionPriority = 4;
 	isGlobal = 0;
 	isTriggerActivated = 0;

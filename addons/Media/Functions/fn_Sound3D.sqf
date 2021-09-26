@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_Sound3D
+Function: TFS_fnc_Sound3D
 
 Description:
 	Plays a sound from CfgSounds on an object in 3D space. Sound follows object if moving.
@@ -13,9 +13,9 @@ Arguments:
 
 Examples:
 	(begin example)
-		[Speaker, "AirRaid", 500] call tfsrhs_fnc_Sound3D;
-		[Jason, "JohnCena", 250] call tfsrhs_fnc_Sound3D;
-		[this, "NukeAlarm", 250] call tfsrhs_fnc_Sound3D;
+		[Speaker, "AirRaid", 500] call tfs_fnc_Sound3D;
+		[Jason, "JohnCena", 250] call tfs_fnc_Sound3D;
+		[this, "NukeAlarm", 250] call tfs_fnc_Sound3D;
 	(end)
 
 Author:
@@ -24,7 +24,7 @@ Author:
 
 // If run locally, run on server instead
 if (!isServer) exitWith {
-	_this remoteExec ["TFSRHS_fnc_Sound3D", 2];
+	_this remoteExec ["TFS_fnc_Sound3D", 2];
 };
 
 params [

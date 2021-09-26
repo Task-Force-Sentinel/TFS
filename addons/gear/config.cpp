@@ -3,8 +3,8 @@
 
 class CfgPatches {
 	
-	class TFSRHS_Gear {
-		name = "$STR_TFSRHS_Gear_Title";
+	class TFS_Gear {
+		name = "$STR_TFS_Gear_Title";
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {};
 		units[] = {};

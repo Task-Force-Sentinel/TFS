@@ -1,1 +1,1 @@
-#include "\z\tfsrhs\addons\common\script_component.hpp"
+#include "\z\tfs\addons\common\script_component.hpp"

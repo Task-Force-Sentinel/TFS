@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 private _oldUnit = player;
 private _oldUnitdata = _oldUnit getVariable [QEGVAR(spectator,unitData), false];
@@ -49,7 +49,7 @@ if (_oldUnitdata isEqualType []) then {
         [false] call acre_api_fnc_setSpectator;
         [{
             if (isNull player) exitWith {};
-            if (isNil "TFSRHS_acre2_networksCreated") exitWith {}; //Ensure presets are created
+            if (isNil "TFS_acre2_networksCreated") exitWith {}; //Ensure presets are created
 
             [] call EFUNC(acre2,clientInit);
             [_this select 1] call CBA_fnc_removePerFrameHandler;
@@ -70,5 +70,5 @@ if (_oldUnitdata isEqualType []) then {
     // Add all the respawned groups to the map markers as well.
     [] call FUNC(respawnGroupMarkerUpdate);
 } else {
-    systemChat "[TFSRHS Admin Menu] Quick Respawn failed: old unit data unavailable";
+    systemChat "[TFS Admin Menu] Quick Respawn failed: old unit data unavailable";
 };

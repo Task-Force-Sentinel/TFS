@@ -26,5 +26,5 @@ private _reqDefKit = _logic getVariable ["ReqDefKit", true];
 		_announce,
 		_annInterval,
 		_reqDefKit
-	] call TFSRHS_fnc_makeIED;
+	] call TFS_fnc_makeIED;
 } forEach _objects;

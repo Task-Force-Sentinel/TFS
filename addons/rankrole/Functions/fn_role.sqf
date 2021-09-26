@@ -39,65 +39,65 @@ if (hasInterface) then {
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
-private _TFSRHSmakecom = [
-	"TFSRHSmakecom",
+private _TFSmakecom = [
+	"TFSmakecom",
 	"Communications",
 	"",
 	{
-		player call tfsrhs_rankrole_fnc_makecom;
+		player call tfs_rankrole_fnc_makecom;
 	},
 	{true},
 	{},
 	[_area]
 ] call ACE_interact_menu_fnc_createAction;
 
-[this, 0, ["ACE_MainActions"], _TFSRHSmakecom] call ACE_interact_menu_fnc_addActionToObject;
+[this, 0, ["ACE_MainActions"], _TFSmakecom] call ACE_interact_menu_fnc_addActionToObject;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
-private _TFSRHSmakeeng = [
-    "TFSRHSmakeeng",
+private _TFSmakeeng = [
+    "TFSmakeeng",
 	"Engineer",
 	"",
 	{
-		player call tfsrhs_rankrole_fnc_makeeng;
+		player call tfs_rankrole_fnc_makeeng;
 	},
 	{true},
 	{},
 	[_area]
 ] call ACE_interact_menu_fnc_createAction;
 
-[this, 0, ["ACE_MainActions"], _TFSRHSmakeeng] call ACE_interact_menu_fnc_addActionToObject;
+[this, 0, ["ACE_MainActions"], _TFSmakeeng] call ACE_interact_menu_fnc_addActionToObject;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
-private _TFSRHSmakemed = [
-    "TFSRHSmakemed",
+private _TFSmakemed = [
+    "TFSmakemed",
 	"Medic",
 	"",
 	{
-		player call tfsrhs_rankrole_fnc_makemed;
+		player call tfs_rankrole_fnc_makemed;
 	},
 	{true},
 	{},
 	[_area]
 ] call ACE_interact_menu_fnc_createAction;
 
-[this, 0, ["ACE_MainActions"], _TFSRHSmakemed] call ACE_interact_menu_fnc_addActionToObject;
+[this, 0, ["ACE_MainActions"], _TFSmakemed] call ACE_interact_menu_fnc_addActionToObject;
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
-private _TFSRHSmakewep = [
-    "TFSRHSmakewep",
+private _TFSmakewep = [
+    "TFSmakewep",
 	"Weapons",
 	"",
 	{
-		player call tfsrhs_rankrole_fnc_makewep;
+		player call tfs_rankrole_fnc_makewep;
 	},
 	{true},
 	{},
 	[_area]
 ] call ACE_interact_menu_fnc_createAction;
 
-[this, 0, ["ACE_MainActions"], _TFSRHSmakewep] call ACE_interact_menu_fnc_addActionToObject;
+[this, 0, ["ACE_MainActions"], _TFSmakewep] call ACE_interact_menu_fnc_addActionToObject;
 
 
 

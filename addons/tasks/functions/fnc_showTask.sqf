@@ -10,7 +10,7 @@
  * 0: Is task successfully showed? <BOOL>
  *
  * Example:
- * ["KnockHorse"] call tfsrhs_tasks_fnc_showTask
+ * ["KnockHorse"] call tfs_tasks_fnc_showTask
  *
  * Public: Yes
  */

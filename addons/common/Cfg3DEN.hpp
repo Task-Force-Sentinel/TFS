@@ -19,7 +19,7 @@ class Cfg3DEN
                             displayName = "Display intro text";
                             tooltip = "Display some intro text shortly after the game loads.";
                             control = "Checkbox";
-                            expression = "[_value] call tfsrhs_common_fnc_intro";
+                            expression = "[_value] call tfs_common_fnc_intro";
                             defaultValue = "true";
                             condition = "1";
                         };

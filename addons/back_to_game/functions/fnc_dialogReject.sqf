@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call tfsrhs_back_to_game_fnc_dialogReject
+ * call tfs_back_to_game_fnc_dialogReject
  *
  * Public: No
  */

@@ -1,10 +1,10 @@
-class TFSRHS_ModuleMultiScreen: Module_F
+class TFS_ModuleMultiScreen: Module_F
 {
 	scope = 2;
 	displayName = "Setup Multi Screen";
-	icon = "\z\tfsrhs\addons\media\images\icons\MultiScreen.paa";
-	category = "TFSRHS_CommandCentre";
-	function = "TFSRHS_fnc_moduleMultiScreen";
+	icon = "\z\tfs\addons\media\images\icons\MultiScreen.paa";
+	category = "TFS_CommandCentre";
+	function = "TFS_fnc_moduleMultiScreen";
 	functionPriority = 4;
 	isGlobal = 0;
 	isTriggerActivated = 0;
@@ -14,7 +14,7 @@ class TFSRHS_ModuleMultiScreen: Module_F
 	{
 		class MultiScreenCam: Checkbox
   		{
-				property = "TFSRHS_MultiScreenCam";
+				property = "TFS_MultiScreenCam";
 				displayName = "Allow Helmet Cams";
 				tooltip = "Allow/Disallow viewing Helmet Cams through the screen.";
 				typeName = "BOOL";
@@ -22,7 +22,7 @@ class TFSRHS_ModuleMultiScreen: Module_F
 		};
 		class MultiScreenDrone: Checkbox
   		{
-				property = "TFSRHS_MultiScreenDrone";
+				property = "TFS_MultiScreenDrone";
 				displayName = "Allow Drone Cams";
 				tooltip = "Allow/Disallow viewing Drone Cams through the screen.";
 				typeName = "BOOL";
@@ -30,7 +30,7 @@ class TFSRHS_ModuleMultiScreen: Module_F
 		};
 		class MultiScreenSat: Checkbox
   		{
-				property = "TFSRHS_MultiScreenSat";
+				property = "TFS_MultiScreenSat";
 				displayName = "Allow Satellite View";
 				tooltip = "Allow/Disallow viewing Satellite Imagery through the screen.";
 				typeName = "BOOL";
@@ -38,7 +38,7 @@ class TFSRHS_ModuleMultiScreen: Module_F
 		};
 		class MultiScreenSelections: Edit
   		{
-				property = "TFSRHS_MultiScreenSelections";
+				property = "TFS_MultiScreenSelections";
 				displayName = "Screen Texture Selections";
 				tooltip = "Texture Selections of the multiple screens. Enter as comma-separated list, eg: '1,2,3'";
 				defaultValue = """1,2,3""";

@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [30] call tfsrhs_respawn_fnc_adjustTimeLocal
+ * [30] call tfs_respawn_fnc_adjustTimeLocal
  *
  * Public: No
  */

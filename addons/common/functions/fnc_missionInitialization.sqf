@@ -9,18 +9,18 @@
 
 if (GVAR(skipMissionInit)) exitWith {};
 
-private _lastState = TFSRHS_unit call EFUNC(loadout,checkSavedUnitState);
+private _lastState = TFS_unit call EFUNC(loadout,checkSavedUnitState);
 if !(count _lastState == 0) exitWith {};
 
-if ( vehicle TFSRHS_unit == TFSRHS_unit ) then {
+if ( vehicle TFS_unit == TFS_unit ) then {
     if (mod_ACE3) then {
-        [TFSRHS_unit, currentWeapon TFSRHS_unit, currentMuzzle TFSRHS_unit] call ACE_SafeMode_fnc_lockSafety;
+        [TFS_unit, currentWeapon TFS_unit, currentMuzzle TFS_unit] call ACE_SafeMode_fnc_lockSafety;
     };
-    if ( primaryWeapon TFSRHS_unit != "" ) then {
-        TFSRHS_unit playMove "AmovPercMstpSlowWrflDnon";
+    if ( primaryWeapon TFS_unit != "" ) then {
+        TFS_unit playMove "AmovPercMstpSlowWrflDnon";
     } else {
-        if ( handgunWeapon TFSRHS_unit != "" ) then {
-            TFSRHS_unit playMove "AmovPercMstpSrasWpstDnon_AmovPercMstpSrasWlnrDnon";
+        if ( handgunWeapon TFS_unit != "" ) then {
+            TFS_unit playMove "AmovPercMstpSrasWpstDnon_AmovPercMstpSrasWlnrDnon";
         };
     };
 };

@@ -29,6 +29,5 @@ class cfgPatches {
 #include "CfgScriptPaths.hpp"
 #include "CfgEditorCategories.hpp"
 #include "CfgVehicleIcons.hpp"
-#include "CfgWorlds.hpp"
 #include "CfgMarkers.hpp"
 #include "radio.hpp"

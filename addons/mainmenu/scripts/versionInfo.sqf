@@ -1,7 +1,7 @@
 #include "\a3\ui_f\hpp\defineResinclDesign.inc"
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\mainmenu\scripts\versionInfo.sqf
+ *	\z\tfs\addons\mainmenu\scripts\versionInfo.sqf
  *	by Ojemineh
  *	
  *	show version info box
@@ -13,7 +13,7 @@
  *	nothing
  *	
  *	Example:
- *	[0] execVM "\z\tfsrhs\addons\mainmenu\scripts\versionInfo.sqf";
+ *	[0] execVM "\z\tfs\addons\mainmenu\scripts\versionInfo.sqf";
  *	
  */
 
@@ -29,7 +29,7 @@ private _projectOPFOR = isClass (configfile >> "CfgPatches" >> "po_main");
 
 // -------------------------------------------------------------------------------------------------
 
-if (profileNamespace getVariable ["tfsrhs_showNewsOnMainMenu", true]) then {
+if (profileNamespace getVariable ["tfs_showNewsOnMainMenu", true]) then {
 	
 	if (_projectOPFOR) then {
 		private _poCtrl = _display displayCtrl 1299;
@@ -65,12 +65,12 @@ if (profileNamespace getVariable ["tfsrhs_showNewsOnMainMenu", true]) then {
     (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BUTTON) ctrlAddEventHandler ["SetFocus", _fnc_onSetFocus];
     (_controlsGroup controlsGroupCtrl IDC_MAIN_INFO_BUTTON) ctrlAddEventHandler ["KillFocus", _fnc_onKillFocus];
 	
-    private _versionStr = getText (configFile >> "CfgPatches" >> "tfsrhs_main" >> "versionStr") splitString ".";
+    private _versionStr = getText (configFile >> "CfgPatches" >> "tfs_main" >> "versionStr") splitString ".";
     _versionStr resize 3;
     _versionStr = _versionStr joinString ".";
 	
     (_display displayCtrl 90091) ctrlSetText format ["Version: %1", _versionStr];
-    (_display displayCtrl 90092) htmlLoad (localize "STR_TFSRHS_Addon_URL_Version");
+    (_display displayCtrl 90092) htmlLoad (localize "STR_TFS_Addon_URL_Version");
 	
 } else {
 	

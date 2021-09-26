@@ -1,8 +1,8 @@
-#include "\z\tfsrhs\addons\common\script_component.hpp"
+#include "\z\tfs\addons\common\script_component.hpp"
 
-// IS TFSRHS mission
+// IS TFS mission
 
-if (isTFSRHS) then {
+if (isTFS) then {
     enableSaving [false, false]; // Disable mission saving
     enableSentences false; // Mute AI reports?
 
@@ -52,11 +52,11 @@ if (isTFSRHS) then {
 
 
 /// VARIABLE SYNCHRONIZATION - ENSURE VARIABLES ARE SYNCHRONIZED BEFORE PROCESSING.
-/// Some code relies on tfsrhs_common__VarSync being set before processing e.g. briefing/radio assignment
+/// Some code relies on tfs_common__VarSync being set before processing e.g. briefing/radio assignment
 // Register event to recieve notification of variable synchorization has been completed.
 [QGVAR(serverVariableSyncResponse),{
     GVAR(VarSync) = true;
-    diag_log "TFSRHS Common: Variable Synchronization Completed";
+    diag_log "TFS Common: Variable Synchronization Completed";
 }] call CBA_fnc_addEventHandler;
 
 // Send request event to server. Server will respon a frame later with the response being added to back of message queue.
@@ -68,7 +68,7 @@ if (isTFSRHS) then {
 }] call CBA_fnc_execNextFrame;
 
 ["unit", {
-    TFSRHS_unit = (_this select 0);
+    TFS_unit = (_this select 0);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 

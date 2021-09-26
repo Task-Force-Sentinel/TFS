@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 params["_control","_path"];
 private _netId = _control tvData _path;
 if(count _path > 1) then {

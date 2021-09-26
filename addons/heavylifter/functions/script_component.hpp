@@ -1,1 +1,1 @@
-#include "\z\tfsrhs\addons\heavylifter\script_component.hpp"
+#include "\z\tfs\addons\heavylifter\script_component.hpp"

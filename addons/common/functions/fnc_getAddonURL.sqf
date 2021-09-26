@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\tfsrhs_common\functions\addons\fn_getAddonURL.sqf
+ *	\tfs_common\functions\addons\fn_getAddonURL.sqf
  *	by Ojemineh
  *	
  *	get addon url
@@ -12,7 +12,7 @@
  *	<STRING>
  *	
  *	Example:
- *	["TFSRHS_core"] call tfsrhs_fnc_getAddonURL;
+ *	["TFS_core"] call tfs_fnc_getAddonURL;
  *	
  */
 

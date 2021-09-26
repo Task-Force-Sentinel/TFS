@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\hints\functions\ace_common\fn_displayTextPicture.sqf
+ *	\z\tfs\addons\hints\functions\ace_common\fn_displayTextPicture.sqf
  *	by Ojemineh
  *	
  *	replace ace core displayTextStructured
@@ -23,8 +23,8 @@
 
 params [["_text", ""], ["_size", 1.5, [0]], ["_target", ACE_player, [objNull]], ["_width", 10, [0]]];
 
-private _hint_enabled = (missionNamespace getVariable ["tfsrhs_hint_enabled", true]);
-private _hint_option_ace = (missionNamespace getVariable ["tfsrhs_hint_option_ace", true]);
+private _hint_enabled = (missionNamespace getVariable ["tfs_hint_enabled", true]);
+private _hint_option_ace = (missionNamespace getVariable ["tfs_hint_option_ace", true]);
 
 if (_hint_enabled && _hint_option_ace) then {
 	
@@ -48,7 +48,7 @@ if (_hint_enabled && _hint_option_ace) then {
 	
 	_text = format [hint_tpl_liner_1, _text];
 	
-	[_text] call tfsrhs_fnc_hint;
+	[_text] call tfs_fnc_hint;
 	
 } else {
 	[_text, _size, _target, _width] call ACE_common_fnc_displayTextStructuredEx;

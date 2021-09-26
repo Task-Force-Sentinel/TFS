@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\diagnostics\fn_diagLog.sqf
+ *	\z\tfs\addons\core\functions\diagnostics\fn_diagLog.sqf
  *	by Ojemineh
  *	
  *	add a rpt-log if debug is enabled
@@ -16,7 +16,7 @@
  *	nothing
  *	
  *	Example:
- *	[4, "Player: '%1', Time: '%2'", [player, time], "core"] call TFSRHS_fnc_diagLog;
+ *	[4, "Player: '%1', Time: '%2'", [player, time], "core"] call TFS_fnc_diagLog;
  *	
  */
 
@@ -28,10 +28,10 @@ _level			= [_this, 0, 0, [0]] call BIS_fnc_param;
 _message		= [_this, 1, "", [""]] call BIS_fnc_param;
 _params			= [_this, 2, [], [[]]] call BIS_fnc_param;
 _extension		= [_this, 3, "", [""]] call BIS_fnc_param;
-_modification	= [_this, 4, "TFSRHS", [""]] call BIS_fnc_param;
+_modification	= [_this, 4, "TFS", [""]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-if (missionNamespace getVariable ["tfsrhs_debug_enabled", false]) then {
-	[_level, _message, _params, _extension, _modification] call TFSRHS_fnc_log;
+if (missionNamespace getVariable ["tfs_debug_enabled", false]) then {
+	[_level, _message, _params, _extension, _modification] call TFS_fnc_log;
 };

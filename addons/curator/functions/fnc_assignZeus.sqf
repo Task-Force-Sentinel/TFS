@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player] call tfsrhs_curator_fnc_assignZeus
+ * [player] call tfs_curator_fnc_assignZeus
  *
  * Public: No
  */

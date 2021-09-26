@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class TFSRHS_Explosives
+	class TFS_Explosives
 	{
 		author = AUTHOR;
 		name = NAME;

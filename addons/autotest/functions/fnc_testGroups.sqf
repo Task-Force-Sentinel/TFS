@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\autotest\script_component.hpp"
+#include "\z\tfs\addons\autotest\script_component.hpp"
 
 private _output = [];
 //Group count check.

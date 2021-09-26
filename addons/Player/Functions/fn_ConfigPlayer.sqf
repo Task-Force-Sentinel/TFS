@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_ConfigPlayer
+Function: TFS_fnc_ConfigPlayer
 
 name:
 	Used to configure basic player attributes and equipment.
@@ -8,15 +8,15 @@ Arguments:
 	_unit - Player the setup is applied to. <OBJECT>
 	_Section - The Section the Player is in. <STRING>
 	_Traits - Which Traits the player has, can be more than one. <ARRAY>
-	_Loadout - Name of Loadout to call. Changes player equipment to Loadout from TFSRHS Fundamentals. <STRING>
+	_Loadout - Name of Loadout to call. Changes player equipment to Loadout from TFS Fundamentals. <STRING>
 
 Examples:
 	(begin example)
-		[this] call TFSRHS_fnc_ConfigPlayer;
-		[this, "1 Section"] call TFSRHS_fnc_ConfigPlayer;
-		[this, "ds999", ["Pilot"]] call TFSRHS_fnc_ConfigPlayer;
-		[this, "ds990", ["Pilot", "Mission Maker"]] call TFSRHS_fnc_ConfigPlayer;
-		[this, "ds999", ["Pilot"], "3CB Pilot"] call TFSRHS_fnc_ConfigPlayer;
+		[this] call TFS_fnc_ConfigPlayer;
+		[this, "1 Section"] call TFS_fnc_ConfigPlayer;
+		[this, "ds999", ["Pilot"]] call TFS_fnc_ConfigPlayer;
+		[this, "ds990", ["Pilot", "Mission Maker"]] call TFS_fnc_ConfigPlayer;
+		[this, "ds999", ["Pilot"], "3CB Pilot"] call TFS_fnc_ConfigPlayer;
 	(end)
 
 Author:
@@ -32,16 +32,15 @@ params [
 
 if (_Section isEqualto -1) exitwith {};
 
-call {
-	if (_Section isEqualto 0) exitwith {_Section = "Headhunter1"};
-	if (_Section isEqualto 1) exitwith {_Section = "Headhunter2"};
-	if (_Section isEqualto 2) exitwith {_Section = "Headhunter3"};
-	if (_Section isEqualto 3) exitwith {_Section = "HeadhunterHHC"};
-	if (_Section isEqualto 4) exitwith {_Section = "Arrow"};
-	if (_Section isEqualto 5) exitwith {_Section = "Outlaw"};
-	if (_Section isEqualto 6) exitwith {_Section = "Sentinel"};
-	if (_Section isEqualto 10) exitwith {_Section = "bolo"};
-};
+/* call {
+	if (_Section isEqualto 1) exitwith {_Section = "1"};
+	if (_Section isEqualto 2) exitwith {_Section = "11"};
+	if (_Section isEqualto 3) exitwith {_Section = "11a"};
+	if (_Section isEqualto 4) exitwith {_Section = "11b"};
+	if (_Section isEqualto 5) exitwith {_Section = "12"};
+	if (_Section isEqualto 6) exitwith {_Section = "12a"};
+	if (_Section isEqualto 7) exitwith {_Section = "12b"};
+}; */
 
 if (local _unit) then {
 
@@ -58,37 +57,137 @@ if (local _unit) then {
 		private ["_ShortRange", "_LongRange"];
 
 		call {
-			if (_Section == "HeadhunterHHC") exitwith {
-				_ShortRange = ["101", "102", "103", "104", "105", "106", "99", "69"];
-				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
+			if (_Section == "1") exitwith {
+				_ShortRange = ["100", "101", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
 			};
-			if (_Section == "Headhunter1") exitwith {
-				_ShortRange = ["111", "112", "113", "114", "115", "116", "99", "69"];
-				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
+			if (_Section == "11") exitwith {
+				_ShortRange = ["100", "110", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
 			};
-			if (_Section == "Headhunter2") exitwith {
-				_ShortRange = ["121", "122", "123", "124", "125", "126", "99", "69"];
-				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
+			if (_Section == "111") exitwith {
+				_ShortRange = ["100", "111", "99", "69","110"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
 			};
-			if (_Section == "Headhunter3") exitwith {
-				_ShortRange = ["131", "132", "133", "134", "135", "136", "99", "69"];
-				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
+			if (_Section == "112") exitwith {
+				_ShortRange = ["100", "112", "99", "69","110"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
 			};
-			if (_Section == "Arrow") exitwith {
-				_ShortRange = ["141", "142", "143", "144", "145", "146", "99", "69"];
-				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
+			if (_Section == "12") exitwith {
+				_ShortRange = ["100", "120", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
 			};
-			if (_Section == "Outlaw") exitwith {
-				_ShortRange = ["151", "152", "153", "154", "155", "156", "99", "69"];
-				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
+			if (_Section == "121") exitwith {
+				_ShortRange = ["100", "121", "99", "69", "120"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
 			};
-            if (_Section == "Sentinel") exitwith {
-				_ShortRange = ["161", "162", "163", "164", "165", "166", "99", "69"];
-				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
+			if (_Section == "122") exitwith {
+				_ShortRange = ["100", "122", "99", "69", "120"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
 			};
-            if (_Section == "bolo") exitwith {
-				_ShortRange = ["101", "102", "103", "104", "105", "106", "99", "69"];
-				_LongRange = ["40", "50", "51", "52", "53", "99", "60", "69"];
+			if (_Section == "13") exitwith {
+				_ShortRange = ["100", "130", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "131") exitwith {
+				_ShortRange = ["100", "131", "99", "69", "130"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "132") exitwith {
+				_ShortRange = ["100", "132", "99", "69", "130"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "2") exitwith {
+				_ShortRange = ["200", "201", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "21") exitwith {
+				_ShortRange = ["200", "210", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "211") exitwith {
+				_ShortRange = ["200", "211", "99", "69","210"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "212") exitwith {
+				_ShortRange = ["200", "212", "99", "69","210"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "22") exitwith {
+				_ShortRange = ["200", "220", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "221") exitwith {
+				_ShortRange = ["200", "221", "99", "69", "220"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "222") exitwith {
+				_ShortRange = ["200", "222", "99", "69", "220"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "23") exitwith {
+				_ShortRange = ["200", "230", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "231") exitwith {
+				_ShortRange = ["200", "231", "99", "69", "230"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "232") exitwith {
+				_ShortRange = ["200", "232", "99", "69", "230"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "3") exitwith {
+				_ShortRange = ["300", "301", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "31") exitwith {
+				_ShortRange = ["300", "310", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "311") exitwith {
+				_ShortRange = ["300", "311", "99", "69","310"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "312") exitwith {
+				_ShortRange = ["300", "312", "99", "69","310"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "32") exitwith {
+				_ShortRange = ["300", "320", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "321") exitwith {
+				_ShortRange = ["300", "321", "99", "69", "320"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "322") exitwith {
+				_ShortRange = ["300", "322", "99", "69", "320"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "33") exitwith {
+				_ShortRange = ["300", "330", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "331") exitwith {
+				_ShortRange = ["300", "331", "99", "69", "330"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "332") exitwith {
+				_ShortRange = ["300", "332", "99", "69", "330"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "500") exitwith {
+				_ShortRange = ["500", "501", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "150") exitwith {
+				_ShortRange = ["150", "151", "152", "153", "154", "99", "69"];
+				_LongRange = ["40", "50", "51", "52", "58", "59", "60", "69"];
+			};
+			if (_Section == "90") exitwith {
+				_ShortRange = ["90", "90", "99", "69", "330"];
+				_LongRange = ["40", "60", "61", "62", "63", "64", "65", "69"];
 			};
 		};
 
@@ -99,7 +198,7 @@ if (local _unit) then {
 			_unit setVariable ["TFAR_freq_lr", _LongRange, true];
 		} else {
 			group _unit setVariable ["tf_sw_frequency", [0,9,_ShortRange,0,nil,-1,0,false], true];
-			group _unit setVariable ["tf_TFSRHS_frequency", [0,9,_LongRange,0,nil,-1,0,false], true];
+			group _unit setVariable ["tf_TFS_frequency", [0,9,_LongRange,0,nil,-1,0,false], true];
 		};
 	};
 	//========== Trait Config
@@ -126,20 +225,20 @@ if (local _unit) then {
 
 	//========== Loadout Config
 	if !(_Loadout isEqualto []) then {
-		[_unit, _Loadout] call TFSRHS_fnc_Loadouts;
+		[_unit, _Loadout] call TFS_fnc_Loadouts;
 	};
 
 	//=========== Patches
-	[_unit, _Section] call TFSRHS_fnc_Patches;
+	// [_unit, _Section] call TFS_fnc_Patches;
 
 	//=========== Set Section
-	_unit setVariable ["TFSRHS_Section", _Section, true];
+	_unit setVariable ["TFS_Section", _Section, true];
 };
 
 //========== SideChat Config
 if (hasinterface) then {
 	if ((isClass (configFile >> "CfgPatches" >> "task_force_radio")) && (EnableSideChat)) then {
-		if ((_Section == "Command") || (_Section == "Outlaw")) then {
+		if ((_Section == "Command") || (_Section == "90")) then {
 			1 enablechannel [true, false];
 		};
 	};

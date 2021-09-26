@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * ["range", [controller1, controller2], 5, [target1, target2]] call TFSRHS_shootingrange_fnc_setConfigPauseDuration;
+ * ["range", [controller1, controller2], 5, [target1, target2]] call TFS_shootingrange_fnc_setConfigPauseDuration;
  *
  * Public: No
  */

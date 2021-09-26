@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call TFSRHS_common_fnc_initDB;
+ * call TFS_common_fnc_initDB;
  *
  */
 private ["_dateTime","_dateTimeStr","_joinedMissionName","_databasename"];

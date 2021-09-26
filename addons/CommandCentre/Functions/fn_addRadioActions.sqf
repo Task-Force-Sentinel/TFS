@@ -18,7 +18,7 @@ private _configAction = [
 	{
 		params ["_target", "_player", "_params"];
 		_params params ["_object", "_radio"];
-		[_object, _player, _radio] call TFSRHS_fnc_configureRadio;
+		[_object, _player, _radio] call TFS_fnc_configureRadio;
 	},
 	{ true },
 	nil,
@@ -32,7 +32,7 @@ private _turnOnAction = [
 	{
 		params ["_target", "_player", "_params"];
 		_params params ["_object", "_radio"];
-		[_object, _radio, true] call TFSRHS_fnc_turnOnRadio;
+		[_object, _radio, true] call TFS_fnc_turnOnRadio;
 	},
 	{
 		params ["_target", "_player", "_params"];
@@ -49,7 +49,7 @@ private _turnOffAction = [
 	{
 		params ["_target", "_player", "_params"];
 		_params params ["_object", "_radio"];
-		[_object, _radio, false] call TFSRHS_fnc_turnOnRadio;
+		[_object, _radio, false] call TFS_fnc_turnOnRadio;
 	},
 	{
 		params ["_target", "_player", "_params"];

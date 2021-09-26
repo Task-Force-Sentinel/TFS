@@ -10,7 +10,7 @@ class cfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"TFSRHS_main","3den"};
+        requiredAddons[] = {"TFS_main","3den"};
         VERSION_CONFIG;
     };
 };
@@ -21,7 +21,7 @@ class cfgPatches
 #include "UI\RscModal.hpp"
 #include "CfgSounds.hpp"
 
-class TFSRHS_autotest {
+class TFS_autotest {
     class GVAR(groupNamesSlottingScreen) {
         code = QUOTE([] call FUNC(testGroupsSlottingScreen));
     };

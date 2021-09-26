@@ -10,7 +10,7 @@
  * Mass <NUMBER>
  *
  * Example:
- * [player] call TFSRHS_boc_fnc_loadChestpack;
+ * [player] call TFS_boc_fnc_loadChestpack;
  *
  * Public: No
  */

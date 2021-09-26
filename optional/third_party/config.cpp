@@ -7,8 +7,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "TFSRHS_main",
-            "TFSRHS_media"
+            "TFS_main",
+            "TFS_media"
         };
         author = "NemesisRE";
         authors[] = {

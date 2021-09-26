@@ -42,18 +42,18 @@ class RscSpectatorShortcutButton : RscPicture {
 };
 
 //--- Spectator
-#define IDC_SPECTATOR_TFSRHS_SPECTATOR_UNITLABEL  4945
-#define IDC_SPECTATOR_TFSRHS_SPECTATOR_UNITLIST  7171
-#define IDC_SPECTATOR_TFSRHS_SPECTATOR_VISION  5545
-#define IDC_SPECTATOR_TFSRHS_SPECTATOR_FILTER  5546
-#define IDC_SPECTATOR_TFSRHS_SPECTATOR_BUTTON  5547
-#define IDC_SPECTATOR_TFSRHS_SPECTATOR_TAGS  5548
-#define IDC_SPECTATOR_TFSRHS_SPECTATOR_VIEW  5549
-#define IDC_SPECTATOR_TFSRHS_SPECTATOR_COMPASS    5453
-#define IDC_SPECTATOR_TFSRHS_SPECTATOR_COMPASSLEFT    5454
-#define IDC_SPECTATOR_TFSRHS_SPECTATOR_COMPASSRight    5455
-#define IDC_SPECTATOR_TFSRHS_SPECTATOR_MUTE 5467
-#define IDC_SPECTATOR_TFSRHS_SPECTATOR_MAP 5468
+#define IDC_SPECTATOR_TFS_SPECTATOR_UNITLABEL  4945
+#define IDC_SPECTATOR_TFS_SPECTATOR_UNITLIST  7171
+#define IDC_SPECTATOR_TFS_SPECTATOR_VISION  5545
+#define IDC_SPECTATOR_TFS_SPECTATOR_FILTER  5546
+#define IDC_SPECTATOR_TFS_SPECTATOR_BUTTON  5547
+#define IDC_SPECTATOR_TFS_SPECTATOR_TAGS  5548
+#define IDC_SPECTATOR_TFS_SPECTATOR_VIEW  5549
+#define IDC_SPECTATOR_TFS_SPECTATOR_COMPASS    5453
+#define IDC_SPECTATOR_TFS_SPECTATOR_COMPASSLEFT    5454
+#define IDC_SPECTATOR_TFS_SPECTATOR_COMPASSRight    5455
+#define IDC_SPECTATOR_TFS_SPECTATOR_MUTE 5467
+#define IDC_SPECTATOR_TFS_SPECTATOR_MAP 5468
 
 
 #define BUTTON_WIDTH 0.02 * safezoneW
@@ -70,13 +70,13 @@ class GVAR(dialog)
   fadeout = 0;
   duration = 2147483647;
   type = 0;
-  controlsBackground[] = {TFSRHS_SPECTATOR_MOUSE,TFSRHS_SPECTATOR_UNITLABEL,TFSRHS_SPECTATOR_Compass,TFSRHS_SPECTATOR_CompassLeft,TFSRHS_SPECTATOR_CompassRight};
-  onKeyDown = "[0,_this] call tfsrhs_spectator_fnc_keyhandler";
-  onKeyUp= "[1,_this] call tfsrhs_spectator_fnc_keyhandler";
-  onLoad = "_this call tfsrhs_spectator_fnc_onLoad";
-  onUnload = "TFSRHS_spectator_camera cameraEffect ['TERMINATE','BACK']";
-  class TFSRHS_SPECTATOR_UNITLABEL: RscSpectatorText {
-    idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_UNITLABEL;
+  controlsBackground[] = {TFS_SPECTATOR_MOUSE,TFS_SPECTATOR_UNITLABEL,TFS_SPECTATOR_Compass,TFS_SPECTATOR_CompassLeft,TFS_SPECTATOR_CompassRight};
+  onKeyDown = "[0,_this] call tfs_spectator_fnc_keyhandler";
+  onKeyUp= "[1,_this] call tfs_spectator_fnc_keyhandler";
+  onLoad = "_this call tfs_spectator_fnc_onLoad";
+  onUnload = "TFS_spectator_camera cameraEffect ['TERMINATE','BACK']";
+  class TFS_SPECTATOR_UNITLABEL: RscSpectatorText {
+    idc = IDC_SPECTATOR_TFS_SPECTATOR_UNITLABEL;
     text = ""; //--- ToDo: Localize;
     x = (0.50-0.15/2) * safezoneW + safezoneX;
     y = 0.025 * safezoneH + safezoneY;
@@ -84,8 +84,8 @@ class GVAR(dialog)
     h = 0.020 * safezoneH;
     font = "PuristaSemiBold";
   };
-  class TFSRHS_SPECTATOR_Compass: RscSpectatorText {
-    idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_COMPASS;
+  class TFS_SPECTATOR_Compass: RscSpectatorText {
+    idc = IDC_SPECTATOR_TFS_SPECTATOR_COMPASS;
     text = "NW"; //--- ToDo: Localize;
     x = (0.5-(0.07/2)) * safezoneW + safezoneX;
     y = 0.005* safezoneH + safezoneY;
@@ -93,8 +93,8 @@ class GVAR(dialog)
     h = 0.015 * safezoneH;
     font = "PuristaBold";
   };
-  class TFSRHS_SPECTATOR_CompassLeft: RscSpectatorText {
-    idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_COMPASSLEFT;
+  class TFS_SPECTATOR_CompassLeft: RscSpectatorText {
+    idc = IDC_SPECTATOR_TFS_SPECTATOR_COMPASSLEFT;
     text = "NW"; //--- ToDo: Localize;
     x = (0.5-(0.14)/2) * safezoneW + safezoneX;
     y = 0.005 * safezoneH + safezoneY;
@@ -110,8 +110,8 @@ class GVAR(dialog)
     };
     font = "PuristaBold";
   };
-  class TFSRHS_SPECTATOR_CompassRight: RscSpectatorText {
-    idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_COMPASSRight;
+  class TFS_SPECTATOR_CompassRight: RscSpectatorText {
+    idc = IDC_SPECTATOR_TFS_SPECTATOR_COMPASSRight;
     text = "NE"; //--- ToDo: Localize;
     x = (0.5) * safezoneW + safezoneX;
     y = 0.005 * safezoneH + safezoneY;
@@ -128,49 +128,49 @@ class GVAR(dialog)
     font = "PuristaBold";
   };
   class controls {
-    class TFSRHS_SPECTATOR_FILTER: RscSpectatorShortcutButton {
-        idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_FILTER;
+    class TFS_SPECTATOR_FILTER: RscSpectatorShortcutButton {
+        idc = IDC_SPECTATOR_TFS_SPECTATOR_FILTER;
         x = COLUMN(1);
         y = 0.002 * safezoneH + safezoneY;
         w = BUTTON_WIDTH;
         h = BUTTON_HEIGHT;
-        onButtonDown = "['disableAI',_this] call tfsrhs_spectator_fnc_menuhandler;";
+        onButtonDown = "['disableAI',_this] call tfs_spectator_fnc_menuhandler;";
         text = "\A3\ui_f\data\gui\Rsc\RscDisplayMultiplayerSetup\enabledai_ca.paa";
         tooltip = "PLAYERS + AI";
     };
-    class TFSRHS_SPECTATOR_BUTTON: RscSpectatorShortcutButton {
-      idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_BUTTON;
+    class TFS_SPECTATOR_BUTTON: RscSpectatorShortcutButton {
+      idc = IDC_SPECTATOR_TFS_SPECTATOR_BUTTON;
       x = COLUMN(0);
       y = 0.002 * safezoneH + safezoneY;
       w = BUTTON_WIDTH;
       h = BUTTON_HEIGHT;
-      text = "\z\tfsrhs\addons\spectator\images\flag_civil_empty_ca_64.paa";
-      onButtonDown = "['sidefilter',_this] call tfsrhs_spectator_fnc_menuhandler;";
+      text = "\z\tfs\addons\spectator\images\flag_civil_empty_ca_64.paa";
+      onButtonDown = "['sidefilter',_this] call tfs_spectator_fnc_menuhandler;";
       tooltip = "SHOWING ALL SIDES";
     };
-    class TFSRHS_SPECTATOR_TAGS: RscSpectatorShortcutButton {
-      idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_TAGS;
+    class TFS_SPECTATOR_TAGS: RscSpectatorShortcutButton {
+      idc = IDC_SPECTATOR_TFS_SPECTATOR_TAGS;
       x = COLUMN(3);
       y = 0.002 * safezoneH + safezoneY;
       w = BUTTON_WIDTH;
       h = BUTTON_HEIGHT;
       text = "\A3\ui_f\data\map\Diary\textures_ca.paa";
-      onButtonDown = "['tags',_this] call tfsrhs_spectator_fnc_menuhandler;";
+      onButtonDown = "['tags',_this] call tfs_spectator_fnc_menuhandler;";
       tooltip = "DISABLE TAGS";
     };
-    class TFSRHS_SPECTATOR_VISION: RscSpectatorShortcutButton {
-      idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_VISION;
+    class TFS_SPECTATOR_VISION: RscSpectatorShortcutButton {
+      idc = IDC_SPECTATOR_TFS_SPECTATOR_VISION;
       x = COLUMN(4);
       y = 0.002 * safezoneH + safezoneY;
       w = BUTTON_WIDTH;
       h = BUTTON_HEIGHT;
-      onButtonDown = "['vision',_this] call tfsrhs_spectator_fnc_menuhandler;";
+      onButtonDown = "['vision',_this] call tfs_spectator_fnc_menuhandler;";
       text = "\A3\ui_f\data\gui\Rsc\RscDisplayArsenal\nvgs_ca.paa";
       tooltip = "CHANGE VISION MODE";
     };
-    class TFSRHS_SPECTATOR_VIEW: RscSpectatorShortcutButton {
-      idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_VIEW;
-      onButtonDown = "['camera',_this] call tfsrhs_spectator_fnc_menuhandler;";
+    class TFS_SPECTATOR_VIEW: RscSpectatorShortcutButton {
+      idc = IDC_SPECTATOR_TFS_SPECTATOR_VIEW;
+      onButtonDown = "['camera',_this] call tfs_spectator_fnc_menuhandler;";
       x = COLUMN(2);
       y = 0.002 * safezoneH + safezoneY;
       w = BUTTON_WIDTH;
@@ -178,9 +178,9 @@ class GVAR(dialog)
       text = "\A3\ui_f\data\IGUI\Cfg\IslandMap\iconcamera_ca.paa";
       tooltip = "SWITCH TO FIRST PERSON";
     };
-    class TFSRHS_SPECTATOR_MUTE: RscSpectatorShortcutButton {
-      idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_MUTE;
-      onButtonDown = "['mute',_this] call tfsrhs_spectator_fnc_menuhandler;";
+    class TFS_SPECTATOR_MUTE: RscSpectatorShortcutButton {
+      idc = IDC_SPECTATOR_TFS_SPECTATOR_MUTE;
+      onButtonDown = "['mute',_this] call tfs_spectator_fnc_menuhandler;";
       x = COLUMN(5);
       y = 0.002 * safezoneH + safezoneY;
       w = BUTTON_WIDTH;
@@ -188,8 +188,8 @@ class GVAR(dialog)
       text = "\A3\ui_f\data\gui\Rsc\RscDisplayArsenal\voice_ca.paa";
       tooltip = "MUTE SPECTATORS";
     };
-    class TFSRHS_SPECTATOR_RADIO: RscSpectatorShortcutButton {
-        idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_RADIO;
+    class TFS_SPECTATOR_RADIO: RscSpectatorShortcutButton {
+        idc = IDC_SPECTATOR_TFS_SPECTATOR_RADIO;
         onButtonDown = QUOTE([ARR_2('radio',_this)] call FUNC(menuhandler));
         x = COLUMN(6);
         y = 0.002 * safezoneH + safezoneY;
@@ -198,17 +198,17 @@ class GVAR(dialog)
         text = "\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\call_ca.paa";
         tooltip = "SHOW RADIO MENU";
     };
-    class TFSRHS_SPECTATOR_MAP : RscMapControl {
-      idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_MAP;
+    class TFS_SPECTATOR_MAP : RscMapControl {
+      idc = IDC_SPECTATOR_TFS_SPECTATOR_MAP;
       x = 0 * safezoneW + safezoneX;
       y = 0 * safezoneH + safezoneY;
       w = 1 * safezoneW;
       h = 1 * safezoneH;
-      onDraw = "_this call tfsrhs_spectator_fnc_drawMap";
-      onMouseButtonDown = "_this call tfsrhs_spectator_fnc_onMapClick;";
+      onDraw = "_this call tfs_spectator_fnc_drawMap";
+      onMouseButtonDown = "_this call tfs_spectator_fnc_onMapClick;";
     };
-    class TFSRHS_SPECTATOR_UNITLIST: RscTree {
-      idc = IDC_SPECTATOR_TFSRHS_SPECTATOR_UNITLIST;
+    class TFS_SPECTATOR_UNITLIST: RscTree {
+      idc = IDC_SPECTATOR_TFS_SPECTATOR_UNITLIST;
       x = 0.002 * safezoneW + safezoneX;
       y = 0.038 * safezoneH + safezoneY;
       w = 0.13 * safezoneW;
@@ -217,9 +217,9 @@ class GVAR(dialog)
       colorBackground[] = {0,0,0,0};
       disableKeyboardSearch = 1;
       colorSelectText[] = {1,1,1,1}; // Selected text color (when multiselectEnabled is 0)
-      onTreeSelChanged = "_this call tfsrhs_spectator_fnc_onChange";
+      onTreeSelChanged = "_this call tfs_spectator_fnc_onChange";
       multiselectEnabled = 0;
-      //onMouseZChanged = "[""MouseZChanged"",_this] call tfsrhs_spectator_fnc_mouseHandler";
+      //onMouseZChanged = "[""MouseZChanged"",_this] call tfs_spectator_fnc_mouseHandler";
       // Scrollbar configuration
       class ScrollBar {
         width = 0;
@@ -235,7 +235,7 @@ class GVAR(dialog)
       };
       maxHistoryDelay = 9999999; // Time since last keyboard type search to reset it
     };
-    class TFSRHS_SPECTATOR_KILLLIST : RscControlsGroupNoScrollbars {
+    class TFS_SPECTATOR_KILLLIST : RscControlsGroupNoScrollbars {
         idc = 2300;
         x = 0.763544 * safezoneW + safezoneX;
         y = 0.005 * safezoneH + safezoneY;
@@ -316,7 +316,7 @@ class GVAR(dialog)
         };
     };
   };
-  class TFSRHS_SPECTATOR_MOUSE: RscControlsGroup {
+  class TFS_SPECTATOR_MOUSE: RscControlsGroup {
     class ListScrollBar {
         color[] = {1,1,1,0.6};
         colorActive[] = {1,1,1,1};
@@ -326,10 +326,10 @@ class GVAR(dialog)
         arrowEmpty = "";
         border = "";
     };
-    onMouseButtonDown = "[""MouseButtonDown"",_this] call tfsrhs_spectator_fnc_mouseHandler";
-    onMouseButtonUp = "[""MouseButtonUp"",_this] call tfsrhs_spectator_fnc_mouseHandler";
-    onMouseZChanged = "[""MouseZChanged"",_this] call tfsrhs_spectator_fnc_mouseHandler";
-    onMouseMoving = "['MouseMoving',_this] call tfsrhs_spectator_fnc_mouseHandler";
+    onMouseButtonDown = "[""MouseButtonDown"",_this] call tfs_spectator_fnc_mouseHandler";
+    onMouseButtonUp = "[""MouseButtonUp"",_this] call tfs_spectator_fnc_mouseHandler";
+    onMouseZChanged = "[""MouseZChanged"",_this] call tfs_spectator_fnc_mouseHandler";
+    onMouseMoving = "['MouseMoving',_this] call tfs_spectator_fnc_mouseHandler";
     idc = 123;
     x = SafeZoneX; y = SafeZoneY;
     w = SafeZoneW; h = SafeZoneH;

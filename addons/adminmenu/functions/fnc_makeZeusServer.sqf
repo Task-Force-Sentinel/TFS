@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 if !(isServer) exitWith {};
 
@@ -22,7 +22,7 @@ private _isValidCurator = false;
     if (_isValidCurator) exitWith {
         unassignCurator _x;
         _unit assignCurator _x;
-        "[TFSRHS Admin Menu] You were given access to Zeus" remoteExec ["systemChat", _unit];
+        "[TFS Admin Menu] You were given access to Zeus" remoteExec ["systemChat", _unit];
     };
 } forEach allCurators;
 
@@ -38,5 +38,5 @@ if (!_isValidCurator) then {
     } forEach ["place","edit","delete","destroy","group","synchronize"];
 
     _unit assignCurator _curator;
-    "[TFSRHS Admin Menu] You were given access to Zeus" remoteExec ["systemChat", _unit];
+    "[TFS Admin Menu] You were given access to Zeus" remoteExec ["systemChat", _unit];
 };

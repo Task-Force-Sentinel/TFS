@@ -3,14 +3,14 @@
 
 class CfgPatches {
 	
-	class TFSRHS_Fatigue {
+	class TFS_Fatigue {
 		author = AUTHOR;
 		name = COMPONENT_NAME;
 		url = URL;
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
 			"ace_advanced_fatigue",
-			"tfsrhs_core"
+			"tfs_core"
 		};
 		units[] = {};
 		weapons[] = {};

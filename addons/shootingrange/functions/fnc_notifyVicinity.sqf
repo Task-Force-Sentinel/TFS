@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [["text", "STR_text"], 2.5] call TFSRHS_shootingrange_fnc_notifyVicinity;
+ * [["text", "STR_text"], 2.5] call TFS_shootingrange_fnc_notifyVicinity;
  *
  * Public: No
  */

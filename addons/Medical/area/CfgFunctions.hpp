@@ -1,11 +1,11 @@
 class CfgFunctions {
 	
-	class TFSRHS_Medical_Area {
+	class TFS_Medical_Area {
 		
-		tag = "tfsrhs_medical_area";
+		tag = "tfs_medical_area";
 		
 		class Medical_Area {
-			file = "z\tfsrhs\addons\medical\area\functions";
+			file = "z\tfs\addons\medical\area\functions";
 			class canConstruct {};
 			class canDismantle {};
 			class canLightOff {};

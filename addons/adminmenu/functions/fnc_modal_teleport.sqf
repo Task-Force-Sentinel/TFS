@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_ctrlGroup"];
@@ -13,7 +13,7 @@ _ctrlGroup ctrlEnable false;
 private _display = uiNamespace getVariable [QGVAR(modalDisplay), displayNull];
 private _ctrlMap = _display ctrlCreate ["RscMapControl", -1];
 GVAR(utilityTabControls) pushBack _ctrlMap;
-_ctrlMap ctrlSetPosition [_ctrlGrpX, _ctrlGrpY, _ctrlGrpWidth, _ctrlGrpHeight - (2.2 * TFSRHS_ADMINMENU_STD_HEIGHT)];
+_ctrlMap ctrlSetPosition [_ctrlGrpX, _ctrlGrpY, _ctrlGrpWidth, _ctrlGrpHeight - (2.2 * TFS_ADMINMENU_STD_HEIGHT)];
 _ctrlMap ctrlCommit 0;
 if (!isNull cameraOn) then {
     _ctrlMap ctrlMapAnimAdd [0, ctrlMapScale _ctrlMap, cameraOn];
@@ -59,10 +59,10 @@ _ctrlMap ctrlAddEventHandler ["mouseButtonClick", {
 
                     _unit moveInAny _parachute;
 
-                    "[TFSRHS Admin Menu] You were paradropped" remoteExec ["systemChat", _unit];
+                    "[TFS Admin Menu] You were paradropped" remoteExec ["systemChat", _unit];
                 } else {
                     _unit setVehiclePosition [_pos, [], 0, "FORM"];
-                    "[TFSRHS Admin Menu] You were teleported" remoteExec ["systemChat", _unit];
+                    "[TFS Admin Menu] You were teleported" remoteExec ["systemChat", _unit];
                 };
             } else { // vehicles
                 if (_unit isKindOf "AirVehicle" && !isTouchingGround _unit) then { // flying aircraft
@@ -90,11 +90,11 @@ _ctrlMap ctrlAddEventHandler ["mouseButtonClick", {
                 };
 
                 private _crew = crew _unit;
-                "[TFSRHS Admin Menu] Your vehicle was teleported" remoteExec ["systemChat", _crew];
+                "[TFS Admin Menu] Your vehicle was teleported" remoteExec ["systemChat", _crew];
             };
         }, 0.1, [_pos, +GVAR(utilityData)]] call CBA_fnc_addPerFrameHandler;
 
-        systemChat format ["[TFSRHS Admin Menu] Teleported %1 players", _numPlayers];
+        systemChat format ["[TFS Admin Menu] Teleported %1 players", _numPlayers];
 
         [format [
             "%1 %2 %3 %4 %5",
@@ -126,7 +126,7 @@ _ctrlMap ctrlAddEventHandler ["draw", {
 
 private _ctrlCheckDrawAllSides = _display ctrlCreate ["RscCheckBox", -1];
 GVAR(utilityTabControls) pushBack _ctrlCheckDrawAllSides;
-_ctrlCheckDrawAllSides ctrlSetPosition [_ctrlGrpX, _ctrlGrpY + _ctrlGrpHeight - (2.2 * TFSRHS_ADMINMENU_STD_HEIGHT), TFSRHS_ADMINMENU_STD_WIDTH, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlCheckDrawAllSides ctrlSetPosition [_ctrlGrpX, _ctrlGrpY + _ctrlGrpHeight - (2.2 * TFS_ADMINMENU_STD_HEIGHT), TFS_ADMINMENU_STD_WIDTH, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlCheckDrawAllSides ctrlCommit 0;
 _ctrlCheckDrawAllSides ctrlAddEventHandler ["CheckedChanged", {
     GVAR(utility_teleport_drawEnemy) = param [1];
@@ -134,14 +134,14 @@ _ctrlCheckDrawAllSides ctrlAddEventHandler ["CheckedChanged", {
 
 private _ctrlLabelDrawAllSides = _display ctrlCreate [QGVAR(RscText), -1];
 GVAR(utilityTabControls) pushBack _ctrlLabelDrawAllSides;
-_ctrlLabelDrawAllSides ctrlSetPosition [_ctrlGrpX + TFSRHS_ADMINMENU_STD_WIDTH, _ctrlGrpY + _ctrlGrpHeight - (2.2 * TFSRHS_ADMINMENU_STD_HEIGHT), (0.2 * _ctrlGrpWidth) - TFSRHS_ADMINMENU_STD_WIDTH, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlLabelDrawAllSides ctrlSetPosition [_ctrlGrpX + TFS_ADMINMENU_STD_WIDTH, _ctrlGrpY + _ctrlGrpHeight - (2.2 * TFS_ADMINMENU_STD_HEIGHT), (0.2 * _ctrlGrpWidth) - TFS_ADMINMENU_STD_WIDTH, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlLabelDrawAllSides ctrlCommit 0;
 _ctrlLabelDrawAllSides ctrlSetText "Draw enemy units on map";
 
-//private _paradropCheckX = (ctrlPosition _ctrlLabelDrawAllSides) select 0 + ctrlTextWidth _ctrlLabelDrawAllSides + TFSRHS_ADMINMENU_STD_WIDTH;
+//private _paradropCheckX = (ctrlPosition _ctrlLabelDrawAllSides) select 0 + ctrlTextWidth _ctrlLabelDrawAllSides + TFS_ADMINMENU_STD_WIDTH;
 private _ctrlCheckParadropInfantry = _display ctrlCreate ["RscCheckBox", -1];
 GVAR(utilityTabControls) pushBack _ctrlCheckParadropInfantry;
-_ctrlCheckParadropInfantry ctrlSetPosition [_ctrlGrpX + (0.2 * _ctrlGrpWidth), _ctrlGrpY + _ctrlGrpHeight - (2.2 * TFSRHS_ADMINMENU_STD_HEIGHT), TFSRHS_ADMINMENU_STD_WIDTH, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlCheckParadropInfantry ctrlSetPosition [_ctrlGrpX + (0.2 * _ctrlGrpWidth), _ctrlGrpY + _ctrlGrpHeight - (2.2 * TFS_ADMINMENU_STD_HEIGHT), TFS_ADMINMENU_STD_WIDTH, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlCheckParadropInfantry ctrlCommit 0;
 _ctrlCheckParadropInfantry ctrlAddEventHandler ["CheckedChanged", {
     GVAR(utility_teleport_paradrop) = param [1];
@@ -149,19 +149,19 @@ _ctrlCheckParadropInfantry ctrlAddEventHandler ["CheckedChanged", {
 
 private _ctrlLabelParadropInfantry = _display ctrlCreate [QGVAR(RscText), -1];
 GVAR(utilityTabControls) pushBack _ctrlLabelParadropInfantry;
-_ctrlLabelParadropInfantry ctrlSetPosition [_ctrlGrpX + (0.2 * _ctrlGrpWidth) + TFSRHS_ADMINMENU_STD_WIDTH, _ctrlGrpY + _ctrlGrpHeight - (2.2 * TFSRHS_ADMINMENU_STD_HEIGHT), (0.2 * _ctrlGrpWidth) - TFSRHS_ADMINMENU_STD_WIDTH, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlLabelParadropInfantry ctrlSetPosition [_ctrlGrpX + (0.2 * _ctrlGrpWidth) + TFS_ADMINMENU_STD_WIDTH, _ctrlGrpY + _ctrlGrpHeight - (2.2 * TFS_ADMINMENU_STD_HEIGHT), (0.2 * _ctrlGrpWidth) - TFS_ADMINMENU_STD_WIDTH, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlLabelParadropInfantry ctrlCommit 0;
 _ctrlLabelParadropInfantry ctrlSetText "Drop infantry in parachute";
 
 private _ctrlHint = _display ctrlCreate [QGVAR(RscText), -1];
 GVAR(utilityTabControls) pushBack _ctrlHint;
-_ctrlHint ctrlSetPosition [_ctrlGrpX, _ctrlGrpY + _ctrlGrpHeight - TFSRHS_ADMINMENU_STD_HEIGHT, 0.8 * _ctrlGrpWidth, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlHint ctrlSetPosition [_ctrlGrpX, _ctrlGrpY + _ctrlGrpHeight - TFS_ADMINMENU_STD_HEIGHT, 0.8 * _ctrlGrpWidth, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlHint ctrlCommit 0;
 _ctrlHint ctrlSetText "After locating the destination area, press the Enable Teleport button and then click the desired location on the map.";
 
 private _ctrlButton = _display ctrlCreate [QGVAR(RscButtonMenu), -1];
 GVAR(utilityTabControls) pushBack _ctrlButton;
-_ctrlButton ctrlSetPosition [_ctrlGrpX + 0.8 * _ctrlGrpWidth, _ctrlGrpY + _ctrlGrpHeight - TFSRHS_ADMINMENU_STD_HEIGHT, 0.2 * _ctrlGrpWidth, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlButton ctrlSetPosition [_ctrlGrpX + 0.8 * _ctrlGrpWidth, _ctrlGrpY + _ctrlGrpHeight - TFS_ADMINMENU_STD_HEIGHT, 0.2 * _ctrlGrpWidth, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlSetText "Enable Teleport";
 _ctrlButton ctrlAddEventHandler ["buttonClick", {

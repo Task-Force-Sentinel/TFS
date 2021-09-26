@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="TFSRHS">
+<Project name="TFS">
     <Package name="Grass">
-        <Key ID="STR_TFSRHS_Grass_DisplayName">
-            <English>TFSRHS Grass</English>
-            <Polish>TFSRHS Trawa</Polish>
+        <Key ID="STR_TFS_Grass_DisplayName">
+            <English>TFS Grass</English>
+            <Polish>TFS Trawa</Polish>
         </Key>
-        <Key ID="STR_TFSRHS_Grass_Forced">
+        <Key ID="STR_TFS_Grass_Forced">
             <English>Force Grass</English>
             <Polish>Wymuś trawę</Polish>
         </Key>
-        <Key ID="STR_TFSRHS_Grass_Forced_Description">
+        <Key ID="STR_TFS_Grass_Forced_Description">
             <English>Forces grass for all players</English>
             <Polish>Wymusza trawę u wszystkich graczy</Polish>
         </Key>

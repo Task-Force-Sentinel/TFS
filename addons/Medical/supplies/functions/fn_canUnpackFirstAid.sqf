@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\medical\supplies\functions\fn_canUnpackFirstAid.sqf
+ *	\z\tfs\addons\medical\supplies\functions\fn_canUnpackFirstAid.sqf
  *	by Ojemineh
  *	
  *	check if medical supplies can be unpacked
@@ -12,7 +12,7 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[player] call TFSRHS_medical_supplies_fnc_canUnpackFirstAid;
+ *	[player] call TFS_medical_supplies_fnc_canUnpackFirstAid;
  *	
  */
 
@@ -31,7 +31,7 @@ if (isNull _unit) exitWith {false};
 private _return = false;
 
 _return = (
-	("TFSRHS_FirstAid" in items _unit) && 
+	("TFS_FirstAid" in items _unit) && 
 	(alive _unit) && 
 	!(_unit getVariable ["ace_captives_isSurrendering", false]) && 
 	!(_unit getVariable ["ace_captives_isHandcuffed", false]) && 

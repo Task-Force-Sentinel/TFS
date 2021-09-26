@@ -1,8 +1,8 @@
 class CfgAddons {
 	
     class PreloadAddons {
-        class tfsrhs_mainmenu {
-            list[] = {"tfsrhs_mainmenu"};
+        class tfs_mainmenu {
+            list[] = {"tfs_mainmenu"};
         };
     };
 	

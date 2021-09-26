@@ -3,7 +3,7 @@
  * Author: DerZade
  * Creates new magazine and stores it in  the soldier's chestpack. Only magazines are supported.
  * The purpose of this function is to ensure that magazines with a specified ammo count can be added.
- * If you want to add a/multiple full magazine(s) you may want to use 'TFSRHS_boc_fnc_addItemToChestpack' instead.
+ * If you want to add a/multiple full magazine(s) you may want to use 'TFS_boc_fnc_addItemToChestpack' instead.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -15,7 +15,7 @@
  * Nothing
  *
  * Example:
- * [player,"30Rnd_556x45_Stanag",25,2] call TFSRHS_boc_fnc_addMagToChestpack;
+ * [player,"30Rnd_556x45_Stanag",25,2] call TFS_boc_fnc_addMagToChestpack;
  *
  * Public: No
  */

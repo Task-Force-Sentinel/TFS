@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_AddAction
+Function: TFS_fnc_AddAction
 
 Description:
 	Adds an action to an object. The action is added only to the clients on
@@ -39,7 +39,7 @@ Examples:
 			true,
 			15,
 			true
-		] call TFSRHS_fnc_AddAction;
+		] call TFS_fnc_AddAction;
 	(end)
 
 Author:
@@ -69,7 +69,7 @@ if (_global) exitWith {
 		_removeCompleted,
 		_distance,
 		false
-	] remoteExec ["TFSRHS_fnc_AddAction", 0, _id];
+	] remoteExec ["TFS_fnc_AddAction", 0, _id];
 };
 
 if (!hasInterface) exitWith {};
@@ -106,7 +106,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
 } else {
 
 	// Fix the condition string (replace _player with _this)
-	_condition = [_condition, "_player", "_this", nil, false] call TFSRHS_fnc_FindReplaceString;
+	_condition = [_condition, "_player", "_this", nil, false] call TFS_fnc_FindReplaceString;
 
 	_object addAction [
 		_title,

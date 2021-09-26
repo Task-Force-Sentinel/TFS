@@ -2,7 +2,7 @@
     QGVAR(loggingEnabled),
     "CHECKBOX",
     "Friendly fire logging",
-    "TFSRHS Friendly Fire",
+    "TFS Friendly Fire",
     false,
     1,
     {},

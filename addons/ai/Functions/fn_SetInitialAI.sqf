@@ -12,13 +12,13 @@ if (!isserver) exitwith {};
 				_x;
 			};
 
-			[_Group, "TFSRHS Default"] remoteExec ["TFSRHS_fnc_SetUnitSkill",2];
+			[_Group, "TFS Default"] remoteExec ["TFS_fnc_SetUnitSkill",2];
 			[_Group, true] remoteExec ["enableDynamicSimulation",2];
 		};
 
 		if (_class isKindOf "AllVehicles") exitWith {
 			{
-				[_x, "TFSRHS Default"] remoteExec ["TFSRHS_fnc_SetUnitSkill",2];
+				[_x, "TFS Default"] remoteExec ["TFS_fnc_SetUnitSkill",2];
 			} forEach crew _x;
 			[group _x , true] remoteExec ["enableDynamicSimulation",2];
 		};

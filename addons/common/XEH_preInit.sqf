@@ -1,12 +1,12 @@
-#include "\z\tfsrhs\addons\common\script_component.hpp"
+#include "\z\tfs\addons\common\script_component.hpp"
 
 #include "XEH_PREP.sqf"
 #include "initSettings.sqf"
 
 ADDON = false;
 
-TFSRHS_unit = objNull;
-uiNamespace setVariable ["TFSRHS_unit", objNull];
+TFS_unit = objNull;
+uiNamespace setVariable ["TFS_unit", objNull];
 
 enableSaving [false,false]; // Disables save when aborting.
 enableTeamSwitch false; // Disables team switch.
@@ -22,7 +22,7 @@ if is3DEN call {
     call FUNC(edenInit);
 };
 
-isTFSRHS = ((getMissionConfigValue ["VERSION",[0,0,0]] select 0) > 0);
+isTFS = ((getMissionConfigValue ["VERSION",[0,0,0]] select 0) > 0);
 
 
 // Rig up server event handler for variable sync requests.

@@ -3,18 +3,18 @@ disableSerialization;
 params ["_object", "_selection", "_args"];
 _args params ["_allowCam", "_allowDrone", "_allowSat", "_allowMap"];
 
-TFSRHS_CC_currentScreenObject = _object;
-TFSRHS_CC_currentScreenSelection = _selection;
+TFS_CC_currentScreenObject = _object;
+TFS_CC_currentScreenSelection = _selection;
 
 if !(createDialog "ScreenConfigDialog") exitWith {systemChat "Couldn't create dialog!"};
 
 private _display = findDisplay 21822;
 
 // set up button event handlers
-(_display displayCtrl 2400) ctrlSetEventHandler ["ButtonClick", "[] call TFSRHS_fnc_viewHelmetCam"];
-(_display displayCtrl 2401) ctrlSetEventHandler ["ButtonClick", "[0] call TFSRHS_fnc_viewDroneCam"];
-(_display displayCtrl 2402) ctrlSetEventHandler ["ButtonClick", "[] call TFSRHS_fnc_viewSatImage"];
-(_display displayCtrl 2403) ctrlSetEventHandler ["ButtonClick", "[1] call TFSRHS_fnc_viewDroneCam"];
+(_display displayCtrl 2400) ctrlSetEventHandler ["ButtonClick", "[] call TFS_fnc_viewHelmetCam"];
+(_display displayCtrl 2401) ctrlSetEventHandler ["ButtonClick", "[0] call TFS_fnc_viewDroneCam"];
+(_display displayCtrl 2402) ctrlSetEventHandler ["ButtonClick", "[] call TFS_fnc_viewSatImage"];
+(_display displayCtrl 2403) ctrlSetEventHandler ["ButtonClick", "[1] call TFS_fnc_viewDroneCam"];
 (_display displayCtrl 1101) ctrlSetEventHandler ["ButtonClick", "closeDialog 2;"];
 
 // set up allowed actions
@@ -32,8 +32,8 @@ ctrlEnable [2403, _allowSat];
 ctrlEnable [2102, _allowSat];
 
 // set title
-private _screenMode = _object getVariable [format ["TFSRHS_CC_screen_%1_mode", _selection], ""];
-private _screenTarget = _object getVariable [format ["TFSRHS_CC_screen_%1_target", _selection], ""];
+private _screenMode = _object getVariable [format ["TFS_CC_screen_%1_mode", _selection], ""];
+private _screenTarget = _object getVariable [format ["TFS_CC_screen_%1_target", _selection], ""];
 private "_modeName";
 
 if ((!(_screenMode isEqualTo "")) && (!(_screenTarget isEqualTo ""))) then {
@@ -57,7 +57,7 @@ lbClear _hCamList;
 _hCamList lbSetCurSel -1;
 {
 	private _name = "";
-	private _section = _x getVariable "TFSRHS_Section";
+	private _section = _x getVariable "TFS_Section";
 
 	if (isNil "_section") then {
 		_name = format ["%1:%2 (%3)", groupId group _x,[_x] call CBA_fnc_getGroupIndex,name _x];
@@ -74,7 +74,7 @@ _hCamList lbSetCurSel -1;
 
 	_index = _hCamList lbAdd _name;
 	_hCamList lbSetData [_index, str _x];
-} forEach TFSRHS_CC_vehicleCamList;
+} forEach TFS_CC_vehicleCamList;
 
 lbSort [_hCamList, "ASC"];
 _hCamList lbSetCurSel 0;
@@ -98,7 +98,7 @@ lbClear _satList;
 _satList lbSetCurSel -1;
 {
 	private _name = "";
-	private _section = _x getVariable "TFSRHS_Section";
+	private _section = _x getVariable "TFS_Section";
 
 	if (isNil "_section") then {
 		_name = format ["%1:%2 (%3)", groupId group _x,[_x] call CBA_fnc_getGroupIndex,name _x];
@@ -115,7 +115,7 @@ _satList lbSetCurSel -1;
 
 	_index = _satList lbAdd _name;
 	_satList lbSetData [_index, str _x];
-} forEach TFSRHS_CC_vehicleCamList;
+} forEach TFS_CC_vehicleCamList;
 
 lbSort [_satList, "ASC"];
 _satList lbSetCurSel 0;

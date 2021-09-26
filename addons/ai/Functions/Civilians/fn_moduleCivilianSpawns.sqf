@@ -40,4 +40,4 @@ switch (_Side) do {
     [_civPedPatrolsMin, _civPedPatrolsMax],
     [_civVehPatrolsMin, _civVehPatrolsMax],
     [_civVehParkedMin, _civVehParkedMax]
-] call TFSRHS_fnc_SpawnCivilians;
+] call TFS_fnc_SpawnCivilians;

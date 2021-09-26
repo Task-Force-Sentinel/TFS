@@ -24,8 +24,8 @@ if (count _this < 8) then {
 };
 
 
-_viewDistValue = _sliderPos min TFSRHS_Main_ViewDistanceMaxDistance max 0;
-_objViewDistValue = if (_modeVar isEqualTo 1) then {_sliderPos  * (call compile _percentVar) min TFSRHS_Main_ViewDistanceMaxObjectDistance} else {_sliderPos min TFSRHS_Main_ViewDistanceMaxObjectDistance};  // Check if percentage sync mode is used, if so use a percentage coefficient
+_viewDistValue = _sliderPos min TFS_Main_ViewDistanceMaxDistance max 0;
+_objViewDistValue = if (_modeVar isEqualTo 1) then {_sliderPos  * (call compile _percentVar) min TFS_Main_ViewDistanceMaxObjectDistance} else {_sliderPos min TFS_Main_ViewDistanceMaxObjectDistance};  // Check if percentage sync mode is used, if so use a percentage coefficient
 
 
 switch (_updateType) do { // 1 - VIEW, 2 - OBJ, 3 - BOTH, 0 - BOTH AND TERRAIN

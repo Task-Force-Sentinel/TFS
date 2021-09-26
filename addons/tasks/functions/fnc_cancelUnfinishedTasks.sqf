@@ -10,7 +10,7 @@
  * 0: Successfully canceled unit's tasks <BOOL>
  *
  * Example:
- * [player] call tfsrhs_tasks_fnc_cancelUnfinishedTasks
+ * [player] call tfs_tasks_fnc_cancelUnfinishedTasks
  *
  * Public: Yes
  */

@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class TFSRHS_SafeZone
+	class TFS_SafeZone
 	{
 		author = AUTHOR;
 		name = NAME;

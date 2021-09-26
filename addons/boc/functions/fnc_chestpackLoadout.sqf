@@ -21,7 +21,7 @@
  * Chestpack Loadout <ARRAY>
  *
  * Example:
- * [player] call TFSRHS_boc_fnc_chestpackLoadout;
+ * [player] call TFS_boc_fnc_chestpackLoadout;
  *
  * Public: No
  */

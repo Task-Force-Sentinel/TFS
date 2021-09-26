@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\gear\functions\load\fn_load_loadout.sqf
+ *	\z\tfs\addons\gear\functions\load\fn_load_loadout.sqf
  *	by Ojemineh
  *
  *	load loadout
@@ -15,7 +15,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "curator"] call TFSRHS_gear_fnc_load_loadout;
+ *	[player, "curator"] call TFS_gear_fnc_load_loadout;
  *
  */
 
@@ -35,7 +35,7 @@ if (isNull _unit) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 if (Not local _unit) exitWith {
-	[_unit, _role, _type, _team] remoteExecCall ["TFSRHS_gear_fnc_load_loadout", _unit];
+	[_unit, _role, _type, _team] remoteExecCall ["TFS_gear_fnc_load_loadout", _unit];
 };
 
 // -------------------------------------------------------------------------------------------------
@@ -58,8 +58,8 @@ if (_team isEqualTo "") then { _team = _gear_team; };
 private _file = format ["%1\%2\%3\%4\loadout.hpp", _loadout_path, _team, _role, _type];
 private _data = [] call compile preprocessFileLineNumbers _file;
 
-if (isNil "_data") exitWith {[4, "Can't read unit-loadout from file (%1)", [_file], "gear"] call TFSRHS_fnc_log;};
-[5, "'%1' loading gear '%2' (File: %3) - Data: %4", [_unit, _role, _file, _data], "gear"] call TFSRHS_fnc_diagLog;
+if (isNil "_data") exitWith {[4, "Can't read unit-loadout from file (%1)", [_file], "gear"] call TFS_fnc_log;};
+[5, "'%1' loading gear '%2' (File: %3) - Data: %4", [_unit, _role, _file, _data], "gear"] call TFS_fnc_diagLog;
 
 // -------------------------------------------------------------------------------------------------
 
@@ -69,11 +69,11 @@ _unit setUnitLoadout [_data, false];
 // LOAD PLAYERS DEFAULT GOGGLES
 
 if (GEAR_KEEP_GOGGLES) then {
-	private _unit_goggles = _unit getVariable ["TFSRHS_gear_goggles", ""];
+	private _unit_goggles = _unit getVariable ["TFS_gear_goggles", ""];
 	if (_unit_goggles != "") then {
 		if ((goggles _unit) != "") then {removeGoggles _unit;};
 		_unit addGoggles _unit_goggles;
-		_unit setVariable ["TFSRHS_gear_goggles", nil];
+		_unit setVariable ["TFS_gear_goggles", nil];
 	};
 };
 

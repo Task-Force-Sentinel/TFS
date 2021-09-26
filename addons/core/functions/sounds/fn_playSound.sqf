@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_playSound.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_playSound.sqf
  *	by Ojemineh
  *
  *	play sound for all players
@@ -13,7 +13,7 @@
  *	nothing
  *
  *	Example:
- *	["Earthquake_01"] call TFSRHS_fnc_playSound;
+ *	["Earthquake_01"] call TFS_fnc_playSound;
  *
  */
 
@@ -30,4 +30,4 @@ if (_soundClass isEqualTo "") exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
-[_soundClass, _isSpeech] remoteExecCall ["TFSRHS_fnc_playSoundLocal", 0, false];
+[_soundClass, _isSpeech] remoteExecCall ["TFS_fnc_playSoundLocal", 0, false];

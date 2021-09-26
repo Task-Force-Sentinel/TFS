@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_MedicalSupplies
+Function: TFS_fnc_MedicalSupplies
 
 Description:
 	Used to configure basic container medical state.
@@ -11,8 +11,8 @@ Arguments:
 
 Examples:
 	(begin example)
-		[this] call TFSRHS_fnc_MedicalSupplies;
-		[this, "MERT", true] call TFSRHS_fnc_MedicalSupplies;
+		[this] call TFS_fnc_MedicalSupplies;
+		[this, "MERT", true] call TFS_fnc_MedicalSupplies;
 	(end)
 
 Author:
@@ -26,7 +26,7 @@ params [
 	["_purge", false]
 ];
 
-private _VarType = _container getVariable ["TFSRHS_Equipment_Select", -1];
+private _VarType = _container getVariable ["TFS_Equipment_Select", -1];
 
 call {
 	if (_VarType isEqualto 0) exitwith {_Type = "Limited"};
@@ -42,7 +42,7 @@ call {
 	if (_Type isEqualTo "Limited") exitwith {
 		if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
 			_ContainerItems = [
-				["TFSRHS_FirstAid", 4],
+				["TFS_FirstAid", 4],
 				["ACE_EarPlugs", 4],
 				["ACE_Flashlight_MX991", 1],
 				["ToolKit", 1],
@@ -59,10 +59,10 @@ call {
 	if (_Type isEqualTo "Standard") exitwith {
 		if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
 			_ContainerItems = [
-				["TFSRHS_FirstAid", 4],
-				["TFSRHS_DuctTape", 1],
+				["TFS_FirstAid", 4],
+				["TFS_DuctTape", 1],
 				["ACE_EarPlugs", 4],
-				["TFSRHS_FireExtinguisher", 1],
+				["TFS_FireExtinguisher", 1],
 				["ACE_Flashlight_MX991", 1],
 				["ToolKit", 1],
 				["Chemlight_blue", 1],
@@ -79,10 +79,10 @@ call {
 	if (_Type isEqualTo "MERT") exitwith {
 		if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
 			_ContainerItems = [
-				["TFSRHS_FirstAid", 4],
-				["TFSRHS_DuctTape", 1],
+				["TFS_FirstAid", 4],
+				["TFS_DuctTape", 1],
 				["ACE_EarPlugs", 4],
-				["TFSRHS_FireExtinguisher", 1],
+				["TFS_FireExtinguisher", 1],
 				["ACE_Flashlight_MX991", 1],
 				["ToolKit", 1],
 				["Chemlight_blue", 1],
@@ -93,11 +93,11 @@ call {
 				["kat_AED", 2],
                 ["kat_aatKit", 8],
 				["ACE_bodyBag", 8],
-				["TFSRHS_MedicArea", 1],
-				["TFSRHS_MedicKit", 8],
+				["TFS_MedicArea", 1],
+				["TFS_MedicKit", 8],
 				["ACE_tourniquet", 20],
 				["ACE_surgicalKit", 2],
-				["TFSRHS_Stethoscope", 2],
+				["TFS_Stethoscope", 2],
 				["ACE_splint", 20],
 				["ACE_salineIV", 20],
 				["ACE_plasmaIV", 20],

@@ -4,9 +4,9 @@ class RscNotepad
 	enableSimulation = 1;
 	closeOnMissionEnd = 0;
 	scriptName = "RscNotepad";
-	scriptPath = "TFSRHSDisplays";
-	onLoad = "[""onLoad"",_this,""RscNotepad"",'TFSRHSDisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
-	onUnload = "[""onUnload"",_this,""RscNotepad"",'TFSRHSDisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
+	scriptPath = "TFSDisplays";
+	onLoad = "[""onLoad"",_this,""RscNotepad"",'TFSDisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
+	onUnload = "[""onUnload"",_this,""RscNotepad"",'TFSDisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
 	onMouseButtonDown = "\
 		if ((_this select 1) != 0) exitWith { \
 			_ctrl = ((_this select 0) displayCtrl 1004); \
@@ -71,7 +71,7 @@ class RscNotepad
         class NotePadBackground: RscPicture
         {
             idc = 1201;
-            text = "z\tfsrhs\addons\media\images\cuecards\notepad_CA.paa";
+            text = "z\tfs\addons\media\images\cuecards\notepad_CA.paa";
             x = 0.288594 * safezoneW + safezoneX;
             y = 0.093 * safezoneH + safezoneY;
             w = 0.31 * safezoneW;

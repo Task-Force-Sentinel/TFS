@@ -1,6 +1,6 @@
 class CfgPatches
 {
-    class tfsrhs_quickActions
+    class tfs_quickActions
     {
         units[] = {};
         weapons[] = {};
@@ -16,14 +16,14 @@ class CfgPatches
 };
 
 class Extended_PreInit_EventHandlers {
-    class tfsrhs_quickActions {
-        init = "call compile preprocessFileLineNumbers 'z\tfsrhs\addons\quickActions\functions\fn_preInit.sqf'";
+    class tfs_quickActions {
+        init = "call compile preprocessFileLineNumbers 'z\tfs\addons\quickActions\functions\fn_preInit.sqf'";
     };
 };
 
 class Extended_InitPost_EventHandlers {
 	class Helicopter {
-		init = "[(_this select 0)] call tfsrhs_quickActions_fnc_addFastRopeAction;";
+		init = "[(_this select 0)] call tfs_quickActions_fnc_addFastRopeAction;";
 	};
 };
 

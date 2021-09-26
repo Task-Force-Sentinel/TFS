@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\briefing\script_component.hpp"
+#include "\z\tfs\addons\briefing\script_component.hpp"
 params [["_unit", player]];
 
 //Check if player meets conditions and call script if so.
@@ -13,7 +13,7 @@ if (GVAR(addLoadoutNotes)) then {
 // Create credits page here, so it ends up at the end.
 [] call FUNC(createCreditsPage);
 
-private _briefingArray = getMissionConfigValue ["TFSRHS_Briefing","[]"];
+private _briefingArray = getMissionConfigValue ["TFS_Briefing","[]"];
 if (_briefingArray isEqualTo "[]") exitWith {};
 if (_briefingArray isEqualType "") then { _briefingArray = call compile _briefingArray;};
 
@@ -31,9 +31,9 @@ private _indexesToTrigger = [];
 } forEach _briefingArray;
 
 //Check group/unit conditions
-private _groupCond = _unitGroup getVariable ["TFSRHS_Briefinglist", []];
+private _groupCond = _unitGroup getVariable ["TFS_Briefinglist", []];
 if (_groupCond isEqualType "") then { _groupCond = call compile _groupCond; };
-private _unitCond = _unit getVariable ["TFSRHS_Briefinglist", []];
+private _unitCond = _unit getVariable ["TFS_Briefinglist", []];
 if (_unitCond isEqualType "") then { _unitCond = call compile _unitCond; };
 
 {
@@ -60,19 +60,19 @@ private _fnc_fileExists = {
         [_scriptName] spawn {
             params ["_scriptName"];
             uiSleep 5;
-            systemChat format["[TFSRHS-Briefing] Missing file: %1 ", _scriptName];
+            systemChat format["[TFS-Briefing] Missing file: %1 ", _scriptName];
         };
     };
 } forEach _indexesToTrigger;
 
 //Do Admin briefing.
-if ([] call tfsrhs_common_fnc_isAdmin) then {
+if ([] call tfs_common_fnc_isAdmin) then {
     if (("briefing\admin.sqf") call _fnc_fileExists) then {
         call compile preprocessfilelinenumbers "briefing\admin.sqf";
     } else {
         [] spawn {
             uiSleep 5;
-            systemChat "[TFSRHS-Briefing] Warning admin briefing not found. Expected: MISSION_ROOT\briefing\admin.sqf";
+            systemChat "[TFS-Briefing] Warning admin briefing not found. Expected: MISSION_ROOT\briefing\admin.sqf";
         };
     };
 };

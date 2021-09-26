@@ -1,9 +1,9 @@
-class TFSRHS_CommandCentre {
+class TFS_CommandCentre {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class Module {
 
-		file = "z\tfsrhs\addons\CommandCentre\Functions";
+		file = "z\tfs\addons\CommandCentre\Functions";
 		class addRadioActions {};
 		class addScreenActions {};
 		class configureRadio {};

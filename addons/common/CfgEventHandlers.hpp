@@ -22,10 +22,10 @@ class Extended_Respawn_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayMultiplayerSetup {
-        tfsrhs_slotting = QUOTE(_this call (uiNamespace getVariable 'FUNC(initDisplayMultiplayerSetup)'));
+        tfs_slotting = QUOTE(_this call (uiNamespace getVariable 'FUNC(initDisplayMultiplayerSetup)'));
     };
     class RscDisplayDebriefing {
-        tfsrhs_override_end_text = QUOTE(_this call (uiNamespace getVariable 'FUNC(initDisplayDebriefing)'));
+        tfs_override_end_text = QUOTE(_this call (uiNamespace getVariable 'FUNC(initDisplayDebriefing)'));
     };
     class RscDiary {
         ADDON = QUOTE(_this call (uiNamespace getVariable 'FUNC(initDisplayMission)'));
@@ -34,7 +34,7 @@ class Extended_DisplayLoad_EventHandlers {
 
 class Extended_PreInit_EventHandlers {
 	
-	class tfsrhs_Common_EH_initSettings {
+	class tfs_Common_EH_initSettings {
 		init = QUOTE(_this call FUNC(initSettings));
 	};
 	
@@ -42,7 +42,7 @@ class Extended_PreInit_EventHandlers {
 
 class Extended_PostInit_EventHandlers {
 	
-	class tfsrhs_Common_EH_initialize {
+	class tfs_Common_EH_initialize {
 		init = init = QUOTE(_this call FUNC(initialize));
 	};
 	

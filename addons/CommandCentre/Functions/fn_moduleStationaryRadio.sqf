@@ -16,5 +16,5 @@ private _radioCode = _logic getVariable ["StationaryRadioCode", "_bluefor"];
 
 private _objects = synchronizedObjects _logic;
 {
-    [_x, _radioClass, _radioOn, _radioCh1, _radioCh2, _radioVol, _radioCode] call TFSRHS_fnc_initRadio;
+    [_x, _radioClass, _radioOn, _radioCh1, _radioCh2, _radioVol, _radioCode] call TFS_fnc_initRadio;
 } foreach _objects;

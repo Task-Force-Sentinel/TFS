@@ -1,5 +1,5 @@
 #define COMPONENT admin
-#include "\z\tfsrhs\addons\main\script_mod.hpp"
+#include "\z\tfs\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
@@ -11,7 +11,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_ADMIN
 #endif
 
-#include "\z\tfsrhs\addons\main\script_macros.hpp"
+#include "\z\tfs\addons\main\script_macros.hpp"
 
 #define admin_YONV "76561198000002705"
 

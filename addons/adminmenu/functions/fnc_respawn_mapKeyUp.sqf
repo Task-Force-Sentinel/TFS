@@ -1,5 +1,5 @@
 
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 
@@ -16,7 +16,7 @@ if (_type == 28) then {
             _position = GVAR(respawnMousePos);
             _halo = GVAR(respawnHalo);
         } else {
-            private _var = missionNamespace getVariable[format["TFSRHS_respawnPoint%1",GVAR(respawnMousePos)],objNull];
+            private _var = missionNamespace getVariable[format["TFS_respawnPoint%1",GVAR(respawnMousePos)],objNull];
             if (!isNull _var) then {
                 _position = position _var;
             };
@@ -48,9 +48,9 @@ if (_type == 28) then {
         GVAR(selectedRespawnGroup) = [];
 
         // Close the Map
-        ((findDisplay IDC_TFSRHS_ADMINMENU_RESP_MAP_DISPLAY) displayCtrl IDC_TFSRHS_ADMINMENU_RESP_MAP_CONTROL) ctrlShow false;
-        ((findDisplay IDC_TFSRHS_ADMINMENU_RESP_MAP_DISPLAY) displayCtrl IDC_TFSRHS_ADMINMENU_RESP_MAP_CONTROL) mapCenterOnCamera false;
-        closeDialog IDC_TFSRHS_ADMINMENU_RESP_MAP_DISPLAY;
+        ((findDisplay IDC_TFS_ADMINMENU_RESP_MAP_DISPLAY) displayCtrl IDC_TFS_ADMINMENU_RESP_MAP_CONTROL) ctrlShow false;
+        ((findDisplay IDC_TFS_ADMINMENU_RESP_MAP_DISPLAY) displayCtrl IDC_TFS_ADMINMENU_RESP_MAP_CONTROL) mapCenterOnCamera false;
+        closeDialog IDC_TFS_ADMINMENU_RESP_MAP_DISPLAY;
     };
 };
 //SPACEBAR (HALO TOGGLE)

@@ -1,6 +1,6 @@
 ﻿/*
  *	ARMA EXTENDED ENVIRONMENT
- *	\tfsrhs_common\functions\common\fn_isInBuilding.sqf
+ *	\tfs_common\functions\common\fn_isInBuilding.sqf
  *	by Ojemineh
  *	
  *	check if unit is in a building
@@ -12,7 +12,7 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[player] call tfsrhs_fnc_isInBuilding;
+ *	[player] call tfs_fnc_isInBuilding;
  *	
  */
 

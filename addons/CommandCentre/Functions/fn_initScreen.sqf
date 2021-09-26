@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_initScreen
+Function: TFS_fnc_initScreen
 
 Description:
 	Initializes a Screen for the Command Centre based on the passed parameters.
@@ -37,19 +37,19 @@ if !(isServer) exitWith {};
 if !(isClass (configFile >> "CfgPatches" >> "cTab")) exitWith {};
 
 // register screen, important to properly assign the render targets later down the line
-if (isNil "TFSRHS_CC_nextScreenID") then {
-	TFSRHS_CC_nextScreenID = 0;
+if (isNil "TFS_CC_nextScreenID") then {
+	TFS_CC_nextScreenID = 0;
 };
 
-_object setVariable [format ["TFSRHS_CC_screen_%1_ID", _selection], TFSRHS_CC_nextScreenID, true];
+_object setVariable [format ["TFS_CC_screen_%1_ID", _selection], TFS_CC_nextScreenID, true];
 
-TFSRHS_CC_nextScreenID = TFSRHS_CC_nextScreenID + 1;
+TFS_CC_nextScreenID = TFS_CC_nextScreenID + 1;
 
-_object setVariable [format ["TFSRHS_CC_screen_%1_on", _selection], false, true];
-_object setVariable [format ["TFSRHS_CC_screen_%1_mode", _selection], "", true];
-_object setVariable [format ["TFSRHS_CC_screen_%1_target", _selection], "", true];
+_object setVariable [format ["TFS_CC_screen_%1_on", _selection], false, true];
+_object setVariable [format ["TFS_CC_screen_%1_mode", _selection], "", true];
+_object setVariable [format ["TFS_CC_screen_%1_target", _selection], "", true];
 
 // set default screen texture
-_object setObjectTextureGlobal [_selection, "z\tfsrhs\addons\media\images\cc_screen_standby.paa"];
+_object setObjectTextureGlobal [_selection, "z\tfs\addons\media\images\cc_screen_standby.paa"];
 
-[_object, _selection, _name, [_allowCam, _allowDrone, _allowSat, _allowMap]] remoteExec ["TFSRHS_fnc_addScreenActions", 0, true];
+[_object, _selection, _name, [_allowCam, _allowDrone, _allowSat, _allowMap]] remoteExec ["TFS_fnc_addScreenActions", 0, true];

@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class TFSRHS_Training
+	class TFS_Training
 	{
 		author = AUTHOR;
 		name = NAME;

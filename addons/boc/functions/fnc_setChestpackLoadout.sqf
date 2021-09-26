@@ -22,7 +22,7 @@
  * Nothing
  *
  * Example:
- * [player,[["FirstAidKit", 1], ["30Rnd_65x39_caseless_mag",5,30]]] call TFSRHS_boc_fnc_setChestpackLoadout;
+ * [player,[["FirstAidKit", 1], ["30Rnd_65x39_caseless_mag",5,30]]] call TFS_boc_fnc_setChestpackLoadout;
  *
  * Public: No
  */

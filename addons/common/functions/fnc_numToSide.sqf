@@ -1,5 +1,5 @@
 /*
- * Name: TFSRHS_common_fnc_numToSide
+ * Name: TFS_common_fnc_numToSide
  * Author: Snippers
  *
  * Arguments:

@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\medical\area\functions\fn_doConstruct.sqf
+ *	\z\tfs\addons\medical\area\functions\fn_doConstruct.sqf
  *	by Ojemineh
  *	
  *	construct a medical area (dressing station)
@@ -12,7 +12,7 @@
  *	nothing
  *	
  *	Example:
- *	[player] call TFSRHS_medical_area_fnc_doConstruct;
+ *	[player] call TFS_medical_area_fnc_doConstruct;
  *	
  */
 
@@ -34,9 +34,9 @@ if (isNull _unit) exitWith {false};
 	
 	_unit playAction "MedicStart";
 	
-	[_unit, "TFSRHS_Medical_Area_Construct_1", [], 50, 1000] call TFSRHS_fnc_play3dSound;
+	[_unit, "TFS_Medical_Area_Construct_1", [], 50, 1000] call TFS_fnc_play3dSound;
 	
-	private _isInBuilding = [_unit] call TFSRHS_fnc_isInBuilding;
+	private _isInBuilding = [_unit] call TFS_fnc_isInBuilding;
 	private _isOnWater = (surfaceIsWater (getPosASL _unit));
 	
 	private _pos = getPosASL _unit;
@@ -88,21 +88,21 @@ if (isNull _unit) exitWith {false};
 	_medMenu setObjectTextureGlobal [0, "#(argb,8,8,3)color(1.0,0.6,0.1,0,ca)"];
 	_objects pushBack _medMenu;
 	
-	_medArea setVariable ["TFSRHS_MedicalArea_Objects", _objects, true];
+	_medArea setVariable ["TFS_MedicalArea_Objects", _objects, true];
 	
-	TFSRHS_MEDICAL_AREA_CONSTRUCT_SUCCESS = false;
-	TFSRHS_MEDICAL_AREA_CONSTRUCT_FAILURE = false;
+	TFS_MEDICAL_AREA_CONSTRUCT_SUCCESS = false;
+	TFS_MEDICAL_AREA_CONSTRUCT_FAILURE = false;
 	
-	private _construct_time = round (missionNamespace getVariable ["tfsrhs_medical_area_constuct_time", 20]);
+	private _construct_time = round (missionNamespace getVariable ["tfs_medical_area_constuct_time", 20]);
 	if (_construct_time < 3) then { _construct_time = 3; };
 	private _section_time = (_construct_time / 8);
 	
 	[
 		_construct_time,
 		[],
-		{ TFSRHS_MEDICAL_AREA_CONSTRUCT_SUCCESS = true; },
-		{ TFSRHS_MEDICAL_AREA_CONSTRUCT_FAILURE = true; },
-		localize "STR_TFSRHS_Medical_Area_Progress_Construct",
+		{ TFS_MEDICAL_AREA_CONSTRUCT_SUCCESS = true; },
+		{ TFS_MEDICAL_AREA_CONSTRUCT_FAILURE = true; },
+		localize "STR_TFS_Medical_Area_Progress_Construct",
 		{true},
 		["isNotInside", "isNotSitting", "isNotSwimming"]
 	] call ACE_common_fnc_progressBar;
@@ -113,9 +113,9 @@ if (isNull _unit) exitWith {false};
 		
 		private ["_direction", "_distance", "_heading", "_newX", "_newY", "_newPos"];
 		
-		if (Not TFSRHS_MEDICAL_AREA_CONSTRUCT_FAILURE) then { sleep (2 * _section_time); };
+		if (Not TFS_MEDICAL_AREA_CONSTRUCT_FAILURE) then { sleep (2 * _section_time); };
 		
-		if (Not TFSRHS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
+		if (Not TFS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
 			
 			private _tarp1 = objNull;
 			
@@ -149,12 +149,12 @@ if (isNull _unit) exitWith {false};
 				_objects pushBack _cutter;
 			};
 			
-			_medArea setVariable ["TFSRHS_MedicalArea_Objects", _objects, true];
+			_medArea setVariable ["TFS_MedicalArea_Objects", _objects, true];
 			sleep _section_time;
 			
 		};
 		
-		if (Not TFSRHS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
+		if (Not TFS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
 			
 			private _bodybag1 = objNull;
 			
@@ -181,12 +181,12 @@ if (isNull _unit) exitWith {false};
 			
 			_objects pushBack _bodybag1;
 			
-			_medArea setVariable ["TFSRHS_MedicalArea_Objects", _objects, true];
+			_medArea setVariable ["TFS_MedicalArea_Objects", _objects, true];
 			sleep _section_time;
 			
 		};
 		
-		if (Not TFSRHS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
+		if (Not TFS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
 			
 			private _tarp2 = objNull;
 			
@@ -220,12 +220,12 @@ if (isNull _unit) exitWith {false};
 				_objects pushBack _cutter;
 			};
 			
-			_medArea setVariable ["TFSRHS_MedicalArea_Objects", _objects, true];
+			_medArea setVariable ["TFS_MedicalArea_Objects", _objects, true];
 			sleep _section_time;
 			
 		};
 		
-		if (Not TFSRHS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
+		if (Not TFS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
 			
 			private _bodybag2 = objNull;
 			
@@ -252,12 +252,12 @@ if (isNull _unit) exitWith {false};
 			
 			_objects pushBack _bodybag2;
 			
-			_medArea setVariable ["TFSRHS_MedicalArea_Objects", _objects, true];
+			_medArea setVariable ["TFS_MedicalArea_Objects", _objects, true];
 			sleep _section_time;
 			
 		};
 		
-		if (Not TFSRHS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
+		if (Not TFS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
 			
 			_direction = 0;
 			_distance = 2.2; 
@@ -279,12 +279,12 @@ if (isNull _unit) exitWith {false};
 			};
 			_objects pushBack _firstaid;
 			
-			_medArea setVariable ["TFSRHS_MedicalArea_Objects", _objects, true];
+			_medArea setVariable ["TFS_MedicalArea_Objects", _objects, true];
 			sleep _section_time;
 			
 		};
 		
-		if (Not TFSRHS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
+		if (Not TFS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
 			
 			_direction = 10;
 			_distance = 1.0;
@@ -297,7 +297,7 @@ if (isNull _unit) exitWith {false};
 				_newPos = [_newX, _newY, (_pos select 2) + 0.000];
 			};
 			private _defibrillator = objNull;
-			if ((["adv_aceCPR"] call TFSRHS_fnc_isAddon) && (missionNamespace getVariable ["tfsrhs_medical_area_enable_defibrillator", false])) then {
+			if ((["adv_aceCPR"] call TFS_fnc_isAddon) && (missionNamespace getVariable ["tfs_medical_area_enable_defibrillator", false])) then {
 				_defibrillator = createVehicle ["Land_Defibrillator_F", [0,0,0], [], 0, "CAN_COLLIDE"];
 				_defibrillator setDir (_dir + 60);
 				_defibrillator setPosASL (AGLtoASL (_medArea modelToWorld [0.10,-0.55,-0.30]));
@@ -314,12 +314,12 @@ if (isNull _unit) exitWith {false};
 			};
 			_objects pushBack _defibrillator;
 			
-			_medArea setVariable ["TFSRHS_MedicalArea_Objects", _objects, true];
+			_medArea setVariable ["TFS_MedicalArea_Objects", _objects, true];
 			sleep _section_time;
 			
 		};
 		
-		if (Not TFSRHS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
+		if (Not TFS_MEDICAL_AREA_CONSTRUCT_FAILURE) then {
 			
 			_direction = 350;
 			_distance = 1.15;
@@ -401,30 +401,30 @@ if (isNull _unit) exitWith {false};
 			};
 			_objects pushBack _bandage2;
 			
-			_medArea setVariable ["TFSRHS_MedicalArea_Objects", _objects, true];
+			_medArea setVariable ["TFS_MedicalArea_Objects", _objects, true];
 			sleep _section_time;
 			
 		};
 		
 	};
 	
-	waitUntil {if ((TFSRHS_MEDICAL_AREA_CONSTRUCT_SUCCESS) || (TFSRHS_MEDICAL_AREA_CONSTRUCT_FAILURE)) exitWith {true}; false};
+	waitUntil {if ((TFS_MEDICAL_AREA_CONSTRUCT_SUCCESS) || (TFS_MEDICAL_AREA_CONSTRUCT_FAILURE)) exitWith {true}; false};
 	
-	if (TFSRHS_MEDICAL_AREA_CONSTRUCT_SUCCESS) exitWith {
+	if (TFS_MEDICAL_AREA_CONSTRUCT_SUCCESS) exitWith {
 		
-		[_medArea, _medMenu] remoteExec ["TFSRHS_medical_area_fnc_createActions", 0];
+		[_medArea, _medMenu] remoteExec ["TFS_medical_area_fnc_createActions", 0];
 		_medHpad setVariable ["ace_medical_isMedicalFacility", true, true];
 		
-		_unit removeItem "TFSRHS_MedicArea";
+		_unit removeItem "TFS_MedicArea";
 		_unit playActionNow "MedicStop";
 		
-		[_unit, "TFSRHS_Medical_Area_Construct_1"] call TFSRHS_fnc_stop3dSound;
+		[_unit, "TFS_Medical_Area_Construct_1"] call TFS_fnc_stop3dSound;
 		
-		["tfsrhs_medical_area_constructed", [_unit, _medArea]] call CBA_fnc_globalEvent;
+		["tfs_medical_area_constructed", [_unit, _medArea]] call CBA_fnc_globalEvent;
 		
 	};
 	
-	if (TFSRHS_MEDICAL_AREA_CONSTRUCT_FAILURE) exitWith {
+	if (TFS_MEDICAL_AREA_CONSTRUCT_FAILURE) exitWith {
 		
 		private _delObjects = +_objects;
 		reverse _delObjects;
@@ -438,7 +438,7 @@ if (isNull _unit) exitWith {false};
 		
 		_unit playActionNow "MedicStop";
 		
-		[_unit, "TFSRHS_Medical_Area_Construct_1"] call TFSRHS_fnc_stop3dSound;
+		[_unit, "TFS_Medical_Area_Construct_1"] call TFS_fnc_stop3dSound;
 		
 	};
 	

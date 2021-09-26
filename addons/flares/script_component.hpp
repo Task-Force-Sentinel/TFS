@@ -1,5 +1,5 @@
 #define COMPONENT flares
-#include "\z\tfsrhs\addons\main\script_mod.hpp"
+#include "\z\tfs\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
@@ -9,4 +9,4 @@
     #define DEBUG_MODE_FULL
 #endif
 
-#include "\z\tfsrhs\addons\main\script_macros.hpp"
+#include "\z\tfs\addons\main\script_macros.hpp"

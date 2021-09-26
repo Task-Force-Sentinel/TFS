@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_RoadPatrol
+Function: TFS_fnc_RoadPatrol
 
 Description:
 	Sets up a patrol plotted along roads, rather than random positions dotted around the AO.

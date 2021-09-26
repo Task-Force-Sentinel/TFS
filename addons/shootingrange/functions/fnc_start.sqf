@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [controller, [controller1, controller2], "range", [target1, target2], [invalidTarget1, invalidTarget2]] call TFSRHS_shootingrange_fnc_start;
+ * [controller, [controller1, controller2], "range", [target1, target2], [invalidTarget1, invalidTarget2]] call TFS_shootingrange_fnc_start;
  *
  * Public: No
  */

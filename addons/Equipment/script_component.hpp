@@ -11,5 +11,5 @@
 #define DEBUG_MODE_NORMAL
 #define DEBUG_SYNCHRONOUS
 
-#include "\z\tfsrhs\addons\main\script_mod.hpp"
-#include "\z\tfsrhs\addons\main\script_macros.hpp"
+#include "\z\tfs\addons\main\script_mod.hpp"
+#include "\z\tfs\addons\main\script_macros.hpp"

@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\medical\area\functions\fn_canDismantle.sqf
+ *	\z\tfs\addons\medical\area\functions\fn_canDismantle.sqf
  *	by Ojemineh
  *	
  *	check if a existing medical area can be removed
@@ -13,7 +13,7 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[player, area1] call TFSRHS_medical_area_fnc_canDismantle;
+ *	[player, area1] call TFS_medical_area_fnc_canDismantle;
  *	
  */
 
@@ -39,7 +39,7 @@ _return = (
 	!(_unit getVariable ["ace_captives_isHandcuffed", false]) && 
 	!(_unit getVariable ["ace_isUnconscious", false]) && 
 	(isNull (objectParent _unit)) && 
-	!(_area getVariable ["TFSRHS_MedicalArea_DismantleInProgress", false])
+	!(_area getVariable ["TFS_MedicalArea_DismantleInProgress", false])
 );
 
 _return;

@@ -14,14 +14,14 @@
  * None
  *
  * Example:
- * [object,unit,data,false] call TFSRHS_common_fnc_initIntelObject;
+ * [object,unit,data,false] call TFS_common_fnc_initIntelObject;
  *
  */
 
 params ["_object","_caller",["_data",[]],["_deleteObject",false],["_mode", "init"],"_diaryVar"];
 private ["_scriptName"];
 
-_scriptName = "TFSRHS_common_fnc_initIntelObject";
+_scriptName = "TFS_common_fnc_initIntelObject";
 
 switch _mode do {
     case "init": {
@@ -57,7 +57,7 @@ switch _mode do {
             }
         ] call BIS_fnc_addScriptedEventHandler;
 
-        _callerName = if (_caller == TFSRHS_unit) then {profilename} else {name _caller};
+        _callerName = if (_caller == TFS_unit) then {profilename} else {name _caller};
 
         //--- Create marker to which diary link is pointed
         _marker = createmarker [_var,position _object];
@@ -115,11 +115,11 @@ switch _mode do {
 
         ["intelAdded",[_title,_texture]] call bis_fnc_showNotification;
 
-        if !(TFSRHS_unit diarysubjectexists _scriptName) then {
-            TFSRHS_unit creatediarysubject [_scriptName,localize "STR_A3_BIS_fnc_initIntelObject_intel"];
+        if !(TFS_unit diarysubjectexists _scriptName) then {
+            TFS_unit creatediarysubject [_scriptName,localize "STR_A3_BIS_fnc_initIntelObject_intel"];
         };
 
-        TFSRHS_unit creatediaryrecord [_scriptName,[_title,_text]];
+        TFS_unit creatediaryrecord [_scriptName,[_title,_text]];
 
         waituntil {_scriptName call bis_fnc_selectDiarySubject;};
     };

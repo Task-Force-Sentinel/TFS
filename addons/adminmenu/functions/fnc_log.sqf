@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 /* ----------------------------------------------------------------------------
-Function: TFSRHS_adminmenu_fnc_log
+Function: TFS_adminmenu_fnc_log
 
 Description:
     Logs a message to registered admins, visible in the admin menu.
@@ -8,17 +8,17 @@ Description:
 Parameters:
     _message - Message to be displayed [String]
     _isWarning - Whether to display as warning [Bool]
-    _tag - Tag that message will be prefixed with [String, defaults to "[TFSRHS Log]"]
+    _tag - Tag that message will be prefixed with [String, defaults to "[TFS Log]"]
 
 Returns:
     Nil
 
 Examples:
     (begin example)
-        ["Everything is on fire!",true,"[TFSRHS Firealarm]"] call TFSRHS_adminmenu_fnc_log;
+        ["Everything is on fire!",true,"[TFS Firealarm]"] call TFS_adminmenu_fnc_log;
     (end)
     (begin example)
-        [format ["%1 did something",profileName]] call TFSRHS_adminmenu_fnc_log;
+        [format ["%1 did something",profileName]] call TFS_adminmenu_fnc_log;
     (end)
 
 Author:

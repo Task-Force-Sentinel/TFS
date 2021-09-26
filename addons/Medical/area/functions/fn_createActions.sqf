@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\medical\area\functions\fn_createActions.sqf
+ *	\z\tfs\addons\medical\area\functions\fn_createActions.sqf
  *	by Ojemineh
  *	
  *	create medical area interactions
@@ -13,7 +13,7 @@
  *	nothing
  *	
  *	Example:
- *	[area1, menu1] call TFSRHS_medical_area_fnc_createActions;
+ *	[area1, menu1] call TFS_medical_area_fnc_createActions;
  *	
  */
 
@@ -40,16 +40,16 @@ if (isNull _menu) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 private _medical_area_action_dismantle = [
-	"TFSRHS_Medical_Area_Action_Dismantle", 
-	localize "STR_TFSRHS_Medical_Area_Action_Dismantle",
-	"\z\tfsrhs\addons\medical\data\icons\medical_cross_ca.paa", 
+	"TFS_Medical_Area_Action_Dismantle", 
+	localize "STR_TFS_Medical_Area_Action_Dismantle",
+	"\z\tfs\addons\medical\data\icons\medical_cross_ca.paa", 
 	{
 		params ["_target", "_player", "_params"]; 
-		[_player, (_params select 0)] call TFSRHS_medical_area_fnc_doDismantle;
+		[_player, (_params select 0)] call TFS_medical_area_fnc_doDismantle;
 	}, 
 	{
 		params ["_target", "_player", "_params"];
-		[_player, (_params select 0)] call TFSRHS_medical_area_fnc_canDismantle
+		[_player, (_params select 0)] call TFS_medical_area_fnc_canDismantle
 	},
 	{},
 	[_area]
@@ -60,16 +60,16 @@ private _medical_area_action_dismantle = [
 // -------------------------------------------------------------------------------------------------
 
 private _medical_area_action_lightoff = [
-	"TFSRHS_Medical_Area_Action_LightOff", 
-	localize "STR_TFSRHS_Medical_Area_Action_LightOff",
+	"TFS_Medical_Area_Action_LightOff", 
+	localize "STR_TFS_Medical_Area_Action_LightOff",
 	"", 
 	{
 		params ["_target", "_player", "_params"];
-		[(_params select 0)] call TFSRHS_medical_area_fnc_doLightOff;
+		[(_params select 0)] call TFS_medical_area_fnc_doLightOff;
 	}, 
 	{
 		params ["_target", "_player", "_params"];
-		[(_params select 0)] call TFSRHS_medical_area_fnc_canLightOff
+		[(_params select 0)] call TFS_medical_area_fnc_canLightOff
 	},
 	{},
 	[_area]
@@ -80,16 +80,16 @@ private _medical_area_action_lightoff = [
 // -------------------------------------------------------------------------------------------------
 
 private _medical_area_action_lighton = [
-	"TFSRHS_Medical_Area_Action_LightOn", 
-	localize "STR_TFSRHS_Medical_Area_Action_LightOn",
+	"TFS_Medical_Area_Action_LightOn", 
+	localize "STR_TFS_Medical_Area_Action_LightOn",
 	"", 
 	{
 		params ["_target", "_player", "_params"];
-		[(_params select 0)] call TFSRHS_medical_area_fnc_doLightOn;
+		[(_params select 0)] call TFS_medical_area_fnc_doLightOn;
 	}, 
 	{
 		params ["_target", "_player", "_params"];
-		[(_params select 0)] call TFSRHS_medical_area_fnc_canLightOn
+		[(_params select 0)] call TFS_medical_area_fnc_canLightOn
 	},
 	{},
 	[_area]

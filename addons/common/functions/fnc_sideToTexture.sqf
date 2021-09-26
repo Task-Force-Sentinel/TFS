@@ -1,5 +1,5 @@
 /*
- * Name: TFSRHS_common_fnc_sideToTexture
+ * Name: TFS_common_fnc_sideToTexture
  * Author: Snippers
  *
  * Arguments:

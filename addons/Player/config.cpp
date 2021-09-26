@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class TFSRHS_Player
+	class TFS_Player
 	{
 		author = AUTHOR;
         name = COMPONENT_NAME;

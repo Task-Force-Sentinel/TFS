@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\tfsrhs_common\functions\addons\fn_getAddonRequiredAddons.sqf
+ *	\tfs_common\functions\addons\fn_getAddonRequiredAddons.sqf
  *	by Ojemineh
  *	
  *	get addon required addons
@@ -12,7 +12,7 @@
  *	<ARRAY>
  *	
  *	Example:
- *	["TFSRHS_core"] call tfsrhs_fnc_getAddonRequiredAddons;
+ *	["TFS_core"] call tfs_fnc_getAddonRequiredAddons;
  *	
  */
 

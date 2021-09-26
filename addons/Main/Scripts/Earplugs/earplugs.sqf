@@ -15,16 +15,16 @@ if (YAINA_F_PlugsIn isEqualTo true) then {
         
 		player,
 		"<t color='#FF0000'>Remove Earplugs</t>",
-		"z\tfsrhs\addons\Main\Scripts\Earplugs\plugs_out.paa",
-		"z\tfsrhs\addons\Main\Scripts\Earplugs\plugs_out.paa",
+		"z\tfs\addons\Main\Scripts\Earplugs\plugs_out.paa",
+		"z\tfs\addons\Main\Scripts\Earplugs\plugs_out.paa",
 		"_target == _this",
 		"true",
 		{},
 		{},
 		{   
             YAINA_F_PlugsIn = false;
-            [] execVM "z\tfsrhs\addons\Main\Scripts\Earplugs\earplugs.sqf";
-            ["<img image='z\tfsrhs\addons\Main\Scripts\Earplugs\plugs_out.paa' /><br/><t valign='middle' align='center' size='.4'>Earplugs Removed</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
+            [] execVM "z\tfs\addons\Main\Scripts\Earplugs\earplugs.sqf";
+            ["<img image='z\tfs\addons\Main\Scripts\Earplugs\plugs_out.paa' /><br/><t valign='middle' align='center' size='.4'>Earplugs Removed</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
         },
 		{},
 		[],
@@ -42,16 +42,16 @@ if (YAINA_F_PlugsIn isEqualTo false) then {
         
 		player,
 		"<t color='#00FF00'>Insert Earplugs</t>",
-		"z\tfsrhs\addons\Main\Scripts\Earplugs\plugs_in.paa",
-		"z\tfsrhs\addons\Main\Scripts\Earplugs\plugs_in.paa",
+		"z\tfs\addons\Main\Scripts\Earplugs\plugs_in.paa",
+		"z\tfs\addons\Main\Scripts\Earplugs\plugs_in.paa",
 		"_target == _this",
 		"true",
 		{},
 		{},
 		{   
             YAINA_F_PlugsIn = true;
-            [] execVM "z\tfsrhs\addons\Main\Scripts\Earplugs\earplugs.sqf";
-            ["<img image='z\tfsrhs\addons\Main\Scripts\Earplugs\plugs_in.paa' /><br/><t valign='middle' align='center' size='.4'>Earplugs Fitted</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
+            [] execVM "z\tfs\addons\Main\Scripts\Earplugs\earplugs.sqf";
+            ["<img image='z\tfs\addons\Main\Scripts\Earplugs\plugs_in.paa' /><br/><t valign='middle' align='center' size='.4'>Earplugs Fitted</t>",-1,-1,4,1,0,789] spawn BIS_fnc_dynamicText;
         },
 		{},
 		[],

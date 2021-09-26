@@ -6,13 +6,13 @@ class CfgWeapons {
 	
 	// MEDICAL AREA
 	
-	class TFSRHS_MedicArea: ACE_ItemCore {
+	class TFS_MedicArea: ACE_ItemCore {
 		scope = 2;
-		author = "$STR_TFSRHS_Medical_Area_Author";
-		displayName = "$STR_TFSRHS_Item_Medical_Area_DisplayName";
-		descriptionShort = "$STR_TFSRHS_Item_Medical_Area_Description";
-		editorPreview = "\z\tfsrhs\addons\medical\area\data\previews\medical_area.jpg";
-		picture = "\z\tfsrhs\addons\medical\area\data\ui\medical_area_ca.paa";
+		author = "$STR_TFS_Medical_Area_Author";
+		displayName = "$STR_TFS_Item_Medical_Area_DisplayName";
+		descriptionShort = "$STR_TFS_Item_Medical_Area_Description";
+		editorPreview = "\z\tfs\addons\medical\area\data\previews\medical_area.jpg";
+		picture = "\z\tfs\addons\medical\area\data\ui\medical_area_ca.paa";
 		model = "\a3\weapons_f\items\medikit.p3d";
 		icon = "iconObject_1x1";
 		mapSize = 0.015;

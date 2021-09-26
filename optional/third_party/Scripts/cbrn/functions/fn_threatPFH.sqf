@@ -3,7 +3,7 @@
 if (isGamePaused) exitWith {};
 params ["_args"];
 _args params ["_lastIteration"];
-private _player = TFSRHS_unit;
+private _player = TFS_unit;
 private _zones = _player getVariable ["cbrn_zones", []];
 private _max = 0;
 if (alive _player && {!(_zones isEqualTo [])}) then {

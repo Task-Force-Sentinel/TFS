@@ -22,7 +22,7 @@
  * None
  *
  * Example:
- * [ [450, 60, 3, [target1, target2], [invalidTarget1, invalidTarget2], controller, [controller1, controller2], "range", 1, [trigger1, trigger2]], idPFH] call TFSRHS_shootingrange_fnc_popupPFH;
+ * [ [450, 60, 3, [target1, target2], [invalidTarget1, invalidTarget2], controller, [controller1, controller2], "range", 1, [trigger1, trigger2]], idPFH] call TFS_shootingrange_fnc_popupPFH;
  *
  * Public: No
  */

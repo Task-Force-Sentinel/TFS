@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 if (!isServer) exitWith {};
 params [["_add", true, [true]]];
@@ -46,7 +46,7 @@ if (isMultiplayer) then {
         GVAR(fps_pfh) = [{
             disableSerialization;
 
-            private _ctrl = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_TFSRHS_ADMINMENU_FPS;
+            private _ctrl = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_TFS_ADMINMENU_FPS;
             if (isNull _ctrl) exitWith {};
 
             _ctrl ctrlSetText format ["%1 SFPS", round diag_fps];

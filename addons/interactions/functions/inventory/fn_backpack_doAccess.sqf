@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\interactions\functions\inventory\fn_backpack_doAccess.sqf
+ *	\z\tfs\addons\interactions\functions\inventory\fn_backpack_doAccess.sqf
  *	by Ojemineh
  *	
  *	access targets backpack
@@ -13,7 +13,7 @@
  *	nothing
  *	
  *	Example:
- *	[player, unit1] call TFSRHS_interactions_fnc_backpack_doAccess;
+ *	[player, unit1] call TFS_interactions_fnc_backpack_doAccess;
  *	
  */
 
@@ -42,11 +42,11 @@ if (isNull _target) exitWith {};
 	
 	uiSleep 0.5;
 	
-	private _soundClass = selectRandom ["TFSRHS_Action_Backpack_Open_1", "TFSRHS_Action_Backpack_Open_2"];
+	private _soundClass = selectRandom ["TFS_Action_Backpack_Open_1", "TFS_Action_Backpack_Open_2"];
 	
-	if (missionNamespace getVariable ["tfsrhs_interactions_global_sounds", false]) then {
+	if (missionNamespace getVariable ["tfs_interactions_global_sounds", false]) then {
 		private _pitch = random [0.8, 1.0, 1.2];
-		[_soundClass, _target, AGLToASL (_target modelToWorld (_target selectionPosition "pelvis")), 20, 1, _pitch, false] call TFSRHS_fnc_playSound3d;
+		[_soundClass, _target, AGLToASL (_target modelToWorld (_target selectionPosition "pelvis")), 20, 1, _pitch, false] call TFS_fnc_playSound3d;
 	} else {
 		playSound _soundClass;
 	};
@@ -54,7 +54,7 @@ if (isNull _target) exitWith {};
 	_player action ["OpenBag", _target];
 	
 	if (isPlayer _target) then {
-		[_player, _target] remoteExecCall ["TFSRHS_interactions_fnc_backpack_access", _target];
+		[_player, _target] remoteExecCall ["TFS_interactions_fnc_backpack_access", _target];
 	};
 	
 };

@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\diagnostics\fn_log.sqf
+ *	\z\tfs\addons\core\functions\diagnostics\fn_log.sqf
  *	by Ojemineh
  *	
  *	add a rpt-log
@@ -16,7 +16,7 @@
  *	nothing
  *	
  *	Example:
- *	[4, "Player: '%1', Time: '%2'", [player, time], "core"] call TFSRHS_fnc_log;
+ *	[4, "Player: '%1', Time: '%2'", [player, time], "core"] call TFS_fnc_log;
  *	
  */
 
@@ -28,7 +28,7 @@ _level			= [_this, 0, 0, [0]] call BIS_fnc_param;
 _message		= [_this, 1, "", [""]] call BIS_fnc_param;
 _params			= [_this, 2, [], [[]]] call BIS_fnc_param;
 _extension		= [_this, 3, "", [""]] call BIS_fnc_param;
-_modification	= [_this, 4, "TFSRHS", [""]] call BIS_fnc_param;
+_modification	= [_this, 4, "TFS", [""]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 

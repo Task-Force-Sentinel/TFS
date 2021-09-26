@@ -10,7 +10,7 @@ class cfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"TFSRHS_common"};
+        requiredAddons[] = {"TFS_common"};
         VERSION_CONFIG;
     };
 };
@@ -27,8 +27,8 @@ class CfgFunctions {
 
 class Extended_PreInit_EventHandlers
 {
-	class TFSRHS_AI_Event
+	class TFS_AI_Event
 	{
-		init = "call compile preProcessFileLineNumbers 'z\tfsrhs\addons\ai\XEH_preInit.sqf'";
+		init = "call compile preProcessFileLineNumbers 'z\tfs\addons\ai\XEH_preInit.sqf'";
 	};
 };

@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\tfsrhs_common\functions\common\fn_addItem.sqf
+ *	\tfs_common\functions\common\fn_addItem.sqf
  *	by Ojemineh
  *	
  *	add item to unit/vehicle
@@ -17,8 +17,8 @@
  *	1: addToGround	- <BOOLEAN>
  *	
  *	Examples:
- *	[player, "ACE_EarPlugs", 1, [3,2,1], true] call tfsrhs_fnc_addItem;
- *	[truck1, "ACE_EarPlugs", 1] call tfsrhs_fnc_addItem;
+ *	[player, "ACE_EarPlugs", 1, [3,2,1], true] call tfs_fnc_addItem;
+ *	[truck1, "ACE_EarPlugs", 1] call tfs_fnc_addItem;
  *	
  */
 

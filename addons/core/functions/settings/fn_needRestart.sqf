@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\settings\fn_needRestart.sqf
+ *	\z\tfs\addons\core\functions\settings\fn_needRestart.sqf
  *	by Ojemineh
  *	
  *	settings restart notification
@@ -13,7 +13,7 @@
  *	nothing
  *	
  *	Example:
- *	["tfsrhs_debug_enabled", 2] call TFSRHS_fnc_needRestart;
+ *	["tfs_debug_enabled", 2] call TFS_fnc_needRestart;
  *	
  */
 
@@ -35,22 +35,22 @@ switch (_restartID) do {
 	
 	// RESTART MISSION
 	case 1: {
-		[_setting, _restartID] remoteExec ["TFSRHS_fnc_needRestartLocal", 0];
+		[_setting, _restartID] remoteExec ["TFS_fnc_needRestartLocal", 0];
 	};
 	
 	// RESTART SESSION (GLOBAL)
 	case 2: {
-		[_setting, _restartID] remoteExec ["TFSRHS_fnc_needRestartLocal", 0];
+		[_setting, _restartID] remoteExec ["TFS_fnc_needRestartLocal", 0];
 	};
 	
 	// RESTART SESSION (PLAYER)
 	case 3: {
-		[_setting, _restartID] remoteExec ["TFSRHS_fnc_needRestartLocal", player];
+		[_setting, _restartID] remoteExec ["TFS_fnc_needRestartLocal", player];
 	};
 	
 	// RESTART ENGINE
 	default {
-		[_setting, _restartID] remoteExec ["TFSRHS_fnc_needRestartLocal", 0];
+		[_setting, _restartID] remoteExec ["TFS_fnc_needRestartLocal", 0];
 	};
 	
 };

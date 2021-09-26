@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 if(!([] call FUNC(isOpen))) exitWith {};
 disableSerialization;
 private _treeView = (uiNamespace getVariable [QGVAR(unitlist),controlNull]);

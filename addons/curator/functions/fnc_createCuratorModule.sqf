@@ -10,7 +10,7 @@
  * 0: New curator module <OBJECT>
  *
  * Example:
- * call tfsrhs_curator_fnc_createCuratorModule
+ * call tfs_curator_fnc_createCuratorModule
  *
  * Public: No
  */

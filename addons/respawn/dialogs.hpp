@@ -32,7 +32,7 @@ $[
 class respawnMenuDialog {
     idd = 26893;
     movingEnable = 0;
-    onLoad="['onLoad'] spawn tfsrhs_respawn_fnc_handleRespawnUI;";
+    onLoad="['onLoad'] spawn tfs_respawn_fnc_handleRespawnUI;";
     class controlsBackground {};
     class objects {};
     class controls { 
@@ -77,7 +77,7 @@ class respawnMenuDialog {
             y = 0.467 * safezoneH + safezoneY;
             w = 0.04125 * safezoneW;
             h = 0.055 * safezoneH;
-            action="['respawnMenuAddAction'] spawn tfsrhs_respawn_fnc_handleRespawnUI";
+            action="['respawnMenuAddAction'] spawn tfs_respawn_fnc_handleRespawnUI";
         };
         class respawnMenuRemoveButton: respawnMenu_RscButton
         {
@@ -87,7 +87,7 @@ class respawnMenuDialog {
             y = 0.544 * safezoneH + safezoneY;
             w = 0.04125 * safezoneW;
             h = 0.055 * safezoneH;
-            action="['respawnMenuRemoveAction'] spawn tfsrhs_respawn_fnc_handleRespawnUI";
+            action="['respawnMenuRemoveAction'] spawn tfs_respawn_fnc_handleRespawnUI";
         };
         class respawnMenuSpawnButton: respawnMenu_RscButton
         {
@@ -97,7 +97,7 @@ class respawnMenuDialog {
             y = 0.731 * safezoneH + safezoneY;
             w = 0.0773437 * safezoneW;
             h = 0.044 * safezoneH;
-            action="['respawnMenuRespawnAction'] spawn tfsrhs_respawn_fnc_handleRespawnUI";
+            action="['respawnMenuRespawnAction'] spawn tfs_respawn_fnc_handleRespawnUI";
         };
         class respawnMenuChangeRoleButton: respawnMenu_RscButton
         {
@@ -107,7 +107,7 @@ class respawnMenuDialog {
             y = 0.445 * safezoneH + safezoneY;
             w = 0.0567187 * safezoneW;
             h = 0.055 * safezoneH;
-            action="['respawnMenuChangeRoleAction'] spawn tfsrhs_respawn_fnc_handleRespawnUI";
+            action="['respawnMenuChangeRoleAction'] spawn tfs_respawn_fnc_handleRespawnUI";
         };
         class respawnMenuChangeRankButton: respawnMenu_RscButton
         {
@@ -117,7 +117,7 @@ class respawnMenuDialog {
             y = 0.544 * safezoneH + safezoneY;
             w = 0.0567187 * safezoneW;
             h = 0.055 * safezoneH;
-            action="['respawnMenuChangeRankAction'] spawn tfsrhs_respawn_fnc_handleRespawnUI";
+            action="['respawnMenuChangeRankAction'] spawn tfs_respawn_fnc_handleRespawnUI";
         };
         class respawnMenuGroupNameText: respawnMenu_RscEdit
         {
@@ -145,7 +145,7 @@ class respawnMenuDialog {
             y = 0.742 * safezoneH + safezoneY;
             w = 0.0103125 * safezoneW;
             h = 0.022 * safezoneH;
-            action = "['respawnMenuToggleGroupCheckbox'] spawn tfsrhs_respawn_fnc_handleRespawnUI";
+            action = "['respawnMenuToggleGroupCheckbox'] spawn tfs_respawn_fnc_handleRespawnUI";
         };
         class respawnMenuSpawnMarkerText: respawnMenu_RscText
         {
@@ -222,7 +222,7 @@ class respawnMenuDialog {
             w = 0.0979687 * safezoneW;
             h = 0.022 * safezoneH;
             tooltip = "Toggles the spectator channel for you (ACRE/TFAR), so that you can talk to dead players if alive.";
-            action = "['toggleSpectator'] spawn tfsrhs_respawn_fnc_handleRespawnUI";
+            action = "['toggleSpectator'] spawn tfs_respawn_fnc_handleRespawnUI";
         };
         class respawnMenuFactionCategoryCombo: respawnMenu_RscCombo
         {
@@ -272,10 +272,10 @@ class respawnMenuMapDialog {
             y = 0 * safezoneH + safezoneY;
             w = 1 * safezoneW;
             h = 1 * safezoneH;
-            onDraw = "_this call tfsrhs_respawn_fnc_respawnDrawMapIcons";
-            onSetFocus = "['respawnMapLoaded'] spawn tfsrhs_respawn_fnc_handleRespawnUI";
-            onMouseButtonDown = "['respawnMap_onMouseButtonDown',_this] spawn tfsrhs_respawn_fnc_handleRespawnUI";
-            onKeyUp = "['respawnMap_keyUp',_this] spawn tfsrhs_respawn_fnc_handleRespawnUI";
+            onDraw = "_this call tfs_respawn_fnc_respawnDrawMapIcons";
+            onSetFocus = "['respawnMapLoaded'] spawn tfs_respawn_fnc_handleRespawnUI";
+            onMouseButtonDown = "['respawnMap_onMouseButtonDown',_this] spawn tfs_respawn_fnc_handleRespawnUI";
+            onKeyUp = "['respawnMap_keyUp',_this] spawn tfs_respawn_fnc_handleRespawnUI";
         };
     };
 };

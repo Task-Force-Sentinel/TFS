@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\gear\functions\common\fn_set.sqf
+ *	\z\tfs\addons\gear\functions\common\fn_set.sqf
  *	by Ojemineh
  *
  *	set unit role
@@ -15,7 +15,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "curator", "0", "nato"] call TFSRHS_gear_fnc_set;
+ *	[player, "curator", "0", "nato"] call TFS_gear_fnc_set;
  *
  */
 
@@ -36,7 +36,7 @@ if (isNull _unit) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 if (Not local _unit) exitWith {
-	[_unit, _role, _type, _team, _load] remoteExecCall ["TFSRHS_gear_fnc_set", _unit];
+	[_unit, _role, _type, _team, _load] remoteExecCall ["TFS_gear_fnc_set", _unit];
 };
 
 // -------------------------------------------------------------------------------------------------
@@ -56,4 +56,4 @@ _unit setVariable ["gear_team", _team, true];
 
 // -------------------------------------------------------------------------------------------------
 
-if (_load) then { [_unit] call TFSRHS_gear_fnc_load; };
+if (_load) then { [_unit] call TFS_gear_fnc_load; };

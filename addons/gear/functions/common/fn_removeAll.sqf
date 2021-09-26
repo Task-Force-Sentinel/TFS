@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\gear\functions\common\fn_removeAll.sqf
+ *	\z\tfs\addons\gear\functions\common\fn_removeAll.sqf
  *	by Ojemineh
  *
  *	remove gear from unit
@@ -12,7 +12,7 @@
  *	nothing
  *
  *	Example:
- *	[player] call TFSRHS_gear_fnc_removeAll;
+ *	[player] call TFS_gear_fnc_removeAll;
  *
  */
 
@@ -29,7 +29,7 @@ if (isNull _unit) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 if (Not local _unit) exitWith {
-	[_unit] remoteExecCall ["TFSRHS_gear_fnc_removeAll", _unit];
+	[_unit] remoteExecCall ["TFS_gear_fnc_removeAll", _unit];
 };
 
 // -------------------------------------------------------------------------------------------------

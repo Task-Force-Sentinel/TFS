@@ -14,7 +14,7 @@ if (isNull _uav) exitWith {false};
 // exit if requested UAV is not alive
 if (!alive _uav) exitWith {false};
 
-[_object, _selection] call TFSRHS_fnc_deleteCamera;
+[_object, _selection] call TFS_fnc_deleteCamera;
 
 private _cam = objNull;
 private _camPosMemPt = "";
@@ -59,5 +59,5 @@ if ((_camPosMemPt != "") && (_camDirMemPt != "")) then {
 			sleep 0.1;
 		};
 	};
-	_object setVariable [format ["TFSRHS_CC_screen_%1_Cam", _selection], [_cam, objNull, _uav]];
+	_object setVariable [format ["TFS_CC_screen_%1_Cam", _selection], [_cam, objNull, _uav]];
 };

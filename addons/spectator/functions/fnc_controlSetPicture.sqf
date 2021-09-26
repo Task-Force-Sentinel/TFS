@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 /*
  * Author: Head
  * Set control picture for a 3D tag
@@ -12,7 +12,7 @@
  * nil
  *
  * Example:
- * [_control,"pathtopicture",[1,1,1,1]] call tfsrhs_spectator_fnc_controlSetPicture
+ * [_control,"pathtopicture",[1,1,1,1]] call tfs_spectator_fnc_controlSetPicture
  *
  * Public: No
  */

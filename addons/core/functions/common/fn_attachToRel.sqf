@@ -1,6 +1,6 @@
 ﻿/*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\common\fn_attachToRel.sqf
+ *	\z\tfs\addons\core\functions\common\fn_attachToRel.sqf
  *	by Ojemineh
  *	
  *	attach object relative to parent
@@ -13,7 +13,7 @@
  *	nothing
  *	
  *	Example:
- *	[player, vehicle1] call TFSRHS_fnc_attachToRel;
+ *	[player, vehicle1] call TFS_fnc_attachToRel;
  *	
  */
 

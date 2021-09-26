@@ -7,7 +7,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"TFSRHS_main"};
+        requiredAddons[] = {"TFS_main"};
         author = "Potato";
         authors[] = {"PabstMirror"};
         authorUrl = "https://github.com/BourbonWarfare/POTATO";

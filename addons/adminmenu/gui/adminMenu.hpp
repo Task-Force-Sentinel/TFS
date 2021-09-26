@@ -22,23 +22,23 @@ class ScrollBar;
 class GVAR(RscButtonMenu): RscButtonMenu {
     style = "0x02 + 0x0C";
     font = "RobotoCondensed";
-    sizeEx = TFSRHS_ADMINMENU_STD_SIZEX_L;
+    sizeEx = TFS_ADMINMENU_STD_SIZEX_L;
     size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.9)";
     h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 };
 
 class GVAR(RscText): RscText {
-    sizeEx = TFSRHS_ADMINMENU_STD_SIZEX;
+    sizeEx = TFS_ADMINMENU_STD_SIZEX;
 };
 
 class GVAR(RscTextLarge): RscText {
-    sizeEx = TFSRHS_ADMINMENU_STD_SIZEX_L;
+    sizeEx = TFS_ADMINMENU_STD_SIZEX_L;
 };
 
 class GVAR(RscSpectatorControlTableText): RscText {
-    sizeEx = TFSRHS_ADMINMENU_STD_SIZEX;
+    sizeEx = TFS_ADMINMENU_STD_SIZEX;
     h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-    w = (6/10) * TFSRHS_ADMINMENU_RESP_W_COL1;
+    w = (6/10) * TFS_ADMINMENU_RESP_W_COL1;
     x = 0;
     y = 0;
 };
@@ -54,7 +54,7 @@ class GVAR(RscEditMultiCode): RscEditMulti {
 
 class GVAR(RscCombo): RscCombo {
     font = "RobotoCondensed";
-    sizeEx = TFSRHS_ADMINMENU_STD_SIZEX;
+    sizeEx = TFS_ADMINMENU_STD_SIZEX;
 };
 
 class GVAR(RscTextIcon): RscText {
@@ -64,17 +64,17 @@ class GVAR(RscTextIcon): RscText {
 
 class GVAR(RscListBox): RscListBox {
     font = "RobotoCondensed";
-    sizeEx = TFSRHS_ADMINMENU_STD_SIZEX;
+    sizeEx = TFS_ADMINMENU_STD_SIZEX;
 };
 
 class GVAR(RscListNBox): RscListNBox {
     font = "RobotoCondensed";
-    sizeEx = TFSRHS_ADMINMENU_STD_SIZEX;
+    sizeEx = TFS_ADMINMENU_STD_SIZEX;
 };
 
 class ADDON
 {
-    idd = IDD_TFSRHS_ADMINMENU;
+    idd = IDD_TFS_ADMINMENU;
     movingEnable = 0;
     enableDisplay = 1;
     enableSimulation = 1;
@@ -86,7 +86,7 @@ class ADDON
         class Title: RscTitle
         {
             idc = -1;
-            text = "TFSRHS Admin Menu";
+            text = "TFS Admin Menu";
             style = 0;
             colorBackground[] = {0, 0, 0, 0};
             x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
@@ -97,7 +97,7 @@ class ADDON
 
         class TitleFPS: Title
         {
-            idc = IDC_TFSRHS_ADMINMENU_FPS;
+            idc = IDC_TFS_ADMINMENU_FPS;
             text = "";
             style = 1;
             x = "16 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
@@ -108,10 +108,10 @@ class ADDON
         // Buttons for Tabs
         class TabDashboard: RscButtonMenu
         {
-            idc = IDC_TFSRHS_ADMINMENU_DASH;
+            idc = IDC_TFS_ADMINMENU_DASH;
             text = "Dashboard";
             tooltip = "";
-            onButtonClick = QUOTE([ARR_2(ctrlParent param [0],IDC_TFSRHS_ADMINMENU_G_DASH)] call FUNC(selectTab));
+            onButtonClick = QUOTE([ARR_2(ctrlParent param [0],IDC_TFS_ADMINMENU_G_DASH)] call FUNC(selectTab));
             colorBackground[] = {0, 0, 0, 0};
             x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             y = "2.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
@@ -120,37 +120,37 @@ class ADDON
         };
         class TabPlayerManagement: TabDashboard
         {
-            idc = IDC_TFSRHS_ADMINMENU_PMAN;
+            idc = IDC_TFS_ADMINMENU_PMAN;
             text = "Player Management";
             tooltip = "Perform actions on players";
-            onButtonClick = QUOTE([ARR_2(ctrlParent param [0],IDC_TFSRHS_ADMINMENU_G_PMAN)] call FUNC(selectTab));
+            onButtonClick = QUOTE([ARR_2(ctrlParent param [0],IDC_TFS_ADMINMENU_G_PMAN)] call FUNC(selectTab));
             x = "6.9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             w = "9 * (((safezoneW / safezoneH) min 1.2) / 40)";
         };
         class TabRespawnPlayers: TabDashboard
         {
-            idc = IDC_TFSRHS_ADMINMENU_RESP;
+            idc = IDC_TFS_ADMINMENU_RESP;
             text = "Respawn";
             tooltip = "Respawn dead players back in the game";
-            onButtonClick = QUOTE([ARR_2(ctrlParent param [0],IDC_TFSRHS_ADMINMENU_G_RESP)] call FUNC(selectTab));
+            onButtonClick = QUOTE([ARR_2(ctrlParent param [0],IDC_TFS_ADMINMENU_G_RESP)] call FUNC(selectTab));
             x = "16 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             w = "4.8 * (((safezoneW / safezoneH) min 1.2) / 40)";
         };
         class TabEndMission: TabDashboard
         {
-            idc = IDC_TFSRHS_ADMINMENU_ENDM;
+            idc = IDC_TFS_ADMINMENU_ENDM;
             text = "End Mission";
             tooltip = "Select and execute a mission ending";
-            onButtonClick = QUOTE([ARR_2(ctrlParent param [0],IDC_TFSRHS_ADMINMENU_G_ENDM)] call FUNC(selectTab));
+            onButtonClick = QUOTE([ARR_2(ctrlParent param [0],IDC_TFS_ADMINMENU_G_ENDM)] call FUNC(selectTab));
             x = "20.9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             w = "5.9 * (((safezoneW / safezoneH) min 1.2) / 40)";
         };
         class TabMessageLog: TabDashboard
         {
-            idc = IDC_TFSRHS_ADMINMENU_MSGS;
+            idc = IDC_TFS_ADMINMENU_MSGS;
             text = "Logs";
-            tooltip = "Status and debug messages from TFSRHS components";
-            onButtonClick = QUOTE([ARR_2(ctrlParent param [0],IDC_TFSRHS_ADMINMENU_G_MSGS)] call FUNC(selectTab));
+            tooltip = "Status and debug messages from TFS components";
+            onButtonClick = QUOTE([ARR_2(ctrlParent param [0],IDC_TFS_ADMINMENU_G_MSGS)] call FUNC(selectTab));
             x = "26.9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             w = "3 * (((safezoneW / safezoneH) min 1.2) / 40)";
         };
@@ -167,48 +167,48 @@ class ADDON
 
         class GroupDashboard: GroupBase
         {
-            idc = IDC_TFSRHS_ADMINMENU_G_DASH;
-            w = TFSRHS_GROUPBASE_W;
-            h = TFSRHS_GROUPBASE_H;
+            idc = IDC_TFS_ADMINMENU_G_DASH;
+            w = TFS_GROUPBASE_W;
+            h = TFS_GROUPBASE_H;
             #include "dashboard.hpp"
         };
 
         class GroupPlayerManagement: GroupBase
         {
-            idc = IDC_TFSRHS_ADMINMENU_G_PMAN;
-            w = TFSRHS_GROUPBASE_W;
-            h = TFSRHS_GROUPBASE_H;
+            idc = IDC_TFS_ADMINMENU_G_PMAN;
+            w = TFS_GROUPBASE_W;
+            h = TFS_GROUPBASE_H;
             #include "playerManagement.hpp"
         };
 
         class GroupRespawn: GroupBase
         {
-            idc = IDC_TFSRHS_ADMINMENU_G_RESP;
-            w = TFSRHS_GROUPBASE_W;
-            h = TFSRHS_GROUPBASE_H;
+            idc = IDC_TFS_ADMINMENU_G_RESP;
+            w = TFS_GROUPBASE_W;
+            h = TFS_GROUPBASE_H;
             #include "respawn.hpp"
         };
 
         class GroupEndMission: GroupBase
         {
-            idc = IDC_TFSRHS_ADMINMENU_G_ENDM;
-            w = TFSRHS_GROUPBASE_W;
-            h = TFSRHS_GROUPBASE_H;
+            idc = IDC_TFS_ADMINMENU_G_ENDM;
+            w = TFS_GROUPBASE_W;
+            h = TFS_GROUPBASE_H;
             #include "endMission.hpp"
         };
 
         class GroupMessageLog: GroupBase
         {
-            idc = IDC_TFSRHS_ADMINMENU_G_MSGS;
-            w = TFSRHS_GROUPBASE_W;
-            h = TFSRHS_GROUPBASE_H;
+            idc = IDC_TFS_ADMINMENU_G_MSGS;
+            w = TFS_GROUPBASE_W;
+            h = TFS_GROUPBASE_H;
             #include "messageLog.hpp"
         };
 
         // Utility Tab
         class UtilityTitleBackground: RscText
         {
-            idc = IDC_TFSRHS_ADMINMENU_UTIL_TBACK;
+            idc = IDC_TFS_ADMINMENU_UTIL_TBACK;
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.54])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.21])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.8])"};
             x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             y = "3.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
@@ -217,7 +217,7 @@ class ADDON
         };
         class UtilityTitle: RscTitle
         {
-            idc = IDC_TFSRHS_ADMINMENU_UTIL_TITLE;
+            idc = IDC_TFS_ADMINMENU_UTIL_TITLE;
             text = "Utility Title";
             style = 0;
             colorBackground[] = {0, 0, 0, 0};
@@ -228,7 +228,7 @@ class ADDON
         };
         class UtilityGroup: GroupBase
         {
-            idc = IDC_TFSRHS_ADMINMENU_G_UTIL;
+            idc = IDC_TFS_ADMINMENU_G_UTIL;
             y = "4.3 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             w = "37.8 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "19.6 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
@@ -264,7 +264,7 @@ class ADDON
 
 
 class GVAR(respawnMapDialog) {
-    idd = IDC_TFSRHS_ADMINMENU_RESP_MAP_DISPLAY;
+    idd = IDC_TFS_ADMINMENU_RESP_MAP_DISPLAY;
     movingEnable = 0;
     class controlsBackground {
     };
@@ -273,23 +273,23 @@ class GVAR(respawnMapDialog) {
     class controls {
         class FullRespawnMap : RscMapControl
         {
-            idc = IDC_TFSRHS_ADMINMENU_RESP_MAP_CONTROL;
+            idc = IDC_TFS_ADMINMENU_RESP_MAP_CONTROL;
             type = 100;
             x = 0 * safezoneW + safezoneX;
             y = 0 * safezoneH + safezoneY;
             w = 1 * safezoneW;
             h = 1 * safezoneH;
             onDraw = QUOTE(_this call FUNC(respawn_mapDrawIcons));
-            onSetFocus = QUOTE(_this spawn FUNC(respawn_mapLoaded)); //"['respawnMapLoaded'] spawn tfsrhs_respawn_fnc_handleRespawnUI";
-            onMouseButtonDown = QUOTE(_this spawn FUNC(respawn_mapClick)); //"['respawnMap_onMouseButtonDown',_this] spawn tfsrhs_respawn_fnc_handleRespawnUI";
-            onKeyUp = QUOTE(_this spawn FUNC(respawn_mapKeyUp)); //"['respawnMap_keyUp',_this] spawn tfsrhs_respawn_fnc_handleRespawnUI";
+            onSetFocus = QUOTE(_this spawn FUNC(respawn_mapLoaded)); //"['respawnMapLoaded'] spawn tfs_respawn_fnc_handleRespawnUI";
+            onMouseButtonDown = QUOTE(_this spawn FUNC(respawn_mapClick)); //"['respawnMap_onMouseButtonDown',_this] spawn tfs_respawn_fnc_handleRespawnUI";
+            onKeyUp = QUOTE(_this spawn FUNC(respawn_mapKeyUp)); //"['respawnMap_keyUp',_this] spawn tfs_respawn_fnc_handleRespawnUI";
         };
     };
 };
 
 
 class GVAR(adminEyeDialog) {
-    idd = IDC_TFSRHS_ADMINMENU_ADME_MAP_DISPLAY;
+    idd = IDC_TFS_ADMINMENU_ADME_MAP_DISPLAY;
     movingEnable = 0;
     class controlsBackground {
     };
@@ -298,7 +298,7 @@ class GVAR(adminEyeDialog) {
     class controls {
         class FullRespawnMap : RscMapControl
         {
-            idc = IDC_TFSRHS_ADMINMENU_ADME_MAP_CONTROL;
+            idc = IDC_TFS_ADMINMENU_ADME_MAP_CONTROL;
             type = 100;
             x = 0 * safezoneW + safezoneX;
             y = 0 * safezoneH + safezoneY;

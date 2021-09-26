@@ -1,6 +1,6 @@
 ﻿/*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\settings\fn_getKeybindString.sqf
+ *	\z\tfs\addons\core\functions\settings\fn_getKeybindString.sqf
  *	by Ojemineh
  *	
  *	get keybind string
@@ -13,7 +13,7 @@
  *	STRING
  *	
  *	Example:
- *	["CH View Distance", "open_settings"] call TFSRHS_fnc_getKeybindString;
+ *	["CH View Distance", "open_settings"] call TFS_fnc_getKeybindString;
  *	
  */
 
@@ -43,9 +43,9 @@ if (!isNil "_entry") then {
 	private _useAlt = (_keybind select 1) select 2;
 	
 	private _modifier = 
-		(if (_useShift) then {localize "STR_TFSRHS_KeyBinds_Shift_Modifier"} else {""}) +
-		(if (_useCtrl) then {localize "STR_TFSRHS_KeyBinds_Ctrl_Modifier"} else {""}) +
-		(if (_useAlt) then {localize "STR_TFSRHS_KeyBinds_Alt_Modifier"} else {""});
+		(if (_useShift) then {localize "STR_TFS_KeyBinds_Shift_Modifier"} else {""}) +
+		(if (_useCtrl) then {localize "STR_TFS_KeyBinds_Ctrl_Modifier"} else {""}) +
+		(if (_useAlt) then {localize "STR_TFS_KeyBinds_Alt_Modifier"} else {""});
 	
 	_return = toUpper(format ["%1%2", _modifier, [_keybind select 0] call BIS_fnc_keyCode]);
 	

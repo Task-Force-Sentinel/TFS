@@ -9,12 +9,12 @@ private _control = _display displayCtrl IDC_MAP;
 
 _control ctrlAddEventHandler ["MouseMoving", {
     params ["_control"];
-    GVAR(TFSRHS_customMark) = "customMark" in (ctrlMapMouseOver _control);
+    GVAR(TFS_customMark) = "customMark" in (ctrlMapMouseOver _control);
 }];
 
 _display displayAddEventHandler ["KeyDown", {
     params ["", "_keyCode"];
-    if (!isNil QGVAR(TFSRHS_customMark) && {GVAR(TFSRHS_customMark)} && {(_keyCode) == DIK_DELETE}) then {
-        TFSRHS_unit setVariable ["TFSRHS_customMarkLocation",nil];
+    if (!isNil QGVAR(TFS_customMark) && {GVAR(TFS_customMark)} && {(_keyCode) == DIK_DELETE}) then {
+        TFS_unit setVariable ["TFS_customMarkLocation",nil];
     };
 }];

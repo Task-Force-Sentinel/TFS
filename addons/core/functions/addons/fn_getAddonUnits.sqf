@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\addons\fn_getAddonUnits.sqf
+ *	\z\tfs\addons\core\functions\addons\fn_getAddonUnits.sqf
  *	by Ojemineh
  *	
  *	get addon units
@@ -12,7 +12,7 @@
  *	<ARRAY>
  *	
  *	Example:
- *	["tfsrhs_core"] call TFSRHS_fnc_getAddonUnits;
+ *	["tfs_core"] call TFS_fnc_getAddonUnits;
  *	
  */
 

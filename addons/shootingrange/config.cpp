@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"TFSRHS_MAIN"};
+        requiredAddons[] = {"TFS_MAIN"};
         author = AUTHOR;
         authors[] = {"Jonpas"};
         url = URL;

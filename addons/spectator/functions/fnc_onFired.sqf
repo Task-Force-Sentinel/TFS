@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
 
 //if(!(_unit getVariable [QGVAR(fired_enabled),false])) exitWith {};

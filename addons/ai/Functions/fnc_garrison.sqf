@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\ai\script_component.hpp"
+#include "\z\tfs\addons\ai\script_component.hpp"
 params ["_logic","_units","_activated"];
 
 private _headless = (synchronizedObjects _logic) select {_x isKindOf "HeadlessClient_F" && !local _x};
@@ -31,7 +31,7 @@ private _debug = _logic getVariable ["Debug",false];
 private _areas = (synchronizedObjects _logic) select {side _x == sideLogic && _x isKindOf QGVAR(area)};
 private _unitData = _logic getVariable [QGVAR(unitData),[]];
 private _mainGroup = createGroup ((_unitData select 0) select 0);
-[_mainGroup,QGVAR(garrisonGroup),true] call tfsrhs_common_fnc_initGroupVar;
+[_mainGroup,QGVAR(garrisonGroup),true] call tfs_common_fnc_initGroupVar;
 private _holdPos = _logic getVariable ["hold", false];
 
 if(count _areas > 0) then {
@@ -101,7 +101,7 @@ if(count _areas > 0) then {
         };
     } forEach _areas;
 } else {
-    ERROR_MSG("TFSRHS Garrison module has no TFSRHS Area connected to it.");
+    ERROR_MSG("TFS Garrison module has no TFS Area connected to it.");
 };
 
 _logic setVariable ["spawned_units",units _mainGroup,true]; // global set variable

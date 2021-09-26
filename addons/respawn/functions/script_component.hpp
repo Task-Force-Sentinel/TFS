@@ -1,1 +1,1 @@
-#include "\z\tfsrhs\addons\respawn\script_component.hpp"
+#include "\z\tfs\addons\respawn\script_component.hpp"

@@ -1,5 +1,5 @@
 /*
- * Name: TFSRHS_ai_fnc_addWaveHandler
+ * Name: TFS_ai_fnc_addWaveHandler
  * Author: Head
  *
  * Arguments:

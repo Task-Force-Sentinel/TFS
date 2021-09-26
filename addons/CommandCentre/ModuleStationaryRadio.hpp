@@ -1,10 +1,10 @@
-class TFSRHS_ModuleStationaryRadio: Module_F
+class TFS_ModuleStationaryRadio: Module_F
 {
 	scope = 2;
 	displayName = "Setup Stationary Radio";
-	icon = "\z\tfsrhs\addons\media\images\icons\StationaryRadio.paa"; //todo: proper icon
-	category = "TFSRHS_CommandCentre";
-	function = "TFSRHS_fnc_moduleStationaryRadio";
+	icon = "\z\tfs\addons\media\images\icons\StationaryRadio.paa"; //todo: proper icon
+	category = "TFS_CommandCentre";
+	function = "TFS_fnc_moduleStationaryRadio";
 	functionPriority = 4;
 	isGlobal = 0;
 	isTriggerActivated = 0;
@@ -14,7 +14,7 @@ class TFSRHS_ModuleStationaryRadio: Module_F
 	{
 		class StationaryRadioOn: Checkbox
   		{
-				property = "TFSRHS_StationaryRadioOn";
+				property = "TFS_StationaryRadioOn";
 				displayName = "Turn Radio On";
 				tooltip = "If enabled, the radio will be turned on on Mission Start.";
 				typeName = "BOOL";
@@ -22,7 +22,7 @@ class TFSRHS_ModuleStationaryRadio: Module_F
 		};
 		class StationaryRadioCh1: Edit
   		{
-				property = "TFSRHS_StationaryRadioCh1";
+				property = "TFS_StationaryRadioCh1";
 				displayName = "Channel 1 Freq.";
 				tooltip = "Default frequency for Channel 1. Can be changed later.";
 				typeName = "NUMBER";
@@ -30,7 +30,7 @@ class TFSRHS_ModuleStationaryRadio: Module_F
 		};
 		class StationaryRadioCh2: Edit
   		{
-				property = "TFSRHS_StationaryRadioCh2";
+				property = "TFS_StationaryRadioCh2";
 				displayName = "Channel 2 Freq.";
 				tooltip = "Default frequency for Channel 2. Can be changed later.";
 				typeName = "NUMBER";
@@ -38,7 +38,7 @@ class TFSRHS_ModuleStationaryRadio: Module_F
 		};
 		class StationaryRadioVol: Edit
   		{
-				property = "TFSRHS_StationaryRadioVol";
+				property = "TFS_StationaryRadioVol";
 				displayName = "Speaker Volume";
 				tooltip = "Default volume of the Radio. Can be changed later. Value between 1 and 10.";
 				typeName = "NUMBER";
@@ -46,14 +46,14 @@ class TFSRHS_ModuleStationaryRadio: Module_F
 		};
 		class StationaryRadioClass: Edit
   		{
-				property = "TFSRHS_StationaryRadioClass";
+				property = "TFS_StationaryRadioClass";
 				displayName = "Radio Class Name";
 				tooltip = "Classname of the radio to spawn in, only change this when you want the radio to work with non-BLUFOR nets.";
 				defaultValue = """TFAR_anarc210""";
 		};
 		class StationaryRadioCode: Edit
   		{
-				property = "TFSRHS_StationaryRadioCode";
+				property = "TFS_StationaryRadioCode";
 				displayName = "Radio Encryption Code";
 				tooltip = "Encryption code of the radio. Only change this if you know what you're doing.";
 				defaultValue = """_bluefor""";

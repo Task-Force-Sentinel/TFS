@@ -1,3 +1,3 @@
-#include "\z\tfsrhs\addons\ai\script_component.hpp"
+#include "\z\tfs\addons\ai\script_component.hpp"
 
 // Do Nothing.

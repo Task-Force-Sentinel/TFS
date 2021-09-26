@@ -11,7 +11,7 @@
  * Can Stop Range <BOOL>
  *
  * Example:
- * [controller, target] call TFSRHS_shootingrange_fnc_canActivateTrigger;
+ * [controller, target] call TFS_shootingrange_fnc_canActivateTrigger;
  *
  * Public: No
  */

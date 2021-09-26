@@ -1,6 +1,6 @@
 #define COMPONENT heavylifter
 #define COMPONENT_BEAUTIFIED Heavy Lifter
-#include "\z\tfsrhs\addons\main\script_mod.hpp"
+#include "\z\tfs\addons\main\script_mod.hpp"
 
 // #define DRAW_ATTACHPOS_INFO
 // #define ALLOW_QUICK_PREP
@@ -16,7 +16,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_HEAVYLIFTER
 #endif
 
-#include "\z\tfsrhs\addons\main\script_macros.hpp"
+#include "\z\tfs\addons\main\script_macros.hpp"
 
 #ifdef ALLOW_QUICK_PREP
     #define HEAVYLIFTER_PREP_TIME 0

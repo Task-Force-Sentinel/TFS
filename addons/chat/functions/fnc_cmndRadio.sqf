@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\chat\script_component.hpp"
+#include "\z\tfs\addons\chat\script_component.hpp"
 /*
- * Name = TFSRHS_chat_fnc_cmndRadio
+ * Name = TFS_chat_fnc_cmndRadio
  * Author = Freddo
  *
  * Syntaxes:
@@ -17,7 +17,7 @@ IS_CMND_AVAILABLE(GVAR(radioUsage),"#radio");
 
 params [["_name", ""]];
 
-if (_name isEqualTo "") exitWith {systemChat "TFSRHS Error: No argument passed. Command usage: #radio <radioType>"};
+if (_name isEqualTo "") exitWith {systemChat "TFS Error: No argument passed. Command usage: #radio <radioType>"};
 
 private _configs = "true" configClasses (configfile >> "CfgAcreComponents");
 private _radios = _configs select {
@@ -27,10 +27,10 @@ private _radios = _configs select {
 };
 
 if (_radios isEqualTo []) exitWith {
-    systemChat FORMAT_1("TFSRHS Error: Unable to find radio containing %1", str _name);
+    systemChat FORMAT_1("TFS Error: Unable to find radio containing %1", str _name);
 };
 if (count _radios > 1) exitWith {
-    systemChat FORMAT_1("TFSRHS Error: More than one radio found containing %1", str _name);
+    systemChat FORMAT_1("TFS Error: More than one radio found containing %1", str _name);
 };
 
 private _radioType = configName (_radios # 0);
@@ -38,7 +38,7 @@ private _radioName = getText ((_radios # 0) >> "name");
 
 if (CURUNIT canAdd _radioType) then {
     CURUNIT addItem _radioType;
-    systemChat FORMAT_1("TFSRHS: Added %1 to inventory", _radioName);
+    systemChat FORMAT_1("TFS: Added %1 to inventory", _radioName);
 } else {
-    systemChat FORMAT_1("TFSRHS Error: Not enough room for %1 in inventory", _radioName);
+    systemChat FORMAT_1("TFS Error: Not enough room for %1 in inventory", _radioName);
 };

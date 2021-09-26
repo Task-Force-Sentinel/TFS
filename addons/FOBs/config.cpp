@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class TFSRHS_FOBs
+	class TFS_FOBs
 	{
 		author = AUTHOR;
 		name = NAME;

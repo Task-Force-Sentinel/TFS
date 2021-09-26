@@ -10,7 +10,7 @@
  * 0: Free curator module <OBJECT>
  *
  * Example:
- * call tfsrhs_curator_fnc_getFreeCuratorModule
+ * call tfs_curator_fnc_getFreeCuratorModule
  *
  * Public: No
  */

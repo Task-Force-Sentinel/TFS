@@ -1,10 +1,10 @@
-#include "\z\tfsrhs\addons\ai\script_component.hpp"
+#include "\z\tfs\addons\ai\script_component.hpp"
 /*
- * Name: TFSRHS_ai_fnc_spawnWave
+ * Name: TFS_ai_fnc_spawnWave
  * Author: Head, Snippers
  *
  * Arguments:
- * 0: TFSRHS WaveSpawner logic
+ * 0: TFS WaveSpawner logic
  *
  * Return:
  * N/A

@@ -1,1 +1,1 @@
-#include "\z\tfsrhs\addons\safestart\script_component.hpp"
+#include "\z\tfs\addons\safestart\script_component.hpp"

@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * [player] call TFSRHS_boc_fnc_actionSwap;
+ * [player] call TFS_boc_fnc_actionSwap;
  *
  * Public: No
  */

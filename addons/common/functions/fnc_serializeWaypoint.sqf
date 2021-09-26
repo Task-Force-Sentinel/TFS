@@ -1,5 +1,5 @@
 /*
- * Name: TFSRHS_common_fnc_serializeWaypoint
+ * Name: TFS_common_fnc_serializeWaypoint
  * Author: Head
  *
  * Arguments:

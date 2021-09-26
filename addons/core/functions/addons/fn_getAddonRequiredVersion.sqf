@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\addons\fn_getAddonRequiredVersion.sqf
+ *	\z\tfs\addons\core\functions\addons\fn_getAddonRequiredVersion.sqf
  *	by Ojemineh
  *	
  *	get addon required version
@@ -12,7 +12,7 @@
  *	<STRING>
  *	
  *	Example:
- *	["tfsrhs_core"] call TFSRHS_fnc_getAddonRequiredVersion;
+ *	["tfs_core"] call TFS_fnc_getAddonRequiredVersion;
  *	
  */
 

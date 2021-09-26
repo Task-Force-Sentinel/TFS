@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_infantryGarrison
+Function: TFS_fnc_infantryGarrison
 
 Description:
 	Garrison buildings in given radius around given position, using
@@ -42,7 +42,7 @@ params [
 	["_infList", ["OIA_GuardSquad"]],
     ["_groupCount", 1],
     ["_AIOB_Positioning", 2],
-    ["_skill", "TFSRHS Default"],
+    ["_skill", "TFS Default"],
     ["_maxFill", 4],
     ["_excludes", []],
     ["_units", []]
@@ -66,7 +66,7 @@ private _failed = [_pos, nil, _units, _radius, _AIOB_Positioning, true, _maxFill
 _allUnits = _units - _failed;
 
 // Set Skill
-[_allUnits, _skill] call TFSRHS_fnc_setUnitSkill;
+[_allUnits, _skill] call TFS_fnc_setUnitSkill;
 
 // Add units to zeus
 {_x addCuratorEditableObjects [_allUnits, false];} forEach allCurators;

@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 /*
- * Name: TFSRHS_spectator_fnc_drawMap
+ * Name: TFS_spectator_fnc_drawMap
  * Author: Head
  *
  * Arguments:

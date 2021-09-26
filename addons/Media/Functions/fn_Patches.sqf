@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_Patches
+Function: TFS_fnc_Patches
 
 Description:
 	Apply Section Patches to Players/Vehicles
@@ -10,7 +10,7 @@ Arguments:
 
 Examples:
 	(begin example)
-		[this, "1Section"] call tfsrhs_fnc_Patches;
+		[this, "1Section"] call tfs_fnc_Patches;
 	(end)
 
 Author:

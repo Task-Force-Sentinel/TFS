@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_Sound3DFromPos
+Function: TFS_fnc_Sound3DFromPos
 
 Description:
 	Plays a sound in 3D Space at a given position on every player.
@@ -25,7 +25,7 @@ Author:
 
 // If run locally, run on server instead
 if (!isServer) exitWith {
-	_this remoteExec ["TFSRHS_fnc_Sound3DFromPos", 2];
+	_this remoteExec ["TFS_fnc_Sound3DFromPos", 2];
 };
 
 params [
@@ -49,7 +49,7 @@ if (_length <= 0) then {
 _dummy = "#particlesource" createVehicle _pos;
 
 // Play sound on the created object
-[_dummy, _SoundClass, _distance, _pitch] call tfsrhs_fnc_Sound3D;
+[_dummy, _SoundClass, _distance, _pitch] call tfs_fnc_Sound3D;
 
 // Delete the dummy object after the sound is over (according to the config entry)
 [

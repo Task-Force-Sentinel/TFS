@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class TFSRHS_Interaction
+	class TFS_Interaction
 	{
 		author = AUTHOR;
 		name = NAME;
@@ -21,7 +21,7 @@ class CfgFunctions {
 };
 
 class Extended_PreInit_EventHandlers {
-    class TFSRHSFundamentals_Interaction_Event {
-        init = "call compile preprocessFileLineNumbers 'z\tfsrhs\addons\Interaction\XEH_preInit.sqf'";
+    class TFSFundamentals_Interaction_Event {
+        init = "call compile preprocessFileLineNumbers 'z\tfs\addons\Interaction\XEH_preInit.sqf'";
     };
 };

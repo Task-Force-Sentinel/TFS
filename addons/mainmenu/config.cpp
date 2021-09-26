@@ -3,13 +3,13 @@
 
 class CfgPatches {
 	
-	class TFSRHS_MainMenu {
+	class TFS_MainMenu {
 		author = AUTHOR;
 		name = COMPONENT_NAME;
 		url = URL;
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
-			"tfsrhs_main"
+			"tfs_main"
 		};
 		units[] = {};
 		weapons[] = {};

@@ -1,6 +1,6 @@
 params["_groupNum","_position","_faction","_typeOfUnit","_rank","_number","_leader","_halo","_side",["_groupName",""]];
 
-#include "\z\tfsrhs\addons\respawn\script_component.hpp"
+#include "\z\tfs\addons\respawn\script_component.hpp"
 
 //TODO - Make respawned units count towards all players dead ending <- prevent vanilla ending from happening in MP.
 
@@ -33,17 +33,17 @@ if (_leader && _groupName != "INSERT_GROUP_NAME") then {
     _dummyGroup setGroupIdGlobal [_groupName];
 };
 
-tfsrhs_localRespawnedUnit = objNull;
+tfs_localRespawnedUnit = objNull;
 /// Create the unit
 private _unitName = format["respawnedUnit%1",_number];
 
-private _init = format["if (local this) then { [this, '%2', '%3'] call tfsrhs_assignGear_fnc_assignGear; tfsrhs_localRespawnedUnit = this; }; this setName '%4'; this setVariable ['tfsrhs_isRespawnUnit',true];  %1 = this; ",_unitName, _faction, _typeOfUnit, profileName];
+private _init = format["if (local this) then { [this, '%2', '%3'] call tfs_assignGear_fnc_assignGear; tfs_localRespawnedUnit = this; }; this setName '%4'; this setVariable ['tfs_isRespawnUnit',true];  %1 = this; ",_unitName, _faction, _typeOfUnit, profileName];
 private _oldUnit = player;
 
 _class createUnit [_position, _dummyGroup, _init, 0.5, _rankName];    
 
 // Wait till the unit is created
-waitUntil{!isNull tfsrhs_localRespawnedUnit};
+waitUntil{!isNull tfs_localRespawnedUnit};
 
 private _respawnedUnit = missionNamespace getVariable [_unitName,objNull];
 
@@ -59,8 +59,8 @@ if (_radioChannelIndexSpectator != -1) then {
 };
 
 //addSwitchableUnit localRespawnedUnit; This will create awkard mission ends.
-setPlayable tfsrhs_localRespawnedUnit; // Allow unit to referenced later with player functions (name/getPlayerUID) (Verify this works)
-selectPlayer tfsrhs_localRespawnedUnit;
+setPlayable tfs_localRespawnedUnit; // Allow unit to referenced later with player functions (name/getPlayerUID) (Verify this works)
+selectPlayer tfs_localRespawnedUnit;
 //localRespawnedUnit setName _name;
 
 deleteVehicle _oldUnit; // Delete the old spectator module
@@ -91,7 +91,7 @@ if (_halo) then {
     [false] call acre_api_fnc_setSpectator;
     [{
         if (isNull player) exitWith {};
-        if (isNil "TFSRHS_acre2_networksCreated") exitWith {}; //Ensure presets are created
+        if (isNil "TFS_acre2_networksCreated") exitWith {}; //Ensure presets are created
         
         [] call EFUNC(acre2,clientInit);
         [_this select 1] call CBA_fnc_removePerFrameHandler;

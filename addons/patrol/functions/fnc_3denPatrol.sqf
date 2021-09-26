@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\patrol\script_component.hpp"
+#include "\z\tfs\addons\patrol\script_component.hpp"
 params ["_display","_code"];
 if(_code != 1) exitWith {};
 

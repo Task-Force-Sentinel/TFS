@@ -13,7 +13,7 @@
  * Nothing
  *
  * Example:
- * [player,"FirstAidKit",3] call TFSRHS_boc_fnc_addItemToChestpack;
+ * [player,"FirstAidKit",3] call TFS_boc_fnc_addItemToChestpack;
  *
  * Public: No
  */

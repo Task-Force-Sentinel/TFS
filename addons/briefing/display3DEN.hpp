@@ -7,14 +7,14 @@ class display3DEN
         {
             class Items
             {
-                class TFSRHS_Folder {
-                    items[] += {"TFSRHS_Briefing"};
+                class TFS_Folder {
+                    items[] += {"TFS_Briefing"};
                 };
-                class TFSRHS_Briefing
+                class TFS_Briefing
                 {
-                    text = "TFSRHS Briefing Settings";
-                    action = "edit3DENMissionAttributes 'TFSRHS_MissionBriefingAttributes';";
-                    //picture = "\z\tfsrhs\addons\media\images\Icons\icon_gear_ca";
+                    text = "TFS Briefing Settings";
+                    action = "edit3DENMissionAttributes 'TFS_MissionBriefingAttributes';";
+                    //picture = "\z\tfs\addons\media\images\Icons\icon_gear_ca";
                 };
             };
         };

@@ -4,7 +4,7 @@ class cfgVehicles {
         class Eventhandlers;
     };
     class GVAR(hideMapObjects) : Logic {
-        displayName = "[TFSRHS] Hide Map Objects";
+        displayName = "[TFS] Hide Map Objects";
         class Eventhandlers {
             init = "call cba_xeh_fnc_init";
         };

@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [getPlayerUID player] call tfsrhs_back_to_game_fnc_deletePlayerData
+ * [getPlayerUID player] call tfs_back_to_game_fnc_deletePlayerData
  *
  * Public: No
  */

@@ -1,9 +1,9 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_display"];
 
-private _control = (_display displayCtrl IDC_TFSRHS_ADMINMENU_RESP_FACTION);  /* Faction Control */
+private _control = (_display displayCtrl IDC_TFS_ADMINMENU_RESP_FACTION);  /* Faction Control */
 private _faction = _control lbData (lbCurSel _control);
 GVAR(lastFactionSelection) set [1,lbCurSel _control];
 private _classes = [];
@@ -14,7 +14,7 @@ call {
     if(isClass (configFile >> "CfgLoadouts" >> _faction) && count _classes <= 0) exitWith {_classes = configProperties [configFile >> "CfgLoadouts" >> _faction,"isClass _x"];};
 };
 
-private _control = (_display displayCtrl IDC_TFSRHS_ADMINMENU_RESP_ROLECOMBO); /* Role control */ 
+private _control = (_display displayCtrl IDC_TFS_ADMINMENU_RESP_ROLECOMBO); /* Role control */ 
 lbClear _control;
 respawnMenuRoles = [];
 {

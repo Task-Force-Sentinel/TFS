@@ -1,12 +1,12 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 
 
-private _mapCtrl = ((findDisplay IDC_TFSRHS_ADMINMENU_ADME_MAP_DISPLAY) displayCtrl IDC_TFSRHS_ADMINMENU_ADME_MAP_CONTROL);//_this select 0;//
+private _mapCtrl = ((findDisplay IDC_TFS_ADMINMENU_ADME_MAP_DISPLAY) displayCtrl IDC_TFS_ADMINMENU_ADME_MAP_CONTROL);//_this select 0;//
 private _pos = [0,0,0];
 
-if (alive player && !(player isKindOf "TFSRHS_spectator_unit")) then {
+if (alive player && !(player isKindOf "TFS_spectator_unit")) then {
     _pos = getPos player;
 } else {
     if (count playableUnits > 0) then {

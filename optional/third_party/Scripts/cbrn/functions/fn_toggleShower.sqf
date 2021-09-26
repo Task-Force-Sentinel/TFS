@@ -50,12 +50,12 @@ if (_on) then {
     _trg setTriggerActivation ["ANYPLAYER", "PRESENT", true];
     _trg setTriggerTimeout [5, 5, 5, true];
     _trg setTriggerStatements [
-        "(TFSRHS_unit getVariable ['cbrn_damage', 0] > 0) && {TFSRHS_unit in thisList}",
+        "(TFS_unit getVariable ['cbrn_damage', 0] > 0) && {TFS_unit in thisList}",
         "
-            TFSRHS_unit setVariable ['cbrn_stoppedAutoDamage', true];
-            TFSRHS_unit setVariable ['cbrn_damage', 0];
-            [TFSRHS_unit, false] call ace_medical_status_fnc_setCardiacArrestState;
-            [TFSRHS_unit, false] call ace_medical_status_fnc_setUnconsciousState;
+            TFS_unit setVariable ['cbrn_stoppedAutoDamage', true];
+            TFS_unit setVariable ['cbrn_damage', 0];
+            [TFS_unit, false] call ace_medical_status_fnc_setCardiacArrestState;
+            [TFS_unit, false] call ace_medical_status_fnc_setUnconsciousState;
             hint 'Success, the contamination stopped. But it should not have come to this in the first place!'
         ",
         ""

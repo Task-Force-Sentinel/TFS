@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class TFSRHSFundamentals_Channels
+	class TFSFundamentals_Channels
 	{
 		author = AUTHOR;
 		name = NAME;
@@ -17,13 +17,13 @@ class CfgPatches
 };
 
 class Extended_PreInit_EventHandlers {
-    class TFSRHSFundamentals_Channels_Event {
-        init = "call compile preprocessFileLineNumbers 'z\tfsrhs\addons\Channels\XEH_preInit.sqf'";
+    class TFSFundamentals_Channels_Event {
+        init = "call compile preprocessFileLineNumbers 'z\tfs\addons\Channels\XEH_preInit.sqf'";
     };
 };
 
 class Extended_PostInit_EventHandlers {
-    class TFSRHS_AI_Event {
-        init = "call compile preprocessFileLineNumbers 'z\tfsrhs\addons\Channels\XEH_postInit.sqf'";
+    class TFS_AI_Event {
+        init = "call compile preprocessFileLineNumbers 'z\tfs\addons\Channels\XEH_postInit.sqf'";
     };
 };

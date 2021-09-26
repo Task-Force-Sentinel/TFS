@@ -1,1 +1,1 @@
-#include "\z\tfsrhs\addons\insurgents\script_component.hpp"
+#include "\z\tfs\addons\insurgents\script_component.hpp"

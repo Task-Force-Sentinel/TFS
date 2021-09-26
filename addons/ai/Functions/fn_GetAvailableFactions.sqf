@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_GetAvailableFactions
+Function: TFS_fnc_GetAvailableFactions
 
 
 Description:
@@ -29,14 +29,14 @@ private _factions = [];
 {
 	private _side = _x;
 	private _sideFactions = [];
-	private _sideVar = format ["TFSRHS_AvailableFactions_%1", _side];
+	private _sideVar = format ["TFS_AvailableFactions_%1", _side];
 
 	// Retrieve cached factions if possible
 	if !(isNil _sideVar) then {
 		_sideFactions = missionNamespace getVariable _sideVar;
 		_factions append _sideFactions;
 	} else {
-		_sideFactions = [nil, ["TFSRHS_AI", format ["%1_Factions", _side]]] call YAINA_F_fnc_GetFunctions;
+		_sideFactions = [nil, ["TFS_AI", format ["%1_Factions", _side]]] call YAINA_F_fnc_GetFunctions;
 
 		for "_i" from (count _sideFactions) to 0 step -1 do {
 			if !(isClass (configFile >> "CfgFactionClasses" >> (_sideFactions select _i))) then {

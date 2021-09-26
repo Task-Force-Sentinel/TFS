@@ -1,5 +1,5 @@
 /*
- * Name: TFSRHS_common_fnc_capitalize
+ * Name: TFS_common_fnc_capitalize
  * Author: Head
  *
  * Arguments:

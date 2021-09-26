@@ -30,13 +30,13 @@ force force ace_advanced_ballistics_muzzleVelocityVariationEnabled = true;
 force force ace_advanced_ballistics_simulationInterval = 0.05;
 
 // ACE Advanced Fatigue
-force force ace_advanced_fatigue_enabled = true;
-force force ace_advanced_fatigue_enableStaminaBar = true;
-force force ace_advanced_fatigue_loadFactor = 0.2;
+force force ace_advanced_fatigue_enabled = false;
+force force ace_advanced_fatigue_enableStaminaBar = false;
+force force ace_advanced_fatigue_loadFactor = 0. 0;
 force force ace_advanced_fatigue_performanceFactor = 5;
 force force ace_advanced_fatigue_recoveryFactor = 5;
-force force ace_advanced_fatigue_swayFactor = 0.1;
-force force ace_advanced_fatigue_terrainGradientFactor = 0.2;
+force force ace_advanced_fatigue_swayFactor = 0.0;
+force force ace_advanced_fatigue_terrainGradientFactor = 0.0;
 
 // ACE Advanced Throwing
 force force ace_advanced_throwing_enabled = true;
@@ -440,190 +440,210 @@ force force CUP_Vehicles_PreventBarrelClip = true;
 force force CUP_staticWeapons_allowMovement = true;
 force force CUP_staticWeapons_allowRotation = true;
 
-// TFSRHS
-force TFSRHS_spectator_canSpectateAllSides = true;
-force TFSRHS_spectator_firstPersonCameraEnabled = true;
-force TFSRHS_spectator_followCameraEnabled = true;
-force TFSRHS_spectator_freeCameraEnabled = true;
-force TFSRHS_spectator_isJIPAllowed = 2;
-force TFSRHS_spectator_showGroupMarkers = 0;
+// TFS
+force TFS_spectator_canSpectateAllSides = true;
+force TFS_spectator_firstPersonCameraEnabled = true;
+force TFS_spectator_followCameraEnabled = true;
+force TFS_spectator_freeCameraEnabled = true;
+force TFS_spectator_isJIPAllowed = 2;
+force TFS_spectator_showGroupMarkers = 0;
 
-// TFSRHS AI
-force TFSRHS_AI_AimingAccuracy = 0.4;
-force TFSRHS_AI_AimingShake = 0.45;
-force TFSRHS_AI_AimingSpeed = 0.3;
-force TFSRHS_AI_Commanding = 1;
-force TFSRHS_AI_Courage = 1;
-force TFSRHS_AI_General = 1;
-force TFSRHS_AI_InitialAI = true;
-force TFSRHS_AI_ReloadSpeed = 0.5;
-force TFSRHS_AI_Reporting = false;
-force TFSRHS_AI_SpotDistance = 0.4;
-force TFSRHS_AI_SpotTime = 0.2;
+// TFS AI
+force TFS_AI_AimingAccuracy = 0.4;
+force TFS_AI_AimingShake = 0.45;
+force TFS_AI_AimingSpeed = 0.3;
+force TFS_AI_Commanding = 1;
+force TFS_AI_Courage = 1;
+force TFS_AI_General = 1;
+force TFS_AI_InitialAI = true;
+force TFS_AI_ReloadSpeed = 0.5;
+force TFS_AI_Reporting = false;
+force TFS_AI_SpotDistance = 0.4;
+force TFS_AI_SpotTime = 0.2;
 
-// TFSRHS AI Disembark
-force force TFSRHS_ai_disembark_enabled = true;
-force force TFSRHS_ai_disembark_stayInImmobileChance = 0.299874;
+// TFS AI Disembark
+force force TFS_ai_disembark_enabled = true;
+force force TFS_ai_disembark_stayInImmobileChance = 0.299874;
 
-// TFSRHS QS Icons
-force force TFSRHS_QS_ST_AINames = true;
-force force TFSRHS_QS_ST_enableGroupIcons = true;
-force force TFSRHS_QS_ST_gps_enableUnitIcons = true;
-force force TFSRHS_QS_ST_GPSDist = 1000;
-force force TFSRHS_QS_ST_GPSshowGroupOnly = false;
-force force TFSRHS_QS_ST_GPSshowNames = true;
-force force TFSRHS_QS_ST_groupTextFactionOnly = true;
-force force TFSRHS_QS_ST_iconMapText = true;
-force force TFSRHS_QS_ST_iconTextFonts = 5;
-force force TFSRHS_QS_ST_iconUpdatePulseDelay = 0;
-force force TFSRHS_QS_ST_map_enableUnitIcons = true;
-force force TFSRHS_QS_ST_MasterEnable = false;
-force force TFSRHS_QS_ST_MedicalSystem = 3;
-force force TFSRHS_QS_ST_showAI = true;
-force force TFSRHS_QS_ST_showAIGroups = true;
-force force TFSRHS_QS_ST_showAINames = true;
-force force TFSRHS_QS_ST_showCivilianIcons = false;
-force force TFSRHS_QS_ST_showFactionOnly = true;
-force force TFSRHS_QS_ST_showGroupHudIcons = false;
-force force TFSRHS_QS_ST_showGroupMapIcons = true;
-force force TFSRHS_QS_ST_showGroupOnly = false;
-force force TFSRHS_QS_ST_showMedicalWounded = true;
-force force TFSRHS_QS_ST_showMOS = false;
-force force TFSRHS_QS_ST_showMOS_range = 0;
-force force TFSRHS_QS_ST_showOwnGroup = true;
+// TFS QS Icons
+force force TFS_QS_ST_AINames = true;
+force force TFS_QS_ST_enableGroupIcons = true;
+force force TFS_QS_ST_gps_enableUnitIcons = true;
+force force TFS_QS_ST_GPSDist = 1000;
+force force TFS_QS_ST_GPSshowGroupOnly = false;
+force force TFS_QS_ST_GPSshowNames = true;
+force force TFS_QS_ST_groupTextFactionOnly = true;
+force force TFS_QS_ST_iconMapText = true;
+force force TFS_QS_ST_iconTextFonts = 5;
+force force TFS_QS_ST_iconUpdatePulseDelay = 0;
+force force TFS_QS_ST_map_enableUnitIcons = true;
+force force TFS_QS_ST_MasterEnable = false;
+force force TFS_QS_ST_MedicalSystem = 3;
+force force TFS_QS_ST_showAI = true;
+force force TFS_QS_ST_showAIGroups = true;
+force force TFS_QS_ST_showAINames = true;
+force force TFS_QS_ST_showCivilianIcons = false;
+force force TFS_QS_ST_showFactionOnly = true;
+force force TFS_QS_ST_showGroupHudIcons = false;
+force force TFS_QS_ST_showGroupMapIcons = true;
+force force TFS_QS_ST_showGroupOnly = false;
+force force TFS_QS_ST_showMedicalWounded = true;
+force force TFS_QS_ST_showMOS = false;
+force force TFS_QS_ST_showMOS_range = 0;
+force force TFS_QS_ST_showOwnGroup = true;
 
-// TFSRHS BFT
-force force TFSRHS_bft_bftEnabled = false;
-force force TFSRHS_bft_friendlySides_CIVILIAN = [0,2];
-force force TFSRHS_bft_friendlySides_EAST = [3];
-force force TFSRHS_bft_friendlySides_RESISTANCE = [1,3];
-force force TFSRHS_bft_friendlySides_WEST = [2];
-force force TFSRHS_bft_friendlySidesDynamic = true;
-force force TFSRHS_bft_groupIconsInteraction = "hover";
-force force TFSRHS_bft_medicalSystem = "ACE";
-force force TFSRHS_bft_requireItemGPS = true;
-force force TFSRHS_bft_showAIGroups = true;
-force force TFSRHS_bft_showAINames = true;
-force force TFSRHS_bft_showCivilians = false;
-force force TFSRHS_bft_showGroupIcons = true;
-force force TFSRHS_bft_showGroupText = true;
-force force TFSRHS_bft_showLifeState = true;
-force force TFSRHS_bft_showOwnFactionOnly = true;
-force force TFSRHS_bft_showOwnGroup = true;
-force force TFSRHS_bft_showOwnGroupUnits = true;
-force force TFSRHS_bft_showPlayerNames = true;
-force force TFSRHS_bft_showUnitNames = true;
-force force TFSRHS_bft_teamColors = "ACE";
-force force TFSRHS_bft_updateInterval = 0;
+// TFS BFT
+force force TFS_bft_bftEnabled = false;
+force force TFS_bft_friendlySides_CIVILIAN = [0,2];
+force force TFS_bft_friendlySides_EAST = [3];
+force force TFS_bft_friendlySides_RESISTANCE = [1,3];
+force force TFS_bft_friendlySides_WEST = [2];
+force force TFS_bft_friendlySidesDynamic = true;
+force force TFS_bft_groupIconsInteraction = "hover";
+force force TFS_bft_medicalSystem = "ACE";
+force force TFS_bft_requireItemGPS = true;
+force force TFS_bft_showAIGroups = true;
+force force TFS_bft_showAINames = true;
+force force TFS_bft_showCivilians = false;
+force force TFS_bft_showGroupIcons = true;
+force force TFS_bft_showGroupText = true;
+force force TFS_bft_showLifeState = true;
+force force TFS_bft_showOwnFactionOnly = true;
+force force TFS_bft_showOwnGroup = true;
+force force TFS_bft_showOwnGroupUnits = true;
+force force TFS_bft_showPlayerNames = true;
+force force TFS_bft_showUnitNames = true;
+force force TFS_bft_teamColors = "ACE";
+force force TFS_bft_updateInterval = 0;
 
-// TFSRHS Back To Game
-force force TFSRHS_back_to_game_enableAddon = true;
-force force TFSRHS_back_to_game_removeBody = true;
-force force TFSRHS_back_to_game_teleportToLeader = true;
-force force TFSRHS_back_to_game_teleportToVehicle = true;
+// TFS Back To Game
+force force TFS_back_to_game_enableAddon = true;
+force force TFS_back_to_game_removeBody = true;
+force force TFS_back_to_game_teleportToLeader = true;
+force force TFS_back_to_game_teleportToVehicle = true;
 
-// TFSRHS BoC
-force force TFSRHS_boc_disabled = false;
-force force TFSRHS_boc_forceWalk = true;
-force force TFSRHS_boc_removeKilledPlayerChestpack = false;
+// TFS BoC
+force force TFS_boc_disabled = false;
+force force TFS_boc_forceWalk = true;
+force force TFS_boc_removeKilledPlayerChestpack = false;
 
-// TFSRHS Chat Commands
-force force TFSRHS_chat_healUsage = 3;
-force force TFSRHS_chat_rpUsage = 3;
-force force TFSRHS_chat_specUsage = 3;
-force force TFSRHS_chat_tpUsage = 3;
-force force TFSRHS_chat_whisperUsage = 3;
+// TFS Channels
+force force TFS_Channels_CommandDuration = 0;
+force force TFS_Channels_CommandText = false;
+force force TFS_Channels_CommandVoice = false;
+force force TFS_Channels_DirectDuration = 0;
+force force TFS_Channels_DirectText = false;
+force force TFS_Channels_DirectVoice = false;
+force force TFS_Channels_GlobalDuration = 0;
+force force TFS_Channels_GlobalText = false;
+force force TFS_Channels_GlobalVoice = false;
+force force TFS_Channels_GroupDuration = 0;
+force force TFS_Channels_GroupText = false;
+force force TFS_Channels_GroupVoice = false;
+force force TFS_Channels_SideDuration = 0;
+force force TFS_Channels_SideText = false;
+force force TFS_Channels_SideVoice = false;
+force force TFS_Channels_VehicleDuration = 0;
+force force TFS_Channels_VehicleText = false;
+force force TFS_Channels_VehicleVoice = false;
 
-// TFSRHS Common
-force force TFSRHS_common_weaponSafety = true;
+// TFS Chat Commands
+force force TFS_chat_healUsage = 3;
+force force TFS_chat_rpUsage = 3;
+force force TFS_chat_specUsage = 3;
+force force TFS_chat_tpUsage = 3;
+force force TFS_chat_whisperUsage = 3;
 
-// TFSRHS core
-force force tfsrhs_tactical_view_enabled = false;
+// TFS Common
+force force TFS_common_weaponSafety = true;
 
-// TFSRHS Creator Actions
-force TFSRHS_CreatorActions_Channels = true;
-force TFSRHS_CreatorActions_EndMission = true;
-force TFSRHS_CreatorActions_Master = true;
+// TFS core
+force force tfs_tactical_view_enabled = false;
 
-// TFSRHS Fatigue
-force force tfsrhs_fatigue_global_sounds = true;
+// TFS Creator Actions
+force TFS_CreatorActions_Channels = true;
+force TFS_CreatorActions_EndMission = true;
+force TFS_CreatorActions_Master = true;
 
-// TFSRHS Friendly Fire
-force force TFSRHS_friendly_fire_loggingEnabled = true;
+// TFS Fatigue
+force force tfs_fatigue_global_sounds = true;
 
-// TFSRHS FRIES
-force force TFSRHS_fries_autoAdd = true;
+// TFS Friendly Fire
+force force TFS_friendly_fire_loggingEnabled = true;
 
-// TFSRHS Grass
-force force TFSRHS_grass_enabled = true;
+// TFS FRIES
+force force TFS_fries_autoAdd = true;
 
-// TFSRHS Insurgents
-force force TFSRHS_insurgents_enabled_CUP = true;
-force force TFSRHS_insurgents_enabled_Vanilla = true;
+// TFS Grass
+force force TFS_grass_enabled = true;
 
-// TFSRHS Interactions
-force force tfsrhs_interactions_backpack_access_enemy = 0;
-force force tfsrhs_interactions_backpack_access_faction = 2;
-force force tfsrhs_interactions_backpack_access_friendly = 1;
-force force tfsrhs_interactions_backpack_access_hint = true;
-force force tfsrhs_interactions_gear_access_enabled = 1;
-force force tfsrhs_interactions_gear_access_hint = true;
-force force tfsrhs_interactions_global_sounds = true;
-force force tfsrhs_interactions_tapshoulder_ai = false;
-tfsrhs_interactions_tapshoulder_hint = true;
+// TFS Insurgents
+force force TFS_insurgents_enabled_CUP = true;
+force force TFS_insurgents_enabled_Vanilla = true;
 
-// TFSRHS Main
-force force TFSRHS_Main_ArsenalSaveLoad = true;
-force force TFSRHS_Main_CHViewDistance = false;
-force force TFSRHS_Main_CueCards = true;
-force force TFSRHS_Main_Diary = true;
-force force TFSRHS_Main_DynamicGroups = true;
-force force TFSRHS_Main_DynamicSim = false;
-force force TFSRHS_Main_Earplugs = false;
-force force TFSRHS_Main_FatigueVanilla = true;
-force force TFSRHS_Main_FlipVehicle = true;
-force force TFSRHS_Main_FPSCounter = true;
-force force TFSRHS_Main_LockCamVehicle = false;
-force force TFSRHS_Main_Logging = true;
-force force TFSRHS_Main_MapIcons = true;
-force force TFSRHS_Main_MaydayAccess = 2;
-force force TFSRHS_Main_PilotCheck = true;
-force force TFSRHS_Main_QSMagRepack = false;
-force force TFSRHS_Main_TFARTerrainInterference = 1;
-force force TFSRHS_Main_TFARTransmitRange = 2.5;
-force force TFSRHS_Main_VehicleCrewList = false;
-force force TFSRHS_Main_ViewDistanceMaxDistance = 10000;
-force force TFSRHS_Main_ViewDistanceMaxObjectDistance = 10000;
-force force TFSRHS_Main_ViewDistanceNoGrass = false;
-force force TFSRHS_Main_VoyagerCompass = false;
+// TFS Interactions
+force force tfs_interactions_backpack_access_enemy = 0;
+force force tfs_interactions_backpack_access_faction = 2;
+force force tfs_interactions_backpack_access_friendly = 1;
+force force tfs_interactions_backpack_access_hint = true;
+force force tfs_interactions_gear_access_enabled = 1;
+force force tfs_interactions_gear_access_hint = true;
+force force tfs_interactions_global_sounds = true;
+force force tfs_interactions_tapshoulder_ai = false;
+tfs_interactions_tapshoulder_hint = true;
 
-// TFSRHS Medical
-force force tfsrhs_medical_area_constuct_time = 30;
-force force tfsrhs_medical_area_dismantle_time = 30;
+// TFS Main
+force force TFS_Main_ArsenalSaveLoad = true;
+force force TFS_Main_CHViewDistance = false;
+force force TFS_Main_CueCards = true;
+force force TFS_Main_Diary = true;
+force force TFS_Main_DynamicGroups = true;
+force force TFS_Main_DynamicSim = false;
+force force TFS_Main_Earplugs = false;
+force force TFS_Main_FatigueVanilla = true;
+force force TFS_Main_FlipVehicle = true;
+force force TFS_Main_FPSCounter = true;
+force force TFS_Main_LockCamVehicle = false;
+force force TFS_Main_Logging = true;
+force force TFS_Main_MapIcons = true;
+force force TFS_Main_MaydayAccess = 2;
+force force TFS_Main_PilotCheck = true;
+force force TFS_Main_QSMagRepack = false;
+force force TFS_Main_TFARTerrainInterference = 1;
+force force TFS_Main_TFARTransmitRange = 2.5;
+force force TFS_Main_VehicleCrewList = false;
+force force TFS_Main_ViewDistanceMaxDistance = 10000;
+force force TFS_Main_ViewDistanceMaxObjectDistance = 10000;
+force force TFS_Main_ViewDistanceNoGrass = false;
+force force TFS_Main_VoyagerCompass = false;
 
-// TFSRHS Miscellaneous
-force force TFSRHS_bodybag_destroyChance = 20;
+// TFS Medical
+force force tfs_medical_area_constuct_time = 30;
+force force tfs_medical_area_dismantle_time = 30;
 
-// TFSRHS Pointing
-force force TFSRHS_pointing_vehicleEnabled = true;
+// TFS Miscellaneous
+force force TFS_bodybag_destroyChance = 20;
+
+// TFS Pointing
+force force TFS_pointing_vehicleEnabled = true;
 
 
-// TFSRHS Respawn
-force force TFSRHS_respawn_enabled = true;
-force force TFSRHS_respawn_time = 06;
+// TFS Respawn
+force force TFS_respawn_enabled = true;
+force force TFS_respawn_time = 06;
 
-// TFSRHS Safestart
-TFSRHS_safestart_startLocked = true;
+// TFS Safestart
+TFS_safestart_startLocked = true;
 
-// TFSRHS Tagging
-force force TFSRHS_tagging_enabled = true;
+// TFS Tagging
+force force TFS_tagging_enabled = true;
 
-// TFSRHS Zeus
-force TFSRHS_Zeus_Module_AISpawnsEast = true;
-force TFSRHS_Zeus_Module_AISpawnsIndep = true;
-force TFSRHS_Zeus_Module_AISpawnsWest = true;
-force TFSRHS_Zeus_Module_CivilianSpawns = true;
-force TFSRHS_Zeus_Module_SafeZone = true;
+// TFS Zeus
+force TFS_Zeus_Module_AISpawnsEast = true;
+force TFS_Zeus_Module_AISpawnsIndep = true;
+force TFS_Zeus_Module_AISpawnsWest = true;
+force TFS_Zeus_Module_CivilianSpawns = true;
+force TFS_Zeus_Module_SafeZone = true;
 
 // GRAD Trenches
 force force grad_trenches_functions_allowBigEnvelope = true;

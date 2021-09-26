@@ -1,5 +1,5 @@
 /*
- * Name: TFSRHS_common_fnc_numToColor
+ * Name: TFS_common_fnc_numToColor
  * Author: Snippers
  *
  * Arguments:

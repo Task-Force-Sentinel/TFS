@@ -1,12 +1,13 @@
 class CfgFunctions {
-	class TFSRHS_Main {
+	class TFS_Main {
 
-		tag = "TFSRHS";
+		tag = "TFS";
 		class Main {
 
-			file = "z\tfsrhs\addons\Main\Functions\TFSRHS";
+			file = "z\tfs\addons\Main\Functions\TFS";
 			class AddCueCards {};
 			class ArsenalLoadSave {};
+			class Diary {};
 			class DynamicSim {};
 			class DynamicGroups {};
 			class Earplugs {};
@@ -26,7 +27,6 @@ class CfgFunctions {
 			class GetValues {};
 			class DLog {};
 			class ObjectsMapper {};
-			class IntLight {};
 		};
 	};
 
@@ -35,7 +35,7 @@ class CfgFunctions {
 		tag = "CHVD";
 		class script
 		{
-			file = "z\tfsrhs\addons\Main\Functions\CHVD";
+			file = "z\tfs\addons\Main\Functions\CHVD";
 			class onSliderChange {};
 			class onLBSelChanged {};
 			class onLBSelChanged_syncmode {};
@@ -61,7 +61,7 @@ class CfgFunctions {
 		tag = "YAINA_F";
 
 		class General {
-			file = "z\tfsrhs\addons\Main\Functions\YAINA\General";
+			file = "z\tfs\addons\Main\Functions\YAINA\General";
 			class crewNames {};
 			class formatDuration {};
 			class showFPS {};

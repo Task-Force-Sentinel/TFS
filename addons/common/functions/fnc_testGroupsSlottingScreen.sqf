@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\autotest\script_component.hpp"
+#include "\z\tfs\addons\autotest\script_component.hpp"
 /*
- * Name: TFSRHS_common_fnc_testGroupsSlottingScreen
+ * Name: TFS_common_fnc_testGroupsSlottingScreen
  * Author: Snippers
  *
  * Arguments:Index of side
@@ -16,7 +16,7 @@ private _output = [];
 
 // Deprecated in newer versions, replaced by CBA system
 // https://github.com/CBATeam/CBA_A3/wiki/Name-Groups-in-Lobby
-if ([[1,1,0]] call FUNC(checkTFSRHSVersion)) then {
+if ([[1,1,0]] call FUNC(checkTFSVersion)) then {
     // Find groups with playableUnits
     private _groups = [];
     {_groups pushBackUnique (group _x);} forEach playableUnits;

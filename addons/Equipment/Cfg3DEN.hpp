@@ -62,32 +62,32 @@ class Cfg3DEN {
     };
     class Object {
         class AttributeCategories {
-            class TFSRHS_attributes {
-                displayName = "TFSRHS Fundamentals";
+            class TFS_attributes {
+                displayName = "TFS Fundamentals";
                 collapsed = 1;
                 class Attributes {
-                    class TFSRHS_Arsenal_Select {
-                        property = QUOTE(TFSRHS_Arsenal_Select);
+                    class TFS_Arsenal_Select {
+                        property = QUOTE(TFS_Arsenal_Select);
                         control = ArsenalSelect;
                         displayName = "Full Arsenal Selection:";
                         tooltip = "Removes all items from this container and replaces them with a Full Arsenal of the selected gear.";
-                        expression = "if (_value > -1) then {[_this, _value] call TFSRHS_fnc_FullArsenal;}";
+                        expression = "if (_value > -1) then {[_this, _value] call TFS_fnc_FullArsenal;}";
                         typeName = "STRING";
                         condition = "objectHasInventoryCargo - objectVehicle";
                         defaultValue = "-1";
                     };
-                        class TFSRHS_Ammo_Select {
-                        property = QUOTE(TFSRHS_Ammo_Select);
+                        class TFS_Ammo_Select {
+                        property = QUOTE(TFS_Ammo_Select);
                         control = ArsenalSelect;
                         displayName = "Limited Arsenal Selection:";
                         tooltip = "Removes all items from this container and replaces them with a Limited Arsenal of the selected gear, such as Weapons and Ammo.";
-                        expression = "if (_value > -1) then {[_this, _value] call TFSRHS_fnc_LimitedArsenal;}";
+                        expression = "if (_value > -1) then {[_this, _value] call TFS_fnc_LimitedArsenal;}";
                         typeName = "STRING";
                         condition = "objectHasInventoryCargo - objectVehicle";
                         defaultValue = "-1";
                     };
-                    //     class TFSRHS_LimitedAmmoSelect {
-                    //     property = QUOTE(TFSRHS_LimitedAmmoSelect);
+                    //     class TFS_LimitedAmmoSelect {
+                    //     property = QUOTE(TFS_LimitedAmmoSelect);
                     //     control = LimitedAmmoSelect;
                     //     displayName = "Ammobox Selection:";
                     //     tooltip = "Suppliments the equipment is this object with preset ammunition. This doesn't remove currently selected equipment.";
@@ -96,8 +96,8 @@ class Cfg3DEN {
                     //     condition = "objectHasInventoryCargo";
                     //     defaultValue = "-1";
                     // };
-                        class TFSRHS_Equipment_Select {
-                        property = QUOTE(TFSRHS_Equipment_Select);
+                        class TFS_Equipment_Select {
+                        property = QUOTE(TFS_Equipment_Select);
                         control = EquipmentSelect;
                         displayName = "Medical Supplies Selection:";
                         tooltip = "Suppliments the equipment is this object with a preset equipment loadout. This doesn't remove currently selected equipment.";

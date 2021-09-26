@@ -1,10 +1,10 @@
 /*
-Function: TFSRHS_fnc_LimitedArsenal
+Function: TFS_fnc_LimitedArsenal
 
 Description:
 	Fills an Ammobox with predefined equipment dependent on _Type. Each Ammobox can be a
 	different type and have a different duration.  This function is almost identical to
-	TFSRHS_fnc_Arsenal, only the items in the container change.
+	TFS_fnc_Arsenal, only the items in the container change.
 
 Arguments:
 	_object - Object the Ammobox is applied to.  <OBJECT>
@@ -13,10 +13,10 @@ Arguments:
 
 Examples:
 	(begin example)
-		[this] call TFSRHS_fnc_LimitedArsenal;
-		[this, "Aegis", 50] call TFSRHS_fnc_LimitedArsenal;
-		[this, "VANILLA"] call TFSRHS_fnc_LimitedArsenal;
-		[MyAmmoCrate, "RHS", 0] call TFSRHS_fnc_LimitedArsenal;
+		[this] call TFS_fnc_LimitedArsenal;
+		[this, "Aegis", 50] call TFS_fnc_LimitedArsenal;
+		[this, "VANILLA"] call TFS_fnc_LimitedArsenal;
+		[MyAmmoCrate, "RHS", 0] call TFS_fnc_LimitedArsenal;
 	(end)
 
 Author:
@@ -27,12 +27,12 @@ if (!isServer) exitwith {};
 
 params [
 	"_object",
-	["_Type", "TFSRHS"],
+	["_Type", "TFS"],
 	["_Duration", 0]
 ];
 
 call {
-	if (_Type isEqualto 0) exitwith {_Type = "TFSRHS"};
+	if (_Type isEqualto 0) exitwith {_Type = "TFS"};
 	if (_Type isEqualto 1) exitwith {_Type = "Winter"};
 	if (_Type isEqualto 2) exitwith {_Type = "UnderCover"};
     if (_Type isEqualto 3) exitwith {_Type = "RHS"};
@@ -51,7 +51,7 @@ private [
 ];
 
 call {
-	if (_Type isEqualTo "TFSRHS") exitwith {
+	if (_Type isEqualTo "TFS") exitwith {
 		_AvailableItems = [
 			"ItemWatch",
 			"ItemCompass",
@@ -242,7 +242,7 @@ if (_type isEqualTo "RHS") exitwith {
             "ItemAndroid",
             "ItemcTabHCam",
             "ItemMicroDAGR",
-            "TFSRHS_mopp",
+            "TFS_mopp",
             "ALIVE_Tablet",
             "kat_aatKit",
             "kat_accuvac",
@@ -266,11 +266,11 @@ if (_type isEqualTo "RHS") exitwith {
             "kat_bloodIV_AB_500",
             "kat_bloodIV_B_500",
             "ACE_bodyBag",
-            "TFSRHS_FirstAid",
+            "TFS_FirstAid",
             "kat_chestSeal",
-            "TFSRHS_MedicArea",
+            "TFS_MedicArea",
             "ACE_epinephrine",
-            "TFSRHS_MedicKit",
+            "TFS_MedicKit",
             "ACE_morphine",
             "kat_Pulseoximeter",
             "ACE_plasmaIV",
@@ -280,11 +280,11 @@ if (_type isEqualTo "RHS") exitwith {
             "ACE_salineIV",
             "ACE_salineIV_250",
             "ACE_salineIV_500",
-            "TFSRHS_Stethoscope",
+            "TFS_Stethoscope",
             "ACE_surgicalKit",
             "ACE_tourniquet",
             "ACE_splint",
-            "TFSRHS_optic_Nightstalker",
+            "TFS_optic_Nightstalker",
             "kat_Painkiller",
             "kat_larynx",
             "kat_guedel",
@@ -535,7 +535,7 @@ if (_type isEqualTo "RHS") exitwith {
             "100Rnd_65x39_caseless_khaki_mag_tracer",
             "100Rnd_65x39_caseless_black_mag_tracer",
             "ACE_100Rnd_65x39_caseless_mag_Tracer_Dim",
-            "tfsrhs_30Rnd_65x39_caseless_BlackCamo_mag",
+            "tfs_30Rnd_65x39_caseless_BlackCamo_mag",
             "ACE_100Rnd_65x39_mx_green",
             "ACE_100Rnd_65x39_mx_yellow",
             "ACE_100Rnd_65x39_mx_tracer_green",

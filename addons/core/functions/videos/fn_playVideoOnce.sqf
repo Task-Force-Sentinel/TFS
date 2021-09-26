@@ -1,6 +1,6 @@
 ﻿/*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\videos\fn_playVideoOnce.sqf
+ *	\z\tfs\addons\core\functions\videos\fn_playVideoOnce.sqf
  *	by Ojemineh
  *	
  *	play video once in a mission (by id)
@@ -16,7 +16,7 @@
  *	ID
  *	
  *	Example:
- *	["intro.ogv"] call TFSRHS_fnc_playVideoOnce;
+ *	["intro.ogv"] call TFS_fnc_playVideoOnce;
  *	
  */
 
@@ -55,7 +55,7 @@ private _return = [_filename, _videoID, _canSkip, _showSkip, _showTime] spawn {
 	};
 	
 	private _uID = getPlayerUID player;
-	private _videoTag = format ["TFSRHS_Video_%1", _videoID];
+	private _videoTag = format ["TFS_Video_%1", _videoID];
 	private _usersPlayed = (missionNamespace getVariable [_videoTag, []]);
 	
 	if (_uID in _usersPlayed) exitWith {};
@@ -74,7 +74,7 @@ private _return = [_filename, _videoID, _canSkip, _showSkip, _showTime] spawn {
 			private _rgb = [_r,_g,_b] call BIS_fnc_colorRGBtoHTML;
 			
 			private _keyName = format ["<t color='%1'>[%2]</t>", _rgb, toUpper(((keyname 57) splitString '"') joinString '')];
-			private _skipMsg = format ["<t font='RobotoCondensed' color='#ffffff' shadow='2' size='1.6'>%1</t>", localize "STR_TFSRHS_Message_SkipVideo"];
+			private _skipMsg = format ["<t font='RobotoCondensed' color='#ffffff' shadow='2' size='1.6'>%1</t>", localize "STR_TFS_Message_SkipVideo"];
 			private _message = format [_skipMsg, _keyName];
 			
 			uiSleep (_showTime select 0);
@@ -88,7 +88,7 @@ private _return = [_filename, _videoID, _canSkip, _showSkip, _showTime] spawn {
 	_usersPlayed pushBackUnique _uID;
 	missionNamespace setVariable [_videoTag, _usersPlayed, true];
 	
-	private _keyHandler = (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call TFSRHS_fnc_videoKeyDown"];
+	private _keyHandler = (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call TFS_fnc_videoKeyDown"];
 	private _video = [_filename] spawn BIS_fnc_playVideo;
 	
 	waitUntil {if (scriptDone _video) exitWith {true}; false};

@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\medical\area\functions\fn_initialize.sqf
+ *	\z\tfs\addons\medical\area\functions\fn_initialize.sqf
  *	by Ojemineh
  *	
  *	initialize medical area addon
@@ -12,7 +12,7 @@
  *	nothing
  *	
  *	Example:
- *	[] call TFSRHS_medical_area_fnc_initialize;
+ *	[] call TFS_medical_area_fnc_initialize;
  *	
  */
 

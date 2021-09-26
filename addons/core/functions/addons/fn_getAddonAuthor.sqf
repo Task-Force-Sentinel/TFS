@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\addons\fn_getAddonAuthor.sqf
+ *	\z\tfs\addons\core\functions\addons\fn_getAddonAuthor.sqf
  *	by Ojemineh
  *	
  *	get addon author
@@ -12,7 +12,7 @@
  *	<STRING>
  *	
  *	Example:
- *	["tfsrhs_core"] call TFSRHS_fnc_getAddonAuthor;
+ *	["tfs_core"] call TFS_fnc_getAddonAuthor;
  *	
  */
 

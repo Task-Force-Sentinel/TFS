@@ -4,7 +4,7 @@
 // The actual group will be created on the leader's client and then broadcast to everyone.
 // This code will then wait for that group to return before then notifying all clients of the new group marker.
 //
-#include "\z\tfsrhs\addons\respawn\script_component.hpp"
+#include "\z\tfs\addons\respawn\script_component.hpp"
 
 params ["_groupName", "_position", "_faction", "_selectedRespawnGroup", "_markerType", "_markerColor", "_markerName", "_halo", "_side"];
 
@@ -27,7 +27,7 @@ params ["_groupName", "_position", "_faction", "_selectedRespawnGroup", "_marker
       _rank,
       GVAR(serverRespawnPlayerCounter),
       _leader,_halo,_side,_groupName],
-      "TFSRHS_respawn_fnc_respawnLocalClient", _client] call BIS_fnc_MP;
+      "TFS_respawn_fnc_respawnLocalClient", _client] call BIS_fnc_MP;
     
     //Setup respawned player to die if he disconnects?
     [GVAR(serverRespawnPlayerCounter)] spawn {

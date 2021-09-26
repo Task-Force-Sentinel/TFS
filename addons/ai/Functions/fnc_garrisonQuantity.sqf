@@ -1,5 +1,5 @@
 if(is3DEN) exitWith {};
-#include "\z\tfsrhs\addons\ai\script_component.hpp"
+#include "\z\tfs\addons\ai\script_component.hpp"
 params ["_logic","_units","_activated"];
 
 private _headless = (synchronizedObjects _logic) select {_x isKindOf "HeadlessClient_F" && !local _x};
@@ -34,7 +34,7 @@ _areas pushBack _logic; // Add the garrison module as viable area.
 private _unitData = _logic getVariable [QGVAR(unitData),[]];
 private _side = ((_unitData select 0) select 0);
 private _mainGroup = createGroup _side;
-[_mainGroup,QGVAR(garrisonGroup),true] call tfsrhs_common_fnc_initGroupVar;
+[_mainGroup,QGVAR(garrisonGroup),true] call tfs_common_fnc_initGroupVar;
 private _holdPos = _logic getVariable ["hold", false];
 
 private _buildings = [];
@@ -78,13 +78,13 @@ private _freeBuildings = []; // List of buildings that list have free positions.
 
 
 if (_aiNumberToSpawn > _freeBuildingSpaces) then {
-    systemChat "TFSRHS Garrison - Insufficent free building positions check your map for location and details.";
+    systemChat "TFS Garrison - Insufficent free building positions check your map for location and details.";
     private _mkr = createMarkerLocal [str (random 99999),getPos _logic];
     _mkr setMarkerShape "ICON";
     _mkr setMarkerType "mil_dot";
     _mkr setMarkerSize [0.5,0.5];
     _mkr setMarkerColor "ColorRed";
-    _mkr setMarkerText format ["Error - TFSRHS Garrison Module - Unable to find sufficent building places (%1 available / %2 needed)", _freeBuildingSpaces, _aiNumberToSpawn];
+    _mkr setMarkerText format ["Error - TFS Garrison Module - Unable to find sufficent building places (%1 available / %2 needed)", _freeBuildingSpaces, _aiNumberToSpawn];
 };
 private _garrisonedBuildings = [];
 for "_i" from 1 to (_aiNumberToSpawn min _freeBuildingSpaces) do {

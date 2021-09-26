@@ -1,10 +1,10 @@
 
-class TFSRHS_Player {
+class TFS_Player {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class Player {
 
-		file = "z\tfsrhs\Addons\Player\Functions";
+		file = "z\tfs\Addons\Player\Functions";
 		class ConfigPlayer {};
 	};
 };

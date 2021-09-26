@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_ctrlGroup"];
@@ -7,29 +7,29 @@ params ["_ctrlGroup"];
 
 private _ctrlLabelTraits = _display ctrlCreate [QGVAR(RscText), -1, _ctrlGroup];
 GVAR(utilityTabControls) pushBack _ctrlLabelTraits;
-_ctrlLabelTraits ctrlSetPosition [0, 0, (0.25 * _ctrlGrpWidth), TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlLabelTraits ctrlSetPosition [0, 0, (0.25 * _ctrlGrpWidth), TFS_ADMINMENU_STD_HEIGHT];
 _ctrlLabelTraits ctrlCommit 0;
 _ctrlLabelTraits ctrlSetText "Assign Players' Traits";
 
 private _ctrlComboTraitLabelW = 0.4 * _ctrlGrpWidth;
 private _ctrlComboTraitX = 0.5 * _ctrlGrpWidth;
-private _ctrlComboTraitY = 2.2 * TFSRHS_ADMINMENU_STD_HEIGHT;
+private _ctrlComboTraitY = 2.2 * TFS_ADMINMENU_STD_HEIGHT;
 private _ctrlComboTraitW = 0.5 * _ctrlGrpWidth;
 private _traitComboCtrls = [];
 
 {
-    private _ctrlLineY = _ctrlComboTraitY + _forEachIndex * (1.1 * TFSRHS_ADMINMENU_STD_HEIGHT);
+    private _ctrlLineY = _ctrlComboTraitY + _forEachIndex * (1.1 * TFS_ADMINMENU_STD_HEIGHT);
 
     private _ctrlComboTraitLabel = _display ctrlCreate [QGVAR(RscTextLarge), -1, _ctrlGroup];
     GVAR(utilityTabControls) pushBack _ctrlComboTraitLabel;
-    _ctrlComboTraitLabel ctrlSetPosition [0.1 * TFSRHS_ADMINMENU_STD_WIDTH, _ctrlLineY, _ctrlComboTraitLabelW, TFSRHS_ADMINMENU_STD_HEIGHT];
+    _ctrlComboTraitLabel ctrlSetPosition [0.1 * TFS_ADMINMENU_STD_WIDTH, _ctrlLineY, _ctrlComboTraitLabelW, TFS_ADMINMENU_STD_HEIGHT];
     _ctrlComboTraitLabel ctrlCommit 0;
     _ctrlComboTraitLabel ctrlSetText _x;
 
     private _ctrlComboTrait = _display ctrlCreate [QGVAR(RscCombo), -1, _ctrlGroup];
     GVAR(utilityTabControls) pushBack _ctrlComboTrait;
     _traitComboCtrls pushBack _ctrlComboTrait;
-    _ctrlComboTrait ctrlSetPosition [_ctrlComboTraitX, _ctrlLineY, _ctrlComboTraitW, TFSRHS_ADMINMENU_STD_HEIGHT];
+    _ctrlComboTrait ctrlSetPosition [_ctrlComboTraitX, _ctrlLineY, _ctrlComboTraitW, TFS_ADMINMENU_STD_HEIGHT];
     _ctrlComboTrait ctrlCommit 0;
 
     _ctrlComboTrait lbSetValue [(_ctrlComboTrait lbAdd "Don't Change"), -1];
@@ -47,7 +47,7 @@ private _traitComboCtrls = [];
 
 private _ctrlButton = _display ctrlCreate [QGVAR(RscButtonMenu), -1, _ctrlGroup];
 GVAR(utilityTabControls) pushBack _ctrlButton;
-_ctrlButton ctrlSetPosition [_ctrlGrpWidth * 0.8, _ctrlGrpHeight - TFSRHS_ADMINMENU_STD_HEIGHT, _ctrlGrpWidth * 0.2, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlButton ctrlSetPosition [_ctrlGrpWidth * 0.8, _ctrlGrpHeight - TFS_ADMINMENU_STD_HEIGHT, _ctrlGrpWidth * 0.2, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlSetText "Assign Traits";
 _ctrlButton setVariable [QGVAR(association), _traitComboCtrls];
@@ -84,6 +84,6 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick", {
         };
     } forEach GVAR(utilityData);
 
-    systemChat format ["[TFSRHS Admin Menu] Assigned traits to %1 player(s)", count GVAR(utilityData)];
+    systemChat format ["[TFS Admin Menu] Assigned traits to %1 player(s)", count GVAR(utilityData)];
     [format ["%1 Assigned traits to %2",profileName,GVAR(utilityData) apply {name _x}],false,"Admin Menu"] call FUNC(log);
 }];

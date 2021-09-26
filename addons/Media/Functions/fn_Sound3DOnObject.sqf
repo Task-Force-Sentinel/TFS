@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_Sound3DOnObject
+Function: TFS_fnc_Sound3DOnObject
 
 Description:
 	Plays a sound on an object by attaching a dummy object to said object. Dummy
@@ -24,7 +24,7 @@ Author:
 
 // If run locally, run on server instead
 if (!isServer) exitWith {
-	_this remoteExec ["TFSRHS_fnc_Sound3DOnObject", 2];
+	_this remoteExec ["TFS_fnc_Sound3DOnObject", 2];
 };
 
 params [
@@ -50,7 +50,7 @@ _dummy setPos (getPos _object);
 _dummy attachTo [_object];
 
 // Play sound on the created object
-[_dummy, _SoundClass, _distance, _pitch] call tfsrhs_fnc_Sound3D;
+[_dummy, _SoundClass, _distance, _pitch] call tfs_fnc_Sound3D;
 
 // Delete the dummy object after the sound is over (according to the config entry)
 [

@@ -3,7 +3,7 @@ if (isClass (configFile >> "CfgPatches" >> "ace_safemode")) then {
         QGVAR(weaponSafety),
         "CHECKBOX",
         "Enable ACE Weapon Safety on mission start",
-        ["TFSRHS Common"],
+        ["TFS Common"],
         true,
         0,
         {},

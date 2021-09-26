@@ -2,16 +2,16 @@ class CfgUnitInsignia
 {
 	class Logo
 	{
-		displayName = "TFSRHS Logo";
+		displayName = "TFS Logo";
 		author = AUTHOR;
-		texture = "z\tfsrhs\addons\Media\images\TFSPATCH.paa";
+		texture = "z\tfs\addons\Media\images\TFSPATCH.paa";
 		textureVehicle = "";
 	};
 	class bolo
 	{
-		displayName = "TFSRHS BOLO";
+		displayName = "TFS BOLO";
 		author = AUTHOR;
-		texture = "z\tfsrhs\addons\Media\images\TFSPATCH.paa";
+		texture = "z\tfs\addons\Media\images\TFSPATCH.paa";
 		textureVehicle = "";
 	};
 };

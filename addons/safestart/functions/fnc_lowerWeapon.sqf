@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bob] call tfsrhs_main_fnc_lowerWeapon
+ * [bob] call tfs_main_fnc_lowerWeapon
  *
  * Public: Yes
  */

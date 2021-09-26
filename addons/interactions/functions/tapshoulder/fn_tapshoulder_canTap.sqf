@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\interactions\functions\tapshoulder\fn_tapshoulder_canTap.sqf
+ *	\z\tfs\addons\interactions\functions\tapshoulder\fn_tapshoulder_canTap.sqf
  *	by Ojemineh
  *	
  *	check if player can tap targets shoulder
@@ -13,7 +13,7 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[player, unit1] call TFSRHS_interactions_fnc_tapshoulder_canTap;
+ *	[player, unit1] call TFS_interactions_fnc_tapshoulder_canTap;
  *	
  */
 
@@ -31,7 +31,7 @@ if (isNull _target) exitWith {false};
 
 // -------------------------------------------------------------------------------------------------
 
-private _enableAI = (missionNamespace getVariable ["tfsrhs_interactions_tapshoulder_ai", true]);
+private _enableAI = (missionNamespace getVariable ["tfs_interactions_tapshoulder_ai", true]);
 private _condition = false;
 
 if (_enableAI) then {

@@ -1,5 +1,5 @@
 /*
- * Name: TFSRHS_common_fnc_sideToColor
+ * Name: TFS_common_fnc_sideToColor
  * Author: Snippers
  *
  * Arguments:
@@ -13,18 +13,18 @@
  */
  
 //Cache vars for speed
-if (isNil "TFSRHS_common_blufor_color") then {
-    tfsrhs_common_blufor_color = [blufor] call bis_fnc_sideColor;
-    tfsrhs_common_opfor_color = [opfor] call bis_fnc_sideColor;
-    tfsrhs_common_indep_color = [independent] call bis_fnc_sideColor;
-    tfsrhs_common_civ_color = [civilian] call bis_fnc_sideColor;
-    tfsrhs_common_empty_color = [sideUnknown] call bis_fnc_sideColor;
+if (isNil "TFS_common_blufor_color") then {
+    tfs_common_blufor_color = [blufor] call bis_fnc_sideColor;
+    tfs_common_opfor_color = [opfor] call bis_fnc_sideColor;
+    tfs_common_indep_color = [independent] call bis_fnc_sideColor;
+    tfs_common_civ_color = [civilian] call bis_fnc_sideColor;
+    tfs_common_empty_color = [sideUnknown] call bis_fnc_sideColor;
 };
 
 switch _this do {
-    case blufor: {tfsrhs_common_blufor_color};
-    case opfor: {tfsrhs_common_opfor_color};
-    case independent: {tfsrhs_common_indep_color};
-    case civilian: {tfsrhs_common_civ_color};
-    default {tfsrhs_common_empty_color};
+    case blufor: {tfs_common_blufor_color};
+    case opfor: {tfs_common_opfor_color};
+    case independent: {tfs_common_indep_color};
+    case civilian: {tfs_common_civ_color};
+    default {tfs_common_empty_color};
 };

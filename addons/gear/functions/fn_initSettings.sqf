@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\gear\functions\fn_initSettings.sqf
+ *	\z\tfs\addons\gear\functions\fn_initSettings.sqf
  *	by Ojemineh
  *
  *	register cba settings
@@ -12,7 +12,7 @@
  *	nothing
  *
  *	Example:
- *	[] call TFSRHS_gear_fnc_initSettings;
+ *	[] call TFS_gear_fnc_initSettings;
  *
  */
 

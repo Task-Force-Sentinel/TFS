@@ -6,7 +6,7 @@ params ["_object", "_player", "_radio"];
 if !(createDialog "RadioConfigDialog") exitWith {systemChat "Couldn't create dialog!"};
 
 // set up uiNamespace
-uiNamespace setVariable ["TFSRHS_CC_currentRadioObject", _radio];
+uiNamespace setVariable ["TFS_CC_currentRadioObject", _radio];
 
 // get all the elements that we care about
 private _dialog = findDisplay 21821;
@@ -26,5 +26,5 @@ ctrlSetText [1401, _ch2_cur];
 ctrlSetText [1402, str (_vol_cur + 1)];
 
 // set up event handlers
-_buttonOK ctrlSetEventHandler ["ButtonClick", format["[] call TFSRHS_fnc_handleRadioConfig"]];
+_buttonOK ctrlSetEventHandler ["ButtonClick", format["[] call TFS_fnc_handleRadioConfig"]];
 _buttonCancel ctrlSetEventHandler ["ButtonClick", "closeDialog 2;"];

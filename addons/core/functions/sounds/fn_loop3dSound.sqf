@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_loop3dSound.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_loop3dSound.sqf
  *	by Ojemineh
  *
  *	loop global sound at attached position
@@ -19,7 +19,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "AlarmBell", [], -1, -1, 6] call TFSRHS_fnc_loop3dSound;
+ *	[player, "AlarmBell", [], -1, -1, 6] call TFS_fnc_loop3dSound;
  *
  */
 
@@ -43,4 +43,4 @@ if (_soundClass isEqualTo "") exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
-[_object, _soundClass, _position, _distance, _maxDistance, _duration, _pitch, _isSpeech] remoteExecCall ["TFSRHS_fnc_loop3dSoundLocal", 0, false];
+[_object, _soundClass, _position, _distance, _maxDistance, _duration, _pitch, _isSpeech] remoteExecCall ["TFS_fnc_loop3dSoundLocal", 0, false];

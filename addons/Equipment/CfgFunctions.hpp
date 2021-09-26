@@ -1,9 +1,9 @@
-class TFSRHS_Equipment {
+class TFS_Equipment {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class Equipment {
 
-		file = "z\tfsrhs\Addons\Equipment\Functions";
+		file = "z\tfs\Addons\Equipment\Functions";
 		class AmmoBox {};
 		class FullArsenal {};
 		class LimitedArsenal {};

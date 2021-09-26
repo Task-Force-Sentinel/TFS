@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [controller, "FD_Timer_F", 25] call TFSRHS_shootingrange_fnc_playSoundSignal;
+ * [controller, "FD_Timer_F", 25] call TFS_shootingrange_fnc_playSoundSignal;
  *
  * Public: No
  */

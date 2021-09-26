@@ -103,7 +103,7 @@
 ///////////////////////////////////////////////////////////////////////////
 /// Base Classes
 ///////////////////////////////////////////////////////////////////////////
-class TFSRHS_CC_RscText
+class TFS_CC_RscText
 {
 	deletable = 0;
 	fade = 0;
@@ -163,7 +163,7 @@ class TFSRHS_CC_RscText
 		0.65
 	};
 };
-class TFSRHS_CC_RscStructuredText
+class TFS_CC_RscStructuredText
 {
 	deletable = 0;
 	fade = 0;
@@ -193,7 +193,7 @@ class TFSRHS_CC_RscStructuredText
 	size = "( ( ( ((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
 	shadow = 1;
 };
-class TFSRHS_CC_RscPicture
+class TFS_CC_RscPicture
 {
 	deletable = 0;
 	fade = 0;
@@ -246,7 +246,7 @@ class TFSRHS_CC_RscPicture
 		0.65
 	};
 };
-class TFSRHS_CC_RscEdit
+class TFS_CC_RscEdit
 {
 	deletable = 0;
 	fade = 0;
@@ -313,7 +313,7 @@ class TFSRHS_CC_RscEdit
 		0.65
 	};
 };
-class TFSRHS_CC_RscCombo
+class TFS_CC_RscCombo
 {
 	deletable = 0;
 	fade = 0;
@@ -474,7 +474,7 @@ class TFSRHS_CC_RscCombo
 		1
 	};
 };
-class TFSRHS_CC_RscListBox
+class TFS_CC_RscListBox
 {
 	deletable = 0;
 	fade = 0;
@@ -654,7 +654,7 @@ class TFSRHS_CC_RscListBox
 	period = 1.2;
 	maxHistoryDelay = 1;
 };
-class TFSRHS_CC_RscButton
+class TFS_CC_RscButton
 {
 	deletable = 0;
 	fade = 0;
@@ -732,7 +732,7 @@ class TFSRHS_CC_RscButton
 	offsetPressedY = 0;
 	borderSize = 0;
 };
-class TFSRHS_CC_RscShortcutButton
+class TFS_CC_RscShortcutButton
 {
 	deletable = 0;
 	fade = 0;
@@ -879,7 +879,7 @@ class TFSRHS_CC_RscShortcutButton
 		align = "left";
 	};
 };
-class TFSRHS_CC_RscShortcutButtonMain
+class TFS_CC_RscShortcutButtonMain
 {
 	idc = -1;
 	style = 0;
@@ -947,7 +947,7 @@ class TFSRHS_CC_RscShortcutButtonMain
 		align = "false";
 	};
 };
-class TFSRHS_CC_RscFrame
+class TFS_CC_RscFrame
 {
 	type = 0;
 	idc = -1;
@@ -976,7 +976,7 @@ class TFSRHS_CC_RscFrame
 	w = 0.3;
 	h = 0.3;
 };
-class TFSRHS_CC_RscSlider
+class TFS_CC_RscSlider
 {
 	deletable = 0;
 	fade = 0;
@@ -1030,7 +1030,7 @@ class IGUIBack
 		"(profilenamespace getvariable ['IGUI_BCG_RGB_A',0.8])"
 	};
 };
-class TFSRHS_CC_RscCheckBox
+class TFS_CC_RscCheckBox
 {
 	idc = -1;
 	type = 77;
@@ -1167,7 +1167,7 @@ class TFSRHS_CC_RscCheckBox
 		1
 	};
 };
-class TFSRHS_CC_RscTextCheckBox
+class TFS_CC_RscTextCheckBox
 {
 	idc = -1;
 	type = 7;
@@ -1266,7 +1266,7 @@ class TFSRHS_CC_RscTextCheckBox
 		"CHECKED"
 	};
 };
-class TFSRHS_CC_RscButtonMenu
+class TFS_CC_RscButtonMenu
 {
 	idc = -1;
 	type = 16;
@@ -1418,7 +1418,7 @@ class TFSRHS_CC_RscButtonMenu
 		h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 	};
 };
-class TFSRHS_CC_RscButtonMenuOK
+class TFS_CC_RscButtonMenuOK
 {
 	idc = 1;
 	shortcuts[] = 
@@ -1431,7 +1431,7 @@ class TFSRHS_CC_RscButtonMenuOK
 	default = 1;
 	text = "OK";
 };
-class TFSRHS_CC_RscButtonMenuCancel
+class TFS_CC_RscButtonMenuCancel
 {
 	idc = 2;
 	shortcuts[] = 
@@ -1440,7 +1440,7 @@ class TFSRHS_CC_RscButtonMenuCancel
 	};
 	text = "Cancel";
 };
-class TFSRHS_CC_RscControlsGroup
+class TFS_CC_RscControlsGroup
 {
 	deletable = 0;
 	fade = 0;

@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_ctrlGroup"];
@@ -7,13 +7,13 @@ params ["_ctrlGroup"];
 
 private _ctrlLabelRadios = _display ctrlCreate [QGVAR(RscTextLarge), -1, _ctrlGroup];
 GVAR(utilityTabControls) pushBack _ctrlLabelRadios;
-_ctrlLabelRadios ctrlSetPosition [0, 0, (0.5 * _ctrlGrpWidth), TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlLabelRadios ctrlSetPosition [0, 0, (0.5 * _ctrlGrpWidth), TFS_ADMINMENU_STD_HEIGHT];
 _ctrlLabelRadios ctrlCommit 0;
 _ctrlLabelRadios ctrlSetText "Add Radios";
 
 private _ctrlLabelRadioGroup = _display ctrlCreate [QGVAR(RscText), -1, _ctrlGroup];
 GVAR(utilityTabControls) pushBack _ctrlLabelRadioGroup;
-_ctrlLabelRadioGroup ctrlSetPosition [0, (1.1 * TFSRHS_ADMINMENU_STD_HEIGHT), 0.5 * _ctrlGrpWidth, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlLabelRadioGroup ctrlSetPosition [0, (1.1 * TFS_ADMINMENU_STD_HEIGHT), 0.5 * _ctrlGrpWidth, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlLabelRadioGroup ctrlCommit 0;
 _ctrlLabelRadioGroup ctrlSetText "Radios with the same (number) postfix are compatible";
 
@@ -22,7 +22,7 @@ private _radios = [];
     _radios append (_x select 0);
 } forEach EGVAR(acre2,radioCoreSettings);
 private _radioCtrls = [];
-private _radioCtrlsY = 2.2 * TFSRHS_ADMINMENU_STD_HEIGHT;
+private _radioCtrlsY = 2.2 * TFS_ADMINMENU_STD_HEIGHT;
 
 {
     private _radio = _x;
@@ -31,13 +31,13 @@ private _radioCtrlsY = 2.2 * TFSRHS_ADMINMENU_STD_HEIGHT;
     private _ctrlRadioCheck = _display ctrlCreate ["RscCheckBox", -1, _ctrlGroup];
     GVAR(utilityTabControls) pushBack _ctrlRadioCheck;
     _radioCtrls pushBack _ctrlRadioCheck;
-    _ctrlRadioCheck ctrlSetPosition [0, _radioCtrlsY + (_forEachIndex * TFSRHS_ADMINMENU_STD_HEIGHT), TFSRHS_ADMINMENU_STD_WIDTH, TFSRHS_ADMINMENU_STD_HEIGHT];
+    _ctrlRadioCheck ctrlSetPosition [0, _radioCtrlsY + (_forEachIndex * TFS_ADMINMENU_STD_HEIGHT), TFS_ADMINMENU_STD_WIDTH, TFS_ADMINMENU_STD_HEIGHT];
     _ctrlRadioCheck ctrlCommit 0;
     _ctrlRadioCheck setVariable [QGVAR(association), _x];
 
     private _ctrlRadioName = _display ctrlCreate [QGVAR(RscText), -1, _ctrlGroup];
     GVAR(utilityTabControls) pushBack _ctrlRadioName;
-    _ctrlRadioName ctrlSetPosition [TFSRHS_ADMINMENU_STD_WIDTH, _radioCtrlsY + (_forEachIndex * TFSRHS_ADMINMENU_STD_HEIGHT), (0.5 * _ctrlGrpWidth) - TFSRHS_ADMINMENU_STD_WIDTH, TFSRHS_ADMINMENU_STD_HEIGHT];
+    _ctrlRadioName ctrlSetPosition [TFS_ADMINMENU_STD_WIDTH, _radioCtrlsY + (_forEachIndex * TFS_ADMINMENU_STD_HEIGHT), (0.5 * _ctrlGrpWidth) - TFS_ADMINMENU_STD_WIDTH, TFS_ADMINMENU_STD_HEIGHT];
     _ctrlRadioName ctrlCommit 0;
     if (_radioGroup > 0) then {
         _ctrlRadioName ctrlSetText format ["%1 (%2)", getText (configFile >> "CfgWeapons" >> _x >> "displayName"), _radioGroup];
@@ -54,19 +54,19 @@ if (!isNil QEGVAR(acre2,networksWithRadioChannels)) then {
     private _ctrlCheckNetwork = _display ctrlCreate ["RscCheckBox", -1, _ctrlGroup];
     GVAR(utilityTabControls) pushBack _ctrlCheckNetwork;
     _networkCtrls pushBack _ctrlCheckNetwork;
-    _ctrlCheckNetwork ctrlSetPosition [0.5 * _ctrlGrpWidth, 0, TFSRHS_ADMINMENU_STD_WIDTH, TFSRHS_ADMINMENU_STD_HEIGHT];
+    _ctrlCheckNetwork ctrlSetPosition [0.5 * _ctrlGrpWidth, 0, TFS_ADMINMENU_STD_WIDTH, TFS_ADMINMENU_STD_HEIGHT];
     _ctrlCheckNetwork ctrlCommit 0;
 
     private _ctrlLabelNetwork = _display ctrlCreate [QGVAR(RscTextLarge), -1, _ctrlGroup];
     GVAR(utilityTabControls) pushBack _ctrlLabelNetwork;
-    _ctrlLabelNetwork ctrlSetPosition [(0.5 * _ctrlGrpWidth) + TFSRHS_ADMINMENU_STD_WIDTH, 0, (0.5 * _ctrlGrpWidth) - (1.1 * TFSRHS_ADMINMENU_STD_WIDTH), TFSRHS_ADMINMENU_STD_HEIGHT];
+    _ctrlLabelNetwork ctrlSetPosition [(0.5 * _ctrlGrpWidth) + TFS_ADMINMENU_STD_WIDTH, 0, (0.5 * _ctrlGrpWidth) - (1.1 * TFS_ADMINMENU_STD_WIDTH), TFS_ADMINMENU_STD_HEIGHT];
     _ctrlLabelNetwork ctrlCommit 0;
     _ctrlLabelNetwork ctrlSetText "Change Radio Network";
     _ctrlCheckNetwork ctrlCommit 0;
 
     private _ctrlLabelNetworkWarning = _display ctrlCreate [QGVAR(RscText), -1, _ctrlGroup];
     GVAR(utilityTabControls) pushBack _ctrlLabelNetworkWarning;
-    _ctrlLabelNetworkWarning ctrlSetPosition [0.5 * _ctrlGrpWidth, (1.1 * TFSRHS_ADMINMENU_STD_HEIGHT), 0.5 * _ctrlGrpWidth, TFSRHS_ADMINMENU_STD_HEIGHT];
+    _ctrlLabelNetworkWarning ctrlSetPosition [0.5 * _ctrlGrpWidth, (1.1 * TFS_ADMINMENU_STD_HEIGHT), 0.5 * _ctrlGrpWidth, TFS_ADMINMENU_STD_HEIGHT];
     _ctrlLabelNetworkWarning ctrlSetTextColor [1, 192/255, 77/255, 1];
     _ctrlLabelNetworkWarning ctrlCommit 0;
     _ctrlLabelNetworkWarning ctrlSetText "Warning: Change only if you know what you're doing!";
@@ -74,7 +74,7 @@ if (!isNil QEGVAR(acre2,networksWithRadioChannels)) then {
     private _ctrlListNetwork = _display ctrlCreate [QGVAR(RscListBox), -1, _ctrlGroup];
     GVAR(utilityTabControls) pushBack _ctrlListNetwork;
     _networkCtrls pushBack _ctrlListNetwork;
-    _ctrlListNetwork ctrlSetPosition [0.5 * _ctrlGrpWidth, _radioCtrlsY, (0.5 * _ctrlGrpWidth) - (0.1 * TFSRHS_ADMINMENU_STD_WIDTH), _ctrlGrpHeight - _radioCtrlsY - (2 * TFSRHS_ADMINMENU_STD_HEIGHT)];
+    _ctrlListNetwork ctrlSetPosition [0.5 * _ctrlGrpWidth, _radioCtrlsY, (0.5 * _ctrlGrpWidth) - (0.1 * TFS_ADMINMENU_STD_WIDTH), _ctrlGrpHeight - _radioCtrlsY - (2 * TFS_ADMINMENU_STD_HEIGHT)];
     _ctrlListNetwork ctrlCommit 0;
 
     {
@@ -102,7 +102,7 @@ if (!isNil QEGVAR(acre2,networksWithRadioChannels)) then {
 
 private _ctrlButton = _display ctrlCreate [QGVAR(RscButtonMenu), -1, _ctrlGroup];
 GVAR(utilityTabControls) pushBack _ctrlButton;
-_ctrlButton ctrlSetPosition [_ctrlGrpWidth * 0.8, _ctrlGrpHeight - TFSRHS_ADMINMENU_STD_HEIGHT, _ctrlGrpWidth * 0.2, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlButton ctrlSetPosition [_ctrlGrpWidth * 0.8, _ctrlGrpHeight - TFS_ADMINMENU_STD_HEIGHT, _ctrlGrpWidth * 0.2, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlSetText "Assign Radios";
 _ctrlButton setVariable [QGVAR(association), [_radioCtrls, _networkCtrls]];
@@ -122,7 +122,7 @@ _ctrlButton ctrlAddEventHandler ["ButtonClick", {
         if (cbChecked _ctrlNetworkCheck) then {
             private _idx = lbCurSel _ctrlNetworkList;
             if (_idx < 0) exitWith {
-                systemChat "[TFSRHS Admin Menu] No network selected";
+                systemChat "[TFS Admin Menu] No network selected";
             };
 
             _network = _ctrlNetworkList lbValue _idx;

@@ -4,28 +4,28 @@ class CfgMusic
 	class Denied
 	{
 		name		= "Denied";
-		sound[]		= { "z\tfsrhs\addons\media\Sounds\Denied.ogg", 1, 1, 100 };
+		sound[]		= { "z\tfs\addons\media\Sounds\Denied.ogg", 1, 1, 100 };
 		titles[]	= { 0, "" };
 	};
 
 	class AirRaid
 	{
 		name		= "AirRaid";
-		sound[]		= { "z\tfsrhs\addons\media\Sounds\AirRaid.ogg", 1, 1, 100 };
+		sound[]		= { "z\tfs\addons\media\Sounds\AirRaid.ogg", 1, 1, 100 };
 		titles[]	= { 0, "" };
 	};
 
 	class NukeAlarm
 	{
 		name		= "NukeAlarm";
-		sound[]		= { "z\tfsrhs\addons\media\Sounds\NukeAlarm.ogg", 1, 1, 100 };
+		sound[]		= { "z\tfs\addons\media\Sounds\NukeAlarm.ogg", 1, 1, 100 };
 		titles[]	= { 0, "" };
 	};
 
 	class Windows
 	{
 		name		= "Windows";
-		sound[]		= { "z\tfsrhs\addons\media\Sounds\Windows.ogg", 1, 1, 100 };
+		sound[]		= { "z\tfs\addons\media\Sounds\Windows.ogg", 1, 1, 100 };
 		titles[]	= { 0, "" };
 	};
 };

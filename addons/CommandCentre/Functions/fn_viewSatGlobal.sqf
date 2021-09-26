@@ -6,7 +6,7 @@ call cTab_fnc_updateLists;
 
 {
 	if (_data isEqualTo (str _x)) exitWith {_host = _x;};
-} forEach (cTabHcamlist + TFSRHS_CC_vehicleCamList);
+} forEach (cTabHcamlist + TFS_CC_vehicleCamList);
 
 if (isNull _host) exitWith {
 	// systemChat "Could not find camera host.";
@@ -14,7 +14,7 @@ if (isNull _host) exitWith {
 
 private _cam = objNull;
 
-[_object, _selection] call TFSRHS_fnc_deleteCamera;
+[_object, _selection] call TFS_fnc_deleteCamera;
 
 _cam = "camera" camCreate [(getPosATL _host) select 0, (getPosATL _host) select 1, ((getPosATL _host) select 2) + 300];
 _cam camPrepareFov 0.15;
@@ -32,4 +32,4 @@ _cam camCommitPrepared 0;
 _cam cameraEffect ["INTERNAL", "BACK", _renderTarget];
 _object setObjectTexture [_selection, format ["#(argb,512,512,1)r2t(%1,1.3096153846)", _renderTarget]];
 
-_object setVariable [format ["TFSRHS_CC_screen_%1_Cam", _selection], [_cam, objNull, _host]];
+_object setVariable [format ["TFS_CC_screen_%1_Cam", _selection], [_cam, objNull, _host]];

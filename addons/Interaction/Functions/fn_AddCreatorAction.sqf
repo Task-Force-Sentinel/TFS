@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_AddCreatorAction
+Function: TFS_fnc_AddCreatorAction
 
 Description:
 	Adds an action for the mission creator that allows executing code/functions
@@ -29,7 +29,7 @@ Examples:
 	{hint "Mission started!";},
 	{true},
 	["ExampleActions"]
-] call TFSRHS_fnc_AddCreatorAction;
+] call TFS_fnc_AddCreatorAction;
 	(end)
 
 Author:
@@ -37,7 +37,7 @@ Author:
 */
 
 if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitWith {};
-if (!TFSRHS_CreatorActions_Master) exitWith {};
+if (!TFS_CreatorActions_Master) exitWith {};
 
 params [
     "_actionName",
@@ -58,5 +58,5 @@ _action = [
 ] call ACE_interact_menu_fnc_createAction;
 
 [
-	"TFSRHS_RegisterCreatorAction", [_action, _actionPath, _actionName], format["TFSRHS_CAJIP_%1", _actionName]
+	"TFS_RegisterCreatorAction", [_action, _actionPath, _actionName], format["TFS_CAJIP_%1", _actionName]
 ] call CBA_fnc_globalEventJIP;

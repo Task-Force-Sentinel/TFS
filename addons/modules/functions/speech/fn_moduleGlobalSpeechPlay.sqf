@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\modules\functions\speech\fn_moduleGlobalSpeechPlay.sqf
+ *	\z\tfs\addons\modules\functions\speech\fn_moduleGlobalSpeechPlay.sqf
  *	by Ojemineh
  *	
  *	module function
@@ -13,7 +13,7 @@
  *	nothing
  *	
  *	Example:
- *	[] call TFSRHS_fnc_moduleGlobalSpeechPlay;
+ *	[] call TFS_fnc_moduleGlobalSpeechPlay;
  *	
  */
 
@@ -57,7 +57,7 @@ _codeEnd = [_codeEnd] call CBA_fnc_trim;
 	
 	params ["_logic", "_caller", "_target", "_source", "_sound", "_distance", "_maxDistance", "_duration", "_onlyOnce", "_reaction", "_animation", "_codeStart", "_codeEnd"];
 	
-	if (_onlyOnce) then {_target setVariable ["tfsrhs_playedOnce", true, true];};
+	if (_onlyOnce) then {_target setVariable ["tfs_playedOnce", true, true];};
 	
 	[_target, _target, true] call ACE_common_fnc_claim;
 	
@@ -93,7 +93,7 @@ _codeEnd = [_codeEnd] call CBA_fnc_trim;
 		};
 	};
 	
-	[_target, _sound, _distance, _maxDistance, _duration, 1, true] call TFSRHS_fnc_speak3d;
+	[_target, _sound, _distance, _maxDistance, _duration, 1, true] call TFS_fnc_speak3d;
 	
 	if (_codeStart != "") then {
 		[_logic, _caller, _target, _codeStart] spawn {
@@ -106,7 +106,7 @@ _codeEnd = [_codeEnd] call CBA_fnc_trim;
 	
 	sleep 0.2;
 	
-	waitUntil {if (!(_target getVariable ["tfsrhs_speak3d", false])) exitWith {true}; false};
+	waitUntil {if (!(_target getVariable ["tfs_speak3d", false])) exitWith {true}; false};
 	
 	if (_reaction > 0) then {
 		switch (_reaction) do {

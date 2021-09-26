@@ -7,14 +7,14 @@ class display3DEN
         {
             class Items
             {
-                class TFSRHS_Folder {
-                    items[] += {"TFSRHS_AutoTest"};
+                class TFS_Folder {
+                    items[] += {"TFS_AutoTest"};
                 };
-                class TFSRHS_AutoTest
+                class TFS_AutoTest
                 {
-                    text = "TFSRHS Autotest";
-                    action = "edit3DENMissionAttributes 'TFSRHS_AutoTestAttributes';";
-                    //picture = "\z\tfsrhs\addons\media\images\Icons\icon_gear_ca";
+                    text = "TFS Autotest";
+                    action = "edit3DENMissionAttributes 'TFS_AutoTestAttributes';";
+                    //picture = "\z\tfs\addons\media\images\Icons\icon_gear_ca";
                 };
             };
         };

@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 params ["_unit"];
 disableSerialization;
 private _color = (side group _unit) call CFUNC(sideToColor);

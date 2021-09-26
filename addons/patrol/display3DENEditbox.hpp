@@ -44,7 +44,7 @@ class GVAR(editBox)
     movingEnable = 0;
     enableSimulation = 1;
     enableDisplay = 1;
-    onUnload = "_this call tfsrhs_patrol_fnc_3denPatrol";
+    onUnload = "_this call tfs_patrol_fnc_3denPatrol";
     class Controls
     {
         class Back : ctrlStaticBackgroundDisableTiles

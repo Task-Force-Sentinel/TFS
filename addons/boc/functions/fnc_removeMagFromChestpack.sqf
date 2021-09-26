@@ -13,7 +13,7 @@
  * Nothing
  *
  * Example:
- * [player,"30Rnd_556x45_Stanag",25,2] call TFSRHS_boc_fnc_removeMagFromChestpack;
+ * [player,"30Rnd_556x45_Stanag",25,2] call TFS_boc_fnc_removeMagFromChestpack;
  *
  * Public: No
  */

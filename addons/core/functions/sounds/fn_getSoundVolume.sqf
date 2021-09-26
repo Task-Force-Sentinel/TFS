@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_getSoundVolume.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_getSoundVolume.sqf
  *	by Ojemineh
  *
  *	get volume of a sound-class
@@ -12,7 +12,7 @@
  *	<NUMBER>
  *
  *	Example:
- *	["AlarmBell"] call TFSRHS_fnc_getSoundVolume;
+ *	["AlarmBell"] call TFS_fnc_getSoundVolume;
  *
  */
 
@@ -42,7 +42,7 @@ if (isClass (missionConfigFile >> "CfgSounds" >> _soundClass)) then {
 if (count _soundArray > 1) then {
 	if ((_soundArray select 1) isEqualType "") then {
 		if (([(_soundArray select 1), "db"] call CBA_fnc_find) > -1) then {
-			_return = [(_soundArray select 1)] call TFSRHS_fnc_decibelToGain;
+			_return = [(_soundArray select 1)] call TFS_fnc_decibelToGain;
 		} else {
 			_return = parseNumber (_soundArray select 1);
 		};

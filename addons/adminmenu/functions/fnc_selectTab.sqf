@@ -1,7 +1,7 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
-params ["_display", ["_tab", IDC_TFSRHS_ADMINMENU_G_DASH]];
+params ["_display", ["_tab", IDC_TFS_ADMINMENU_G_DASH]];
 
 _display call FUNC(utilityClose);
 
@@ -19,32 +19,32 @@ while {count GVAR(tabPFHHandles) > 0} do {
         (_display displayCtrl _x) ctrlShow false;
         (_display displayCtrl _x) ctrlEnable false;
     };
-} forEach IDCS_TFSRHS_ADMINMENU_GRPS;
+} forEach IDCS_TFS_ADMINMENU_GRPS;
 
 switch (_tab) do {
-    case IDC_TFSRHS_ADMINMENU_G_DASH: {
+    case IDC_TFS_ADMINMENU_G_DASH: {
         LOG("Selected Dashboard");
-        ctrlSetFocus (_display displayCtrl IDC_TFSRHS_ADMINMENU_DASH);
+        ctrlSetFocus (_display displayCtrl IDC_TFS_ADMINMENU_DASH);
         _display call FUNC(dashboard);
     };
-    case IDC_TFSRHS_ADMINMENU_G_PMAN: {
+    case IDC_TFS_ADMINMENU_G_PMAN: {
         LOG("Selected Player Management");
-        ctrlSetFocus (_display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN);
+        ctrlSetFocus (_display displayCtrl IDC_TFS_ADMINMENU_PMAN);
         _display call FUNC(playerManagement);
     };
-    case IDC_TFSRHS_ADMINMENU_G_RESP: {
+    case IDC_TFS_ADMINMENU_G_RESP: {
         LOG("Selected Respawn");
-        ctrlSetFocus (_display displayCtrl IDC_TFSRHS_ADMINMENU_RESP);
+        ctrlSetFocus (_display displayCtrl IDC_TFS_ADMINMENU_RESP);
         _display call FUNC(respawn);
     };
-    case IDC_TFSRHS_ADMINMENU_G_ENDM: {
+    case IDC_TFS_ADMINMENU_G_ENDM: {
         LOG("Selected End Mission");
-        ctrlSetFocus (_display displayCtrl IDC_TFSRHS_ADMINMENU_ENDM);
+        ctrlSetFocus (_display displayCtrl IDC_TFS_ADMINMENU_ENDM);
         _display call FUNC(endMission);
     };
-    case IDC_TFSRHS_ADMINMENU_G_MSGS: {
+    case IDC_TFS_ADMINMENU_G_MSGS: {
         LOG("Selected Logs");
-        ctrlSetFocus (_display displayCtrl IDC_TFSRHS_ADMINMENU_MSGS);
+        ctrlSetFocus (_display displayCtrl IDC_TFS_ADMINMENU_MSGS);
         _display call FUNC(messageLog);
     };
 };

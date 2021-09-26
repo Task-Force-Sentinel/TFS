@@ -3,13 +3,13 @@
 
 class CfgPatches {
 
-	class TFSRHS_Interactions {
+	class TFS_Interactions {
 		author = AUTHOR;
 		name = COMPONENT_NAME;
 		url = URL;
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
-			"tfsrhs_core"
+			"tfs_core"
 		};
 		units[] = {};
 		weapons[] = {};

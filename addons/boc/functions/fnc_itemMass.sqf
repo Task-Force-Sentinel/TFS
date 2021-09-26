@@ -10,7 +10,7 @@
  * mass <NUMBER>
  *
  * Example:
- * ["FirstAidKit"] call TFSRHS_boc_fnc_itemMass;
+ * ["FirstAidKit"] call TFS_boc_fnc_itemMass;
  *
  * Public: No
  */

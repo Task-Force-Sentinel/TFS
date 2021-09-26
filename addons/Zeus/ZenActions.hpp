@@ -3,12 +3,12 @@ class zen_context_menu_actions {
         displayName = "Create Portable FOB";
         icon = "";
         statement = "";
-        condition = "_hoveredEntity call TFSRHS_fnc_canBeFOB";
+        condition = "_hoveredEntity call TFS_fnc_canBeFOB";
         priority = 50;
         class FOBCamp {
             displayName = "Camp";
             icon = "";
-            statement = "[_args] call TFSRHS_fnc_FOBZeusWrapper";
+            statement = "[_args] call TFS_fnc_FOBZeusWrapper";
             priority = 50;
             args = 0;
         };
@@ -34,24 +34,24 @@ class zen_context_menu_actions {
 
     class MedFacility {
         displayName = "Set Medical Facility";
-        icon = "z\tfsrhs\addons\Media\images\icons\Medical Area.paa";
-        statement = "[_hoveredEntity] remoteExec [""TFSRHS_fnc_setMedicalFacility"", 0, true]";
-        condition = "_hoveredEntity call TFSRHS_fnc_canBeMedFacility";
+        icon = "z\tfs\addons\Media\images\icons\Medical Area.paa";
+        statement = "[_hoveredEntity] remoteExec [""TFS_fnc_setMedicalFacility"", 0, true]";
+        condition = "_hoveredEntity call TFS_fnc_canBeMedFacility";
         priority = 52;
     };
 
     class RepFacility {
         displayName = "Set Repair Facility";
-        icon = "z\tfsrhs\addons\Media\images\icons\Vehicle Service.paa";
-        statement = "[_hoveredEntity] remoteExec [""TFSRHS_fnc_setRepairFacility"", 0, true]";
-        condition = "_hoveredEntity call TFSRHS_fnc_canBeMedFacility";
+        icon = "z\tfs\addons\Media\images\icons\Vehicle Service.paa";
+        statement = "[_hoveredEntity] remoteExec [""TFS_fnc_setRepairFacility"", 0, true]";
+        condition = "_hoveredEntity call TFS_fnc_canBeMedFacility";
         priority = 51;
     };
 
     class MakeIED {
         displayName = "Make IED";
         icon = "a3\ui_f\data\GUI\Cfg\Hints\IEDs_CA.paa"; //todo: icon
-        statement = "call TFSRHS_fnc_MakeIEDZeusWrapper";
+        statement = "call TFS_fnc_MakeIEDZeusWrapper";
         condition = "(not (isNull _hoveredEntity)) && {alive _hoveredEntity}";
         priority = 53;
     };

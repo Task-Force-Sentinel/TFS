@@ -3,7 +3,7 @@
  * Author: DerZade
  * Creates new weapon and stores it in  the soldier's chestpack. Only weapons are supported.
  * The purpose of this function is to ensure that weapons with specific attachments and magazines can be added.
- * If you want to add weapon(s) without any attachments you may want to use 'TFSRHS_boc_fnc_addItemToChestpack' instead.
+ * If you want to add weapon(s) without any attachments you may want to use 'TFS_boc_fnc_addItemToChestpack' instead.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -22,7 +22,7 @@
  * Nothing
  *
  * Example:
- * [player,["arifle_MX_GL_F","","acc_pointer_IR","optic_Aco",["30Rnd_65x39_caseless_mag",30],["1Rnd_SmokeOrange_Grenade_shell",1],""],2] call TFSRHS_boc_fnc_addWeaponToChestpack;
+ * [player,["arifle_MX_GL_F","","acc_pointer_IR","optic_Aco",["30Rnd_65x39_caseless_mag",30],["1Rnd_SmokeOrange_Grenade_shell",1],""],2] call TFS_boc_fnc_addWeaponToChestpack;
  *
  * Public: No
  */

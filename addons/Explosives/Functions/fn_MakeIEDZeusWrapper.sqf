@@ -25,7 +25,7 @@ private _dialogResult = [
 		_results params ["_detTime", "_proxRadius", "_secondaries", "_announce", "_annInterval", "_reqDefKit"];
 		_args params ["_hoveredEntity"];
 
-		[_hoveredEntity, _detTime, _proxRadius, _secondaries, _announce, _annInterval, _reqDefKit] remoteExec ["TFSRHS_fnc_MakeIED", 0, true];
+		[_hoveredEntity, _detTime, _proxRadius, _secondaries, _announce, _annInterval, _reqDefKit] remoteExec ["TFS_fnc_MakeIED", 0, true];
 	},
 	{},
 	[_hoveredEntity]

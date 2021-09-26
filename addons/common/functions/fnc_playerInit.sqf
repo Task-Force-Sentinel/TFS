@@ -10,7 +10,7 @@
 if (GVAR(skipPlayerInit)) exitWith {};
 
 private ["_unitName","_cnt","_cntStop","_timerInput","_timer","_missionAuthor","_initMsg","_postInitMsg"];
-_unitName = name TFSRHS_unit;
+_unitName = name TFS_unit;
 _cnt = 0;
 _timerInput = GVAR(playerInitTime);
 _timer = _timerInput / 100;

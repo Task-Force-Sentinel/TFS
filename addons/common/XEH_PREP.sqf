@@ -20,7 +20,7 @@ PREP(serializeWaypoint);
 PREP(serializeWaypoints);
 PREP(moduleUnits);
 PREP(checkVersionArray);
-PREP(checkTFSRHSVersion);
+PREP(checkTFSVersion);
 PREP(arrayToStringArray);
 PREP(randPosArea);
 PREP(drawLines);
@@ -75,7 +75,7 @@ PREP (getKeybindString);
 PREP (needRestart);
 PREP (needRestartLocal);
 
-///tfsrhs
+///tfs
 // PREP(customMark);
 // PREP(initDB);
 // PREP(initIntelObject);

@@ -1,1 +1,1 @@
-#include "\z\tfsrhs\addons\ratelmarker\script_component.hpp"
+#include "\z\tfs\addons\ratelmarker\script_component.hpp"

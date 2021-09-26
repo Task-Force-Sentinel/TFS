@@ -1,9 +1,9 @@
-class TFSRHS_Training {
+class TFS_Training {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class Training {
 
-		file = "z\tfsrhs\addons\Training\Functions";
+		file = "z\tfs\addons\Training\Functions";
 		class Casualty {};
 		class ResetTargets {};
 	};

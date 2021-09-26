@@ -4,22 +4,22 @@ class cfgPatches
 {
     class ADDON
     {
-        name = "TFSRHS: Spectator";
+        name = "TFS: Spectator";
         author = "Head";
         url = "http://www.teamonetactical.com";
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"tfsrhs_common"};
+        requiredAddons[] = {"tfs_common"};
         VERSION_CONFIG;
     };
 };
 
 class CfgRespawnTemplates
 {
-    class TFSRHS_Spectator
+    class TFS_Spectator
     {
-        displayName = "TFSRHS Spectator";
+        displayName = "TFS Spectator";
         onPlayerRespawn  = QFUNC(init);
         onPlayerKilled = "";
     };

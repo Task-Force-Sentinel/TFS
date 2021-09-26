@@ -7,7 +7,7 @@ if !(hasinterface && (isClass (configFile >> "CfgPatches" >> "ace_main"))) exitW
 	{diag_log "Running channel actions parent";},
 	{true},
 	[]
-] call TFSRHS_fnc_AddCreatorAction;
+] call TFS_fnc_AddCreatorAction;
 
 {
 	_channelID = _forEachIndex;
@@ -26,7 +26,7 @@ if !(hasinterface && (isClass (configFile >> "CfgPatches" >> "ace_main"))) exitW
 		_enableStatement,
 		_channelDisabled,
 		["ChannelActions"]
-	] call TFSRHS_fnc_AddCreatorAction;
+	] call TFS_fnc_AddCreatorAction;
 
 	[
 		format ["Disable%1", _channelID],
@@ -35,7 +35,7 @@ if !(hasinterface && (isClass (configFile >> "CfgPatches" >> "ace_main"))) exitW
 		_disableStatement,
 		_channelEnabled,
 		["ChannelActions"]
-	] call TFSRHS_fnc_AddCreatorAction;
+	] call TFS_fnc_AddCreatorAction;
 } forEach [
 	"Global",
 	"Side",

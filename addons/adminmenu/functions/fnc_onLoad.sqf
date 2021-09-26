@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_display"];
@@ -7,14 +7,14 @@ uiNamespace setVariable [QGVAR(display), _display];
 {
     (_display displayCtrl _x) ctrlEnable false;
     (_display displayCtrl _x) ctrlShow false;
-} forEach IDCS_TFSRHS_ADMINMENU_UTIL;
+} forEach IDCS_TFS_ADMINMENU_UTIL;
 
 if (!isMultiplayer) then {
-    (_display displayCtrl IDC_TFSRHS_ADMINMENU_DASH_CURRADMIN) ctrlSetText "none (singleplayer)";
+    (_display displayCtrl IDC_TFS_ADMINMENU_DASH_CURRADMIN) ctrlSetText "none (singleplayer)";
 };
 
 // Mission Maker's Notes
-private _ctrlMissionNotes = (_display displayCtrl IDC_TFSRHS_ADMINMENU_G_DASH_MISSIONNOTES) controlsGroupCtrl IDC_TFSRHS_ADMINMENU_DASH_MISSIONNOTES;
+private _ctrlMissionNotes = (_display displayCtrl IDC_TFS_ADMINMENU_G_DASH_MISSIONNOTES) controlsGroupCtrl IDC_TFS_ADMINMENU_DASH_MISSIONNOTES;
 if (!isNil QEGVAR(briefing,admin) && {EGVAR(briefing,admin) isEqualType ""}) then {
     _ctrlMissionNotes ctrlSetStructuredText parseText EGVAR(briefing,admin);
 } else {
@@ -26,7 +26,7 @@ _ctrlMissionNotes ctrlSetPosition _notesPos;
 _ctrlMissionNotes ctrlCommit 0;
 
 // Safestart
-private _ctrlCheckSafestart = _display displayCtrl IDC_TFSRHS_ADMINMENU_DASH_SAFESTART;
+private _ctrlCheckSafestart = _display displayCtrl IDC_TFS_ADMINMENU_DASH_SAFESTART;
 _ctrlCheckSafestart cbSetChecked ([] call EFUNC(safestart,isActive));
 _ctrlCheckSafestart ctrlAddEventHandler ["CheckedChanged", {
     if ((param [1]) isEqualTo 0) then {
@@ -39,13 +39,13 @@ _ctrlCheckSafestart ctrlAddEventHandler ["CheckedChanged", {
 }];
 
 // Talk to spectators
-private _ctrlCheckSpectatorTalk = _display displayCtrl IDC_TFSRHS_ADMINMENU_DASH_SPECTATORTALK;
+private _ctrlCheckSpectatorTalk = _display displayCtrl IDC_TFS_ADMINMENU_DASH_SPECTATORTALK;
 _ctrlCheckSpectatorTalk cbSetChecked ([player] call acre_api_fnc_isSpectator);
 if (alive player) then {
     _ctrlCheckSpectatorTalk ctrlAddEventHandler ["CheckedChanged", {
         params ["", "_state"];
         [_state isEqualTo 1] call acre_api_fnc_setSpectator;
-        systemChat format ["[TFSRHS Admin Menu] Spectator talk toggled %1", ["off", "on"] select _state];
+        systemChat format ["[TFS Admin Menu] Spectator talk toggled %1", ["off", "on"] select _state];
         if (_state isEqualTo 1) then {
             [format ["%1 Started talking to spectators",profileName],false,"Admin Menu"] call FUNC(log);
         } else {
@@ -60,7 +60,7 @@ if (alive player) then {
 
 // Player Management tab
 
-private _ctrlFilterSide = _display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN_FILTER_SIDE;
+private _ctrlFilterSide = _display displayCtrl IDC_TFS_ADMINMENU_PMAN_FILTER_SIDE;
 {
     _x params ["_icon", "_text"];
     _ctrlFilterSide lbAdd _text;
@@ -80,7 +80,7 @@ _ctrlFilterSide ctrlAddEventHandler ["LBSelChanged", {
     _display call FUNC(playerManagement_updateList);
 }];
 
-private _ctrlFilterState = _display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN_FILTER_STATE;
+private _ctrlFilterState = _display displayCtrl IDC_TFS_ADMINMENU_PMAN_FILTER_STATE;
 {
     _ctrlFilterState lbAdd _x;
 } forEach ["Alive and Dead", "Alive", "Dead"];
@@ -92,18 +92,18 @@ _ctrlFilterState ctrlAddEventHandler ["LBSelChanged", {
     _display call FUNC(playerManagement_updateList);
 }];
 
-private _ctrlReset = _display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN_FILTER_RESET;
+private _ctrlReset = _display displayCtrl IDC_TFS_ADMINMENU_PMAN_FILTER_RESET;
 _ctrlReset ctrlAddEventHandler ["ButtonClick", {
     params ["_ctrlButton"];
     _ctrlButton call FUNC(debounceButton);
 
     private _display = ctrlParent _ctrlButton;
-    (_display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN_FILTER_SIDE) lbSetCurSel 0;
-    (_display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN_FILTER_STATE) lbSetCurSel 0;
+    (_display displayCtrl IDC_TFS_ADMINMENU_PMAN_FILTER_SIDE) lbSetCurSel 0;
+    (_display displayCtrl IDC_TFS_ADMINMENU_PMAN_FILTER_STATE) lbSetCurSel 0;
     _display call FUNC(playerManagement_updateList);
 }];
 
-private _ctrlRefresh = _display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN_REFRESH;
+private _ctrlRefresh = _display displayCtrl IDC_TFS_ADMINMENU_PMAN_REFRESH;
 _ctrlRefresh ctrlAddEventHandler ["ButtonClick", {
     params ["_ctrlButton"];
     _ctrlButton call FUNC(debounceButton);
@@ -112,13 +112,13 @@ _ctrlRefresh ctrlAddEventHandler ["ButtonClick", {
     _display call FUNC(playerManagement_updateList);
 }];
 
-private _ctrlSelectAll = _display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN_SEL_ALL;
+private _ctrlSelectAll = _display displayCtrl IDC_TFS_ADMINMENU_PMAN_SEL_ALL;
 _ctrlSelectAll ctrlAddEventHandler ["ButtonClick", {
     params ["_ctrlButton"];
     _ctrlButton call FUNC(debounceButton);
 
     private _display = ctrlParent _ctrlButton;
-    private _ctrlList = _display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN_LIST;
+    private _ctrlList = _display displayCtrl IDC_TFS_ADMINMENU_PMAN_LIST;
     for "_i" from 0 to ((lbSize _ctrlList) - 1) do {
         _ctrlList lbSetSelected [_i, true];
     };
@@ -126,13 +126,13 @@ _ctrlSelectAll ctrlAddEventHandler ["ButtonClick", {
     GVAR(playerManagement_selected) = +GVAR(playerManagement_players);
 }];
 
-private _ctrlSelectNone = _display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN_SEL_NONE;
+private _ctrlSelectNone = _display displayCtrl IDC_TFS_ADMINMENU_PMAN_SEL_NONE;
 _ctrlSelectNone ctrlAddEventHandler ["ButtonClick", {
     params ["_ctrlButton"];
     _ctrlButton call FUNC(debounceButton);
 
     private _display = ctrlParent _ctrlButton;
-    private _ctrlList = _display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN_LIST;
+    private _ctrlList = _display displayCtrl IDC_TFS_ADMINMENU_PMAN_LIST;
     for "_i" from 0 to ((lbSize _ctrlList) - 1) do {
         _ctrlList lbSetSelected [_i, false];
     };
@@ -140,13 +140,13 @@ _ctrlSelectNone ctrlAddEventHandler ["ButtonClick", {
     GVAR(playerManagement_selected) = [];
 }];
 
-private _ctrlSelectInvert = _display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN_SEL_INVERT;
+private _ctrlSelectInvert = _display displayCtrl IDC_TFS_ADMINMENU_PMAN_SEL_INVERT;
 _ctrlSelectInvert ctrlAddEventHandler ["ButtonClick", {
     params ["_ctrlButton"];
     _ctrlButton call FUNC(debounceButton);
 
     private _display = ctrlParent _ctrlButton;
-    private _ctrlList = _display displayCtrl IDC_TFSRHS_ADMINMENU_PMAN_LIST;
+    private _ctrlList = _display displayCtrl IDC_TFS_ADMINMENU_PMAN_LIST;
     for "_i" from 0 to ((lbSize _ctrlList) - 1) do {
         _ctrlList lbSetSelected [_i, !(_ctrlList lbIsSelected _i)];
     };

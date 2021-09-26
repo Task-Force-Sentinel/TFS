@@ -1,4 +1,4 @@
-	class TFSRHS_RHS_Pacific
+	class TFS_RHS_Pacific
 	{
 		class WEST
 		{

@@ -1,6 +1,6 @@
 #define COMPONENT bodybag
 #define COMPONENT_BEAUTIFIED Bodybag
-#include "\z\tfsrhs\addons\main\script_mod.hpp"
+#include "\z\tfs\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
@@ -14,7 +14,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_BODYBAG
 #endif
 
-#include "\z\tfsrhs\addons\main\script_macros.hpp"
+#include "\z\tfs\addons\main\script_macros.hpp"
 
 
 #define DESTROY_CHANCE_DEFAULT 20

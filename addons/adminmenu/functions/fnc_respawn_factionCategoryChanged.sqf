@@ -1,10 +1,10 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_display"];
 
 
-private _control = (_display displayCtrl IDC_TFSRHS_ADMINMENU_RESP_FACTIONCATEGORY);
+private _control = (_display displayCtrl IDC_TFS_ADMINMENU_RESP_FACTIONCATEGORY);
 private _newIdx = (lbCurSel _control);
 GVAR(currentFactionCategory) = _control lbData _newIdx;
 GVAR(lastFactionSelection) set [0,_newIdx];

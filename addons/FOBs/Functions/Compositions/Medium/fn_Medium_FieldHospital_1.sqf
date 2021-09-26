@@ -8,7 +8,7 @@ Using orientation of objects: yes
 */
 
 [
-	["ACE_medicalSupplyCrate",[6.96094,1.53442,0],180.26,1,0,[-1.57128e-005,1.59756e-006],"","[_this, ""MERT"", true] call TFSRHS_fnc_MedicalSupplies;",true,false], 
+	["ACE_medicalSupplyCrate",[6.96094,1.53442,0],180.26,1,0,[-1.57128e-005,1.59756e-006],"","[_this, ""MERT"", true] call TFS_fnc_MedicalSupplies;",true,false], 
 	["CamoNet_BLUFOR_F",[-1.09912,7.70557,0],0,1,0,[0,0],"","_this allowDamage false",true,false], 
 	["Land_BagFence_Round_F",[7.32568,-2.78149,-0.00130129],45,1,0,[0,0],"","",true,false], 
 	["Land_PortableLight_double_F",[8.16162,-2.18262,0],120,1,0,[0,-0],"","",true,false], 

@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\hints\functions\fn_initialize.sqf
+ *	\z\tfs\addons\hints\functions\fn_initialize.sqf
  *	by Ojemineh
  *	
  *	initialize hints addon
@@ -12,14 +12,14 @@
  *	nothing
  *	
  *	Example:
- *	[] call TFSRHS_hints_fnc_initialize;
+ *	[] call TFS_hints_fnc_initialize;
  *	
  */
 
 // -------------------------------------------------------------------------------------------------
 
-private _version = ["tfsrhs_hints"] call TFSRHS_fnc_getAddonVersion;
-[4, "Addon (v%1) loaded...", [_version], "hints"] call TFSRHS_fnc_log;
+private _version = ["tfs_hints"] call TFS_fnc_getAddonVersion;
+[4, "Addon (v%1) loaded...", [_version], "hints"] call TFS_fnc_log;
 
 // -------------------------------------------------------------------------------------------------
 
@@ -53,7 +53,7 @@ if (Not hasInterface) exitWith {};
 
 // CLEANUP HINTS
 
-//("TFSRHS_RscHint" call BIS_fnc_rscLayer) cutRsc ["TFSRHS_RscHint", "PLAIN", 0, true];
-99 cutRsc ["TFSRHS_RscHint", "PLAIN", 0, true];
+//("TFS_RscHint" call BIS_fnc_rscLayer) cutRsc ["TFS_RscHint", "PLAIN", 0, true];
+99 cutRsc ["TFS_RscHint", "PLAIN", 0, true];
 
-[] call TFSRHS_hints_fnc_cleanup;
+[] call TFS_hints_fnc_cleanup;

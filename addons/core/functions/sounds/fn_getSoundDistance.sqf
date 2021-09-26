@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_getSoundDistance.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_getSoundDistance.sqf
  *	by Ojemineh
  *
  *	get distance of a sound-class
@@ -12,7 +12,7 @@
  *	<NUMBER>
  *
  *	Example:
- *	["AlarmBell"] call TFSRHS_fnc_getSoundDistance;
+ *	["AlarmBell"] call TFS_fnc_getSoundDistance;
  *
  */
 

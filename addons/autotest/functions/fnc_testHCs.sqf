@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\autotest\script_component.hpp"
+#include "\z\tfs\addons\autotest\script_component.hpp"
 /* ----------------------------------------------------------------------------
-Internal Function: TFSRHS_autotest_fnc_testHCs
+Internal Function: TFS_autotest_fnc_testHCs
 
 Description:
     Checks number of HCs and if they're set up correctly

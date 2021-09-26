@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_ctrlGroup"];
@@ -7,13 +7,13 @@ params ["_ctrlGroup"];
 
 private _display = uiNamespace getVariable [QGVAR(modalDisplay), displayNull];
 private _ctrlEdit = _display ctrlCreate ["RscEditMulti", -1, _ctrlGroup];
-private _ctrlEditPos = [0.1 * TFSRHS_ADMINMENU_STD_WIDTH, 0.1 * TFSRHS_ADMINMENU_STD_HEIGHT, _ctrlGrpWidth - (0.2 * TFSRHS_ADMINMENU_STD_WIDTH), _ctrlGrpHeight - (1.3 * TFSRHS_ADMINMENU_STD_HEIGHT)];
+private _ctrlEditPos = [0.1 * TFS_ADMINMENU_STD_WIDTH, 0.1 * TFS_ADMINMENU_STD_HEIGHT, _ctrlGrpWidth - (0.2 * TFS_ADMINMENU_STD_WIDTH), _ctrlGrpHeight - (1.3 * TFS_ADMINMENU_STD_HEIGHT)];
 _ctrlEdit ctrlSetPosition _ctrlEditPos;
 _ctrlEdit ctrlCommit 0;
 _ctrlEdit ctrlSetText (missionNamespace getVariable [QGVAR(utility_message_last), ""]);
 
 private _ctrlCombo = _display ctrlCreate [QGVAR(RscCombo), -1, _ctrlGroup];
-_ctrlCombo ctrlSetPosition [0.1 * TFSRHS_ADMINMENU_STD_WIDTH, _ctrlGrpHeight - TFSRHS_ADMINMENU_STD_HEIGHT, _ctrlGrpWidth * 0.3, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlCombo ctrlSetPosition [0.1 * TFS_ADMINMENU_STD_WIDTH, _ctrlGrpHeight - TFS_ADMINMENU_STD_HEIGHT, _ctrlGrpWidth * 0.3, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlCombo ctrlCommit 0;
 _ctrlCombo lbAdd "Show in Chat";
 _ctrlCombo lbAdd "Show in Hint";
@@ -21,7 +21,7 @@ _ctrlCombo lbAdd "Show in Subtitle from 'PAPA BEAR'";
 _ctrlCombo lbSetCurSel 0;
 
 private _ctrlButtonPreview = _display ctrlCreate [QGVAR(RscButtonMenu), -1, _ctrlGroup];
-_ctrlButtonPreview ctrlSetPosition [(_ctrlGrpWidth * 0.7) - (0.2 * TFSRHS_ADMINMENU_STD_WIDTH), _ctrlGrpHeight - TFSRHS_ADMINMENU_STD_HEIGHT, (_ctrlGrpWidth * 0.15), TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlButtonPreview ctrlSetPosition [(_ctrlGrpWidth * 0.7) - (0.2 * TFS_ADMINMENU_STD_WIDTH), _ctrlGrpHeight - TFS_ADMINMENU_STD_HEIGHT, (_ctrlGrpWidth * 0.15), TFS_ADMINMENU_STD_HEIGHT];
 _ctrlButtonPreview ctrlCommit 0;
 _ctrlButtonPreview ctrlSetText "Preview";
 _ctrlButtonPreview setVariable [QGVAR(association), [_ctrlEdit, _ctrlCombo]];
@@ -33,7 +33,7 @@ _ctrlButtonPreview ctrlAddEventHandler ["buttonClick", {
     private _editText = ctrlText _ctrlEdit;
 
     if (_editText isEqualTo "") then {
-        systemChat "[TFSRHS Admin Menu] Message can't be empty";
+        systemChat "[TFS Admin Menu] Message can't be empty";
     } else {
         private _venue = ["systemChat", "hint", QFUNC(showSubtitle)] select (lbCurSel _ctrlCombo);
 
@@ -43,16 +43,16 @@ _ctrlButtonPreview ctrlAddEventHandler ["buttonClick", {
             if (_venue isEqualTo "hint") then {
                 hint format ["\n\n%1", _editText];
             } else {
-                systemChat format ["[TFSRHS Admin Message] %1", _editText];
+                systemChat format ["[TFS Admin Message] %1", _editText];
             };
         };
 
-        systemChat "[TFSRHS Admin Menu] Message previewed";
+        systemChat "[TFS Admin Menu] Message previewed";
     };
 }];
 
 private _ctrlButtonCommit = _display ctrlCreate [QGVAR(RscButtonMenu), -1, _ctrlGroup];
-_ctrlButtonCommit ctrlSetPosition [(_ctrlGrpWidth * 0.85), _ctrlGrpHeight - TFSRHS_ADMINMENU_STD_HEIGHT, (_ctrlGrpWidth * 0.15) - (0.1 * TFSRHS_ADMINMENU_STD_WIDTH), TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlButtonCommit ctrlSetPosition [(_ctrlGrpWidth * 0.85), _ctrlGrpHeight - TFS_ADMINMENU_STD_HEIGHT, (_ctrlGrpWidth * 0.15) - (0.1 * TFS_ADMINMENU_STD_WIDTH), TFS_ADMINMENU_STD_HEIGHT];
 _ctrlButtonCommit ctrlCommit 0;
 _ctrlButtonCommit ctrlSetText "Send Message";
 _ctrlButtonCommit setVariable [QGVAR(association), [_ctrlEdit, _ctrlCombo]];
@@ -65,7 +65,7 @@ _ctrlButtonCommit ctrlAddEventHandler ["buttonClick", {
     GVAR(utility_message_last) = _editText; // _editText may receive local edits
 
     if (_editText isEqualTo "") then {
-        systemChat "[TFSRHS Admin Menu] Message can't be empty";
+        systemChat "[TFS Admin Menu] Message can't be empty";
     } else {
         private _venue = ["systemChat", "hint", QFUNC(showSubtitle)] select (lbCurSel _ctrlCombo);
 
@@ -75,10 +75,10 @@ _ctrlButtonCommit ctrlAddEventHandler ["buttonClick", {
             if (_venue isEqualTo "hint") then {
                 _editText = format ["\n\n%1", _editText];
             };
-            (format ["[TFSRHS Admin Message] %1", _editText]) remoteExec [_venue, GVAR(utilityData)];
+            (format ["[TFS Admin Message] %1", _editText]) remoteExec [_venue, GVAR(utilityData)];
         };
 
-        systemChat "[TFSRHS Admin Menu] Message sent to player(s)";
+        systemChat "[TFS Admin Menu] Message sent to player(s)";
         [format ["%1 Sent message: ""%2"", via venue: ""%3"", to: %4",profileName,_editText,_venue,GVAR(utilityData) apply {name _x}],false,"Admin Menu"] call FUNC(log);
     };
 }];

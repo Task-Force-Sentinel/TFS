@@ -20,7 +20,7 @@
  * Nothing
  *
  * Example:
- * [player,["arifle_MX_GL_F","","acc_pointer_IR","optic_Aco",["30Rnd_65x39_caseless_mag",30],["1Rnd_SmokeOrange_Grenade_shell",1],""],2] call TFSRHS_boc_fnc_removeWeaponFromChestpack;
+ * [player,["arifle_MX_GL_F","","acc_pointer_IR","optic_Aco",["30Rnd_65x39_caseless_mag",30],["1Rnd_SmokeOrange_Grenade_shell",1],""],2] call TFS_boc_fnc_removeWeaponFromChestpack;
  *
  * Public: No
  */

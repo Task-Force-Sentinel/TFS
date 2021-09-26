@@ -19,7 +19,7 @@ class CfgVehicles
         scope = 2;
         displayName = "Spectator: Show Objective";
         category = "Teamwork";
-        icon = "\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa";
+        icon = "\z\tfs\addons\media\images\TFSLOGO@0.25x.paa";
         function = QFUNC(objectiveModule);
         functionPriority = 0;
         isGlobal = 2;
@@ -66,7 +66,7 @@ class CfgVehicles
     class VirtualMan_F;
     class GVAR(unit) : VirtualMan_F {
         author = ADDON;
-        displayName = "TFSRHS Spectator";
+        displayName = "TFS Spectator";
         scope = 2;
         scopeCurator = 1;
         scopeArsenal = 1;

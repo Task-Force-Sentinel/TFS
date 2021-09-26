@@ -1,7 +1,7 @@
 // not documented: postInit
 if !(hasInterface && (isClass (configFile >> "CfgPatches" >> "ace_main"))) exitWith {};
 
-TFSRHS_ActionIDs = [];
+TFS_ActionIDs = [];
 
 _action = [
 	"CreatorActions",
@@ -14,13 +14,13 @@ _action = [
 [player, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 [["ACE_ZeusActions"], _action] call ACE_interact_menu_fnc_addActionToZeus;
 
-["TFSRHS_RegisterCreatorAction", {
+["TFS_RegisterCreatorAction", {
 	params ["_action", "_actionPath", "_actionName"];
 
-	if (_actionName in TFSRHS_ActionIDs) exitWith {};
+	if (_actionName in TFS_ActionIDs) exitWith {};
 
 	[player, 1, ["ACE_SelfActions", "CreatorActions"] + _actionPath, _action] call ace_interact_menu_fnc_addActionToObject;
 	[["ACE_ZeusActions", "CreatorActions"] + _actionPath, _action] call ACE_interact_menu_fnc_addActionToZeus;
 
-	TFSRHS_ActionIDs pushBack _actionName;
+	TFS_ActionIDs pushBack _actionName;
 }] call CBA_fnc_addEventHandler;

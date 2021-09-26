@@ -1,9 +1,9 @@
-class TFSRHS_FOBs {
+class TFS_FOBs {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class FOBs {
 
-		file = "z\tfsrhs\addons\FOBs\Functions";
+		file = "z\tfs\addons\FOBs\Functions";
 
 		class modulePortableFOB_Camp {};
 		class modulePortableFOB_Small {};
@@ -19,7 +19,7 @@ class TFSRHS_FOBs {
 	};
 
 	class Compositions_Camp {
-		file = "z\tfsrhs\addons\FOBs\Functions\Compositions\Camps";
+		file = "z\tfs\addons\FOBs\Functions\Compositions\Camps";
 
 		class Camp_1 {};
 		class Camp_2 {};
@@ -31,7 +31,7 @@ class TFSRHS_FOBs {
 	};
 
 	class Compositions_Small {
-		file = "z\tfsrhs\addons\FOBs\Functions\Compositions\Small";
+		file = "z\tfs\addons\FOBs\Functions\Compositions\Small";
 
 		class Small_AA_Pos {};
 		class Small_AT_Pos {};
@@ -55,7 +55,7 @@ class TFSRHS_FOBs {
 	};
 
 	class Compositions_Medium {
-		file = "z\tfsrhs\addons\FOBs\Functions\Compositions\Medium";
+		file = "z\tfs\addons\FOBs\Functions\Compositions\Medium";
 
 		class Medium_Bunker_1 {};
 		class Medium_Bunker_2 {};
@@ -85,7 +85,7 @@ class TFSRHS_FOBs {
 	};
 
 	class Compositions_Large {
-		file = "z\tfsrhs\addons\FOBs\Functions\Compositions\Large";
+		file = "z\tfs\addons\FOBs\Functions\Compositions\Large";
 
 		class Large_Bunker_1 {};
 		class Large_Bunker_2 {};

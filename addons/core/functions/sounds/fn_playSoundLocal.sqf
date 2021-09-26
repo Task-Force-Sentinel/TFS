@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_playSoundLocal.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_playSoundLocal.sqf
  *	by Ojemineh
  *
  *	play sound for single player
@@ -13,7 +13,7 @@
  *	nothing
  *
  *	Example:
- *	["Earthquake_01"] call TFSRHS_fnc_playSoundLocal;
+ *	["Earthquake_01"] call TFS_fnc_playSoundLocal;
  *
  */
 

@@ -1,7 +1,7 @@
 class CfgFactionClasses {
     class NO_CATEGORY;
-    class TFSRHS_boc: NO_CATEGORY {
-        displayName = "TFSRHS BackpackOnChest";
+    class TFS_boc: NO_CATEGORY {
+        displayName = "TFS BackpackOnChest";
         priority = 2;
         side = 7;
     };

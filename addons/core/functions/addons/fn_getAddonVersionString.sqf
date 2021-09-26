@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\addons\fn_getAddonVersionString.sqf
+ *	\z\tfs\addons\core\functions\addons\fn_getAddonVersionString.sqf
  *	by Ojemineh
  *	
  *	get addon version string
@@ -12,7 +12,7 @@
  *	<STRING>
  *	
  *	Example:
- *	["tfsrhs_core"] call TFSRHS_fnc_getAddonVersionString;
+ *	["tfs_core"] call TFS_fnc_getAddonVersionString;
  *	
  */
 

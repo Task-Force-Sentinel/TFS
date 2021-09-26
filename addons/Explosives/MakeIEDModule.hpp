@@ -1,10 +1,10 @@
-class TFSRHS_ModuleIED: Module_F
+class TFS_ModuleIED: Module_F
 {
 	scope = 2;
 	displayName = "Create IED";
 	icon = "a3\ui_f\data\GUI\Cfg\Hints\IEDs_CA.paa"; //todo: find better icon
 	category = "Task Force Sentinel";
-	function = "TFSRHS_fnc_moduleMakeIED";
+	function = "TFS_fnc_moduleMakeIED";
 	functionPriority = 2;
 	isGlobal = 1;
 	isTriggerActivated = 0;
@@ -14,7 +14,7 @@ class TFSRHS_ModuleIED: Module_F
 	{
 		class DetTime: Edit
   			{
-				property = "TFSRHS_IED_DetTime";
+				property = "TFS_IED_DetTime";
 				displayName = "Detonation Delay";
 				tooltip = "Time in seconds until the IED explodes after being triggered";
 				typeName = "NUMBER";
@@ -23,7 +23,7 @@ class TFSRHS_ModuleIED: Module_F
 
 		class ProxRadius: Edit
 		{
-			property = "TFSRHS_IED_ProxRadius";
+			property = "TFS_IED_ProxRadius";
 			displayName = "Trigger Proximity Radius";
 			description = "Radius in m around the IED where players will trigger the detonation timer";
 			typeName = "Number";
@@ -31,21 +31,21 @@ class TFSRHS_ModuleIED: Module_F
 		};
         class Secondaries: Checkbox
         {
-            property = "TFSRHS_IED_Secondaries";
+            property = "TFS_IED_Secondaries";
             displayName = "Secondary Explosions";
             description = "Enable/disable random secondary explosives around the IED";
             defaultValue = true;
         };
         class Announce: Checkbox
         {
-            property = "TFSRHS_IED_Announce";
+            property = "TFS_IED_Announce";
             displayName = "Announcements";
             description = "Enable/disable announcements when the IED is triggered, when it explodes and in certain intervals during the detonation countdown (see Announce Interval)";
             defaultValue = false;
         };
 		class AnnInterval: Edit
 		{
-			property = "TFSRHS_IED_AnnInterval";
+			property = "TFS_IED_AnnInterval";
 			displayName = "Announce Interval";
 			description = "Interval in seconds between announcements, ignore if 'Announcements' are disabled";
 			typeName = "Number";
@@ -53,7 +53,7 @@ class TFSRHS_ModuleIED: Module_F
 		};
         class ReqDefKit: Checkbox
         {
-            property = "TFSRHS_IED_ReqDefKit";
+            property = "TFS_IED_ReqDefKit";
             displayName = "Require Defusal Kit";
             description = "If enabled, players require an ACE defusal kit in order to be able to defuse the IED";
             defaultValue = true;

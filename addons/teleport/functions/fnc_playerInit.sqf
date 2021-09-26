@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\teleport\script_component.hpp"
+#include "\z\tfs\addons\teleport\script_component.hpp"
 params ["_duration","_alt","_parachute","_leadersOnly"];
 _str = [];
 if(_leadersOnly) then {_str pushBack "group"};

@@ -1,23 +1,23 @@
 class CfgFunctions {
 	
-	class TFSRHS_core {
+	class TFS_core {
 		
-		tag = "tfsrhs_core";
+		tag = "tfs_core";
 		
 		class core {
-			file = "z\tfsrhs\addons\core\functions";
+			file = "z\tfs\addons\core\functions";
 			class initialize {};
 			class initSettings {};
 		};
 		
 	};
 	
-	class TFSRHS_Functions {
+	class TFS_Functions {
 		
-		tag = "tfsrhs";
+		tag = "tfs";
 		
 		class Addons {
-			file = "z\tfsrhs\addons\core\functions\addons";
+			file = "z\tfs\addons\core\functions\addons";
 			class getAddonAuthor {};
 			class getAddonAuthors {};
 			class getAddonName {};
@@ -33,7 +33,7 @@ class CfgFunctions {
 		};
 		
 		class core {
-			file = "z\tfsrhs\addons\core\functions\common";
+			file = "z\tfs\addons\core\functions\common";
 			class addItem {};
 			class attachToRel {};
 			class createLitter {};
@@ -47,7 +47,7 @@ class CfgFunctions {
 		};
 		
 		class Diagnostic {
-			file = "z\tfsrhs\addons\core\functions\diagnostics";
+			file = "z\tfs\addons\core\functions\diagnostics";
 			class diagLog {};
 			class diagLogGlobal {};
 			class diagLogServer {};
@@ -58,14 +58,14 @@ class CfgFunctions {
 		};
 				
 		class Settings {
-			file = "z\tfsrhs\addons\core\functions\settings";
+			file = "z\tfs\addons\core\functions\settings";
 			class getKeybindString {};
 			class needRestart {};
 			class needRestartLocal {};
 		};
 		
 		class Sounds {
-			file = "z\tfsrhs\addons\core\functions\sounds";
+			file = "z\tfs\addons\core\functions\sounds";
 			class decibelToGain {};
 			class gainToDecibel {};
 			class getSoundDistance {};
@@ -90,7 +90,7 @@ class CfgFunctions {
 		};
 		
 		class Videos {
-			file = "z\tfsrhs\addons\core\functions\videos";
+			file = "z\tfs\addons\core\functions\videos";
 			class playVideo {};
 			class playVideoOnce {};
 			class videoKeyDown {};

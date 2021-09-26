@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\respawn\script_component.hpp"
+#include "\z\tfs\addons\respawn\script_component.hpp"
 
 disableSerialization;
 params["_input",["_params",[]]];
@@ -27,7 +27,7 @@ switch _input do {
                 if (isPlayer _x) then { //not all of them will be players.
                     GVAR(deadPlayerList) pushBack _x;  
                 };
-            } forEach ([0,0,0] nearEntities ["TFSRHS_spectator_unit",500]);
+            } forEach ([0,0,0] nearEntities ["TFS_spectator_unit",500]);
             {
                 if (!alive _x) then { //not all of them will be players.
                     GVAR(deadPlayerList) pushBackUnique _x;  
@@ -45,7 +45,7 @@ switch _input do {
         // Build up a pool of who is using what faction from assign gear.
         private _playerFactions = [] call CBA_fnc_hashCreate;
         {
-            private _faction = _x getVariable ["TFSRHS_assignGear_faction",""];
+            private _faction = _x getVariable ["TFS_assignGear_faction",""];
             if (_faction != "") then {
                 if ([_playerFactions,_faction] call CBA_fnc_hashHasKey) then {
                     private _value = [_playerFactions,_faction] call CBA_fnc_hashGet;
@@ -270,7 +270,7 @@ switch _input do {
                     if (isPlayer _x) then { //not all of them will be players.
                         _deadList pushBack _x;  
                     };
-                } forEach ([0,0,0] nearEntities ["TFSRHS_spectator_unit",500]);
+                } forEach ([0,0,0] nearEntities ["TFS_spectator_unit",500]);
                 {
                     if (!alive _x) then { //not all of them will be players.
                         _deadList pushBackUnique _x;
@@ -309,7 +309,7 @@ switch _input do {
         /* Fill Faction categories */
         private _playerFactions = [] call CBA_fnc_hashCreate;
         {
-            private _faction = _x getVariable ["TFSRHS_assignGear_faction",""];
+            private _faction = _x getVariable ["TFS_assignGear_faction",""];
             if (_faction != "") then {
                 if ([_playerFactions,_faction] call CBA_fnc_hashHasKey) then {
                     private _value = [_playerFactions,_faction] call CBA_fnc_hashGet;
@@ -411,7 +411,7 @@ switch _input do {
             } forEach GVAR(selectedRespawnGroup);
             
             if (!_found) then {
-                private _name = _deadPlayer getVariable ["TFSRHS_spectator_name",name _deadPlayer];
+                private _name = _deadPlayer getVariable ["TFS_spectator_name",name _deadPlayer];
                 private _idx = _ctrlDeadListBox lbAdd _name;
                 _ctrlDeadListBox lbSetData[_idx,_name];
             };
@@ -421,7 +421,7 @@ switch _input do {
         lbClear _ctrlGroupListBox;
         {
             _x params ["_rankIdx","_obj", "_roleIdx"];
-            private _name = _obj getVariable ["TFSRHS_spectator_name",name _obj];
+            private _name = _obj getVariable ["TFS_spectator_name",name _obj];
             private _idx = _ctrlGroupListBox lbAdd format["%1 - %2", _name, (respawnMenuRoles select _roleIdx) select 1];
            //Set image based on rank
             switch (_rankIdx) do {
@@ -444,7 +444,7 @@ switch _input do {
         
         private _obj = objNull;
         {
-            private _name = _x getVariable ["TFSRHS_spectator_name",name _x];
+            private _name = _x getVariable ["TFS_spectator_name",name _x];
             if (_selection == _name) exitWith {
                 _obj = _x;
             };
@@ -516,7 +516,7 @@ switch _input do {
     case "respawnMapLoaded": {
         private _mapCtrl = ((findDisplay 26950) displayCtrl 26902);//_this select 0;//
         private _pos = [0,0,0];
-        if (alive player && !(player isKindOf "TFSRHS_spectator_unit")) then {
+        if (alive player && !(player isKindOf "TFS_spectator_unit")) then {
           _pos = getPos player;  
         } else {
             if (count playableUnits > 0) then {
@@ -550,7 +550,7 @@ switch _input do {
         if (_type == 0) then { // left click
             private _i = 1;
             private _found = false;
-            private _var = missionNamespace getVariable[format["TFSRHS_respawnPoint%1",_i],objNull];
+            private _var = missionNamespace getVariable[format["TFS_respawnPoint%1",_i],objNull];
             while {!(isNull _var)} do {
                 private _pos = (position _var);
                 if (([_x,_y] distance (_fullmapWindow posWorldToScreen _pos)) < 0.1) then {
@@ -558,7 +558,7 @@ switch _input do {
                     _found = true;
                 };
                 _i = _i + 1;
-                _var = missionNamespace getVariable[format["TFSRHS_respawnPoint%1",_i],objNull];
+                _var = missionNamespace getVariable[format["TFS_respawnPoint%1",_i],objNull];
             };
             if (!_found) then {
                 GVAR(respawnMousePos) = _fullmapWindow posScreenToWorld [_x,_y];
@@ -579,7 +579,7 @@ switch _input do {
                     _position = GVAR(respawnMousePos);  
                     _halo = GVAR(respawnHalo);
                 } else {
-                    private _var = missionNamespace getVariable[format["TFSRHS_respawnPoint%1",GVAR(respawnMousePos)],objNull];
+                    private _var = missionNamespace getVariable[format["TFS_respawnPoint%1",GVAR(respawnMousePos)],objNull];
                     if (!isNull _var) then {
                         _position = position _var;
                     };

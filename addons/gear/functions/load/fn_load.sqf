@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\gear\functions\load\fn_load.sqf
+ *	\z\tfs\addons\gear\functions\load\fn_load.sqf
  *	by Ojemineh
  *
  *	load files
@@ -15,7 +15,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "curator"] call TFSRHS_gear_fnc_load;
+ *	[player, "curator"] call TFS_gear_fnc_load;
  *
  */
 
@@ -35,7 +35,7 @@ if (isNull _unit) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 if (Not local _unit) exitWith {
-	[_unit, _role, _type, _team] remoteExecCall ["TFSRHS_gear_fnc_load", _unit];
+	[_unit, _role, _type, _team] remoteExecCall ["TFS_gear_fnc_load", _unit];
 };
 
 // -------------------------------------------------------------------------------------------------
@@ -58,13 +58,13 @@ if (_team isEqualTo "") then { _team = _gear_team; };
 
 if (GEAR_KEEP_GOGGLES) then {
 	if ((goggles _unit) != "") then {
-		_unit setVariable ["TFSRHS_gear_goggles", (goggles _unit)];
+		_unit setVariable ["TFS_gear_goggles", (goggles _unit)];
 	};
 };
 
 // -------------------------------------------------------------------------------------------------
 
-[_unit] call TFSRHS_gear_fnc_removeAll;
+[_unit] call TFS_gear_fnc_removeAll;
 
-[_unit, _role, _type, _team] call TFSRHS_gear_fnc_load_loadout;
-[_unit, _role, _type, _team] call TFSRHS_gear_fnc_load_properties;
+[_unit, _role, _type, _team] call TFS_gear_fnc_load_loadout;
+[_unit, _role, _type, _team] call TFS_gear_fnc_load_properties;

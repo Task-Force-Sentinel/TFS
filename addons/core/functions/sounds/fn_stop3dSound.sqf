@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_stop3dSound.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_stop3dSound.sqf
  *	by Ojemineh
  *
  *	stop 3d sound
@@ -13,7 +13,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "AlarmBell"] call TFSRHS_fnc_stop3dSound;
+ *	[player, "AlarmBell"] call TFS_fnc_stop3dSound;
  *
  */
 
@@ -30,4 +30,4 @@ if (isNull _object) exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
-[_object, _soundClass] remoteExecCall ["TFSRHS_fnc_stop3dSoundLocal", 0, true];
+[_object, _soundClass] remoteExecCall ["TFS_fnc_stop3dSoundLocal", 0, true];

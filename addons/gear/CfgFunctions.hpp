@@ -1,17 +1,17 @@
 class CfgFunctions {
 
-	class TFSRHS_Gear {
+	class TFS_Gear {
 
-		tag = "TFSRHS_gear";
+		tag = "TFS_gear";
 
 		class Gear {
-			file = "\z\tfsrhs\addons\gear\functions";
+			file = "\z\tfs\addons\gear\functions";
 			class initialize {};
 			class initSettings {};
 		};
 
 		class Common {
-			file = "\z\tfsrhs\addons\gear\functions\common";
+			file = "\z\tfs\addons\gear\functions\common";
 			class initPlayer {};
 			class removeAll {};
 			class restore {};
@@ -20,7 +20,7 @@ class CfgFunctions {
 		};
 
 		class Load {
-			file = "\z\tfsrhs\addons\gear\functions\load";
+			file = "\z\tfs\addons\gear\functions\load";
 			class load {};
 			class load_loadout {};
 			class load_properties {};

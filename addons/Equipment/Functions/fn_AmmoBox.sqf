@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_Ammobox
+Function: TFS_fnc_Ammobox
 
 Description:
 	Used to configure basic container Ammo state.
@@ -10,8 +10,8 @@ Arguments:
 
 Examples:
 	(begin example)
-		[this] call TFSRHS_fnc_Ammobox;
-		[this, "Aegis"] call TFSRHS_fnc_Ammobox;
+		[this] call TFS_fnc_Ammobox;
+		[this, "Aegis"] call TFS_fnc_Ammobox;
 	(end)
 
 Author:
@@ -26,7 +26,7 @@ params [
 	["_Type", "None"]
 ];
 
-private _Type = _container getVariable ["TFSRHS_LimitedAmmoSelect", -1];
+private _Type = _container getVariable ["TFS_LimitedAmmoSelect", -1];
 
 if ((_Type isEqualto -1) || (_Type isEqualTo "None")) exitwith {};
 

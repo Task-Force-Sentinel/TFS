@@ -1,8 +1,8 @@
-#include "\z\tfsrhs\addons\autotest\script_component.hpp"
+#include "\z\tfs\addons\autotest\script_component.hpp"
 
 private _output = [];
 
-private _briefingArray = getMissionConfigValue ["TFSRHS_Briefing","[]"];
+private _briefingArray = getMissionConfigValue ["TFS_Briefing","[]"];
 if (_briefingArray isEqualTo "[]") exitWith {[]};
 if (_briefingArray isEqualType "") then { _briefingArray = call compile _briefingArray;};
 
@@ -37,7 +37,7 @@ private _conditions = [];
             _units = _units select {_faction != (faction (leader _x))};
         };
         if (_x isEqualType 0) then {
-            private _side = _x call tfsrhs_common_fnc_numToSide;
+            private _side = _x call tfs_common_fnc_numToSide;
             _units = _units select {_side != side _x};
         };
         if (_x isEqualType east) then {
@@ -53,9 +53,9 @@ private _conditions = [];
     private _unit = _x;
     private _unitGroup = group _unit;
     
-    private _groupCond = _unitGroup getVariable ["TFSRHS_Briefinglist", []];
+    private _groupCond = _unitGroup getVariable ["TFS_Briefinglist", []];
     if (_groupCond isEqualType "") then { _groupCond = call compile _groupCond; };
-    private _unitCond = _unit getVariable ["TFSRHS_Briefinglist", []];
+    private _unitCond = _unit getVariable ["TFS_Briefinglist", []];
     if (_unitCond isEqualType "") then { _unitCond = call compile _unitCond; };
     
     if (count (_groupCond + _unitCond) > 0) then {

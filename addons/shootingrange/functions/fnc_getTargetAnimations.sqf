@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * _anims = target call TFSRHS_shootingrange_fnc_getTargetAnimations;
+ * _anims = target call TFS_shootingrange_fnc_getTargetAnimations;
  *
  * Public: No
  */

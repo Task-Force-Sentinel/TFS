@@ -1,5 +1,5 @@
 /*
- * Name: TFSRHS_common_fnc_drawLines
+ * Name: TFS_common_fnc_drawLines
  * Author: Head
  *
  * Arguments:

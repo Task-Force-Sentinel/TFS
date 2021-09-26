@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\teleport\script_component.hpp"
+#include "\z\tfs\addons\teleport\script_component.hpp"
 params ["_unit","_pos"];
 
 if (!local _unit) exitWith {};

@@ -11,7 +11,7 @@
  * Cargo container or objNull <OBJECT>
  *
  * Example:
- * [player] call TFSRHS_boc_fnc_chestpackContainer;
+ * [player] call TFS_boc_fnc_chestpackContainer;
  *
  * Public: No
  */

@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_SpawnCivilians
+Function: TFS_fnc_SpawnCivilians
 
 Description:
     Used to populate an area with a certain type of civilians. Spawns pedestrian
@@ -28,7 +28,7 @@ Example:
 		    [13, 25],
 		    [2, 4],
 		    [1, 3]
-		] call TFSRHS_fnc_SpawnCivilians;
+		] call TFS_fnc_SpawnCivilians;
 	(end)
 
 Author:
@@ -60,7 +60,7 @@ params [
 	["_vehparked", [0, 0]]
 ];
 
-private _AIReporting = TFSRHS_AI_Reporting;
+private _AIReporting = TFS_AI_Reporting;
 
 _typeNameCenter = typeName _center;
 
@@ -78,7 +78,7 @@ _ped params ["_pedMin", "_pedMax"];
 _vehpatrol params ["_vehpatrolMin", "_vehpatrolMax"];
 _vehparked params ["_vehparkedMin", "_vehparkedMax"];
 
-_GetFactionArrays = compileFinal format ["call TFSRHS_fnc_%1", _faction];
+_GetFactionArrays = compileFinal format ["call TFS_fnc_%1", _faction];
 _FactionArrays = call _GetFactionArrays;
 _FactionArrays params ["_pedPool", "_motPool"];
 
@@ -105,7 +105,7 @@ if (count _roadList < _minPositions) then {
 // If we still don't have enough positions, fill the remaining spots up with random positions
 if (count _roadList < _minPositions) then {
 	while {count _roadList < _minPositions} do {
-		_rpos = [[[_center, _radius],[]],["water"]] call TFSRHS_fnc_SafePos;
+		_rpos = [[[_center, _radius],[]],["water"]] call TFS_fnc_SafePos;
 		_roadList append [_rpos];
 	};
 };
@@ -131,7 +131,7 @@ if !(_pedPool isEqualTo []) then {
             [0, _GarrRadius],
             _faction, _side,
 			_pedPool, _garrisonsExact
-        ] call TFSRHS_fnc_CivilianGarrison;
+        ] call TFS_fnc_CivilianGarrison;
 
         _units append _garrisonedUnits;
 
@@ -142,7 +142,7 @@ if !(_pedPool isEqualTo []) then {
         { _x setGroupIdGlobal [format["%1_gar%2", _grpPrefix, _forEachIndex]]; } forEach _grps;
     };
 } else {
-    if (_AIReporting && { _garrisonsMax > 0 }) exitwith {systemchat format ["TFSRHS Fundamentals: INFO: %1 no Civilian peds to select from. Step skipped.",_faction]};
+    if (_AIReporting && { _garrisonsMax > 0 }) exitwith {systemchat format ["TFS Fundamentals: INFO: %1 no Civilian peds to select from. Step skipped.",_faction]};
 };
 
 ///////////////////////////////////////////////////////////
@@ -160,11 +160,11 @@ if !(_pedPool isEqualTo []) then {
         _g setGroupIdGlobal [format["%1_inf%2", _grpPrefix, _x]];
 
 		// Setup patrol task
-		[_g, _roadList] call TFSRHS_fnc_CivilianPatrol;
+		[_g, _roadList] call TFS_fnc_CivilianPatrol;
         _units append (units _g);
     };
 } else {
-    if (_AIReporting && { _pedMax > 0 }) exitwith {systemchat format ["TFSRHS Fundamentals: INFO: %1 no Civilian peds to select from. Step skipped.",_faction]};
+    if (_AIReporting && { _pedMax > 0 }) exitwith {systemchat format ["TFS Fundamentals: INFO: %1 no Civilian peds to select from. Step skipped.",_faction]};
 };
 
 
@@ -201,12 +201,12 @@ if !((_motPool isEqualTo []) || (_pedPool isEqualTo [])) then {
 		_u moveInDriver _v;
 
 		// Setup patrol task
-		[_g, _roadList] call TFSRHS_fnc_CivilianPatrol;
+		[_g, _roadList] call TFS_fnc_CivilianPatrol;
         _units append (units _g);
 		_vehicles append [_v];
     };
 } else {
-    if (_AIReporting && { _vehpatrolMax > 0 }) exitwith {systemchat format ["TFSRHS Fundamentals: INFO: %1 no Civilian peds or vehicles to select from. Step skipped.",_faction]};
+    if (_AIReporting && { _vehpatrolMax > 0 }) exitwith {systemchat format ["TFS Fundamentals: INFO: %1 no Civilian peds or vehicles to select from. Step skipped.",_faction]};
 };
 
 ///////////////////////////////////////////////////////////
@@ -236,7 +236,7 @@ if !(_motPool isEqualTo []) then {
         _vehicles append [_v];
     };
 } else {
-    if (_AIReporting && { _vehparkedMax > 0 }) exitwith {systemchat format ["TFSRHS Fundamentals: INFO: %1 no Civilian vehicles to select from. Step skipped.",_faction]};
+    if (_AIReporting && { _vehparkedMax > 0 }) exitwith {systemchat format ["TFS Fundamentals: INFO: %1 no Civilian vehicles to select from. Step skipped.",_faction]};
 };
 
 // Set up dynamic sim and curator stuff

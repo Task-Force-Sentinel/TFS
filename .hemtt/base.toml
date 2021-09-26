@@ -1,6 +1,6 @@
-name = "TFSRHS"
-prefix = "tfsrhs"
-author = "TFSRHS"
+name = "TFS"
+prefix = "tfs"
+author = "TFS"
 template = "cba"
 mainprefix = "z"
 folder_optionals = true
@@ -25,7 +25,7 @@ check = [
     "!version_set"
 ]
 releasebuild = [
-    "@zip TFSRHS_v{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}",
+    "@zip TFS_v{{semver.major}}.{{semver.minor}}.{{semver.patch}}.{{semver.build}}",
     "!version_unset"
 ]
 

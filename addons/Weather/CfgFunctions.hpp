@@ -1,10 +1,10 @@
 
-class TFSRHS_Weather {
+class TFS_Weather {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class Weather {
 
-		file = "z\tfsrhs\addons\Weather\Functions";
+		file = "z\tfs\addons\Weather\Functions";
 		class RealWeather {};
 
 	};

@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\gear\functions\load\fn_load_properties.sqf
+ *	\z\tfs\addons\gear\functions\load\fn_load_properties.sqf
  *	by Ojemineh
  *
  *	load properties
@@ -15,7 +15,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "curator"] call TFSRHS_gear_fnc_load_properties;
+ *	[player, "curator"] call TFS_gear_fnc_load_properties;
  *
  */
 
@@ -35,7 +35,7 @@ if (isNull _unit) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 if (Not local _unit) exitWith {
-	[_unit, _role, _type, _team] remoteExecCall ["TFSRHS_gear_fnc_load_properties", _unit];
+	[_unit, _role, _type, _team] remoteExecCall ["TFS_gear_fnc_load_properties", _unit];
 };
 
 // -------------------------------------------------------------------------------------------------
@@ -58,7 +58,7 @@ if (_team isEqualTo "") then { _team = _gear_team; };
 private _file = format ["%1\%2\%3\%4\properties.hpp", _loadout_path, _team, _role, _type];
 private _data = [] call compile preprocessFileLineNumbers _file;
 
-if (isNil "_data") exitWith {[4, "Can't read unit-properties from file (%1)", [_file], "gear"] call TFSRHS_fnc_log;};
+if (isNil "_data") exitWith {[4, "Can't read unit-properties from file (%1)", [_file], "gear"] call TFS_fnc_log;};
 
 private _data_insignia	= (_data select 0);
 private _data_rank		= (_data select 1);
@@ -71,7 +71,7 @@ private _data_safety	= (_data select 5);
 
 // INSIGNIA
 if (_data_insignia != "") then {
-	[_unit, _data_insignia] call TFSRHS_fnc_setUnitInsignia;
+	[_unit, _data_insignia] call TFS_fnc_setUnitInsignia;
 };
 
 // -------------------------------------------------------------------------------------------------
@@ -123,17 +123,17 @@ if (count _data_safety > 0) then {
 
 	private _safety_primary = (_data_safety select 0);
 	if (_safety_primary > 0) then {
-		[_unit, (primaryWeapon _unit), (primaryWeapon _unit), false] call TFSRHS_fnc_weaponLock;
+		[_unit, (primaryWeapon _unit), (primaryWeapon _unit), false] call TFS_fnc_weaponLock;
 	};
 
 	private _safety_secondary = (_data_safety select 1);
 	if (_safety_secondary > 0) then {
-		[_unit, (secondaryWeapon _unit), (secondaryWeapon _unit), false] call TFSRHS_fnc_weaponLock;
+		[_unit, (secondaryWeapon _unit), (secondaryWeapon _unit), false] call TFS_fnc_weaponLock;
 	};
 
 	private _safety_handgun = (_data_safety select 2);
 	if (_safety_handgun > 0) then {
-		[_unit, (handgunWeapon _unit), (handgunWeapon _unit), false] call TFSRHS_fnc_weaponLock;
+		[_unit, (handgunWeapon _unit), (handgunWeapon _unit), false] call TFS_fnc_weaponLock;
 	};
 
 };

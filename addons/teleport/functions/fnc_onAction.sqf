@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\teleport\script_component.hpp"
+#include "\z\tfs\addons\teleport\script_component.hpp"
 params ["_target","_caller","_id","_args"];
 _args params ["_duration","_alt","_parachute","_leadersOnly"];
 

@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_makeIED
+Function: TFS_fnc_makeIED
 
 Description:
 	Sets up a given object as an IED. The explosive will be armed and
@@ -23,7 +23,7 @@ Description:
 	IED. Once disarmed it cannot be primed again.
 
 	Note: ACE is absolutely necessary for using this function. Please use
-	TFSRHS_fnc_IEDVehicle for a vanilla alternative, restricted to land vehicles.
+	TFS_fnc_IEDVehicle for a vanilla alternative, restricted to land vehicles.
 
 Arguments:
 	_object - The object which shall be initialized as an IED <OBJECT>
@@ -48,7 +48,7 @@ Examples:
 			true,
 			30,
 			true
-		] call TFSRHS_fnc_makeIED;
+		] call TFS_fnc_makeIED;
 	(end)
 
 Author:
@@ -89,19 +89,19 @@ if (hasInterface && {
 		"",
 		_condition,
 		"true",
-		{["You've started disarming the IED.", [-1, 0.8], "#339900", 0.5, false] call TFSRHS_fnc_dynamicText;},
-		{["Disarming the IED.", [-1, 0.8], "#339900", 0.5, false] call TFSRHS_fnc_dynamicText;},
+		{["You've started disarming the IED.", [-1, 0.8], "#339900", 0.5, false] call TFS_fnc_dynamicText;},
+		{["Disarming the IED.", [-1, 0.8], "#339900", 0.5, false] call TFS_fnc_dynamicText;},
 		{
 			(_this select 0) setVariable ["IEDdisarmed", true, true];
-			["You've disarmed the IED.", [-1, 0.8], "#339900", 0.5, false] call TFSRHS_fnc_dynamicText;
+			["You've disarmed the IED.", [-1, 0.8], "#339900", 0.5, false] call TFS_fnc_dynamicText;
 		},
-		{["The IED was not disarmed.", [-1, 0.8], "#339900", 0.5, false] call TFSRHS_fnc_dynamicText;},
+		{["The IED was not disarmed.", [-1, 0.8], "#339900", 0.5, false] call TFS_fnc_dynamicText;},
 		[],
 		10 + random 10,
 		true,
 		"Disarming IED",
 		false
-	] call TFSRHS_fnc_AddHoldAction;
+	] call TFS_fnc_AddHoldAction;
 };
 
 if (!isServer) exitWith {};
@@ -140,7 +140,7 @@ hideObjectGlobal _explosive;
 					[
 						format ["The IED has been armed and will detonate in %1 seconds!",_detonationTime],
 						[-1, 0.8],"#cc3232", 0.5, true
-					] call TFSRHS_fnc_dynamicText;
+					] call TFS_fnc_dynamicText;
 				};
 			};
 		} forEach allPlayers;
@@ -186,7 +186,7 @@ hideObjectGlobal _explosive;
 			[
 				format ["The IED will detonate in %1 seconds!",_timeLeft],
 				[-1, 0.8], "#cc3232", 0.5, true
-			] call TFSRHS_fnc_dynamicText;
+			] call TFS_fnc_dynamicText;
 		};
 
 		// If the delta of startTime and current time exceeds the detonation timer,
@@ -200,7 +200,7 @@ hideObjectGlobal _explosive;
 				[
 					"Time's out, the IED could detonate any second!",
 					[-1, 0.8], "#cc3232", 0.5, true
-				] call TFSRHS_fnc_dynamicText;
+				] call TFS_fnc_dynamicText;
 			};
 
 			_detIn = _timeLeft + random (3) - 1.5;
@@ -215,12 +215,12 @@ hideObjectGlobal _explosive;
 						_secArray = [(ceil (random 6) + 2), (random 4 + 1), (random 2 + 1)];
 					};
 					_pos = position _object;
-					// Detonate using TFSRHS_fnc_SpawnExplosives.
+					// Detonate using TFS_fnc_SpawnExplosives.
 					[
 						0,
 						_pos,
 						_secArray
-					] call TFSRHS_fnc_SpawnExplosives;
+					] call TFS_fnc_SpawnExplosives;
 
 					_bomb = "SatchelCharge_Remote_Ammo_Scripted" createVehicle (_pos);
 					_bomb setDamage 1;

@@ -15,41 +15,41 @@ class RscText;
 
 class cfgScriptPaths 
 {
-    TFSRHS_briefing = "z\tfsrhs\addons\briefing\ui_scripts\"; //" - Escape for VS code linter
+    TFS_briefing = "z\tfs\addons\briefing\ui_scripts\"; //" - Escape for VS code linter
 };
 
 class Cfg3DEN
 {
     class Mission
     {
-        class TFSRHS_MissionBriefingAttributes // Custom section class, everything inside will be opened in one window (MySection)
+        class TFS_MissionBriefingAttributes // Custom section class, everything inside will be opened in one window (MySection)
         {
-            displayName = "TFSRHS Briefing settings"; // Text visible in the window title as "Edit <displayName>"
+            displayName = "TFS Briefing settings"; // Text visible in the window title as "Edit <displayName>"
             //display = "Display3DENEditAttributesPreview"; // Optional - display for attributes window. Must have the same structure and IDCs as the default Display3DENEditAttributes
             class AttributeCategories
             {
-                class TFSRHS_BriefingSettings
+                class TFS_BriefingSettings
                 {
-                    displayName = "TFSRHS: Briefing settings"; // Category name visible in Edit Attributes window
+                    displayName = "TFS: Briefing settings"; // Category name visible in Edit Attributes window
                     collapsed = 0; // When 1, the category is collapsed by default
                     class Attributes
                     {
-                        class TFSRHS_Briefing_Loadout
+                        class TFS_Briefing_Loadout
                         {
-                            property = "TFSRHS_Briefing_Loadout";
+                            property = "TFS_Briefing_Loadout";
                             displayName = "Create loadout page";
                             tooltip = "Create briefing section that contains a list of all equipment of everyone in the players group and theirself.";
                             control = "Checkbox";
-                            //expression = "missionNamespace setVariable ['TFSRHS_Briefing_Loadout',_value];";
+                            //expression = "missionNamespace setVariable ['TFS_Briefing_Loadout',_value];";
                             defaultValue = "false";
                             condition = "1";
                         };
-                        class TFSRHS_Briefing
+                        class TFS_Briefing
                         {
-                            property = "TFSRHS_Briefing";
+                            property = "TFS_Briefing";
                             displayName = "";
                             control = "BriefingSettings";
-                            //expression = "missionNamespace setVariable ['TFSRHS_BriefingArray',_value];";
+                            //expression = "missionNamespace setVariable ['TFS_BriefingArray',_value];";
                             //tooltip = "How much should terrain affect radio signal strength? (0 disables)";
                             defaultValue = "[]";
                             condition = "1";
@@ -65,17 +65,17 @@ class Cfg3DEN
         class AttributeCategories
         {
             // Category class, can be anything
-            class TFSRHSMarker
+            class TFSMarker
             {
                 class Attributes
                 {
-                    class TFSRHS_Briefinglist
+                    class TFS_Briefinglist
                     {
                         displayName = ""; // Name assigned to UI control class Title
                         tooltip = ""; // Tooltip assigned to UI control class Title
-                        property = "TFSRHS_Briefinglist"; // Unique config property name saved in SQM
+                        property = "TFS_Briefinglist"; // Unique config property name saved in SQM
                         control = "None"; // UI control base class displayed in Edit Attributes window, points to Cfg3DEN >> Attributes
-                        expression =  "[_this,'TFSRHS_Briefinglist',_value] call tfsrhs_common_fnc_initGroupVar;";// "_this setVariable ['TFSRHS_Briefinglist',_value],true;";
+                        expression =  "[_this,'TFS_Briefinglist',_value] call tfs_common_fnc_initGroupVar;";// "_this setVariable ['TFS_Briefinglist',_value],true;";
                         defaultValue = "[]";
                         wikiType = "[[String]]";
                     };
@@ -91,17 +91,17 @@ class Cfg3DEN
         class AttributeCategories
         {
             // Category class, can be anything
-            class TFSRHSMarker
+            class TFSMarker
             {
                 class Attributes
                 {
-                    class TFSRHS_Briefinglist
+                    class TFS_Briefinglist
                     {
                         displayName = "Briefing"; // Name assigned to UI control class Title
                         tooltip = ""; // Tooltip assigned to UI control class Title
-                        property = "TFSRHS_Briefinglist"; // Unique config property name saved in SQM
+                        property = "TFS_Briefinglist"; // Unique config property name saved in SQM
                         control = "None"; // UI control base class displayed in Edit Attributes window, points to Cfg3DEN >> Attributes
-                        expression = "_this setVariable ['TFSRHS_Briefinglist',_value,true];";
+                        expression = "_this setVariable ['TFS_Briefinglist',_value,true];";
                         defaultValue = "[]";
                         wikiType = "[[String]]";
                         condition = "objectBrain"; // Condition for attribute to appear (see the table below)
@@ -117,17 +117,17 @@ class Cfg3DEN
         class AttributeCategories
         {
             // Category class, can be anything
-            class TFSRHSMarker
+            class TFSMarker
             {
                 class Attributes
                 {
-                    class TFSRHS_Briefinglist
+                    class TFS_Briefinglist
                     {
                         displayName = ""; // Name assigned to UI control class Title
                         tooltip = ""; // Tooltip assigned to UI control class Title
-                        property = "TFSRHS_Briefinglist"; // Unique config property name saved in SQM
+                        property = "TFS_Briefinglist"; // Unique config property name saved in SQM
                         control = "None"; // UI control base class displayed in Edit Attributes window, points to Cfg3DEN >> Attributes
-                        expression = "_this setVariable ['TFSRHS_Briefinglist',_value,true];";
+                        expression = "_this setVariable ['TFS_Briefinglist',_value,true];";
                         defaultValue = "[]";
                         wikiType = "[[String]]";
                         condition = "objectControllable"; // Condition for attribute to appear (see the table below)
@@ -146,9 +146,9 @@ class Cfg3DEN
         class BriefingSettings : Toolbox
         {
             scriptName = "BriefingSettings";
-            scriptPath = "TFSRHS_briefing";
-            onLoad = "['onLoad',_this,'BriefingSettings','TFSRHS_briefing',false] call (uinamespace getvariable 'BIS_fnc_initDisplay');"; // 3rd param is the path PATH\scriptName.sqf
-            onUnload = "['onUnload',_this,'BriefingSettings','TFSRHS_briefing',false] call (uinamespace getvariable 'BIS_fnc_initDisplay');";
+            scriptPath = "TFS_briefing";
+            onLoad = "['onLoad',_this,'BriefingSettings','TFS_briefing',false] call (uinamespace getvariable 'BIS_fnc_initDisplay');"; // 3rd param is the path PATH\scriptName.sqf
+            onUnload = "['onUnload',_this,'BriefingSettings','TFS_briefing',false] call (uinamespace getvariable 'BIS_fnc_initDisplay');";
 
             attributeLoad = "['attributeLoad',_this] call (uinamespace getvariable 'BriefingSettings_script');";
             attributeSave = "['attributeSave',_this] call (uinamespace getvariable 'BriefingSettings_script');";

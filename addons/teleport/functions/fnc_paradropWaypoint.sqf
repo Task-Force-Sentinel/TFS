@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\teleport\script_component.hpp"
+#include "\z\tfs\addons\teleport\script_component.hpp"
 params ["_group","_pos","_attached"];
 _units = units _group;
 _flyingVehicles = _units select {vehicle _x isKindOf "Air" && effectiveCommander (vehicle _x) == _x};

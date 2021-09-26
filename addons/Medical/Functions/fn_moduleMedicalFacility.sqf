@@ -9,5 +9,5 @@ params [
 
 private _objects = synchronizedObjects _logic;
 {
-    [_x] call TFSRHS_fnc_setMedicalFacility;
+    [_x] call TFS_fnc_setMedicalFacility;
 } foreach _objects;

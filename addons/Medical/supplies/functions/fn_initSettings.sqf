@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\medical\supplies\functions\fn_initSettings.sqf
+ *	\z\tfs\addons\medical\supplies\functions\fn_initSettings.sqf
  *	by Ojemineh
  *	
  *	register cba settings
@@ -12,7 +12,7 @@
  *	nothing
  *	
  *	Example:
- *	[] call TFSRHS_medical_supplies_fnc_initSettings;
+ *	[] call TFS_medical_supplies_fnc_initSettings;
  *	
  */
 

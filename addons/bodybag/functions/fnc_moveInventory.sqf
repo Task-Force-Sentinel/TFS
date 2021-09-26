@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [killed, bodybag] call TFSRHS_bodybag_fnc_moveInventory
+ * [killed, bodybag] call TFS_bodybag_fnc_moveInventory
  *
  * Public: No
  */

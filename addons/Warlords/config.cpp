@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class TFSRHS_Warlords
+	class TFS_Warlords
 	{
 		author = AUTHOR;
 		name = NAME;

@@ -6,8 +6,8 @@ class CfgDifficultyPresets {
     class GVAR(Difficulty): Custom {
         displayName = PREFIX;
 
-        description = "Custom TFSRHS settings";
-        optionDescription = "Custom TFSRHS settings";
+        description = "Custom TFS settings";
+        optionDescription = "Custom TFS settings";
 
         levelAI = QGVAR(LevelAI);
 

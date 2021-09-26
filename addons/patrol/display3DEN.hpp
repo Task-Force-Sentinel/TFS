@@ -9,7 +9,7 @@ class display3DEN
             class Patrol
             {
                 text = "Generate patrol";
-                action = "findDisplay 313 createDisplay 'tfsrhs_patrol_editBox';";
+                action = "findDisplay 313 createDisplay 'tfs_patrol_editBox';";
                 conditionShow = selectedGroup;
                 value = 0;
             };

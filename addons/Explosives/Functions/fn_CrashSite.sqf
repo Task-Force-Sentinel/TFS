@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_CrashSite
+Function: TFS_fnc_CrashSite
 
 Description:
 	Simulates an aircraft being shot down. Players are knocked unconscious and awake near the crash
@@ -13,8 +13,8 @@ Arguments:
 
 Examples:
 	(begin example)
-		["", [CrashPlane, getPos crashSite]] call TFSRHS_fnc_crashSite;
-		["", [MyPlane, [1234,4321,0]]] call TFSRHS_fnc_crashSite;
+		["", [CrashPlane, getPos crashSite]] call TFS_fnc_crashSite;
+		["", [MyPlane, [1234,4321,0]]] call TFS_fnc_crashSite;
 	(end)
 
 Authors: MitchJC & Mokka
@@ -64,7 +64,7 @@ switch (_stage) do {
 
 		[
 			{
-				["fadeOut", _this] call TFSRHS_fnc_crashSite;
+				["fadeOut", _this] call TFS_fnc_crashSite;
 			}, [_vehicle, _crashSite, _players], 2
 		] call CBA_fnc_waitAndExecute;
 	};
@@ -81,7 +81,7 @@ switch (_stage) do {
 
 		[
 			{
-				["fadeSound", _this] call TFSRHS_fnc_crashSite;
+				["fadeSound", _this] call TFS_fnc_crashSite;
 			}, _args, 9
 		] call CBA_fnc_waitAndExecute;
 	};
@@ -94,7 +94,7 @@ switch (_stage) do {
 
     	[
     	  	{
-    	    	["teleport", _this] call TFSRHS_fnc_crashSite;
+    	    	["teleport", _this] call TFS_fnc_crashSite;
     	  	}, _args, 2
     	] call CBA_fnc_waitAndExecute;
 	};
@@ -113,7 +113,7 @@ switch (_stage) do {
 
       	[
       		{
-      	    	["woundAndEnable", _this] call TFSRHS_fnc_crashSite;
+      	    	["woundAndEnable", _this] call TFS_fnc_crashSite;
       	  	}, _args, 1
       	] call CBA_fnc_waitAndExecute;
   	};
@@ -135,7 +135,7 @@ switch (_stage) do {
 
     	[
     	  	{
-    	    	["effects", _this] call TFSRHS_fnc_crashSite;
+    	    	["effects", _this] call TFS_fnc_crashSite;
     	  	}, _args, 3
     	] call CBA_fnc_waitAndExecute;
   	};
@@ -151,7 +151,7 @@ switch (_stage) do {
 
     	[
       		{
-        		["finish", _this] call TFSRHS_fnc_crashSite;
+        		["finish", _this] call TFS_fnc_crashSite;
 	      	}, _args, 1
     	] call CBA_fnc_waitAndExecute;
 	};
@@ -161,6 +161,6 @@ switch (_stage) do {
   	};
 
 	default {
-		["init", _args] call TFSRHS_fnc_crashSite;
+		["init", _args] call TFS_fnc_crashSite;
 	};
 };

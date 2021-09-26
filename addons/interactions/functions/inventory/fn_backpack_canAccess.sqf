@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\interactions\functions\inventory\fn_backpack_canAccess.sqf
+ *	\z\tfs\addons\interactions\functions\inventory\fn_backpack_canAccess.sqf
  *	by Ojemineh
  *	
  *	check if player can access targets backpack
@@ -13,7 +13,7 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[player, unit1] call TFSRHS_interactions_fnc_backpack_canAccess;
+ *	[player, unit1] call TFS_interactions_fnc_backpack_canAccess;
  *	
  */
 
@@ -44,15 +44,15 @@ private _enabled = false;
 
 if ((side _player) == (side _target)) then {
 	if ((group _player) == (group _target)) then {
-		if (missionNamespace getVariable ["tfsrhs_interactions_backpack_access_faction", 0] >= 1) then {_enabled = true;};
+		if (missionNamespace getVariable ["tfs_interactions_backpack_access_faction", 0] >= 1) then {_enabled = true;};
 	} else {
-		if (missionNamespace getVariable ["tfsrhs_interactions_backpack_access_faction", 0] == 2) then {_enabled = true;};
+		if (missionNamespace getVariable ["tfs_interactions_backpack_access_faction", 0] == 2) then {_enabled = true;};
 	};
 } else {
 	if (_isFriendly) then {
-		if (missionNamespace getVariable ["tfsrhs_interactions_backpack_access_friendly", 0] > 0) then {_enabled = true;};
+		if (missionNamespace getVariable ["tfs_interactions_backpack_access_friendly", 0] > 0) then {_enabled = true;};
 	} else {
-		if (missionNamespace getVariable ["tfsrhs_interactions_backpack_access_enemy", 0] > 0) then {_enabled = true;};
+		if (missionNamespace getVariable ["tfs_interactions_backpack_access_enemy", 0] > 0) then {_enabled = true;};
 	};
 };
 

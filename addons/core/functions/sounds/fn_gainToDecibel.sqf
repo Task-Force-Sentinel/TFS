@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_gainToDecibel.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_gainToDecibel.sqf
  *	by Ojemineh
  *	
  *	convert gain to decibel
@@ -12,7 +12,7 @@
  *	<NUMBER>
  *	
  *	Example:
- *	[1] call TFSRHS_fnc_gainToDecibel;
+ *	[1] call TFS_fnc_gainToDecibel;
  *	
  */
 

@@ -1,20 +1,20 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 /* ----------------------------------------------------------------------------
-Internal Function: TFSRHS_adminmenu_fnc_messageLog_printAll
+Internal Function: TFS_adminmenu_fnc_messageLog_printAll
 
 Description:
     Prints current admin log to RPT
 
 Examples:
     (begin example)
-        [] call TFSRHS_adminmenu_fnc_messageLog_printAll;
+        [] call TFS_adminmenu_fnc_messageLog_printAll;
     (end)
 
 Author:
     Freddo
 ---------------------------------------------------------------------------- */
 
-diag_log "[TFSRHS Adminmenu] Printing complete log to RPT";
+diag_log "[TFS Adminmenu] Printing complete log to RPT";
 
 {
     _x params [
@@ -28,4 +28,4 @@ diag_log "[TFSRHS Adminmenu] Printing complete log to RPT";
     diag_log (_warning + _text);
 } forEach GVAR(logEntries);
 
-diag_log "[TFSRHS Adminmenu] Log end";
+diag_log "[TFS Adminmenu] Log end";

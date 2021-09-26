@@ -3,9 +3,9 @@ class CfgWeapons {
     class InventoryOpticsItem_Base_F;
     class ACE_Vector;
 
-    class TFSRHS_Vector_Designator: ACE_Vector {
+    class TFS_Vector_Designator: ACE_Vector {
         author = "NemesisRE";
-        displayName = "[tfsrhs] ACE Vector Designator (NVG/TI))";
+        displayName = "[tfs] ACE Vector Designator (NVG/TI))";
         descriptionShort = "Rangefinder/Designator";
         simulation = "weapon";
         magazines[] = {"Laserbatteries"};
@@ -13,7 +13,7 @@ class CfgWeapons {
         cursorAim = "EmptyCursor";
         cursorAimOn = "CursorAimOn";
         showSwitchAction = 1;
-        weaponInfoType = "TFSRHS_RscOptics_vector";
+        weaponInfoType = "TFS_RscOptics_vector";
         class WeaponSlotsInfo {
             mass = 20;
         };
@@ -30,15 +30,15 @@ class CfgWeapons {
         maxRange = 5000;
     };
 
-    class TFSRHS_Vector_Designator_NVG: TFSRHS_Vector_Designator {
-        displayName = "[tfsrhs] ACE Vector Designator (NVG)";
+    class TFS_Vector_Designator_NVG: TFS_Vector_Designator {
+        displayName = "[tfs] ACE Vector Designator (NVG)";
         visionMode[] = {"Normal","NVG"};
         thermalMode[] = {};
     };
 
-    class TFSRHS_optic_Nightstalker: optic_Nightstalker {
+    class TFS_optic_Nightstalker: optic_Nightstalker {
         author="NemesisRE";
-        displayName="[tfsrhs] Nightstalker";
+        displayName="[tfs] Nightstalker";
         descriptionShort = "Nightstalker Sight<br />Magnification: 1x-10x";
         class ItemInfo: InventoryOpticsItem_Base_F {
             mass=12;
@@ -89,10 +89,10 @@ class CfgWeapons {
     };
 
     class ItemCore;
-    class TFSRHS_optic_AMS_base: ItemCore {
+    class TFS_optic_AMS_base: ItemCore {
         author="NemesisRE";
-        displayName="[tfsrhs] AMS Base";
-        descriptionShort="[tfsrhs] AMS (NVG)";
+        displayName="[tfs] AMS Base";
+        descriptionShort="[tfs] AMS (NVG)";
         _generalMacro="optic_AMS_base";
         scope=0;
         scopeCurator=0;
@@ -164,10 +164,10 @@ class CfgWeapons {
         };
         inertia=0.2;
     };
-    class TFSRHS_optic_AMSTI_base: ItemCore {
+    class TFS_optic_AMSTI_base: ItemCore {
         author="NemesisRE";
-        displayName="[tfsrhs] AMS-TI Base";
-        descriptionShort="[tfsrhs] AMS (NVG/TI)";
+        displayName="[tfs] AMS-TI Base";
+        descriptionShort="[tfs] AMS (NVG/TI)";
         _generalMacro="optic_AMS_base";
         scope=0;
         scopeCurator=0;
@@ -240,49 +240,49 @@ class CfgWeapons {
         };
         inertia=0.2;
     };
-    class TFSRHS_optic_AMS: TFSRHS_optic_AMS_base {
+    class TFS_optic_AMS: TFS_optic_AMS_base {
         author="NemesisRE";
         _generalMacro="optic_AMS";
         scope=2;
         scopeCurator=1;
         scopeArsenal=2;
-        displayName="[tfsrhs] AMS (Black)";
+        displayName="[tfs] AMS (Black)";
         picture="\a3\Weapons_F_Mark\Data\UI\icon_optic_AMS_ca.paa";
     };
-    class TFSRHS_optic_AMS_khk: TFSRHS_optic_AMS {
+    class TFS_optic_AMS_khk: TFS_optic_AMS {
         author="NemesisRE";
         _generalMacro="optic_AMS_khk";
-        displayName="[tfsrhs] AMS (Khaki)";
+        displayName="[tfs] AMS (Khaki)";
         picture="\a3\Weapons_F_Mark\Data\UI\icon_optic_AMS_khk_ca.paa";
         model="\A3\Weapons_F_Mark\Acc\acco_ams_khk_F.p3d";
     };
-    class TFSRHS_optic_AMS_snd: TFSRHS_optic_AMS {
+    class TFS_optic_AMS_snd: TFS_optic_AMS {
         author="NemesisRE";
         _generalMacro="optic_AMS_snd";
-        displayName="[tfsrhs] AMS (Sand)";
+        displayName="[tfs] AMS (Sand)";
         picture="\a3\Weapons_F_Mark\Data\UI\icon_optic_AMS_snd_ca.paa";
         model="\A3\Weapons_F_Mark\Acc\acco_ams_snd_F.p3d";
     };
-    class TFSRHS_optic_AMSTI: TFSRHS_optic_AMSTI_base {
+    class TFS_optic_AMSTI: TFS_optic_AMSTI_base {
         author="NemesisRE";
         _generalMacro="optic_AMS";
         scope=2;
         scopeCurator=1;
         scopeArsenal=2;
-        displayName="[tfsrhs] AMS-TI (Black)";
+        displayName="[tfs] AMS-TI (Black)";
         picture="\a3\Weapons_F_Mark\Data\UI\icon_optic_AMS_ca.paa";
     };
-    class TFSRHS_optic_AMSTI_khk: TFSRHS_optic_AMSTI {
+    class TFS_optic_AMSTI_khk: TFS_optic_AMSTI {
         author="NemesisRE";
         _generalMacro="optic_AMS_khk";
-        displayName="[tfsrhs] AMS-TI (Khaki)";
+        displayName="[tfs] AMS-TI (Khaki)";
         picture="\a3\Weapons_F_Mark\Data\UI\icon_optic_AMS_khk_ca.paa";
         model="\A3\Weapons_F_Mark\Acc\acco_ams_khk_F.p3d";
     };
-    class TFSRHS_optic_AMSTI_snd: TFSRHS_optic_AMSTI {
+    class TFS_optic_AMSTI_snd: TFS_optic_AMSTI {
         author="NemesisRE";
         _generalMacro="optic_AMS_snd";
-        displayName="[tfsrhs] AMS-TI (Sand)";
+        displayName="[tfs] AMS-TI (Sand)";
         picture="\a3\Weapons_F_Mark\Data\UI\icon_optic_AMS_snd_ca.paa";
         model="\A3\Weapons_F_Mark\Acc\acco_ams_snd_F.p3d";
     };

@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 /*
  * Author: Head
  * Set control text for a 3D tag
@@ -13,7 +13,7 @@
  * nil
  *
  * Example:
- * [_control,"mytext",[1,1,1,1],false] call tfsrhs_spectator_fnc_controlSetPicture
+ * [_control,"mytext",[1,1,1,1],false] call tfs_spectator_fnc_controlSetPicture
  *
  * Public: No
  */

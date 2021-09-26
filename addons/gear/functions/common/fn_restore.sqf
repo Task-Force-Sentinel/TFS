@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\gear\functions\common\fn_restore.sqf
+ *	\z\tfs\addons\gear\functions\common\fn_restore.sqf
  *	by Ojemineh
  *
  *	restores unit loadout
@@ -12,7 +12,7 @@
  *	nothing
  *
  *	Example:
- *	[player] call TFSRHS_gear_fnc_restore;
+ *	[player] call TFS_gear_fnc_restore;
  *
  */
 
@@ -29,12 +29,12 @@ if (isNull _unit) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 if (Not local _unit) exitWith {
-	[_unit] remoteExecCall ["TFSRHS_gear_fnc_restore", _unit];
+	[_unit] remoteExecCall ["TFS_gear_fnc_restore", _unit];
 };
 
 // -------------------------------------------------------------------------------------------------
 
-private _array = _unit getVariable ["TFSRHS_gear_storage", []];
+private _array = _unit getVariable ["TFS_gear_storage", []];
 if (_array isEqualTo []) exitWith {};
 
 private _loadout = (_array select 0);
@@ -46,4 +46,4 @@ if (_insignia != "") then {
 	[_unit, _insignia] call BIS_fnc_setUnitInsignia;
 };
 
-_unit setVariable ["TFSRHS_gear_storage", nil, true];
+_unit setVariable ["TFS_gear_storage", nil, true];

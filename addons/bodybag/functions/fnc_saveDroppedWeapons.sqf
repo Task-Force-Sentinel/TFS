@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [killed] call TFSRHS_bodybag_fnc_saveDroppedWeapons
+ * [killed] call TFS_bodybag_fnc_saveDroppedWeapons
  *
  * Public: No
  */

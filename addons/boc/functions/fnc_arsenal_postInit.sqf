@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * [] call TFSRHS_boc_fnc_arsenal_postInit;
+ * [] call TFS_boc_fnc_arsenal_postInit;
  *
  * Public: No
  */

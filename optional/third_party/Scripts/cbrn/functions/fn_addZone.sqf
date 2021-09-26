@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params["_trigger", ["_unit", TFSRHS_unit], ["_add", false]];
+params["_trigger", ["_unit", TFS_unit], ["_add", false]];
 
 private _zones = _unit getVariable ["cbrn_zones", []];
 

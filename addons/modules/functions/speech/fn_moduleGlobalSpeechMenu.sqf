@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\modules\functions\speech\fn_moduleGlobalSpeechMenu.sqf
+ *	\z\tfs\addons\modules\functions\speech\fn_moduleGlobalSpeechMenu.sqf
  *	by Ojemineh
  *	
  *	module function
@@ -12,7 +12,7 @@
  *	nothing
  *	
  *	Example:
- *	[] call TFSRHS_fnc_moduleGlobalSpeechMenu;
+ *	[] call TFS_fnc_moduleGlobalSpeechMenu;
  *	
  */
 
@@ -40,22 +40,22 @@ if !(_unit isKindOf "Man") exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 private _unitName = [_unit] call ACE_common_fnc_getName;
-private _holdText = format [localize "STR_TFSRHS_Module_GlobalSpeech_HoldAction", _unitName];
-private _holdIcon = "\z\tfsrhs\addons\modules\data\gui\holdAction_speech_ca.paa";
+private _holdText = format [localize "STR_TFS_Module_GlobalSpeech_HoldAction", _unitName];
+private _holdIcon = "\z\tfs\addons\modules\data\gui\holdAction_speech_ca.paa";
 
 [
 	_unit,
 	_holdText,
 	_holdIcon,
 	_holdIcon,
-	"(_this distance _target < 2.5) && (alive _target) && !(_target getVariable ['ACE_isUnconscious', false]) && !(_target getVariable ['tfsrhs_speak3d', false]) && !(_target getVariable ['tfsrhs_playedOnce', false])",
-	"(_caller distance _target < 2.5) && (alive _target) && !(_target getVariable ['ACE_isUnconscious', false]) && !(_target getVariable ['tfsrhs_speak3d', false]) && !(_target getVariable ['tfsrhs_playedOnce', false])",
+	"(_this distance _target < 2.5) && (alive _target) && !(_target getVariable ['ACE_isUnconscious', false]) && !(_target getVariable ['tfs_speak3d', false]) && !(_target getVariable ['tfs_playedOnce', false])",
+	"(_caller distance _target < 2.5) && (alive _target) && !(_target getVariable ['ACE_isUnconscious', false]) && !(_target getVariable ['tfs_speak3d', false]) && !(_target getVariable ['tfs_playedOnce', false])",
 	{},
 	{},
 	{
 		params ["_target", "_caller", "_actionId", "_params"];
 		if (((_params select 0) getVariable ["enabled", 0]) > 0) then {
-			[(_params select 0), _caller, _target] remoteExecCall ["TFSRHS_fnc_moduleGlobalSpeechPlay", _target];
+			[(_params select 0), _caller, _target] remoteExecCall ["TFS_fnc_moduleGlobalSpeechPlay", _target];
 		};
 	},
 	{},

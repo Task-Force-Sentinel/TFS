@@ -1,9 +1,9 @@
-class TFSRHS_Warlords {
+class TFS_Warlords {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class Warlords {
 
-		file = "z\tfsrhs\addons\Warlords\Functions";
+		file = "z\tfs\addons\Warlords\Functions";
 		class ProfileCredits {};
 	};
 };

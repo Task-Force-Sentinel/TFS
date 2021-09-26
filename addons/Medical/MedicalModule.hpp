@@ -1,10 +1,10 @@
-class TFSRHS_ModuleMedical: Module_F
+class TFS_ModuleMedical: Module_F
 {
 	scope = 2;
 	displayName = "Medical Facility";
-	icon = "\z\tfsrhs\addons\media\images\icons\Medical Area.paa";
+	icon = "\z\tfs\addons\media\images\icons\Medical Area.paa";
 	category = "Task Force Sentinel";
-	function = "TFSRHS_fnc_moduleMedicalFacility";
+	function = "TFS_fnc_moduleMedicalFacility";
 	functionPriority = 4;
 	isGlobal = 1;
 	isTriggerActivated = 0;

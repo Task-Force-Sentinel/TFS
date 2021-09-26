@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\hints\functions\fn_hintGlobal.sqf
+ *	\z\tfs\addons\hints\functions\fn_hintGlobal.sqf
  *	by Ojemineh
  *	
  *	extended hint system
@@ -16,7 +16,7 @@
  *	nothing
  *	
  *	Example:
- *	[ format [hint_tpl_default, "Hello World"] ] call TFSRHS_fnc_hintGlobal;
+ *	[ format [hint_tpl_default, "Hello World"] ] call TFS_fnc_hintGlobal;
  *	
  */
 
@@ -32,6 +32,6 @@ _position	= [_this, 4, -1, [0]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-[_text, _color, _sound, _delay, _position] remoteExecCall ["tfsrhs_fnc_hint", 0];
+[_text, _color, _sound, _delay, _position] remoteExecCall ["tfs_fnc_hint", 0];
 
 // -------------------------------------------------------------------------------------------------

@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * [_disp] call TFSRHS_boc_fnc_arsenal_opened;
+ * [_disp] call TFS_boc_fnc_arsenal_opened;
  *
  * Public: No
  */

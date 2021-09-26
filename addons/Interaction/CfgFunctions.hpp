@@ -1,9 +1,9 @@
-class TFSRHS_Interaction {
+class TFS_Interaction {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class Interaction {
 
-		file = "z\tfsrhs\addons\Interaction\Functions";
+		file = "z\tfs\addons\Interaction\Functions";
 		class AddAction {};
 		class AddCreatorAction {};
 		class AddHoldAction {};

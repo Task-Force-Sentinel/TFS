@@ -9,7 +9,7 @@ _time = cba_missiontime;
 _delta = _time - _lastIteration;
 _args set [0, _delta];
 
-if ( !cbrn_beep ||  {!(TFSRHS_unit getVariable ["cbrn_detector_beeps", false])} ) exitWith {
+if ( !cbrn_beep ||  {!(TFS_unit getVariable ["cbrn_detector_beeps", false])} ) exitWith {
     cbrn_beepPfh = -1;
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 };

@@ -13,7 +13,7 @@ call cTab_fnc_updateLists;
 if (isNull _host) then {
 	{
 		if (_data isEqualTo (str _x)) exitWith {_host = _x;};
-	} forEach TFSRHS_CC_vehicleCamList;
+	} forEach TFS_CC_vehicleCamList;
 } else {
 	_isMan = true;
 };
@@ -43,7 +43,7 @@ if (isNull _host) exitWith {
 private _cam = objNull;
 private _exit = false;
 
-[_object, _selection] call TFSRHS_fnc_deleteCamera;
+[_object, _selection] call TFS_fnc_deleteCamera;
 
 private _target = "Sign_Sphere10cm_F" createVehicleLocal (position player);
 hideObject _target;
@@ -64,4 +64,4 @@ _cam cameraEffect ["INTERNAL", "BACK", _renderTarget];
 
 _object setObjectTexture [_selection, format ["#(argb,512,512,1)r2t(%1,1.3096153846)", _renderTarget]];
 
-_object setVariable [format ["TFSRHS_CC_screen_%1_Cam", _selection], [_cam, _target, _host]];
+_object setVariable [format ["TFS_CC_screen_%1_Cam", _selection], [_cam, _target, _host]];

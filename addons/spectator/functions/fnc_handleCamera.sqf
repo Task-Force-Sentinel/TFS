@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 
 if(!([] call FUNC(isOpen))) exitWith {};
 
@@ -16,7 +16,7 @@ if(_rightButton && !_leftButton) then {
 
 private _oldcam = GVAR(camera);
 
-GVAR(camera) = switch (tfsrhs_spectator_mode) do {
+GVAR(camera) = switch (tfs_spectator_mode) do {
     case 0: { GVAR(followCam) };
     case 1: {
         if(GVAR(camera) != GVAR(freeCam)) then {
@@ -44,7 +44,7 @@ if(GVAR(mode) == FOLLOWCAM) then {
     if(_wButton) then { GVAR(followcam_angle) set [1,(GVAR(followcam_angle) select 1)+1]; };
     if(_sButton) then { GVAR(followcam_angle) set [1,(GVAR(followcam_angle) select 1)-1]; };
 
-    private _commitTime = ((1.0 - ((speed vehicle tfsrhs_spectator_target)/65))/3) max 0.1;
+    private _commitTime = ((1.0 - ((speed vehicle tfs_spectator_target)/65))/3) max 0.1;
     private _delta = (-(2*(0.3 max GVAR(followcam_zoom))));
 
     GVAR(followcam_angle) params ["_ax","_ay"];

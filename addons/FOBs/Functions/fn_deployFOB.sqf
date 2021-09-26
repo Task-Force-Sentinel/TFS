@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_deployFOB
+Function: TFS_fnc_deployFOB
 
 Description:
 	Deploys the FOB.
@@ -19,25 +19,25 @@ Author:
 */
 
 if (!isServer) exitWith {
-	_this remoteExec ["TFSRHS_fnc_deployFOB", 2];
+	_this remoteExec ["TFS_fnc_deployFOB", 2];
 };
 
 params ["_object", "_caller"];
 
 // sanity checks
-if (_object getVariable ["TFSRHS_PortableFOB_Deployed", false]) exitWith {
+if (_object getVariable ["TFS_PortableFOB_Deployed", false]) exitWith {
 	systemChat "FOB was already deployed!";
 };
 
-_type = _object getVariable ["TFSRHS_PortableFOB_Type", "NULL"];
+_type = _object getVariable ["TFS_PortableFOB_Type", "NULL"];
 
 if (_type isEqualTo "NULL") exitWith {
 	systemChat "Invalid FOB type set!";
 };
 
-_name = _object getVariable ["TFSRHS_PortableFOB_Name", ""];
+_name = _object getVariable ["TFS_PortableFOB_Name", ""];
 
-_size = _object getVariable ["TFSRHS_PortableFOB_Size", -1];
+_size = _object getVariable ["TFS_PortableFOB_Size", -1];
 
 if (_size < 0) exitWith {
 	systemChat "Invalid FOB size!";
@@ -53,9 +53,9 @@ _dir = getDir _object;
 _hiddenObjects = [_pos, 5 + _size * 5, [], ["WALLS", "VEGETATION", "MISC"]] call YAINA_F_fnc_hideTerrainObjects;
 
 // Get composition array and spawn it using the BIS_fnc_ObjectsMapper
-_compArray = call (compile format ["call TFSRHS_fnc_%1", _type]);
+_compArray = call (compile format ["call TFS_fnc_%1", _type]);
 
-_objects = [_pos, _dir, _compArray, 0, false] call TFSRHS_fnc_objectsMapper;
+_objects = [_pos, _dir, _compArray, 0, false] call TFS_fnc_objectsMapper;
 
 // Properly align the objects with the ground etc, only works with ACE for now...
 if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
@@ -68,11 +68,11 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
 _respawnPos = [side _caller, _pos, _name] call BIS_fnc_addRespawnPosition;
 
 // Set the runtime variables for the FOB object
-_object setVariable ["TFSRHS_PortableFOB_Objects", _objects, true];
-_object setVariable ["TFSRHS_PortableFOB_HiddenObjects", _hiddenObjects, true];
-_object setVariable ["TFSRHS_PortableFOB_Deployed", true, true];
-_object setVariable ["TFSRHS_PortableFOB_Pos", _pos, true];
-_object setVariable ["TFSRHS_PortableFOB_RespawnPos", _respawnPos, true];
+_object setVariable ["TFS_PortableFOB_Objects", _objects, true];
+_object setVariable ["TFS_PortableFOB_HiddenObjects", _hiddenObjects, true];
+_object setVariable ["TFS_PortableFOB_Deployed", true, true];
+_object setVariable ["TFS_PortableFOB_Pos", _pos, true];
+_object setVariable ["TFS_PortableFOB_RespawnPos", _respawnPos, true];
 
 // re-enable damage and hope nothing breaks
 _object allowDamage true;

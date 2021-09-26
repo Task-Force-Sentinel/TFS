@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [true] call tfsrhs_grass_fnc_toggle
+ * [true] call tfs_grass_fnc_toggle
  *
  * Public: No
  */

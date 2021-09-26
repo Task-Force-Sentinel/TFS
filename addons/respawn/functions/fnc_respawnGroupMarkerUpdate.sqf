@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\respawn\script_component.hpp"
+#include "\z\tfs\addons\respawn\script_component.hpp"
 
 // Goes through GVAR(respawnedGroupsMarkerData), ensuring all groups already have markers.
 if (isNil QGVAR(respawnedGroupsMarkerData)) exitWith {};
@@ -31,7 +31,7 @@ if (isNil QGVAR(respawnedGroupsMarkerData)) exitWith {};
 
                 private _color = ((GVAR(respawnMenuMarkerColours) select (_x select 3)) select 2);
                 private _type = ((GVAR(respawnMenuMarkers) select (_x select 2)) select 2);
-                private _markerTexture = "z\tfsrhs\addons\orbat\textures\" + _color + "_" + _type;
+                private _markerTexture = "z\tfs\addons\orbat\textures\" + _color + "_" + _type;
                 private _markerColorRGB = [1,1,1,1];
                 private _size = [32,32];
 

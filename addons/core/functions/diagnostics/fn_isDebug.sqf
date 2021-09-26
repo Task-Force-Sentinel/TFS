@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\diagnostics\fn_isDebug.sqf
+ *	\z\tfs\addons\core\functions\diagnostics\fn_isDebug.sqf
  *	by Ojemineh
  *	
  *	check if debug is enabled
@@ -12,12 +12,12 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[] call TFSRHS_fnc_isDebug;
+ *	[] call TFS_fnc_isDebug;
  *	
  */
 
 // -------------------------------------------------------------------------------------------------
 
-private _return = (missionNamespace getVariable ["tfsrhs_debug_enabled", false]);
+private _return = (missionNamespace getVariable ["tfs_debug_enabled", false]);
 
 _return;

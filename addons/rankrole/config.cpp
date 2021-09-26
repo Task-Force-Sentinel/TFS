@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class tfsrhs_rankrole
+	class tfs_rankrole
 	{
 		name = COMPONENT_NAME;
 		requiredAddons[] = {
@@ -19,12 +19,12 @@ class CfgPatches
 };
 
 class CfgFunctions {
-	class tfsrhs_rankrole {
+	class tfs_rankrole {
 
-		tag = "TFSRHS_rankrole";
+		tag = "TFS_rankrole";
 		class RankRole {
 
-			file = "z\tfsrhs\addons\rankrole\Functions";
+			file = "z\tfs\addons\rankrole\Functions";
 			class rank {postInit = 1;};
             class makecom {};
             class makeeng {};
@@ -43,8 +43,8 @@ class CfgFunctions {
 
 
 class Extended_PreInit_EventHandlers {
-	tfsrhsrank = "call compile preprocessFileLineNumbers 'z\tfsrhs\addons\rankrole\XEH_preInit.sqf'";
+	tfsrank = "call compile preprocessFileLineNumbers 'z\tfs\addons\rankrole\XEH_preInit.sqf'";
 };
 class Extended_PostInit_EventHandlers {
-	tfsrhsrank = "call tfsrhs_rankrole_fnc_rank";
+	tfsrank = "call tfs_rankrole_fnc_rank";
 };

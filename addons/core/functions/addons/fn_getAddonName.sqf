@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\addons\fn_getAddonName.sqf
+ *	\z\tfs\addons\core\functions\addons\fn_getAddonName.sqf
  *	by Ojemineh
  *	
  *	get addon name
@@ -12,7 +12,7 @@
  *	<STRING>
  *	
  *	Example:
- *	["tfsrhs_core"] call TFSRHS_fnc_getAddonName;
+ *	["tfs_core"] call TFS_fnc_getAddonName;
  *	
  */
 

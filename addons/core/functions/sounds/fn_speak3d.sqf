@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_speak3d.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_speak3d.sqf
  *	by Ojemineh
  *
  *	play global sound with random lip sync
@@ -18,7 +18,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "cp_mission_accomplished_1", -1, -1, 4.5] call TFSRHS_fnc_speak3d;
+ *	[player, "cp_mission_accomplished_1", -1, -1, 4.5] call TFS_fnc_speak3d;
  *
  */
 
@@ -41,4 +41,4 @@ if (_soundClass isEqualTo "") exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
-[_unit, _soundClass, _distance, _maxDistance, _duration, _pitch, _isSpeech] remoteExecCall ["TFSRHS_fnc_speak3dLocal", 0, false];
+[_unit, _soundClass, _distance, _maxDistance, _duration, _pitch, _isSpeech] remoteExecCall ["TFS_fnc_speak3dLocal", 0, false];

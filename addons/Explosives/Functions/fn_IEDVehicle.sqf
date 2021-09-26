@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_IEDVehicle
+Function: TFS_fnc_IEDVehicle
 
 Description:
 	Sets up a given vehicle as a driven IED. The explosive will be armed and
@@ -40,7 +40,7 @@ Examples:
 			true,
 			30,
 			false
-		] call TFSRHS_fnc_IEDVehicle;
+		] call TFS_fnc_IEDVehicle;
 	(end)
 
 Author:
@@ -61,7 +61,7 @@ if (!isServer) exitWith {};
 
 // Check if we are using a valid vehicle.
 if (not (_vehicle isKindOf "LandVehicle")) exitWith {
-	systemChat "TFSRHS_fnc_IEDVehicle: Invalid vehicle passed, needs to be a land vehicle!";
+	systemChat "TFS_fnc_IEDVehicle: Invalid vehicle passed, needs to be a land vehicle!";
 };
 
 private ["_fnc_engineCheck"];
@@ -87,7 +87,7 @@ _proxCheck = [
 					[
 						format ["The IED has been armed and will detonate in %1 seconds!",_detonationTime],
 						[-1, 0.8],"#cc3232", 0.5
-					] call TFSRHS_fnc_dynamicText;
+					] call TFS_fnc_dynamicText;
 				};
 			};
 		} forEach allPlayers;
@@ -132,7 +132,7 @@ _proxCheck = [
 			[
 				format ["The IED will detonate in %1 seconds!",_timeLeft],
 				[-1, 0.8], "#cc3232", 0.5
-			] call TFSRHS_fnc_dynamicText;
+			] call TFS_fnc_dynamicText;
 		};
 
 		// If the delta of startTime and current time exceeds the detonation timer,
@@ -146,7 +146,7 @@ _proxCheck = [
 				[
 					"Time's out, the IED could detonate any second!",
 					[-1, 0.8], "#cc3232", 0.5
-				] call TFSRHS_fnc_dynamicText;
+				] call TFS_fnc_dynamicText;
 			};
 
 			// Set the amount of secondary explosions according to the param.
@@ -156,12 +156,12 @@ _proxCheck = [
 				_secArray = [0, 0, 0];
 			};
 
-			// Detonate using TFSRHS_fnc_SpawnExplosives.
+			// Detonate using TFS_fnc_SpawnExplosives.
 			[
 				_timeLeft + (random 2) - 1,
 				position _vehicle,
 				_secArray
-			] call TFSRHS_fnc_SpawnExplosives;
+			] call TFS_fnc_SpawnExplosives;
 		};
 	},
 	1,
@@ -179,16 +179,16 @@ _proxCheck = [
 	&& {_target getVariable [""IEDarmed"",false]}
 	&& {not (_target getVariable [""IEDdetonated"",false])}"
 	,"true"
-	,{ ["You're disarming the IED.", [-1, 0.8], "#FFBB00", 0.5, false] call TFSRHS_fnc_dynamicText;}
+	,{ ["You're disarming the IED.", [-1, 0.8], "#FFBB00", 0.5, false] call TFS_fnc_dynamicText;}
 	,{}
 	,{
 		(_this select 0) setVariable ["IEDdisarmed", true, true];
-		["You've disarmed the IED.", [-1, 0.8], "#339900", 0.5, false] call TFSRHS_fnc_dynamicText;
+		["You've disarmed the IED.", [-1, 0.8], "#339900", 0.5, false] call TFS_fnc_dynamicText;
 	},
-	{["You've stopped disarming the IED.", [-1, 0.8], "#cc3232"] call TFSRHS_fnc_dynamicText;}
+	{["You've stopped disarming the IED.", [-1, 0.8], "#cc3232"] call TFS_fnc_dynamicText;}
 	,[]
 	,random [5, 7.5, 10]
 	,true
 	,"Disarming IED"
 	,true
-] call TFSRHS_fnc_AddHoldAction;
+] call TFS_fnc_AddHoldAction;

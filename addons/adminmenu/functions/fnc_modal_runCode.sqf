@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_ctrlGroup"];
@@ -7,24 +7,24 @@ params ["_ctrlGroup"];
 
 private _display = uiNamespace getVariable [QGVAR(modalDisplay), displayNull];
 private _ctrlEdit = _display ctrlCreate [QGVAR(RscEditMultiCode), -1, _ctrlGroup];
-_ctrlEdit ctrlSetPosition [0.1 * TFSRHS_ADMINMENU_STD_WIDTH, 1.1 * TFSRHS_ADMINMENU_STD_HEIGHT, _ctrlGrpWidth - (0.2 * TFSRHS_ADMINMENU_STD_WIDTH), _ctrlGrpHeight - (2.3 * TFSRHS_ADMINMENU_STD_HEIGHT)];
+_ctrlEdit ctrlSetPosition [0.1 * TFS_ADMINMENU_STD_WIDTH, 1.1 * TFS_ADMINMENU_STD_HEIGHT, _ctrlGrpWidth - (0.2 * TFS_ADMINMENU_STD_WIDTH), _ctrlGrpHeight - (2.3 * TFS_ADMINMENU_STD_HEIGHT)];
 _ctrlEdit ctrlCommit 0;
 _ctrlEdit ctrlSetText (missionNamespace getVariable [QGVAR(utility_runcode_last), ""]);
 
 private _ctrlHintEdit = _display ctrlCreate [QGVAR(RscText), -1, _ctrlGroup];
-_ctrlHintEdit ctrlSetPosition [0, 0, _ctrlGrpWidth, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlHintEdit ctrlSetPosition [0, 0, _ctrlGrpWidth, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlHintEdit ctrlCommit 0;
 _ctrlHintEdit ctrlSetText "'_this' is the targetted player object";
 
-private _bottomY = _ctrlGrpHeight - TFSRHS_ADMINMENU_STD_HEIGHT;
+private _bottomY = _ctrlGrpHeight - TFS_ADMINMENU_STD_HEIGHT;
 
 private _ctrlHintCombo = _display ctrlCreate [QGVAR(RscText), -1, _ctrlGroup];
-_ctrlHintCombo ctrlSetPosition [0, _bottomY, 0.15 * _ctrlGrpWidth, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlHintCombo ctrlSetPosition [0, _bottomY, 0.15 * _ctrlGrpWidth, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlHintCombo ctrlCommit 0;
 _ctrlHintCombo ctrlSetText "Execute on:";
 
 private _ctrlCombo = _display ctrlCreate [QGVAR(RscCombo), -1, _ctrlGroup];
-_ctrlCombo ctrlSetPosition [0.15 * _ctrlGrpWidth, _bottomY, 0.25 * _ctrlGrpWidth, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlCombo ctrlSetPosition [0.15 * _ctrlGrpWidth, _bottomY, 0.25 * _ctrlGrpWidth, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlCombo ctrlCommit 0;
 _ctrlCombo lbAdd "Your Client";
 _ctrlCombo lbAdd "Targets' Clients";
@@ -33,7 +33,7 @@ _ctrlCombo lbAdd "All Clients and Server";
 _ctrlCombo lbSetCurSel 0;
 
 private _ctrlButton = _display ctrlCreate [QGVAR(RscButtonMenu), -1, _ctrlGroup];
-_ctrlButton ctrlSetPosition [0.8 * _ctrlGrpWidth, _bottomY, 0.2 * _ctrlGrpWidth, TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlButton ctrlSetPosition [0.8 * _ctrlGrpWidth, _bottomY, 0.2 * _ctrlGrpWidth, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlButton ctrlCommit 0;
 _ctrlButton ctrlSetText "Execute";
 _ctrlButton setVariable [QGVAR(association), [_ctrlEdit, _ctrlCombo]];
@@ -44,7 +44,7 @@ _ctrlButton ctrlAddEventHandler ["buttonClick", {
 
     private _editText = ctrlText _ctrlEdit;
     if (_editText isEqualTo "") then {
-        systemChat "[TFSRHS Admin Menu] Code field is empty";
+        systemChat "[TFS Admin Menu] Code field is empty";
     } else {
         private _code = compile _editText;
         private _selected = lbCurSel _ctrlCombo;
@@ -75,7 +75,7 @@ _ctrlButton ctrlAddEventHandler ["buttonClick", {
             };
         };
 
-        systemChat format ["[TFSRHS Admin Menu] Code was executed on %1", _ctrlCombo lbText (lbCurSel _ctrlCombo)];
+        systemChat format ["[TFS Admin Menu] Code was executed on %1", _ctrlCombo lbText (lbCurSel _ctrlCombo)];
         [format ["%1 Executed code:%2, on %3",profileName,_code,_target],false,"Admin Menu"] call FUNC(log);
         GVAR(utility_runcode_last) = _editText;
     };

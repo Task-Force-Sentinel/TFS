@@ -1,15 +1,15 @@
 // GLOBAL SPEECH
 
-class TFSRHS_ModuleGlobalSpeech: Module_F {
+class TFS_ModuleGlobalSpeech: Module_F {
 	
 	scope = 2;
 	
-	displayName = "$STR_TFSRHS_Module_GlobalSpeech_DisplayName";
+	displayName = "$STR_TFS_Module_GlobalSpeech_DisplayName";
 	category = "Task Force Sentinel";
 	author = AUTHOR;
-	icon = "\z\tfsrhs\addons\modules\data\icons\module_speech_0_ca.paa";
+	icon = "\z\tfs\addons\modules\data\icons\module_speech_0_ca.paa";
 	
-	function = "TFSRHS_fnc_moduleGlobalSpeech";
+	function = "TFS_fnc_moduleGlobalSpeech";
 	functionPriority = 1;
 	
 	isGlobal = 0;
@@ -20,140 +20,140 @@ class TFSRHS_ModuleGlobalSpeech: Module_F {
 	class Attributes: AttributesBase {
 		
 		class Enabled {
-			displayName = "$STR_TFSRHS_ModuleProperty_Speech_Enabled_Title";
-			tooltip = "$STR_TFSRHS_ModuleProperty_Speech_Enabled_Tip";
+			displayName = "$STR_TFS_ModuleProperty_Speech_Enabled_Title";
+			tooltip = "$STR_TFS_ModuleProperty_Speech_Enabled_Tip";
 			defaultValue = 1;
 			typeName = "NUMBER";
 			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFSRHS_ModuleGlobalSpeech_Enabled";
+			property = "TFS_ModuleGlobalSpeech_Enabled";
 			control = "Combo";
 			class Values {
 				class Enabled_0	{
-					name = "$STR_TFSRHS_ModuleProperty_Speech_Enabled_0";
+					name = "$STR_TFS_ModuleProperty_Speech_Enabled_0";
 					value = 0;
 				};
 				class Enabled_1	{
-					name = "$STR_TFSRHS_ModuleProperty_Speech_Enabled_1";
+					name = "$STR_TFS_ModuleProperty_Speech_Enabled_1";
 					value = 1;
 				};
 			};
 		};
 		
 		class Source {
-			displayName = "$STR_TFSRHS_ModuleProperty_Speech_Source_Title";
-			tooltip = "$STR_TFSRHS_ModuleProperty_Speech_Source_Tip";
+			displayName = "$STR_TFS_ModuleProperty_Speech_Source_Title";
+			tooltip = "$STR_TFS_ModuleProperty_Speech_Source_Tip";
 			defaultValue = "''";
 			typeName = "STRING";
 			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFSRHS_ModuleGlobalSpeech_Source";
+			property = "TFS_ModuleGlobalSpeech_Source";
 			control = "Edit";
 		};
 		
 		class Sound {
-			displayName = "$STR_TFSRHS_ModuleProperty_Speech_Classname_Title";
-			tooltip = "$STR_TFSRHS_ModuleProperty_Speech_Classname_Tip";
+			displayName = "$STR_TFS_ModuleProperty_Speech_Classname_Title";
+			tooltip = "$STR_TFS_ModuleProperty_Speech_Classname_Tip";
 			defaultValue = "''";
 			typeName = "STRING";
 			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFSRHS_ModuleGlobalSpeech_Sound";
+			property = "TFS_ModuleGlobalSpeech_Sound";
 			control = "Sound";
 		};
 		
 		class Distance {
-			displayName = "$STR_TFSRHS_ModuleProperty_Speech_Distance_Title";
-			tooltip = "$STR_TFSRHS_ModuleProperty_Speech_Distance_Tip";
+			displayName = "$STR_TFS_ModuleProperty_Speech_Distance_Title";
+			tooltip = "$STR_TFS_ModuleProperty_Speech_Distance_Tip";
 			defaultValue = 30;
 			typeName = "NUMBER";
 			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFSRHS_ModuleGlobalSpeech_Distance";
+			property = "TFS_ModuleGlobalSpeech_Distance";
 			control = "EditShort";
 		};
 		
 		class MaxDistance {
-			displayName = "$STR_TFSRHS_ModuleProperty_Speech_MaxDistance_Title";
-			tooltip = "$STR_TFSRHS_ModuleProperty_Speech_MaxDistance_Tip";
+			displayName = "$STR_TFS_ModuleProperty_Speech_MaxDistance_Title";
+			tooltip = "$STR_TFS_ModuleProperty_Speech_MaxDistance_Tip";
 			defaultValue = -1;
 			typeName = "NUMBER";
 			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFSRHS_ModuleGlobalSpeech_MaxDistance";
+			property = "TFS_ModuleGlobalSpeech_MaxDistance";
 			control = "EditShort";
 		};
 		
 		class Duration {
-			displayName = "$STR_TFSRHS_ModuleProperty_Speech_Duration_Title";
-			tooltip = "$STR_TFSRHS_ModuleProperty_Speech_Duration_Tip";
+			displayName = "$STR_TFS_ModuleProperty_Speech_Duration_Title";
+			tooltip = "$STR_TFS_ModuleProperty_Speech_Duration_Tip";
 			defaultValue = -1;
 			typeName = "NUMBER";
 			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFSRHS_ModuleGlobalSpeech_Duration";
+			property = "TFS_ModuleGlobalSpeech_Duration";
 			control = "EditShort";
 		};
 		
 		class OnlyOnce {
-			displayName = "$STR_TFSRHS_ModuleProperty_Speech_OnlyOnce_Title";
-			tooltip = "$STR_TFSRHS_ModuleProperty_Speech_OnlyOnce_Tip";
+			displayName = "$STR_TFS_ModuleProperty_Speech_OnlyOnce_Title";
+			tooltip = "$STR_TFS_ModuleProperty_Speech_OnlyOnce_Tip";
 			defaultValue = "false";
 			typeName = "BOOL";
 			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFSRHS_ModuleGlobalSpeech_OnlyOnce";
+			property = "TFS_ModuleGlobalSpeech_OnlyOnce";
 			control = "Checkbox";
 		};
 		
 		class Reaction {
-			displayName = "$STR_TFSRHS_ModuleProperty_Speech_Reaction_Title";
-			tooltip = "$STR_TFSRHS_ModuleProperty_Speech_Reaction_Tip";
+			displayName = "$STR_TFS_ModuleProperty_Speech_Reaction_Title";
+			tooltip = "$STR_TFS_ModuleProperty_Speech_Reaction_Tip";
 			defaultValue = 0;
 			typeName = "NUMBER";
 			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFSRHS_ModuleGlobalSpeech_Reaction";
+			property = "TFS_ModuleGlobalSpeech_Reaction";
 			control = "Combo";
 			class Values {
 				class Reaction_0	{
-					name = "$STR_TFSRHS_ModuleProperty_Speech_Reaction_0";
+					name = "$STR_TFS_ModuleProperty_Speech_Reaction_0";
 					value = 0;
 				};
 				class Reaction_1	{
-					name = "$STR_TFSRHS_ModuleProperty_Speech_Reaction_1";
+					name = "$STR_TFS_ModuleProperty_Speech_Reaction_1";
 					value = 1;
 				};
 				class Reaction_2	{
-					name = "$STR_TFSRHS_ModuleProperty_Speech_Reaction_2";
+					name = "$STR_TFS_ModuleProperty_Speech_Reaction_2";
 					value = 2;
 				};
 				class Reaction_3	{
-					name = "$STR_TFSRHS_ModuleProperty_Speech_Reaction_3";
+					name = "$STR_TFS_ModuleProperty_Speech_Reaction_3";
 					value = 3;
 				};
 			};
 		};
 		
 		class Animation {
-			displayName = "$STR_TFSRHS_ModuleProperty_Speech_Animation_Title";
-			tooltip = "$STR_TFSRHS_ModuleProperty_Speech_Animation_Tip";
+			displayName = "$STR_TFS_ModuleProperty_Speech_Animation_Title";
+			tooltip = "$STR_TFS_ModuleProperty_Speech_Animation_Tip";
 			defaultValue = "''";
 			typeName = "STRING";
 			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFSRHS_ModuleGlobalSpeech_Animation";
+			property = "TFS_ModuleGlobalSpeech_Animation";
 			control = "Edit";
 		};
 		
 		class CodeStart {
-			displayName = "$STR_TFSRHS_ModuleProperty_Speech_CodeStart_Title";
-			tooltip = "$STR_TFSRHS_ModuleProperty_Speech_CodeStart_Tip";
+			displayName = "$STR_TFS_ModuleProperty_Speech_CodeStart_Title";
+			tooltip = "$STR_TFS_ModuleProperty_Speech_CodeStart_Tip";
 			defaultValue = "''";
 			typeName = "STRING";
 			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFSRHS_ModuleGlobalSpeech_CodeStart";
+			property = "TFS_ModuleGlobalSpeech_CodeStart";
 			control = "EditCodeMulti3";
 		};
 		
 		class CodeEnd {
-			displayName = "$STR_TFSRHS_ModuleProperty_Speech_CodeEnd_Title";
-			tooltip = "$STR_TFSRHS_ModuleProperty_Speech_CodeEnd_Tip";
+			displayName = "$STR_TFS_ModuleProperty_Speech_CodeEnd_Title";
+			tooltip = "$STR_TFS_ModuleProperty_Speech_CodeEnd_Tip";
 			defaultValue = "''";
 			typeName = "STRING";
 			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFSRHS_ModuleGlobalSpeech_CodeEnd";
+			property = "TFS_ModuleGlobalSpeech_CodeEnd";
 			control = "EditCodeMulti3";
 		};
 		
@@ -165,7 +165,7 @@ class TFSRHS_ModuleGlobalSpeech: Module_F {
 	};
 	
 	class ModuleDescription: ModuleDescription {
-		description = "$STR_TFSRHS_Module_GlobalSpeech_Description";
+		description = "$STR_TFS_Module_GlobalSpeech_Description";
 	};
 	
 };

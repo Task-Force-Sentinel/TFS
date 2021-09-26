@@ -7,8 +7,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "TFSRHS_main",
-            "TFSRHS_common"
+            "TFS_main",
+            "TFS_common"
         };
         author = AUTHOR;
         authors[] = {"veteran29"};

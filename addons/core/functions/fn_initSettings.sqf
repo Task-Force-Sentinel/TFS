@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\fn_initSettings.sqf
+ *	\z\tfs\addons\core\functions\fn_initSettings.sqf
  *	by Ojemineh
  *	
  *	register cba settings
@@ -12,7 +12,7 @@
  *	nothing
  *	
  *	Example:
- *	[] call TFSRHS_core_fnc_initSettings;
+ *	[] call TFS_core_fnc_initSettings;
  *	
  */
 
@@ -21,15 +21,15 @@
 // core SETTINGS
 
 [
-	"tfsrhs_debug_enabled",
+	"tfs_debug_enabled",
 	"CHECKBOX",
 	[
-		localize "STR_TFSRHS_core_CBA_Debug_Enabled_Title", 
-		localize "STR_TFSRHS_core_CBA_Debug_Enabled_Tip"
+		localize "STR_TFS_core_CBA_Debug_Enabled_Title", 
+		localize "STR_TFS_core_CBA_Debug_Enabled_Tip"
 	],
 	[
-		localize "STR_TFSRHS_core_CBA_Category", 
-		localize "STR_TFSRHS_core_CBA_Category_core"
+		localize "STR_TFS_core_CBA_Category", 
+		localize "STR_TFS_core_CBA_Category_core"
 	],
 	false,
 	0,
@@ -37,42 +37,42 @@
 ] call CBA_Settings_fnc_init;
 
 [
-	"tfsrhs_showNewsOnMainMenu",
+	"tfs_showNewsOnMainMenu",
 	"CHECKBOX",
 	[
-		localize "STR_TFSRHS_core_CBA_Show_News_Title", 
-		localize "STR_TFSRHS_core_CBA_Show_News_Tip"
+		localize "STR_TFS_core_CBA_Show_News_Title", 
+		localize "STR_TFS_core_CBA_Show_News_Tip"
 	],
 	[
-		localize "STR_TFSRHS_core_CBA_Category", 
-		localize "STR_TFSRHS_core_CBA_Category_core"
+		localize "STR_TFS_core_CBA_Category", 
+		localize "STR_TFS_core_CBA_Category_core"
 	],
 	true,
 	0,
 	{
 		params ["_value"];
 		if (_value) then {
-			profileNamespace setVariable ["tfsrhs_showNewsOnMainMenu", true];
+			profileNamespace setVariable ["tfs_showNewsOnMainMenu", true];
 		} else {
-			profileNamespace setVariable ["tfsrhs_showNewsOnMainMenu", false];
+			profileNamespace setVariable ["tfs_showNewsOnMainMenu", false];
 		};
 		saveProfileNamespace;
-		[(uiNamespace getVariable "RscDisplayMain")] call compile preprocessfilelinenumbers '\z\tfsrhs\addons\mainmenu\scripts\versionInfo.sqf';
+		[(uiNamespace getVariable "RscDisplayMain")] call compile preprocessfilelinenumbers '\z\tfs\addons\mainmenu\scripts\versionInfo.sqf';
 	}
 ] call CBA_Settings_fnc_init;
 
 // -------------------------------------------------------------------------------------------------
 
 [
-	"tfsrhs_tactical_view_enabled",
+	"tfs_tactical_view_enabled",
 	"CHECKBOX",
 	[
-		localize "STR_TFSRHS_core_CBA_Tactical_View_Title", 
-		localize "STR_TFSRHS_core_CBA_Tactical_View_Tip"
+		localize "STR_TFS_core_CBA_Tactical_View_Title", 
+		localize "STR_TFS_core_CBA_Tactical_View_Tip"
 	],
 	[
-		localize "STR_TFSRHS_core_CBA_Category", 
-		localize "STR_TFSRHS_core_CBA_Category_Options"
+		localize "STR_TFS_core_CBA_Category", 
+		localize "STR_TFS_core_CBA_Category_Options"
 	],
 	false,
 	1,

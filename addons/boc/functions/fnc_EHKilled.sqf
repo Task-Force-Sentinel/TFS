@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * _this call TFSRHS_boc_fnc_EHKilled;
+ * _this call TFS_boc_fnc_EHKilled;
  *
  * Public: No
  */

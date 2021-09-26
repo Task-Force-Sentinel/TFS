@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * _isDown = target call TFSRHS_shootingrange_fnc_isTargetDown;
+ * _isDown = target call TFS_shootingrange_fnc_isTargetDown;
  *
  * Public: No
  */

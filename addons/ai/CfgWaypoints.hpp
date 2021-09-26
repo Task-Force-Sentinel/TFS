@@ -1,12 +1,12 @@
 class CfgWaypoints
 {
-    class TFSRHS
+    class TFS
     {
-        displayName = "TFSRHS";
+        displayName = "TFS";
         class Fortify
         {
             displayName = "Fortify";
-            file = "\z\tfsrhs\addons\ai\functions\fnc_fortify.sqf";
+            file = "\z\tfs\addons\ai\functions\fnc_fortify.sqf";
             /*
                 0: GROUP
                 1: ARRAY - Waypoint position

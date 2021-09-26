@@ -9,12 +9,12 @@
 
     Example:
     class CfgDebriefingSections {
-        #include "\z\tfsrhs\addons\adminmenu\debriefAdminLog.inc"
+        #include "\z\tfs\addons\adminmenu\debriefAdminLog.inc"
     };
 */
 
-class tfsrhs_adminlog
+class tfs_adminlog
 {
-    title = "TFSRHS Log";
-    variable = "TFSRHS_adminmenu_debrief";
+    title = "TFS Log";
+    variable = "TFS_adminmenu_debrief";
 };

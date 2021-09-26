@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 /*
  * Author: veteran29
- * Join TFSRHS server from main menu.
+ * Join TFS server from main menu.
  * Based on article from KillZonekid
  *
  * Arguments:
@@ -27,7 +27,7 @@ if (isNil "CBA_fnc_log") then {
 uiNamespace setVariable ["EMM_multiplayerMenu_enabled", false];
 
 
-INFO("Auto joining to TFSRHS server");
+INFO("Auto joining to TFS server");
 
 GVAR(serverAddress) = "209.127.181.26";
 GVAR(serverPort) = "2302";

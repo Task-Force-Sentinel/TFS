@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\hints\functions\cba_ui\fn_displayText.sqf
+ *	\z\tfs\addons\hints\functions\cba_ui\fn_displayText.sqf
  *	by Ojemineh
  *	
  *	replace cba notify
@@ -23,7 +23,7 @@
 
 params ["_text"];
 
-private _hint_option_cba = (missionNamespace getVariable ["tfsrhs_hint_option_cba", true]);
+private _hint_option_cba = (missionNamespace getVariable ["tfs_hint_option_cba", true]);
 
 if (_hint_option_cba) then {
 	
@@ -33,7 +33,7 @@ if (_hint_option_cba) then {
 	
 	_text = format [hint_tpl_liner_1, _text];
 	
-	[_text, -1, -1] call TFSRHS_fnc_hint;
+	[_text, -1, -1] call TFS_fnc_hint;
 	
 } else {
 	

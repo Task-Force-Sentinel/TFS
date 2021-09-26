@@ -16,7 +16,7 @@ call compile format ["profileNamespace setVariable ['%1',%1]", _percentageVar];
 _viewDistVar = "CHVD_" + _varString;
 _viewDist = call compile _viewDistVar;
 _objVDVar = "CHVD_" + _varString + "Obj";
-_objVD = _viewDist * _percentage min TFSRHS_Main_ViewDistanceMaxObjectDistance;
+_objVD = _viewDist * _percentage min TFS_Main_ViewDistanceMaxObjectDistance;
 
 sliderSetPosition [_sliderCtrl, _objVD];
 ctrlSetText [_sliderTextboxCtrl, str round _objVD];

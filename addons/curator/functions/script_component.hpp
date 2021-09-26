@@ -1,1 +1,1 @@
-#include "\z\tfsrhs\addons\curator\script_component.hpp"
+#include "\z\tfs\addons\curator\script_component.hpp"

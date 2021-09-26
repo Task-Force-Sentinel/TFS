@@ -1,9 +1,9 @@
-class TFSRHS_Medical {
+class TFS_Medical {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class Medical {
 
-		file = "z\tfsrhs\addons\medical\Functions";
+		file = "z\tfs\addons\medical\Functions";
 		class ModuleMedicalFacility {};
 		class setMedicalFacility {};
 		class FacilityHeal {};

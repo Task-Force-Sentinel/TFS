@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\teleport\script_component.hpp"
+#include "\z\tfs\addons\teleport\script_component.hpp"
 params["_unit","_pos"];
 _unit setPos _pos;
 [{ (getpos (_this select 0) select 2) < 200 },{

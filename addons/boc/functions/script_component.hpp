@@ -1,1 +1,1 @@
-#include "\z\tfsrhs\addons\boc\script_component.hpp"
+#include "\z\tfs\addons\boc\script_component.hpp"

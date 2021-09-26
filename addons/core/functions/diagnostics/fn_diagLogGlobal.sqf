@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\diagnostics\fn_diagLogGlobal.sqf
+ *	\z\tfs\addons\core\functions\diagnostics\fn_diagLogGlobal.sqf
  *	by Ojemineh
  *	
  *	add a rpt-log if debug is enabled
@@ -16,7 +16,7 @@
  *	nothing
  *	
  *	Example:
- *	[4, "Player: '%1', Time: '%2'", [player, time], "core"] call TFSRHS_fnc_diagLogGlobal;
+ *	[4, "Player: '%1', Time: '%2'", [player, time], "core"] call TFS_fnc_diagLogGlobal;
  *	
  */
 
@@ -28,8 +28,8 @@ _level			= [_this, 0, 0, [0]] call BIS_fnc_param;
 _message		= [_this, 1, "", [""]] call BIS_fnc_param;
 _params			= [_this, 2, [], [[]]] call BIS_fnc_param;
 _extension		= [_this, 3, "", [""]] call BIS_fnc_param;
-_modification	= [_this, 4, "TFSRHS", [""]] call BIS_fnc_param;
+_modification	= [_this, 4, "TFS", [""]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-["tfsrhs_core_diagLog", [_level, _message, _params, _extension, _modification]] call CBA_fnc_globalEvent;
+["tfs_core_diagLog", [_level, _message, _params, _extension, _modification]] call CBA_fnc_globalEvent;

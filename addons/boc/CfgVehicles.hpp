@@ -34,9 +34,9 @@ class CfgVehicles {
 
     class GVAR(moduleAdd): Module_F {
         scope = 2;
-        displayName = $STR_TFSRHS_boc_moduleAdd_disp;
+        displayName = $STR_TFS_boc_moduleAdd_disp;
         icon = QPATHTOF(data\moduleAdd.paa);
-        category = "TFSRHS_boc";
+        category = "TFS_boc";
         function = QFUNC(moduleAdd);
         functionPriority = 0;
         isGlobal = 0;
@@ -73,7 +73,7 @@ class CfgVehicles {
         };
         class ModuleDescription : ModuleDescription {
             sync[]={"AnyPerson1","AnyPerson2"};
-            description = $STR_TFSRHS_boc_moduleAdd_desc;
+            description = $STR_TFS_boc_moduleAdd_desc;
             class AnyPerson1 {
                 description = "Short description";
                 displayName = "Any BLUFOR unit"; // Custom name
@@ -86,9 +86,9 @@ class CfgVehicles {
 
     class GVAR(moduleOnChest): Module_F {
         scope = 2;
-        displayName = $STR_TFSRHS_boc_moduleOnChest_disp;
+        displayName = $STR_TFS_boc_moduleOnChest_disp;
         icon = QPATHTOF(data\moduleOnChest.paa);
-        category = "TFSRHS_boc";
+        category = "TFS_boc";
         function = QFUNC(moduleOnChest);
         functionPriority = 0;
         isGlobal = 0;
@@ -113,7 +113,7 @@ class CfgVehicles {
         };
         class ModuleDescription : ModuleDescription {
             sync[]={"AnyPerson1","AnyPerson2"};
-            description = $STR_TFSRHS_boc_moduleOnChest_desc;
+            description = $STR_TFS_boc_moduleOnChest_desc;
             class AnyPerson1 {
                 description = "Short description";
                 displayName = "Any BLUFOR unit"; // Custom name

@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_CivBreakPatrol
+Function: TFS_fnc_CivBreakPatrol
 
 Description:
 	Helper function to handle civilians breaking away from their patrol if under fire.

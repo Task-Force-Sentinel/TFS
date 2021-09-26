@@ -1,8 +1,8 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 #include "initKeybinds.sqf"
 
-if (isTFSRHS) then {
+if (isTFS) then {
     GVAR(disconnectEH) = addMissionEventHandler ["HandleDisconnect",{
         params ["_unit", "_id", "_uid", "_name"];
         if !(typeOf _unit isEqualTo QEGVAR(spectator,unit)) then {

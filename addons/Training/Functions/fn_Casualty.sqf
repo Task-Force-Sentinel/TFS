@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_Casualty
+Function: TFS_fnc_Casualty
 
 Description:
     Used to set an AI to a triage state via hold add actions.
@@ -9,7 +9,7 @@ Arguments:
 
 Examples:
     (begin example)
-	    [this] call TFSRHS_fnc_Casualty;
+	    [this] call TFS_fnc_Casualty;
     (end)
 
 Author:
@@ -51,7 +51,7 @@ if (!hasinterface) exitwith {};
     false,
     5,
     false
-] call TFSRHS_fnc_AddAction;
+] call TFS_fnc_AddAction;
 
 //========================= T2
 
@@ -74,7 +74,7 @@ if (!hasinterface) exitwith {};
     false,
     5,
     false
-] call TFSRHS_fnc_AddAction;
+] call TFS_fnc_AddAction;
 
 //========================= T3
 
@@ -96,7 +96,7 @@ if (!hasinterface) exitwith {};
     false,
     5,
     false
-] call TFSRHS_fnc_AddAction;
+] call TFS_fnc_AddAction;
 
 //=================== Reset
 
@@ -116,4 +116,4 @@ if (!hasinterface) exitwith {};
     false,
     5,
     false
-] call TFSRHS_fnc_AddAction;
+] call TFS_fnc_AddAction;

@@ -5,10 +5,10 @@ class GVAR(EntityTag): ctrlControlsGroupNoScrollbars
     y = 0 * safezoneH + safezoneY;
     w = 0.08 * safezoneW;
     h = 0.06 * safezoneH;
-    onMouseZChanged = "[""MouseZChanged"",_this] call tfsrhs_spectator_fnc_mouseHandler";
-    onMouseButtonDown = "[""MouseButtonDown"",_this] call tfsrhs_spectator_fnc_mouseHandler";
-    onMouseButtonUp = "[""MouseButtonUp"",_this] call tfsrhs_spectator_fnc_mouseHandler";
-    onMouseMoving = "['MouseMoving',_this] call tfsrhs_spectator_fnc_mouseHandler";
+    onMouseZChanged = "[""MouseZChanged"",_this] call tfs_spectator_fnc_mouseHandler";
+    onMouseButtonDown = "[""MouseButtonDown"",_this] call tfs_spectator_fnc_mouseHandler";
+    onMouseButtonUp = "[""MouseButtonUp"",_this] call tfs_spectator_fnc_mouseHandler";
+    onMouseMoving = "['MouseMoving',_this] call tfs_spectator_fnc_mouseHandler";
     class controls
     {
         class GVAR(back) : IGUIBACK {

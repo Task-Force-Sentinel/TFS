@@ -1,29 +1,29 @@
 class CfgFunctions {
 	
-	class TFSRHS_Modules {
+	class TFS_Modules {
 		
-		tag = "tfsrhs_modules";
+		tag = "tfs_modules";
 		
 		class Modules {
-			file = "z\tfsrhs\addons\modules\functions";
+			file = "z\tfs\addons\modules\functions";
 			class initialize {};
 			class initSettings {};
 		};
 		
 	};
 	
-	class TFSRHS_Functions {
+	class TFS_Functions {
 		
-		tag = "tfsrhs";
+		tag = "tfs";
 		
 		class Modules_Sound {
-			file = "z\tfsrhs\addons\modules\functions\sound";
+			file = "z\tfs\addons\modules\functions\sound";
 			class moduleAmbientSound {};
 			class moduleTriggerSound {};
 		};
 		
 		class Modules_Speech {
-			file = "z\tfsrhs\addons\modules\functions\speech";
+			file = "z\tfs\addons\modules\functions\speech";
 			class moduleGlobalSpeech {};
 			class moduleGlobalSpeechMenu {};
 			class moduleGlobalSpeechPlay {};

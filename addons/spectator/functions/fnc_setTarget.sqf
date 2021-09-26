@@ -1,5 +1,5 @@
 
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 params [["_target",GVAR(target),[objNull]]];
 
 if (isNull _target) exitWith {};
@@ -10,7 +10,7 @@ GVAR(target) = _target;
 switch (GVAR(mode)) do {
     case FOLLOWCAM: {
         GVAR(camera) cameraEffect ["internal","back"];
-        selectPlayer tfsrhs_spectator_unit;
+        selectPlayer tfs_spectator_unit;
     };
 
     case FREECAM: {

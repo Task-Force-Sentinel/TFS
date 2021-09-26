@@ -10,7 +10,7 @@ class cfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"TFSRHS_common"};
+        requiredAddons[] = {"TFS_common"};
         VERSION_CONFIG;
     };
 };

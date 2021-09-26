@@ -1,5 +1,5 @@
 params ["_group","_pos","_type",["_radius",0],["_numOfPoints",8],["_onRoad",false]];
-#include "\z\tfsrhs\addons\patrol\script_component.hpp"
+#include "\z\tfs\addons\patrol\script_component.hpp"
 // type = 0 = circular, 1 = rectangle
 #define CIRCULAR 0
 #define RECTANGLE 1

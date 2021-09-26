@@ -1,4 +1,4 @@
 class CfgScriptPaths
 {
-	TFSRHSDisplays = "z\tfsrhs\addons\main\Scripts\UI\Displays\";
+	TFSDisplays = "z\tfs\addons\main\Scripts\UI\Displays\";
 }; 

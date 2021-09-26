@@ -1,24 +1,24 @@
 params ["_display"];
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 
 uiNamespace setVariable [QGVAR(display), _display];
 GVAR(unitUpdate) = -1; // Force unit list to update.
 GVAR(vehicles) = [];
 with uiNamespace do {
     GVAR(display) = _display;
-    GVAR(unitlabel) = _display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_UNITLABEL;
-    GVAR(unitlist) = _display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_UNITLIST;
+    GVAR(unitlabel) = _display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_UNITLABEL;
+    GVAR(unitlist) = _display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_UNITLIST;
 
-    GVAR(vision) = _display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_VISION;
+    GVAR(vision) = _display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_VISION;
 
-    GVAR(filter) = _display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_FILTER;
-    GVAR(side) = _display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_BUTTON;
-    GVAR(tagsbutton) = _display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_TAGS;
-    GVAR(view) = _display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_VIEW;
-    GVAR(mute) = _display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_MUTE;
-    GVAR(radio) = _display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_RADIO;
-    GVAR(map) = _display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_MAP;
-    GVAR(compass) = [_display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_COMPASSLEFT,_display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_COMPASS,_display displayCtrl IDC_SPECTATOR_TFSRHS_SPECTATOR_COMPASSRight];
+    GVAR(filter) = _display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_FILTER;
+    GVAR(side) = _display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_BUTTON;
+    GVAR(tagsbutton) = _display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_TAGS;
+    GVAR(view) = _display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_VIEW;
+    GVAR(mute) = _display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_MUTE;
+    GVAR(radio) = _display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_RADIO;
+    GVAR(map) = _display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_MAP;
+    GVAR(compass) = [_display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_COMPASSLEFT,_display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_COMPASS,_display displayCtrl IDC_SPECTATOR_TFS_SPECTATOR_COMPASSRight];
 
     private _labelParent = _display displayCtrl 2300;
     GVAR(labels) = [
@@ -39,8 +39,8 @@ with uiNamespace do {
 
 
 if(!GVAR(canSpectateAllSides)) then {
-    GVAR(sides) = [tfsrhs_spectator_entryside];
-    GVAR(sides_button_mode) = [[tfsrhs_spectator_entryside], []];
+    GVAR(sides) = [tfs_spectator_entryside];
+    GVAR(sides_button_mode) = [[tfs_spectator_entryside], []];
     GVAR(sides_button_strings) = ["SHOWING YOUR SIDE", "NONE"];
 };
 
@@ -78,8 +78,8 @@ if (isClass(configFile >> "CfgPatches" >> "acre_main")) then {
     GVAR(mute_modifers) = (_data select 5) select 1;
 
     // Add all languages
-    if (!isNil "tfsrhs_acre2_languagesTable") then {
-        private _languages = tfsrhs_acre2_languagesTable apply {_x select 0};
+    if (!isNil "tfs_acre2_languagesTable") then {
+        private _languages = tfs_acre2_languagesTable apply {_x select 0};
         _languages call acre_api_fnc_babelSetSpokenLanguages;
     };
 }

@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_getSoundPitch.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_getSoundPitch.sqf
  *	by Ojemineh
  *
  *	get pitch of a sound-class
@@ -12,7 +12,7 @@
  *	<NUMBER>
  *
  *	Example:
- *	["AlarmBell"] call TFSRHS_fnc_getSoundPitch;
+ *	["AlarmBell"] call TFS_fnc_getSoundPitch;
  *
  */
 

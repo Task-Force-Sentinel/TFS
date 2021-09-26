@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_getSoundDuration.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_getSoundDuration.sqf
  *	by Ojemineh
  *	
  *	get duration of a sound-class
@@ -13,7 +13,7 @@
  *	<NUMBER>
  *	
  *	Example:
- *	["AlarmBell"] call TFSRHS_fnc_getSoundDuration;
+ *	["AlarmBell"] call TFS_fnc_getSoundDuration;
  *	
  */
 

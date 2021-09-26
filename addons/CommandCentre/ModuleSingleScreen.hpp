@@ -1,10 +1,10 @@
-class TFSRHS_ModuleSingleScreen: Module_F
+class TFS_ModuleSingleScreen: Module_F
 {
 	scope = 2;
 	displayName = "Setup Single Screen";
-	icon = "\z\tfsrhs\addons\media\images\icons\SingleScreen.paa";
-	category = "TFSRHS_CommandCentre";
-	function = "TFSRHS_fnc_moduleSingleScreen";
+	icon = "\z\tfs\addons\media\images\icons\SingleScreen.paa";
+	category = "TFS_CommandCentre";
+	function = "TFS_fnc_moduleSingleScreen";
 	functionPriority = 4;
 	isGlobal = 0;
 	isTriggerActivated = 0;
@@ -14,7 +14,7 @@ class TFSRHS_ModuleSingleScreen: Module_F
 	{
 		class SingleScreenCam: Checkbox
   		{
-				property = "TFSRHS_SingleScreenCam";
+				property = "TFS_SingleScreenCam";
 				displayName = "Allow Helmet Cams";
 				tooltip = "Allow/Disallow viewing Helmet Cams through the screen.";
 				typeName = "BOOL";
@@ -22,7 +22,7 @@ class TFSRHS_ModuleSingleScreen: Module_F
 		};
 		class SingleScreenDrone: Checkbox
   		{
-				property = "TFSRHS_SingleScreenDrone";
+				property = "TFS_SingleScreenDrone";
 				displayName = "Allow Drone Cams";
 				tooltip = "Allow/Disallow viewing Drone Cams through the screen.";
 				typeName = "BOOL";
@@ -30,7 +30,7 @@ class TFSRHS_ModuleSingleScreen: Module_F
 		};
 		class SingleScreenSat: Checkbox
   		{
-				property = "TFSRHS_SingleScreenSat";
+				property = "TFS_SingleScreenSat";
 				displayName = "Allow Satellite View";
 				tooltip = "Allow/Disallow viewing Satellite Imagery through the screen.";
 				typeName = "BOOL";
@@ -38,7 +38,7 @@ class TFSRHS_ModuleSingleScreen: Module_F
 		};
 		class SingleScreenSelection: Edit
   		{
-				property = "TFSRHS_SingleScreenSelection";
+				property = "TFS_SingleScreenSelection";
 				displayName = "Screen Texture Selection";
 				tooltip = "Texture Selection of the screen, usually '0', at least for vanilla screens.";
 				typeName = "NUMBER";

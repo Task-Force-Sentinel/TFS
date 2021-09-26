@@ -28,7 +28,7 @@
  * [
  *     "range", [target1, target2], [controller1, controller2], 1, [30, 60], 60, [3, 5], 5, 10, [5, 9],
  *     [trigger1, trigger2], true, [invalidTarget1, invalidTarget2], [source1, source2]
- * ] call TFSRHS_shootingrange_fnc_create;
+ * ] call TFS_shootingrange_fnc_create;
  *
  * Public: Yes
  */

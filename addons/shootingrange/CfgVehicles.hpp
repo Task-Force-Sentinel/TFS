@@ -9,7 +9,7 @@ class CfgVehicles {
         isGlobal = 1; // Global
         isTriggerActivated = 0;
         isDisposable = 0;
-        icon = "\z\tfsrhs\addons\media\images\Icons\icon_shooting.paa";
+        icon = "\z\tfs\addons\media\images\Icons\icon_shooting.paa";
         class Arguments {
             class Name {
                 displayName = CSTRING(Name);

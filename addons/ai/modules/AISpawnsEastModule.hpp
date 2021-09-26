@@ -1,10 +1,10 @@
-class TFSRHS_ModuleAISpawns: Module_F
+class TFS_ModuleAISpawns: Module_F
 {
 	scope = 2;
 	displayName = "AI Spawn - East";
-	icon = "\z\tfsrhs\addons\media\images\icons\AI EAST.paa";
+	icon = "\z\tfs\addons\media\images\icons\AI EAST.paa";
 	category = "Task Force Sentinel";
-	function = "TFSRHS_fnc_moduleAISpawns";
+	function = "TFS_fnc_moduleAISpawns";
 	functionPriority = 2;
 	isGlobal = 0;
 	isTriggerActivated = 0;
@@ -14,19 +14,23 @@ class TFSRHS_ModuleAISpawns: Module_F
 	{
 		class ObjName: Edit
   			{
-				property = "TFSRHS_AI_ObjName";
+				property = "TFS_AI_ObjName";
 				displayName = "Objective Name";
 				tooltip = "Name of Objective/Spawn Position.";
 				defaultValue = """Objective 1""";
 			};
 		class EnemyType: Combo
   			{
-				property = "TFSRHS_AI_EnemyType";
+				property = "TFS_AI_EnemyType";
 				displayName = "Enemy Faction";
 				tooltip = "Enemy Faction Type for this Module.";
 				defaultValue = """OPF_F""";
 				class values
 				{
+					class UK3CB_CCM_O 				{name = "@3CB Factions - Chernarus Communist Militia";		value = "UK3CB_CCM_O";};
+					class UK3CB_TKA_O 				{name = "@3CB Factions - Takistan National Army";			value = "UK3CB_TKA_O";};	
+					class UK3CB_TKM_O 				{name = "@3CB Factions - Takistan Insurgents";				value = "UK3CB_TKM_O";};	
+					class UK3CB_TKP_O 				{name = "@3CB Factions - Takistan National Police";			value = "UK3CB_TKP_O";};
 					class CFP_O_ABUSAYYAF 			{name = "@CFP - Abu Sayyaf Group";							value = "CFP_O_ABUSAYYAF";};
 					class CFP_O_ALQAEDA 			{name = "@CFP - Al Qaeda";									value = "CFP_O_ALQAEDA";};
 					class CFP_O_ALSHABAAB 			{name = "@CFP - Al-Shabaab";								value = "CFP_O_ALSHABAAB";};
@@ -48,21 +52,37 @@ class TFSRHS_ModuleAISpawns: Module_F
 					class CFP_O_SSREBELS			{name = "@CFP - Sudan People's Liberation Movement";		value = "CFP_O_SSREBELS";};
 					class CFP_O_SYARMY 				{name = "@CFP - Syrian Arab Army";							value = "CFP_O_SYARMY";};
 					class CFP_O_TBAN 				{name = "@CFP - Taliban Insurgents";						value = "CFP_O_TBAN";};																									
+					class TEC_CSAT 					{name = "@CSAT Mod Project - CSAT (Iran, Mediterranean)";	value = "TEC_CSAT";};
+					class TEC_CSAT_Pacific 			{name = "@CSAT Mod Project - CSAT (Iran, Pacific)"; 		value = "TEC_CSAT_Pacific";};
 					class CUP_O_ChDKZ 				{name = "@CUP - Chernarussian Movement of the Red Star"; 	value = "CUP_O_ChDKZ";};
 					class CUP_O_RU 					{name = "@CUP - Russian Federation"; 						value = "CUP_O_RU";};
 					class CUP_O_SLA 				{name = "@CUP - Sahrani Liberation Army";					value = "CUP_O_SLA";};
 					class CUP_O_TK 					{name = "@CUP - Takistan Army"; 							value = "CUP_O_TK";};
 					class CUP_O_TK_MILITIA 			{name = "@CUP - Takistan Militia"; 							value = "CUP_O_TK_MILITIA";};
+					class LIB_RKKA		 			{name = "@IFA3 - Red Army"; 								value = "LIB_RKKA";};					
+					class OPTRE_Ins 				{name = "@OPTRE - Insurrectionists"; 						value = "OPTRE_Ins";};
+					class LOP_AFR_OPF 				{name = "@Project OPFOR - African Militia"; 				value = "LOP_AFR_OPF";};
+					class LOP_AM_OPF 				{name = "@Project OPFOR - Middle Eastern Militia";			value = "LOP_AM_OPF";};
+					class LOP_BH 					{name = "@Project OPFOR - Boko Haram";						value = "LOP_BH";};
+					class LOP_ChDKZ 				{name = "@Project OPFOR - ChDKZ"; 							value = "LOP_ChDKZ";};
+					class LOP_IRA 					{name = "@Project OPFOR - Irish Republican Army"; 			value = "LOP_IRA";};
+					class LOP_ISTS_OPF 				{name = "@Project OPFOR - Islamic State"; 					value = "LOP_ISTS_OPF";};
+					class LOP_SLA 					{name = "@Project OPFOR - Sahrani Liberation Army"; 		value = "LOP_SLA";};
+					class LOP_TKA 					{name = "@Project OPFOR - Takistani Armed Forces"; 			value = "LOP_TKA";};
+					class rhs_faction_msv 			{name = "@RHS AFRF - Russia - MSV"; 						value = "rhs_faction_msv";};
+					class rhs_faction_vdv 			{name = "@RHS AFRF - Russia - VDV"; 						value = "rhs_faction_vdv";};
+					class rhs_faction_vmf 			{name = "@RHS AFRF - Russia - VMF"; 						value = "rhs_faction_vmf";};
+					class rhsgref_faction_chdkz		{name = "@RHS GREF - ChDKZ Insurgents";						value = "rhsgref_faction_chdkz";};
+					class UNSUNG_E_NVA 				{name = "@UNSUNG - NVA"; 									value = "UNSUNG_E_NVA";};
+					class TBan_Group				{name = "@Taliban RHS Config - Taliban"; 					value = "TBan_Group";};
 					class OPF_F						{name = "Vanilla - CSAT"; 									value = "OPF_F";};
 					class OPF_T_F 					{name = "Vanilla - CSAT (Pacific)"; 						value = "OPF_T_F";};
-					class TEC_CSAT					{name = "CSAT (Iran, Arid)"; 								value = "TEC_CSAT";};
-					class TEC_CSAT_Pacific 			{name = "CSAT (Iran, Woodland)"; 							value = "TEC_CSAT_Pacific";};
 				};
 			};
 
 		class GarrRadius: Edit
   			{
-				property = "TFSRHS_AI_GarRadius";
+				property = "TFS_AI_GarRadius";
 				displayName = "Garrison Radius";
 				tooltip = "AI Garrison radius from this module.";
 				typeName = "NUMBER";
@@ -71,7 +91,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 
 		class GarrisonedGroupsMin: Edit
 		{
-			property = "TFSRHS_AI_GarrisonedGroupsMin";
+			property = "TFS_AI_GarrisonedGroupsMin";
 			displayName = "Min Garrisoned Groups";
 			description = "Minimum Number of Garrisoned AI Groups to Spawn";
 			typeName = "Number";
@@ -79,7 +99,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class GarrisonedGroupsMax: Edit
 		{
-			property = "TFSRHS_AI_GarrisonedGroupsMax";
+			property = "TFS_AI_GarrisonedGroupsMax";
 			displayName = "Max Garrisoned Groups";
 			description = "Maximum Number of Garrisoned AI Groups to Spawn";
 			typeName = "Number";
@@ -88,7 +108,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 
 		class PatrolMethod: Combo
   			{
-				property = "TFSRHS_AI_PatrolMethod";
+				property = "TFS_AI_PatrolMethod";
 				displayName = "Patrol Method";
 				tooltip = "Method to use for plotting patrol paths";
 				defaultValue = """RANDOM""";
@@ -100,7 +120,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 			};
 		class Radius: Edit
   			{
-				property = "TFSRHS_AI_Radius";
+				property = "TFS_AI_Radius";
 				displayName = "Patrol Radius";
 				tooltip = "AI Patrol radius from this module.";
 				typeName = "NUMBER";
@@ -109,7 +129,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 
 		class EIPatrolsMin: Edit
 		{
-			property = "TFSRHS_AI_EIPatrolsMin";
+			property = "TFS_AI_EIPatrolsMin";
 			displayName = "Min Infantry Patrols";
 			description = "Minimum Number of Infantry Patrol Groups to Spawn";
 			typeName = "Number";
@@ -117,7 +137,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class EIPatrolsMax: Edit
 		{
-			property = "TFSRHS_AI_EIPatrolsMax";
+			property = "TFS_AI_EIPatrolsMax";
 			displayName = "Max Infantry Patrols";
 			description = "Maximum Number of Infantry Patrol Groups to Spawn";
 			typeName = "Number";
@@ -125,7 +145,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class EIAAMin: Edit
 		{
-			property = "TFSRHS_AI_EIAAMin";
+			property = "TFS_AI_EIAAMin";
 			displayName = "Min AA Infantry";
 			description = "Minimum Number of AA Infantry Groups to Spawn";
 			typeName = "Number";
@@ -133,7 +153,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class EIAAMax: Edit
 		{
-			property = "TFSRHS_AI_EIAAMax";
+			property = "TFS_AI_EIAAMax";
 			displayName = "Max AA Infantry";
 			description = "Maximum Number of AA Infantry Groups to Spawn";
 			typeName = "Number";
@@ -141,7 +161,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class EIATMin: Edit
 		{
-			property = "TFSRHS_AI_EIATMin";
+			property = "TFS_AI_EIATMin";
 			displayName = "Min AT Infantry";
 			description = "Minimum Number of AT Infantry Groups to Spawn";
 			typeName = "Number";
@@ -149,7 +169,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class EIATMax: Edit
 		{
-			property = "TFSRHS_AI_EIATMax";
+			property = "TFS_AI_EIATMax";
 			displayName = "Max AT Infantry";
 			description = "Maximum Number of AT Infantry Groups to Spawn";
 			typeName = "Number";
@@ -157,7 +177,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class EISniperMin: Edit
 		{
-			property = "TFSRHS_AI_EISniperMin";
+			property = "TFS_AI_EISniperMin";
 			displayName = "Min Sniper Teams";
 			description = "Minimum Number of Sniper Teams to Spawn";
 			typeName = "Number";
@@ -165,7 +185,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class EISniperMax: Edit
 		{
-			property = "TFSRHS_AI_EISniperMax";
+			property = "TFS_AI_EISniperMax";
 			displayName = "Max Sniper Teams";
 			description = "Maximum Number of Sniper Teams to Spawn";
 			typeName = "Number";
@@ -173,7 +193,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class VehAAMin: Edit
 		{
-			property = "TFSRHS_AI_VehAAMin";
+			property = "TFS_AI_VehAAMin";
 			displayName = "Min AA Vehicles";
 			description = "Minimum Number of AA Vehicles to Spawn";
 			typeName = "Number";
@@ -181,7 +201,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class VehAAMax: Edit
 		{
-			property = "TFSRHS_AI_VehAAMax";
+			property = "TFS_AI_VehAAMax";
 			displayName = "Max AA Vehicles";
 			description = "Maximum Number of AA Vehicles to Spawn";
 			typeName = "Number";
@@ -189,7 +209,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class VehLightMin: Edit
 		{
-			property = "TFSRHS_AI_VehLightMin";
+			property = "TFS_AI_VehLightMin";
 			displayName = "Min Light Vehicles";
 			description = "Minimum Number of Light Vehicles to Spawn";
 			typeName = "Number";
@@ -197,7 +217,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class VehLightMax: Edit
 		{
-			property = "TFSRHS_AI_VehLightMax";
+			property = "TFS_AI_VehLightMax";
 			displayName = "Max Light Vehicles";
 			description = "Maximum Number of Light Vehicles to Spawn";
 			typeName = "Number";
@@ -205,7 +225,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class VehMRAPMin: Edit
 		{
-			property = "TFSRHS_AI_VehMRAPMin";
+			property = "TFS_AI_VehMRAPMin";
 			displayName = "Min MRAPs";
 			description = "Minimum Number of MRAPs to Spawn";
 			typeName = "Number";
@@ -213,7 +233,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class VehMRAPMax: Edit
 		{
-			property = "TFSRHS_AI_VehMRAPMax";
+			property = "TFS_AI_VehMRAPMax";
 			displayName = "Max MRAPs";
 			description = "Maximum Number of MRAPs to Spawn";
 			typeName = "Number";
@@ -221,7 +241,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class VehHeavyMin: Edit
 		{
-			property = "TFSRHS_AI_VehHeavyMin";
+			property = "TFS_AI_VehHeavyMin";
 			displayName = "Min Heavy Vehicles";
 			description = "Minimum Number of Heavy Vehicles to Spawn";
 			typeName = "Number";
@@ -229,7 +249,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class VehHeavyMax: Edit
 		{
-			property = "TFSRHS_AI_VehHeavyMax";
+			property = "TFS_AI_VehHeavyMax";
 			displayName = "Max Heavy Vehicles";
 			description = "Maximum Number of Heavy Vehicles to Spawn";
 			typeName = "Number";
@@ -237,7 +257,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class VehRandomMin: Edit
 		{
-			property = "TFSRHS_AI_VehRandomMin";
+			property = "TFS_AI_VehRandomMin";
 			displayName = "Min Random Vehicles";
 			description = "Minimum Number of Random Vehicles to Spawn";
 			typeName = "Number";
@@ -245,7 +265,7 @@ class TFSRHS_ModuleAISpawns: Module_F
 		};
 		class VehRandomMax: Edit
 		{
-			property = "TFSRHS_AI_VehRandomMax";
+			property = "TFS_AI_VehRandomMax";
 			displayName = "Max Random Vehicles";
 			description = "Maximum Number of Random Vehicles to Spawn";
 			typeName = "Number";

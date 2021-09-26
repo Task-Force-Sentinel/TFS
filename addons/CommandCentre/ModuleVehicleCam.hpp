@@ -1,10 +1,10 @@
-class TFSRHS_ModuleVehicleCam: Module_F
+class TFS_ModuleVehicleCam: Module_F
 {
 	scope = 2;
 	displayName = "Add Vehicle Camera";
-	icon = "\z\tfsrhs\addons\media\images\icons\Camera.paa";
-	category = "TFSRHS_CommandCentre";
-	function = "TFSRHS_fnc_moduleVehicleCam";
+	icon = "\z\tfs\addons\media\images\icons\Camera.paa";
+	category = "TFS_CommandCentre";
+	function = "TFS_fnc_moduleVehicleCam";
 	functionPriority = 4;
 	isGlobal = 0;
 	isTriggerActivated = 0;

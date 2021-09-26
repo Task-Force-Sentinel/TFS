@@ -1,5 +1,5 @@
 /*
- * Name: TFSRHS_common_fnc_serializeWaypoints
+ * Name: TFS_common_fnc_serializeWaypoints
  * Author: Head
  *
  * Arguments:
@@ -10,6 +10,6 @@
  *
  */
 params ["_group"];
-#include "\z\tfsrhs\addons\common\script_component.hpp"
+#include "\z\tfs\addons\common\script_component.hpp"
 private _waypoints = (waypoints _group) apply { _x call FUNC(serializeWaypoint)};
 _waypoints

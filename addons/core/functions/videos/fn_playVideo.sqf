@@ -1,6 +1,6 @@
 ﻿/*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\videos\fn_playVideo.sqf
+ *	\z\tfs\addons\core\functions\videos\fn_playVideo.sqf
  *	by Ojemineh
  *	
  *	play video
@@ -15,7 +15,7 @@
  *	<NUMBER>
  *	
  *	Example:
- *	["data\video\intro.ogv"] call TFSRHS_fnc_playVideo;
+ *	["data\video\intro.ogv"] call TFS_fnc_playVideo;
  *	
  */
 
@@ -65,7 +65,7 @@ private _return = [_filename, _canSkip, _showSkip, _showTime] spawn {
 			private _rgb = [_r,_g,_b] call BIS_fnc_colorRGBtoHTML;
 			
 			private _keyName = format ["<t color='%1'>[%2]</t>", _rgb, toUpper(((keyname 57) splitString '"') joinString '')];
-			private _skipMsg = format ["<t font='RobotoCondensed' color='#ffffff' shadow='2' size='1.6'>%1</t>", localize "STR_TFSRHS_Message_SkipVideo"];
+			private _skipMsg = format ["<t font='RobotoCondensed' color='#ffffff' shadow='2' size='1.6'>%1</t>", localize "STR_TFS_Message_SkipVideo"];
 			private _message = format [_skipMsg, _keyName];
 			
 			uiSleep (_showTime select 0);
@@ -76,7 +76,7 @@ private _return = [_filename, _canSkip, _showSkip, _showTime] spawn {
 		};
 	};
 	
-	private _keyHandler = (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call TFSRHS_fnc_videoKeyDown"];
+	private _keyHandler = (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call TFS_fnc_videoKeyDown"];
 	private _video = [_filename] spawn BIS_fnc_playVideo;
 	
 	waitUntil {if (scriptDone _video) exitWith {true}; false};

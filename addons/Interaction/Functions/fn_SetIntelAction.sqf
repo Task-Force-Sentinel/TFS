@@ -15,13 +15,13 @@ params [
 	"_player distance _target < 2 &&
 	 {
 	 	((side group _player) in (_target getvariable ['RscAttributeOwners',[west,east,resistance,civilian]])) ||
-	 	(((group _player) getVariable ['TFSRHS_section','Command']) in (_target getVariable ['RscAttributeOwners',['Command']]))
+	 	(((group _player) getVariable ['TFS_section','Command']) in (_target getVariable ['RscAttributeOwners',['Command']]))
 	 }",
 	"true",
 	{ [format["<t color='#FFBB00' size = '.5'>You're collecting %1.</t>",(_this select 2) select 0],-1,0.8,5,2,0,789] spawn BIS_fnc_dynamicText;},
 	{},
 	{
-		_this spawn TFSRHS_fnc_RunIntelAction;
+		_this spawn TFS_fnc_RunIntelAction;
 		[format["<t color='#339900' size = '.5'>You've collected %1.</t>",(_this select 2) select 0],-1,0.8,5,2,0,789] spawn BIS_fnc_dynamicText;
 	},
 	{[format["<t color='#cc3232' size = '.5'>You've stopped collecting %1.</t>",(_this select 2) select 0],-1,0.8,5,2,0,789] spawn BIS_fnc_dynamicText;},
@@ -30,4 +30,4 @@ params [
 	true,
 	format ["You're collecting %1", _itemName],
 	false
-] call TFSRHS_fnc_AddHoldAction;
+] call TFS_fnc_AddHoldAction;

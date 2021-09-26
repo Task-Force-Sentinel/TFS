@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_stop3dSoundLocal.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_stop3dSoundLocal.sqf
  *	by Ojemineh
  *
  *	stop 3d sound
@@ -13,7 +13,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "AlarmBell"] call TFSRHS_fnc_stop3dSoundLocal;
+ *	[player, "AlarmBell"] call TFS_fnc_stop3dSoundLocal;
  *
  */
 
@@ -34,7 +34,7 @@ if (isNull _object) exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
-private _soundArray = _object getVariable ["tfsrhs_sound3d", []];
+private _soundArray = _object getVariable ["tfs_sound3d", []];
 private _soundInUse = false;
 private _soundObject = objNull;
 
@@ -57,7 +57,7 @@ if (_soundClass != "") then {
 		
 		if (_index >= 0) then {
 			_soundArray deleteAt _index;
-			_object setVariable ["tfsrhs_sound3d", _soundArray];
+			_object setVariable ["tfs_sound3d", _soundArray];
 			if (Not isNull _soundObject) then {deleteVehicle _soundObject;};
 		};
 		
@@ -76,6 +76,6 @@ if (_soundClass != "") then {
 		} forEach _soundArray;
 	};
 	
-	_object setVariable ["tfsrhs_sound3d", []];
+	_object setVariable ["tfs_sound3d", []];
 	
 };

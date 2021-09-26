@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * [] call TFSRHS_boc_fnc_arsenal_onButtonClick;
+ * [] call TFS_boc_fnc_arsenal_onButtonClick;
  *
  * Public: No
  */
@@ -24,7 +24,7 @@ _action = ["onback", "onchest"] select (_chestpack isEqualTo "");
 if (!(_backpack isEqualTo "") and !(_chestpack isEqualTo "")) then {_action = "swap";};
 
 //execute action
-[_center] call (missionNamespace getVariable (format ["TFSRHS_boc_fnc_action%1",_action]));
+[_center] call (missionNamespace getVariable (format ["TFS_boc_fnc_action%1",_action]));
 
 //update arsenal
 ["ListSelectCurrent"] call BIS_fnc_arsenal;

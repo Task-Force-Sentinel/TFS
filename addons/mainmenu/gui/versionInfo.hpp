@@ -21,7 +21,7 @@ class RscDisplayMain: RscStandardDisplay {
             };
         };
 		
-        class TFSRHS_InfoNews: InfoNews {
+        class TFS_InfoNews: InfoNews {
 			
             idc = 90090;
             y = "safezoneY + safezoneH - (4 * 2 + 1) * (pixelH * pixelGrid * 2) - 5 * (4 * pixelH)";
@@ -31,7 +31,7 @@ class RscDisplayMain: RscStandardDisplay {
                 class Background: Background {};
                 class BackgroundIcon: BackgroundIcon {};
                 class Icon: Icon {
-                    text = "$STR_TFSRHS_Addon_Logo";
+                    text = "$STR_TFS_Addon_Logo";
                 };
 				
                 class CurrentVersionInfo: RscText {
@@ -72,8 +72,8 @@ class RscDisplayMain: RscStandardDisplay {
                 };
 				
                 class Button: Button {
-                    tooltip = "$STR_TFSRHS_VersionInfo_Tooltip";
-                    url = "$STR_TFSRHS_Addon_URL_Releases";
+                    tooltip = "$STR_TFS_VersionInfo_Tooltip";
+                    url = "$STR_TFS_Addon_URL_Releases";
                 };
 				
             };

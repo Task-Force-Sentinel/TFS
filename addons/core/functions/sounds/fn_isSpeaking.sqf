@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_isSpeaking.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_isSpeaking.sqf
  *	by Ojemineh
  *	
  *	check if unit is speaking (speak3d)
@@ -12,7 +12,7 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[player] call TFSRHS_fnc_isSpeaking;
+ *	[player] call TFS_fnc_isSpeaking;
  *	
  */
 
@@ -32,7 +32,7 @@ private _return = false;
 
 _return = (
 	(alive _unit) && 
-	(_unit getVariable ["tfsrhs_speak3d", false])
+	(_unit getVariable ["tfs_speak3d", false])
 );
 
 _return;

@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_say3d.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_say3d.sqf
  *	by Ojemineh
  *
  *	play global sound at object position
@@ -17,7 +17,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "AlarmBell"] call TFSRHS_fnc_say3d;
+ *	[player, "AlarmBell"] call TFS_fnc_say3d;
  *
  */
 
@@ -39,4 +39,4 @@ if (_soundClass isEqualTo "") exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
-[_object, _soundClass, _distance, _maxDistance, _pitch, _isSpeech] remoteExecCall ["TFSRHS_fnc_say3dLocal", 0, false];
+[_object, _soundClass, _distance, _maxDistance, _pitch, _isSpeech] remoteExecCall ["TFS_fnc_say3dLocal", 0, false];

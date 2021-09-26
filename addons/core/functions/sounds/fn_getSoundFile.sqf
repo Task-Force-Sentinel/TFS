@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_getSoundFile.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_getSoundFile.sqf
  *	by Ojemineh
  *
  *	get filename (incl. path) of a sound-class
@@ -12,7 +12,7 @@
  *	<STRING>
  *
  *	Example:
- *	["AlarmBell"] call TFSRHS_fnc_getSoundFile;
+ *	["AlarmBell"] call TFS_fnc_getSoundFile;
  *
  */
 

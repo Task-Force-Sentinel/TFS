@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 params ["_logic","_units","_activated"];
 private _icon = _logic getVariable ["Icon","\A3\ui_f\data\map\markers\nato\b_unknown.paa"];
 private _text = _logic getVariable ["Text",""];

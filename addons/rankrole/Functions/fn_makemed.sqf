@@ -18,4 +18,4 @@ if (hasInterface) then {
 
 };
 
-[ format [hint_tpl_default, "Medical"] ] call TFSRHS_fnc_hint;
+[ format [hint_tpl_default, "Medical"] ] call TFS_fnc_hint;

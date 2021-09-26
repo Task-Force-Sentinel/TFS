@@ -3,7 +3,7 @@ class RadioConfigDialog {
 	idd = 21821;
 
     class controlsBackground {
-        class Backdrop: TFSRHS_CC_RscText
+        class Backdrop: TFS_CC_RscText
         {
         	idc = 1000;
         	x = 10 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
@@ -14,7 +14,7 @@ class RadioConfigDialog {
         };
     };
     class controls {
-        class TitleText: TFSRHS_CC_RscText
+        class TitleText: TFS_CC_RscText
         {
         	idc = 1001;
             style = "ST_TITLE_BAR";
@@ -25,7 +25,7 @@ class RadioConfigDialog {
         	h = 1 * GUI_GRID_CENTER_H;
         	colorBackground[] = {0.2,0.4,0.2,1};
         };
-        class ChOneText: TFSRHS_CC_RscText
+        class ChOneText: TFS_CC_RscText
         {
         	idc = 1002;
         	text = "Channel 1 Frequency:";
@@ -34,7 +34,7 @@ class RadioConfigDialog {
         	w = 10 * GUI_GRID_CENTER_W;
         	h = 1 * GUI_GRID_CENTER_H;
         };
-        class ChTwoText: TFSRHS_CC_RscText
+        class ChTwoText: TFS_CC_RscText
         {
         	idc = 1003;
         	text = "Channel 2 Frequency:";
@@ -43,7 +43,7 @@ class RadioConfigDialog {
         	w = 10 * GUI_GRID_CENTER_W;
         	h = 1 * GUI_GRID_CENTER_H;
         };
-        class VolText: TFSRHS_CC_RscText
+        class VolText: TFS_CC_RscText
         {
         	idc = 1004;
         	text = "Radio Volume:";
@@ -52,7 +52,7 @@ class RadioConfigDialog {
         	w = 10 * GUI_GRID_CENTER_W;
         	h = 1 * GUI_GRID_CENTER_H;
         };
-        class ButtonOK: TFSRHS_CC_RscButton
+        class ButtonOK: TFS_CC_RscButton
         {
 			idc = 1100;
         	x = 10 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
@@ -61,7 +61,7 @@ class RadioConfigDialog {
         	h = 1 * GUI_GRID_CENTER_H;
 			text = "OK";
         };
-        class ButtonCancel: TFSRHS_CC_RscButton
+        class ButtonCancel: TFS_CC_RscButton
         {
 			idc = 1101;
         	x = 25 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
@@ -70,7 +70,7 @@ class RadioConfigDialog {
         	h = 1 * GUI_GRID_CENTER_H;
 			text = "Cancel";
         };
-        class ChOneEdit: TFSRHS_CC_RscEdit
+        class ChOneEdit: TFS_CC_RscEdit
         {
         	idc = 1400;
         	text = "30";
@@ -80,7 +80,7 @@ class RadioConfigDialog {
         	h = 1 * GUI_GRID_CENTER_H;
         	tooltip = "Set Channel 1 of the radio to this frequency. -1 disables the channel.";
         };
-        class ChTwoEdit: TFSRHS_CC_RscEdit
+        class ChTwoEdit: TFS_CC_RscEdit
         {
         	idc = 1401;
         	text = "40";
@@ -90,7 +90,7 @@ class RadioConfigDialog {
         	h = 1 * GUI_GRID_CENTER_H;
         	tooltip = "Set Channel 2 of the radio to this frequency. -1 disables the channel.";
         };
-        class VolEdit: TFSRHS_CC_RscEdit
+        class VolEdit: TFS_CC_RscEdit
         {
         	idc = 1402;
         	text = "7";

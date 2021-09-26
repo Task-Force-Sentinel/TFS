@@ -2,18 +2,18 @@
 <Project name="Arma_Extended_Environment">
 
 	<!-- ####################################################################################### -->
-	<Package name="TFSRHS_Gear">
+	<Package name="TFS_Gear">
 
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Gear">
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_Gear_Title">
-				<Original>TFSRHS Gear</Original>
+			<Key ID="STR_TFS_Gear_Title">
+				<Original>TFS Gear</Original>
 			</Key>
-			<Key ID="STR_TFSRHS_Gear_Author">
-				<Original>TFSRHS-Team</Original>
+			<Key ID="STR_TFS_Gear_Author">
+				<Original>TFS-Team</Original>
 			</Key>
-			<Key ID="STR_TFSRHS_Gear_URL">
+			<Key ID="STR_TFS_Gear_URL">
 				<Original>https://purplesmoke.info</Original>
 			</Key>
 			<!-- =============================================================================== -->

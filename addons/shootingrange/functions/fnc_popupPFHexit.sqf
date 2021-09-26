@@ -21,7 +21,7 @@
  * None
  *
  * Example:
- * [idPFH, controller, [controller1, controller2], "range", [target1, target2], [invalidTarget1, invalidTarget2], 1, true] call TFSRHS_shootingrange_fnc_popupPFHexit;
+ * [idPFH, controller, [controller1, controller2], "range", [target1, target2], [invalidTarget1, invalidTarget2], 1, true] call TFS_shootingrange_fnc_popupPFHexit;
  *
  * Public: No
  */

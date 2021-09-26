@@ -1,5 +1,5 @@
 /*
-Function name:TFSRHS_fnc_TFSRHS_fnc_AmmoCrate;
+Function name:TFS_fnc_TFS_fnc_AmmoCrate;
 Author: Mr H.
 Description: this function gets all weapons currently present in all playable units' inventories and fills the box with fiting ammunition for these weapons, it includes handguns and launchers. The box receives an ace 3 interaction that allows players to refresh its contents.
 Return value: None
@@ -10,7 +10,7 @@ Parameters:
 2- <BOOLEAN> Content is unlimited, if true the box will be refilled everytime its inventory is opened. -Optional default false
 3- <BOOLEAN> Can be refreshed, if true the box's content can be refreshed useful if players change their weapons mid game. The box will receive an ACE 3 interaction action to refresh its contents. It makes the box's content unlimited. -optional, default false
 Example(s):
-[this,10,true,true] call TFSRHS_fnc_AmmoCrate;
+[this,10,true,true] call TFS_fnc_AmmoCrate;
 */
 
 
@@ -61,52 +61,52 @@ _do= _box addMagazineCargoGlobal [_x, _Ammount];
 ////if unlimited is set to true, the box will be refilled automatically
 
 if (_isUnlimited)then {
-_box setVariable ["TFSRHS_AmmoMagazines", _allMagazinesType];
+_box setVariable ["TFS_AmmoMagazines", _allMagazinesType];
 
 _handlerIndex = _box addEventHandler
 	["ContainerOpened",
 		{
 		_box = _this select 0;
-		_allMagazinesType = _box getVariable "TFSRHS_AmmoMagazines";
+		_allMagazinesType = _box getVariable "TFS_AmmoMagazines";
 
 
 
 		clearMagazineCargoGlobal _box;
 		{_box addMagazineCargoGlobal [_x,10];} forEach _allMagazinesType;
-        _box addItemCargoGlobal ["TFSRHS_FirstAid",1];
-        _box addItemCargoGlobal ["TFSRHS_MedicKit",1];
-        _box addItemCargoGlobal ["TFSRHS_mopp",1];
+        _box addItemCargoGlobal ["TFS_FirstAid",1];
+        _box addItemCargoGlobal ["TFS_MedicKit",1];
+        _box addItemCargoGlobal ["TFS_mopp",1];
 		_box addItemCargoGlobal ["HandGrenade",8];
 		_box addItemCargoGlobal ["SmokeShell",8];
 		_box addItemCargoGlobal ["ACE_M84",8];
 		}
 	];
-_box setVariable ["TFSRHS_AmmoCrateEHIndex", _handlerIndex, true];
+_box setVariable ["TFS_AmmoCrateEHIndex", _handlerIndex, true];
 
 };
 
 ////Adds ace action to allow refresh of the box's contents midgame (useful if new weapons are given to players)
 
 _params = [_box,_Ammount,_isUnlimited,_canBeRefreshed];
-_box setVariable ["TFSRHS_AmmoCrateParameters", _params, true];
+_box setVariable ["TFS_AmmoCrateParameters", _params, true];
 
 if (_canBeRefreshed) then {
 _statement =
 	{
 
 	_box = _this select 0;
-	_params = _box getVariable "TFSRHS_AmmoCrateParameters";
+	_params = _box getVariable "TFS_AmmoCrateParameters";
 	[[_params],
 		{
 		params ["_params"];
 		_box = _params select 0;
-		_handlerIndex = _box getVariable "TFSRHS_AmmoCrateEHIndex";
+		_handlerIndex = _box getVariable "TFS_AmmoCrateEHIndex";
 		_box removeEventHandler ["ContainerOpened", _handlerIndex];
 		[_box ,0,["ACE_MainActions","RefreshBoxContents"]] call ace_interact_menu_fnc_removeActionFromObject;
-		_params call TFSRHS_fnc_AmmoCrate;
+		_params call TFS_fnc_AmmoCrate;
 		}
 	] RemoteExec ["Spawn",0,true];
-	//_params call TFSRHS_fnc_AmmoCrate;
+	//_params call TFS_fnc_AmmoCrate;
 	};
 _action = ["RefreshBoxContents","Refresh crate content","", _statement , {true},{},[],[0,0,0], 5] call ace_interact_menu_fnc_createAction;
 [_box, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;

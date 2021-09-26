@@ -1,9 +1,9 @@
-class TFSRHS_Explosives {
+class TFS_Explosives {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class Explosives {
 
-		file = "z\tfsrhs\addons\Explosives\Functions";
+		file = "z\tfs\addons\Explosives\Functions";
 		class CrashSite {};
 		class IEDVehicle {};
 		class MakeIED {};

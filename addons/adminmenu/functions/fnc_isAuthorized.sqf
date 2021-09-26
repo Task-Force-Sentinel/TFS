@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 /*
- * Name = TFSRHS_adminmenu_fnc_isAuthorized
+ * Name = TFS_adminmenu_fnc_isAuthorized
  * Author = Freddo
  *
  * Parameters:
@@ -8,7 +8,7 @@
  *
  * Description:
  * Checks if player is defined as an admin in
- * class TFSRHS_adminMenu_authorized_players
+ * class TFS_adminMenu_authorized_players
  *
  * If executed on server then will check if the remote object is a logged in admin.
  * If executed on a object local to the client, then it will check if the client is

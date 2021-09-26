@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 params ["_control","_button","_x","_y"];
 if (_button != 0) exitWith {};
 private _pos = _control ctrlMapScreenToWorld [_x, _y];

@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_packUpFOB
+Function: TFS_fnc_packUpFOB
 
 Description:
 	Packs up the passed FOB
@@ -19,28 +19,28 @@ Author:
 */
 
 if (!isServer) exitWith {
-	_this remoteExec ["TFSRHS_fnc_packUpFOB", 2];
+	_this remoteExec ["TFS_fnc_packUpFOB", 2];
 };
 
 params ["_object", "_caller"];
 
 // sanity checks
-if !(_object getVariable ["TFSRHS_PortableFOB_Deployed", false]) exitWith {
+if !(_object getVariable ["TFS_PortableFOB_Deployed", false]) exitWith {
 	systemChat "FOB has to be deployed first!";
 };
 
 // delete composition objects
 {
 	deleteVehicle _x;
-} forEach (_object getVariable ["TFSRHS_PortableFOB_Objects", []]);
+} forEach (_object getVariable ["TFS_PortableFOB_Objects", []]);
 
 // remove respawn position
-_respawnPos = _object getVariable "TFSRHS_PortableFOB_RespawnPos";
+_respawnPos = _object getVariable "TFS_PortableFOB_RespawnPos";
 _respawnPos call BIS_fnc_removeRespawnPosition;
 
 // reset variables
-_object setVariable ["TFSRHS_PortableFOB_Deployed", false, true];
-_object setVariable ["TFSRHS_PortableFOB_Pos", [0, 0, 0], true];
+_object setVariable ["TFS_PortableFOB_Deployed", false, true];
+_object setVariable ["TFS_PortableFOB_Pos", [0, 0, 0], true];
 
 // unhide terrain
 {
@@ -48,4 +48,4 @@ _object setVariable ["TFSRHS_PortableFOB_Pos", [0, 0, 0], true];
         _x hideObjectGlobal false;
         _x allowDamage true;
     };
-} forEach (_object getVariable ["TFSRHS_PortableFOB_hiddenObjects", []]);
+} forEach (_object getVariable ["TFS_PortableFOB_hiddenObjects", []]);

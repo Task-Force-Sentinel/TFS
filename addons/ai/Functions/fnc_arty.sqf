@@ -1,5 +1,5 @@
 params ["_logic","_units","_activated"];
-#include "\z\tfsrhs\addons\ai\script_component.hpp"
+#include "\z\tfs\addons\ai\script_component.hpp"
 
 
 if(!_activated) exitwith {};

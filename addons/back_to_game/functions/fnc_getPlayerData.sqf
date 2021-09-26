@@ -13,7 +13,7 @@
  *  2: Destination <POSITION>
  *
  * Example:
- * [getPlayerUID player] call tfsrhs_back_to_game_fnc_getPlayerData
+ * [getPlayerUID player] call tfs_back_to_game_fnc_getPlayerData
  *
  * Public: No
  */

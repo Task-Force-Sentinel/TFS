@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_Loadouts
+Function: TFS_fnc_Loadouts
 
 Description:
     Applies a specified loadout to the given unit. Loadouts are currently hardcoded, but will be
@@ -66,4 +66,4 @@ private _Equipment = call {
 
 };
 
-if !(isnil "_Equipment") then {_unit setUnitLoadout _Equipment;} else {systemchat format ["No Default Loadout for %1. Deselect TFSRHS Preset Loadout or change unit type.", typeof _unit]};
+if !(isnil "_Equipment") then {_unit setUnitLoadout _Equipment;} else {systemchat format ["No Default Loadout for %1. Deselect TFS Preset Loadout or change unit type.", typeof _unit]};

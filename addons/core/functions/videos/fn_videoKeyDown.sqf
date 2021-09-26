@@ -1,6 +1,6 @@
 ﻿/*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\videos\fn_videoKeyDown.sqf
+ *	\z\tfs\addons\core\functions\videos\fn_videoKeyDown.sqf
  *	by Ojemineh
  *	
  *	video key handler
@@ -16,7 +16,7 @@
  *	nothing
  *	
  *	Example:
- *	_kh = (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call TFSRHS_fnc_videoKeyDown"];
+ *	_kh = (findDisplay 46) displayAddEventHandler ["KeyDown", "_this call TFS_fnc_videoKeyDown"];
  *	
  */
 

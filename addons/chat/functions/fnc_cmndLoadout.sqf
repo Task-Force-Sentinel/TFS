@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\chat\script_component.hpp"
+#include "\z\tfs\addons\chat\script_component.hpp"
 /*
- * Name = TFSRHS_assignGear_fnc_chat_loadout
+ * Name = TFS_assignGear_fnc_chat_loadout
  * Author = Freddo
  *
  * Command syntaxes:
@@ -36,22 +36,22 @@ switch (count _inputArr) do {
         if (isClass (_cfg >> "CfgLoadouts" >> _faction >> _in1)) then {
             // Input corresponds with a loadout
             [CURUNIT, _faction, _in1] call EFUNC(assigngear,assignGear);
-            systemChat format ["TFSRHS: Assigned loadout %1", str getText (_cfg >> "CfgLoadouts" >> _faction >> _in1 >> "displayName")];
+            systemChat format ["TFS: Assigned loadout %1", str getText (_cfg >> "CfgLoadouts" >> _faction >> _in1 >> "displayName")];
         } else {
             private _match = [_in1] call FUNC(findMatch);
             if (isNull _match) then {
                 // No loadout or player found, or more than one player
                 if (_faction isEqualTo "") then {
-                    systemChat "TFSRHS Error: Cannot select loadout as you do not have an assigned faction. Use #loadout <faction> <role>";
-                    systemChat FORMAT_1("TFSRHS Error: Could not find player containing %1, or more than one player found.", str _in1);
+                    systemChat "TFS Error: Cannot select loadout as you do not have an assigned faction. Use #loadout <faction> <role>";
+                    systemChat FORMAT_1("TFS Error: Could not find player containing %1, or more than one player found.", str _in1);
                 } else {
-                    systemChat FORMAT_2("TFSRHS Error: No loadout with name %1 in %2", str _in1, _faction);
-                    systemChat FORMAT_1("TFSRHS Error: Could not find player containing %1, or more than one player found.", str _in1);
+                    systemChat FORMAT_2("TFS Error: No loadout with name %1 in %2", str _in1, _faction);
+                    systemChat FORMAT_1("TFS Error: Could not find player containing %1, or more than one player found.", str _in1);
                 };
             } else {
                 // Copy other players loadout
                 CURUNIT setUnitLoadout getUnitLoadout _match;
-                systemChat FORMAT_1("TFSRHS: Copied loadout from %1", name _match);
+                systemChat FORMAT_1("TFS: Copied loadout from %1", name _match);
             };
         };
     };
@@ -62,15 +62,15 @@ switch (count _inputArr) do {
         if (isClass (_cfg >> "CfgLoadouts" >> _in1 >> _in2)) then {
             // Input corresponds with a loadout
             [CURUNIT, _in1, _in2] call EFUNC(assigngear,assignGear);
-            systemChat FORMAT_2("TFSRHS: Assigned loadout %1 from %2", \
+            systemChat FORMAT_2("TFS: Assigned loadout %1 from %2", \
                 str getText (_cfg >> "CfgLoadouts" >> _in1 >> _in2 >> "displayName"), \
                 str getText (_cfg >> "CfgLoadouts" >> _in1 >> "displayName")
             );
         } else {
             if !(isClass (_cfg >> "CfgLoadouts" >> _in1)) then {
-                systemChat FORMAT_1("TFSRHS Error: No faction with name %1", str _in1);
+                systemChat FORMAT_1("TFS Error: No faction with name %1", str _in1);
             } else {
-                systemChat FORMAT_2("TFSRHS Error: No loadout with name %1 in %2", str _in2, str _in1);
+                systemChat FORMAT_2("TFS Error: No loadout with name %1 in %2", str _in2, str _in1);
             };
         };
     };

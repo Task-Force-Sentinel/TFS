@@ -3,14 +3,14 @@
 
 class CfgPatches {
 	
-	class TFSRHS_core {
+	class TFS_core {
 		author = AUTHOR;
 		name = COMPONENT_NAME;
 		url = URL;
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
-			"tfsrhs_main",
-			"tfsrhs_hints"
+			"tfs_main",
+			"tfs_hints"
 		};
 		units[] = {};
 		weapons[] = {};

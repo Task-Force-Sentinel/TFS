@@ -7,7 +7,7 @@
 if !(hasInterface) exitWith {};
 params [["_helicopter",objNull]];
 
-if (!(tfsrhs_quickActions_add_fast_rope) || {isNull _helicopter || {!(_helicopter isKindOf "Helicopter") }}) exitWith {};
+if (!(tfs_quickActions_add_fast_rope) || {isNull _helicopter || {!(_helicopter isKindOf "Helicopter") }}) exitWith {};
 
 _helicopter addAction ["<t color='#00FF00'>Perform fast rope</t>", {
 	params ["_helicopter", "_unit", "_actionId", "_arguments"];

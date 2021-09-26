@@ -1,5 +1,5 @@
 
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 private _pos = [];
 switch (GVAR(mode)) do {
     case FOLLOWCAM: {

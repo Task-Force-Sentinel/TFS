@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="tfsrhs">
+<Project name="tfs">
     <Package name="Common">
-        <Key ID="STR_TFSRHS_Common_DisplayName">
-            <English>TFSRHS - Common</English>
-            <Polish>TFSRHS - Common</Polish>
+        <Key ID="STR_TFS_Common_DisplayName">
+            <English>TFS - Common</English>
+            <Polish>TFS - Common</Polish>
         </Key>
-        <Key ID="STR_TFSRHS_Common_Enabled">
+        <Key ID="STR_TFS_Common_Enabled">
             <English>Enable component</English>
             <Polish>Włącz komponent</Polish>
         </Key>
-        <Key ID="STR_TFSRHS_Common_Enabled_Description">
+        <Key ID="STR_TFS_Common_Enabled_Description">
             <English>Controls whether this component is active.</English>
             <Polish>Pozwala kontrolować czy komponent jest włączony.</Polish>
         </Key>
         <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="CBA_Categories">
 			<!-- =============================================================================== -->
-				<Key ID="STR_TFSRHS_Common_CBA_Category_Options">
+				<Key ID="STR_TFS_Common_CBA_Category_Options">
 				<Original>Options</Original>
 				<German>Optionen</German>
 			</Key>
@@ -27,29 +27,29 @@
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="CBA_Settings">
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_Common_CBA_Debug_Enabled_Title">
+			<Key ID="STR_TFS_Common_CBA_Debug_Enabled_Title">
 				<Original>Debug Mode</Original>
 				<German>Debug Modus</German>
 			</Key>
-			<Key ID="STR_TFSRHS_Common_CBA_Debug_Enabled_Tip">
+			<Key ID="STR_TFS_Common_CBA_Debug_Enabled_Tip">
 				<Original>Debug mode for more detailed informations.</Original>
 				<German>Debug-Modus für ausführlichere Informationen.</German>
 			</Key>
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_Common_CBA_Show_News_Title">
+			<Key ID="STR_TFS_Common_CBA_Show_News_Title">
 				<Original>Show News</Original>
 				<German>Zeige Neuigkeiten</German>
 			</Key>
-			<Key ID="STR_TFSRHS_Common_CBA_Show_News_Tip">
+			<Key ID="STR_TFS_Common_CBA_Show_News_Tip">
 				<Original>Show news in the main menu.</Original>
 				<German>Zeige Neuigkeiten im Hauptmenü an.</German>
 			</Key>
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_Common_CBA_Tactical_View_Title">
+			<Key ID="STR_TFS_Common_CBA_Tactical_View_Title">
 				<Original>Tactical View</Original>
 				<German>Taktische Ansicht</German>
 			</Key>
-			<Key ID="STR_TFSRHS_Common_CBA_Tactical_View_Tip">
+			<Key ID="STR_TFS_Common_CBA_Tactical_View_Tip">
 				<Original>Allow the use of Tactical View when ;&quot;3rd person;&quot; is enabled.</Original>
 				<German>Erlaube die Nutzung der Taktischen Ansicht, wenn ;&quot;3rd-Person;&quot; aktiviert ist.</German>
 			</Key>
@@ -60,11 +60,11 @@
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="KEY_Settings">
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_Common_KEY_Screenshot_Title">
+			<Key ID="STR_TFS_Common_KEY_Screenshot_Title">
 				<Original>Screenshot</Original>
 				<German>Bildschirmfoto</German>
 			</Key>
-			<Key ID="STR_TFSRHS_Common_KEY_Screenshot_Tip">
+			<Key ID="STR_TFS_Common_KEY_Screenshot_Tip">
 				<Original>Create a screenshot (without HUD/GUI) in the ArmA profile.</Original>
 				<German>Erstellt ein Bildschirmfoto (ohne HUD/GUI) im ArmA-Profil.</German>
 			</Key>
@@ -75,15 +75,15 @@
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Extended_Hints">
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_Common_Hint_Need_Restart_Engine">
+			<Key ID="STR_TFS_Common_Hint_Need_Restart_Engine">
 				<Original>The setting&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;has been changed.&lt;br/&gt;For the change to take effect, ArmA 3 must be restarted!</Original>
 				<German>Die Einstellung&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;wurde geändert.&lt;br/&gt;Damit die Änderung in Kraft treten kann, muss ArmA 3 neu gestartet werden!</German>
 			</Key>
-			<Key ID="STR_TFSRHS_Common_Hint_Need_Restart_Mission">
+			<Key ID="STR_TFS_Common_Hint_Need_Restart_Mission">
 				<Original>The setting&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;has been changed.&lt;br/&gt;For the change to take effect, the mission must be restarted!</Original>
 				<German>Die Einstellung&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;wurde geändert.&lt;br/&gt;Damit die Änderung in Kraft treten kann, muss die Mission neu gestartet werden!</German>
 			</Key>
-			<Key ID="STR_TFSRHS_Common_Hint_Need_Restart_Session">
+			<Key ID="STR_TFS_Common_Hint_Need_Restart_Session">
 				<Original>The setting&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;has been changed.&lt;br/&gt;For the change to take effect, the mission must be re-entered!</Original>
 				<German>Die Einstellung&lt;br/&gt;&quot;%1&quot;&lt;br/&gt;wurde geändert.&lt;br/&gt;Damit die Änderung in Kraft treten kann, muss die Mission neu betreten werden!</German>
 			</Key>
@@ -94,7 +94,7 @@
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Messages">
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_Message_SkipVideo">
+			<Key ID="STR_TFS_Message_SkipVideo">
 				<Original>Press %1 to skip</Original>
 				<German>Drücke %1 zum Überspringen</German>
 			</Key>
@@ -105,15 +105,15 @@
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="KeyBinds">
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_KeyBinds_Shift_Modifier">
+			<Key ID="STR_TFS_KeyBinds_Shift_Modifier">
 				<Original>Shift+</Original>
 				<German>Umschalt+</German>
 			</Key>
-			<Key ID="STR_TFSRHS_KeyBinds_Ctrl_Modifier">
+			<Key ID="STR_TFS_KeyBinds_Ctrl_Modifier">
 				<Original>Ctrl+</Original>
 				<German>Strg+</German>
 			</Key>
-			<Key ID="STR_TFSRHS_KeyBinds_Alt_Modifier">
+			<Key ID="STR_TFS_KeyBinds_Alt_Modifier">
 				<Original>Alt+</Original>
 				<German>Alt+</German>
 			</Key>

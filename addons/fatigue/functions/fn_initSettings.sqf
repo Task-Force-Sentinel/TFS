@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\fatigue\functions\fn_initSettings.sqf
+ *	\z\tfs\addons\fatigue\functions\fn_initSettings.sqf
  *	by Ojemineh
  *	
  *	register cba settings
@@ -12,7 +12,7 @@
  *	nothing
  *	
  *	Example:
- *	[] call TFSRHS_fatigue_fnc_initSettings;
+ *	[] call TFS_fatigue_fnc_initSettings;
  *	
  */
 
@@ -21,15 +21,15 @@
 // FATIGUE
 
 [
-	"tfsrhs_fatigue_global_sounds",
+	"tfs_fatigue_global_sounds",
 	"CHECKBOX",
 	[
-		localize "STR_TFSRHS_Fatigue_CBA_Global_Sounds_Title", 
-		localize "STR_TFSRHS_Fatigue_CBA_Global_Sounds_Tip"
+		localize "STR_TFS_Fatigue_CBA_Global_Sounds_Title", 
+		localize "STR_TFS_Fatigue_CBA_Global_Sounds_Tip"
 	],
 	[
-		localize "STR_TFSRHS_Fatigue_CBA_Category", 
-		localize "STR_TFSRHS_Fatigue_CBA_Category_core"
+		localize "STR_TFS_Fatigue_CBA_Category", 
+		localize "STR_TFS_Fatigue_CBA_Category_core"
 	],
 	true,
 	1,

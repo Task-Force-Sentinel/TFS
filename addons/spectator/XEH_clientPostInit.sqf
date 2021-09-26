@@ -15,7 +15,7 @@ LOG("Client PostInit started");
             case 2: {[] call EFUNC(safestart,isActive)};
         };
         private _templateActive = (
-            "TFSRHS_Spectator" in getMissionConfigValue ["respawnTemplates",[]] &&
+            "TFS_Spectator" in getMissionConfigValue ["respawnTemplates",[]] &&
             1 isEqualTo getMissionConfigValue ["Respawn",-1]
         );
 

@@ -1,5 +1,5 @@
 #define COMPONENT tagging
-#include "\z\tfsrhs\addons\main\script_mod.hpp"
+#include "\z\tfs\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
@@ -11,7 +11,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_TAGGING
 #endif
 
-#include "\z\tfsrhs\addons\main\script_macros.hpp"
+#include "\z\tfs\addons\main\script_macros.hpp"
 
 #define MARKER_COLORS   ["ColorRed", "ColorGreen", "ColorBlue", "ColorBlack"]
 #define TEXTURE_COLORS  ["red", "green", "blue", "black"]

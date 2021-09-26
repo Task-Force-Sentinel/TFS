@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_SafeZone
+Function: TFS_fnc_SafeZone
 
 Description:
     Create a safezone where shooting is prohibited around given position. Duration of the

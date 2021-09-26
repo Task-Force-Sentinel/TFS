@@ -1,10 +1,10 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_display"];
 
 
-private _control = (_display displayCtrl IDC_TFSRHS_ADMINMENU_RESP_FACTION);
+private _control = (_display displayCtrl IDC_TFS_ADMINMENU_RESP_FACTION);
 lbClear _control;
 
 private _activeFactionCategory = GVAR(currentFactionCategory);
@@ -14,7 +14,7 @@ private _factions = [];
 /* Fill Faction categories */
 private _playerFactions = [] call CBA_fnc_hashCreate;
 {
-    private _faction = _x getVariable ["TFSRHS_assignGear_faction",""];
+    private _faction = _x getVariable ["TFS_assignGear_faction",""];
     if (_faction != "") then {
         if ([_playerFactions,_faction] call CBA_fnc_hashHasKey) then {
             private _value = [_playerFactions,_faction] call CBA_fnc_hashGet;

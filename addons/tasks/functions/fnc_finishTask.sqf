@@ -12,7 +12,7 @@
  * 0: Is task successfully finished? <BOOL>
  *
  * Example:
- * ["KnockHorse", "Canceled"] call tfsrhs_tasks_fnc_finishTask
+ * ["KnockHorse", "Canceled"] call tfs_tasks_fnc_finishTask
  *
  * Public: Yes
  */

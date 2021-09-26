@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_speak3dLocal.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_speak3dLocal.sqf
  *	by Ojemineh
  *
  *	play local sound with random lip sync
@@ -18,7 +18,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "cp_mission_accomplished_1", -1, -1, 4.5] call TFSRHS_fnc_speak3dLocal;
+ *	[player, "cp_mission_accomplished_1", -1, -1, 4.5] call TFS_fnc_speak3dLocal;
  *
  */
 
@@ -46,19 +46,19 @@ if !(alive _unit) exitWith {};
 if (_unit getVariable ["ACE_isUnconscious", false]) exitWith {};
 if (_soundClass isEqualTo "") exitWith {};
 
-if (_distance <= 0) then {_distance = [_soundClass] call TFSRHS_fnc_getSoundDistance;};
+if (_distance <= 0) then {_distance = [_soundClass] call TFS_fnc_getSoundDistance;};
 if (_distance <= 0) then {_distance = 30;};
 if ((_maxDistance > 0) && ((player distance _unit) > _maxDistance)) exitWith {};
 
-if (_duration <= 0) then {_duration = [_soundClass] call TFSRHS_fnc_getSoundDuration;};
+if (_duration <= 0) then {_duration = [_soundClass] call TFS_fnc_getSoundDuration;};
 if (_duration <= 0) exitWith {};
 
-if (_pitch <= 0) then {_pitch = [_soundClass] call TFSRHS_fnc_getSoundPitch;};
+if (_pitch <= 0) then {_pitch = [_soundClass] call TFS_fnc_getSoundPitch;};
 if (_pitch <= 0) then {_pitch = 1;};
 
 // -------------------------------------------------------------------------------------------------
 
-private _soundArray = _unit getVariable ["tfsrhs_sound3d", []];
+private _soundArray = _unit getVariable ["tfs_sound3d", []];
 private _soundInUse = false;
 
 if (count _soundArray > 0) then {
@@ -72,9 +72,9 @@ if (count _soundArray > 0) then {
 if (_soundInUse) exitWith {
 	[_unit, _soundClass, _distance, _maxDistance, _duration, _pitch, _isSpeech] spawn {
 		params ["_unit", "_soundClass", "_distance", "_maxDistance", "_duration", "_pitch", "_isSpeech"];
-		[_unit, _soundClass] call TFSRHS_fnc_stop3dSoundLocal;
+		[_unit, _soundClass] call TFS_fnc_stop3dSoundLocal;
 		sleep 0.1;
-		[_unit, _soundClass, _distance, _maxDistance, _duration, _pitch, _isSpeech] call TFSRHS_fnc_speak3dLocal;
+		[_unit, _soundClass, _distance, _maxDistance, _duration, _pitch, _isSpeech] call TFS_fnc_speak3dLocal;
 	};
 };
 
@@ -84,15 +84,15 @@ if (_soundInUse) exitWith {
 	
 	params ["_unit", "_soundClass", "_distance", "_maxDistance", "_duration", "_pitch", "_isSpeech"];
 	
-	private _helper = createSimpleObject [TFSRHS_core_HELPER_OBJECT, [0,0,0], true];
+	private _helper = createSimpleObject [TFS_core_HELPER_OBJECT, [0,0,0], true];
 	_helper hideObject true;
 	_helper attachTo [_unit, (_unit selectionPosition "head")];
 	
-	private _soundArray = _unit getVariable ["tfsrhs_sound3d", []];
+	private _soundArray = _unit getVariable ["tfs_sound3d", []];
 	_soundArray pushBackUnique [_soundClass, _helper];
 	
-	_unit setVariable ["tfsrhs_sound3d", _soundArray];
-	_unit setVariable ["tfsrhs_speak3d", true, true];
+	_unit setVariable ["tfs_sound3d", _soundArray];
+	_unit setVariable ["tfs_speak3d", true, true];
 	_unit setRandomLip true;
 	
 	private _timer = CBA_missionTime + _duration;
@@ -110,8 +110,8 @@ if (_soundInUse) exitWith {
 	};
 	
 	_unit setRandomLip false;
-	_unit setVariable ["tfsrhs_speak3d", nil, true];
+	_unit setVariable ["tfs_speak3d", nil, true];
 	
-	[_unit, _soundClass] call TFSRHS_fnc_stop3dSoundLocal;
+	[_unit, _soundClass] call TFS_fnc_stop3dSoundLocal;
 	
 };

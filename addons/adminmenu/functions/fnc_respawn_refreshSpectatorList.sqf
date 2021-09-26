@@ -1,9 +1,9 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_display"];
 
-private _ctrlSpectatorListBox = (_display displayCtrl IDC_TFSRHS_ADMINMENU_RESP_SPECTATORLIST);
+private _ctrlSpectatorListBox = (_display displayCtrl IDC_TFS_ADMINMENU_RESP_SPECTATORLIST);
 
 
 
@@ -21,7 +21,7 @@ lbClear _ctrlSpectatorListBox;
     } forEach GVAR(selectedRespawnGroup);
     
     if (!_found) then {
-        private _name = _deadPlayer getVariable ["TFSRHS_spectator_name",name _deadPlayer];
+        private _name = _deadPlayer getVariable ["TFS_spectator_name",name _deadPlayer];
         private _idx = _ctrlSpectatorListBox lbAdd _name;
         _ctrlSpectatorListBox lbSetData[_idx,_name];
     };

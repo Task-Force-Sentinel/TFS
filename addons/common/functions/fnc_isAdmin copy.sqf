@@ -10,12 +10,12 @@
  * BOOL
  *
  * Example:
- * call TFSRHS_common_fnc_isAdmin;
+ * call TFS_common_fnc_isAdmin;
  *
  */
 
 if ((call BIS_fnc_admin) isEqualTo 2) exitWith {true};
-if (getPlayerUID TFSRHS_unit in getMissionConfigValue ["enableDebugConsole",[]]) exitWith {true};
+if (getPlayerUID TFS_unit in getMissionConfigValue ["enableDebugConsole",[]]) exitWith {true};
 if (isServer) exitWith {true};
 
 false

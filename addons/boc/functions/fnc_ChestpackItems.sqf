@@ -11,7 +11,7 @@
  * Items <ARRAY>
  *
  * Example:
- * [player] call TFSRHS_boc_fnc_chestpackItems;
+ * [player] call TFS_boc_fnc_chestpackItems;
  *
  * Public: No
  */

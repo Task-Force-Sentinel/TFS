@@ -1,6 +1,6 @@
 #define COMPONENT common
 
-#include "\z\tfsrhs\addons\main\script_mod.hpp"
+#include "\z\tfs\addons\main\script_mod.hpp"
 
 #include "\a3\ui_f\hpp\defineCommonGrids.inc"
 #include "\a3\ui_f\hpp\defineResincl.inc"
@@ -16,7 +16,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_COMMON
 #endif
 
-#include "\z\tfsrhs\addons\main\script_macros.hpp"
+#include "\z\tfs\addons\main\script_macros.hpp"
 
 #define POS_X(N) ((N) * GUI_GRID_W + GUI_GRID_CENTER_X)
 #define POS_Y(N) ((N) * GUI_GRID_H + GUI_GRID_CENTER_Y)

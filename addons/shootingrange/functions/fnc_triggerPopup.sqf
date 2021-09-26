@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [target, 0] call TFSRHS_shootingrange_fnc_triggerPopup;
+ * [target, 0] call TFS_shootingrange_fnc_triggerPopup;
  *
  * Public: No
  */

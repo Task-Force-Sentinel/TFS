@@ -2,12 +2,12 @@
 
 class CfgPatches
 {
-	class TFSRHS_Media
+	class TFS_Media
 	{
 		author = AUTHOR;
 		 name = COMPONENT_NAME;
 		url = URL;
-		units[] = {"TFSRHS_Flag_White", "TFSRHS_Flag_Black"};
+		units[] = {"TFS_Flag_White", "TFS_Flag_Black"};
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {"A3_UI_F","cba_main","cba_xeh"};
 		version = VERSION;

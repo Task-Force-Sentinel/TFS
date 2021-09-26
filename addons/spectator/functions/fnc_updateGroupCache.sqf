@@ -1,5 +1,5 @@
 params ["_grp"];
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 private _avgpos = [0,0,0];
 private _vehicles = ((units _grp) select {!isNull (objectParent _x)}) apply {objectParent _x};
 _vehicles = _vehicles arrayIntersect _vehicles;

@@ -1,17 +1,17 @@
 class CfgFunctions {
 	
-	class TFSRHS_Interactions {
+	class TFS_Interactions {
 		
-		tag = "tfsrhs_interactions";
+		tag = "tfs_interactions";
 		
 		class Interactions {
-			file = "z\tfsrhs\addons\interactions\functions";
+			file = "z\tfs\addons\interactions\functions";
 			class initialize {};
 			class initSettings {};
 		};
 		
 		class Inventory {
-			file = "z\tfsrhs\addons\interactions\functions\inventory";
+			file = "z\tfs\addons\interactions\functions\inventory";
 			class backpack_canAccess {};
 			class backpack_doAccess {};
 			class backpack_access {};
@@ -21,7 +21,7 @@ class CfgFunctions {
 		};
 		
 		class TapShoulder {
-			file = "z\tfsrhs\addons\interactions\functions\tapshoulder";
+			file = "z\tfs\addons\interactions\functions\tapshoulder";
 			class tapshoulder_canTap {};
 			class tapshoulder_doTap {};
 			class tapshoulder_tap {};

@@ -49,4 +49,4 @@ _SpawnLocation = (getPos _logic);
     [_VehMRAPMin, _VehMRAPMax],
     [_VehHeavyMin, _VehHeavyMax],
     [_VehRandomMin, _VehRandomMax]
-] call TFSRHS_fnc_SpawnAI;
+] call TFS_fnc_SpawnAI;

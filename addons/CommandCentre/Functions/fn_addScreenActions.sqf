@@ -18,13 +18,13 @@ private _configAction = [
 		params ["_target", "_player", "_params"];
 		_params params ["_object", "_selection", "_args"];
 
-		[_object, _selection, _args] call TFSRHS_fnc_configureScreen;
+		[_object, _selection, _args] call TFS_fnc_configureScreen;
 	},
 	{
 		params ["_target", "_player", "_params"];
 		_params params ["_object", "_selection"];
 
-		_object getVariable [format ["TFSRHS_CC_screen_%1_on", _selection], false];
+		_object getVariable [format ["TFS_CC_screen_%1_on", _selection], false];
 	},
 	nil,
 	[_object, _selection, _args],
@@ -35,8 +35,8 @@ private _configAction = [
 		params ["_target", "_player", "_params", "_actionData"];
 		_params params ["_object", "_selection"];
 
-		private _screenMode = _object getVariable [format ["TFSRHS_CC_screen_%1_mode", _selection], ""];
-		private _screenTarget = _object getVariable [format ["TFSRHS_CC_screen_%1_target", _selection], ""];
+		private _screenMode = _object getVariable [format ["TFS_CC_screen_%1_mode", _selection], ""];
+		private _screenTarget = _object getVariable [format ["TFS_CC_screen_%1_target", _selection], ""];
 		private "_modeName";
 
 		if ((!(_screenMode isEqualTo "")) && (!(_screenTarget isEqualTo ""))) then {
@@ -62,13 +62,13 @@ private _turnOnAction = [
 		params ["_target", "_player", "_params"];
 		_params params ["_object", "_selection", "_args"];
 
-		[_object, _selection, true, _args] call TFSRHS_fnc_turnOnScreen;
+		[_object, _selection, true, _args] call TFS_fnc_turnOnScreen;
 	},
 	{
 		params ["_target", "_player", "_params"];
 		_params params ["_object", "_selection"];
 
-		!(_object getVariable [format ["TFSRHS_CC_screen_%1_on", _selection], false]);
+		!(_object getVariable [format ["TFS_CC_screen_%1_on", _selection], false]);
 	},
 	nil,
 	[_object, _selection, _args]
@@ -82,13 +82,13 @@ private _turnOffAction = [
 		params ["_target", "_player", "_params"];
 		_params params ["_object", "_selection", "_args"];
 
-		[_object, _selection, false, _args] call TFSRHS_fnc_turnOnScreen;
+		[_object, _selection, false, _args] call TFS_fnc_turnOnScreen;
 	},
 	{
 		params ["_target", "_player", "_params"];
 		_params params ["_object", "_selection"];
 
-		_object getVariable [format ["TFSRHS_CC_screen_%1_on", _selection], false];
+		_object getVariable [format ["TFS_CC_screen_%1_on", _selection], false];
 	},
 	nil,
 	[_object, _selection, _args]
@@ -102,13 +102,13 @@ private _toggleVisualAction = [
 		params ["_target", "_player", "_params"];
 		_params params ["_object", "_selection"];
 
-		[_object, _selection] call TFSRHS_fnc_toggleVisualMode;
+		[_object, _selection] call TFS_fnc_toggleVisualMode;
 	},
 	{
 		params ["_target", "_player", "_params"];
 		_params params ["_object", "_selection"];
 
-		_object getVariable [format ["TFSRHS_CC_screen_%1_on", _selection], false];
+		_object getVariable [format ["TFS_CC_screen_%1_on", _selection], false];
 	},
 	nil,
 	[_object, _selection]

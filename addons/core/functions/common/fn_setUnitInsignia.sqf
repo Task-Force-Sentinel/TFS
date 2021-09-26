@@ -1,6 +1,6 @@
 ﻿/*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\common\fn_setUnitInsignia.sqf
+ *	\z\tfs\addons\core\functions\common\fn_setUnitInsignia.sqf
  *	by Ojemineh
  *	
  *	set unit insignia
@@ -13,7 +13,7 @@
  *	nothing
  *	
  *	Example:
- *	[player, "curator"] call TFSRHS_fnc_setUnitInsignia;
+ *	[player, "curator"] call TFS_fnc_setUnitInsignia;
  *	
  */
 

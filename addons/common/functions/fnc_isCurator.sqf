@@ -1,6 +1,6 @@
 ﻿/*
  *	ARMA EXTENDED ENVIRONMENT
- *	\tfsrhs_common\functions\common\fn_isCurator.sqf
+ *	\tfs_common\functions\common\fn_isCurator.sqf
  *	by Ojemineh
  *	
  *	check if unit is curator/zeus
@@ -12,7 +12,7 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[player] call tfsrhs_fnc_isCurator;
+ *	[player] call tfs_fnc_isCurator;
  *	
  */
 

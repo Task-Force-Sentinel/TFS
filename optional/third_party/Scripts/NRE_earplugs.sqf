@@ -24,7 +24,7 @@ License:        Copyright (C) 2015 Steven "NemesisRE" Köberich
 
 
 Manual:            Call from init.sqf via:
-                    execVM "\TFSRHS\3rdPartyScripts\NRE_earplugs.sqf";
+                    execVM "\TFS\3rdPartyScripts\NRE_earplugs.sqf";
 
                 Add following to your stringtable.xml:
                     <?xml version="1.0" encoding="UTF-8"?>
@@ -57,7 +57,7 @@ if (isDedicated) exitWith {};
 waitUntil {!isNull player}; //to prevent MP / JIP issues
 
 private ["_id"];
-NreEarplugsPath = "\TFSRHS\3rdPartyScripts\";
+NreEarplugsPath = "\TFS\3rdPartyScripts\";
 
 if (isNil "NreEarplugsActive") then {
     NreEarplugsActive = 0;

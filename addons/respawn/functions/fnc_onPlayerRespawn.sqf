@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [bob, ted] call tfsrhs_respawn_fnc_onPlayerRespawn
+ * [bob, ted] call tfs_respawn_fnc_onPlayerRespawn
  *
  * Public: No
  */

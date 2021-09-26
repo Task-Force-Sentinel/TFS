@@ -4,13 +4,13 @@ class cfgPatches
 {
     class ADDON
     {
-        name = "TFSRHS: Patrol";
+        name = "TFS: Patrol";
         author = "Head";
         url = URL;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"TFSRHS_common"};
+        requiredAddons[] = {"TFS_common"};
         VERSION_CONFIG;
     };
 };

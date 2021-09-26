@@ -1,6 +1,6 @@
 ﻿/*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\common\fn_screenshot.sqf
+ *	\z\tfs\addons\core\functions\common\fn_screenshot.sqf
  *	by Ojemineh
  *	
  *	take a screenshot without hud/gui
@@ -12,7 +12,7 @@
  *	nothing
  *	
  *	Example:
- *	[] call TFSRHS_fnc_screenshot;
+ *	[] call TFS_fnc_screenshot;
  *	
  */
 
@@ -40,7 +40,7 @@ _shutter	= [_this, 1, true, [true]] call BIS_fnc_param;
 	
 	if (_shutter) then {
 		
-		playSound ["TFSRHS_core_Snapshot_1", false];
+		playSound ["TFS_core_Snapshot_1", false];
 		
 		0 cutText ["", "BLACK FADED", 9999];
 		uiSleep 0.2;

@@ -1,6 +1,6 @@
 ﻿/*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\common\fn_isAdmin.sqf
+ *	\z\tfs\addons\core\functions\common\fn_isAdmin.sqf
  *	by Ojemineh
  *	
  *	check if player is admin
@@ -12,7 +12,7 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[] call TFSRHS_fnc_isAdmin;
+ *	[] call TFS_fnc_isAdmin;
  *	
  */
 

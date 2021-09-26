@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\ai\script_component.hpp"
+#include "\z\tfs\addons\ai\script_component.hpp"
 params ["_self","_caller"];
 _repairPerTick = 0.1;
 _fuelPerTick = 0.1;

@@ -3,10 +3,10 @@
   Description:
   Pre init method for CBA settings
 */
-#define CBA_SETTINGS_CAT "TFSRHS Quick Actions"
+#define CBA_SETTINGS_CAT "TFS Quick Actions"
 
 [
-	"TFSRHS_quickActions_add_detonator"
+	"TFS_quickActions_add_detonator"
 	,"CHECKBOX"
 	,["Add detonate action", "Adds the detonation quick action to detonate all placed explosives"]
 	,CBA_SETTINGS_CAT
@@ -15,7 +15,7 @@
 ] call CBA_Settings_fnc_init;
 
 [
-	"TFSRHS_quickActions_add_fast_rope"
+	"TFS_quickActions_add_fast_rope"
 	,"CHECKBOX"
 	,["Add fast rope action", "Adds the fast rope action to the quick action menu to fast rope"]
 	,CBA_SETTINGS_CAT

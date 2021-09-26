@@ -1,9 +1,9 @@
-class TFSRHS_SafeZone {
+class TFS_SafeZone {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class Module {
 
-		file = "z\tfsrhs\addons\Safe_Zone\Functions";
+		file = "z\tfs\addons\Safe_Zone\Functions";
 		class moduleSafeZone {};
 		class SafeZone {};
 	};

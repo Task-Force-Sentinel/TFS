@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_playSound3d.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_playSound3d.sqf
  *	by Ojemineh
  *
  *	play global sound (classname) at object position
@@ -18,7 +18,7 @@
  *	nothing
  *
  *	Example:
- *	["AlarmBell", player, (player modelToWorld [0,0,3])] call TFSRHS_fnc_playSound3d;
+ *	["AlarmBell", player, (player modelToWorld [0,0,3])] call TFS_fnc_playSound3d;
  *
  */
 
@@ -88,7 +88,7 @@ if (count _soundArray > 0) then {
 	} else {
 		if ((_soundArray select 1) isEqualType "") then {
 			if (([(_soundArray select 1), "db"] call CBA_fnc_find) > -1) then {
-				_soundVolume = [(_soundArray select 1)] call TFSRHS_fnc_decibelToGain;
+				_soundVolume = [(_soundArray select 1)] call TFS_fnc_decibelToGain;
 			} else {
 				_soundVolume = parseNumber (_soundArray select 1);
 			};

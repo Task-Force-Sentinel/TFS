@@ -23,6 +23,6 @@ private _objects = synchronizedObjects _logic;
 {
     private _obj = _x;
     {
-        [_obj, format ["Screen #%1", _forEachIndex + 1], _allowCam, _allowDrone, _allowSat, _allowMap, _x] call TFSRHS_fnc_initScreen;
+        [_obj, format ["Screen #%1", _forEachIndex + 1], _allowCam, _allowDrone, _allowSat, _allowMap, _x] call TFS_fnc_initScreen;
     } forEach _sel;
 } foreach _objects;

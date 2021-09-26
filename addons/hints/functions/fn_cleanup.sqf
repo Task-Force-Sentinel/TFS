@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\hints\functions\fn_cleanup.sqf
+ *	\z\tfs\addons\hints\functions\fn_cleanup.sqf
  *	by Ojemineh
  *	
  *	cleanup extended hint system
@@ -12,7 +12,7 @@
  *	nothing
  *	
  *	Example:
- *	[] call TFSRHS_hints_fnc_cleanup;
+ *	[] call TFS_hints_fnc_cleanup;
  *	
  */
 
@@ -38,13 +38,13 @@ private ["_queue", "_Content", "_ColorBar"];
 	};
 	
 } forEach [
-	uiNamespace getVariable ["tfsrhs_hint_queue_0", []],
-	uiNamespace getVariable ["tfsrhs_hint_queue_1", []],
-	uiNamespace getVariable ["tfsrhs_hint_queue_2", []],
-	uiNamespace getVariable ["tfsrhs_hint_queue_3", []]
+	uiNamespace getVariable ["tfs_hint_queue_0", []],
+	uiNamespace getVariable ["tfs_hint_queue_1", []],
+	uiNamespace getVariable ["tfs_hint_queue_2", []],
+	uiNamespace getVariable ["tfs_hint_queue_3", []]
 ];
 
-uiNamespace setVariable ["tfsrhs_hint_queue_0", []];
-uiNamespace setVariable ["tfsrhs_hint_queue_1", []];
-uiNamespace setVariable ["tfsrhs_hint_queue_2", []];
-uiNamespace setVariable ["tfsrhs_hint_queue_3", []];
+uiNamespace setVariable ["tfs_hint_queue_0", []];
+uiNamespace setVariable ["tfs_hint_queue_1", []];
+uiNamespace setVariable ["tfs_hint_queue_2", []];
+uiNamespace setVariable ["tfs_hint_queue_3", []];

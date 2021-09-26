@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_setMedicalFacility
+Function: TFS_fnc_setMedicalFacility
 
 Description:
 	Turns the given object or trigger into a medical facility.
@@ -35,7 +35,7 @@ _object setTriggerActivation ["ANYPLAYER", "PRESENT", true];
 _object setTriggerStatements [
     "player in thisList",
     "
-    [player] call TFSRHS_fnc_FacilityHeal;
+    [player] call TFS_fnc_FacilityHeal;
     ",
     ""
 ];

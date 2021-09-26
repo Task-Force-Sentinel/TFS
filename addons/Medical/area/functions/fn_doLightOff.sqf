@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\medical\area\functions\fn_doLightOff.sqf
+ *	\z\tfs\addons\medical\area\functions\fn_doLightOff.sqf
  *	by Ojemineh
  *	
  *	switch light off
@@ -12,7 +12,7 @@
  *	nothing
  *	
  *	Example:
- *	[area1] call TFSRHS_medical_area_fnc_doLightOff;
+ *	[area1] call TFS_medical_area_fnc_doLightOff;
  *	
  */
 
@@ -32,32 +32,32 @@ if (isNull _area) exitWith {false};
 	
 	params ["_area"];
 	
-	private _lights = _area getVariable ["TFSRHS_MedicalArea_Lights", []];
+	private _lights = _area getVariable ["TFS_MedicalArea_Lights", []];
 	if (_lights isEqualTo []) exitWith {};
 	
-	_area setVariable ["TFSRHS_MedicalArea_LightOffInProgress", true, true];
+	_area setVariable ["TFS_MedicalArea_LightOffInProgress", true, true];
 	
-	TFSRHS_MEDICAL_AREA_LIGHT_OFF_SUCCESS = false;
-	TFSRHS_MEDICAL_AREA_LIGHT_OFF_FAILURE = false;
+	TFS_MEDICAL_AREA_LIGHT_OFF_SUCCESS = false;
+	TFS_MEDICAL_AREA_LIGHT_OFF_FAILURE = false;
 	
 	[
 		1,
 		[],
-		{ TFSRHS_MEDICAL_AREA_LIGHT_OFF_SUCCESS = true; },
-		{ TFSRHS_MEDICAL_AREA_LIGHT_OFF_FAILURE = true; },
-		localize "STR_TFSRHS_Medical_Area_Progress_LightOff"
+		{ TFS_MEDICAL_AREA_LIGHT_OFF_SUCCESS = true; },
+		{ TFS_MEDICAL_AREA_LIGHT_OFF_FAILURE = true; },
+		localize "STR_TFS_Medical_Area_Progress_LightOff"
 	] call ACE_common_fnc_progressBar;
 	
-	waitUntil {if ((TFSRHS_MEDICAL_AREA_LIGHT_OFF_SUCCESS) || (TFSRHS_MEDICAL_AREA_LIGHT_OFF_FAILURE)) exitWith {true}; false};
+	waitUntil {if ((TFS_MEDICAL_AREA_LIGHT_OFF_SUCCESS) || (TFS_MEDICAL_AREA_LIGHT_OFF_FAILURE)) exitWith {true}; false};
 	
-	if (TFSRHS_MEDICAL_AREA_LIGHT_OFF_SUCCESS) exitWith {
+	if (TFS_MEDICAL_AREA_LIGHT_OFF_SUCCESS) exitWith {
 		{deleteVehicle _x;} forEach _lights;
-		_area setVariable ["TFSRHS_MedicalArea_Lights", nil, true];
-		_area setVariable ["TFSRHS_MedicalArea_LightOffInProgress", nil, true];
+		_area setVariable ["TFS_MedicalArea_Lights", nil, true];
+		_area setVariable ["TFS_MedicalArea_LightOffInProgress", nil, true];
 	};
 	
-	if (TFSRHS_MEDICAL_AREA_LIGHT_OFF_FAILURE) exitWith {
-		_area setVariable ["TFSRHS_MedicalArea_LightOffInProgress", nil, true];
+	if (TFS_MEDICAL_AREA_LIGHT_OFF_FAILURE) exitWith {
+		_area setVariable ["TFS_MedicalArea_LightOffInProgress", nil, true];
 	};
 	
 };

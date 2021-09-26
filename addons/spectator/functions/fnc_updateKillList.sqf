@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 for "_i" from 1 to 6 do {
     private _index = count GVAR(killedUnits) - _i;
     private _control = (uiNamespace getvariable [QGVAR(labels),[]]) select _i;

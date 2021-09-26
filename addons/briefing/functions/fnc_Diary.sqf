@@ -56,12 +56,12 @@ player createDiaryRecord ["Diary", ["Short Range Frequencies",
 "
 ]];
 
-_PlayerGroup =  group player getVariable ["TFSRHS_section","null"];
+_PlayerGroup =  group player getVariable ["TFS_section","null"];
 if !(_PlayerGroup == "ds990") exitwith {};
 
-player createDiarySubject ["TFSRHS Commands","TFSRHS Commands"];
+player createDiarySubject ["TFS Commands","TFS Commands"];
 
-player createDiaryRecord ["TFSRHS Commands", ["TFAR",
+player createDiaryRecord ["TFS Commands", ["TFAR",
 "
 <br/><font face='PuristaLight' color='#40FFFF' font size='20'>Sending Distance Multiplicator</font>
 <br/>
@@ -89,7 +89,7 @@ player createDiaryRecord ["TFSRHS Commands", ["TFAR",
 ]];
 
 
-player createDiaryRecord ["TFSRHS Commands", ["Side Chat",
+player createDiaryRecord ["TFS Commands", ["Side Chat",
 "
 <br/><font face='PuristaLight' color='#40FFFF' font size='20'>Side Chat Duration</font>
 <br/>
@@ -104,7 +104,7 @@ player createDiaryRecord ["TFSRHS Commands", ["Side Chat",
 "
 ]];
 
-player createDiaryRecord ["TFSRHS Commands", ["Safe Zone",
+player createDiaryRecord ["TFS Commands", ["Safe Zone",
 "
 <br/><font face='PuristaLight' color='#40FFFF' font size='20'>Safe Zone Enabled</font>
 <br/>
@@ -143,11 +143,11 @@ player createDiaryRecord ["TFSRHS Commands", ["Safe Zone",
 "
 ]];
 
-player createDiaryRecord ["TFSRHS Commands", ["Introduction",
+player createDiaryRecord ["TFS Commands", ["Introduction",
 "
-<br/><font face='PuristaLight' color='#40FFFF' font size='20'>TFSRHS Commands</font>
+<br/><font face='PuristaLight' color='#40FFFF' font size='20'>TFS Commands</font>
 <br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>Welcome to the TFSRHS Commands Area. In this Section I'll explain how the system works.
+<br/><font face='PuristaLight' color='#6C8EBF'>Welcome to the TFS Commands Area. In this Section I'll explain how the system works.
 
 <br/>First off, for these commands to work you need to be set as a mission creator.
 <br/>The commands need to be entered to the chat (like admin commands on EU1), they start with an exclamation mark (!).

@@ -15,4 +15,4 @@ private _SafeZoneLocation = (getPos _logic);
 
 If !(_SafeZoneEnable) exitwith {};
 
-[_SafeZoneSize, _SafeZoneDuration, _SafeZoneLocation] remoteExecCall ["TFSRHS_fnc_SafeZone", 0, true];
+[_SafeZoneSize, _SafeZoneDuration, _SafeZoneLocation] remoteExecCall ["TFS_fnc_SafeZone", 0, true];

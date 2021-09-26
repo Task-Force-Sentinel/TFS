@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_display"];
@@ -9,11 +9,11 @@ private _pfhRefresh = [{
 
     remoteExec [QFUNC(getCurrentAdminServer), 2];
 
-    (_display displayCtrl IDC_TFSRHS_ADMINMENU_DASH_VEHICLES) ctrlSetText str (count vehicles);
-    (_display displayCtrl IDC_TFSRHS_ADMINMENU_DASH_DEADMEN) ctrlSetText str (count allDeadMen);
-    (_display displayCtrl IDC_TFSRHS_ADMINMENU_DASH_RUNTIME) ctrlSetText format ["%1m %2s", round ((time - (time % 60)) / 60), round (time % 60)];
+    (_display displayCtrl IDC_TFS_ADMINMENU_DASH_VEHICLES) ctrlSetText str (count vehicles);
+    (_display displayCtrl IDC_TFS_ADMINMENU_DASH_DEADMEN) ctrlSetText str (count allDeadMen);
+    (_display displayCtrl IDC_TFS_ADMINMENU_DASH_RUNTIME) ctrlSetText format ["%1m %2s", round ((time - (time % 60)) / 60), round (time % 60)];
 
-    private _ctrlCurators = _display displayCtrl IDC_TFSRHS_ADMINMENU_DASH_CURATORS;
+    private _ctrlCurators = _display displayCtrl IDC_TFS_ADMINMENU_DASH_CURATORS;
     private _curatorNames = ((allCurators select {!isNull getAssignedCuratorUnit _x}) apply {name getAssignedCuratorUnit _x}) joinString ", ";
     if (_curatorNames isEqualTo "") then {
         _curatorNames = "none";
@@ -37,17 +37,17 @@ private _pfhRefresh = [{
         private _numSpectators = {(_x getVariable [QEGVAR(spectator,side), sideLogic]) isEqualTo _side} count _spectatorUnits;
         (_display displayCtrl _spectators) ctrlSetText str _numSpectators;
         (_display displayCtrl _total) ctrlSetText str (_numSideUnits + _numSpectators);
-    } forEach IDCS_TFSRHS_ADMINMENU_DASH_STATS_ALLSIDES;
+    } forEach IDCS_TFS_ADMINMENU_DASH_STATS_ALLSIDES;
 
     private _numAI = {!isPlayer _x} count _liveUnits;
-    (_display displayCtrl IDC_TFSRHS_ADMINMENU_DASH_STATS_TOTAL_AI) ctrlSetText str _numAI;
+    (_display displayCtrl IDC_TFS_ADMINMENU_DASH_STATS_TOTAL_AI) ctrlSetText str _numAI;
 
     private _numLiveUnits = count _liveUnits;
-    (_display displayCtrl IDC_TFSRHS_ADMINMENU_DASH_STATS_TOTAL_PLAYERS) ctrlSetText str (_numLiveUnits - _numAI);
+    (_display displayCtrl IDC_TFS_ADMINMENU_DASH_STATS_TOTAL_PLAYERS) ctrlSetText str (_numLiveUnits - _numAI);
 
     private _numSpectators = count _spectatorUnits;
-    (_display displayCtrl IDC_TFSRHS_ADMINMENU_DASH_STATS_TOTAL_SPECTATORS) ctrlSetText str _numSpectators;
-    (_display displayCtrl IDC_TFSRHS_ADMINMENU_DASH_STATS_TOTAL_TOTAL) ctrlSetText str (_numLiveUnits + _numSpectators);
+    (_display displayCtrl IDC_TFS_ADMINMENU_DASH_STATS_TOTAL_SPECTATORS) ctrlSetText str _numSpectators;
+    (_display displayCtrl IDC_TFS_ADMINMENU_DASH_STATS_TOTAL_TOTAL) ctrlSetText str (_numLiveUnits + _numSpectators);
 }, 1] call CBA_fnc_addPerFrameHandler;
 
 GVAR(tabPFHHandles) pushBack _pfhRefresh;

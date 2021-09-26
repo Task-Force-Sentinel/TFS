@@ -19,7 +19,7 @@ class GVAR(wavespawn) : Module_F {
     // Menu displayed when the module is placed or double-clicked on by Zeus
 
     class EventHandlers {
-        init = "if(isServer && !is3DEN) then {[{_this call tfsrhs_AI_fnc_waveInit;}, [_this select 0,[],false]] call CBA_fnc_execNextFrame;};_this call bis_fnc_moduleInit;";
+        init = "if(isServer && !is3DEN) then {[{_this call tfs_AI_fnc_waveInit;}, [_this select 0,[],false]] call CBA_fnc_execNextFrame;};_this call bis_fnc_moduleInit;";
     };
 
     class Arguments: ArgumentsBaseUnits {

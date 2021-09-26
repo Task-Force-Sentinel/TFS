@@ -1,11 +1,11 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_display"];
 
 // Per-side endings
-if (cbChecked (_display displayCtrl IDC_TFSRHS_ADMINMENU_ENDM_SIDESPECIFIC)) exitWith {
-    private _isDraw = cbChecked (_display displayCtrl IDC_TFSRHS_ADMINMENU_ENDM_SIDEDRAW);
+if (cbChecked (_display displayCtrl IDC_TFS_ADMINMENU_ENDM_SIDESPECIFIC)) exitWith {
+    private _isDraw = cbChecked (_display displayCtrl IDC_TFS_ADMINMENU_ENDM_SIDEDRAW);
     if (_isDraw) then {
         [QGVAR(draw)] remoteExec [QEFUNC(common,endMission)];
     } else {
@@ -29,19 +29,19 @@ if (cbChecked (_display displayCtrl IDC_TFSRHS_ADMINMENU_ENDM_SIDESPECIFIC)) exi
 };
 
 // Custom text ending
-if (cbChecked (_display displayCtrl IDC_TFSRHS_ADMINMENU_ENDM_CUSTOM)) exitWith {
-    private _title = ctrlText (_display displayCtrl IDC_TFSRHS_ADMINMENU_ENDM_CUSTOM_TITLE);
-    private _subtext = ctrlText (_display displayCtrl IDC_TFSRHS_ADMINMENU_ENDM_CUSTOM_SUBTEXT);
+if (cbChecked (_display displayCtrl IDC_TFS_ADMINMENU_ENDM_CUSTOM)) exitWith {
+    private _title = ctrlText (_display displayCtrl IDC_TFS_ADMINMENU_ENDM_CUSTOM_TITLE);
+    private _subtext = ctrlText (_display displayCtrl IDC_TFS_ADMINMENU_ENDM_CUSTOM_SUBTEXT);
     missionNamespace setVariable [QEGVAR(common,endMissionText), [_title, _subtext], true];
 
-    private _isDefeat = cbChecked (_display displayCtrl IDC_TFSRHS_ADMINMENU_ENDM_CUSTOM_ISDEFEAT);
+    private _isDefeat = cbChecked (_display displayCtrl IDC_TFS_ADMINMENU_ENDM_CUSTOM_ISDEFEAT);
     [[QGVAR(victory), QGVAR(defeat)] select _isDefeat, !_isDefeat] remoteExec [QEFUNC(common,endMission)];
     [format ["%1 Ended Mission, Title: %2, subText: %3, isDefeat: %4",profileName, _title, _subtext, _isDefeat],false,"Admin Menu"] call FUNC(log);
 };
 
 // Endings from description.ext CfgDebriefing
-private _list = _display displayCtrl IDC_TFSRHS_ADMINMENU_ENDM_LIST;
+private _list = _display displayCtrl IDC_TFS_ADMINMENU_ENDM_LIST;
 private _ending = _list lbData (lbCurSel _list);
-private _isDefeat = cbChecked (_display displayCtrl IDC_TFSRHS_ADMINMENU_ENDM_FROMMISSION_ISDEFEAT);
+private _isDefeat = cbChecked (_display displayCtrl IDC_TFS_ADMINMENU_ENDM_FROMMISSION_ISDEFEAT);
 [_ending, !_isDefeat] remoteExec [QEFUNC(common,endMission)];
 [format ["%1 Ended Mission, Endtype: %2, isDefeat: %3",profileName, _ending, _isDefeat],false,"Admin Menu"] call FUNC(log);

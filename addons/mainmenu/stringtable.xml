@@ -2,19 +2,19 @@
 <Project name="Arma_Extended_Environment">
 	
 	<!-- ####################################################################################### -->
-	<Package name="TFSRHS_MainMenu">
+	<Package name="TFS_MainMenu">
 
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="MainMenu">
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_MainMenu_Title">
-				<Original>TFSRHS MainMenu</Original>
+			<Key ID="STR_TFS_MainMenu_Title">
+				<Original>TFS MainMenu</Original>
 			</Key>
-			<Key ID="STR_TFSRHS_MainMenu_Author">
-				<Original>TFSRHS</Original>
+			<Key ID="STR_TFS_MainMenu_Author">
+				<Original>TFS</Original>
 			</Key>
-			<Key ID="STR_TFSRHS_MainMenu_URL">
-				<Original>https://github.com/TFSRHSmod/TFSRHS</Original>
+			<Key ID="STR_TFS_MainMenu_URL">
+				<Original>https://github.com/TFSmod/TFS</Original>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>
@@ -23,7 +23,7 @@
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="VersionInfo">
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_VersionInfo_Tooltip">
+			<Key ID="STR_TFS_VersionInfo_Tooltip">
 				<Original>Download latest and report issues:</Original>
 				<German>Neuste Version und Probleme melden:</German>
 			</Key>

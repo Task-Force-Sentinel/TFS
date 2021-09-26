@@ -126,10 +126,10 @@ Otherwise localization will be performed on the server, before tasks configurati
 ## Framework events
 
 ```
-Event "TFSRHS_tasks_taskCreated"
+Event "TFS_tasks_taskCreated"
   Params
   - 0: Task config name <STRING>
-Event "TFSRHS_tasks_taskStateChanged"
+Event "TFS_tasks_taskStateChanged"
   Params
   - 0: Task config name <STRING>
   - 1: New task state <STRING>

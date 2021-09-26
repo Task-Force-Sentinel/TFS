@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\sounds\fn_say3dLocal.sqf
+ *	\z\tfs\addons\core\functions\sounds\fn_say3dLocal.sqf
  *	by Ojemineh
  *
  *	play local sound at object position
@@ -17,7 +17,7 @@
  *	nothing
  *
  *	Example:
- *	[player, "AlarmBell"] call TFSRHS_fnc_say3dLocal;
+ *	[player, "AlarmBell"] call TFS_fnc_say3dLocal;
  *
  */
 
@@ -41,11 +41,11 @@ _isSpeech     	= [_this, 5, false, [true]] call BIS_fnc_param;
 if (isNull _object) exitWith {};
 if (_soundClass isEqualTo "") exitWith {};
 
-if (_distance <= 0) then {_distance = [_soundClass] call TFSRHS_fnc_getSoundDistance;};
+if (_distance <= 0) then {_distance = [_soundClass] call TFS_fnc_getSoundDistance;};
 if (_distance <= 0) then {_distance = 100;};
 if ((_maxDistance > 0) && ((player distance _object) > _maxDistance)) exitWith {};
 
-if (_pitch <= 0) then {_pitch = [_soundClass] call TFSRHS_fnc_getSoundPitch;};
+if (_pitch <= 0) then {_pitch = [_soundClass] call TFS_fnc_getSoundPitch;};
 if (_pitch <= 0) then {_pitch = 1;};
 
 // -------------------------------------------------------------------------------------------------

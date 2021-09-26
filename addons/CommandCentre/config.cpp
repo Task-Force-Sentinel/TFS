@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class TFSRHS_CommandCentre
+	class TFS_CommandCentre
 	{
 		author = AUTHOR;
 		name = NAME;
@@ -48,7 +48,7 @@ class CfgVehicles
 class CfgFactionClasses
 {
 	class NO_CATEGORY;
-	class TFSRHS_CommandCentre: NO_CATEGORY
+	class TFS_CommandCentre: NO_CATEGORY
 	{
 		displayName = "TF Sentinel Command Center";
 	};

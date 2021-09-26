@@ -4,14 +4,14 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {
-            "TFSRHS_boc_moduleAdd",
-            "TFSRHS_boc_moduleOnChest",
-            "TFSRHS_boc_weaponHolder"
+            "TFS_boc_moduleAdd",
+            "TFS_boc_moduleOnChest",
+            "TFS_boc_weaponHolder"
         };
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "TFSRHS_main",
+            "TFS_main",
             "a3_ui_f",
             "A3_Modules_F",
             "ace_main",

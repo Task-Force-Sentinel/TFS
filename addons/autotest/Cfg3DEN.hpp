@@ -17,7 +17,7 @@ class RscPicture;
 /*
 class cfgScriptPaths 
 {
-    TFSRHS_briefing = "z\tfsrhs\addons\briefing\ui_scripts\";
+    TFS_briefing = "z\tfs\addons\briefing\ui_scripts\";
 };
 */
 
@@ -25,64 +25,64 @@ class Cfg3DEN
 {
     class Mission
     {
-        class TFSRHS_AutoTestAttributes // Custom section class, everything inside will be opened in one window (MySection)
+        class TFS_AutoTestAttributes // Custom section class, everything inside will be opened in one window (MySection)
         {
-            displayName = "TFSRHS Autotest"; // Text visible in the window title as "Edit <displayName>"
+            displayName = "TFS Autotest"; // Text visible in the window title as "Edit <displayName>"
             //display = "Display3DENEditAttributesPreview"; // Optional - display for attributes window. Must have the same structure and IDCs as the default Display3DENEditAttributes
             class AttributeCategories
             {
-                class TFSRHS_AutoTestFakeSettings
+                class TFS_AutoTestFakeSettings
                 {
-                    displayName = "TFSRHS: Autotest settings"; // Category name visible in Edit Attributes window
+                    displayName = "TFS: Autotest settings"; // Category name visible in Edit Attributes window
                     collapsed = 0; // When 1, the category is collapsed by default
                     class Attributes
                     {
-                        class TFSRHS_AutoTest_MissionName
+                        class TFS_AutoTest_MissionName
                         {
-                            property = "TFSRHS_AutoTest_MissionName";
+                            property = "TFS_AutoTest_MissionName";
                             displayName = "Mission name";
                             //tooltip = "Create briefing section that contains a list of all equipment of everyone in the players group and theirself.";
-                            control = "TFSRHS_autoTest_missionName";
+                            control = "TFS_autoTest_missionName";
                             defaultValue = "true";
                         };
-                        class TFSRHS_AutoTest_MissionSummary
+                        class TFS_AutoTest_MissionSummary
                         {
-                            property = "TFSRHS_AutoTest_MissionSummary";
+                            property = "TFS_AutoTest_MissionSummary";
                             displayName = "Mission description";
                             tooltip = "Checks a mission description has been set. Throws a warning if it does not include the word slot, as you may have forgotten slotting instructions.";
-                            control = "TFSRHS_autoTest_missionSummary";
+                            control = "TFS_autoTest_missionSummary";
                             defaultValue = "true";
                         };
-                        class TFSRHS_AutoTest_Author
+                        class TFS_AutoTest_Author
                         {
-                            property = "TFSRHS_autoTest_Author";
+                            property = "TFS_autoTest_Author";
                             displayName = "Author";
                             tooltip = "Checks the author field has your arma profile in it.";
-                            control = "TFSRHS_autoTest_Author";
+                            control = "TFS_autoTest_Author";
                             defaultValue = "true";
                         };
-                        class TFSRHS_AutoTest_MinPlayer
+                        class TFS_AutoTest_MinPlayer
                         {
-                            property = "TFSRHS_AutoTest_MinPlayer";
+                            property = "TFS_AutoTest_MinPlayer";
                             displayName = "Min Players";
                             //tooltip = "Create briefing section that contains a list of all equipment of everyone in the players group and theirself.";
-                            control = "TFSRHS_autoTest_minPlayer";
+                            control = "TFS_autoTest_minPlayer";
                             defaultValue = "true";
                         };
-                        class TFSRHS_AutoTest_MaxPlayer
+                        class TFS_AutoTest_MaxPlayer
                         {
-                            property = "TFSRHS_AutoTest_MaxPlayer";
+                            property = "TFS_AutoTest_MaxPlayer";
                             displayName = "Max Players";
                             //tooltip = "Create briefing section that contains a list of all equipment of everyone in the players group and theirself.";
-                            control = "TFSRHS_autoTest_maxPlayer";
+                            control = "TFS_autoTest_maxPlayer";
                             defaultValue = "true";
                         };
-                        class TFSRHS_AutoTest_Test
+                        class TFS_AutoTest_Test
                         {
-                            property = "TFSRHS_AutoTest_Test";
+                            property = "TFS_AutoTest_Test";
                             displayName = "Max Players";
                             //tooltip = "Create briefing section that contains a list of all equipment of everyone in the players group and theirself.";
-                            control = "TFSRHS_autoTest_Test";
+                            control = "TFS_autoTest_Test";
                             defaultValue = "true";
                         };
                     };
@@ -112,15 +112,15 @@ class Cfg3DEN
                 class Title;
             };
         };
-        class TFSRHS_autoTest_missionName : Title
+        class TFS_autoTest_missionName : Title
         {
             attributeLoad = "\
                 _value = 'Scenario' get3DENMissionAttribute 'IntelBriefingName';\
                 (_this controlsGroupCtrl 100) ctrlSetText _value;\
                 if (_value == '') then { \
-                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfsrhs\addons\briefing\UI\plus_small_ca.paa'; \
+                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfs\addons\briefing\UI\plus_small_ca.paa'; \
                 } else { \
-                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfsrhs\addons\briefing\UI\check_small_ca.paa'; \
+                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfs\addons\briefing\UI\check_small_ca.paa'; \
                 };";
             attributeSave = "true";
             class Controls : Controls
@@ -146,7 +146,7 @@ class Cfg3DEN
                 };
                 class Picture : RscPicture
                 {
-                    text = "\z\tfsrhs\addons\briefing\UI\check_small_ca.paa"; // Default
+                    text = "\z\tfs\addons\briefing\UI\check_small_ca.paa"; // Default
                     idc = 101;
                     y = 0;
                     h = SIZE_M * GRID_H;
@@ -155,18 +155,18 @@ class Cfg3DEN
                 };
             };
         };
-        class TFSRHS_autoTest_missionSummary : Title
+        class TFS_autoTest_missionSummary : Title
         {
             attributeLoad = "\
                 _value = 'Multiplayer' get3DENMissionAttribute 'IntelOverviewText';\
                 (_this controlsGroupCtrl 100) ctrlSetText _value;\
                 if (_value == '' || _value == '*** Insert mission description here. ***') then { \
-                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfsrhs\addons\briefing\UI\plus_small_ca.paa'; \
+                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfs\addons\briefing\UI\plus_small_ca.paa'; \
                 } else { \
                     if (((toLower _value) find 'slot') == -1) then { \
-                        (_this controlsGroupCtrl 101) ctrlSetText '\z\tfsrhs\addons\autotest\UI\warning.paa'; \
+                        (_this controlsGroupCtrl 101) ctrlSetText '\z\tfs\addons\autotest\UI\warning.paa'; \
                     } else { \
-                        (_this controlsGroupCtrl 101) ctrlSetText '\z\tfsrhs\addons\briefing\UI\check_small_ca.paa'; \
+                        (_this controlsGroupCtrl 101) ctrlSetText '\z\tfs\addons\briefing\UI\check_small_ca.paa'; \
                     }; \
                 };";
             attributeSave = "true";
@@ -193,7 +193,7 @@ class Cfg3DEN
                 };
                 class Picture : RscPicture
                 {
-                    text = "\z\tfsrhs\addons\briefing\UI\check_small_ca.paa"; // Default
+                    text = "\z\tfs\addons\briefing\UI\check_small_ca.paa"; // Default
                     idc = 101;
                     y = 0;
                     h = SIZE_M * GRID_H;
@@ -202,15 +202,15 @@ class Cfg3DEN
                 };
             };
         };
-        class TFSRHS_autoTest_Author : Title
+        class TFS_autoTest_Author : Title
         {
             attributeLoad = "\
                 _value = 'Scenario' get3DENMissionAttribute 'Author';\
                 (_this controlsGroupCtrl 100) ctrlSetText _value;\
                 if ((_value find profileName)  == -1) then { \
-                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfsrhs\addons\briefing\UI\plus_small_ca.paa'; \
+                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfs\addons\briefing\UI\plus_small_ca.paa'; \
                 } else { \
-                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfsrhs\addons\briefing\UI\check_small_ca.paa'; \
+                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfs\addons\briefing\UI\check_small_ca.paa'; \
                 };";
             attributeSave = "true";
             class Controls : Controls
@@ -235,7 +235,7 @@ class Cfg3DEN
                 };
                 class Picture : RscPicture
                 {
-                    text = "\z\tfsrhs\addons\briefing\UI\check_small_ca.paa"; // Default
+                    text = "\z\tfs\addons\briefing\UI\check_small_ca.paa"; // Default
                     idc = 101;
                     x = (ATTRIBUTE_TITLE_W+ATTRIBUTE_CONTENT_W - (1.5*SIZE_M)) * GRID_W;
                     w = 1.25*SIZE_M * GRID_W;
@@ -244,7 +244,7 @@ class Cfg3DEN
                 };
             };
         };
-        class TFSRHS_autoTest_minPlayer : Title
+        class TFS_autoTest_minPlayer : Title
         {
             attributeLoad = "\
                 _value = 'Multiplayer' get3DENMissionAttribute 'minplayers';\
@@ -252,9 +252,9 @@ class Cfg3DEN
                 _playerCount = count (_playerCount arrayIntersect _playerCount); \
                 (_this controlsGroupCtrl 100) ctrlSetText (str _value);\
                 if (_value >= 0 && _value <= _playerCount) then { \
-                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfsrhs\addons\briefing\UI\check_small_ca.paa'; \
+                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfs\addons\briefing\UI\check_small_ca.paa'; \
                 } else { \
-                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfsrhs\addons\briefing\UI\plus_small_ca.paa'; \
+                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfs\addons\briefing\UI\plus_small_ca.paa'; \
                 };";
             attributeSave = "true";
             class Controls : Controls
@@ -279,7 +279,7 @@ class Cfg3DEN
                 };
                 class Picture : RscPicture
                 {
-                    text = "\z\tfsrhs\addons\briefing\UI\check_small_ca.paa"; // Default
+                    text = "\z\tfs\addons\briefing\UI\check_small_ca.paa"; // Default
                     idc = 101;
                     x = (ATTRIBUTE_TITLE_W+ATTRIBUTE_CONTENT_W - (1.5*SIZE_M)) * GRID_W;
                     w = 1.25*SIZE_M * GRID_W;
@@ -288,7 +288,7 @@ class Cfg3DEN
                 };
             };
         };
-        class TFSRHS_autoTest_maxPlayer : Title
+        class TFS_autoTest_maxPlayer : Title
         {
             attributeLoad = "\
                 _value = 'Multiplayer' get3DENMissionAttribute 'maxplayers';\
@@ -296,10 +296,10 @@ class Cfg3DEN
                 _playerCount = count (_playerCount arrayIntersect _playerCount); \
                 (_this controlsGroupCtrl 100) ctrlSetText (str _value);\
                 if (_value != _playerCount) then { \
-                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfsrhs\addons\briefing\UI\plus_small_ca.paa'; \
+                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfs\addons\briefing\UI\plus_small_ca.paa'; \
                     (_this controlsGroupCtrl 100) ctrlSetText ((str _value) + ' should be: ' + (str _playerCount));\
                 } else { \
-                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfsrhs\addons\briefing\UI\check_small_ca.paa'; \
+                    (_this controlsGroupCtrl 101) ctrlSetText '\z\tfs\addons\briefing\UI\check_small_ca.paa'; \
                 };";
             attributeSave = "true";
             class Controls : Controls
@@ -324,7 +324,7 @@ class Cfg3DEN
                 };
                 class Picture : RscPicture
                 {
-                    text = "\z\tfsrhs\addons\briefing\UI\check_small_ca.paa"; // Default
+                    text = "\z\tfs\addons\briefing\UI\check_small_ca.paa"; // Default
                     idc = 101;
                     x = (ATTRIBUTE_TITLE_W+ATTRIBUTE_CONTENT_W - (1.5*SIZE_M)) * GRID_W;
                     w = 1.25*SIZE_M * GRID_W;
@@ -336,8 +336,8 @@ class Cfg3DEN
         
         class Toolbox; //class Toolbox: Title
         
-        class TFSRHS_autoTest_Test : Toolbox {
-            attributeLoad = "_this call tfsrhs_autotest_fnc_autotest";
+        class TFS_autoTest_Test : Toolbox {
+            attributeLoad = "_this call tfs_autotest_fnc_autotest";
             attributeSave = "true";
             
             w = (ATTRIBUTE_TITLE_W + ATTRIBUTE_CONTENT_W) * GRID_W;

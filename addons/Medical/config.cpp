@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class TFSRHS_Medical
+	class TFS_Medical
 	{
 		author = AUTHOR;
 		name = NAME;

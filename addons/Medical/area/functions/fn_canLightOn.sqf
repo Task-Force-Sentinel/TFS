@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\medical\area\functions\fn_canLightOn.sqf
+ *	\z\tfs\addons\medical\area\functions\fn_canLightOn.sqf
  *	by Ojemineh
  *	
  *	check if light can be switched on
@@ -12,7 +12,7 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[area1] call TFSRHS_medical_area_fnc_canLightOn;
+ *	[area1] call TFS_medical_area_fnc_canLightOn;
  *	
  */
 
@@ -31,8 +31,8 @@ if (isNull _area) exitWith {false};
 private _return = false;
 
 _return = (
-	!(_area getVariable ["TFSRHS_MedicalArea_LightOnInProgress", false]) && 
-	((_area getVariable ["TFSRHS_MedicalArea_Lights", []]) isEqualTo [])
+	!(_area getVariable ["TFS_MedicalArea_LightOnInProgress", false]) && 
+	((_area getVariable ["TFS_MedicalArea_Lights", []]) isEqualTo [])
 );
 
 _return;

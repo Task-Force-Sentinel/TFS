@@ -1,9 +1,9 @@
 class GVAR(area) : Module_F
 {
     scope = 2;
-    displayName = "TFSRHS Area";
+    displayName = "TFS Area";
     category = "Task Force Sentinel";
-    icon = "\z\tfsrhs\addons\media\images\Icons\icon_map.paa";
+    icon = "\z\tfs\addons\media\images\Icons\icon_map.paa";
     function = QFUNC(emptyFunction);
     // 0 for server only execution, 1 for global execution, 2 for persistent global execution
     isGlobal = 0;
@@ -46,7 +46,7 @@ class GVAR(area) : Module_F
 };
 class GVAR(area_rectangle) : GVAR(area)
 {
-    displayName = "TFSRHS Area (Rectangle)";
+    displayName = "TFS Area (Rectangle)";
     class AttributeValues {
         isRectangle = 1;
         size3[] = {500,500,-1}; // you can give the area a height but the area scaling tool wont work and it will be reset to -1 every time.

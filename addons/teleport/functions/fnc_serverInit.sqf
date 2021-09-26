@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\teleport\script_component.hpp"
+#include "\z\tfs\addons\teleport\script_component.hpp"
 params ["_logic","_units","_activated"];
 _units = [_logic] call CFUNC(moduleUnits);
 if(_activated) then {

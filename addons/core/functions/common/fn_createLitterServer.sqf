@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\common\fn_createLitterServer.sqf
+ *	\z\tfs\addons\core\functions\common\fn_createLitterServer.sqf
  *	by Ojemineh
  *	
  *	create litter on ground
@@ -14,7 +14,7 @@
  *	nothing
  *	
  *	Example:
- *	[player, "MedicalGarbage_01_FirstAidKit_F"] call TFSRHS_fnc_createLitterServer;
+ *	[player, "MedicalGarbage_01_FirstAidKit_F"] call TFS_fnc_createLitterServer;
  *	
  */
 
@@ -49,7 +49,7 @@ if (Not (missionNamespace getVariable ["ace_medical_allowLitterCreation", false]
 	
 	_litter setDir (random 360);
 	
-	if ([_unit] call TFSRHS_fnc_isInBuilding) then {
+	if ([_unit] call TFS_fnc_isInBuilding) then {
 		_litter setVectorUp [0,0,1];
 	} else {
 		_litter setVectorUp surfaceNormal position _litter;

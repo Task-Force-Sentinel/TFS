@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\hints\functions\fn_hint.sqf
+ *	\z\tfs\addons\hints\functions\fn_hint.sqf
  *	by Ojemineh
  *	
  *	extended hint system
@@ -16,7 +16,7 @@
  *	nothing
  *	
  *	Example:
- *	[ format [hint_tpl_default, "Hello World"] ] call TFSRHS_fnc_hint;
+ *	[ format [hint_tpl_default, "Hello World"] ] call TFS_fnc_hint;
  *	
  */
 
@@ -48,16 +48,16 @@ if (_text isEqualTo "") exitWith {};
 	"_barWidth", "_barHeight", "_barPosX", "_barPosY", "_totalY", "_activeNotifications", 
 	"_ctrlContent", "_ctrlBar", "_contentH", "_contentY"];
 	
-	private _hint_enabled		= (missionNamespace getVariable ["tfsrhs_hint_enabled", true]);
-	private _hint_position		= (missionNamespace getVariable ["tfsrhs_hint_position", 0]);
-	private _hint_duration		= (missionNamespace getVariable ["tfsrhs_hint_duration", 15]);
-	private _hint_sound			= (missionNamespace getVariable ["tfsrhs_hint_sound", 1]);
-	private _hint_color_bg		= (missionNamespace getVariable ["tfsrhs_hint_color_background", [0.000,0.000,0.000,0.5]]);
-	private _hint_color_0		= (missionNamespace getVariable ["tfsrhs_hint_color_default", [0.000,0.824,0.000,1]]);
-	private _hint_color_1		= (missionNamespace getVariable ["tfsrhs_hint_color_info", [0.824,0.824,0.000,1]]);
-	private _hint_color_2		= (missionNamespace getVariable ["tfsrhs_hint_color_alert", [0.824,0.000,0.000,1]]);
-	private _hint_queue_size	= (missionNamespace getVariable ["tfsrhs_hint_queue_size", 3]);
-	private _hint_queue_alpha	= (missionNamespace getVariable ["tfsrhs_hint_queue_alpha", 0.4]);
+	private _hint_enabled		= (missionNamespace getVariable ["tfs_hint_enabled", true]);
+	private _hint_position		= (missionNamespace getVariable ["tfs_hint_position", 0]);
+	private _hint_duration		= (missionNamespace getVariable ["tfs_hint_duration", 15]);
+	private _hint_sound			= (missionNamespace getVariable ["tfs_hint_sound", 1]);
+	private _hint_color_bg		= (missionNamespace getVariable ["tfs_hint_color_background", [0.000,0.000,0.000,0.5]]);
+	private _hint_color_0		= (missionNamespace getVariable ["tfs_hint_color_default", [0.000,0.824,0.000,1]]);
+	private _hint_color_1		= (missionNamespace getVariable ["tfs_hint_color_info", [0.824,0.824,0.000,1]]);
+	private _hint_color_2		= (missionNamespace getVariable ["tfs_hint_color_alert", [0.824,0.000,0.000,1]]);
+	private _hint_queue_size	= (missionNamespace getVariable ["tfs_hint_queue_size", 3]);
+	private _hint_queue_alpha	= (missionNamespace getVariable ["tfs_hint_queue_alpha", 0.4]);
 	
 	if (!_hint_enabled) exitWith {};
 	
@@ -83,7 +83,7 @@ if (_text isEqualTo "") exitWith {};
 	disableSerialization;
 	
 	//_display = findDisplay 46;
-	_display = uiNamespace getVariable "TFSRHS_ctrlHint";
+	_display = uiNamespace getVariable "TFS_ctrlHint";
 	
 	_bwidth = 0.003 * safezoneW;
 	_spacer = 1.5 * (0.01 * safezoneH);
@@ -99,7 +99,7 @@ if (_text isEqualTo "") exitWith {};
 			_posY = 0.13 * safezoneH + safezoneY;
 			_scrollDown = true;
 			_barLeft = true;
-			_queue = uiNamespace getVariable ["tfsrhs_hint_queue_1", []];
+			_queue = uiNamespace getVariable ["tfs_hint_queue_1", []];
 		};
 		case 2: {
 			_width = 0.15 * safezoneW;
@@ -108,7 +108,7 @@ if (_text isEqualTo "") exitWith {};
 			_posY = safezoneY + safezoneH - (0.13 * safezoneH);
 			_scrollDown = false;
 			_barLeft = true;
-			_queue = uiNamespace getVariable ["tfsrhs_hint_queue_2", []];
+			_queue = uiNamespace getVariable ["tfs_hint_queue_2", []];
 		};
 		case 3: {
 			_width = 0.15 * safezoneW;
@@ -117,7 +117,7 @@ if (_text isEqualTo "") exitWith {};
 			_posY = safezoneY + safezoneH - (0.13 * safezoneH);
 			_scrollDown = false;
 			_barLeft = false;
-			_queue = uiNamespace getVariable ["tfsrhs_hint_queue_3", []];
+			_queue = uiNamespace getVariable ["tfs_hint_queue_3", []];
 		};
 		default {
 			_width = 0.15 * safezoneW;
@@ -126,7 +126,7 @@ if (_text isEqualTo "") exitWith {};
 			_posY = 0.13 * safezoneH + safezoneY;
 			_scrollDown = true;
 			_barLeft = false;
-			_queue = uiNamespace getVariable ["tfsrhs_hint_queue_0", []];
+			_queue = uiNamespace getVariable ["tfs_hint_queue_0", []];
 		};
 	};
 	
@@ -219,10 +219,10 @@ if (_text isEqualTo "") exitWith {};
 	_queue = ([[_Content,_ColorBar]] + _queue) select {!isNull (_x select 0) && !isNull (_x select 1)};
 	
 	switch (_position) do {
-		case 0: { uiNamespace setVariable ["tfsrhs_hint_queue_0", _queue]; };
-		case 1: { uiNamespace setVariable ["tfsrhs_hint_queue_1", _queue]; };
-		case 2: { uiNamespace setVariable ["tfsrhs_hint_queue_2", _queue]; };
-		case 3: { uiNamespace setVariable ["tfsrhs_hint_queue_3", _queue]; };
+		case 0: { uiNamespace setVariable ["tfs_hint_queue_0", _queue]; };
+		case 1: { uiNamespace setVariable ["tfs_hint_queue_1", _queue]; };
+		case 2: { uiNamespace setVariable ["tfs_hint_queue_2", _queue]; };
+		case 3: { uiNamespace setVariable ["tfs_hint_queue_3", _queue]; };
 	};
 	
 };

@@ -1,9 +1,9 @@
 // Global Text
 [
-    "TFSRHS_Channels_GlobalText",
+    "TFS_Channels_GlobalText",
     "CHECKBOX",
     ["Global Text", "Allow players to use Global Text Channel and draw on map."],
-    "TFSRHS Channels",
+    "TFS Channels",
     true,
     true,
     {
@@ -13,10 +13,10 @@
 
 // Global Voice
 [
-    "TFSRHS_Channels_GlobalVoice",
+    "TFS_Channels_GlobalVoice",
     "CHECKBOX",
     ["Global Voice", "Allow players to speak in Global Voice Channel."],
-    "TFSRHS Channels",
+    "TFS Channels",
     true,
     true,
     {
@@ -26,10 +26,10 @@
 
 // Global Duration
 [
-    "TFSRHS_Channels_GlobalDuration",
+    "TFS_Channels_GlobalDuration",
     "SLIDER",
     ["Global Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
-    "TFSRHS Channels",
+    "TFS Channels",
     [0, 300, 0, 0],
     true,
     {
@@ -39,10 +39,10 @@
 
 // Side Text
 [
-    "TFSRHS_Channels_SideText",
+    "TFS_Channels_SideText",
     "CHECKBOX",
     ["Side Text", "Allow players to use Side Text Channel and draw on map."],
-    "TFSRHS Channels",
+    "TFS Channels",
     true,
     true,
     {
@@ -52,10 +52,10 @@
 
 // Side Voice
 [
-    "TFSRHS_Channels_SideVoice",
+    "TFS_Channels_SideVoice",
     "CHECKBOX",
     ["Side Voice", "Allow players to speak in Side Voice Channel."],
-    "TFSRHS Channels",
+    "TFS Channels",
     true,
     true,
     {
@@ -65,10 +65,10 @@
 
 // Side Duration
 [
-    "TFSRHS_Channels_SideDuration",
+    "TFS_Channels_SideDuration",
     "SLIDER",
     ["Side Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
-    "TFSRHS Channels",
+    "TFS Channels",
     [0, 300, 0, 0],
     true,
     {
@@ -78,10 +78,10 @@
 
 // Command Text
 [
-    "TFSRHS_Channels_CommandText",
+    "TFS_Channels_CommandText",
     "CHECKBOX",
     ["Command Text", "Allow players to use Command Text Channel and draw on map."],
-    "TFSRHS Channels",
+    "TFS Channels",
     true,
     true,
     {
@@ -91,10 +91,10 @@
 
 // Command Voice
 [
-    "TFSRHS_Channels_CommandVoice",
+    "TFS_Channels_CommandVoice",
     "CHECKBOX",
     ["Command Voice", "Allow players to speak in Command Voice Channel."],
-    "TFSRHS Channels",
+    "TFS Channels",
     true,
     true,
     {
@@ -104,10 +104,10 @@
 
 // Command Duration
 [
-    "TFSRHS_Channels_CommandDuration",
+    "TFS_Channels_CommandDuration",
     "SLIDER",
     ["Command Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
-    "TFSRHS Channels",
+    "TFS Channels",
     [0, 300, 0, 0],
     true,
     {
@@ -117,10 +117,10 @@
 
 // Group Text
 [
-    "TFSRHS_Channels_GroupText",
+    "TFS_Channels_GroupText",
     "CHECKBOX",
     ["Group Text", "Allow players to use Group Text Channel and draw on map."],
-    "TFSRHS Channels",
+    "TFS Channels",
     true,
     true,
     {
@@ -130,10 +130,10 @@
 
 // Group Voice
 [
-    "TFSRHS_Channels_GroupVoice",
+    "TFS_Channels_GroupVoice",
     "CHECKBOX",
     ["Group Voice", "Allow players to speak in Group Voice Channel."],
-    "TFSRHS Channels",
+    "TFS Channels",
     true,
     true,
     {
@@ -143,10 +143,10 @@
 
 // Group Duration
 [
-    "TFSRHS_Channels_GroupDuration",
+    "TFS_Channels_GroupDuration",
     "SLIDER",
     ["Group Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
-    "TFSRHS Channels",
+    "TFS Channels",
     [0, 300, 0, 0],
     true,
     {
@@ -156,10 +156,10 @@
 
 // Vehicle Text
 [
-    "TFSRHS_Channels_VehicleText",
+    "TFS_Channels_VehicleText",
     "CHECKBOX",
     ["Vehicle Text", "Allow players to use Vehicle Text Channel and draw on map."],
-    "TFSRHS Channels",
+    "TFS Channels",
     true,
     true,
     {
@@ -169,10 +169,10 @@
 
 // Vehicle Voice
 [
-    "TFSRHS_Channels_VehicleVoice",
+    "TFS_Channels_VehicleVoice",
     "CHECKBOX",
     ["Vehicle Voice", "Allow players to speak in Vehicle Voice Channel."],
-    "TFSRHS Channels",
+    "TFS Channels",
     true,
     true,
     {
@@ -182,10 +182,10 @@
 
 // Vehicle Duration
 [
-    "TFSRHS_Channels_VehicleDuration",
+    "TFS_Channels_VehicleDuration",
     "SLIDER",
     ["Vehicle Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
-    "TFSRHS Channels",
+    "TFS Channels",
     [0, 300, 0, 0],
     true,
     {
@@ -195,10 +195,10 @@
 
 // Direct Text
 [
-    "TFSRHS_Channels_DirectText",
+    "TFS_Channels_DirectText",
     "CHECKBOX",
     ["Direct Text", "Allow players to use Direct Text Channel and draw on map."],
-    "TFSRHS Channels",
+    "TFS Channels",
     true,
     true,
     {
@@ -208,10 +208,10 @@
 
 // Direct Voice
 [
-    "TFSRHS_Channels_DirectVoice",
+    "TFS_Channels_DirectVoice",
     "CHECKBOX",
     ["Direct Voice", "Allow players to speak in Direct Voice Channel."],
-    "TFSRHS Channels",
+    "TFS Channels",
     true,
     true,
     {
@@ -221,10 +221,10 @@
 
 // Direct Duration
 [
-    "TFSRHS_Channels_DirectDuration",
+    "TFS_Channels_DirectDuration",
     "SLIDER",
     ["Direct Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
-    "TFSRHS Channels",
+    "TFS Channels",
     [0, 300, 0, 0],
     true,
     {

@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 
@@ -9,7 +9,7 @@ if (_type == 20) then {
         hint "Nothing selected to Trigger";
 
     } else {
-        if (typeOf GVAR(adminEyeSelectedObj) == "TFSRHS_ai_wavespawn") then {
+        if (typeOf GVAR(adminEyeSelectedObj) == "TFS_ai_wavespawn") then {
             // Wave spawner trigger.
             TRACE_1("Admin Eye triggered wave", GVAR(adminEyeSelectedObj));
             [{

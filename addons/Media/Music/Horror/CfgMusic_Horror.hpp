@@ -1,4 +1,4 @@
-class tfsrhsTPL_Baby {
+class tfsTPL_Baby {
     name = "Baby";
     sound[] = {QPATHTOF(Music\Horror\baby.ogg), db+0, 1.0};
     theme = "combat";
@@ -6,7 +6,7 @@ class tfsrhsTPL_Baby {
     musicClass = "Horror";
 };
 
-class tfsrhsTPL_Bunker {
+class tfsTPL_Bunker {
     name = "Bunker";
     sound[] = {QPATHTOF(Music\Horror\bunker.ogg), db+0, 1.0};
     theme = "combat";
@@ -14,7 +14,7 @@ class tfsrhsTPL_Bunker {
     musicClass = "Horror";
 };
 
-class tfsrhsTPL_Horror {
+class tfsTPL_Horror {
     name = "Horror";
     sound[] = {QPATHTOF(Music\Horror\horror.ogg), db+0, 1.0};
     theme = "combat";
@@ -22,7 +22,7 @@ class tfsrhsTPL_Horror {
     musicClass = "Horror";
 };
 
-class tfsrhsTPL_Jagd {
+class tfsTPL_Jagd {
     name = "Jagd";
     sound[] = {QPATHTOF(Music\Horror\jagd.ogg), db+0, 1.0};
     theme = "combat";
@@ -30,7 +30,7 @@ class tfsrhsTPL_Jagd {
     musicClass = "Horror";
 };
 
-class tfsrhsTPL_Kind {
+class tfsTPL_Kind {
     name = "Kind";
     sound[] = {QPATHTOF(Music\Horror\kind.ogg), db+0, 1.0};
     theme = "combat";
@@ -38,7 +38,7 @@ class tfsrhsTPL_Kind {
     musicClass = "Horror";
 };
 
-class tfsrhsTPL_Wald {
+class tfsTPL_Wald {
     name = "Wald";
     sound[] = {QPATHTOF(Music\Horror\wald.ogg), db+0, 1.0};
     theme = "combat";

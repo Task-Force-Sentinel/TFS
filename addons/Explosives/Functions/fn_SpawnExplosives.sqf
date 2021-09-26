@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_SpawnExplosives
+Function: TFS_fnc_SpawnExplosives
 
 Description:
 	Utility function for spawning explosions and secondaries on objects,

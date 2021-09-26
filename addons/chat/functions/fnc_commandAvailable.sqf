@@ -1,7 +1,7 @@
 
-#include "\z\tfsrhs\addons\chat\script_component.hpp"
+#include "\z\tfs\addons\chat\script_component.hpp"
 /*
- * Name = TFSRHS_chat_fnc_commandAvailable
+ * Name = TFS_chat_fnc_commandAvailable
  * Author = Freddo
  *
  * Parameters:
@@ -24,13 +24,13 @@ private _enabled = true;
 switch (_var) do {
     case 0: { // Never available
         if true exitWith {
-            systemChat FORMAT_1("TFSRHS: %1 is disabled.", _command);
+            systemChat FORMAT_1("TFS: %1 is disabled.", _command);
             _enabled = false;
         };
     };
     case 1: { // Available during safestart
         if !(call EFUNC(safestart,isActive)) exitWith {
-            systemChat FORMAT_1("TFSRHS: %1 is only available during Safe Start.", _command);
+            systemChat FORMAT_1("TFS: %1 is only available during Safe Start.", _command);
             _enabled = false;
         };
     };
@@ -39,7 +39,7 @@ switch (_var) do {
             CURUNIT getVariable [QGVARMAIN(lastRespawn), 0] < time - 300 &&
             {!(call EFUNC(safestart,isActive))}
         ) exitWith {
-            systemChat FORMAT_1("TFSRHS: %1 is only available during Safe Start and within 5 minutes of respawn.", _command);
+            systemChat FORMAT_1("TFS: %1 is only available during Safe Start and within 5 minutes of respawn.", _command);
             _enabled = false;
         };
     };

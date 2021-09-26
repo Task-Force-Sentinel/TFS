@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\interactions\functions\inventory\fn_gear_canAccess.sqf
+ *	\z\tfs\addons\interactions\functions\inventory\fn_gear_canAccess.sqf
  *	by Ojemineh
  *	
  *	check if unit can search targets gear
@@ -13,7 +13,7 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[player, unit1] call TFSRHS_interactions_fnc_gear_canAccess;
+ *	[player, unit1] call TFS_interactions_fnc_gear_canAccess;
  *	
  */
 
@@ -34,7 +34,7 @@ if (isNull _target) exitWith {false};
 private _return = false;
 private _enabled = false;
 
-if (missionNamespace getVariable ["tfsrhs_interactions_gear_access_enabled", 0] > 0) then {
+if (missionNamespace getVariable ["tfs_interactions_gear_access_enabled", 0] > 0) then {
 	_enabled = true;
 };
 

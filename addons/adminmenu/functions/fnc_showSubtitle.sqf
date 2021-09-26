@@ -1,7 +1,7 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 /*
-    Modified by Bear for TFSRHS Admin Menu
+    Modified by Bear for TFS Admin Menu
 
     Author: Thomas Ryan
 

@@ -1,5 +1,5 @@
 /*
- * Name: TFSRHS_common_fnc_isAdmin
+ * Name: TFS_common_fnc_isAdmin
  * Author: Snippers
  *
  * Arguments:

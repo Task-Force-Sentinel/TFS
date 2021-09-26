@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="TFSRHS">
+<Project name="TFS">
     <Package name="Respawn">
-        <Key ID="STR_TFSRHS_Respawn_DisplayName">
-            <English>TFSRHS Respawn</English>
-            <Polish>TFSRHS Odrodzenie</Polish>
+        <Key ID="STR_TFS_Respawn_DisplayName">
+            <English>TFS Respawn</English>
+            <Polish>TFS Odrodzenie</Polish>
         </Key>
-        <Key ID="STR_TFSRHS_Respawn_Enabled">
+        <Key ID="STR_TFS_Respawn_Enabled">
             <English>Enable respawn</English>
             <Polish>Włącz odrodzenie</Polish>
         </Key>
-        <Key ID="STR_TFSRHS_Respawn_Enabled_Description">
+        <Key ID="STR_TFS_Respawn_Enabled_Description">
             <English>Enables respawn with given delay.</English>
             <Polish>Włącza odrodzenie z określonym opóźnieniem.</Polish>
         </Key>
-        <Key ID="STR_TFSRHS_Respawn_Time">
+        <Key ID="STR_TFS_Respawn_Time">
             <English>Respawn delay</English>
             <Polish>Opóźnienie odrodzenia</Polish>
         </Key>
-        <Key ID="STR_TFSRHS_Respawn_Time_Description">
+        <Key ID="STR_TFS_Respawn_Time_Description">
             <English>How much time must pass before player will respawn (if respawn is enabled).</English>
             <Polish>Jak dużo czasu musi upłynąć by gracz mógł się odrodzić (jeśli odrodzenie jest włączone).</Polish>
         </Key>

@@ -68,7 +68,7 @@ class Extended_PreStart_EventHandlers {                 \
 #define IS_MOD_LOADED(modclass)     (isClass (configFile >> "CfgPatches" >> #modclass))
 
 // AFM Debug macros
-#include "\z\tfsrhs\addons\main\script_debug.hpp"
+#include "\z\tfs\addons\main\script_debug.hpp"
 
 // Class
 #define CLASS(var1) DOUBLES(PREFIX,var1)

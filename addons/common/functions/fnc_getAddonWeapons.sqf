@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\tfsrhs_common\functions\addons\fn_getAddonWeapons.sqf
+ *	\tfs_common\functions\addons\fn_getAddonWeapons.sqf
  *	by Ojemineh
  *	
  *	get addon weapons
@@ -12,7 +12,7 @@
  *	<ARRAY>
  *	
  *	Example:
- *	["TFSRHS_core"] call tfsrhs_fnc_getAddonWeapons;
+ *	["TFS_core"] call tfs_fnc_getAddonWeapons;
  *	
  */
 

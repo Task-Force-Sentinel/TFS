@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
-systemChat "[TFSRHS Admin Menu] Quick Respawn:";
+systemChat "[TFS Admin Menu] Quick Respawn:";
 private _str = "";
 {
     _str = _str + format ["[%1: %2]", name _x, str ((_x getVariable [QEGVAR(spectator,unitData), false]) isEqualType [])];
@@ -9,4 +9,4 @@ private _str = "";
 } forEach GVAR(utilityData);
 systemChat _str;
 
-[["%1 Quick Respawned %2",profileName,_str],false,"[TFSRHS Admin Menu] "];
+[["%1 Quick Respawned %2",profileName,_str],false,"[TFS Admin Menu] "];

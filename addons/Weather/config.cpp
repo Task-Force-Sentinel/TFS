@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-	class TFSRHS_Weather
+	class TFS_Weather
 	{
 		author = AUTHOR;
 		name = NAME;
@@ -17,8 +17,8 @@ class CfgPatches
 };
 
 class Extended_PreInit_EventHandlers {
-    class TFSRHS_Weather_Event {
-        init = "call compile preprocessFileLineNumbers 'z\tfsrhs\addons\Weather\XEH_preInit.sqf'";
+    class TFS_Weather_Event {
+        init = "call compile preprocessFileLineNumbers 'z\tfs\addons\Weather\XEH_preInit.sqf'";
     };
 };
 

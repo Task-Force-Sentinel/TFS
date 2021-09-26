@@ -1,5 +1,5 @@
 /*
- * Name: TFSRHS_common_fnc_sideToString
+ * Name: TFS_common_fnc_sideToString
  * Author: Snippers
  *
  * Arguments:

@@ -21,7 +21,7 @@ class GVAR(huntModule) : Module_F
 
 
     class EventHandlers {
-        init = "if (isServer) then {[_this select 0] call tfsrhs_AI_fnc_huntInit;}; _this call bis_fnc_moduleInit;";
+        init = "if (isServer) then {[_this select 0] call tfs_AI_fnc_huntInit;}; _this call bis_fnc_moduleInit;";
     };
     
     class Arguments: ArgumentsBaseUnits

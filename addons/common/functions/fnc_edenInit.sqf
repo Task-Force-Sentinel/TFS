@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\common\script_component.hpp"
+#include "\z\tfs\addons\common\script_component.hpp"
 /*
- * Name: TFSRHS_common_fnc_edenInit
+ * Name: TFS_common_fnc_edenInit
  * Author: Nick
  *
  * Arguments:

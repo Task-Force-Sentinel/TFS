@@ -1,7 +1,7 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 
 if (!isNil "ace_common_fnc_addCanInteractWithCondition") then {
-    [QGVAR(spectatingCondition), {isNull (findDisplay IDC_SPECTATOR_TFSRHS_SPECTATOR_DIALOG)}] call ace_common_fnc_addCanInteractWithCondition;
+    [QGVAR(spectatingCondition), {isNull (findDisplay IDC_SPECTATOR_TFS_SPECTATOR_DIALOG)}] call ace_common_fnc_addCanInteractWithCondition;
 };
 
 if (isServer) then {

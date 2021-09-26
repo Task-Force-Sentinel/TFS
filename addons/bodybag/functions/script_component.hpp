@@ -1,1 +1,1 @@
-#include "\z\tfsrhs\addons\bodybag\script_component.hpp"
+#include "\z\tfs\addons\bodybag\script_component.hpp"

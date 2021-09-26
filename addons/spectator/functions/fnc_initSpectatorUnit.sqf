@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 /* ----------------------------------------------------------------------------
-Internal Function: TFSRHS_spectator_fnc_initSpectatorUnit
+Internal Function: TFS_spectator_fnc_initSpectatorUnit
 
 Description:
     Initializes the virtual spectator unit.
@@ -10,7 +10,7 @@ Parameters:
 
 Examples:
     (begin example)
-        [_specEntity] spawn TFSRHS_spectator_fnc_initSpectatorUnit
+        [_specEntity] spawn TFS_spectator_fnc_initSpectatorUnit
     (end)
 
 Author:

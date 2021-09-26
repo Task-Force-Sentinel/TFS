@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\gear\functions\common\fn_initPlayer.sqf
+ *	\z\tfs\addons\gear\functions\common\fn_initPlayer.sqf
  *	by Ojemineh
  *
  *	initialize player
@@ -12,7 +12,7 @@
  *	nothing
  *
  *	Example:
- *	[player] call TFSRHS_gear_fnc_initPlayer;
+ *	[player] call TFS_gear_fnc_initPlayer;
  *
  */
 
@@ -29,7 +29,7 @@ if (isNull _unit) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 if (Not local _unit) exitWith {
-	[_unit] remoteExecCall ["TFSRHS_gear_fnc_initPlayer", _unit];
+	[_unit] remoteExecCall ["TFS_gear_fnc_initPlayer", _unit];
 };
 
 // -------------------------------------------------------------------------------------------------
@@ -45,4 +45,4 @@ private _gear_team = toUpper( _unit getVariable ["gear_team", _default_team] );
 
 // -------------------------------------------------------------------------------------------------
 
-[_unit, _gear_role, _gear_type, _gear_team] call TFSRHS_gear_fnc_load;
+[_unit, _gear_role, _gear_type, _gear_team] call TFS_gear_fnc_load;

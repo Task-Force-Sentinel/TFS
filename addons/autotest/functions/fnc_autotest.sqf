@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\autotest\script_component.hpp"
+#include "\z\tfs\addons\autotest\script_component.hpp"
 
 private _ctrlListbox = (_this controlsGroupCtrl 101);
 _ctrlListbox lnbSetColumnsPos [0,0.05];

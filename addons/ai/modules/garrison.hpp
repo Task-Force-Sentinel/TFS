@@ -56,7 +56,7 @@ class GVAR(garrisonQuantity) : Module_F
     scope = 2;
     displayName = "Garrison";
     category = "Task Force Sentinel";
-    icon = "\z\tfsrhs\addons\media\images\TFSLOGO@0.25x.paa";
+    icon = "\z\tfs\addons\media\images\TFSLOGO@0.25x.paa";
     function = QFUNC(garrisonQuantity);
     // 0 for server only execution, 1 for global execution, 2 for persistent global execution
     isGlobal = 0;
@@ -64,7 +64,7 @@ class GVAR(garrisonQuantity) : Module_F
     isDisposable = 0; // broken in EDEN;
     canSetArea=1;
     class EventHandlers {
-        init = "if(isServer && !is3DEN) then {[{_this call tfsrhs_AI_fnc_garrisonQuantity;}, [_this select 0,[],false]] call CBA_fnc_execNextFrame;};_this call bis_fnc_moduleInit;";
+        init = "if(isServer && !is3DEN) then {[{_this call tfs_AI_fnc_garrisonQuantity;}, [_this select 0,[],false]] call CBA_fnc_execNextFrame;};_this call bis_fnc_moduleInit;";
     };
     class AttributeValues {
         size3[] = {20, 20, -1};

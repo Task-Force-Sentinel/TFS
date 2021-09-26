@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 
 if((_this select 2) isEqualType 0) then {_this set [2, false]};
 params ["_unit", "_oldUnit", ["_forced", false, [false]]];
@@ -121,13 +121,13 @@ if(isNil QGVAR(objectives)) then { GVAR(objectives) = []; };
 // UI
 GVAR(showUI) = true;
 GVAR(interfaceControls) = [
-        IDC_SPECTATOR_TFSRHS_SPECTATOR_KILLIST, IDC_SPECTATOR_TFSRHS_SPECTATOR_UNITLABEL,
-        IDC_SPECTATOR_TFSRHS_SPECTATOR_UNITLIST, IDC_SPECTATOR_TFSRHS_SPECTATOR_VISION,
-        IDC_SPECTATOR_TFSRHS_SPECTATOR_FILTER, IDC_SPECTATOR_TFSRHS_SPECTATOR_BUTTON,
-        IDC_SPECTATOR_TFSRHS_SPECTATOR_TAGS, IDC_SPECTATOR_TFSRHS_SPECTATOR_VIEW,
-        IDC_SPECTATOR_TFSRHS_SPECTATOR_COMPASS, IDC_SPECTATOR_TFSRHS_SPECTATOR_COMPASSLEFT,
-        IDC_SPECTATOR_TFSRHS_SPECTATOR_COMPASSRight, IDC_SPECTATOR_TFSRHS_SPECTATOR_MUTE,
-        IDC_SPECTATOR_TFSRHS_SPECTATOR_RADIO, IDC_SPECTATOR_TFSRHS_SPECTATOR_MENUBACK
+        IDC_SPECTATOR_TFS_SPECTATOR_KILLIST, IDC_SPECTATOR_TFS_SPECTATOR_UNITLABEL,
+        IDC_SPECTATOR_TFS_SPECTATOR_UNITLIST, IDC_SPECTATOR_TFS_SPECTATOR_VISION,
+        IDC_SPECTATOR_TFS_SPECTATOR_FILTER, IDC_SPECTATOR_TFS_SPECTATOR_BUTTON,
+        IDC_SPECTATOR_TFS_SPECTATOR_TAGS, IDC_SPECTATOR_TFS_SPECTATOR_VIEW,
+        IDC_SPECTATOR_TFS_SPECTATOR_COMPASS, IDC_SPECTATOR_TFS_SPECTATOR_COMPASSLEFT,
+        IDC_SPECTATOR_TFS_SPECTATOR_COMPASSRight, IDC_SPECTATOR_TFS_SPECTATOR_MUTE,
+        IDC_SPECTATOR_TFS_SPECTATOR_RADIO, IDC_SPECTATOR_TFS_SPECTATOR_MENUBACK
 ];
 
 GVAR(vehicles) = [];
@@ -178,8 +178,8 @@ GVAR(sides_button_strings) = ["SHOWING ALL SIDES", "SHOWING BLUFOR", "SHOWING OP
 
 
 if (!GVAR(canSpectateAllSides)) then {
-  GVAR(sides) = [tfsrhs_spectator_entryside];
-  GVAR(sides_button_mode) = [[tfsrhs_spectator_entryside]];
+  GVAR(sides) = [tfs_spectator_entryside];
+  GVAR(sides_button_mode) = [[tfs_spectator_entryside]];
   GVAR(sides_button_strings) = ["SHOWING YOUR SIDE"];
 };
 
@@ -240,7 +240,7 @@ setCurrentChannel (GVAR(radioChannel)+5);
 } forEach [1,2,3,4,5];
 
 // Enable global if admin
-if !([] call tfsrhs_common_fnc_isAdmin) then {
+if !([] call tfs_common_fnc_isAdmin) then {
     0 enableChannel false;
 };
 

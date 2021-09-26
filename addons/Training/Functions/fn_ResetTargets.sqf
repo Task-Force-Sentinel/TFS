@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_ResetTargets
+Function: TFS_fnc_ResetTargets
 
 Description:
 	Used to set pop up targets to fall when hit and then up on laptop command.
@@ -12,8 +12,8 @@ Arguments:
 
 Examples:
 	(begin example)
-		[this, "Reset Targets", [1200,4200,0], 250] call TFSRHS_fnc_ResetTargets;
-		[MyLaptopName, "Reset 300m Range", [5500,3522,0], 300] call TFSRHS_fnc_ResetTargets;
+		[this, "Reset Targets", [1200,4200,0], 250] call TFS_fnc_ResetTargets;
+		[MyLaptopName, "Reset 300m Range", [5500,3522,0], 300] call TFS_fnc_ResetTargets;
 	(end)
 
 Author:
@@ -33,7 +33,7 @@ private ["_Targets", "_SwivelTargets"];
 
 nopop = true;
 
-TFSRHS_fnc_SetTargets = {
+TFS_fnc_SetTargets = {
 
 	params [
 		["_center", [0,0,0]],
@@ -76,7 +76,7 @@ TFSRHS_fnc_SetTargets = {
 	} forEach _SwivelTargets;
 };
 
-[_center,_distance] call TFSRHS_fnc_SetTargets;	// Initial Reset.
+[_center,_distance] call TFS_fnc_SetTargets;	// Initial Reset.
 
 [
 	_object,
@@ -88,7 +88,7 @@ TFSRHS_fnc_SetTargets = {
 	{[format["<t color='#FFBB00' size = '.5'>Resetting Targets</t>"],-1,0.8,2,0.5,0,789] spawn BIS_fnc_dynamicText;},
 	{},
 	{
-		[(_this select 3) select 2, (_this select 3) select 3] call TFSRHS_fnc_SetTargets;
+		[(_this select 3) select 2, (_this select 3) select 3] call TFS_fnc_SetTargets;
 		[format["<t color='#556b2f' size = '.5'>Targets Reset</t>"],-1,0.8,5,0.5,0,789] spawn BIS_fnc_dynamicText;
 	},
 	{[format["<t color='#cc3232' size = '.5'>Aborted</t>"],-1,0.8,5,0.5,0,789] spawn BIS_fnc_dynamicText;},

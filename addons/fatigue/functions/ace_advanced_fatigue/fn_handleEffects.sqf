@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\fatigue\functions\ace_advanced_fatigue\fn_handleEffects.sqf
+ *	\z\tfs\addons\fatigue\functions\ace_advanced_fatigue\fn_handleEffects.sqf
  *	by Ojemineh
  *	
  *	handle fatigue effects
@@ -30,45 +30,45 @@ params ["_unit", "_fatigue", "_speed", "_overexhausted"];
 
 // - Audible effects -------------------------------------------------------------------------------
 
-private _globalSounds = (missionNamespace getVariable ["tfsrhs_fatigue_global_sounds", false]);
+private _globalSounds = (missionNamespace getVariable ["tfs_fatigue_global_sounds", false]);
 private _breathSound = "";
 private _pain = player getVariable ["ace_medical_pain", 0];
 private _painSuppress = player getVariable ["ace_medical_painSuppress", 0];
 
-if (isNil "tfsrhs_advanced_fatigue_breathVoice") then { 
-	tfsrhs_advanced_fatigue_breathVoice = selectRandom [0,1,2,3,4,5,6,7];
-	if (_globalSounds) then {[5, "Use Global Sounds", [], "fatigue"] call TFSRHS_fnc_diagLog;};
-	[5, "Selected Voice: %1", [tfsrhs_advanced_fatigue_breathVoice], "fatigue"] call TFSRHS_fnc_diagLog;
+if (isNil "tfs_advanced_fatigue_breathVoice") then { 
+	tfs_advanced_fatigue_breathVoice = selectRandom [0,1,2,3,4,5,6,7];
+	if (_globalSounds) then {[5, "Use Global Sounds", [], "fatigue"] call TFS_fnc_diagLog;};
+	[5, "Selected Voice: %1", [tfs_advanced_fatigue_breathVoice], "fatigue"] call TFS_fnc_diagLog;
 };
 ace_advanced_fatigue_lastBreath = ace_advanced_fatigue_lastBreath + 1;
 
 if (_fatigue > 0.4 && {ace_advanced_fatigue_lastBreath > (_fatigue * -10 + 9)} && {!underwater _unit}) then {
     switch (true) do {
         case (_fatigue < 0.6): {
-			_breathSound = "TFSRHS_Advanced_Fatigue_BreathLow";
-			if (_pain > _painSuppress) then {_breathSound = ["TFSRHS_Advanced_Fatigue_BreathLow", "TFSRHS_Advanced_Fatigue_BreathInjuredLow"] select ((random 1) > 0.66);};
+			_breathSound = "TFS_Advanced_Fatigue_BreathLow";
+			if (_pain > _painSuppress) then {_breathSound = ["TFS_Advanced_Fatigue_BreathLow", "TFS_Advanced_Fatigue_BreathInjuredLow"] select ((random 1) > 0.66);};
 			if (_globalSounds) then {
-				[_breathSound + format ["_%1_%2", tfsrhs_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]], _unit, AGLToASL (_unit modelToWorld (_unit selectionPosition "head")), 60, 1.4, -1, false] call TFSRHS_fnc_playSound3d;
+				[_breathSound + format ["_%1_%2", tfs_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]], _unit, AGLToASL (_unit modelToWorld (_unit selectionPosition "head")), 60, 1.4, -1, false] call TFS_fnc_playSound3d;
 			} else {
-				playSound (_breathSound + format ["_%1_%2", tfsrhs_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]]);
+				playSound (_breathSound + format ["_%1_%2", tfs_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]]);
 			};
         };
         case (_fatigue < 0.85): {
-			_breathSound = "TFSRHS_Advanced_Fatigue_BreathMid";
-			if (_pain > _painSuppress) then {_breathSound = ["TFSRHS_Advanced_Fatigue_BreathMid", "TFSRHS_Advanced_Fatigue_BreathInjuredMid"] select ((random 1) > 0.66);};
+			_breathSound = "TFS_Advanced_Fatigue_BreathMid";
+			if (_pain > _painSuppress) then {_breathSound = ["TFS_Advanced_Fatigue_BreathMid", "TFS_Advanced_Fatigue_BreathInjuredMid"] select ((random 1) > 0.66);};
 			if (_globalSounds) then {
-				[_breathSound + format ["_%1_%2", tfsrhs_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]], _unit, AGLToASL (_unit modelToWorld (_unit selectionPosition "head")), 60, 1.4, -1, false] call TFSRHS_fnc_playSound3d;
+				[_breathSound + format ["_%1_%2", tfs_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]], _unit, AGLToASL (_unit modelToWorld (_unit selectionPosition "head")), 60, 1.4, -1, false] call TFS_fnc_playSound3d;
 			} else {
-				playSound (_breathSound + format ["_%1_%2", tfsrhs_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]]);
+				playSound (_breathSound + format ["_%1_%2", tfs_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]]);
 			};
         };
         default {
-			_breathSound = "TFSRHS_Advanced_Fatigue_BreathMax";
-			if (_pain > _painSuppress) then {_breathSound = ["TFSRHS_Advanced_Fatigue_BreathMax", "TFSRHS_Advanced_Fatigue_BreathInjuredMax"] select ((random 1) > 0.66);};
+			_breathSound = "TFS_Advanced_Fatigue_BreathMax";
+			if (_pain > _painSuppress) then {_breathSound = ["TFS_Advanced_Fatigue_BreathMax", "TFS_Advanced_Fatigue_BreathInjuredMax"] select ((random 1) > 0.66);};
 			if (_globalSounds) then {
-				[_breathSound + format ["_%1_%2", tfsrhs_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]], _unit, AGLToASL (_unit modelToWorld (_unit selectionPosition "head")), 60, 1.4, -1, false] call TFSRHS_fnc_playSound3d;
+				[_breathSound + format ["_%1_%2", tfs_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]], _unit, AGLToASL (_unit modelToWorld (_unit selectionPosition "head")), 60, 1.4, -1, false] call TFS_fnc_playSound3d;
 			} else {
-				playSound (_breathSound + format ["_%1_%2", tfsrhs_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]]);
+				playSound (_breathSound + format ["_%1_%2", tfs_advanced_fatigue_breathVoice, selectRandom [0,1,2,3,4]]);
 			};
         };
     };

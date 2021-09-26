@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\interactions\functions\inventory\fn_gear_access.sqf
+ *	\z\tfs\addons\interactions\functions\inventory\fn_gear_access.sqf
  *	by Ojemineh
  *	
  *	search targets gear
@@ -13,7 +13,7 @@
  *	nothing
  *	
  *	Example:
- *	[player, unit1] call TFSRHS_interactions_fnc_gear_access;
+ *	[player, unit1] call TFS_interactions_fnc_gear_access;
  *	
  */
 
@@ -38,18 +38,18 @@ enableCamShake true;
 setCamShakeParams [0, 1, 1, 0, true];
 addCamShake [5, 1, 5];
 
-if (missionNamespace getVariable ["tfsrhs_interactions_gear_access_hint", true]) then {
+if (missionNamespace getVariable ["tfs_interactions_gear_access_hint", true]) then {
 	
 	private _playerName = format [hint_tpl_var_1, [_player] call ACE_common_fnc_getName];
 	private _iconTemplate = "<img size='2.0' shadow='0' image='%1' />";
-	private _iconFile = "\z\tfsrhs\addons\interactions\data\icons\search_gear_ca.paa";
+	private _iconFile = "\z\tfs\addons\interactions\data\icons\search_gear_ca.paa";
 	private _icon = format [_iconTemplate, _iconFile];
-	private _hintMessage = format [localize "STR_TFSRHS_Interactions_Hint_Gear_Access", _playerName, _icon];
+	private _hintMessage = format [localize "STR_TFS_Interactions_Hint_Gear_Access", _playerName, _icon];
 	
-	[format [hint_tpl_default, _hintMessage], -1, 0] call TFSRHS_fnc_hint;
+	[format [hint_tpl_default, _hintMessage], -1, 0] call TFS_fnc_hint;
 	
-	if !(missionNamespace getVariable ["tfsrhs_interactions_global_sounds", false]) then {
-		private _soundClass = selectRandom ["TFSRHS_Action_Backpack_Search_1"];
+	if !(missionNamespace getVariable ["tfs_interactions_global_sounds", false]) then {
+		private _soundClass = selectRandom ["TFS_Action_Backpack_Search_1"];
 		playSound _soundClass;
 	};
 	

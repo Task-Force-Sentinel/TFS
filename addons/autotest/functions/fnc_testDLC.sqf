@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\autotest\script_component.hpp"
+#include "\z\tfs\addons\autotest\script_component.hpp"
 /* ----------------------------------------------------------------------------
-Internal Function: TFSRHS_autotest_fnc_testDLC
+Internal Function: TFS_autotest_fnc_testDLC
 
 Description:
     Checks units/vehicles DLC usage

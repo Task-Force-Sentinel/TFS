@@ -5,13 +5,13 @@ class CfgVehicles {
     class ModuleCurator_F: Module_F {
 		class Attributes
 		{
-            class TFSRHS_Config_Zeus {
-                property = QUOTE(TFSRHS_Config_Zeus);
+            class TFS_Config_Zeus {
+                property = QUOTE(TFS_Config_Zeus);
                 control = "Checkbox";
 				typeName = "BOOL";
-                displayName = "TFSRHS Fundamentals: Config Zeus:";
-                tooltip = "Enable to allow this Zeus to have placed units use TFSRHS AI Difficulty Settings (Settings - Addon Options)";
-                expression = "if (_value isequalto true) then {[_this] call TFSRHS_fnc_ConfigZeus;}";
+                displayName = "TFS Fundamentals: Config Zeus:";
+                tooltip = "Enable to allow this Zeus to have placed units use TFS AI Difficulty Settings (Settings - Addon Options)";
+                expression = "if (_value isequalto true) then {[_this] call TFS_fnc_ConfigZeus;}";
                 condition = "logicModule";
                 defaultValue = "(true)";
 			};

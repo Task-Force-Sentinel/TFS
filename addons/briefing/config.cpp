@@ -10,7 +10,7 @@ class cfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"TFSRHS_common"};
+        requiredAddons[] = {"TFS_common"};
         VERSION_CONFIG;
     };
 };
@@ -21,7 +21,7 @@ class cfgPatches
 
 #include "display3DEN.hpp"
 
-class TFSRHS_autotest {
+class TFS_autotest {
     class GVAR(test) {
         code = QUOTE([] call FUNC(testBriefings));
     };

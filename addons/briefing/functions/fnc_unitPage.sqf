@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\briefing\script_component.hpp"
+#include "\z\tfs\addons\briefing\script_component.hpp"
 /*
- *      Name: TFSRHS_briefing_fnc_unitPage
+ *      Name: TFS_briefing_fnc_unitPage
  *      Author: Nick, Snippers
  *
  *      Arguments:

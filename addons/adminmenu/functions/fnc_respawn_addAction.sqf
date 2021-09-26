@@ -1,21 +1,21 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_display"];
 
-private _ctrlSpectatorListBox = (_display displayCtrl IDC_TFSRHS_ADMINMENU_RESP_SPECTATORLIST);
+private _ctrlSpectatorListBox = (_display displayCtrl IDC_TFS_ADMINMENU_RESP_SPECTATORLIST);
 
 private _selection = _ctrlSpectatorListBox lbText (lbCurSel _ctrlSpectatorListBox);
 private _obj = objNull;
 {
-    private _name = _x getVariable ["TFSRHS_spectator_name",name _x];
+    private _name = _x getVariable ["TFS_spectator_name",name _x];
     if (_selection == _name) exitWith {
         _obj = _x;
     };
 } forEach GVAR(spectatorList);
 
 if (!(isNull _obj)) then {
-    private _role = lbCurSel (_display displayCtrl IDC_TFSRHS_ADMINMENU_RESP_ROLECOMBO); // Role
+    private _role = lbCurSel (_display displayCtrl IDC_TFS_ADMINMENU_RESP_ROLECOMBO); // Role
     private _rank = GVAR(respawn_rank); // Rank
     
     GVAR(selectedRespawnGroup) pushBack [_rank,_obj,_role];

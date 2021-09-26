@@ -1,10 +1,10 @@
-class TFSRHS_ModuleSafeZone: Module_F
+class TFS_ModuleSafeZone: Module_F
 {
 	scope = 2;
 	displayName = "Safe Zone";
-	icon = "\z\tfsrhs\addons\media\images\icons\Safe_Zone.paa";
+	icon = "\z\tfs\addons\media\images\icons\Safe_Zone.paa";
 	category = "Task Force Sentinel";
-	function = "TFSRHS_fnc_moduleSafeZone";
+	function = "TFS_fnc_moduleSafeZone";
 	functionPriority = 4;
 	isGlobal = 0;
 	isTriggerActivated = 0;
@@ -14,7 +14,7 @@ class TFSRHS_ModuleSafeZone: Module_F
 	{
 		class SafeZoneEnable: Checkbox
   			{
-				property = "TFSRHS_SafeZoneEnable";
+				property = "TFS_SafeZoneEnable";
 				displayName = "Enabled";
 				tooltip = "Enable/Disable this Safe Zone Module.";
 				typeName = "BOOL";
@@ -22,7 +22,7 @@ class TFSRHS_ModuleSafeZone: Module_F
 			};
 			class SafeZoneSize: Edit
   			{
-				property = "TFSRHS_SafeZoneSize";
+				property = "TFS_SafeZoneSize";
 				displayName = "Size";
 				tooltip = "Area of Safe Zone around this module in meters";
 				typeName = "NUMBER";
@@ -30,7 +30,7 @@ class TFSRHS_ModuleSafeZone: Module_F
 			};
 		class SafeZoneDuration: Edit
   			{
-				property = "TFSRHS_SafeZoneDuration";
+				property = "TFS_SafeZoneDuration";
 				displayName = "Duration";
 				tooltip = "How long should the safe zone be active. 0 means permanent.";
 				typeName = "NUMBER";

@@ -1,14 +1,14 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_display"];
 
-private _ctrlGroupListBox = (_display displayCtrl IDC_TFSRHS_ADMINMENU_RESP_GROUPLIST);
+private _ctrlGroupListBox = (_display displayCtrl IDC_TFS_ADMINMENU_RESP_GROUPLIST);
 lbClear _ctrlGroupListBox;
 
 {
     _x params ["_rankIdx","_obj", "_roleIdx"];
-    private _name = _obj getVariable ["TFSRHS_spectator_name",name _obj];
+    private _name = _obj getVariable ["TFS_spectator_name",name _obj];
     private _idx = _ctrlGroupListBox lbAdd format["%1 - %2", _name, (respawnMenuRoles select _roleIdx) select 1];
     //Set image based on rank
     switch (_rankIdx) do {

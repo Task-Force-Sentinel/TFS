@@ -2,27 +2,27 @@
 
 class CfgPatches {
 	
-	class TFSRHS_Medical_Supplies {
-		name = "$STR_TFSRHS_Medical_Supplies_Title";
-		addonRootClass = "TFSRHS_Medical";
+	class TFS_Medical_Supplies {
+		name = "$STR_TFS_Medical_Supplies_Title";
+		addonRootClass = "TFS_Medical";
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
 			"a3_props_f_orange",
-			"tfsrhs_medical"
+			"tfs_medical"
 		};
 		units[] = {
-			"TFSRHS_Item_FirstAid",
-			"TFSRHS_Item_MedicKit"
+			"TFS_Item_FirstAid",
+			"TFS_Item_MedicKit"
 		};
 		weapons[] = {
-			"TFSRHS_FirstAid",
-			"TFSRHS_MedicKit"
+			"TFS_FirstAid",
+			"TFS_MedicKit"
 		};
-		author = "$STR_TFSRHS_Medical_Supplies_Author";
+		author = "$STR_TFS_Medical_Supplies_Author";
 		authors[] = {
 			"O. Jemineh"
 		};
-		url = "$STR_TFSRHS_Medical_Supplies_URL";
+		url = "$STR_TFS_Medical_Supplies_URL";
 		VERSION_CONFIG;
 	};
 	

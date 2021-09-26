@@ -1,10 +1,10 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_display"];
 
 
-private _ctrlGroupListBox = (_display displayCtrl IDC_TFSRHS_ADMINMENU_RESP_GROUPLIST);
+private _ctrlGroupListBox = (_display displayCtrl IDC_TFS_ADMINMENU_RESP_GROUPLIST);
         
 GVAR(selectedRespawnGroup) deleteAt (lbCurSel _ctrlGroupListBox);
 

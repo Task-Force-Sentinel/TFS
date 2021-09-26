@@ -1,17 +1,17 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_ctrlBackground"];
 
 if (isNil QGVAR(remoteControlUnits) || {GVAR(remoteControlUnits) isEqualTo []}) exitWith {
-    systemChat "[TFSRHS Admin Menu] No unit candidates for remote control";
+    systemChat "[TFS Admin Menu] No unit candidates for remote control";
 };
 
 private _display = ctrlParent _ctrlBackground;
 private _dialogPosition = ctrlPosition _ctrlBackground;
 
 private _ctrlList = _display ctrlCreate [QGVAR(RscListBox), -1];
-_ctrlList ctrlSetPosition [(_dialogPosition # 0) + 0.1 * TFSRHS_ADMINMENU_STD_WIDTH, (_dialogPosition # 1) + 0.1 * TFSRHS_ADMINMENU_STD_HEIGHT, (_dialogPosition # 2) - (0.2 * TFSRHS_ADMINMENU_STD_WIDTH), (_dialogPosition # 3) - (0.2 * TFSRHS_ADMINMENU_STD_HEIGHT)];
+_ctrlList ctrlSetPosition [(_dialogPosition # 0) + 0.1 * TFS_ADMINMENU_STD_WIDTH, (_dialogPosition # 1) + 0.1 * TFS_ADMINMENU_STD_HEIGHT, (_dialogPosition # 2) - (0.2 * TFS_ADMINMENU_STD_WIDTH), (_dialogPosition # 3) - (0.2 * TFS_ADMINMENU_STD_HEIGHT)];
 _ctrlList ctrlCommit 0;
 {
     private _name = _x # 1;
@@ -29,7 +29,7 @@ _ctrlList lbSetCurSel 0;
 
 private _ctrlOK = _display ctrlCreate [QGVAR(RscButtonMenu), -1];
 _ctrlOK ctrlSetText "Control";
-_ctrlOK ctrlSetPosition [(_dialogPosition # 0) + 0.67 * (_dialogPosition # 2), (_dialogPosition # 1) + (_dialogPosition # 3) + 0.1 * TFSRHS_ADMINMENU_STD_HEIGHT, 0.33 * (_dialogPosition # 2), TFSRHS_ADMINMENU_STD_HEIGHT];
+_ctrlOK ctrlSetPosition [(_dialogPosition # 0) + 0.67 * (_dialogPosition # 2), (_dialogPosition # 1) + (_dialogPosition # 3) + 0.1 * TFS_ADMINMENU_STD_HEIGHT, 0.33 * (_dialogPosition # 2), TFS_ADMINMENU_STD_HEIGHT];
 _ctrlOK ctrlCommit 0;
 _ctrlOK setVariable [QGVAR(association), _ctrlList];
 _ctrlOK ctrlAddEventHandler ["buttonClick", {

@@ -1,19 +1,19 @@
 #include "script_component.hpp"
 
-["TFSRHS_setCustomMark", "onMapSingleClick", {
+["TFS_setCustomMark", "onMapSingleClick", {
     params ["_pos","_shift"];
     if (_shift) then {
-        TFSRHS_unit setVariable ["TFSRHS_customMarkLocation",_pos];
+        TFS_unit setVariable ["TFS_customMarkLocation",_pos];
     };
 }] call BIS_fnc_addStackedEventHandler;
 
 addMissionEventHandler ["Draw3D", {
-    private _TFSRHS_customMarkLocation = TFSRHS_unit getVariable ["TFSRHS_customMarkLocation",nil];
-    if (!isNil "_TFSRHS_customMarkLocation") then {
+    private _TFS_customMarkLocation = TFS_unit getVariable ["TFS_customMarkLocation",nil];
+    if (!isNil "_TFS_customMarkLocation") then {
         drawIcon3D [
             "tacticalpingdefault",
             [1,1,1,0.75],
-            _TFSRHS_customMarkLocation,
+            _TFS_customMarkLocation,
             1,
             1,
             0,

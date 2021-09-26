@@ -1,5 +1,5 @@
 /*
- * Name: TFSRHS_common_fnc_secondsToTime
+ * Name: TFS_common_fnc_secondsToTime
  * Author: Head
  *
  * Arguments:

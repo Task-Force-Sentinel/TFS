@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\medical\area\functions\fn_canConstruct.sqf
+ *	\z\tfs\addons\medical\area\functions\fn_canConstruct.sqf
  *	by Ojemineh
  *	
  *	check if medical area can be constructed
@@ -12,7 +12,7 @@
  *	<BOOLEAN>
  *	
  *	Example:
- *	[player] call TFSRHS_medical_area_fnc_canConstruct;
+ *	[player] call TFS_medical_area_fnc_canConstruct;
  *	
  */
 
@@ -31,7 +31,7 @@ if (isNull _unit) exitWith {false};
 private _return = false;
 
 _return = (
-	("TFSRHS_MedicArea" in items _unit) && 
+	("TFS_MedicArea" in items _unit) && 
 	(alive _unit) && 
 	!(_unit getVariable ["ace_captives_isSurrendering", false]) && 
 	!(_unit getVariable ["ace_captives_isHandcuffed", false]) && 

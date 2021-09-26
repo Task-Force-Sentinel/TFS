@@ -1,4 +1,4 @@
-private _radio = uiNamespace getVariable "TFSRHS_CC_currentRadioObject";
+private _radio = uiNamespace getVariable "TFS_CC_currentRadioObject";
 
 // read out values
 private _ch1freq = ctrlText 1400;

@@ -10,7 +10,7 @@
  * Classname <STRING>
  *
  * Example:
- * [player] call TFSRHS_boc_fnc_chestpack;
+ * [player] call TFS_boc_fnc_chestpack;
  *
  * Public: No
  */

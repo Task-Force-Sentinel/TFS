@@ -1,11 +1,11 @@
 class CfgFunctions {
 	
-	class TFSRHS_Hints {
+	class TFS_Hints {
 		
-		tag = "tfsrhs_hints";
+		tag = "tfs_hints";
 		
 		class Hints {
-			file = "\z\tfsrhs\addons\hints\functions";
+			file = "\z\tfs\addons\hints\functions";
 			class cleanup {};
 			class initialize {};
 			class initSettings {};
@@ -13,24 +13,24 @@ class CfgFunctions {
 		
 	};
 
-	class TFSRHS_Hints_Functions {
+	class TFS_Hints_Functions {
 		
-		tag = "tfsrhs";
+		tag = "tfs";
 		
 		class Hints {
-			file = "\z\tfsrhs\addons\hints\functions";
+			file = "\z\tfs\addons\hints\functions";
 			class hint {};
 			class hintGlobal {};
 		};
 		
 	};
 	
-	class TFSRHS_Hints_ACE {
+	class TFS_Hints_ACE {
 		
 		tag = "ace_common";
 		
 		class ace_common {
-			file = "\z\tfsrhs\addons\hints\functions\ace_common";
+			file = "\z\tfs\addons\hints\functions\ace_common";
 			class displayIcon {};
 			class displayIconEx { file = "\z\ace\addons\common\functions\fnc_displayIcon.sqf"; };
 			class displayText {};
@@ -44,12 +44,12 @@ class CfgFunctions {
 		
 	};
 	
-	class TFSRHS_Hints_CBA {
+	class TFS_Hints_CBA {
 		
 		tag = "cba";
 		
 		class cba_ui {
-			file = "z\tfsrhs\addons\hints\functions\cba_ui";
+			file = "z\tfs\addons\hints\functions\cba_ui";
 			class notify {};
 			class notifyEx { recompile = 1; file = "\x\cba\addons\ui\fnc_notify.sqf"; };
 		};

@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\chat\script_component.hpp"
+#include "\z\tfs\addons\chat\script_component.hpp"
 /*
- * Name = TFSRHS_chat_fnc_cmndRP
+ * Name = TFS_chat_fnc_cmndRP
  * Author = Freddo
  *
  * Syntaxes:
@@ -20,6 +20,6 @@ private _safePos = (getPosATL CURUNIT) findEmptyPosition [0, 25, (typeOf CURUNIT
 if (count _safePos == 3) exitWith {
     _safePos set [2, 0];
     CURUNIT setPosATL _safePos;
-    systemChat "TFSRHS: Reset player position";
+    systemChat "TFS: Reset player position";
 };
-systemChat "TFSRHS Error: Unable to reset player position";
+systemChat "TFS Error: Unable to reset player position";

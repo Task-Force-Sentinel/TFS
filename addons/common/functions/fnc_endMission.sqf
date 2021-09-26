@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\common\script_component.hpp"
+#include "\z\tfs\addons\common\script_component.hpp"
 /*
- * Name: TFSRHS_common_fnc_endMission
+ * Name: TFS_common_fnc_endMission
  * Author: Snippers
  *
  * Arguments:
@@ -19,14 +19,14 @@ if (!isServer) exitWith {}; // Only run on server.
 if (missionNamespace getVariable [QGVAR(ending),false]) exitWith {}; // Already trying to end.
 
 // Message admins
-private _message = format["[TFSRHS] Ending mission..."];
+private _message = format["[TFS] Ending mission..."];
 [_message,'tac1_admin_fnc_messageAdmin',true] call BIS_fnc_MP;
 
 GVAR(endMissionWait) = -1;
 GVAR(ending) = true;
 
 if (!isNil "ocap_fnc_exportData") then {
-    _message = format["[TFSRHS] OCAP detected exporting (10 second timeout)..."];
+    _message = format["[TFS] OCAP detected exporting (10 second timeout)..."];
     [_message,'tac1_admin_fnc_messageAdmin',true] call BIS_fnc_MP;
 
     GVAR(endMissionWait) = time + 10; //Give OCAP 10 seconds.
@@ -35,7 +35,7 @@ if (!isNil "ocap_fnc_exportData") then {
     [] spawn {
          {
             [] call ocap_fnc_exportData;
-            private _message = format["[TFSRHS] OCAP Export complete. Ending..."];
+            private _message = format["[TFS] OCAP Export complete. Ending..."];
             [_message,'tac1_admin_fnc_messageAdmin',true] call BIS_fnc_MP;
             GVAR(endMissionWait) = -1;
          } call CBA_fnc_directCall;

@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\interactions\functions\tapshoulder\fn_tapshoulder_doTap.sqf
+ *	\z\tfs\addons\interactions\functions\tapshoulder\fn_tapshoulder_doTap.sqf
  *	by Ojemineh
  *	
  *	tap targets shoulder
@@ -14,7 +14,7 @@
  *	nothing
  *	
  *	Example:
- *	[player, unit1, 0] call TFSRHS_interactions_fnc_tapshoulder_doTap;
+ *	[player, unit1, 0] call TFS_interactions_fnc_tapshoulder_doTap;
  *	
  */
 
@@ -54,15 +54,15 @@ if ((_shoulder < 0) || (_shoulder > 1)) exitWith {};
 		_selectionName = "RightShoulder";
 	};
 	
-	if (missionNamespace getVariable ["tfsrhs_interactions_global_sounds", false]) then {
+	if (missionNamespace getVariable ["tfs_interactions_global_sounds", false]) then {
 		private _pitch = random [0.8, 1.0, 1.2];
-		["TFSRHS_Action_Shoulder_Tap_1", _target, AGLToASL (_target modelToWorld (_target selectionPosition _selectionName)), 20, 1, _pitch, false] call TFSRHS_fnc_playSound3d;
+		["TFS_Action_Shoulder_Tap_1", _target, AGLToASL (_target modelToWorld (_target selectionPosition _selectionName)), 20, 1, _pitch, false] call TFS_fnc_playSound3d;
 	} else {
-		playSound "TFSRHS_Action_Shoulder_Tap_1";
+		playSound "TFS_Action_Shoulder_Tap_1";
 	};
 	
 	if (isPlayer _target) then {
-		[_player, _target, _shoulder] remoteExecCall ["TFSRHS_interactions_fnc_tapshoulder_tap", _target];
+		[_player, _target, _shoulder] remoteExecCall ["TFS_interactions_fnc_tapshoulder_tap", _target];
 	};
 	
 };

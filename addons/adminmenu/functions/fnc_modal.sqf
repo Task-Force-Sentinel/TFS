@@ -1,16 +1,16 @@
-#include "\z\tfsrhs\addons\adminmenu\script_component.hpp"
+#include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
 params ["_utilityFunction", "_utilityName", ["_args", 0]];
 
 if (isNil _utilityFunction) exitWith {
-    systemChat format ["[TFSRHS Admin Menu] Modal utility with name '%1' requires undefined function '%2'", _utilityName, _utilityFunction];
+    systemChat format ["[TFS Admin Menu] Modal utility with name '%1' requires undefined function '%2'", _utilityName, _utilityFunction];
 };
 
 GVAR(utilityData) = [];
 private _exit = false;
 
-if ((missionNamespace getVariable [QGVAR(selectedTab), -1]) isEqualTo IDC_TFSRHS_ADMINMENU_G_PMAN) then {
+if ((missionNamespace getVariable [QGVAR(selectedTab), -1]) isEqualTo IDC_TFS_ADMINMENU_G_PMAN) then {
     GVAR(utilityData) = GVAR(playerManagement_selected) apply {_x call BIS_fnc_objectFromNetId};
 
     _exit = count GVAR(utilityData) == 0;
@@ -21,7 +21,7 @@ if ((missionNamespace getVariable [QGVAR(selectedTab), -1]) isEqualTo IDC_TFSRHS
 };
 
 if (_exit) exitWith {
-    systemChat "[TFSRHS Admin Menu] No valid player(s) selected for the action!";
+    systemChat "[TFS Admin Menu] No valid player(s) selected for the action!";
 };
 
 GVAR(modalDetails) = [_utilityFunction, _utilityName, _args];

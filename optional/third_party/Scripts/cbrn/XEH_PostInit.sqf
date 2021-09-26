@@ -3,7 +3,7 @@
 call cbrn_fnc_init;
 
 [
-    "[TFSRHS] CBRN",
+    "[TFS] CBRN",
     "Decon & Heal",
     {
         params ["","_object"];
@@ -18,7 +18,7 @@ call cbrn_fnc_init;
 ] call zen_custom_modules_fnc_register;
 
 [
-    "[TFSRHS] CBRN",
+    "[TFS] CBRN",
     "Decon",
     {
         params ["","_object"];

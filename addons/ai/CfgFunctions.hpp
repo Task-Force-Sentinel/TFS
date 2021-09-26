@@ -1,9 +1,9 @@
-class TFSRHS_AI {
+class TFS_AI {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class AI {
 
-		file = "z\tfsrhs\addons\ai\Functions";
+		file = "z\tfs\addons\ai\Functions";
 		class InfantryGarrison {};
 		class moduleAISpawns {};
 		class SetInitialAI {};
@@ -16,7 +16,7 @@ class TFSRHS_AI {
 
 	class Civilian {
 
-		file = "z\tfsrhs\addons\ai\Functions\Civilians";
+		file = "z\tfs\addons\ai\Functions\Civilians";
 		class CivBreakPatrol {};
 		class CivilianGarrison {};
 		class CivilianPatrol {};
@@ -27,7 +27,7 @@ class TFSRHS_AI {
 
 	class Civilian_Factions {
 
-		file = "z\tfsrhs\addons\ai\Functions\Factions\Civilian";
+		file = "z\tfs\addons\ai\Functions\Factions\Civilian";
 		class CFP_C_AFG {};
 		class CFP_C_AFRCHRISTIAN {};
 		class CFP_C_AFRISLAMIC {};
@@ -41,7 +41,7 @@ class TFSRHS_AI {
 
 	class East_Factions {
 
-		file = "z\tfsrhs\addons\ai\Functions\Factions\East";
+		file = "z\tfs\addons\ai\Functions\Factions\East";
 		class CFP_O_ABUSAYYAF {};
 		class CFP_O_ALQAEDA {};
 		class CFP_O_ALSHABAAB {};
@@ -75,7 +75,7 @@ class TFSRHS_AI {
 
 	class Indep_Factions {
 
-		file = "z\tfsrhs\addons\ai\Functions\Factions\Indep";
+		file = "z\tfs\addons\ai\Functions\Factions\Indep";
 		class CFP_I_ALNUSRA {};
 		class CFP_I_IS {};
 		class CFP_I_SDRebels {};
@@ -94,7 +94,7 @@ class TFSRHS_AI {
 
 	class West_Factions {
 
-		file = "z\tfsrhs\addons\ai\Functions\Factions\West";
+		file = "z\tfs\addons\ai\Functions\Factions\West";
 		class BLU_F {};
 		class BLU_T_F {};
 		class CFP_B_AFARMY {};
@@ -129,7 +129,7 @@ class DERP {
     tag = "DERP";
 
     class General {
-        file = "z\tfsrhs\addons\ai\Functions";
+        file = "z\tfs\addons\ai\Functions";
         class AIOccupyBuilding {};
         class randomPos {};
         class ZenOccupy {};

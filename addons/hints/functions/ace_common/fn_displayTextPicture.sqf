@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\hints\functions\ace_common\fn_displayTextPicture.sqf
+ *	\z\tfs\addons\hints\functions\ace_common\fn_displayTextPicture.sqf
  *	by Ojemineh
  *	
  *	replace ace core displayTextPicture
@@ -24,8 +24,8 @@
 
 params [["_text", ""], ["_image", "", [""]], ["_imageColor", [1,1,1], [[]]], ["_target", ACE_player, [objNull]], ["_size", 2, [0]]];
 
-private _hint_enabled = (missionNamespace getVariable ["tfsrhs_hint_enabled", true]);
-private _hint_option_ace = (missionNamespace getVariable ["tfsrhs_hint_option_ace", true]);
+private _hint_enabled = (missionNamespace getVariable ["tfs_hint_enabled", true]);
+private _hint_option_ace = (missionNamespace getVariable ["tfs_hint_option_ace", true]);
 
 if (_hint_enabled && _hint_option_ace) then {
 	
@@ -49,7 +49,7 @@ if (_hint_enabled && _hint_option_ace) then {
 	
 	_text = format [hint_tpl_image_3, _image, _imageColor call BIS_fnc_colorRGBtoHTML, _text];
 	
-	[_text] call tfsrhs_fnc_hint;
+	[_text] call tfs_fnc_hint;
 	
 } else {
 	[_text, _image, _imageColor, _target, _size] call ACE_common_fnc_displayTextPictureEx;

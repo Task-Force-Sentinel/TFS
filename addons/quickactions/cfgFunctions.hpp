@@ -1,8 +1,8 @@
 class cfgFunctions {
-    class tfsrhs_quickActions {
-        tag="TFSRHS_quickActions";
+    class tfs_quickActions {
+        tag="TFS_quickActions";
         class functions {
-            file = "z\tfsrhs\addons\quickActions\functions";
+            file = "z\tfs\addons\quickActions\functions";
             class addFastRopeAction {};
             class postInit {postInit=1;};
         };

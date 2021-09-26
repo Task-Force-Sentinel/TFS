@@ -4,9 +4,9 @@ class RscDisplayCueCard
 	enableSimulation = 1;
 	closeOnMissionEnd = 0;
 	scriptName = "RscDisplayCueCard";
-	scriptPath = "TFSRHSDisplays";
-	onLoad = "[""onLoad"",_this,""RscDisplayCueCard"",'TFSRHSDisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
-	onUnload = "[""onUnload"",_this,""RscDisplayCueCard"",'TFSRHSDisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
+	scriptPath = "TFSDisplays";
+	onLoad = "[""onLoad"",_this,""RscDisplayCueCard"",'TFSDisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
+	onUnload = "[""onUnload"",_this,""RscDisplayCueCard"",'TFSDisplays'] call 	(uinamespace getvariable 'BIS_fnc_initDisplay')";
 	movingEnable = true;
 
 	class Controls
@@ -92,7 +92,7 @@ class RscDisplayCueCard
         class NotePadBackground: RscPicture
         {
             idc = 1200;
-            text = "z\tfsrhs\addons\media\images\cuecards\notepad_CA.paa";
+            text = "z\tfs\addons\media\images\cuecards\notepad_CA.paa";
             x = 0.288594 * safezoneW + safezoneX;
             y = 0.093 * safezoneH + safezoneY;
             w = 0.31 * safezoneW;

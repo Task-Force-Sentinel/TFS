@@ -1,1 +1,1 @@
-#include "\z\tfsrhs\addons\nightvision\script_component.hpp"
+#include "\z\tfs\addons\nightvision\script_component.hpp"

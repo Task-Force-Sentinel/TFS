@@ -1,8 +1,8 @@
 // Template Credits (be fair do not remove)
-TFSRHS_unit createDiarySubject ["Credits","Credits"];
-TFSRHS_unit createDiaryRecord ["Credits", ["Template Credits","
+TFS_unit createDiarySubject ["Credits","Credits"];
+TFS_unit createDiaryRecord ["Credits", ["Template Credits","
 <font size='20'>General</font><br/>
-This mission is made with the [tfsrhs] Mission Template.<br/>
+This mission is made with the [tfs] Mission Template.<br/>
 The Scripts and Mods used in this Template are searched,<br/>
 writen or modified, implemented, configured and tested<br/><br/>
 by NemesisRE<br/><br/><br/>

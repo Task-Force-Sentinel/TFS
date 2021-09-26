@@ -1,37 +1,41 @@
 #include "script_component.hpp"
 
-class cfgPatches
+class CfgPatches
 {
-    class ADDON
-    {
-        name = COMPONENT_NAME;
-        author = "Snippers";
-        url = URL;
-        units[] = {};
-        weapons[] = {};
-        requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "cba_main",
-            "cba_xeh",
-            "ace_common",
-            "ace_medical",
-            "zen_main",
-            "zen_modules",
-            "A3_UI_F",
+	class TFS_Zeus
+	{
+		author = AUTHOR;
+		name = NAME;
+		url = URL;
+		units[] = {};
+		requiredVersion = REQUIRED_VERSION;
+		requiredAddons[] = {
+			"A3_UI_F",
 			"A3_UI_F_Curator",
             "A3_Functions_F_Curator",
             "A3_Modules_F",
             "A3_Modules_F_Curator",
             "A3_Modules_F_Bootcamp_Misc",
-            "TFSRHS_common"
-        };
-        VERSION_CONFIG;
-    };
+			"cba_main",
+			"cba_xeh"
+		};
+		version = VERSION;
+		authors[] = {"MitchJC"};
+		weapons[] = {};
+	};
 };
 
-#include "CfgEventHandlers.hpp"
-#include "RscDisplayCurator.hpp"
+class CfgFunctions {
+
+    #include "cfgFunctions.hpp"
+};
 
 #include "cfgVehicles.hpp"
+
+class Extended_PreInit_EventHandlers {
+    class TFS_Zeus_Event {
+        init = "call compile preprocessFileLineNumbers 'z\tfs\Addons\Zeus\XEH_preInit.sqf'";
+    };
+};
 
 #include "ZenActions.hpp"

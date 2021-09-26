@@ -1,9 +1,9 @@
-class TFSRHS_Media {
+class TFS_Media {
 
-	tag = "TFSRHS";
+	tag = "TFS";
 	class Media {
 
-		file = "z\tfsrhs\Addons\media\Functions";
+		file = "z\tfs\Addons\media\Functions";
 		class Sound3D {};
 		class Sound3DFromPos {};
 		class Sound3DOnObject {};

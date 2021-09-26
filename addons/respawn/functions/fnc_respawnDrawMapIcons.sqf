@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\respawn\script_component.hpp"
+#include "\z\tfs\addons\respawn\script_component.hpp"
 
 disableSerialization;
 params["_fullmapWindow"];
@@ -12,7 +12,7 @@ params["_fullmapWindow"];
         {
             private _icon = (vehicle _x getVariable ["f_cam_icon",""]);
             if(_icon == "") then {_icon = gettext (configfile >> "CfgVehicles" >> typeOf (vehicle _x) >> "icon");vehicle _x setVariable ["f_cam_icon",_icon]};
-            private _color = (side _x) call tfsrhs_common_fnc_sideToColor;
+            private _color = (side _x) call tfs_common_fnc_sideToColor;
             _fullmapWindow drawIcon [_icon,_color,getpos _x,19,19,getDir (vehicle _x),_name,1];
         };
     };
@@ -51,7 +51,7 @@ params["_fullmapWindow"];
 private _mousePos = GVAR(respawnMousePos);
 private _i = 1;
 while {true} do {
-    private _var = missionNamespace getVariable[format["TFSRHS_respawnPoint%1",_i],objNull];
+    private _var = missionNamespace getVariable[format["TFS_respawnPoint%1",_i],objNull];
     if (isNull _var) exitWith {};
     private _pos = (position _var);
     

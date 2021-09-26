@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_SetUnitSkill
+Function: TFS_fnc_SetUnitSkill
 
 Description:
 	Set the given unit's skill level to the desired one.
@@ -45,17 +45,17 @@ private _skillv = [
     (0.20 + random 0.40)
 ];
 
-if !(isNil "TFSRHS_AI_AimingAccuracy") then {
+if !(isNil "TFS_AI_AimingAccuracy") then {
     _skillv = [
-        (TFSRHS_AI_AimingAccuracy + random 0.20),
-        (TFSRHS_AI_AimingShake + random 0.20),
-        (TFSRHS_AI_AimingSpeed + random 0.20),
-        (TFSRHS_AI_Commanding),
-        (TFSRHS_AI_Courage), 1,
-        (TFSRHS_AI_General),
-        (TFSRHS_AI_ReloadSpeed + random 0.50),
-        (TFSRHS_AI_SpotDistance + random 0.30),
-        (TFSRHS_AI_SpotTime + random 0.40)
+        (TFS_AI_AimingAccuracy + random 0.20),
+        (TFS_AI_AimingShake + random 0.20),
+        (TFS_AI_AimingSpeed + random 0.20),
+        (TFS_AI_Commanding),
+        (TFS_AI_Courage), 1,
+        (TFS_AI_General),
+        (TFS_AI_ReloadSpeed + random 0.50),
+        (TFS_AI_SpotDistance + random 0.30),
+        (TFS_AI_SpotTime + random 0.40)
     ];
 };
 

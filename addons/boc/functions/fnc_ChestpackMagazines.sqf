@@ -12,7 +12,7 @@
  *  existed before 'getUnitLoadout' was a thing and backwards compatibility and shit)
  *
  * Example:
- * [player] call TFSRHS_boc_fnc_chestpackMagazines;
+ * [player] call TFS_boc_fnc_chestpackMagazines;
  *
  * Public: No
  */

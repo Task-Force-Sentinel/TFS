@@ -1,4 +1,4 @@
-#include "\z\tfsrhs\addons\spectator\script_component.hpp"
+#include "\z\tfs\addons\spectator\script_component.hpp"
 /*
  * Author: Head, Snippers
  * Creates a unit node for units tree node
@@ -11,7 +11,7 @@
  * Index <NUMBER>
  *
  * Example:
- * [group player] call tfsrhs_spectator_fnc_createUnitNode
+ * [group player] call tfs_spectator_fnc_createUnitNode
  *
  * Public: No
  */

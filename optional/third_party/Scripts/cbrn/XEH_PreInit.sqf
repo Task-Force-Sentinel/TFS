@@ -44,7 +44,7 @@ cbrn_beep = true;
     private _radius = _size + _falloffArea;
     _trg setTriggerArea [_radius, _radius, 0, false, _radius];
     _trg setTriggerActivation ["ANYPLAYER", "PRESENT", true];
-    _trg setTriggerStatements ["thisTrigger getVariable ['cbrn_active',false] && {this && {(vehicle TFSRHS_unit) in thisList}}", "[thisTrigger, TFSRHS_unit, true] call cbrn_fnc_addZone", "[thisTrigger, TFSRHS_unit, false] call cbrn_fnc_addZone"];
+    _trg setTriggerStatements ["thisTrigger getVariable ['cbrn_active',false] && {this && {(vehicle TFS_unit) in thisList}}", "[thisTrigger, TFS_unit, true] call cbrn_fnc_addZone", "[thisTrigger, TFS_unit, false] call cbrn_fnc_addZone"];
     cbrn_localZones pushBack _trg;
 }] call CBA_fnc_addEventhandler;
 

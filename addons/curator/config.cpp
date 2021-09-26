@@ -7,8 +7,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "TFSRHS_main",
-            "TFSRHS_debug_console"
+            "TFS_main",
+            "TFS_debug_console"
         };
         author = AUTHOR;
         VERSION_CONFIG;

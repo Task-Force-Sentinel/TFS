@@ -1,8 +1,8 @@
-#include "\z\tfsrhs\addons\briefing\script_component.hpp"
+#include "\z\tfs\addons\briefing\script_component.hpp"
 
 if (!hasInterface) exitWith {};
 
-GVAR(addLoadoutNotes) = getMissionConfigValue ["TFSRHS_Briefing_Loadout",false];
+GVAR(addLoadoutNotes) = getMissionConfigValue ["TFS_Briefing_Loadout",false];
 
 //Ensure there is a delay...
 //GVAR(briefingFrame) = 0;

@@ -1,9 +1,9 @@
 /*
- * Name: TFSRHS_ai_fnc_waveInit
+ * Name: TFS_ai_fnc_waveInit
  * Author: Head, Snippers
  *
  * Arguments:
- * 0: TFSRHS WaveSpawner logic
+ * 0: TFS WaveSpawner logic
  * 1: _units
  * 2: _activated
  *
@@ -14,7 +14,7 @@
  * Handles creation of wavespawner structure
  */
 if(is3DEN) exitWith {};
-#include "\z\tfsrhs\addons\ai\script_component.hpp"
+#include "\z\tfs\addons\ai\script_component.hpp"
 params ["_logic","_units","_activated"];
 
 _headless = (synchronizedObjects _logic) select {_x isKindOf "HeadlessClient_F" && !local _x};

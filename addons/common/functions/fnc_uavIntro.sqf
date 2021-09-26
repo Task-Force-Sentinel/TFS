@@ -2,10 +2,10 @@
 
 private ["_uavIntro","_uavIntroPosition","_uavIntroText"];
 
-if (getMarkerColor "TFSRHS_uavIntroMarker" == "") then {
-    _uavIntroPosition = vehicle TFSRHS_unit;
+if (getMarkerColor "TFS_uavIntroMarker" == "") then {
+    _uavIntroPosition = vehicle TFS_unit;
 } else {
-    _uavIntroPosition = getMarkerPos "TFSRHS_uavIntroMarker";
+    _uavIntroPosition = getMarkerPos "TFS_uavIntroMarker";
 };
 
 if (GVAR(uavIntroText) == "") then {

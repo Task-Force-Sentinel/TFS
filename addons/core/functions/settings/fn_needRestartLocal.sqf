@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\core\functions\settings\fn_needRestartLocal.sqf
+ *	\z\tfs\addons\core\functions\settings\fn_needRestartLocal.sqf
  *	by Ojemineh
  *	
  *	settings restart notification
@@ -13,7 +13,7 @@
  *	nothing
  *	
  *	Example:
- *	["tfsrhs_debug_enabled", 2] call TFSRHS_fnc_needRestartLocal;
+ *	["tfs_debug_enabled", 2] call TFS_fnc_needRestartLocal;
  *	
  */
 
@@ -40,25 +40,25 @@ switch (_restartID) do {
 	
 	// RESTART MISSION
 	case 1: {
-		_message = format [localize "STR_TFSRHS_core_Hint_Need_Restart_Mission", toUpper(_setting)];
+		_message = format [localize "STR_TFS_core_Hint_Need_Restart_Mission", toUpper(_setting)];
 	};
 	
 	// RESTART SESSION (GLOBAL)
 	case 2: {
-		_message = format [localize "STR_TFSRHS_core_Hint_Need_Restart_Session", toUpper(_setting)];
+		_message = format [localize "STR_TFS_core_Hint_Need_Restart_Session", toUpper(_setting)];
 	};
 	
 	// RESTART SESSION (PLAYER)
 	case 3: {
-		_message = format [localize "STR_TFSRHS_core_Hint_Need_Restart_Session", toUpper(_setting)];
+		_message = format [localize "STR_TFS_core_Hint_Need_Restart_Session", toUpper(_setting)];
 	};
 	
 	// RESTART ENGINE
 	default {
-		_message = format [localize "STR_TFSRHS_core_Hint_Need_Restart_Engine", toUpper(_setting)];
+		_message = format [localize "STR_TFS_core_Hint_Need_Restart_Engine", toUpper(_setting)];
 	};
 	
 };
 
-private _hint = format [hint_tpl_image_2, "\z\tfsrhs\addons\core\data\icons\settings_ca.paa", _message];
-[_hint, 1] call TFSRHS_fnc_hint;
+private _hint = format [hint_tpl_image_2, "\z\tfs\addons\core\data\icons\settings_ca.paa", _message];
+[_hint, 1] call TFS_fnc_hint;

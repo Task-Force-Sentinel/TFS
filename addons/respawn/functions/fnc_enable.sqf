@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call tfsrhs_respawn_fnc_enable
+ * call tfs_respawn_fnc_enable
  *
  * Public: No
  */

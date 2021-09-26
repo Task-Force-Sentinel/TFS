@@ -1,11 +1,11 @@
 class CfgFunctions {
 	
-	class TFSRHS_Medical_Supplies {
+	class TFS_Medical_Supplies {
 		
-		tag = "tfsrhs_medical_supplies";
+		tag = "tfs_medical_supplies";
 		
 		class Medical_Supplies {
-			file = "z\tfsrhs\addons\medical\supplies\functions";
+			file = "z\tfs\addons\medical\supplies\functions";
 			class canUnpackFirstAid {};
 			class canUnpackMedicKit {};
 			class doUnpackFirstAid {};

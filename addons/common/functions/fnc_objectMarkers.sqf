@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * this call TFSRHS_common_fnc_objectMarkers;
+ * this call TFS_common_fnc_objectMarkers;
  *
  */
 

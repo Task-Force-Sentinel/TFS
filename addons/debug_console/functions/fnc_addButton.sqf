@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [["Test", "This is a button"], {hint "Button was clicked"}] call tfsrhs_debug_console_fnc_addButton
+ * [["Test", "This is a button"], {hint "Button was clicked"}] call tfs_debug_console_fnc_addButton
  *
  * Public: Yes
  */

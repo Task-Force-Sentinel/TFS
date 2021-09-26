@@ -1,6 +1,6 @@
-#include "\z\tfsrhs\addons\chat\script_component.hpp"
+#include "\z\tfs\addons\chat\script_component.hpp"
 /*
- * Name = TFSRHS_chat_fnc_cmndTp
+ * Name = TFS_chat_fnc_cmndTp
  * Author = Freddo
  *
  * Syntaxes:
@@ -19,7 +19,7 @@ IS_CMND_AVAILABLE(GVAR(tpUsage),"#tp");
 params [["_name",""]];
 
 if (_name isEqualTo "") exitWith {
-    systemChat "TFSRHS Error: No argument passed. Use #tp <player> or <group>";
+    systemChat "TFS Error: No argument passed. Use #tp <player> or <group>";
 };
 
 private _unit = [_name] call FUNC(findMatch);
@@ -40,16 +40,16 @@ if (!isNull _unit) then {
         CURUNIT moveInAny vehicle _unit;
 
         if !(CURUNIT in vehicle _unit) then {
-            systemChat FORMAT_1("TFSRHS: %1's vehicle is full", name _unit);
+            systemChat FORMAT_1("TFS: %1's vehicle is full", name _unit);
         } else {
-            systemChat FORMAT_1("TFSRHS: Teleported into %1's vehicle", name _unit);
+            systemChat FORMAT_1("TFS: Teleported into %1's vehicle", name _unit);
         };
     } else {
         private _pos = _unit getRelPos [3, 180];
         CURUNIT setDir (getDir _unit);
         CURUNIT setPos _pos;
-        systemChat FORMAT_1("TFSRHS: Teleported to %1", name _unit);
+        systemChat FORMAT_1("TFS: Teleported to %1", name _unit);
     };
 } else {
-    systemChat FORMAT_1("TFSRHS Error: No player/group containing %1, or more than one found.", str _name);
+    systemChat FORMAT_1("TFS Error: No player/group containing %1, or more than one found.", str _name);
 };

@@ -2,19 +2,19 @@
 <Project name="Arma_Extended_Environment">
 
 	<!-- ####################################################################################### -->
-	<Package name="TFSRHS_Medical_Supplies">
+	<Package name="TFS_Medical_Supplies">
 
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Medical_Supplies">
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_Medical_Supplies_Title">
-				<Original>TFSRHS Medical Supplies</Original>
+			<Key ID="STR_TFS_Medical_Supplies_Title">
+				<Original>TFS Medical Supplies</Original>
 			</Key>
-			<Key ID="STR_TFSRHS_Medical_Supplies_Author">
-				<Original>TFSRHS</Original>
+			<Key ID="STR_TFS_Medical_Supplies_Author">
+				<Original>TFS</Original>
 			</Key>
-			<Key ID="STR_TFSRHS_Medical_Supplies_URL">
-				<Original>https://github.com/TFSRHSmod/TFSRHS</Original>
+			<Key ID="STR_TFS_Medical_Supplies_URL">
+				<Original>https://github.com/TFSmod/TFS</Original>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container >
@@ -23,11 +23,11 @@
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Interactions">
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_Medical_Supplies_Action_FirstAid">
+			<Key ID="STR_TFS_Medical_Supplies_Action_FirstAid">
 				<Original>Unpack Boo Boo Bag</Original>
 				<German>Erste-Hilfe-Pack auspacken</German>
 			</Key>
-			<Key ID="STR_TFSRHS_Medical_Supplies_Action_MedicKit">
+			<Key ID="STR_TFS_Medical_Supplies_Action_MedicKit">
 				<Original>Unpack Medic Bag</Original>
 				<German>Verbandskasten auspacken</German>
 			</Key>
@@ -38,11 +38,11 @@
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Messages">
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_Medical_Supplies_Progress_FirstAid">
+			<Key ID="STR_TFS_Medical_Supplies_Progress_FirstAid">
 				<Original>Unpack Boo Boo Bag...</Original>
 				<German>Erste-Hilfe-Pack auspacken...</German>
 			</Key>
-			<Key ID="STR_TFSRHS_Medical_Supplies_Progress_MedicKit">
+			<Key ID="STR_TFS_Medical_Supplies_Progress_MedicKit">
 				<Original>Unpack Medic Bag...</Original>
 				<German>Verbandskasten auspacken...</German>
 			</Key>
@@ -53,20 +53,20 @@
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Items">
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_Item_Medical_FirstAid_DisplayName">
+			<Key ID="STR_TFS_Item_Medical_FirstAid_DisplayName">
 				<Original>Boo Boo Bag</Original>
 				<German>Erste-Hilfe-Pack</German>
 			</Key>
-			<Key ID="STR_TFSRHS_Item_Medical_FirstAid_Description">
+			<Key ID="STR_TFS_Item_Medical_FirstAid_Description">
 				<Original>Contains material for first aid</Original>
 				<German>Enthält Material für die Erste-Hilfe</German>
 			</Key>
 			<!-- =============================================================================== -->
-			<Key ID="STR_TFSRHS_Item_Medical_MedicKit_DisplayName">
+			<Key ID="STR_TFS_Item_Medical_MedicKit_DisplayName">
 				<Original>Medic Bag</Original>
 				<German>Verbandskasten</German>
 			</Key>
-			<Key ID="STR_TFSRHS_Item_Medical_MedicKit_Description">
+			<Key ID="STR_TFS_Item_Medical_MedicKit_Description">
 				<Original>Contains material for first aid</Original>
 				<German>Enthält Material für die Erste-Hilfe</German>
 			</Key>

@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\gear\functions\common\fn_store.sqf
+ *	\z\tfs\addons\gear\functions\common\fn_store.sqf
  *	by Ojemineh
  *
  *	stores unit loadout
@@ -12,7 +12,7 @@
  *	nothing
  *
  *	Example:
- *	[player] call TFSRHS_gear_fnc_store;
+ *	[player] call TFS_gear_fnc_store;
  *
  */
 
@@ -29,7 +29,7 @@ if (isNull _unit) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 if (Not local _unit) exitWith {
-	[_unit] remoteExecCall ["TFSRHS_gear_fnc_store", _unit];
+	[_unit] remoteExecCall ["TFS_gear_fnc_store", _unit];
 };
 
 // -------------------------------------------------------------------------------------------------
@@ -42,4 +42,4 @@ _array pushBack _loadout;
 private _insignia = [_unit] call BIS_fnc_getUnitInsignia;
 _array pushBack _insignia;
 
-_unit setVariable ["TFSRHS_gear_storage", _array, true];
+_unit setVariable ["TFS_gear_storage", _array, true];

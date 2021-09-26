@@ -1,5 +1,5 @@
 /*
-Function: TFSRHS_fnc_CivilianGarrison
+Function: TFS_fnc_CivilianGarrison
 
 Description:
 	Garrison buildings in given radius around given position, using

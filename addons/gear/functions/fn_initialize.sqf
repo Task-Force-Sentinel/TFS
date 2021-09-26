@@ -1,6 +1,6 @@
 /*
  *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfsrhs\addons\gear\functions\fn_initialize.sqf
+ *	\z\tfs\addons\gear\functions\fn_initialize.sqf
  *	by Ojemineh
  *
  *	initialize gear addon
@@ -12,14 +12,14 @@
  *	nothing
  *
  *	Example:
- *	[] call TFSRHS_gear_fnc_initialize;
+ *	[] call TFS_gear_fnc_initialize;
  *
  */
 
 // -------------------------------------------------------------------------------------------------
 
-private _version = ["TFSRHS_gear"] call TFSRHS_fnc_getAddonVersion;
-[4, "Addon (v%1) loaded...", [_version], "gear"] call TFSRHS_fnc_log;
+private _version = ["TFS_gear"] call TFS_fnc_getAddonVersion;
+[4, "Addon (v%1) loaded...", [_version], "gear"] call TFS_fnc_log;
 
 // -------------------------------------------------------------------------------------------------
 
@@ -44,8 +44,8 @@ if (isNil "GEAR_KEEP_GOGGLES") then { GEAR_KEEP_GOGGLES = true; };
 
 		params ["_unit", "_corpse"];
 
-		private _insignia = [_unit] call TFSRHS_fnc_getUnitInsignia;
-		if (_insignia != "") then {[_unit, _insignia] call TFSRHS_fnc_setUnitInsignia;};
+		private _insignia = [_unit] call TFS_fnc_getUnitInsignia;
+		if (_insignia != "") then {[_unit, _insignia] call TFS_fnc_setUnitInsignia;};
 
 		false;
 	}];
@@ -54,8 +54,8 @@ if (isNil "GEAR_KEEP_GOGGLES") then { GEAR_KEEP_GOGGLES = true; };
 
 		params ["_unit", "_container", "_item"];
 
-		private _insignia = [_unit] call TFSRHS_fnc_getUnitInsignia;
-		if (_insignia != "") then {[_unit, _insignia] call TFSRHS_fnc_setUnitInsignia;};
+		private _insignia = [_unit] call TFS_fnc_getUnitInsignia;
+		if (_insignia != "") then {[_unit, _insignia] call TFS_fnc_setUnitInsignia;};
 
 		false;
 	}];
@@ -64,8 +64,8 @@ if (isNil "GEAR_KEEP_GOGGLES") then { GEAR_KEEP_GOGGLES = true; };
 
 		params ["_unit", "_container"];
 
-		private _insignia = [_unit] call TFSRHS_fnc_getUnitInsignia;
-		if (_insignia != "") then {[_unit, _insignia] call TFSRHS_fnc_setUnitInsignia;};
+		private _insignia = [_unit] call TFS_fnc_getUnitInsignia;
+		if (_insignia != "") then {[_unit, _insignia] call TFS_fnc_setUnitInsignia;};
 
 		false;
 	}];
