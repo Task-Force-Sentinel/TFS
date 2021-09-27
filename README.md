@@ -26,7 +26,7 @@ and CTAB, (so many to thank and give credit)
 "jetelain","Gundy, Riouken, Raspu"
 based on https://github.com/jetelain/cTab - GNU General Public License v2.0
 
-you can find the DPSO Version at https://github.com/DPSO/cTab-1
+you can find the TFS Version at tbd
 
 (I know I forgot a few, I will work on getting those mentions put in)
 
