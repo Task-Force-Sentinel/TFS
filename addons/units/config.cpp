@@ -18,6 +18,9 @@ class CfgPatches {
             QCLASS(socom),
             QCLASS(officer),
             QCLASS(staff),
+            QCLASS(Engineer),
+            QCLASS(Marksman),
+
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {};

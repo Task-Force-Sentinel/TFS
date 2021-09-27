@@ -20,6 +20,8 @@ class CfgVehicles {
 	class rhsusf_army_ocp_autorifleman;
 	class rhsusf_army_ocp_helipilot;
 	class rhsusf_infantry_socom_marsoc_base;
+	class rhsusf_army_ocp_marksman;
+	class rhsusf_army_ocp_engineer;
 
 	//////////////////////////////////////////
 
@@ -34,7 +36,7 @@ class CfgVehicles {
 
 	class CLASS(staff): rhsusf_army_ocp_officer {
 		MACRO_TFS_CLASS_COMMON
-		displayName = "Staf Agent";
+		displayName = "Staff Agent";
 		items[] = {"ACE_MapTools","TFS_FirstAid","ACE_EarPlugs"}; 
 		respawnItems[] = {"ACE_MapTools","TFS_FirstAid","ACE_EarPlugs"};
 		linkedItems[] = {"USP_CRYE_CPC_LEAD_BELT_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
@@ -137,6 +139,24 @@ class CfgVehicles {
 		respawnItems[] = {"ACE_MapTools","TFS_FirstAid","ACE_EarPlugs"};
 		linkedItems[] = {"USP_CRYE_CPC_LIGHT_BELT_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_rf7800str", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
 		respawnLinkedItems[] = {"USP_CRYE_CPC_LIGHT_BELT_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_rf7800str", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
+	};
+
+	class CLASS(Engineer): rhsusf_army_ocp_engineer {
+		MACRO_TFS_CLASS_COMMON
+		displayName = "Engineer";
+		items[] = {"ACE_MapTools","TFS_FirstAid","ACE_EarPlugs"}; 
+		respawnItems[] = {"ACE_MapTools","TFS_FirstAid","ACE_EarPlugs"};
+		linkedItems[] = {"USP_CRYE_CPC_FAST_BELT_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_rf7800str", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
+		respawnLinkedItems[] = {"USP_CRYE_CPC_FAST_BELT_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_rf7800str", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
+	};
+
+	class CLASS(Marksman): rhsusf_army_ocp_marksman {
+		MACRO_TFS_CLASS_COMMON
+		displayName = "Marksman";
+		items[] = {"ACE_MapTools","TFS_FirstAid","ACE_EarPlugs"}; 
+		respawnItems[] = {"ACE_MapTools","TFS_FirstAid","ACE_EarPlugs"};
+		linkedItems[] = {"USP_CRYE_CPC_FAST_BELT_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_rf7800str", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
+		respawnLinkedItems[] = {"USP_CRYE_CPC_FAST_BELT_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_rf7800str", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
 	};
 
 	//////////////////////////////////////

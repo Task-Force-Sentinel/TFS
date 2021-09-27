@@ -4,6 +4,7 @@ releases/*
 *.biprivatekey
 keys/*
 .hemtt/local
+addons/*.pbo
 ####
 
 ## Added by HEMTT

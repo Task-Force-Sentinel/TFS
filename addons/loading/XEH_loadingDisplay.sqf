@@ -30,16 +30,16 @@ _picture ctrlSetPosition [
 
 switch (systemTime select 1) do {
     case 10: {
-        _picture ctrlSetText QPATHTOF(ui\TFSLOGO-2@0.5x.paa);
+        _picture ctrlSetText QPATHTOF(ui\TFSLOGO-1hal@0.5x.paa);
     };
     case 12: {
-        _picture ctrlSetText QPATHTOF(ui\TFSLOGO-2@0.5x.paa);
+        _picture ctrlSetText QPATHTOF(ui\TFSLOGO-1xmas@0.5x.paa);
     };
     case ([] call EFUNC(common,easterDate) select 1): {
-        _picture ctrlSetText QPATHTOF(ui\TFSLOGO-2@0.5x.paa);
+        _picture ctrlSetText QPATHTOF(ui\TFSLOGOcolor2@.5.paa);
     };
     default {
-        _picture ctrlSetText QPATHTOF(ui\TFSLOGO-2@0.5x.paa);
+        _picture ctrlSetText QPATHTOF(ui\TFSLOGOcolor2@.5.paa);
     };
 };
 _picture ctrlCommit 0;
