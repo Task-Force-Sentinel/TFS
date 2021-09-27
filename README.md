@@ -1,4 +1,4 @@
-# Task Force Sentinel Custom Mod 1.0.2
+# Task Force Sentinel Custom Mod 1.0.0
 [![](https://img.shields.io/badge/Changelog-Link-orange.svg?style=flat-square)](https://github.com/YonVclaw/tsprhs/releases/latest)
 [![](https://img.shields.io/badge/Release-1.0.0-blue.svg?style=flat-square)](https://github.com/YonVclaw/tsprhs/releases/latest)
 [![](https://img.shields.io/badge/Github-Wiki-lightgrey.svg?style=flat-square)](https://github.com/YonVclaw/tsprhs/wiki)

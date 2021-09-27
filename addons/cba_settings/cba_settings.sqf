@@ -191,6 +191,7 @@ ace_medical_gui_openAfterTreatment = true;
 force force ace_medical_ivFlowRate = 1;
 force force ace_medical_limping = 2;
 force force ace_medical_painCoefficient = 1;
+force ace_medical_painUnconsciousChance = 0.1;
 force force ace_medical_playerDamageThreshold = 2;
 force force ace_medical_spontaneousWakeUpChance = 0.15;
 force force ace_medical_spontaneousWakeUpEpinephrineBoost = 2.45;
@@ -216,6 +217,7 @@ force force ace_medical_treatment_cprSuccessChance = 0.4;
 force force ace_medical_treatment_holsterRequired = 0;
 force force ace_medical_treatment_litterCleanupDelay = 600;
 force force ace_medical_treatment_locationEpinephrine = 0;
+force force ace_medical_treatment_locationIV = 0;
 force force ace_medical_treatment_locationPAK = 0;
 force force ace_medical_treatment_locationsBoostTraining = true;
 force force ace_medical_treatment_locationSurgicalKit = 0;
@@ -233,6 +235,7 @@ force force ace_medical_treatment_treatmentTimeSplint = 7;
 force force ace_medical_treatment_treatmentTimeTourniquet = 7;
 force force ace_medical_treatment_woundReopenChance = 1;
 force force ace_medical_treatment_woundStitchTime = 5;
+
 
 // ACE Name Tags
 force force ace_nametags_showCursorTagForVehicles = false;
@@ -677,7 +680,7 @@ force force grad_trenches_functions_vehicleEnvelopeRemovalTime = -1;
 force force kat_airway_Accuvac_time = 8;
 force force kat_airway_CheckAirway_time = 2;
 force force kat_airway_checkbox_puking_sound = true;
-force force kat_airway_deathTimer = 1250;
+force force kat_airway_Colored_logs = true;
 force force kat_airway_enable = true;
 force force kat_airway_Guedeltubus_time = 6;
 force force kat_airway_Larynxtubus_time = 3;
@@ -692,20 +695,25 @@ force force kat_airway_string_exit = "keko_wasPunched";
 force force kat_airway_TurnAround_time = 2;
 
 // KAT - ADV Medical: Breathing
-force force kat_breathing_death_timer_enable = true;
 force force kat_breathing_enable = true;
 force force kat_breathing_hemopneumothoraxChance = 5;
 force force kat_breathing_medLvl_Chestseal = 1;
 force force kat_breathing_medLvl_hemopneumothoraxTreatment = 1;
 force force kat_breathing_medLvl_Pulseoximeter = 0;
-force force kat_breathing_pneumothorax = 5;
+force force kat_breathing_pneumothorax = 15;
+force force kat_breathing_pneumothorax_hardcore = false;
 force force kat_breathing_pneumothoraxDamageThreshold = 0.4;
 force force kat_breathing_spo2_big_value = 66;
+force force kat_breathing_SpO2_dieActive = false;
+force force kat_breathing_SpO2_dieValue = 49.7444;
 force force kat_breathing_spo2_small_value = 30;
 force force kat_breathing_Stable_spo2 = 80.25;
+force force kat_breathing_tensionhemothorax_hardcore = false;
 
 // KAT - ADV Medical: Circulation
-kat_circulation_bloodgroup = "B";
+force force kat_circulation_AED_BeepsAndCharge = true;
+force force kat_circulation_blood_drawTime_250ml = 25;
+force force kat_circulation_blood_drawTime_500ml = 50;
 force force kat_circulation_CPR_Chance_Default = 20;
 force force kat_circulation_CPR_Chance_Doctor = 40;
 force force kat_circulation_CPR_Chance_RegularMedic = 30;
@@ -713,11 +721,12 @@ force force kat_circulation_DeactMon_whileAED_X = true;
 force force kat_circulation_distanceLimit_AEDX = 30;
 force force kat_circulation_enable = true;
 force force kat_circulation_enable_CPR_Chances = true;
+force force kat_circulation_enable_selfBloodDraw = 1;
+force force kat_circulation_medLvl_AED = 1;
 force force kat_circulation_medLvl_AED_X = 1;
 force force kat_circulation_SuccesCh_AED = 80;
 force force kat_circulation_SuccesCh_AED_X = 85;
 force force kat_circulation_timeLimit_AEDX = 1800;
-force force kat_circulation_Tourniquet_time = 7;
 force force kat_circulation_useLocation_AED = 0;
 
 // KAT - ADV Medical: Misc
@@ -725,45 +734,15 @@ force force kat_misc_enable = true;
 
 
 // LAMBS Danger
-force force lambs_danger_combatShareRange = 250;
-force force lambs_danger_CQB_formations_COLUMN = true;
-force force lambs_danger_CQB_formations_DIAMOND = true;
-force force lambs_danger_CQB_formations_ECH LEFT = true;
-force force lambs_danger_CQB_formations_ECH RIGHT = true;
-force force lambs_danger_CQB_formations_FILE = true;
-force force lambs_danger_CQB_formations_LINE = true;
-force force lambs_danger_CQB_formations_STAG COLUMN = true;
-force force lambs_danger_CQB_formations_VEE = true;
-force force lambs_danger_CQB_formations_WEDGE = true;
-force force lambs_danger_CQB_range = 60;
-force force lambs_danger_debug_Drawing = false;
-force force lambs_danger_debug_FSM = false;
-force force lambs_danger_debug_FSM_civ = false;
-force force lambs_danger_debug_functions = false;
+force force lambs_danger_cqbRange = 60;
 force force lambs_danger_disableAIAutonomousManoeuvres = false;
-force force lambs_danger_disableAICallouts = false;
 force force lambs_danger_disableAIDeployStaticWeapons = false;
 force force lambs_danger_disableAIFindStaticWeapons = false;
-force force lambs_danger_disableAIFleeing = false;
-force force lambs_danger_disableAIGestures = false;
 force force lambs_danger_disableAIHideFromTanksAndAircraft = false;
-force force lambs_danger_disableAIImediateAction = false;
 force force lambs_danger_disableAIPlayerGroup = false;
 force force lambs_danger_disableAIPlayerGroupReaction = false;
-force force lambs_danger_disableAIPlayerGroupSuppression = false;
 force force lambs_danger_disableAutonomousFlares = false;
-force force lambs_danger_disableAutonomousSmokeGrenades = false;
-force force lambs_danger_maxRevealValue = 1;
-force force lambs_danger_minFriendlySuppressionDistance = 5;
-force force lambs_danger_minSuppression_range = 20;
-force force lambs_danger_panic_chance = 10;
-force force lambs_danger_radio_backpack = 2000;
-force force lambs_danger_radio_disabled = false;
-force force lambs_danger_radio_EAST = 500;
-force force lambs_danger_radio_GUER = 500;
-force force lambs_danger_radio_shout = 200;
-force force lambs_danger_radio_WEST = 500;
-force force lambs_danger_RenderExpectedDestination = false;
+force force lambs_danger_panicChance = 0.1;
 
 // LAMBS Danger Eventhandlers
 force force lambs_eventhandlers_ExplosionEventHandlerEnabled = true;
@@ -771,6 +750,31 @@ force force lambs_eventhandlers_ExplosionReactionTime = 9;
 
 // LAMBS Danger WP
 force force lambs_wp_autoAddArtillery = true;
+
+// LAMBS Main
+force lambs_main_combatShareRange = 200;
+force force lambs_main_debug_drawAllUnitsInVehicles = false;
+force force lambs_main_debug_Drawing = false;
+force force lambs_main_debug_FSM = false;
+force force lambs_main_debug_FSM_civ = false;
+force force lambs_main_debug_functions = false;
+force force lambs_main_debug_RenderExpectedDestination = false;
+force force lambs_main_disableAICallouts = false;
+force force lambs_main_disableAIDodge = false;
+force force lambs_main_disableAIFleeing = false;
+force force lambs_main_disableAIGestures = false;
+force force lambs_main_disablePlayerGroupSuppression = false;
+force force lambs_main_indoorMove = 0.249655;
+force lambs_main_maxRevealValue = 1;
+force lambs_main_minFriendlySuppressionDistance = 5;
+force lambs_main_minSuppressionRange = 50;
+force lambs_main_radioBackpack = 2000;
+force force lambs_main_radioDisabled = false;
+force lambs_main_radioEast = 500;
+force lambs_main_radioGuer = 500;
+force lambs_main_radioShout = 100;
+force lambs_main_radioWest = 500;
+
 
 // Simplex Support Services
 force force SSS_setting_adminFullAccess = false;

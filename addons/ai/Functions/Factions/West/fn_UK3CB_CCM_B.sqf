@@ -1,6 +1,6 @@
 _InfantryType = "Infantry";
 _infaaList    = [];
-_infatList    = ["UK3CB_CCM_B_AT_FireTeam", "UK3CB_CCM_B_AT_Sentry", "UK3CB_CCM_B_AT_Squad"];
+_infatList    = ["UK3CB_CCM_B_AT_FireTeam", "UK3CB_CCM_B_AT_Sentry", "UK3CB_CCM_B_AT_Squad"],;
 _sniperList   = ["UK3CB_CCM_B_Sniper_Team"];
 _vehAAList    = [];
 _vehMrapList  = [];
