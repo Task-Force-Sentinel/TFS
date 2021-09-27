@@ -5,8 +5,6 @@
 [![](https://shields.io/badge/-Discord-131544019032342528?logo=discord&logoColor=fff)](https://discord.gg/xUyxRnp)
 
 
-the next cleaner version
-
 
 This is the custom mod for Task Force Sentinel
 Its based/inspired on/by the following projects;
