@@ -64,6 +64,8 @@ class CfgVehicles {
         displayName = "TFS Arsenal";
         model="A3\Weapons_F\Ammoboxes\AmmoVeh_F";
 		icon="iconCrateVeh";
+        ace_dragging_canDrag = 0; 
+        ace_dragging_canCarry = 0;
 		slingLoadCargoMemoryPoints[]=
 		{
 			"SlingLoadCargo1",
