@@ -2,7 +2,7 @@
 <Project name="Arma_Extended_Environment">
 	
 	<!-- ####################################################################################### -->
-	<Package name="TFS_Modules">
+	<Package name=QUOTE(PREFIX);>
 		
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Modules">

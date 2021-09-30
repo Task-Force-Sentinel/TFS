@@ -2,7 +2,7 @@ class CfgFunctions {
 	
 	class TFS_Modules {
 		
-		tag = "tfs_modules";
+		tag = QUOTE(PREFIX);
 		
 		class Modules {
 			file = "z\tfs\addons\modules\functions";

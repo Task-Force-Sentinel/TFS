@@ -3,7 +3,7 @@ class TFS_ModuleAISpawns: Module_F
 	scope = 2;
 	displayName = "AI Spawn - East";
 	icon = "\z\tfs\addons\media\images\icons\AI EAST.paa";
-	category = "Task Force Sentinel";
+	category = QUOTE(PREFIX);
 	function = "TFS_fnc_moduleAISpawns";
 	functionPriority = 2;
 	isGlobal = 0;
@@ -105,7 +105,7 @@ class TFS_ModuleAISpawns: Module_F
 			typeName = "Number";
 			defaultValue = 0;
 		};
-
+		
 		class PatrolMethod: Combo
   			{
 				property = "TFS_AI_PatrolMethod";
@@ -238,7 +238,7 @@ class TFS_ModuleAISpawns: Module_F
 			description = "Maximum Number of MRAPs to Spawn";
 			typeName = "Number";
 			defaultValue = 0;
-		};
+		};		
 		class VehHeavyMin: Edit
 		{
 			property = "TFS_AI_VehHeavyMin";

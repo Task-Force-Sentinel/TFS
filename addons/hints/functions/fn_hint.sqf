@@ -160,7 +160,7 @@ if (_text isEqualTo "") exitWith {};
 	_barWidth = _bwidth;
 	_barHeight = _contentHeight;
 	if (_barLeft) then { _barPosX = _posX - _bwidth; } else { _barPosX = _posX + _contentWidth; };
-	if (_scrollDown) then { _barPosY = _posY; } else { _barPosY = _posY - _contentHeight;; };
+	if (_scrollDown) then { _barPosY = _posY; } else { _barPosY = _posY - _contentHeight; };
 	_ColorBar ctrlSetPosition [_barPosX,_barPosY,_barWidth,_barHeight];
 	_ColorBar ctrlSetBackgroundColor _color;
 	_ColorBar ctrlSetFade 1;

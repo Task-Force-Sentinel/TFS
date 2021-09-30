@@ -3,7 +3,7 @@ class TFS_ModuleCivilianSpawns: Module_F
 	scope = 2;
 	displayName = "AI Spawn - Civilian";
 	icon = "\z\tfs\addons\media\images\Icons\AI CIV.paa";
-	category = "Task Force Sentinel";
+	category = QUOTE(PREFIX);
 	function = "TFS_fnc_moduleCivilianSpawns";
 	functionPriority = 2;
 	isGlobal = 0;
@@ -49,6 +49,9 @@ class TFS_ModuleCivilianSpawns: Module_F
 				class values
 				{
 					class CIVILIAN		{name = "Civilian";								value = "civilian";};
+					/*class WEST  		{name = "Blufor";								value = "west";};
+					class EAST  		{name = "Opfor";								value = "east";};
+					class INDEPENDENT  	{name = "Independent";							value = "independent";};*/ // TODO: make this work
 				};
 			};
 

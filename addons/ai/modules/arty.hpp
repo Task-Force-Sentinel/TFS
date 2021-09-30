@@ -2,7 +2,7 @@ class GVAR(artillery) : Module_F
 {
     scope = 2;
     displayName = "Artillery";
-    category = "Task Force Sentinel";
+    category = QUOTE(PREFIX);
     icon = "\a3\ui_f\data\Map\VehicleIcons\iconStaticCannon_ca.paa";
     function = QFUNC(arty);
     // 0 for server only execution, 1 for global execution, 2 for persistent global execution

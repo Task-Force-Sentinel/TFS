@@ -18,7 +18,7 @@
 
 // -------------------------------------------------------------------------------------------------
 
-private _version = ["tfs_modules"] call TFS_fnc_getAddonVersion;
+private _version = ["tfs_modules"] call DPSO_fnc_getAddonVersion;
 [4, "Addon (v%1) loaded...", [_version], "modules"] call TFS_fnc_log;
 
 // -------------------------------------------------------------------------------------------------

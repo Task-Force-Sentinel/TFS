@@ -8,17 +8,17 @@ player createDiaryRecord ["Diary", ["Long Range Frequencies",
 <br/>
 <br/>Below is a list of the default Long Range Frequencies. Your role specific frequencies are set on your radio automatically. Ensure you're on the correct frequencies at all times.
 <br/>
-<br/><font face='PuristaLight' color='#B85450'>Channel: 1 - Frequency:40Mhz - C2</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>Channel: 2 - Frequency:50Mhz - 1ST Platoon (Headhunter 1) Net</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>Channel: 3 - Frequency:51Mhz - 2ND Platoon (Headhunter 2) Net</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>Channel: 4 - Frequency:52Mhz - 3RD Platoon (Headhunter 13) Net</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>Channel: 5 - Frequency:58Mhz - ISA Action Group (Arrow) Net</font>
-<br/><font face='PuristaLight' color='#D3D3D3'>Channel: 6 - Frequency:59Mhz - Air Group (Outlaw) Net</font>
-<br/><font face='PuristaLight' color='#D60025'>Channel: 7 - Frequency:60Mhz - CAS - Fires</font> 
-<br/><font face='PuristaLight' color='#D79B00'>Channel: 8 - Frequency:69Mhz - Air 2 Ground Net - Common on all radios/font>
+<br/><font face='PuristaLight' color='#B85450'> Channel: 1 - Frequency:40 Mhz - C2</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 2 - Frequency:50 Mhz - 1ST Platoon (Headhunter 1) Net</font>
+<br/><font face='PuristaLight' color='#00FF00'> Channel: 3 - Frequency:51 Mhz - 2ND Platoon (Headhunter 2) Net</font>
+<br/><font face='PuristaLight' color='#FF0000'> Channel: 4 - Frequency:52 Mhz - 3RD Platoon (Headhunter 13) Net</font>
+<br/><font face='PuristaLight' color='#6C8EBF'> Channel: 5 - Frequency:58 Mhz - ISA Action Group (Arrow) Net</font>
+<br/><font face='PuristaLight' color='#D3D3D3'> Channel: 6 - Frequency:59 Mhz - CAS - Fires</font>
+<br/><font face='PuristaLight' color='#D60025'> Channel: 7 - Frequency:60 Mhz - Air Group (Outlaw) Net</font> 
+<br/><font face='PuristaLight' color='#D79B00'> Channel: 8 - Frequency:69 Mhz - Air 2 Ground Net - Common on all radios/font>
 "
 ]];
-
+	
 
 player createDiaryRecord ["Diary", ["Short Range Frequencies",
 "
@@ -26,61 +26,55 @@ player createDiaryRecord ["Diary", ["Short Range Frequencies",
 <br/>
 <br/>Below is a list of the default Short Range Frequencies. Your role specific frequencies are set on your radio automatically. Ensure you're on the correct frequencies at all times. Don't forget the MERT Frequency!
 <br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>1ST Platoon (Headhunter 1) 						- Channel: 1 - Frequency:100 Mhz</font>
-<br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>1ST Platoon 1ST Squad (Headhunter 1-1) 			- Channel: 2 - Frequency:110 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>1ST Platoon 1ST Squad A Team (Headhunter 1-1-A) 	- Channel: 3 - Frequency:111 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>1ST Platoon 1ST Squad B Team (Headhunter 1-1-B) 	- Channel: 4 - Frequency:112 Mhz</font>
-<br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>1ST Platoon 2ND Squad (Headhunter 1-2) 			- Channel: 5 - Frequency:120 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>1ST Platoon 2ND Squad A Team (Headhunter 1-2-A) 	- Channel: 6 - Frequency:121 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>1ST Platoon 2ND Squad B Team (Headhunter 1-2-B) 	- Channel: 7 - Frequency:122 Mhz</font>
-<br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>1ST Platoon 3RD Squad (Headhunter 1-3) 			- Channel: 8 - Frequency:130 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>1ST Platoon 3RD Squad A Team (Headhunter 1-3-A) 	- Channel: 9 - Frequency:131 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>1ST Platoon 3RD Squad B Team (Headhunter 1-3-B) 	- Channel: 10 - Frequency:132 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'>First Platoon HQ</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 1 -- Platoon Net 			- Frequency:100 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 2 -- Squad Net				- Frequency:101 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 3 -- Engineer Net 			- Frequency:102 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 4 -- Scout Net				- Frequency:103 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 5 -- Spare Platoon Net 1	- Frequency:104 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 6 -- Spare Platoon Net 2	- Frequency:105 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 7 -- Task Force Net 		- Frequency:99 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 8 -- Air 2 Ground Net 		- Frequency:69 Mhz</font>
 <br/>
 <br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>2ND Platoon (Headhunter 2) 						- Channel: 1 - Frequency:200 Mhz</font>
-<br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>2ND Platoon 1ST Squad (Headhunter 2-1) 			- Channel: 2 - Frequency:210 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>2ND Platoon 1ST Squad A Team (Headhunter 2-1-A) 	- Channel: 3 - Frequency:211 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>2ND Platoon 1ST Squad B Team (Headhunter 2-1-B) 	- Channel: 4 - Frequency:212 Mhz</font>
-<br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>2ND Platoon 2ND Squad (Headhunter 2-2) 			- Channel: 5 - Frequency:220 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>2ND Platoon 2ND Squad A Team (Headhunter 2-2-A) 	- Channel: 6 - Frequency:221 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>2ND Platoon 2ND Squad B Team (Headhunter 2-2-B) 	- Channel: 7 - Frequency:222 Mhz</font>
-<br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>2ND Platoon 3RD Squad (Headhunter 2-3) 			- Channel: 2 - Frequency:230 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>2ND Platoon 3RD Squad A Team (Headhunter 2-3-A) 	- Channel: 3 - Frequency:231 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>2ND Platoon 3RD Squad B Team (Headhunter 2-3-B) 	- Channel: 4 - Frequency:232 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'>First Platoon First Squad</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 1 -- Platoon Net 			- Frequency:100 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 2 -- Squad Net				- Frequency:110 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 3 -- Team A Net			- Frequency:111 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 4 -- Team B Net			- Frequency:112 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 5 -- Spare Squad Net 1		- Frequency:110.1 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 6 -- Spare Squad Net 2		- Frequency:110.2 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 7 -- Task Force Net		- Frequency:99 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 8 -- Air 2 Ground Net		- Frequency:69 Mhz</font>
 <br/>
 <br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>3RD Platoon (Headhunter 3) 						- Channel: 1 - Frequency:300 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'>First Platoon Second Squad</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 1 -- Platoon Net 			- Frequency:100 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 2 -- Squad Net				- Frequency:120 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 3 -- Team A Net			- Frequency:121 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 4 -- Team B Net			- Frequency:122 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 5 -- Spare Squad Net 1		- Frequency:120.1 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 6 -- Spare Squad Net 2		- Frequency:120.2 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 7 -- Task Force Net 		- Frequency:99 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 8 -- Air 2 Ground Net 		- Frequency:69 Mhz</font>
 <br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>3RD Platoon 1ST Squad (Headhunter 3-1) 			- Channel: 2 - Frequency:310 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>3RD Platoon 1ST Squad A Team (Headhunter 3-1-A) 	- Channel: 3 - Frequency:311 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>3RD Platoon 1ST Squad B Team (Headhunter 3-1-B) 	- Channel: 4 - Frequency:312 Mhz</font>
 <br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>3RD Platoon 2ND Squad (Headhunter 3-2) 			- Channel: 5 - Frequency:320 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>3RD Platoon 2ND Squad A Team (Headhunter 3-2-A) 	- Channel: 6 - Frequency:321 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>3RD Platoon 2ND Squad B Team (Headhunter 3-2-B) 	- Channel: 7 - Frequency:322 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'>First Platoon Third Squad</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 1 -- Platoon Net 			- Frequency:100 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 2 -- Squad Net				- Frequency:130 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 3 -- Team A Net			- Frequency:131 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 4 -- Team B Net			- Frequency:132 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 5 -- Spare Squad Net 1		- Frequency:130.1 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 6 -- Spare Squad Net 2		- Frequency:130.2 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 7 -- Task Force Net 		- Frequency:99 Mhz</font>
+<br/><font face='PuristaLight' color='#0000FF'> Channel: 8 -- Air 2 Ground Net 		- Frequency:69 Mhz</font>
 <br/>
-<br/><font face='PuristaLight' color='#6C8EBF'>3RD Platoon 3RD Squad (Headhunter 3-3) 			- Channel: 2 - Frequency:330 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>3RD Platoon 3RD Squad A Team (Headhunter 2-3-A) 	- Channel: 3 - Frequency:331 Mhz</font>
-<br/><font face='PuristaLight' color='#6C8EBF'>3RD Platoon 3RD Squad B Team (Headhunter 2-3-B) 	- Channel: 4 - Frequency:332 Mhz</font>
 <br/>
-
-
-
-<br/>
-<br/><font face='PuristaLight' color='#D3D3D3'>Channel: 7 - Frequency:99 Mhz</font>
-<br/><font face='PuristaLight' color='#D60025' font size='20' >Channel: 8 - Frequency:69 Mhz  AIR-GROUND-NET/font>
 "
 ]];
 
 _PlayerGroup =  group player getVariable ["TFS_section","null"];
-if !(_PlayerGroup == "ds1ST Platoon (Headhunter 1)") exitwith {};
+if !(_PlayerGroup == "500)") exitwith {};
 
 player createDiarySubject ["TFS Commands","TFS Commands"];
 
@@ -174,7 +168,7 @@ player createDiaryRecord ["TFS Commands", ["Introduction",
 
 <br/>First off, for these commands to work you need to be set as a mission creator.
 <br/>The commands need to be entered to the chat (like admin commands on EU1), they start with an exclamation mark (!).
-<br/>The commands can be entered in any chat channel, they do not show up in the actual chat, so entered commands are invisible to normal player.
+<br/>The commands can be entered in any chat  Channel, they do not show up in the actual chat, so entered commands are invisible to normal player.
 <br/>
 <br/>In the following pages of this Section you'll see various commands.
 <br/>For each there's examples for you to use.

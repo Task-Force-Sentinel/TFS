@@ -29,3 +29,13 @@ you can find the TFS Version at tbd
 (I know I forgot a few, I will work on getting those mentions put in)
 
 All the code in this mod (listed above) is available in the Task Force Sentinel Git
+
+This mod includes :
+Spyke - A3U - Arma 3 Utilities
+https://steamcommunity.com/sharedfiles/filedetails/?id=1560749177
+
+Fat_Lurch's Turret Enhanced
+https://steamcommunity.com/sharedfiles/filedetails/?id=1623498241
+
+Fat_Lurch's MS_IFF_Strobe
+https://steamcommunity.com/sharedfiles/filedetails/?id=1543390130

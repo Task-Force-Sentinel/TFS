@@ -2,7 +2,7 @@ class GVAR(Rearm) : Module_F
 {
     scope = 2;
     displayName = "Rearm Area";
-    category = "Task Force Sentinel";
+    category = QUOTE(PREFIX);
     icon = "\a3\ui_f\data\Map\VehicleIcons\iconCrate_ca.paa";
     function = QFUNC(rearmInit);
     // 0 for server only execution, 1 for global execution, 2 for persistent global execution

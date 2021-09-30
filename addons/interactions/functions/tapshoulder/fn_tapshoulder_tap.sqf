@@ -57,7 +57,7 @@ if (missionNamespace getVariable ["tfs_interactions_tapshoulder_hint", true]) th
 		_iconFile = "\z\tfs\addons\interactions\data\icons\shoulder_right_ca.paa";
 	};
 	
-	private _shoulderIcon = format [_iconTemplate, _iconFile, _shoulderName];;
+	private _shoulderIcon = format [_iconTemplate, _iconFile, _shoulderName];
 	private _hintMessage = format [localize "STR_TFS_Interactions_Hint_TapShoulder", _playerName, _shoulderIcon];
 	[format [hint_tpl_default, _hintMessage]] call TFS_fnc_hint;
 	

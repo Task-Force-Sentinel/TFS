@@ -231,7 +231,7 @@ class Cfg3DEN {
                             class Infoisa
                             {
                                 name = "ISA Action Group (Arrow)";
-                                value = 150;
+                                value = 400;
                             };
                             class Infoair
                             {

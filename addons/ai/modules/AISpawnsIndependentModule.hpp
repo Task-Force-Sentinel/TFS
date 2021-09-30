@@ -3,7 +3,7 @@ class TFS_ModuleAISpawnsIndependent: Module_F
 	scope = 2;
 	displayName = "AI Spawn - Independent";
 	icon = "\z\tfs\addons\media\images\icons\AI INDEP.paa";
-	category = "Task Force Sentinel";
+	category = QUOTE(PREFIX);
 	function = "TFS_fnc_moduleAISpawns";
 	functionPriority = 2;
 	isGlobal = 0;
@@ -61,7 +61,8 @@ class TFS_ModuleAISpawnsIndependent: Module_F
 					class rhssaf_faction_un 			{name = "@RHS SAF - SAF (UN Peacekeepers)"; 					value = "rhssaf_faction_un";};
 					class IND_F							{name = "Vanilla - AAF";										value = "IND_F";};
 					class IND_C_F 						{name = "Vanilla - Syndikat"; 									value = "IND_C_F";};
-				};
+
+				};				
 			};
 		class GarrRadius: Edit
   			{
@@ -88,7 +89,7 @@ class TFS_ModuleAISpawnsIndependent: Module_F
 			typeName = "Number";
 			defaultValue = 0;
 		};
-
+		
 		class PatrolMethod: Combo
   			{
 				property = "TFS_AI_PatrolMethod";
@@ -221,7 +222,7 @@ class TFS_ModuleAISpawnsIndependent: Module_F
 			description = "Maximum Number of MRAPs to Spawn";
 			typeName = "Number";
 			defaultValue = 0;
-		};
+		};		
 		class VehHeavyMin: Edit
 		{
 			property = "TFS_AI_VehHeavyMin";
