@@ -10,18 +10,18 @@ class CfgVehicles {
 	uniformClass = "USP_G3C_MC"; \
 	class EventHandlers : EventHandlers {class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base {};}; \
 
-	class rhsusf_army_ocp_officer;
-	class rhsusf_army_ocp_jfo;
-	class rhsusf_army_ocp_medic;
-	class rhsusf_army_ocp_squadleader;
-	class rhsusf_army_ocp_teamleader;
-	class rhsusf_army_ocp_grenadier;
-	class rhsusf_army_ocp_rifleman;
-	class rhsusf_army_ocp_autorifleman;
-	class rhsusf_army_ocp_helipilot;
-	class rhsusf_infantry_socom_marsoc_base;
-	class rhsusf_army_ocp_marksman;
-	class rhsusf_army_ocp_engineer;
+	class rhsusf_army_ocp_officer { class EventHandlers; };
+	class rhsusf_army_ocp_jfo { class EventHandlers; };
+	class rhsusf_army_ocp_medic { class EventHandlers; };
+	class rhsusf_army_ocp_squadleader { class EventHandlers; };
+	class rhsusf_army_ocp_teamleader { class EventHandlers; };
+	class rhsusf_army_ocp_grenadier { class EventHandlers; };
+	class rhsusf_army_ocp_rifleman { class EventHandlers; };
+	class rhsusf_army_ocp_autorifleman { class EventHandlers; };
+	class rhsusf_army_ocp_helipilot { class EventHandlers; };
+	class rhsusf_infantry_socom_marsoc_base { class EventHandlers; };
+	class rhsusf_army_ocp_marksman { class EventHandlers; };
+	class rhsusf_army_ocp_engineer { class EventHandlers; };
 
 	//////////////////////////////////////////
 
@@ -66,6 +66,15 @@ class CfgVehicles {
 	class CLASS(platoon_rto): rhsusf_army_ocp_jfo {
 		MACRO_TFS_CLASS_COMMON
 		displayName = "Platoon RTO";
+		items[] = {"ACE_MapTools","TFS_FirstAid","ACE_EarPlugs"}; 
+		respawnItems[] = {"ACE_MapTools","TFS_FirstAid","ACE_EarPlugs"};
+		linkedItems[] = {"USP_CRYE_CPC_COMMS_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
+		respawnLinkedItems[] = {"USP_CRYE_CPC_COMMS_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
+	};
+
+	class CLASS(platoon_jfire): rhsusf_army_ocp_jfo {
+		MACRO_TFS_CLASS_COMMON
+		displayName = "Platoon JFIRE";
 		items[] = {"ACE_MapTools","TFS_FirstAid","ACE_EarPlugs"}; 
 		respawnItems[] = {"ACE_MapTools","TFS_FirstAid","ACE_EarPlugs"};
 		linkedItems[] = {"USP_CRYE_CPC_COMMS_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};

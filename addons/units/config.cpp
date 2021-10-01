@@ -20,7 +20,7 @@ class CfgPatches {
             QCLASS(staff),
             QCLASS(Engineer),
             QCLASS(Marksman),
-
+            QCLASS(platoon_jfire),
         };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {};
