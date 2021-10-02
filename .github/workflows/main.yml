@@ -1,2 +1,0 @@
-- name: Release with HEMTT
-  uses: gruppe-adler/action-release-with-hemtt@2.2.0
