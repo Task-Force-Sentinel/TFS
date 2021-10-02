@@ -14,4 +14,5 @@
 #include "\z\tfs\addons\main\script_macros.hpp"
 
 #define admin_YONV "76561198000002705"
-
+#define admin_storke "76561198009131913"
+#define admin_Ocean "76561198136101810"

@@ -37,6 +37,8 @@ class TFS_AI {
 		class CUP_C_SAHRANI {};
 		class CUP_C_RU {};
 		class CUP_C_TK {};
+		class UK3CB_CHC_C {};
+		class UK3CB_TKC_C {};
 	};
 
 	class East_Factions {
@@ -68,8 +70,31 @@ class TFS_AI {
 		class CUP_O_SLA {};
 		class CUP_O_TK {};
 		class CUP_O_TK_MILITIA {};
+		class LIB_RKKA {};
+		class LOP_AFR_OPF {};
+		class LOP_AM_OPF {};
+		class LOP_BH {};
+		class LOP_ChDKZ {};
+		class LOP_IRA {};
+		class LOP_ISTS_OPF {};
+		class LOP_SLA {};
+		class LOP_TKA {};
+		class LOP_US {};
 		class OPF_F {};
 		class OPF_T_F {};
+		class OPTRE_Ins {};
+		class rhs_faction_msv {};
+		class rhs_faction_vdv {};
+		class rhs_faction_vmf {};
+		class rhsgref_faction_chdkz {};
+		class TEC_CSAT {};
+		class TEC_CSAT_Pacific {};
+		class UK3CB_CCM_O {};
+		class UK3CB_TKA_O {};
+		class UK3CB_TKM_O {};
+		class UK3CB_TKP_O {};
+		class UNSUNG_E_NVA {};
+		class TBan_Group {};
 
 	};
 
@@ -90,6 +115,25 @@ class TFS_AI {
 		class CUP_I_UN {};
 		class IND_C_F {};
 		class IND_F {};
+		class LIB_US_ARMY {};
+		class LOP_IRAN {};
+		class LOP_NAPA {};
+		class LOP_PESH_IND {};
+		class LOP_RACS {};
+		class LOP_UA {};
+		class LOP_UKR {};
+		class LOP_UN {};
+		class LOP_UVF {};
+		class rhsgref_faction_cdf_ground {};
+		class rhsgref_faction_chdkz_g {};
+		class rhsgref_faction_nationalist {};
+		class rhssaf_faction_army {};
+		class rhssaf_faction_un {};
+		class UK3CB_CCM_I {};
+		class UK3CB_TKA_I {};
+		class UK3CB_TKM_I {};
+		class UK3CB_TKP_I {};
+		class UK3CB_UN_I {};
 	};
 
 	class West_Factions {
@@ -122,6 +166,26 @@ class TFS_AI {
 		class CUP_B_GB {};
 		class CUP_B_GER {};
 		class CUP_B_US_Army {};
+		class LIB_WEHRMACHT {};
+		class LOP_AA {};
+		class LOP_IA {};
+		class LOP_PMC {};
+		class OPTRE_UNSC {};
+		class rhs_faction_usarmy_d {};
+		class rhs_faction_usarmy_wd {};
+		class UK3CB_ANA_B {};
+		class UK3CB_ANP_B {};
+		class UK3CB_BAF_Faction_Army_Arctic {};
+		class UK3CB_BAF_Faction_Army_Desert {};
+		class UK3CB_BAF_Faction_Army_MTP {};
+		class UK3CB_BAF_Faction_Army_Temperate {};
+		class UK3CB_BAF_Faction_Army_Tropical {};
+		class UK3CB_BAF_Faction_Army_Woodland {};
+		class UK3CB_CCM_B {};
+		class UK3CB_TKA_B {};
+		class UK3CB_TKM_B {};
+		class UK3CB_TKP_B {};
+		class UK3CB_UN_B {};
 	};
 };
 
