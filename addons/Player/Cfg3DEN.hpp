@@ -236,7 +236,7 @@ class Cfg3DEN {
                             class Infoair
                             {
                                 name = "Air Group (Outlaw)";
-                                value = 90;
+                                value = 60;
                             };
                         };
                     };
