@@ -55,7 +55,7 @@ force force ace_cookoff_ammoCookoffDuration = 0.5;
 force force ace_cookoff_enable = 2;
 force force ace_cookoff_enableAmmobox = true;
 force force ace_cookoff_enableAmmoCookoff = true;
-force force ace_cookoff_probabilityCoef = 1;
+force force ace_cookoff_probabilityCoef = 3;
 
 // ACE Crew Served Weapons
 force force ace_csw_ammoHandling = 2;
@@ -210,7 +210,7 @@ force force ace_medical_treatment_treatmentTimeCPR = 15;
 force force ace_medical_treatment_treatmentTimeIV = 12;
 force force ace_medical_treatment_treatmentTimeSplint = 7;
 force force ace_medical_treatment_treatmentTimeTourniquet = 7;
-force force ace_medical_treatment_woundReopenChance = 1;
+force force ace_medical_treatment_woundReopenChance = 0;
 force force ace_medical_treatment_woundStitchTime = 5;
 
 
@@ -387,17 +387,6 @@ force force acex_viewrestriction_modeSelectiveFoot = 1;
 force force acex_viewrestriction_modeSelectiveLand = 0;
 force force acex_viewrestriction_modeSelectiveSea = 0;
 force force acex_viewrestriction_preserveView = true;
-
-// ACRE2
-force force acre_sys_core_automaticAntennaDirection = true;
-force force acre_sys_core_fullDuplex = true;
-force force acre_sys_core_ignoreAntennaDirection = true;
-force force acre_sys_core_interference = true;
-force force acre_sys_core_revealToAI = 1;
-force force acre_sys_core_terrainLoss = 0.8;
-force force acre_sys_core_ts3ChannelSwitch = true;
-force force acre_sys_core_unmuteClients = true;
-force force acre_sys_signal_signalModel = 2;
 
 // AI
 force force cfp_autoEquipNVG = true;
