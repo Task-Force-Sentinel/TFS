@@ -1,0 +1,9 @@
+- name: Release with HEMTT
+  # You may pin to the exact commit or the version.
+  # uses: gruppe-adler/action-release-with-hemtt@679ce64f234bfd31bd0a6ed2b52bcff68e912b17
+  uses: gruppe-adler/action-release-with-hemtt@2.2.0
+  with:
+    # Zip the build
+    zip_build: # optional, default is true
+    # Working directory
+    cwd: # optional, default is .
