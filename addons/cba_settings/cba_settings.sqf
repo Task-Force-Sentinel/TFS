@@ -213,7 +213,6 @@ force force ace_medical_treatment_treatmentTimeTourniquet = 7;
 force force ace_medical_treatment_woundReopenChance = 0;
 force force ace_medical_treatment_woundStitchTime = 5;
 
-
 // ACE Name Tags
 force force ace_nametags_showCursorTagForVehicles = false;
 force force ace_nametags_showNamesForAI = false;
@@ -315,7 +314,6 @@ force force ace_vehiclelock_lockVehicleInventory = true;
 force force ace_vehiclelock_vehicleStartingLockState = -1;
 
 // ACE Vehicles
-
 force force ace_vehicles_keepEngineRunning = false;
 force force ace_vehicles_speedLimiterStep = 5;
 
@@ -664,11 +662,11 @@ force force kat_airway_TurnAround_time = 2;
 
 // KAT - ADV Medical: Breathing
 force force kat_breathing_enable = true;
-force force kat_breathing_hemopneumothoraxChance = 5;
+force force kat_breathing_hemopneumothoraxChance = 10;
 force force kat_breathing_medLvl_Chestseal = 1;
 force force kat_breathing_medLvl_hemopneumothoraxTreatment = 1;
 force force kat_breathing_medLvl_Pulseoximeter = 0;
-force force kat_breathing_pneumothorax = 15;
+force force kat_breathing_pneumothorax = 20;
 force force kat_breathing_pneumothorax_hardcore = false;
 force force kat_breathing_pneumothoraxDamageThreshold = 0.4;
 force force kat_breathing_spo2_big_value = 66;
