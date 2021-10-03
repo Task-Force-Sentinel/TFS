@@ -1,8 +1,8 @@
 # Task Force Sentinel Custom Mod 1.0.0
-[![](https://img.shields.io/badge/Changelog-Link-orange.svg?style=flat-square)](https://github.com/YonVclaw/tsprhs/releases/latest)
-[![](https://img.shields.io/badge/Release-1.0.0-blue.svg?style=flat-square)](https://github.com/YonVclaw/tsprhs/releases/latest)
-[![](https://img.shields.io/badge/Github-Wiki-lightgrey.svg?style=flat-square)](https://github.com/YonVclaw/tsprhs/wiki)
-[![](https://shields.io/badge/-Discord-131544019032342528?logo=discord&logoColor=fff)](https://discord.gg/xUyxRnp)
+[![](https://img.shields.io/badge/Changelog-Link-orange.svg?style=flat-square)](https://github.com/Task-Force-Sentinel/TFS/releases/latest)
+[![](https://img.shields.io/badge/Release-1.0.0-blue.svg?style=flat-square)](https://github.com/Task-Force-Sentinel/TFS/releases/latest)
+[![](https://img.shields.io/badge/Github-Wiki-lightgrey.svg?style=flat-square)](https://github.com/Task-Force-Sentinel/TFS/wiki)
+[![](https://shields.io/badge/-Discord-131544019032342528?logo=discord&logoColor=fff)](https://discord.gg/qzZKEYyy9R)
 
 
 
