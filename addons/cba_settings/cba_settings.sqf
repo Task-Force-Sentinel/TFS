@@ -401,13 +401,16 @@ force force cba_disposable_replaceDisposableLauncher = false;
 cba_events_repetitionMode = 1;
 force force cba_optics_usePipOptics = false;
 
-// CUP
-force force CUP_CheckCfgPatches = true;
-force force CUP_Vehicles_PreventBarrelClip = true;
-
-// CUP Static Weapons
-force force CUP_staticWeapons_allowMovement = true;
-force force CUP_staticWeapons_allowRotation = true;
+// cTab
+force force ctab_core_bft_mode = 1;
+force force ctab_core_defMapStyle = "TOPO";
+force force ctab_core_gridPrecision = 2;
+force force ctab_core_helmetcam_mode = 1;
+force force ctab_core_sync_time = 60;
+force force ctab_core_uav_mode = 1;
+force force ctab_core_useAceMicroDagr = true;
+force force ctab_core_useArmaMarker = true;
+force force ctab_core_useMils = false;
 
 // TFS
 force TFS_spectator_canSpectateAllSides = true;
@@ -574,7 +577,7 @@ force force TFS_Main_FlipVehicle = true;
 force force TFS_Main_FPSCounter = true;
 force force TFS_Main_LockCamVehicle = false;
 force force TFS_Main_Logging = true;
-force force TFS_Main_MapIcons = true;
+force force TFS_Main_MapIcons = false;
 force force TFS_Main_MaydayAccess = 2;
 force force TFS_Main_PilotCheck = true;
 force force TFS_Main_QSMagRepack = false;
@@ -595,7 +598,6 @@ force force TFS_bodybag_destroyChance = 20;
 
 // TFS Pointing
 force force TFS_pointing_vehicleEnabled = true;
-
 
 // TFS Respawn
 force force TFS_respawn_enabled = true;
@@ -698,7 +700,6 @@ force force kat_circulation_useLocation_AED = 0;
 // KAT - ADV Medical: Misc
 force force kat_misc_enable = true;
 
-
 // LAMBS Danger
 force force lambs_danger_cqbRange = 60;
 force force lambs_danger_disableAIAutonomousManoeuvres = false;
@@ -740,7 +741,6 @@ force lambs_main_radioEast = 500;
 force lambs_main_radioGuer = 500;
 force lambs_main_radioShout = 100;
 force lambs_main_radioWest = 500;
-
 
 // Simplex Support Services
 force force SSS_setting_adminFullAccess = false;
@@ -817,4 +817,3 @@ force force Fat_Lurch_ShowAz = true;
 force force Fat_Lurch_ShowEl = true;
 force force Fat_Lurch_ShowNorth = true;
 force force Fat_Lurch_ShowTarget = true;
-

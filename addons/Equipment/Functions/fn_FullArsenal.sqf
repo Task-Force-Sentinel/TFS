@@ -4013,7 +4013,6 @@ _ArsenalType = call {
             "H_PilotHelmetFighter_B",
             "rhsusf_ihadss"
         ];
-
         _AvailableGoggles = [
             "G_B_Diving",
             "G_Diving",
@@ -5094,7 +5093,6 @@ _ArsenalType = call {
             "USP_SHEMAGH_NECK4_CBR",
             "USP_SHEMAGH3_CBR"
         ];
-
         _AvailableUniforms = [
             "USP_G3C_AOR1",
             "USP_G3C_AOR2",
@@ -8094,7 +8092,6 @@ _ArsenalType = call {
             "U_B_FullGhillie_sard",
             "U_B_GhillieSuit"
         ];
-
         _AvailableVests = [
             "rhsusf_iotv_ocp_Grenadier",
             "rhsusf_iotv_ocp_Medic",
@@ -8238,8 +8235,24 @@ _ArsenalType = call {
             "USP_CRYE_CPC_LEAD_BELT",
             "V_RebreatherB"
         ];
-
         _AvailableBackpacks = [
+            "TFS_Backpack_AssaultExpanded_Black",
+            "TFS_Backpack_AssaultExpanded_Green",
+            "TFS_Backpack_AssaultExpanded_Tan",
+            "TFS_Backpack_AssaultExpanded_White",
+            "TFS_Backpack_AssaultExpanded_RGR",
+            "TFS_Backpack_AssaultPack_RGR",
+            "TFS_Backpack_Carryall_DarkBlack",
+            "TFS_Backpack_Kitbag_DarkBlack",
+            "TFS_Backpack_Kitbag_White",
+            "TFS_Backpack_Kitbag_RGR",
+            "TFS_Backpack_Kitbag_Medic_White",
+            "TFS_Backpack_Kitbag_Medic_Black",
+            "TFS_Backpack_Kitbag_Medic_Coyote",
+            "TFS_Backpack_Kitbag_Medic_MTP",
+            "TFS_Backpack_Kitbag_Medic_Green",
+            "TFS_Backpack_Kitbag_Medic_Tan",
+            "TFS_Backpack_Kitbag_Medic_RGR",
             "USP_CRYE_BELT_PACK_MC",
             "USP_ZIPON_PANEL_MC",
             "USP_PACK_BREACHER_MC",
@@ -8427,7 +8440,6 @@ _ArsenalType = call {
             "USP_TACTICAL_PACK_MCA_CCT8",
             "USP_TACTICAL_PACK_MCB_CCT8"
         ];
-
         _AvailableAttachments = [
             "rhsusf_acc_premier_anpvs27",
             "rhsusf_acc_ACOG_anpvs27",
@@ -9259,7 +9271,6 @@ _ArsenalType = call {
             "ChemicalDetector_01_olive_F",
             "ChemicalDetector_01_tan_F"
         ];
-
         _AvailableMagazines = [
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red",

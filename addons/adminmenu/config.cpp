@@ -18,6 +18,12 @@ class GVAR(authorized_players) {
     class YonV {
         uid = "76561198000002705";
     };
+    class ocean {
+        uid = "76561198136101810"
+    };
+    class storke {
+        uid = "76561198009131913"
+    }
 };
 
 #include "CfgFunctions.hpp"
