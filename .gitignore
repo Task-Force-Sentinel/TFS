@@ -1,11 +1,10 @@
-
-## Added by HEMTT
 releases/*
 *.biprivatekey
 keys/*
 .hemtt/local
 addons/*.pbo
-####
-
-## Added by HEMTT
-####
+texHeaders.bin
+Thumbs.db
+*.cache
+*.swp
+*.swo
