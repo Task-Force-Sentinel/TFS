@@ -5,25 +5,21 @@ class CfgPatches
     class TFS_CommandCentre
     {
         author = AUTHOR;
-        name = name;
+        name = NAME;
         url = URL;
         units[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "A3_UI_F", "cba_main", "cba_xeh"
-        };
+        requiredAddons[] = {"A3_UI_F","cba_main","cba_xeh"};
         version = VERSION;
-        authors[] = {
-            "MitchJC", "Mokka"
-        };
+        authors[] = {"MitchJC", "Mokka"};
         weapons[] = {};
     };
 };
 
 class CfgVehicles
 {
-    class logic;
-    class module_F : logic
+    class Logic;
+    class Module_F: Logic
     {
         class AttributesBase
         {
@@ -35,8 +31,8 @@ class CfgVehicles
             class ModuleDescription;
             class Units;
         };
-        
-        class moduleDescription
+
+        class ModuleDescription
         {
             class AnyBrain;
         };
@@ -49,12 +45,12 @@ class CfgVehicles
     #include "ModuleVehicleCam.hpp"
 };
 
-class CfgfactionClasses
+class CfgFactionClasses
 {
     class NO_CATEGORY;
-    class TFS_CommandCentre : NO_CATEGORY
+    class TFS_CommandCentre: NO_CATEGORY
     {
-        displayname = "TF Sentinel Command Center";
+        displayName = "TF Sentinel Command Center";
     };
 };
 
@@ -62,7 +58,8 @@ class CfgfactionClasses
 #include "GUI\DialogStationaryRadio.hpp"
 #include "GUI\DialogScreen.hpp"
 
-class CfgFunctions
-{
-    #include "CfgFunctions.hpp"
+
+class CfgFunctions {
+
+    #include "cfgFunctions.hpp"
 };

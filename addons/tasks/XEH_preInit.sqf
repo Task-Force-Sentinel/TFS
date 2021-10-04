@@ -1,23 +1,24 @@
 #include "script_component.hpp"
-ADdoN = false;
+ADDON = false;
 
-PREP_REcompile_START;
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-PREP_REcompile_END;
+PREP_RECOMPILE_END;
 
 if (isServer) then {
+
     GVAR(tasks) = createHashMap;
     GVAR(tasksArray) = [];
-    
-    // load tasks from config
+
+    // Load tasks from config
     {
-        private _taskconfigname = configname _x;
-        private _tasknamespace = [_x] call EFUNC(common, readConfigtonamespace);
-        _tasknamespace setVariable ["taskconfigname", _taskconfigname];
-        
-        GVAR(tasks) set [_taskconfigname, _tasknamespace];
-        GVAR(tasksArray) pushBack _tasknamespace;
+        private _taskConfigName = configName _x;
+        private _taskNamespace = [_x] call EFUNC(common,readConfigToNamespace);
+        _taskNamespace setVariable ["taskConfigName", _taskConfigName];
+
+        GVAR(tasks) set [_taskConfigName, _taskNamespace];
+        GVAR(tasksArray) pushBack _taskNamespace;
     } forEach ("true" configClasses (missionConfigFile >> "CfgTasks"));
 };
 
-ADdoN = true;
+ADDON = true;

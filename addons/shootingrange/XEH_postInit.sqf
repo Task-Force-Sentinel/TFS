@@ -1,17 +1,17 @@
 #include "script_component.hpp"
 
 [QGVAR(logResult), {
-    inFO_1("%1", _this call FUNC(textsintolocalizedstring));
+    INFO_1("%1",_this call FUNC(textsIntoLocalizedString));
 }] call CBA_fnc_addEventHandler;
 
-// exit on Server and Headless Client
-if (!hasinterface) exitwith {};
+// Exit on Server and Headless Client
+if (!hasInterface) exitWith {};
 
 [QGVAR(playSignal), {
     (_this select 0) say3D [_this select 1, _this select 2];
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(notifyplayer), {
+[QGVAR(notifyPlayer), {
     params ["_texts", "_size"];
-    [[_texts] call FUNC(textsintolocalizedstring), _size] call ACEFUNC(common, displaytextstructured);
+    [[_texts] call FUNC(textsIntoLocalizedString), _size] call ACEFUNC(common,displayTextStructured);
 }] call CBA_fnc_addEventHandler;

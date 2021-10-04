@@ -1,28 +1,28 @@
 [
     QGVAR(isJIPAllowed),
-    "list",
-    ["JIP allowed", "if disallowed JIP players are placed in spectator. Only affects TFS spectator."],
+    "LIST",
+    ["JIP allowed", "If disallowed JIP players are placed in spectator. Only affects TFS spectator."],
     ["TFS", "Spectator"],
-    [[0, 1, 2], ["Disallow", "Allow", "During Safestart"], 2],
+    [[0,1,2],["Disallow", "Allow", "During Safestart"],2],
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 [
-    QGVAR(showgroupMarkers),
-    "list",
+    QGVAR(showGroupMarkers),
+    "LIST",
     ["Show 3D group markers", ""],
     ["TFS", "Spectator"],
-    [[0, 1], ["groups with players only", "All"], 0],
+    [[0,1],["Groups with players only", "All"], 0],
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(followCameraEnabled),
     "CHECKBOX",
-    ["Follow camera mode enabled", "Allow the usage of the orbiting camera mode"],
+    ["Follow camera mode enabled", "Allow the usage of the Orbiting camera mode"],
     ["TFS", "Spectator"],
     true,
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 [
     QGVAR(freeCameraEnabled),
     "CHECKBOX",
@@ -30,7 +30,7 @@
     ["TFS", "Spectator"],
     true,
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 [
     QGVAR(firstPersonCameraEnabled),
     "CHECKBOX",
@@ -38,12 +38,12 @@
     ["TFS", "Spectator"],
     true,
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 [
-    QGVAR(canSpectateAllsides),
+    QGVAR(canSpectateAllSides),
     "CHECKBOX",
     ["Spectate all sides", "Disable to only allow the player to spectate their own side"],
     ["TFS", "Spectator"],
     true,
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;

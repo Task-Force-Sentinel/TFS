@@ -1,19 +1,19 @@
 #include "script_component.hpp"
-ADdoN = false;
+ADDON = false;
 
-PREP_REcompile_START;
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-PREP_REcompile_END;
+PREP_RECOMPILE_END;
 
-#include "initsettings.sqf"
+#include "initSettings.sqf"
 
-if (hasinterface) then {
+if (hasInterface) then {
     // Save current time delay in case it changes (to adjust remaining respawn time)
-    GVAR(oldtime) = GVAR(time);
+    GVAR(oldTime) = GVAR(time);
     // Support variable in case respawn gets disabled, so when reenabled timer can continue
     GVAR(timeElapsed) = 0;
     // Equipment saved for respawn
     GVAR(savedEquipment) = [];
 };
 
-ADdoN = true;
+ADDON = true;

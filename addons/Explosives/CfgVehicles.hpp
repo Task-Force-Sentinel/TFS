@@ -1,7 +1,7 @@
 class CfgVehicles
 {
-    class logic;
-    class module_F: logic
+    class Logic;
+    class Module_F: Logic
     {
         class AttributesBase
         {
@@ -10,17 +10,17 @@ class CfgVehicles
             class Combo;
             class Checkbox;
             class CheckboxNumber;
-            class moduleDescription;
+            class ModuleDescription;
             class Units;
         };
-        
-        class moduleDescription
+
+        class ModuleDescription
         {
-            class Anyplayer;
+            class AnyPlayer;
             class AnyBrain;
             class EmptyDetector;
         };
     };
-    
+
     #include "MakeIEDModule.hpp"
 };

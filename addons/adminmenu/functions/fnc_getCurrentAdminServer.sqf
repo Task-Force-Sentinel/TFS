@@ -1,17 +1,17 @@
 #include "\z\tfs\addons\adminmenu\script_component.hpp"
 
-if (!isServer) exitwith {};
+if (!isServer) exitWith {};
 
 private _adminId = -1;
 {
-    if (admin owner _x > 0) exitwith {
+    if (admin owner _x > 0) exitWith {
         _adminId = owner _x;
     };
-} forEach allplayers;
+} forEach allPlayers;
 
-if (_adminId isEqualto -1) exitwith {
-    GVAR(currentadmin) = "nobody";
-    remoteExecutedOwner publicVariableClient QGVAR(currentadmin);
+if (_adminId isEqualTo -1) exitWith {
+    GVAR(currentAdmin) = "nobody";
+    remoteExecutedOwner publicVariableClient QGVAR(currentAdmin);
 };
 
-[remoteExecutedOwner, admin _adminId] remoteExec [QFUNC(getCurrentadminClient), _adminId];
+[remoteExecutedOwner, admin _adminId] remoteExec [QFUNC(getCurrentAdminClient), _adminId];

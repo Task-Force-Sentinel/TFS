@@ -1,37 +1,35 @@
 #include "script_component.hpp"
 /*
-* Author: Jonpas
-* Pops targets on trigger.
-*
-* Arguments:
-* 0: Target <OBJECT>
-* 1: State (Up = 0, down = 1) <BOOL>
-*
-* Return Value:
-* None
-*
-* Example:
-* [target, 0] call TFS_shootingrange_fnc_triggerPopup;
-*
-* Public: No
-*/
+ * Author: Jonpas
+ * Pops targets on trigger.
+ *
+ * Arguments:
+ * 0: Target <OBJECT>
+ * 1: State (Up = 0, Down = 1) <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [target, 0] call TFS_shootingrange_fnc_triggerPopup;
+ *
+ * Public: No
+ */
 
 params ["_target", "_state"];
 
-private _targetgroup = _target getVariable [QGVAR(targetgroup), []];
+private _targetGroup = _target getVariable [QGVAR(targetGroup), []];
 
-if (_targetgroup isEqualto []) exitwith {
-    ERRor("Target group empty!");
-};
+if (_targetGroup isEqualTo []) exitWith { ERROR("Target Group empty!"); };
 
 {
-    // animate only targets that haven't been cleared yet
+    // Animate only targets that haven't been cleared yet
     if !(_x getVariable [QGVAR(hit), false]) then {
         [_x, _state] call FUNC(animateTarget);
     };
-} forEach _targetgroup;
+} forEach _targetGroup;
 
-private _targetinvalidgroup = _target getVariable [QGVAR(targetinvalidgroup), []];
+private _targetInvalidGroup = _target getVariable [QGVAR(targetInvalidGroup), []];
 {
     [_x, _state] call FUNC(animateTarget);
-} forEach _targetinvalidgroup;
+} forEach _targetInvalidGroup;

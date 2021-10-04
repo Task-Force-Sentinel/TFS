@@ -1,7 +1,10 @@
-class TFS_player {
+
+class TFS_Player {
+
     tag = "TFS";
-    class player {
-        file = "z\tfs\Addons\player\Functions";
-        class Configplayer {};
+    class Player {
+
+        file = "z\tfs\Addons\Player\Functions";
+        class ConfigPlayer {};
     };
 };

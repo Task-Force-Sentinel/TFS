@@ -2,53 +2,49 @@
 
 disableSerialization;
 
-params ["_ctrlCombofaction", "_index"];
-private _faction = _ctrlCombofaction lbData _index;
+params ["_ctrlComboFaction", "_index"];
+private _faction = _ctrlComboFaction lbData _index;
 
 private _factionConfig = configNull;
-if ((_ctrlCombofaction lbValue _index) isEqualto 1) then {
-    _factionConfig = (missionConfigFile >> "Cfgloadouts" >> _faction);
+if ((_ctrlComboFaction lbValue _index) isEqualTo 1) then {
+    _factionConfig = (missionConfigFile >> "CfgLoadouts" >> _faction);
 } else {
-    _factionConfig = (configFile >> "Cfgloadouts" >> _faction);
+    _factionConfig = (configFile >> "CfgLoadouts" >> _faction);
 };
 
-private _roles = ("true" configClasses _factionConfig) apply {
-    [format ["%1 [%2]", gettext (_x >> "displayname"), configname _x], toLower configname _x]
-};
+private _roles = ("true" configClasses _factionConfig) apply {[format ["%1 [%2]", getText (_x >> "displayName"), configName _x], toLower configName _x]};
 _roles sort true;
-private _rolesSimple = _roles apply {
-    _x select 1
-};
+private _rolesSimple = _roles apply {_x select 1};
 private _tickCheckbox = false;
 
 {
-    (_x getVariable [QGVAR(association), [objNull, controlnull]]) params ["_player", "_ctrlComborole"];
-    
-    private _playerRole = toLower (_player getVariable [QEGVAR(assigngear, role), ""]);
-    if (_playerRole isEqualto "" || !(_playerRole in _rolesSimple)) then {
+    (_x getVariable [QGVAR(association), [objNull, controlNull]]) params ["_player", "_ctrlComboRole"];
+
+    private _playerRole = toLower (_player getVariable [QEGVAR(assigngear,role), ""]);
+    if (_playerRole isEqualTo "" || !(_playerRole in _rolesSimple)) then {
         _playerRole = "r";
         _tickCheckbox = true;
     };
-    
-    while {(count _roles) < (lbsize _ctrlComborole)} do {
-        _ctrlComborole lbDelete ((lbsize _ctrlComborole) - 1);
+
+    while {(count _roles) < (lbSize _ctrlComboRole)} do {
+        _ctrlComboRole lbDelete ((lbSize _ctrlComboRole) - 1);
     };
-    
+
     {
-        if (_forEachindex >= (lbsize _ctrlComborole)) then {
-            _ctrlComborole lbAdd (_x select 0);
+        if (_forEachIndex >= (lbSize _ctrlComboRole)) then {
+            _ctrlComboRole lbAdd (_x select 0);
         } else {
-            _ctrlComborole lbsettext [_forEachindex, _x select 0];
+            _ctrlComboRole lbSetText [_forEachIndex, _x select 0];
         };
-        
-        _ctrlComborole lbsetData [_forEachindex, _x select 1];
-        if ((_x select 1) isEqualto _playerRole) then {
-            _ctrlComborole lbsetCurSel _forEachindex;
+
+        _ctrlComboRole lbSetData [_forEachIndex, _x select 1];
+        if ((_x select 1) isEqualTo _playerRole) then {
+            _ctrlComboRole lbSetCurSel _forEachIndex;
         };
     } forEach _roles;
-    
+
     if (_tickCheckbox) then {
-        _x cbsetChecked true;
+        _x cbSetChecked true;
         _tickCheckbox = false;
     };
 } forEach GVAR(utility_assigngear_rolectrls);

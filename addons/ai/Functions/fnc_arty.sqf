@@ -1,15 +1,10 @@
-params ["_logic", "_units", "_activated"];
+params ["_logic","_units","_activated"];
 #include "\z\tfs\addons\ai\script_component.hpp"
 
-if (!_activated) exitwith {};
 
-private _areas = (synchronizedObjects _logic) select {
-    _x isKindOf QGVAR(area)
-};
-private _vehicles = (synchronizedObjects _logic) select {
-    !(_x isKindOf QGVAR(area))
-};
+if(!_activated) exitwith {};
 
-[{
-    _this call FUNC(doArty);
-}, [_logic, _areas, _vehicles]] call CBA_fnc_execNextFrame;
+private _areas = (synchronizedObjects _logic) select {_x isKindOf QGVAR(area)};
+private _vehicles = (synchronizedObjects _logic) select { !(_x isKindOf QGVAR(area)) };
+
+[{_this call FUNC(doArty);},[_logic,_areas,_vehicles]] call CBA_fnc_execNextFrame;

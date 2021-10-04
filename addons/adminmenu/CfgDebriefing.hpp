@@ -6,7 +6,7 @@ class CfgDebriefing
         description = "";
         subtitle = "";
         pictureBackground = "";
-        picture = "\a3\3DEN\Data\Attributes\TaskStates\succeeded_ca.paa";
+        picture = "\a3\3den\Data\Attributes\TaskStates\succeeded_ca.paa";
         pictureColor[] = {1.0,1.0,1.0,1};
     };
 
@@ -16,7 +16,7 @@ class CfgDebriefing
         description = "";
         subtitle = "";
         pictureBackground = "";
-        picture = "\a3\3DEN\Data\Attributes\TaskStates\failed_ca.paa";
+        picture = "\a3\3den\Data\Attributes\TaskStates\failed_ca.paa";
         pictureColor[] = {1.0,1.0,1.0,1};
     };
 
@@ -26,7 +26,7 @@ class CfgDebriefing
         description = "";
         subtitle = "";
         pictureBackground = "";
-        picture = "\a3\3DEN\Data\Attributes\TaskStates\canceled_ca.paa";
+        picture = "\a3\3den\Data\Attributes\TaskStates\canceled_ca.paa";
         pictureColor[] = {1.0,1.0,1.0,1};
     };
 

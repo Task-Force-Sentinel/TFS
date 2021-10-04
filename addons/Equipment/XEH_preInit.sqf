@@ -1,9 +1,9 @@
 #include "script_component.hpp"
 
-ADdoN = false;
+ADDON = false;
 
-if (isnil QEGVAR(common, TFS_enabled) || !(EGVAR(common, TFS_enabled))) exitwith {};
+if (isNil QEGVAR(common,TFS_enabled) || !(EGVAR(common,TFS_enabled))) exitWith {};
 
 #include "XEH_PREP.hpp"
 
-ADdoN = true;
+ADDON = true;

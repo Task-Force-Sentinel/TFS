@@ -3,25 +3,23 @@
 disableSerialization;
 params ["_display"];
 
-private _ctrlSpectatorlistBox = (_display displayCtrl IDC_TFS_adminMENU_RESP_SPECTAtorlist);
+private _ctrlSpectatorListBox = (_display displayCtrl IDC_TFS_ADMINMENU_RESP_SPECTATORLIST);
 
-private _selection = _ctrlSpectatorlistBox lbtext (lbCurSel _ctrlSpectatorlistBox);
+private _selection = _ctrlSpectatorListBox lbText (lbCurSel _ctrlSpectatorListBox);
 private _obj = objNull;
 {
-    private _name = _x getVariable ["TFS_spectator_name", name _x];
-    if (_selection == _name) exitwith {
+    private _name = _x getVariable ["TFS_spectator_name",name _x];
+    if (_selection == _name) exitWith {
         _obj = _x;
     };
-} forEach GVAR(spectatorlist);
+} forEach GVAR(spectatorList);
 
 if (!(isNull _obj)) then {
-    private _role = lbCurSel (_display displayCtrl IDC_TFS_adminMENU_RESP_ROLECOMBO);
-    // Role
-    private _rank = GVAR(respawn_rank);
-    // rank
+    private _role = lbCurSel (_display displayCtrl IDC_TFS_ADMINMENU_RESP_ROLECOMBO); // Role
+    private _rank = GVAR(respawn_rank); // Rank
     
-    GVAR(selectedRespawngroup) pushBack [_rank, _obj, _role];
+    GVAR(selectedRespawnGroup) pushBack [_rank,_obj,_role];
 };
 
-[_display] call FUNC(respawn_refreshSpectatorlist);
-[_display] call FUNC(respawn_refreshgroupBox);
+[_display] call FUNC(respawn_refreshSpectatorList);
+[_display] call FUNC(respawn_refreshGroupBox);

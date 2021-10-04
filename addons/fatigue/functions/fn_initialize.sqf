@@ -1,20 +1,20 @@
 /*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\fatigue\functions\fn_initialize.sqf
-*	by Ojemineh
-*
-*	initialize fatigue addon
-*
-*	Arguments:
-*	nothing
-*
-*	Return:
-*	nothing
-*
-*	Example:
-*	[] call TFS_fatigue_fnc_initialize;
-*
-*/
+ * ARMA EXTENDED ENVIRONMENT
+ * \z\tfs\addons\fatigue\functions\fn_initialize.sqf
+ * by Ojemineh
+ * 
+ * initialize fatigue addon
+ * 
+ * Arguments:
+ * nothing
+ * 
+ * Return:
+ * nothing
+ * 
+ * Example:
+ * [] call TFS_fatigue_fnc_initialize;
+ * 
+ */
 
 // -------------------------------------------------------------------------------------------------
 

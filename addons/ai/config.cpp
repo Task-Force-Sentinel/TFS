@@ -19,10 +19,10 @@ class cfgPatches
 #include "CfgWaypoints.hpp"
 #include "CfgModules.hpp"
 
-class CfgFunctions
-{
 
-#include "CfgFunctions.hpp"
+class CfgFunctions {
+
+    #include "CfgFunctions.hpp"
 };
 
 class Extended_PreInit_EventHandlers

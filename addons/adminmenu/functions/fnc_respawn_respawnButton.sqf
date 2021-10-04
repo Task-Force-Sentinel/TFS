@@ -3,29 +3,26 @@
 disableSerialization;
 params ["_display"];
 
-if (count GVAR(selectedRespawngroup) < 1) exitwith {
-    hint "No players selected";
-};
+ 
+ if (count GVAR(selectedRespawnGroup) < 1) exitWith { hint "No players selected"; };
+   
+private _groupName = ctrlText (_display displayCtrl IDC_TFS_ADMINMENU_RESP_GROUPNAME);
 
-private _groupname = ctrltext (_display displayCtrl IDC_TFS_adminMENU_RESP_groupname);
-
-// respawnMenufactions control.
+// respawnMenuFactions control.
 private _control = (_display displayCtrl 26928);
 private _faction = _control lbData (lbCurSel _control);
 
-private _markername = ctrltext (_display displayCtrl IDC_TFS_adminMENU_RESP_groupMARKERname);
-private _markertype = lbCurSel (_display displayCtrl IDC_TFS_adminMENU_RESP_markertype);
-// type == -1 if no spawn marker
-private _markerColor =lbCurSel (_display displayCtrl IDC_TFS_adminMENU_RESP_MARKERCOLOUR);
+private _markerName = ctrlText (_display displayCtrl IDC_TFS_ADMINMENU_RESP_GROUPMARKERNAME);
+private _markerType = lbCurSel (_display displayCtrl IDC_TFS_ADMINMENU_RESP_MARKERTYPE); // type == -1 if no spawn marker
+private _markerColor =lbCurSel (_display displayCtrl IDC_TFS_ADMINMENU_RESP_MARKERCOLOUR);
 
-private _useMarker = cbChecked (_display displayCtrl IDC_TFS_adminMENU_RESP_groupMARKERCHECKBOX);
-if (!_useMarker) then {
-    // GVAR(respawngroupMarkerCheckBoxVal)
-    _markertype = -1;
-};
-
+private _useMarker = cbChecked (_display displayCtrl IDC_TFS_ADMINMENU_RESP_GROUPMARKERCHECKBOX);
+if (!_useMarker) then { //GVAR(respawnGroupMarkerCheckBoxVal)
+    _markerType = -1;  
+}; 
+        
 // Hand over control to the map dialog.
-closedialog IDD_TFS_adminMENU;
-createdialog QGVAR(respawnMapdialog);
+closeDialog IDD_TFS_ADMINMENU;
+createDialog QGVAR(respawnMapDialog);
 
-GVAR(respawnGuiparameters) = [_faction, _groupname, _markertype, _markerColor, _markername];
+GVAR(respawnGuiParameters) = [_faction, _groupName, _markerType, _markerColor, _markerName];

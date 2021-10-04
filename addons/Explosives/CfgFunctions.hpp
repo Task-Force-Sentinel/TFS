@@ -1,12 +1,14 @@
-class TFS_explosives {
+class TFS_Explosives {
+
     tag = "TFS";
-    class explosives {
-        file = "z\tfs\addons\explosives\Functions";
+    class Explosives {
+
+        file = "z\tfs\addons\Explosives\Functions";
         class CrashSite {};
-        class IEDvehicle {};
+        class IEDVehicle {};
         class MakeIED {};
-        class spawnexplosives {};
-        class moduleMakeIED {};
+        class SpawnExplosives {};
+        class ModuleMakeIED {};
         class MakeIEDZeusWrapper {};
     };
 };

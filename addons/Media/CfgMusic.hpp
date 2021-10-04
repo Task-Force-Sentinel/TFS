@@ -3,64 +3,48 @@ class CfgMusic
     tracks[] = {};
     class Denied
     {
-        name = "Denied";
-        sound[] = {
-            "z\tfs\addons\media\Sounds\Denied.ogg", 1, 1, 100
-        };
-        titles[] = {
-            0, ""
-        };
+        name  = "Denied";
+        sound[]  = { "z\tfs\addons\media\Sounds\Denied.ogg", 1, 1, 100 };
+        titles[] = { 0, "" };
     };
-    
+
     class AirRaid
     {
-        name = "AirRaid";
-        sound[] = {
-            "z\tfs\addons\media\Sounds\AirRaid.ogg", 1, 1, 100
-        };
-        titles[] = {
-            0, ""
-        };
+        name  = "AirRaid";
+        sound[]  = { "z\tfs\addons\media\Sounds\AirRaid.ogg", 1, 1, 100 };
+        titles[] = { 0, "" };
     };
-    
+
     class NukeAlarm
     {
-        name = "NukeAlarm";
-        sound[] = {
-            "z\tfs\addons\media\Sounds\NukeAlarm.ogg", 1, 1, 100
-        };
-        titles[] = {
-            0, ""
-        };
+        name  = "NukeAlarm";
+        sound[]  = { "z\tfs\addons\media\Sounds\NukeAlarm.ogg", 1, 1, 100 };
+        titles[] = { 0, "" };
     };
-    
-    class windows
+
+    class Windows
     {
-        name = "windows";
-        sound[] = {
-            "z\tfs\addons\media\Sounds\windows.ogg", 1, 1, 100
-        };
-        titles[] = {
-            0, ""
-        };
+        name  = "Windows";
+        sound[]  = { "z\tfs\addons\media\Sounds\Windows.ogg", 1, 1, 100 };
+        titles[] = { 0, "" };
     };
 };
 class CfgMusicClasses
 {
     class Tears_of_the_sun {
-        displayname = "Tears of the Sun";
+        displayName = "Tears of the Sun";
     };
-    
+
     class Horror {
-        displayname = "Horror";
+        displayName = "Horror";
     };
-    
+
     class Misc {
-        displayname = "Sonstiges";
+        displayName = "Sonstiges";
     };
-    
+
     class Contact {
-        displayname = "Contact";
+        displayName = "Contact";
     };
 };
 

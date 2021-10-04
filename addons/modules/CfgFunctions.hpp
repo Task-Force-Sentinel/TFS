@@ -1,29 +1,35 @@
 class CfgFunctions {
-    class TFS_modules {
+    
+    class TFS_Modules {
+        
         tag = QUOTE(PREFIX);
         
-        class modules {
+        class Modules {
             file = "z\tfs\addons\modules\functions";
             class initialize {};
-            class initsettings {};
+            class initSettings {};
         };
+        
     };
     
     class TFS_Functions {
+        
         tag = "tfs";
         
-        class modules_Sound {
+        class Modules_Sound {
             file = "z\tfs\addons\modules\functions\sound";
             class moduleAmbientSound {};
             class moduleTriggerSound {};
         };
         
-        class modules_Speech {
+        class Modules_Speech {
             file = "z\tfs\addons\modules\functions\speech";
             class moduleGlobalSpeech {};
             class moduleGlobalSpeechMenu {};
             class moduleGlobalSpeechPlay {};
             class moduleTriggerSpeech {};
         };
+        
     };
+    
 };

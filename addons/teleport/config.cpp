@@ -7,7 +7,7 @@ class cfgPatches
         name = COMPONENT_NAME;
         author = "Head";
         url = URL;
-        units[] = {QGVAR(module), QGVAR(deploy)};
+        units[] = {QGVAR(module),QGVAR(deploy)};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"TFS_common"};
@@ -17,6 +17,7 @@ class cfgPatches
 
 #include "CfgEventHandlers.hpp"
 #include "CfgModules.hpp"
+
 
 class CfgWaypoints
 {

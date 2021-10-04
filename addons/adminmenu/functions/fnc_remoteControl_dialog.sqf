@@ -3,45 +3,43 @@
 disableSerialization;
 params ["_ctrlBackground"];
 
-if (isnil QGVAR(remoteControlunits) || {
-    GVAR(remoteControlunits) isEqualto []
-}) exitwith {
-    systemChat "[TFS admin Menu] No unit candidates for remote control";
+if (isNil QGVAR(remoteControlUnits) || {GVAR(remoteControlUnits) isEqualTo []}) exitWith {
+    systemChat "[TFS Admin Menu] No unit candidates for remote control";
 };
 
 private _display = ctrlParent _ctrlBackground;
-private _dialogposition = ctrlposition _ctrlBackground;
+private _dialogPosition = ctrlPosition _ctrlBackground;
 
-private _ctrllist = _display ctrlCreate [QGVAR(RsclistBox), -1];
-_ctrllist ctrlsetPosition [(_dialogposition # 0) + 0.1 * TFS_adminMENU_STD_WIDTH, (_dialogposition # 1) + 0.1 * TFS_adminMENU_STD_HEIGHT, (_dialogposition # 2) - (0.2 * TFS_adminMENU_STD_WIDTH), (_dialogposition # 3) - (0.2 * TFS_adminMENU_STD_HEIGHT)];
-_ctrllist ctrlCommit 0;
+private _ctrlList = _display ctrlCreate [QGVAR(RscListBox), -1];
+_ctrlList ctrlSetPosition [(_dialogPosition # 0) + 0.1 * TFS_ADMINMENU_STD_WIDTH, (_dialogPosition # 1) + 0.1 * TFS_ADMINMENU_STD_HEIGHT, (_dialogPosition # 2) - (0.2 * TFS_ADMINMENU_STD_WIDTH), (_dialogPosition # 3) - (0.2 * TFS_ADMINMENU_STD_HEIGHT)];
+_ctrlList ctrlCommit 0;
 {
     private _name = _x # 1;
     private _turretPath = _x # 3;
-    if !(_turretPath isEqualto [] || _turretPath isEqualto [-1]) then {
-        _name = gettext (([GVAR(remoteControlunits) # 1, _turretPath] call BIS_fnc_turretConfig) >> "gunnername");
+    if !(_turretPath isEqualTo [] || _turretPath isEqualTo [-1]) then {
+        _name = getText (([GVAR(remoteControlUnits) # 1, _turretPath] call BIS_fnc_turretConfig) >> "gunnerName");
     };
-    private _i = _ctrllist lbAdd _name;
-    _ctrllist lbsettextRight [_i, gettext (configFile >> "Cfgvehicles" >> typeOf (_x # 0) >> "displayname")];
-    _ctrllist lbsettooltip [_i, format ["Turret Path: %1\nFFV: %2", _x # 3, _x # 4]];
-    _ctrllist lbsetpicture [_i, format ["\A3\Ui_f\data\GUI\Cfg\ranks\%1_gs.paa", rank (_x # 0)]];
-    _ctrllist lbsetpictureColor [_i, [1, 1, 1, 1]];
-} forEach (GVAR(remoteControlunits) # 0);
-_ctrllist lbsetCurSel 0;
+    private _i = _ctrlList lbAdd _name;
+    _ctrlList lbSetTextRight [_i, getText (configFile >> "CfgVehicles" >> typeOf (_x # 0) >> "displayName")];
+    _ctrlList lbSetTooltip [_i, format ["Turret Path: %1\nFFV: %2", _x # 3, _x # 4]];
+    _ctrlList lbSetPicture [_i, format ["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", rank (_x  # 0)]];
+    _ctrlList lbSetPictureColor [_i, [1, 1, 1, 1]];
+} forEach (GVAR(remoteControlUnits) # 0);
+_ctrlList lbSetCurSel 0;
 
 private _ctrlOK = _display ctrlCreate [QGVAR(RscButtonMenu), -1];
-_ctrlOK ctrlsettext "Control";
-_ctrlOK ctrlsetPosition [(_dialogposition # 0) + 0.67 * (_dialogposition # 2), (_dialogposition # 1) + (_dialogposition # 3) + 0.1 * TFS_adminMENU_STD_HEIGHT, 0.33 * (_dialogposition # 2), TFS_adminMENU_STD_HEIGHT];
+_ctrlOK ctrlSetText "Control";
+_ctrlOK ctrlSetPosition [(_dialogPosition # 0) + 0.67 * (_dialogPosition # 2), (_dialogPosition # 1) + (_dialogPosition # 3) + 0.1 * TFS_ADMINMENU_STD_HEIGHT, 0.33 * (_dialogPosition # 2), TFS_ADMINMENU_STD_HEIGHT];
 _ctrlOK ctrlCommit 0;
-_ctrlOK setVariable [QGVAR(association), _ctrllist];
+_ctrlOK setVariable [QGVAR(association), _ctrlList];
 _ctrlOK ctrlAddEventHandler ["buttonClick", {
     params ["_ctrlOK"];
-    
-    private _listindex = lbCurSel (_ctrlOK getVariable [QGVAR(association), controlnull]);
-    private _unit = ((GVAR(remoteControlunits) # 0) # _listindex) # 0;
-    
-    closedialog 0;
-    
+
+    private _listIndex = lbCurSel (_ctrlOK getVariable [QGVAR(association), controlNull]);
+    private _unit = ((GVAR(remoteControlUnits) # 0) # _listIndex) # 0;
+
+    closeDialog 0;
+
     [_unit, true, true] call FUNC(remoteControl);
-    GVAR(remoteControlunits) = nil;
+    GVAR(remoteControlUnits) = nil;
 }];

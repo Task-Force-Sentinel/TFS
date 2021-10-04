@@ -1,9 +1,8 @@
 #include "..\script_component.hpp"
 
-class CfgPatches
-{
-    class TFS_Medical_Supplies
-    {
+class CfgPatches {
+    
+    class TFS_Medical_Supplies {
         name = "$STR_TFS_Medical_Supplies_Title";
         addonRootClass = "TFS_Medical";
         requiredVersion = REQUIRED_VERSION;
@@ -19,13 +18,14 @@ class CfgPatches
             "TFS_FirstAid",
             "TFS_MedicKit"
         };
-        author = AUTHOR;
+        author = "$STR_TFS_Medical_Supplies_Author";
         authors[] = {
             "O. Jemineh"
         };
-        url = URL;
+        url = "$STR_TFS_Medical_Supplies_URL";
         VERSION_CONFIG;
     };
+    
 };
 
 #include "CfgEventHandlers.hpp"

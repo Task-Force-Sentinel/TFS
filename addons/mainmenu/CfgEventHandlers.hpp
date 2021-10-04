@@ -1,5 +1,7 @@
-class Extended_Displayload_EventHandlers {
+class Extended_DisplayLoad_EventHandlers {
+    
     class RscDisplayMain {
-        TFS_MainMenu_EH_versioninfo = "_this call compile preprocessFileLineNumbers '\z\tfs\addons\mainmenu\scripts\versioninfo.sqf'";
+        TFS_MainMenu_EH_versionInfo = "_this call compile preprocessfilelinenumbers '\z\tfs\addons\mainmenu\scripts\versionInfo.sqf'";
     };
+    
 };

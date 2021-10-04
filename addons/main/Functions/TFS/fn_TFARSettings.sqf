@@ -1,18 +1,13 @@
-// not documented: postinit
+// not documented: postInit
 
-if (isServer) then {
-    {
-        _x setspeaker "NoVoice"
-    } forEach playableunits;
-};
-// Here because it has nowhere else to go!
+if (isserver) then {{_x setSpeaker "NoVoice"} forEach playableUnits;}; // Here because it has nowhere else to go!
 
 if (!hasinterface) exitwith {};
 
 if !(isClass (configFile >> "CfgPatches" >> "task_force_radio")) exitwith {};
 
-if (isnil "TFS_Main_TFARTransmitRange") exitwith {};
-player setVariable ["tf_sendingdistanceMultiplicator", TFS_Main_TFARTransmitRange];
+if (isNil "TFS_Main_TFARTransmitRange") exitwith {};
+player setVariable ["tf_sendingDistanceMultiplicator", TFS_Main_TFARTransmitRange];
 
-if (isnil "TFS_Main_TFARTerraininterference") exitwith {};
-player setVariable ["TF_terrain_interception_coefficient", TFS_Main_TFARTerraininterference];
+if (isNil "TFS_Main_TFARTerrainInterference") exitwith {};
+player setVariable ["TF_terrain_interception_coefficient", TFS_Main_TFARTerrainInterference];

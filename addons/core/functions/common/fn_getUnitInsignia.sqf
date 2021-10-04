@@ -1,20 +1,20 @@
-/*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\common\fn_getUnitinsignia.sqf
-*	by Ojemineh
-*
-*	get unit insignia
-*
-*	Arguments:
-*	0: unit - <OBJECT>
-*
-*	Return:
-*	<strinG>
-*
-*	Example:
-*	[player] call TFS_fnc_getUnitinsignia;
-*
-*/
+﻿/*
+ * ARMA EXTENDED ENVIRONMENT
+ * \z\tfs\addons\core\functions\common\fn_getUnitInsignia.sqf
+ * by Ojemineh
+ * 
+ * get unit insignia
+ * 
+ * Arguments:
+ * 0: unit - <OBJECT>
+ * 
+ * Return:
+ * <STRING>
+ * 
+ * Example:
+ * [player] call TFS_fnc_getUnitInsignia;
+ * 
+ */
 
 // -------------------------------------------------------------------------------------------------
 
@@ -24,12 +24,10 @@ _unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-if (isNull _unit) exitwith {
-    ""
-};
+if (isNull _unit) exitWith {""};
 
 // -------------------------------------------------------------------------------------------------
 
-private _return = _unit getVariable ["BIS_fnc_setUnitinsignia_class", ""];
+private _return = _unit getVariable ["BIS_fnc_setUnitInsignia_class", ""];
 
 _return;

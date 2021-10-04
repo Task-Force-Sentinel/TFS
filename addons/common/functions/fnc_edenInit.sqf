@@ -1,112 +1,91 @@
 #include "\z\tfs\addons\common\script_component.hpp"
 /*
-* name: TFS_common_fnc_edeninit
-* Author: Nick
-*
-* Arguments:
-* None
-*
-* Return:
-* nil
-*
-* Description:
-* set up the needed EH
-*
-*/
+ * Name: TFS_common_fnc_edenInit
+ * Author: Nick
+ *
+ * Arguments:
+ * None
+ *
+ * Return:
+ * nil
+ *
+ * Description:
+ * Set up the needed EH
+ *
+ */
 
-if !is3DEN exitwith {};
+if !is3DEN exitWith {};
 
-call FUNC(edenDisplayfactionIcons);
+call FUNC(edenDisplayFactionIcons);
 
 // Add mouseOver EH
-private _idx = missionnamespace getVariable [QGVAR(edenDrawIdx), -1];
+private _idx = missionNamespace getVariable [QGVAR(edenDrawIdx),-1];
 if !(_idx == -1) then {
-    removeMissionEventHandler ["Draw3D", _idx];
+    removeMissionEventHandler ["Draw3D",_idx];
 };
 
-_idx = addMissionEventHandler ["Draw3D", FUNC(edenDraw)];
+_idx = addMissionEventHandler ["Draw3D",FUNC(edenDraw)];
 
-GVAR(Garrison) = missionnamespace getVariable [QGVAR(Garrison), false];
-// Will be set on UI onload
-(uiNamespace getVariable [QGVAR(GarrisonControl), controlnull]) cbsetChecked GVAR(Garrison);
-// Reset garrison toggle.
+GVAR(Garrison) = missionNamespace getVariable [QGVAR(Garrison),false]; // Will be set on UI onLoad
+(uiNamespace getVariable [QGVAR(GarrisonControl),controlNull]) cbSetChecked GVAR(Garrison); // Reset garrison toggle.
 GVAR(edenDrawIdx) = _idx;
 GVAR(edenMouseObjects) = [];
 GVAR(mouseKeysPressed) = [];
 GVAR(posIdxs) = [];
 
-// do stuff with mouseOver EH
-// Keydown
-GVAR(edenMouseKeydownIdx) = ((findDisplay 313) displayAddEventHandler ["mouseButtondown", {
+// Do stuff with mouseOver EH
+// KeyDown
+GVAR(edenMouseKeyDownIdx) = ((findDisplay 313) displayAddEventHandler ["mouseButtonDown",{
     GVAR(mouseKeysPressed) pushBackUnique (_this select 1);
-}]);
-// EDEN IDC 313
+}]); // EDEN IDC 313
 // KeyUp
-GVAR(edenMouseKeyUpidx) = ((findDisplay 313) displayAddEventHandler ["mouseButtonUp", {
+GVAR(edenMouseKeyUpIdx) = ((findDisplay 313) displayAddEventHandler ["mouseButtonUp",{
     [_this select 1] call FUNC(edenMouseKeyUp);
     GVAR(mouseKeysPressed) = GVAR(mouseKeysPressed) - [(_this select 1)];
 }]);
 // MouseZchanged
-GVAR(edenMouseZchangedIdx) = ((findDisplay 313) displayAddEventHandler ["mouseZchanged", {
+GVAR(edenMouseZchangedIdx) = ((findDisplay 313) displayAddEventHandler ["mouseZchanged",{
     if (GVAR(Garrison)) then {
         private _A =+ GVAR(posIdxs);
         private _B = [];
-        while {count _A > 0} do {
-            _B pushBack (_A deleteAt floor random count _A)
-        };
+        while {count _A > 0} do {_B pushBack (_A deleteAt floor random count _A)};
         GVAR(posIdxs) = +_B;
     };
 }]);
 
 // Some stuff for hiding map objects
 {
-    {
-        _x hideObjectglobal false
-    } forEach (_x getVariable [QGVAR(intersections), []]);
-    
-    private _ints = [];
-    _ints append lineIntersectsObjs [AGLtoASL(_x modeltoWorld [-2, 0, 0]), AGLtoASL(_x modeltoWorld [2, 0, 0]), objNull, _x, true, 32];
-    _ints append lineIntersectsObjs [AGLtoASL(_x modeltoWorld [0, -2, 0]), AGLtoASL(_x modeltoWorld [0, 2, 0]), objNull, _x, true, 32];
-    _ints append lineIntersectsObjs [AGLtoASL(_x modeltoWorld [0, 0, -2]), AGLtoASL(_x modeltoWorld [0, 0, 2]), objNull, _x, true, 32];
-    
-    _ints = _ints select {
-        !(_x in (all3DENentities select 0))
-    };
-    _ints = _ints arrayintersect _ints;
-    
-    _x setVariable [QGVAR(intersections), _ints];
-    {
-        _x hideObjectglobal true
-    } forEach _ints;
-} forEach ((all3DENentities select 3) select {
-    _x isKindOf QGVAR(hideMapObjects)
-});
+    { _x hideObjectGlobal false } forEach (_x getVariable [QGVAR(intersections),[]]);
 
-add3DENEventHandler ["OnMissionPreviewEnd", {
+    private _ints = [];
+    _ints append lineIntersectsObjs [AGLToASL(_x modelToWorld [-2,0,0]), AGLToASL(_x modelToWorld [2,0,0]), objNull, _x, true, 32];
+    _ints append lineIntersectsObjs [AGLToASL(_x modelToWorld [0,-2,0]), AGLToASL(_x modelToWorld [0,2,0]), objNull, _x, true, 32];
+    _ints append lineIntersectsObjs [AGLToASL(_x modelToWorld [0,0,-2]), AGLToASL(_x modelToWorld [0,0,2]), objNull, _x, true, 32];
+
+    _ints = _ints select {!(_x in (all3DENEntities select 0))};
+    _ints = _ints arrayIntersect _ints;
+
+    _x setVariable [QGVAR(intersections),_ints];
+    { _x hideObjectGlobal true } forEach _ints;
+} forEach ((all3DENEntities select 3) select {_x isKindOf QGVAR(hideMapObjects)});
+
+add3DENEventHandler ["OnMissionPreviewEnd",{
     // Cheat to get OnMissionPreviewEnd working
     0 = [] spawn {
-        uiSleep 0.5;
+        uisleep 0.5;
         {
-            {
-                _x hideObjectglobal false
-            } forEach (_x getVariable [QGVAR(intersections), []]);
-            
+            { _x hideObjectGlobal false } forEach (_x getVariable [QGVAR(intersections),[]]);
+
             private _ints = [];
-            _ints append lineIntersectsObjs [AGLtoASL(_x modeltoWorld [-2, 0, 0]), AGLtoASL(_x modeltoWorld [2, 0, 0]), objNull, _x, true, 32];
-            _ints append lineIntersectsObjs [AGLtoASL(_x modeltoWorld [0, -2, 0]), AGLtoASL(_x modeltoWorld [0, 2, 0]), objNull, _x, true, 32];
-            _ints append lineIntersectsObjs [AGLtoASL(_x modeltoWorld [0, 0, -2]), AGLtoASL(_x modeltoWorld [0, 0, 2]), objNull, _x, true, 32];
-            
-            _ints = _ints select {
-                !(_x in (all3DENentities select 0))
-            };
-            _ints = _ints arrayintersect _ints;
-            
-            _x setVariable [QGVAR(intersections), _ints];
-            {
-                _x hideObjectglobal true
-            } forEach _ints;
-        } forEach ((all3DENentities select 3) select {
-            _x isKindOf QGVAR(hideMapObjects)
-        });
+            _ints append lineIntersectsObjs [AGLToASL(_x modelToWorld [-2,0,0]), AGLToASL(_x modelToWorld [2,0,0]), objNull, _x, true, 32];
+            _ints append lineIntersectsObjs [AGLToASL(_x modelToWorld [0,-2,0]), AGLToASL(_x modelToWorld [0,2,0]), objNull, _x, true, 32];
+            _ints append lineIntersectsObjs [AGLToASL(_x modelToWorld [0,0,-2]), AGLToASL(_x modelToWorld [0,0,2]), objNull, _x, true, 32];
+
+            _ints = _ints select {!(_x in (all3DENEntities select 0))};
+            _ints = _ints arrayIntersect _ints;
+
+            _x setVariable [QGVAR(intersections),_ints];
+            { _x hideObjectGlobal true } forEach _ints;
+        } forEach ((all3DENEntities select 3) select {_x isKindOf QGVAR(hideMapObjects)});
     };
 }];

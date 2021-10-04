@@ -1,32 +1,32 @@
 #include "script_component.hpp"
 /*
-* Author: 3Mydlo3
-* Function adjusts new remaining respawn time with respect to current elapsed time.
-*
-* Arguments:
-* 0: New respawn time delay <NUMBER>
-*
-* Return Value:
-* None
-*
-* Example:
-* [30] call tfs_respawn_fnc_adjusttimelocal
-*
-* Public: No
-*/
+ * Author: 3Mydlo3
+ * Function adjusts new remaining respawn time with respect to current elapsed time.
+ *
+ * Arguments:
+ * 0: New respawn time delay <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [30] call tfs_respawn_fnc_adjustTimeLocal
+ *
+ * Public: No
+ */
 
-params ["_newtime"];
+params ["_newTime"];
 
-if (playerRespawntime isEqualto -1) exitwith {
-    GVAR(oldtime) = _newtime;
+if (playerRespawnTime isEqualTo -1) exitWith {
+    GVAR(oldTime) = _newTime;
     nil
 };
 
 // Calculate current elapsed time and adjust new respawn time
-private _elapsedtime = GVAR(oldtime) - playerRespawntime;
-setPlayerRespawntime (_newtime - _elapsedtime max time_minIMUM);
+private _elapsedTime = GVAR(oldTime) - playerRespawnTime;
+setPlayerRespawnTime (_newTime - _elapsedTime max TIME_MINIMUM);
 
 // Save for further adjustments
-GVAR(oldtime) = _newtime;
+GVAR(oldTime) = _newTime;
 
 nil

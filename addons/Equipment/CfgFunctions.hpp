@@ -1,15 +1,15 @@
 class TFS_Equipment {
+
     tag = "TFS";
     class Equipment {
+
         file = "z\tfs\Addons\Equipment\Functions";
-        class ammoBox {};
+        class AmmoBox {};
         class FullArsenal {};
         class LimitedArsenal {};
-        class loadouts {};
+        class Loadouts {};
         class MedicalSupplies {};
-        class arsenal {
-            postinit = 1;
-        };
-        class ammoCrate {};
+        class arsenal {postInit = 1;};
+        class AmmoCrate {};
     };
 };

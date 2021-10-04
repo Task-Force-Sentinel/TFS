@@ -1,9 +1,9 @@
 #include "script_component.hpp"
 
-// exit on clients and non-hosts
-if (!isServer) exitwith {};
+// Exit on clients and non-hosts
+if (!isServer) exitWith {};
 
-["ace_placedinBodyBag", {
-    // move all inventory from body to bodybag
-    _this call FUNC(moveinventory);
+["ace_placedInBodyBag", {
+    // Move all inventory from body to bodybag
+    _this call FUNC(moveInventory);
 }] call CBA_fnc_addEventHandler;

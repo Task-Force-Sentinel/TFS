@@ -3,9 +3,10 @@
 disableSerialization;
 params ["_display"];
 
-private _ctrlgrouplistBox = (_display displayCtrl IDC_TFS_adminMENU_RESP_grouplist);
 
-GVAR(selectedRespawngroup) deleteAt (lbCurSel _ctrlgrouplistBox);
+private _ctrlGroupListBox = (_display displayCtrl IDC_TFS_ADMINMENU_RESP_GROUPLIST);
+        
+GVAR(selectedRespawnGroup) deleteAt (lbCurSel _ctrlGroupListBox);
 
-[_display] call FUNC(respawn_refreshSpectatorlist);
-[_display] call FUNC(respawn_refreshgroupBox);
+[_display] call FUNC(respawn_refreshSpectatorList);
+[_display] call FUNC(respawn_refreshGroupBox);

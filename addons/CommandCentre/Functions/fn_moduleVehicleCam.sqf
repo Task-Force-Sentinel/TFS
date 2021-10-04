@@ -1,17 +1,17 @@
 // not documented: module called
 
 params [
-    ["_logic", objNull, [objNull]],
-    ["_groups", [], [[]]],
-    "_localgroups",
+    ["_logic",objNull,[objNull]],
+    ["_groups",[],[[]]],
+    "_localGroups",
     "_logic"
 ];
 
-if (not isServer) exitwith {};
+if (not isServer) exitWith {};
 
 private _objects = synchronizedObjects _logic;
 {
-    TFS_CC_vehicleCamlist pushBackUnique _x;
-} forEach _objects;
+    TFS_CC_vehicleCamList pushBackUnique _x;
+} foreach _objects;
 
-publicVariable "TFS_CC_vehicleCamlist";
+publicVariable "TFS_CC_vehicleCamList";

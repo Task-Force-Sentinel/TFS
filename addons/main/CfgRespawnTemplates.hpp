@@ -1,9 +1,9 @@
 class CfgRespawnTemplates
 {
-    class TFS_RespawnOnStartposition
+    class TFS_RespawnOnStartPosition
     {
-        displayname = "TFS Respawn on Start position";
-        onplayerRespawn = "z\tfs\addons\main\Scripts\RespawnOnStartposition.sqf";
+        displayName = "TFS Respawn on Start Position";
+        onPlayerRespawn = "z\tfs\addons\main\Scripts\RespawnOnStartPosition.sqf";
         respawnDelay = 10;
         respawnOnStart = 0;
     };

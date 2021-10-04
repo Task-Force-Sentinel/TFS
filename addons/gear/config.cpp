@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 
-class CfgPatches
-{
-    class TFS_Gear
-    {
-        name = "$str_TFS_Gear_Title";
+
+class CfgPatches {
+    
+    class TFS_Gear {
+        name = "$STR_TFS_Gear_Title";
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {};
         units[] = {};
@@ -16,6 +16,7 @@ class CfgPatches
         url = URL;
         VERSION_CONFIG;
     };
+    
 };
 
 #include "CfgEventHandlers.hpp"

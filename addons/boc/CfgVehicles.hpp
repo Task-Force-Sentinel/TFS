@@ -5,128 +5,128 @@ class CfgVehicles {
         author = "DerZade";
         _generalMacro = QGVAR(weaponHolder);
         scopeCurator = 0;
-        model = QPATHtoF(model.p3d);
+        model = QPATHTOF(model.p3d);
         accuracy = 0.2;
-        mapsize = 1.39;
-        class Transportmagazines {};
+        mapSize = 1.39;
+        class TransportMagazines {};
         forceSupply = 0;
         memoryPointSupply = "";
-        supplyradius = 0;
-        showweaponCargo = 1;
-        transportmaxmagazines = 1e+009;
-        transportmaxweapons = 1e+009;
-        displayname = "backpackOnChest WH";
-        destrtype = "DestructNo";
-        transportmaxbackpacks = 0;
+        supplyRadius = 0;
+        showWeaponCargo = 1;
+        transportMaxMagazines = 1e+009;
+        transportMaxWeapons = 1e+009;
+        displayName = "BackpackOnChest WH";
+        destrType = "DestructNo";
+        transportMaxBackpacks = 0;
         isGround = 0;
         icon = "iconObject_1x1";
     };
-    
-    class logic;
-    class module_F: logic {
-        class ArgumentsBaseunits {
+
+    class Logic;
+    class Module_F: Logic {
+        class ArgumentsBaseUnits {
             class Units;
         };
-        class moduleDescription {
+        class ModuleDescription {
             class AnyBrain;
         };
     };
-    
-    class GVAR(moduleAdd): module_F {
+
+    class GVAR(moduleAdd): Module_F {
         scope = 2;
-        displayname = $STR_TFS_boc_moduleAdddisp;
-        icon = QPATHtoF(data\moduleAdd.paa);
+        displayName = $STR_TFS_boc_moduleAdd_disp;
+        icon = QPATHTOF(data\moduleAdd.paa);
         category = "TFS_boc";
         function = QFUNC(moduleAdd);
-        functionpriority = 0;
+        functionPriority = 0;
         isGlobal = 0;
-        istriggerActivated = 1;
+        isTriggerActivated = 1;
         isDisposable = 0;
         is3DEN = 0;
         author = "DerZade";
-        class Arguments : ArgumentsBaseunits {
-            class units: units {};
+        class Arguments : ArgumentsBaseUnits {
+            class Units: Units {};
             class classname {
-                displayname = "Chestpack classname"; // Argument label
-                description = "classname of the disered chestpack"; // tooltip description
-                typeName = "STRING"; // Value type, can be "NUMBER", "strinG" or "BOOL"
+                displayName = "Chestpack classname"; // Argument label
+                description = "Classname of the disered chestpack"; // Tooltip description
+                typeName = "STRING"; // Value type, can be "NUMBER", "STRING" or "BOOL"
                 defaultValue = "B_Carryall_cbr";
             };
             class items {
-                displayname = "Chestpack items";
-                description = "items (includes mags, weapons, ...) which should be contained in the chestpack. items sperated by a ', '. Item can either be just a classname (for a single) or an array [classname, amount].";
+                displayName = "Chestpack items";
+                description = "Items (includes mags, weapons, ...) which should be contained in the chestpack. Items sperated by a ','. Item can either be just a classname (for a single) or an array [classname,amount].";
                 typeName = "STRING";
-                defaultValue = "[""FirstAidKit"", 3], ""hgun_P07_F"", [""16Rnd_9x21_Mag"", 2]";
+                defaultValue = "[""FirstAidKit"",3], ""hgun_P07_F"", [""16Rnd_9x21_Mag"",2]";
             };
             class mags {
-                displayname = "Chestpack magazines";
-                description = "Just for adding partially loaded mags. Mags seperated by a ', '. Syntax of single mag.: [magazine, ammo count]";
+                displayName = "Chestpack magazines";
+                description = "Just for adding partially loaded mags. Mags seperated by a ','. Syntax of single mag.: [magazine, ammo count]";
                 typeName = "STRING";
-                defaultValue = "[""30Rnd_65x39_caseless_mag"", 20], [""30Rnd_65x39_caseless_mag_Tracer"", 10]";
+                defaultValue = "[""30Rnd_65x39_caseless_mag"",20], [""30Rnd_65x39_caseless_mag_Tracer"",10]";
             };
             class code {
-                displayname = "Additional code";
+                displayName = "Additional code";
                 description = "Any addition code to modify the chestpack. '_this' referes to the chestpack itself."; // Argument label
-                typeName = "STRING"; // Value type, can be "NUMBER", "strinG" or "BOOL"
+                typeName = "STRING"; // Value type, can be "NUMBER", "STRING" or "BOOL"
                 defaultValue = "_this setObjectTextureGlobal [0, ""#(rgb,8,8,3)color(0,0,1,1)""];";
             };
         };
-        class moduleDescription : moduleDescription {
+        class ModuleDescription : ModuleDescription {
             sync[]={"AnyPerson1","AnyPerson2"};
-            description = $STR_TFS_boc_moduleAdddesc;
+            description = $STR_TFS_boc_moduleAdd_desc;
             class AnyPerson1 {
                 description = "Short description";
-                displayname = "Any blufor unit"; // Custom name
-                icon = "iconMan"; // Custom icon (can be file path or CfgvehicleIcons entry)
+                displayName = "Any BLUFOR unit"; // Custom name
+                icon = "iconMan"; // Custom icon (can be file path or CfgVehicleIcons entry)
                 side = 1; // Custom side (will determine icon color)
             };
             class AnyPerson2 : AnyPerson1 {};
         };
     };
-    
-    class GVAR(moduleOnChest): module_F {
+
+    class GVAR(moduleOnChest): Module_F {
         scope = 2;
-        displayname = $STR_TFS_boc_moduleOnChestdisp;
-        icon = QPATHtoF(data\moduleOnChest.paa);
+        displayName = $STR_TFS_boc_moduleOnChest_disp;
+        icon = QPATHTOF(data\moduleOnChest.paa);
         category = "TFS_boc";
         function = QFUNC(moduleOnChest);
-        functionpriority = 0;
+        functionPriority = 0;
         isGlobal = 0;
-        istriggerActivated = 1;
+        isTriggerActivated = 1;
         isDisposable = 0;
         is3DEN = 0;
         author = "DerZade";
-        class Arguments : ArgumentsBaseunits {
-            class units: units {};
+        class Arguments : ArgumentsBaseUnits {
+            class Units: Units {};
             class classname {
-                displayname = "backpack classname"; // Argument label
-                description = "classname of the backpack which should be added after putting the backpack on chest."; // tooltip description
-                typeName = "STRING"; // Value type, can be "NUMBER", "strinG" or "BOOL"
+                displayName = "Backpack classname"; // Argument label
+                description = "Classname of the backpack which should be added after putting the backpack on chest."; // Tooltip description
+                typeName = "STRING"; // Value type, can be "NUMBER", "STRING" or "BOOL"
                 defaultValue = "B_Parachute";
             };
             class delay {
-                displayname = "Delay"; // Argument label
-                description = ""; // tooltip description
-                typeName = "NUMBER"; // Value type, can be "NUMBER", "strinG" or "BOOL"
+                displayName = "Delay"; // Argument label
+                description = ""; // Tooltip description
+                typeName = "NUMBER"; // Value type, can be "NUMBER", "STRING" or "BOOL"
                 defaultValue = 0;
             };
         };
-        class moduleDescription : moduleDescription {
+        class ModuleDescription : ModuleDescription {
             sync[]={"AnyPerson1","AnyPerson2"};
-            description = $STR_TFS_boc_moduleOnChestdesc;
+            description = $STR_TFS_boc_moduleOnChest_desc;
             class AnyPerson1 {
                 description = "Short description";
-                displayname = "Any blufor unit"; // Custom name
-                icon = "iconMan"; // Custom icon (can be file path or CfgvehicleIcons entry)
+                displayName = "Any BLUFOR unit"; // Custom name
+                icon = "iconMan"; // Custom icon (can be file path or CfgVehicleIcons entry)
                 side = 1; // Custom side (will determine icon color)
             };
             class AnyPerson2 : AnyPerson1 {};
         };
     };
-    
+
     class Man;
     class CAManBase: Man {
-        class ACE_Selfactions {
+        class ACE_SelfActions {
             class ACE_Equipment {
                 #include "ACE_SelfActions.hpp"
             };

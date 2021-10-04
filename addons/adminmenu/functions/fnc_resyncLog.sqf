@@ -1,32 +1,32 @@
 #include "\z\tfs\addons\adminmenu\script_component.hpp"
 /* ----------------------------------------------------------------------------
-Function: TFS_adminmenu_fnc_resynclog
+Function: TFS_adminmenu_fnc_resyncLog
 
 Description:
-Resynchronizes the server log from the server to a client
+    Resynchronizes the server log from the server to a client
 
-parameters:
-_ownerID - owner ID which will have its log resynchronized [Number or Object, default clientowner]
+Parameters:
+    _ownerID - owner ID which will have its log resynchronized [Number or Object, default clientOwner]
 
 Returns:
-nil
+    Nil
 
 Examples:
-(begin example)
-[clientowner] call TFS_adminmenu_fnc_resynclog;
-(end)
+    (begin example)
+        [clientOwner] call TFS_adminmenu_fnc_resyncLog;
+    (end)
 
 Author:
-Freddo
+    Freddo
 ---------------------------------------------------------------------------- */
 
 params [
-    ["_ownerID", clientowner, [-1, objNull]]
+    ["_ownerID",clientOwner,[-1,objNull]]
 ];
 
 if IS_OBJECT(_ownerID) then {
     _ownerID = owner _ownerID;
 };
 
-[QGVAR(resynclog), _ownerID] call CBA_fnc_serverEvent;
-log("Requesting log resynchronization")
+[QGVAR(resyncLog),_ownerID] call CBA_fnc_serverEvent;
+LOG("Requesting log resynchronization")

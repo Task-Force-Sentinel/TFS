@@ -1,8 +1,8 @@
-params ["_pos", "_attachedobject"];
+params ["_pos", "_attachedObject"];
 
-if (isNull _attachedobject) exitwith {};
-if (not alive _attachedobject) exitwith {};
+if (isNull _attachedObject) exitWith {};
+if (not alive _attachedObject) exitWith {};
 
 private _id = format ["casualty_%1", round (random 10000)];
 
-[_attachedobject] remoteExec ["TFS_fnc_Casualty", 0, _id];
+[_attachedObject] remoteExec ["TFS_fnc_Casualty", 0, _id];

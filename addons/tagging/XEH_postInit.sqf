@@ -1,29 +1,26 @@
 #include "script_component.hpp"
 
-if (!EGVAR(common, aceTagging)) exitwith {};
+if (!EGVAR(common,aceTagging)) exitWith {};
 
-if (hasinterface) then {
+if (hasInterface) then {
     ["ace_tagCreated", {
         params ["", "_texture", "_object", "_unit"];
-        if (!GVAR(enabled)) exitwith {};
+        if (!GVAR(enabled)) exitWith {};
         // Check if tag created on building by local player
-        if (!(_object isKindOf "Building") || {
-            _unit isnotEqualto player
-        }) exitwith {};
-        
-        private _colorindex = {
-            if (_texture find _x != -1) exitwith {
-                _forEachindex
-            };
+        if (!(_object isKindOf "Building") || {_unit isNotEqualTo player}) exitWith {};
+
+        private _colorIndex = {
+            if (_texture find _x != -1) exitWith {_forEachIndex};
             -1
-        } forEach textURE_COLorS;
-        
+        } forEach TEXTURE_COLORS;
+
         // no matching color, do not create marker
-        if (_colorindex == -1) exitwith {};
-        
-        private _marker = [_object, "side", _unit] call EFUNC(common, createplayerMarker);
+        if (_colorIndex == -1) exitWith {};
+
+        private _marker = [_object, "side", _unit] call EFUNC(common,createPlayerMarker);
         _marker setMarkerShape "ICON";
-        _marker setMarkertype "hd_dot";
-        _marker setMarkerColor (MARKER_COLorS select _colorindex);
+        _marker setMarkerType "hd_dot";
+        _marker setMarkerColor (MARKER_COLORS select _colorIndex);
+
     }] call CBA_fnc_addEventHandler;
 };

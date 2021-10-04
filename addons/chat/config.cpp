@@ -15,4 +15,4 @@ class cfgPatches
     };
 };
 
-#include "CfgEventHandlers.hpp"
+#include "CfgEventhandlers.hpp"

@@ -1,74 +1,74 @@
 #include "script_component.hpp"
 #include "\a3\ui_f\hpp\defineResinclDesign.inc"
 /*
-* Author: veteran29
-* initializes loading screen display and adds TFS branding.
-*
-* Arguments:
-* 0: loading display <DISPLAY>
-*
-* Return Value:
-* None
-*
-* Public: No
-*/
+ * Author: veteran29
+ * Initializes loading screen display and adds TFS branding.
+ *
+ * Arguments:
+ * 0: Loading display <DISPLAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 
 params ["_display"];
 
-TRACE_1("loading screen", _display);
+TRACE_1("Loading screen",_display);
 
 private _size = 0.1;
-private _width = _size * safeZoneW;
-private _height = _size * safeZoneH * (getResolution select 4);
+private _width = _size * safezoneW;
+private _height = _size * safezoneH * (getResolution select 4);
 
-private _picture = _display ctrlCreate ["Rscpicture", -1];
-_picture ctrlsetPosition [
-    safeZoneX,
-    safeZoneY + safeZoneH - _height,
+private _picture = _display ctrlCreate ["RscPicture", -1];
+_picture ctrlSetPosition [
+    safezoneX,
+    safezoneY + safeZoneH - _height,
     _width, _height
 ];
 
-switch (systemtime select 1) do {
+switch (systemTime select 1) do {
     case 10: {
-        _picture ctrlsettext QPATHtoF(ui\TFSlogO-1hal@0.5x.paa);
+        _picture ctrlSetText QPATHTOF(ui\TFSLOGO-1hal@0.5x.paa);
     };
     case 12: {
-        _picture ctrlsettext QPATHtoF(ui\TFSlogO-1xmas@0.5x.paa);
+        _picture ctrlSetText QPATHTOF(ui\TFSLOGO-1xmas@0.5x.paa);
     };
-    case ([] call EFUNC(common, easterdate) select 1): {
-        _picture ctrlsettext QPATHtoF(ui\TFSlogOcolor2@.5.paa);
+    case ([] call EFUNC(common,easterDate) select 1): {
+        _picture ctrlSetText QPATHTOF(ui\TFSLOGOcolor2@.5.paa);
     };
     default {
-        _picture ctrlsettext QPATHtoF(ui\TFSlogOcolor2@.5.paa);
+        _picture ctrlSetText QPATHTOF(ui\TFSLOGOcolor2@.5.paa);
     };
 };
 _picture ctrlCommit 0;
 
-private _ctrlBg = _display displayCtrl IDC_loadinGSTART_CUStoM_BG;
+private _ctrlBg = _display displayctrl IDC_LOADINGSTART_CUSTOM_BG;
 private _backgroundCfg = uiNamespace getVariable [QGVAR(backgroundCfg), configNull];
 if (isNull _backgroundCfg) then {
-    _backgroundCfg = selectRandom ("true" configClasses (CFG_loadinG_SCREEN >> "Backgrounds"));
+    _backgroundCfg = selectRandom ("true" configClasses (CFG_LOADING_SCREEN >> "Backgrounds"));
     uiNamespace setVariable [QGVAR(backgroundCfg), _backgroundCfg];
-    TRACE_1("loading background", _backgroundCfg);
+    TRACE_1("Loading background",_backgroundCfg);
 };
 
-_ctrlBg ctrlsettext gettext (_backgroundCfg >> "path");
+_ctrlBg ctrlSetText getText (_backgroundCfg >> "path");
 _ctrlBg ctrlCommit 0;
 
-private _ctrlGrploadingStart = _display displayCtrl IDC_loadinGSTART_loadinGSTART;
-private _loadingLabel = _display ctrlCreate ["Rscstructuredtext", -1, _ctrlGrploadingStart];
-_loadingLabel ctrlsetPosition [0, 0, 1, 1];
-_loadingLabel ctrlsetstructuredtext parsetext ([
+private _ctrlGrpLoadingStart = _display displayctrl IDC_LOADINGSTART_LOADINGSTART;
+private _loadingLabel = _display ctrlCreate ["RscStructuredText", -1, _ctrlGrpLoadingStart];
+_loadingLabel ctrlSetPosition [0, 0, 1, 1];
+_loadingLabel ctrlSetStructuredText parseText ([
     '<t size="1.17" shadow="2">',
-    format [LLstrinG(Author), gettext (_backgroundCfg >> "author")],
+    format [LLSTRING(Author), getText (_backgroundCfg >> "author")],
     '</t>'
-] joinstring "");
+] joinString "");
 _loadingLabel ctrlCommit 0;
 
-_loadingLabel ctrlsetPosition [
-    safeZoneW - ctrltextWidth _loadingLabel,
+_loadingLabel ctrlSetPosition [
+    safeZoneW - ctrlTextWidth _loadingLabel,
     0,
-    ctrltextWidth _loadingLabel, ctrltextHeight _loadingLabel
+    ctrlTextWidth _loadingLabel, ctrlTextHeight _loadingLabel
 ];
 _loadingLabel ctrlCommit 0;
 

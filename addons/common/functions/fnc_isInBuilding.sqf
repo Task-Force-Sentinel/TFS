@@ -1,20 +1,20 @@
-/*
-*	ARMA EXTENDED ENVIRONMENT
-*	\tfs_common\functions\common\fn_isinBuilding.sqf
-*	by Ojemineh
-*
-*	check if unit is in a building
-*
-*	Arguments:
-*	0: unit - <OBJECT>
-*
-*	Return:
-*	<BOOLEAN>
-*
-*	Example:
-*	[player] call tfs_fnc_isinBuilding;
-*
-*/
+﻿/*
+ * ARMA EXTENDED ENVIRONMENT
+ * \tfs_common\functions\common\fn_isInBuilding.sqf
+ * by Ojemineh
+ * 
+ * check if unit is in a building
+ * 
+ * Arguments:
+ * 0: unit - <OBJECT>
+ * 
+ * Return:
+ * <BOOLEAN>
+ * 
+ * Example:
+ * [player] call tfs_fnc_isInBuilding;
+ * 
+ */
 
 // -------------------------------------------------------------------------------------------------
 
@@ -24,15 +24,16 @@ _unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-if (isNull _unit) exitwith {};
+if (isNull _unit) exitWith {};
 
 // -------------------------------------------------------------------------------------------------
 
 private _return = false;
-private _building = nearestobject [_unit, "HouseBase"];
+private _building = nearestObject [_unit, "HouseBase"];
 
-if (not isNull _building) then {
-    // private _boundingBox = boundingBox _building;
+if (Not isNull _building) then {
+    
+    //private _boundingBox = boundingBox _building;
     private _boundingBox = 0 boundingBoxReal _building;
     private _min = (_boundingBox select 0);
     private _max = (_boundingBox select 1);
@@ -49,6 +50,7 @@ if (not isNull _building) then {
             };
         };
     };
+    
 };
 
 _return;

@@ -1,9 +1,9 @@
 #include "script_component.hpp"
 
-ADdoN = false;
+ADDON = false;
 
-PREP_REcompile_START;
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-PREP_REcompile_END;
+PREP_RECOMPILE_END;
 
-ADdoN = true;
+ADDON = true;

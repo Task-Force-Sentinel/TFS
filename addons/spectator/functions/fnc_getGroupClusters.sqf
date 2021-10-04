@@ -2,17 +2,16 @@ params ["_units"];
 
 private _clusters = [];
 private _checkedMen = [];
-private _distancemax = 100;
+private _distanceMaX = 100;
 
 {
-    if (!(_x in _checkedMen) && alive _x) then {
+    if(!(_x in _checkedMen) && alive _x) then
+    {
         private _cluster = [_x];
         private _unit = _x;
         _checkedMen pushBack _x;
         {
-            if(_x != _unit && {
-                _x distance2D _unit < _distancemax
-            } ) then
+            if(_x != _unit && {_x distance2d _unit < _distanceMaX} ) then
             {
                 _cluster pushBack _x;
                 _checkedMen pushBack _x;
@@ -25,8 +24,6 @@ private _distancemax = 100;
 private _outcluster = [];
 
 {
-    if (count _x > count _outcluster) then {
-        _outcluster = _x
-    };
+    if(count _x > count _outcluster) then {_outcluster = _x};
 } forEach _clusters;
 _outcluster

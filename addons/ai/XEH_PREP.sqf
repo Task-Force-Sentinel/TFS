@@ -1,12 +1,12 @@
 PREP(fortify);
-PREP(waveinit);
+PREP(waveInit);
 PREP(spawnWave);
 PREP(garrison);
 PREP(garrisonQuantity);
 PREP(hunt);
-PREP(huntinit);
+PREP(huntInit);
 PREP(huntLoop);
-PREP(rearminit);
+PREP(rearmInit);
 PREP(rearm);
 PREP(addWaveHandler);
 PREP(removeWaveHandler);

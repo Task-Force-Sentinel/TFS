@@ -1,13 +1,12 @@
 #include "\z\tfs\addons\adminmenu\script_component.hpp"
 
-// if (!isremoteExecuted && isMultiplayer) exitwith {};
-// ??
+//if (!isRemoteExecuted && isMultiplayer) exitWith {}; // ??
 
 params ["_origin", "_adminLevel"];
 
-GVAR(currentadmin) = profileName;
-if (_adminLevel isEqualto 1) then {
-    GVAR(currentadmin) = GVAR(currentadmin) + " (voted)";
+GVAR(currentAdmin) = profileName;
+if (_adminLevel isEqualTo 1) then {
+    GVAR(currentAdmin) = GVAR(currentAdmin) + " (voted)";
 };
 
-_origin publicVariableClient QGVAR(currentadmin);
+_origin publicVariableClient QGVAR(currentAdmin);

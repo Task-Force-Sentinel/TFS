@@ -3,7 +3,7 @@
 #include "\a3\ui_f\hpp\definedikcodes.inc"
 
 params ["_display"];
-if (ctrlIDD _display != IDD_MAin_MAP) exitwith {};
+if (ctrlIDD _display != IDD_MAIN_MAP) exitWith {};
 
 private _control = _display displayCtrl IDC_MAP;
 
@@ -12,13 +12,9 @@ _control ctrlAddEventHandler ["MouseMoving", {
     GVAR(TFS_customMark) = "customMark" in (ctrlMapMouseOver _control);
 }];
 
-_display displayAddEventHandler ["Keydown", {
+_display displayAddEventHandler ["KeyDown", {
     params ["", "_keyCode"];
-    if (!isnil QGVAR(TFS_customMark) && {
-        GVAR(TFS_customMark)
-    } && {
-        (_keyCode) == DIK_DELETE
-    }) then {
-        TFS_unit setVariable ["TFS_customMarkLocation", nil];
+    if (!isNil QGVAR(TFS_customMark) && {GVAR(TFS_customMark)} && {(_keyCode) == DIK_DELETE}) then {
+        TFS_unit setVariable ["TFS_customMarkLocation",nil];
     };
 }];

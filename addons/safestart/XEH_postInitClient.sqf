@@ -1,5 +1,5 @@
 #include "script_component.hpp"
 
-if (is3DEN) exitwith {};
+if (is3DEN) exitWith {};
 
 [QGVAR(enableSafety), player] call CBA_fnc_localEvent;

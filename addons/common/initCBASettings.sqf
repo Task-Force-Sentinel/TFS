@@ -2,115 +2,116 @@
     QGVAR(TFS_enabled),
     "CHECKBOX",
     "Enable Template",
-    ["TFS settings", "Mission settings"],
+    ["TFS Settings","Mission Settings"],
     false,
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(skipMissioninit),
+    QGVAR(skipMissionInit),
     "CHECKBOX",
     "Skip Mission initialization",
-    ["TFS settings", "Mission settings"],
+    ["TFS Settings","Mission Settings"],
     false,
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(skipplayerinit),
+    QGVAR(skipPlayerInit),
     "CHECKBOX",
-    "Skip player initialization",
-    ["TFS settings", "Mission settings"],
+    "Skip Player initialization",
+    ["TFS Settings","Mission Settings"],
     false,
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(playerinittime),
+    QGVAR(playerInitTime),
     "SLIDER",
-    ["init time", "time to initialize the mission"],
-    ["TFS settings", "Mission settings"],
+    ["Init Time","Time to initialize the mission"],
+    ["TFS Settings","Mission Settings"],
     [10, 90, 15, 0],
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(missionintro),
-    "list",
-    ["Mission intro", "text uses intro text on black background, UAV intro uses 'TFS_uavintroMarker' marker or player position as target"],
-    ["TFS intro", "Main"],
-    [[0, 1, 2, 3], ["disabled", "UAV", "Title text", "type text"], 1],
+    QGVAR(missionIntro),
+    "LIST",
+    ["Mission Intro","Text uses intro Text on black background, UAV Intro uses 'TFS_uavIntroMarker' marker or player position as target"],
+    ["TFS Intro","Main"],
+    [[0,1,2,3],["disabled","UAV","Title Text","Type Text"],1],
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(introtext),
+    QGVAR(introText),
     "EDITBOX",
-    ["intro text", "text that is show when text or UAV intro plays"],
-    ["TFS intro", "text intro"],
+    ["Intro Text","Text that is show when Text or UAV Intro plays"],
+    ["TFS Intro","Text Intro"],
     "[]",
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(uavintrotext),
+    QGVAR(uavIntroText),
     "EDITBOX",
-    ["intro text", "text that is show when UAV intro plays (Mission Title if empty)"],
-    ["TFS intro", "UAV intro"],
+    ["Intro Text","Text that is show when UAV Intro plays (Mission Title if empty)"],
+    ["TFS Intro","UAV Intro"],
     "",
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(uavintroAltitude),
+    QGVAR(uavIntroAltitude),
     "SLIDER",
-    ["UAV intro altitude", "Altitude (in meters)"],
-    ["TFS intro", "UAV intro"],
+    ["UAV Intro altitude","Altitude (in meters)"],
+    ["TFS Intro","UAV Intro"],
     [25, 3000, 100, 0],
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(uavintroradius),
+    QGVAR(uavIntroRadius),
     "SLIDER",
-    ["UAV intro radius", "radius of the circular movement (in meters)"],
-    ["TFS intro", "UAV intro"],
+    ["UAV Intro radius","Radius of the circular movement (in meters)"],
+    ["TFS Intro","UAV Intro"],
     [25, 1000, 100, 0],
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(uavintroAngle),
+    QGVAR(uavIntroAngle),
     "SLIDER",
-    ["UAV intro angle", "Viewing angle (in degrees)"],
-    ["TFS intro", "UAV intro"],
+    ["UAV Intro angle","Viewing angle (in degrees)"],
+    ["TFS Intro","UAV Intro"],
     [0, 360, 160, 0],
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(uavintroVision),
-    "list",
-    ["UAV intro vision", "Different visions (Normal, NVG, TI)"],
-    ["TFS intro", "UAV intro"],
-    [[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], ["Normal", "NVG", "White Hot", "Black Hot", "Light Green Hot / Darker Green cold", "Black Hot / Darker Green cold", "Light Red Hot / Darker Red Cold", "Black Hot / Darker Red Cold", "White Hot / Darker Red Cold", "Thermal (Shade of Red and Green, Bodies are white)"], 0],
+    QGVAR(uavIntroVision),
+    "LIST",
+    ["UAV Intro vision","Different visions (Normal,NVG,TI)"],
+    ["TFS Intro","UAV Intro"],
+    [[0,1,2,3,4,5,6,7,8,9],["Normal","NVG","White Hot","Black Hot","Light Green Hot / Darker Green cold","Black Hot / Darker Green cold","Light Red Hot / Darker Red Cold","Black Hot / Darker Red Cold","White Hot / Darker Red Cold","Thermal (Shade of Red and Green, Bodies are white)"],0],
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
-    QGVAR(clanname),
+    QGVAR(clanName),
     "EDITBOX",
-    ["Clan name", "Clan name or name of the community. Used in hints, intro's etc."],
-    ["TFS settings", "Main settings"],
-    "CLAN name",
+    ["Clan Name","Clan name or name of the community. Used in Hints, intro's etc."],
+    ["TFS Settings","Main Settings"],
+    "CLAN NAME",
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
 
 [
     QGVAR(clanTag),
     "EDITBOX",
-    ["Clan Tag", "Clantag or shortname of the community. Used in hints, intro's etc."],
-    ["TFS settings", "Main settings"],
+    ["Clan Tag","Clantag or shortname of the community. Used in Hints, intro's etc."],
+    ["TFS Settings","Main Settings"],
     "CLAN TAG",
     1
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;
+

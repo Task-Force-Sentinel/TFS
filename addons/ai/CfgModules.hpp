@@ -1,16 +1,16 @@
 class CfgVehicles
 {
-    class logic;
-    class module_F: logic
+    class Logic;
+    class Module_F: Logic
     {
-        class ArgumentsBaseunits
+        class ArgumentsBaseUnits
         {
             class Units;
         };
-        class moduleDescription
+        class ModuleDescription
         {
             class AnyBrain;
-            class Anyplayer;
+            class AnyPlayer;
             class EmptyDetector;
         };
         class AttributesBase
@@ -20,7 +20,7 @@ class CfgVehicles
             class Combo;
             class Checkbox;
             class CheckboxNumber;
-            class moduleDescription;
+            class ModuleDescription;
             class Units;
         };
     };

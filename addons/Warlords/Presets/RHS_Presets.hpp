@@ -1,8 +1,8 @@
 class TFS_RHS
 {
-    class west
+    class WEST
     {
-        class infantry
+        class Infantry
         {
             class rhsusf_army_ocp_rifleman
             {
@@ -80,7 +80,7 @@ class TFS_RHS
                 requirements[]={};
             };
         };
-        class vehicles
+        class Vehicles
         {
             class B_Quadbike_01_F
             {
@@ -102,7 +102,7 @@ class TFS_RHS
                 cost=650;
                 requirements[]={};
             };
-            class rhsusf_M977A4_ammo_BKIT_usarmy_d
+            class rhsusf_M977A4_AMMO_BKIT_usarmy_d
             {
                 cost=750;
                 requirements[]={};
@@ -258,7 +258,7 @@ class TFS_RHS
                 cost=350;
                 requirements[]={};
             };
-            class B_Slingload_01_fuel_F
+            class B_Slingload_01_Fuel_F
             {
                 cost=250;
                 requirements[]={};
@@ -268,11 +268,11 @@ class TFS_RHS
                 cost=500;
                 requirements[]={};
             };
-            class B_Slingload_01_ammo_F
+            class B_Slingload_01_Ammo_F
             {
                 cost=750;
                 requirements[]={};
-            };
+            };   
         };
         class Defences
         {
@@ -281,7 +281,7 @@ class TFS_RHS
                 cost=250;
                 requirements[]={};
             };
-            class RHS_M2StaticMG_miniTripod_D
+            class RHS_M2StaticMG_MiniTripod_D
             {
                 cost=250;
                 requirements[]={};
@@ -296,16 +296,16 @@ class TFS_RHS
                 cost=500;
                 requirements[]={};
             };
-            class RHS_toW_TriPod_D
+            class RHS_TOW_TriPod_D
             {
                 cost=500;
                 requirements[]={};
             };
         };
     };
-    class east
+    class EAST
     {
-        class infantry
+        class Infantry
         {
             class rhs_msv_rifleman
             {
@@ -373,7 +373,7 @@ class TFS_RHS
                 requirements[]={};
             };
         };
-        class vehicles
+        class Vehicles
         {
             class O_Quadbike_01_F
             {
@@ -400,7 +400,7 @@ class TFS_RHS
                 cost=750;
                 requirements[]={};
             };
-            class RHS_Ural_fuel_MSV_01
+            class RHS_Ural_Fuel_MSV_01
             {
                 cost=750;
                 requirements[]={};
@@ -543,30 +543,30 @@ class TFS_RHS
                 cost=350;
                 requirements[]={};
             };
-            class land_Pod_Heli_Transport_04_fuel_F
+            class Land_Pod_Heli_Transport_04_Fuel_F
             {
                 cost=250;
                 requirements[]={};
-            };
-            class land_Pod_Heli_Transport_04_Repair_F
+            }; 
+            class Land_Pod_Heli_Transport_04_Repair_F
             {
                 cost=500;
                 requirements[]={};
             };
-            class land_Pod_Heli_Transport_04_ammo_F
+            class Land_Pod_Heli_Transport_04_ammo_F
             {
                 cost=750;
                 requirements[]={};
-            };
+            };           
         };
         class Defences
         {
-            class rhs_KorD_high_MSV
+            class rhs_KORD_high_MSV
             {
                 cost=250;
                 requirements[]={};
             };
-            class rhs_KorD_MSV
+            class rhs_KORD_MSV
             {
                 cost=250;
                 requirements[]={};

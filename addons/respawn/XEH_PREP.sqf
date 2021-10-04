@@ -1,6 +1,6 @@
-PREP(respawnDrawMapicons);
-PREP(respawngroupMarkerUpdate);
-PREP(respawnlocalClient);
-PREP(respawnwaveserver);
+PREP(respawnDrawMapIcons);
+PREP(respawnGroupMarkerUpdate);
+PREP(respawnLocalClient);
+PREP(respawnWaveServer);
 PREP(handleRespawnUI);
 PREP(loadGear);

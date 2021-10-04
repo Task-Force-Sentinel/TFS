@@ -1,29 +1,33 @@
 class TFS_AI {
+
     tag = "TFS";
     class AI {
+
         file = "z\tfs\addons\ai\Functions";
-        class infantryGarrison {};
-        class moduleAIspawns {};
-        class setinitialAI {};
-        class setunitskill {};
-        class spawnAI {};
-        class spawnAIZeusWrapper {};
+        class InfantryGarrison {};
+        class moduleAISpawns {};
+        class SetInitialAI {};
+        class SetUnitSkill {};
+        class SpawnAI {};
+        class SpawnAIZeusWrapper {};
         class RoadPatrol {};
-        class GetAvailablefactions {};
+        class GetAvailableFactions {};
     };
-    
-    class civilian {
-        file = "z\tfs\addons\ai\Functions\civilians";
+
+    class Civilian {
+
+        file = "z\tfs\addons\ai\Functions\Civilians";
         class CivBreakPatrol {};
-        class civilianGarrison {};
-        class civilianPatrol {};
-        class spawncivilians {};
-        class modulecivilianspawns {};
-        class spawnCivZeusWrapper {};
+        class CivilianGarrison {};
+        class CivilianPatrol {};
+        class SpawnCivilians {};
+        class moduleCivilianSpawns {};
+        class SpawnCivZeusWrapper {};
     };
-    
-    class civilian_factions {
-        file = "z\tfs\addons\ai\Functions\factions\civilian";
+
+    class Civilian_Factions {
+
+        file = "z\tfs\addons\ai\Functions\Factions\Civilian";
         class CFP_C_AFG {};
         class CFP_C_AFRCHRISTIAN {};
         class CFP_C_AFRISLAMIC {};
@@ -36,10 +40,11 @@ class TFS_AI {
         class UK3CB_CHC_C {};
         class UK3CB_TKC_C {};
     };
-    
-    class east_factions {
-        file = "z\tfs\addons\ai\Functions\factions\east";
-        class CFP_O_ABUsayYAF {};
+
+    class East_Factions {
+
+        file = "z\tfs\addons\ai\Functions\Factions\East";
+        class CFP_O_ABUSAYYAF {};
         class CFP_O_ALQAEDA {};
         class CFP_O_ALSHABAAB {};
         class CFP_O_ANSARALLAH {};
@@ -56,7 +61,7 @@ class TFS_AI {
         class CFP_O_RUMVD {};
         class CFP_O_SDARMY {};
         class CFP_O_SDMilitia {};
-        class CFP_O_SorEBEL {};
+        class CFP_O_SOREBEL {};
         class CFP_O_SSREBELS {};
         class CFP_O_SYARMY {};
         class CFP_O_TBAN {};
@@ -77,7 +82,7 @@ class TFS_AI {
         class LOP_US {};
         class OPF_F {};
         class OPF_T_F {};
-        class OPTRE_ins {};
+        class OPTRE_Ins {};
         class rhs_faction_msv {};
         class rhs_faction_vdv {};
         class rhs_faction_vmf {};
@@ -89,29 +94,31 @@ class TFS_AI {
         class UK3CB_TKM_O {};
         class UK3CB_TKP_O {};
         class UNSUNG_E_NVA {};
-        class TBan_group {};
+        class TBan_Group {};
+
     };
-    
-    class indep_factions {
-        file = "z\tfs\addons\ai\Functions\factions\indep";
-        class CFP_I_AlnUSRA {};
+
+    class Indep_Factions {
+
+        file = "z\tfs\addons\ai\Functions\Factions\Indep";
+        class CFP_I_ALNUSRA {};
         class CFP_I_IS {};
         class CFP_I_SDRebels {};
         class CFP_I_SDRebelsrf {};
         class CFP_I_SSArmy {};
         class CFP_I_TUAREG {};
-        class CFP_I_westUltra {};
+        class CFP_I_WestUltra {};
         class CUP_I_NAPA {};
         class CUP_I_PMC_ION {};
         class CUP_I_RACS {};
         class CUP_I_TK_GUE {};
         class CUP_I_UN {};
-        class inD_C_F {};
-        class inD_F {};
+        class IND_C_F {};
+        class IND_F {};
         class LIB_US_ARMY {};
         class LOP_IRAN {};
         class LOP_NAPA {};
-        class LOP_PESH_inD {};
+        class LOP_PESH_IND {};
         class LOP_RACS {};
         class LOP_UA {};
         class LOP_UKR {};
@@ -128,9 +135,10 @@ class TFS_AI {
         class UK3CB_TKP_I {};
         class UK3CB_UN_I {};
     };
-    
-    class west_factions {
-        file = "z\tfs\addons\ai\Functions\factions\west";
+
+    class West_Factions {
+
+        file = "z\tfs\addons\ai\Functions\Factions\West";
         class BLU_F {};
         class BLU_T_F {};
         class CFP_B_AFARMY {};
@@ -167,12 +175,12 @@ class TFS_AI {
         class rhs_faction_usarmy_wd {};
         class UK3CB_ANA_B {};
         class UK3CB_ANP_B {};
-        class UK3CB_BAF_faction_Army_Arctic {};
-        class UK3CB_BAF_faction_Army_Desert {};
-        class UK3CB_BAF_faction_Army_MTP {};
-        class UK3CB_BAF_faction_Army_Temperate {};
-        class UK3CB_BAF_faction_Army_Tropical {};
-        class UK3CB_BAF_faction_Army_Woodland {};
+        class UK3CB_BAF_Faction_Army_Arctic {};
+        class UK3CB_BAF_Faction_Army_Desert {};
+        class UK3CB_BAF_Faction_Army_MTP {};
+        class UK3CB_BAF_Faction_Army_Temperate {};
+        class UK3CB_BAF_Faction_Army_Tropical {};
+        class UK3CB_BAF_Faction_Army_Woodland {};
         class UK3CB_CCM_B {};
         class UK3CB_TKA_B {};
         class UK3CB_TKM_B {};
@@ -183,7 +191,7 @@ class TFS_AI {
 
 class DERP {
     tag = "DERP";
-    
+
     class General {
         file = "z\tfs\addons\ai\Functions";
         class AIOccupyBuilding {};
