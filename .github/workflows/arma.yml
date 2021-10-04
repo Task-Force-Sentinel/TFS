@@ -43,8 +43,8 @@ jobs:
           command: 'build --release'
       - uses: actions/upload-artifact@master
         with:
-          name: '@tfs'
-          path: 'releases/@tfs*.zip'
+          name: '@TFS'
+          path: 'releases/@TFS_v*.zip'
 
   stringtables:
     runs-on: ubuntu-latest
