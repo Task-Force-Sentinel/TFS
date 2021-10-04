@@ -30,4 +30,4 @@ class CfgPatches
 #include "CfgFunctions.hpp"
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
-#include "Cfgweapons.hpp"
+#include "CfgWeapons.hpp"
