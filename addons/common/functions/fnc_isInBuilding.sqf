@@ -1,4 +1,4 @@
-﻿/*
+/*
  * ARMA EXTENDED ENVIRONMENT
  * \tfs_common\functions\common\fn_isInBuilding.sqf
  * by Ojemineh

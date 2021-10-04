@@ -1,4 +1,4 @@
-﻿/*
+/*
  * ARMA EXTENDED ENVIRONMENT
  * \z\tfs\addons\core\functions\settings\fn_getKeybindString.sqf
  * by Ojemineh

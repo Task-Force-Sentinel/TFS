@@ -1,4 +1,4 @@
-﻿/*
+/*
  * ARMA EXTENDED ENVIRONMENT
  * \z\tfs\addons\core\functions\videos\fn_playVideo.sqf
  * by Ojemineh
