@@ -1,16 +1,14 @@
-class RscControlsGroupNoHScrollbars;
+class RscControlsgroupNoHScrollbars;
 class RscHTML;
-class RscText;
+class Rsctext;
 class RscStandardDisplay;
 class RscDisplayMain: RscStandardDisplay {
-	
     class controls {
-		
-        class InfoMods: RscControlsGroupNoHScrollbars {
+        class infomods: RscControlsgroupNoHScrollbars {
             class Controls;
         };
-		
-        class InfoNews: InfoMods {
+        
+        class infoNews: infomods {
             class Controls: Controls {
                 class Background;
                 class BackgroundIcon;
@@ -20,36 +18,36 @@ class RscDisplayMain: RscStandardDisplay {
                 class Button;
             };
         };
-		
-        class TFS_InfoNews: InfoNews {
-			
+        
+        class TFS_infoNews: infoNews {
             idc = 90090;
-            y = "safezoneY + safezoneH - (4 * 2 + 1) * (pixelH * pixelGrid * 2) - 5 * (4 * pixelH)";
-			
+            y = "safeZoneY + safeZoneH - (4 * 2 + 1) * (pixelH * pixelGrid * 2) - 5 * (4 * pixelH)";
+            
             class Controls: Controls {
-				
                 class Background: Background {};
                 class BackgroundIcon: BackgroundIcon {};
                 class Icon: Icon {
-                    text = "$STR_TFS_Main_Logo";
+                    text = "$str_TFS_Main_logo";
                 };
-				
-                class CurrentVersionInfo: RscText {
+                
+                class CurrentVersioninfo: Rsctext {
                     idc = 90091;
                     style = 1;
                     text = "";
                     sizeEx = "(pixelH * pixelGrid * 1.5)";
                     font = "RobotoCondensedLight";
                     shadow = 1;
-                    colorBackground[] = {0,0,0,0};
+                    colorBackground[] = {
+                        0, 0, 0, 0
+                    };
                     x = 0;
                     y = 0;
                     w = "(10 - 1.25 * 2) * (pixelW * pixelGrid * 2)";
                     h = "1 * (pixelH * pixelGrid * 2)";
-                    onLoad = "(_this select 0) ctrlEnable false;";
+                    onload = "(_this select 0) ctrlEnable false;";
                 };
-				
-                class HTTPVersionInfo: RscHTML {
+                
+                class HTTPVersioninfo: RscHTML {
                     idc = 90092;
                     shadow = 0;
                     class H1 {
@@ -68,18 +66,14 @@ class RscDisplayMain: RscStandardDisplay {
                     y = "1 * (pixelH * pixelGrid * 2)";
                     w = "(10 - 1.25 * 2) * (pixelW * pixelGrid * 2)";
                     h = "1 * (pixelH * pixelGrid * 2)";
-                    onLoad = "(_this select 0) ctrlEnable false;";
+                    onload = "(_this select 0) ctrlEnable false;";
                 };
-				
+                
                 class Button: Button {
-                    tooltip = "$STR_TFS_VersionInfo_Tooltip";
-                    url = "$STR_TFS_Addon_URL_Releases";
+                    tooltip = "$str_TFS_Versioninfo_tooltip";
+                    url = "$str_TFS_Addon_URL_Releases";
                 };
-				
             };
-			
         };
-		
     };
-	
 };
