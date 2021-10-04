@@ -47,17 +47,14 @@ jobs:
           path: 'releases/@TFS*.zip'
 
   SQFC:
-    windows:
-      name: Windows
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
-      runs-on: windows-latest
-      steps:
-        - name: Checkout
-          uses: actions/checkout@v2
+      - name: Create work drive
+        run: 'subst P: .'
 
-        - name: Create work drive
-          run: 'subst P: .'
-
-        - uses: arma-actions/sqfc@latest
-          with:
-            directory: .
+      - uses: arma-actions/sqfc@latest
+        with:
+          directory: .
