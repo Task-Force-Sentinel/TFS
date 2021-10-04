@@ -28,8 +28,14 @@ jobs:
     - name: Checkout the source code
       uses: actions/checkout@master
     - name: Lint (sqflint)
-      uses: arma-actions/sqflint@master
+      uses: jokoho48/sqflint@master
       continue-on-error: true # No failure due to many false-positives
+    - uses: actions/upload-artifact@master
+      with:
+       name: 'sqfLint Log'
+       path: 'sqf.log'
+    - name: Validate SQFLinter Logs
+      run: python3 tools/sqf_linter_LogChecker.py
 
   build:
     runs-on: ubuntu-latest
