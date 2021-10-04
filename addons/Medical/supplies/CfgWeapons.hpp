@@ -1,4 +1,4 @@
-class Cfgweapons {
+class CfgWeapons {
     class CBA_MiscItem;
     class CBA_MiscItem_Iteminfo;
     class ACE_ItemCore: CBA_MiscItem {};
@@ -7,7 +7,7 @@ class Cfgweapons {
     
     class TFS_FirstAid: ACE_ItemCore {
         scope = 2;
-        author = "$str_TFS_Supplies_Author";
+        author = AUTHOR;
         displayname = "$str_TFS_Supplies_Displayname";
         descriptionShort = "$str_TFS_Supplies_Description";
         editorPreview = "\z\tfs\addons\medical\supplies\data\previews\firstaid.jpg";
@@ -22,7 +22,7 @@ class Cfgweapons {
     
     class TFS_MedicKit: ACE_ItemCore {
         scope = 2;
-        author = "$str_TFS_Supplies_Author";
+        author = AUTHOR;
         displayname = "$str_TFS_Supplies_MedicKitDisplayName";
         descriptionShort = "$str_TFS_Supplies_MedicKitDescription";
         editorPreview = "\z\tfs\addons\medical\supplies\data\previews\medickit.jpg";

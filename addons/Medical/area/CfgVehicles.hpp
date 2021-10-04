@@ -1,5 +1,5 @@
 class CBA_Extended_EventHandlers;
-class Cfgvehicles {
+class CfgVehicles {
     // inTERactionS
     
     class Man;
@@ -34,7 +34,7 @@ class Cfgvehicles {
         editorPreview = "\z\tfs\addons\medical\area\data\previews\medical_area.jpg";
         vehicleClass = "items";
         class Transportitems {
-            MACRO_addItem(TFS_MedicArea, 1);
+            MACRO_ADDITEM(TFS_MedicArea, 1);
         };
     };
 };

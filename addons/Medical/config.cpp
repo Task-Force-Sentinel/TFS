@@ -4,7 +4,7 @@ class CfgPatches
 {
     class TFS_Medical
     {
-        author = AUTHor;
+        author = AUTHER;
         name = name;
         url = URL;
         units[] = {};
@@ -25,7 +25,7 @@ class CfgFunctions
     #include "cfgFunctions.hpp"
 };
 
-class Cfgvehicles
+class CfgVehicles
 {
     class logic;
     class module_F : logic

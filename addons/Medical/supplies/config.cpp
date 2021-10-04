@@ -4,7 +4,7 @@ class CfgPatches
 {
     class TFS_Medical_Supplies
     {
-        name = "$str_TFS_Supplies_Title";
+        name = "$STR_TFS_Medical_Supplies_Title";
         addonRootClass = "TFS_Medical";
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
@@ -19,11 +19,11 @@ class CfgPatches
             "TFS_FirstAid",
             "TFS_MedicKit"
         };
-        author = "$str_TFS_Supplies_Author";
+        author = AUTHOR;
         authors[] = {
             "O. Jemineh"
         };
-        url = "$str_TFS_Supplies_URL";
+        url = URL;
         VERSION_CONFIG;
     };
 };
@@ -31,5 +31,5 @@ class CfgPatches
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgSounds.hpp"
-#include "Cfgvehicles.hpp"
+#include "CfgVehicles.hpp"
 #include "Cfgweapons.hpp"

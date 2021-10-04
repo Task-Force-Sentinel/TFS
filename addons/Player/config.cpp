@@ -4,8 +4,8 @@ class CfgPatches
 {
     class TFS_player
     {
-        author = AUTHor;
-        name = COMPONENT_name;
+        author = AUTHOR;
+        name = COMPONENT_NAME;
         url = URL;
         units[] = {};
         requiredVersion = REQUIRED_VERSION;

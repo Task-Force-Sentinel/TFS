@@ -4,7 +4,7 @@ class CfgPatches
 {
     class TFS_explosives
     {
-        author = AUTHor;
+        author = AUTHOR;
         name = name;
         url = URL;
         units[] = {};
@@ -25,4 +25,4 @@ class CfgFunctions
     #include "cfgFunctions.hpp"
 };
 
-#include "Cfgvehicles.hpp"
+#include "CfgVehicles.hpp"

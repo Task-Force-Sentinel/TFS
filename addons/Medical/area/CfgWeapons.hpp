@@ -1,4 +1,4 @@
-class Cfgweapons {
+class CfgWeapons {
     class CBA_MiscItem;
     class CBA_MiscItem_Iteminfo;
     class ACE_ItemCore: CBA_MiscItem {};

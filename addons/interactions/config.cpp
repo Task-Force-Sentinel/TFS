@@ -4,8 +4,8 @@ class CfgPatches
 {
     class TFS_interactions
     {
-        author = AUTHor;
-        name = COMPONENT_name;
+        author = AUTHOR;
+        name = COMPONENT_NAME;
         url = URL;
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
@@ -25,4 +25,4 @@ class CfgPatches
 
 #include "Cfgactions.hpp"
 #include "CfgSounds.hpp"
-#include "Cfgvehicles.hpp"
+#include "CfgVehicles.hpp"

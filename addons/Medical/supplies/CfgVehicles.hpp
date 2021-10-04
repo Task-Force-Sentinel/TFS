@@ -1,6 +1,6 @@
 class CBA_Extended_EventHandlers;
-class Cfgvehicles {
-    // inTERactionS
+class CfgVehicles {
+    // INTERACTIONS
     
     class Man;
     class CAManBase: Man {
@@ -12,9 +12,7 @@ class Cfgvehicles {
                     displayname = "$str_TFS_Supplies_action_FirstAid";
                     condition = "[_player] call TFS_medical_supplies_fnc_canUnpackFirstAid";
                     statement = "[_player] call TFS_medical_supplies_fnc_doUnpackFirstAid";
-                    exceptions[] = {
-                        "isnotinside", "isnotSitting"
-                    };
+                    exceptions[] = {"isNotInside", "isNotSitting"};
                     icon = "\z\tfs\addons\medical\data\icons\medical_cross_ex_ca.paa";
                     showDisabled = 0;
                 };
@@ -23,9 +21,7 @@ class Cfgvehicles {
                     displayname = "$str_TFS_Supplies_action_MedicKit";
                     condition = "[_player] call TFS_medical_supplies_fnc_canUnpackMedicKit";
                     statement = "[_player] call TFS_medical_supplies_fnc_doUnpackMedicKit";
-                    exceptions[] = {
-                        "isnotinside", "isnotSitting"
-                    };
+                    exceptions[] = {"isNotInside", "isNotSitting"};
                     icon = "\z\tfs\addons\medical\data\icons\medical_cross_ex_ca.paa";
                     showDisabled = 0;
                 };
@@ -41,12 +37,12 @@ class Cfgvehicles {
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
-        author = "$str_TFS_Supplies_Author";
+        author = AUTHOR;
         displayname = "$str_TFS_Supplies_Displayname";
         editorPreview = "\z\tfs\addons\medical\supplies\data\previews\firstaid.jpg";
-        vehicleClass = "items";
+        vehicleClass = "Items";
         class Transportitems {
-            MACRO_addItem(TFS_FirstAid, 1);
+            MACRO_ADDITEM(TFS_FirstAid, 1);
         };
     };
     
@@ -54,12 +50,12 @@ class Cfgvehicles {
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
-        author = "$str_TFS_Supplies_Author";
+        author = AUTHOR;
         displayname = "$str_TFS_Supplies_MedicKitDisplayName";
         editorPreview = "\z\tfs\addons\medical\supplies\data\previews\medickit.jpg";
-        vehicleClass = "items";
+        vehicleClass = "Items";
         class Transportitems {
-            MACRO_addItem(TFS_MediKit, 1);
+            MACRO_ADDITEM(TFS_MediKit, 1);
         };
     };
 };

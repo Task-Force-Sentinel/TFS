@@ -1,11 +1,11 @@
-class Cfgvehicles {
+class CfgVehicles {
     // Box
     class NAto_Box_Base {
         class EventHandlers;
     };
     class CLASS(TFS_resupply): NAto_Box_Base {
         scope = 2;
-        author = AUTHor;
+        author = AUTHOR;
         mapsize=1.53;
         class SimpleObject
         {
@@ -14,8 +14,7 @@ class Cfgvehicles {
             hide[]={};
             verticalOffset=0.79000002;
             verticalOffsetWorld=0;
-            init="[this, 10, true, true] call TFS_fnc_ammoCrate;
-            ";
+            init="[this, 10, true, true] call TFS_fnc_ammoCrate;";
         };
         displayname = "TFS Resupply";
         model="A3\weapons_F\ammoboxes\ammoveh_F";
@@ -29,8 +28,7 @@ class Cfgvehicles {
         };
         class EventHandlers: EventHandlers
         {
-            init = "[this, 10, true, true] call TFS_fnc_ammoCrate;
-            ";
+            init = "[this, 10, true, true] call TFS_fnc_ammoCrate;";
         };
         editorPreview="\A3\EditorPreviews_F\Data\Cfgvehicles\Box_NAto_ammoveh_F.jpg";
         _generalMacro="Box_NAto_ammoveh_F";
@@ -50,7 +48,7 @@ class Cfgvehicles {
     };
     class CLASS(TFS_arsenal): NAto_Box_Base {
         scope = 2;
-        author = AUTHor;
+        author = AUTHOR;
         mapsize=1.53;
         class SimpleObject
         {

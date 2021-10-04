@@ -4,7 +4,7 @@ if (!hasinterface) exitwith {};
 
 player createDiaryRecord ["Diary", ["Long Range Frequencies",
     "
-    <br/><font face='PuristaLight' color='#ffcc00' font size='20' >**listENinG ON AN UNAUTHorISED FREQUENCY IS strICTLY PROHIBITED.**</font>
+    <br/><font face='PuristaLight' color='#ffcc00' font size='20' >**listENinG ON AN UNAUTHORISED FREQUENCY IS strICTLY PROHIBITED.**</font>
     <br/>
     <br/>Below is a list of the default Long Range Frequencies. Your role specific frequencies are set on your radio automatically. Ensure you're on the correct frequencies at all times.
     <br/>
@@ -21,7 +21,7 @@ player createDiaryRecord ["Diary", ["Long Range Frequencies",
 
 player createDiaryRecord ["Diary", ["Short Range Frequencies",
     "
-    <br/><font face='PuristaLight' color='#ffcc00' font size='20' >**listENinG ON AN UNAUTHorISED FREQUENCY IS strICTLY PROHIBITED.**</font>
+    <br/><font face='PuristaLight' color='#ffcc00' font size='20' >**listENinG ON AN UNAUTHORISED FREQUENCY IS strICTLY PROHIBITED.**</font>
     <br/>
     <br/>Below is a list of the default Short Range Frequencies. Your role specific frequencies are set on your radio automatically. Ensure you're on the correct frequencies at all times. don't forget the MERT Frequency!
     <br/>

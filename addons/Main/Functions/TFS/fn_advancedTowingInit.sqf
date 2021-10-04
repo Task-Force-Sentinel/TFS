@@ -7,7 +7,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", withOUT WARRANTY OF ANY KinD, expRESS or IMPLIED, inCLUDinG BUT not LIMITED to THE WARRANTIES OF MERCHANTABILITY, FITNESS for A PARTICULAR PURPOSE and NONinFRinGEMENT. in NO EVENT SHALL THE AUTHorS or COPYRIGHT HOLDERS BE LIABLE for ANY CLAIM, damageS or OTHER LIABILITY, WHETHER in AN action OF CONTRACT, torT or OTHERWISE, ARIsinG from, OUT OF or in CONNECTION with THE SOFTWARE or THE USE or OTHER DEALinGS in THE SOFTWARE.
+THE SOFTWARE IS PROVIDED "AS IS", withOUT WARRANTY OF ANY KinD, expRESS or IMPLIED, inCLUDinG BUT not LIMITED to THE WARRANTIES OF MERCHANTABILITY, FITNESS for A PARTICULAR PURPOSE and NONinFRinGEMENT. in NO EVENT SHALL THE AUTHORS or COPYRIGHT HOLDERS BE LIABLE for ANY CLAIM, damageS or OTHER LIABILITY, WHETHER in AN action OF CONTRACT, torT or OTHERWISE, ARIsinG from, OUT OF or in CONNECTION with THE SOFTWARE or THE USE or OTHER DEALinGS in THE SOFTWARE.
 */
 
 #define SA_find_Surface_ASL_Under_position(_object, _positionAGL, _returnSurfaceASL, _canFloat) \

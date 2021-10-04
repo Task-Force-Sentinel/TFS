@@ -4,8 +4,8 @@ class CfgPatches
 {
     class TFS_modules
     {
-        author = AUTHor;
-        name = COMPONENT_name;
+        author = AUTHOR;
+        name = COMPONENT_NAME;
         url = URL;
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
@@ -22,4 +22,4 @@ class CfgPatches
 
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
-#include "Cfgvehicles.hpp"
+#include "CfgVehicles.hpp"

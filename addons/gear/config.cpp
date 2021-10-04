@@ -9,7 +9,7 @@ class CfgPatches
         requiredAddons[] = {};
         units[] = {};
         weapons[] = {};
-        author = AUTHor;
+        author = AUTHOR;
         authors[] = {
             "O. Jemineh"
         };

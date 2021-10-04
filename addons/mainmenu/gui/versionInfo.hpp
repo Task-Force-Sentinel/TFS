@@ -14,7 +14,7 @@ class RscDisplayMain: RscStandardDisplay {
                 class BackgroundIcon;
                 class Icon;
                 class News;
-                class notification;
+                class Notification;
                 class Button;
             };
         };
@@ -27,7 +27,7 @@ class RscDisplayMain: RscStandardDisplay {
                 class Background: Background {};
                 class BackgroundIcon: BackgroundIcon {};
                 class Icon: Icon {
-                    text = "\z\tfs\addons\media\images\TFSLOGO@0.25x.paa";
+                    text = "$str_TFS_Main_logo";
                 };
                 
                 class CurrentVersioninfo: Rsctext {
@@ -44,8 +44,7 @@ class RscDisplayMain: RscStandardDisplay {
                     y = 0;
                     w = "(10 - 1.25 * 2) * (pixelW * pixelGrid * 2)";
                     h = "1 * (pixelH * pixelGrid * 2)";
-                    onload = "(_this select 0) ctrlEnable false;
-                    ";
+                    onload = "(_this select 0) ctrlEnable false;";
                 };
                 
                 class HTTPVersioninfo: RscHTML {
@@ -67,13 +66,12 @@ class RscDisplayMain: RscStandardDisplay {
                     y = "1 * (pixelH * pixelGrid * 2)";
                     w = "(10 - 1.25 * 2) * (pixelW * pixelGrid * 2)";
                     h = "1 * (pixelH * pixelGrid * 2)";
-                    onload = "(_this select 0) ctrlEnable false;
-                    ";
+                    onload = "(_this select 0) ctrlEnable false;";
                 };
                 
                 class Button: Button {
-                    tooltip = "Download latest and report issues:";
-                    url = "$str_TFS_Main_URL_Releases";
+                    tooltip = "$str_TFS_Versioninfo_tooltip";
+                    url = "$str_TFS_Addon_URL_Releases";
                 };
             };
         };

@@ -3,14 +3,14 @@ class CfgUnitinsignia
     class logo
     {
         displayname = "TFS logo";
-        author = AUTHor;
+        author = AUTHOR;
         texture = "z\tfs\addons\Media\images\TFSPATCH.paa";
         texturevehicle = "";
     };
     class bolo
     {
         displayname = "TFS BOLO";
-        author = AUTHor;
+        author = AUTHOR;
         texture = "z\tfs\addons\Media\images\TFSPATCH.paa";
         texturevehicle = "";
     };

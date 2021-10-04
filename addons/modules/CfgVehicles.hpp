@@ -1,4 +1,4 @@
-class Cfgvehicles {
+class CfgVehicles {
     // modULES
     
     class logic;

@@ -4,7 +4,7 @@ class CfgPatches
 {
     class TFS_interaction
     {
-        author = AUTHor;
+        author = AUTHOR;
         name = name;
         url = URL;
         units[] = {};

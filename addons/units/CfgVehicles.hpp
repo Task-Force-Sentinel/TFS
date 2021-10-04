@@ -1,6 +1,6 @@
 class CBA_Extended_EventHandlers_base;
 
-class Cfgvehicles {
+class CfgVehicles {
     #define MACRO_TFS_CLASS_COMMON \
     dlc = QUOTE(PREFIX);
     \

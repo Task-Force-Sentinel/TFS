@@ -92,7 +92,7 @@ private _sourcePatches = [];
     
     // Generate config
     private _nl = toString [13, 10];
-    "ace_clipboard" callExtension format ["class Cfgvehicles {
+    "ace_clipboard" callExtension format ["class CfgVehicles {
     %1", _nl];
     {
         "ace_clipboard" callExtension format [" class %2;

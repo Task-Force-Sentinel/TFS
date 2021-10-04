@@ -4,7 +4,7 @@ class CfgPatches
 {
     class TFSFundamentals_Channels
     {
-        author = AUTHor;
+        author = AUTHOR;
         name = name;
         url = URL;
         units[] = {};

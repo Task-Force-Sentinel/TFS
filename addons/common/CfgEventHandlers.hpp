@@ -1,6 +1,6 @@
 XEH_PRESTART;
-XEH_PREinIT;
-XEH_POSTinIT;
+XEH_PREINIT;
+XEH_POSTINIT;
 
 class Extended_init_EventHandlers {
     class GVAR(hideMapObjects) {
