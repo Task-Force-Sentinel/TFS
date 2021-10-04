@@ -20,7 +20,7 @@ class CfgRespawnTemplates
     class TFS_Spectator
     {
         displayName = "TFS Spectator";
-        onPlayerRespawn  = QFUNC(init);
+        onPlayerRespawn = QFUNC(init);
         onPlayerKilled = "";
     };
 };

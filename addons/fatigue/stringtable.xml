@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="Arma_Extended_Environment">
+<Project name="TFS">
 
 	<!-- ####################################################################################### -->
-	<Package name="TFS_Fatigue">
+	<Package name="Fatigue">
 
 		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 		<Container name="Fatigue">
 			<!-- =============================================================================== -->
 			<Key ID="STR_TFS_Fatigue_Title">
-				<Original>TFS Fatigue</Original>
+				<English>TFS Fatigue</English>
 			</Key>
 			<Key ID="STR_TFS_Fatigue_Author">
-				<Original>TFS</Original>
+				<English>TFS</English>
 			</Key>
 			<Key ID="STR_TFS_Fatigue_Url">
-				<Original>https://github.com/TFSmod/TFS</Original>
+				<English>https://github.com/TFSmod/TFS</English>
 			</Key>
 			<!-- =============================================================================== -->
 		</Container>
@@ -24,12 +24,12 @@
 		<Container name="CBA_Categories">
 			<!-- =============================================================================== -->
 			<Key ID="STR_TFS_Fatigue_CBA_Category">
-				<Original>TFS Fatigue</Original>
+				<English>TFS Fatigue</English>
 				<German>TFS Ausdauer</German>
 			</Key>
 			<!-- =============================================================================== -->
 			<Key ID="STR_TFS_Fatigue_CBA_Category_core">
-				<Original>core</Original>
+				<English>core</English>
 				<German>Allgemeines</German>
 			</Key>
 			<!-- =============================================================================== -->
@@ -40,11 +40,11 @@
 		<Container name="CBA_Settings">
 			<!-- =============================================================================== -->
 			<Key ID="STR_TFS_Fatigue_CBA_Global_Sounds_Title">
-				<Original>Global Sounds</Original>
+				<English>Global Sounds</English>
 				<German>Globale Sounds</German>
 			</Key>
 			<Key ID="STR_TFS_Fatigue_CBA_Global_Sounds_Tip">
-				<Original>Heavy breathing (exhaustion) can be heard from players nearby.</Original>
+				<English>Heavy breathing (exhaustion) can be heard from players nearby.</English>
 				<German>Schweres Atmen (Erschöpfung), kann von Spielern in der Nähe gehört werden.</German>
 			</Key>
 			<!-- =============================================================================== -->

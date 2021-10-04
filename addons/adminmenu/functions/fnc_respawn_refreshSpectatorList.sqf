@@ -3,27 +3,23 @@
 disableSerialization;
 params ["_display"];
 
-private _ctrlSpectatorListBox = (_display displayCtrl IDC_TFS_ADMINMENU_RESP_SPECTATORLIST);
+private _ctrlSpectatorlistBox = (_display displayCtrl IDC_TFS_adminMENU_RESP_SPECTAtorlist);
 
-
-
-lbClear _ctrlSpectatorListBox;
+lbClear _ctrlSpectatorlistBox;
 {
     private _found = false;
-    private _deadPlayer = _x;
-
-
-    //Check if already selected and thus in the selected respawn listBox.
+    private _deadplayer = _x;
+    
+    // Check if already selected and thus in the selected respawn listBox.
     {
-        if (_deadPlayer == (_x select 1)) exitWith {
-            _found = true;  
+        if (_deadplayer == (_x select 1)) exitwith {
+            _found = true;
         };
-    } forEach GVAR(selectedRespawnGroup);
+    } forEach GVAR(selectedRespawngroup);
     
     if (!_found) then {
-        private _name = _deadPlayer getVariable ["TFS_spectator_name",name _deadPlayer];
-        private _idx = _ctrlSpectatorListBox lbAdd _name;
-        _ctrlSpectatorListBox lbSetData[_idx,_name];
+        private _name = _deadplayer getVariable ["TFS_spectator_name", name _deadplayer];
+        private _idx = _ctrlSpectatorlistBox lbAdd _name;
+        _ctrlSpectatorlistBox lbsetData[_idx, _name];
     };
-
-} forEach GVAR(spectatorList);
+} forEach GVAR(spectatorlist);

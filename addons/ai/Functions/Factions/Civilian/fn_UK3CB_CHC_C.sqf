@@ -3,11 +3,11 @@ _pedPool = [
     "UK3CB_CHC_C_BODYG",
     "UK3CB_CHC_C_CIT",
     "UK3CB_CHC_C_COACH",
-    "UK3CB_CHC_C_DOC",
+    "UK3CB_CHC_C_doC",
     "UK3CB_CHC_C_FUNC",
     "UK3CB_CHC_C_HIKER",
     "UK3CB_CHC_C_LABOUR",
-    "UK3CB_CHC_C_PILOT",
+    "UK3CB_CHC_C_piLOT",
     "UK3CB_CHC_C_POLITIC",
     "UK3CB_CHC_C_PRIEST",
     "UK3CB_CHC_C_PROF",
@@ -16,7 +16,7 @@ _pedPool = [
     "UK3CB_CHC_C_VILL",
     "UK3CB_CHC_C_CAN",
     "UK3CB_CHC_C_WOOD",
-    "UK3CB_CHC_C_WORKER"
+    "UK3CB_CHC_C_WorKER"
 ];
 
 _motPool = [
@@ -27,7 +27,7 @@ _motPool = [
     "UK3CB_CHC_C_Hilux_Civ_Closed",
     "UK3CB_CHC_C_Hilux_Civ_Open",
     "UK3CB_CHC_C_Kamaz_Covered",
-    "UK3CB_CHC_C_Kamaz_Fuel",
+    "UK3CB_CHC_C_Kamaz_fuel",
     "UK3CB_CHC_C_Kamaz_Open",
     "UK3CB_CHC_C_Kamaz_Repair",
     "UK3CB_CHC_C_Lada",
@@ -47,9 +47,9 @@ _motPool = [
     "UK3CB_CHC_C_UAZ_Closed",
     "UK3CB_CHC_C_UAZ_Open",
     "UK3CB_CHC_C_Ural",
-    "UK3CB_CHC_C_Ural_Fuel",
+    "UK3CB_CHC_C_Ural_fuel",
     "UK3CB_CHC_C_Ural_Open",
-    "UK3CB_CHC_C_Ural_Ammo",
+    "UK3CB_CHC_C_Ural_ammo",
     "UK3CB_CHC_C_Ural_Empty",
     "UK3CB_CHC_C_Ural_Recovery",
     "UK3CB_CHC_C_Ural_Repair",

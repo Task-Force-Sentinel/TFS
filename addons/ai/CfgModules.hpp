@@ -1,37 +1,37 @@
-class CfgVehicles
+class Cfgvehicles
 {
-    class Logic;
-    class Module_F: Logic
+    class logic;
+    class module_F: logic
     {
-        class ArgumentsBaseUnits
+        class ArgumentsBaseunits
         {
-            class Units;
+            class units;
         };
-        class ModuleDescription
+        class moduleDescription
         {
             class AnyBrain;
-            class AnyPlayer;
-			class EmptyDetector;
+            class Anyplayer;
+            class EmptyDetector;
         };
         class AttributesBase
-		{
-			class Default;
-			class Edit;
-			class Combo;
-			class Checkbox;
-			class CheckboxNumber;
-			class ModuleDescription;
-			class Units;
-		};
+        {
+            class default;
+            class Edit;
+            class Combo;
+            class Checkbox;
+            class CheckboxNumber;
+            class moduleDescription;
+            class units;
+        };
     };
     #include "modules\area.hpp"
-    #include "modules\waveSpawner.hpp"
-    #include "modules\huntModule.hpp"
+    #include "modules\wavespawner.hpp"
+    #include "modules\huntmodule.hpp"
     #include "modules\rearm.hpp"
     #include "modules\garrison.hpp"
     #include "modules\arty.hpp"
-    #include "modules\AISpawnsEastModule.hpp"
-	#include "modules\AISpawnsIndependentModule.hpp"
-	#include "modules\AISpawnsWestModule.hpp"
-	#include "modules\CivilianSpawnsModule.hpp"
+    #include "modules\AIspawnseastmodule.hpp"
+    #include "modules\AIspawnsindependentmodule.hpp"
+    #include "modules\AIspawnswestmodule.hpp"
+    #include "modules\civilianspawnsmodule.hpp"
 };

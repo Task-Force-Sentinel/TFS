@@ -5,7 +5,7 @@ class cfgPatches
     class ADDON
     {
         author = AUTHOR;
-		name = COMPONENT_NAME;
+        name = COMPONENT_NAME;
         url = URL;
         units[] = {};
         weapons[] = {};

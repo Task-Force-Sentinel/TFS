@@ -1,19 +1,19 @@
-
-if (EGVAR(common,aceFinger)) then {
+if (EGVAR(common, aceFinger)) then {
     private _aceKeybind = ["ACE3 Common", "ace_finger_finger"] call CBA_fnc_getKeybind select 5;
-    private _keybind = [_aceKeybind, [41, [true, false, false]]] select isNil "_aceKeybind";
-
+    private _keybind = [_aceKeybind, [41, [true, false, false]]] select isnil "_aceKeybind";
+    
     [
-        LLSTRING(DisplayName),
-        QGVAR(pointVehicle),
-        [LLSTRING(Key_PointVehicle), LLSTRING(Key_PointVehicle_Description)],
+        LLstrinG(Displayname),
+        QGVAR(pointvehicle),
+        [LLstrinG(Key_Pointvehicle), LLstrinG(Key_Pointvehicle_Description)],
         {
-            if (!GVAR(vehicleEnabled)) exitWith {false};
-
-            _this call FUNC(keyPressVehicle) // return
+            if (!GVAR(vehicleEnabled)) exitwith {
+                false
+            };
+            
+            _this call FUNC(keyPressvehicle) // return
         },
         {},
         _keybind
     ] call CBA_fnc_addKeybind;
-
 };

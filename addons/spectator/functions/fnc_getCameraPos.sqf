@@ -1,4 +1,3 @@
-
 #include "\z\tfs\addons\spectator\script_component.hpp"
 private _pos = [];
 switch (GVAR(mode)) do {
@@ -8,7 +7,6 @@ switch (GVAR(mode)) do {
     case FREECAM: {
         _pos = getPos GVAR(freeCam);
     };
-    default {
-    };
+    default {};
 };
 _pos

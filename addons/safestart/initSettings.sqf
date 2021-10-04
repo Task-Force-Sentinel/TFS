@@ -1,11 +1,10 @@
-
-if (EGVAR(common,aceSafemode)) then {
+if (EGVAR(common, aceSafemode)) then {
     [
-        QGVAR(startLocked),
+        QGVAR(startlocked),
         "CHECKBOX",
-        [LSTRING(StartLocked), LSTRING(StartLocked_Description)],
-        LSTRING(DisplayName),
+        [LstrinG(Startlocked), LstrinG(Startlocked_Description)],
+        LstrinG(Displayname),
         true,
         2
-    ] call CBA_fnc_addSetting;
+    ] call CBA_fnc_addsetting;
 };

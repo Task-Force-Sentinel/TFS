@@ -1,38 +1,46 @@
 #include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
-params ["_display", ["_checkboxIDC", IDC_TFS_ADMINMENU_ENDM_FROMMISSION, [0]]];
+params ["_display", ["_checkboxIDC", IDC_TFS_adminMENU_ENDM_fromMISSION, [0]]];
 
-private _occluderText = switch (_checkboxIdc) do {
-    case IDC_TFS_ADMINMENU_ENDM_FROMMISSION: { "Using Ending from Mission" };
-    case IDC_TFS_ADMINMENU_ENDM_SIDESPECIFIC: { "Using Side-Specific Ending" };
-    case IDC_TFS_ADMINMENU_ENDM_CUSTOM: { "Using Custom Ending" };
-    default { "..." };
+private _occludertext = switch (_checkboxIdc) do {
+    case IDC_TFS_adminMENU_ENDM_fromMISSION: {
+        "Using Ending from Mission"
+    };
+    case IDC_TFS_adminMENU_ENDM_sideSPECifIC: {
+        "Using side-Specific Ending"
+    };
+    case IDC_TFS_adminMENU_ENDM_CUStoM: {
+        "Using Custom Ending"
+    };
+    default {
+        "..."
+    };
 };
 
 {
-    (_display displayCtrl _x) ctrlSetText _occluderText;
-} forEach IDCS_TFS_ADMINMENU_ENDM_OCCLUDERS;
+    (_display displayCtrl _x) ctrlsettext _occludertext;
+} forEach IDCS_TFS_adminMENU_ENDM_OCCLUDERS;
 
-private _useFromMission = (_checkboxIdc isEqualTo IDC_TFS_ADMINMENU_ENDM_FROMMISSION);
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_FROMMISSION) cbSetChecked _useFromMission;
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_LIST) ctrlEnable _useFromMission;
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_FROMMISSION_ISDEFEAT) ctrlEnable _useFromMission;
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_OCCLUDER_LU) ctrlEnable !_useFromMission;
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_OCCLUDER_LU) ctrlShow !_useFromMission;
+private _usefromMission = (_checkboxIdc isEqualto IDC_TFS_adminMENU_ENDM_fromMISSION);
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_fromMISSION) cbsetChecked _usefromMission;
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_list) ctrlEnable _usefromMission;
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_fromMISSION_ISDEFEAT) ctrlEnable _usefromMission;
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_OCCLUDER_LU) ctrlEnable !_usefromMission;
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_OCCLUDER_LU) ctrlShow !_usefromMission;
 
-private _useSideSpecific = (_checkboxIdc isEqualTo IDC_TFS_ADMINMENU_ENDM_SIDESPECIFIC);
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_SIDESPECIFIC) cbSetChecked _useSideSpecific;
+private _usesideSpecific = (_checkboxIdc isEqualto IDC_TFS_adminMENU_ENDM_sideSPECifIC);
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_sideSPECifIC) cbsetChecked _usesideSpecific;
 {
-    (_display displayCtrl _x) ctrlEnable _useSideSpecific;
-} forEach IDCS_TFS_ADMINMENU_ENDM_SIDESPECIFIC;
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_OCCLUDER_R) ctrlEnable !_useSideSpecific;
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_OCCLUDER_R) ctrlShow !_useSideSpecific;
+    (_display displayCtrl _x) ctrlEnable _usesideSpecific;
+} forEach IDCS_TFS_adminMENU_ENDM_sideSPECifIC;
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_OCCLUDER_R) ctrlEnable !_usesideSpecific;
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_OCCLUDER_R) ctrlShow !_usesideSpecific;
 
-private _useCustom = (_checkboxIdc isEqualTo IDC_TFS_ADMINMENU_ENDM_CUSTOM);
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_CUSTOM) cbSetChecked _useCustom;
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_CUSTOM_TITLE) ctrlEnable _useCustom;
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_CUSTOM_SUBTEXT) ctrlEnable _useCustom;
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_CUSTOM_ISDEFEAT) ctrlEnable _useCustom;
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_OCCLUDER_LD) ctrlEnable !_useCustom;
-(_display displayCtrl IDC_TFS_ADMINMENU_ENDM_OCCLUDER_LD) ctrlShow !_useCustom;
+private _useCustom = (_checkboxIdc isEqualto IDC_TFS_adminMENU_ENDM_CUStoM);
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_CUStoM) cbsetChecked _useCustom;
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_CUStoM_TITLE) ctrlEnable _useCustom;
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_CUStoM_SUBtext) ctrlEnable _useCustom;
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_CUStoM_ISDEFEAT) ctrlEnable _useCustom;
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_OCCLUDER_LD) ctrlEnable !_useCustom;
+(_display displayCtrl IDC_TFS_adminMENU_ENDM_OCCLUDER_LD) ctrlShow !_useCustom;

@@ -21,8 +21,10 @@ class cfgPatches
 
 #include "display3DEN.hpp"
 
-class TFS_autotest {
-    class GVAR(test) {
+class TFS_autotest
+{
+    class GVAR(test)
+    {
         code = QUOTE([] call FUNC(testBriefings));
     };
 };

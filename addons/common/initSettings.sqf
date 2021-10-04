@@ -1,6 +1,6 @@
 if (isClass (configFile >> "CfgPatches" >> "ace_safemode")) then {
     [
-        QGVAR(weaponSafety),
+        QGVAR(weaponsafety),
         "CHECKBOX",
         "Enable ACE Weapon Safety on mission start",
         ["TFS Common"],
@@ -8,5 +8,5 @@ if (isClass (configFile >> "CfgPatches" >> "ace_safemode")) then {
         0,
         {},
         true
-    ] call CBA_fnc_addSetting;
+    ] call CBA_fnc_addsetting;
 };

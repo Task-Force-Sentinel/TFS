@@ -1,41 +1,45 @@
 #include "script_component.hpp"
 /*
- * Author: Jonpas
- * Adds shooting range countdown times configuration child interactions to a controller.
- *
- * Arguments:
- * 0: Name <STRING>
- * 1: Controller <OBJECT>
- * 2: Controllers <ARRAY>
- * 3: Countdown Times <ARRAY>
- * 4: Targets <ARRAY>
- *
- * Return Value:
- * None
- *
- * Example:
- * ["range", controller, [controller1, controller2], [6, 9], [target1, target2]] call TFS_shootingrange_fnc_addConfigCountdownTimes;
- *
- * Public: No
- */
+* Author: Jonpas
+* Adds shooting range countdown times configuration child interactions to a controller.
+*
+* Arguments:
+* 0: name <strinG>
+* 1: Controller <OBJECT>
+* 2: Controllers <ARRAY>
+* 3: countdown times <ARRAY>
+* 4: targets <ARRAY>
+*
+* Return Value:
+* None
+*
+* Example:
+* ["range", controller, [controller1, controller2], [6, 9], [target1, target2]] call TFS_shootingrange_fnc_addConfigcountdowntimes;
+*
+* Public: No
+*/
 
-params ["_name", "_controller", "_controllers", "_countdownTimes", "_targets"];
+params ["_name", "_controller", "_controllers", "_countdowntimes", "_targets"];
 
 private _actions = [];
 {
     _actions pushBack [
         [
-            format [QGVAR(RangeConfigCountdownTime%1), _forEachIndex + 1],
-            format ["%1 %2", _x, localize LSTRING(Seconds)],
+            format [QGVAR(RangeConfigcountdowntime%1), _forEachindex + 1],
+            format ["%1 %2", _x, localize LstrinG(Seconds)],
             "",
-            {(_this select 2) call FUNC(setConfigCountdownTime)},
-            {true},
+            {
+                (_this select 2) call FUNC(setConfigcountdowntime)
+            },
+            {
+                true
+            },
             {},
             [_name, _controllers, _x, _targets]
-        ] call ACEFUNC(interact_menu,createAction),
+        ] call ACEFUNC(interact_menu, createaction),
         [],
-        _controller // IGNORE_PRIVATE_WARNING(_controller)
+        _controller // IGNorE_private_WARNinG(_controller)
     ];
-} forEach _countdownTimes;
+} forEach _countdowntimes;
 
 _actions

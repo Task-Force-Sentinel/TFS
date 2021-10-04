@@ -1,49 +1,43 @@
-
 XEH_PRESTART;
-XEH_PREINIT;
-XEH_POSTINIT;
+XEH_PREinIT;
+XEH_POSTinIT;
 
-class Extended_Init_EventHandlers {
+class Extended_init_EventHandlers {
     class GVAR(hideMapObjects) {
-        class ADDON {
-            init = QUOTE(_this call FUNC(hideMapObjectsInit));
+        class ADdoN {
+            init = QUOTE(_this call FUNC(hideMapObjectsinit));
         };
-
     };
 };
 
 class Extended_Respawn_EventHandlers {
     class CAManBase {
-        class ADDON {
-            respawn = QUOTE((_this select 0) setVariable [ARR_3(QQGVARMAIN(lastRespawn),time,true)]);
+        class ADdoN {
+            respawn = QUOTE((_this select 0) setVariable [ARR_3(QQGVARMAin(lastrespawn), time, true)]);
         };
     };
 };
 
-class Extended_DisplayLoad_EventHandlers {
-    class RscDisplayMultiplayerSetup {
-        tfs_slotting = QUOTE(_this call (uiNamespace getVariable 'FUNC(initDisplayMultiplayerSetup)'));
+class Extended_Displayload_EventHandlers {
+    class RscDisplayMultiplayersetup {
+        tfs_slotting = QUOTE(_this call (uiNamespace getVariable 'FUNC(initDisplayMultiplayersetup)'));
     };
     class RscDisplayDebriefing {
         tfs_override_end_text = QUOTE(_this call (uiNamespace getVariable 'FUNC(initDisplayDebriefing)'));
     };
     class RscDiary {
-        ADDON = QUOTE(_this call (uiNamespace getVariable 'FUNC(initDisplayMission)'));
+        ADdoN = QUOTE(_this call (uiNamespace getVariable 'FUNC(initDisplayMission)'));
     };
 };
 
-class Extended_PreInit_EventHandlers {
-	
-	class tfs_Common_EH_initSettings {
-		init = QUOTE(_this call FUNC(initSettings));
-	};
-	
+class Extended_Preinit_EventHandlers {
+    class tfs_Common_EH_initsettings {
+        init = QUOTE(_this call FUNC(initsettings));
+    };
 };
 
-class Extended_PostInit_EventHandlers {
-	
-	class tfs_Common_EH_initialize {
-		init = init = QUOTE(_this call FUNC(initialize));
-	};
-	
+class Extended_Postinit_EventHandlers {
+    class tfs_Common_EH_initialize {
+        init = init = QUOTE(_this call FUNC(initialize));
+    };
 };

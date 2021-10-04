@@ -1,14 +1,15 @@
 #include "script_component.hpp"
 
-class CfgPatches {
-    class ADDON {
+class CfgPatches
+{
+    class ADDON
+    {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "TFS_common"
-        };
+            "TFS_common"};
         author = "ArmaForces";
         authors[] = {"3Mydlo3"};
         VERSION_CONFIG;

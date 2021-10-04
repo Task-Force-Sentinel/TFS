@@ -1,30 +1,37 @@
 #include "\z\tfs\addons\common\script_component.hpp"
 /*
- * Name: TFS_common_fnc_mouseOver
- * Author: Nick
- *
- * Arguments:
- * None
- *
- * Return:
- * nil
- *
- * Description:
- * Set tfs_common_edenMouseObjects and fires mouseOver events?
- *
- */
+* name: TFS_common_fnc_mouseOver
+* Author: Nick
+*
+* Arguments:
+* None
+*
+* Return:
+* nil
+*
+* Description:
+* set tfs_common_edenMouseObjects and fires mouseOver events?
+*
+*/
 
 // Get intersected objects, sort them by distance, and select the one closest to the camera.
-private _intersects = lineIntersectsSurfaces [getPosASL get3DENCamera,ATLToASL screenToWorld getMousePosition,objNull,objNull,true,5,"FIRE","GEOM"];
-_intersects = _intersects apply {_x select 2};
-_intersects = _intersects select {!(isNull _x)};
+private _intersects = lineIntersectsSurfaces [getPosASL get3DENCamera, ATLtoASL screentoWorld getMouseposition, objNull, objNull, true, 5, "fire", "GEOM"];
+_intersects = _intersects apply {
+    _x select 2
+};
+_intersects = _intersects select {
+    !(isNull _x)
+};
 if !(current3DENOperation == "") then {
-    _intersects = _intersects select {!(_x in (get3DENSelected "object"))};     // Remove selected objects if they're being dragged.
+    _intersects = _intersects select {
+        !(_x in (get3DENselected "object"))
+    };
+    // Remove selected objects if they're being dragged.
 };
 
-if !(GVAR(edenMouseObjects) isEqualTo _intersects) then {
+if !(GVAR(edenMouseObjects) isEqualto _intersects) then {
     GVAR(edenMouseObjects) = _intersects;
-    [QGVAR(edenMouseOverChanged),GVAR(edenMouseObjects)] call CBA_fnc_localEvent;
+    [QGVAR(edenMouseOverChanged), GVAR(edenMouseObjects)] call CBA_fnc_localEvent;
 } else {
     GVAR(edenMouseObjects) = _intersects;
 };

@@ -1,10 +1,10 @@
-name = "Task Force Sentinel Custom v0";
+name = "Task Force Sentinel Custom Mod";
 picture = "";
 description = "Project Template";
 logo = "";
 logoOver = "";
-tooltip = "Task Force Sentinel Custom v0";
+tooltip = "Task Force Sentinel Custom Mod";
 tooltipOwned = "Task Force Sentinel Owned";
-overview = "Task Force Sentinel Custom v0";
+overview = "Task Force Sentinel Custom Mod";
 author = "Task Force Sentinel Team";
 overviewPicture = "";

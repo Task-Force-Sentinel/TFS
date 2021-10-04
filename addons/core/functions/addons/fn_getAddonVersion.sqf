@@ -1,20 +1,20 @@
 /*
- *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfs\addons\core\functions\addons\fn_getAddonVersion.sqf
- *	by Ojemineh
- *	
- *	get addon version
- *	
- *	Arguments:
- *	0: classname - <STRING>
- *	
- *	Return:
- *	<STRING>
- *	
- *	Example:
- *	["tfs_core"] call TFS_fnc_getAddonVersion;
- *	
- */
+*	ARMA EXTENDED ENVIRONMENT
+*	\z\tfs\addons\core\functions\addons\fn_getAddonVersion.sqf
+*	by Ojemineh
+*
+*	get addon version
+*
+*	Arguments:
+*	0: classname - <strinG>
+*
+*	Return:
+*	<strinG>
+*
+*	Example:
+*	["tfs_core"] call TFS_fnc_getAddonVersion;
+*
+*/
 
 // -------------------------------------------------------------------------------------------------
 
@@ -26,8 +26,8 @@ _classname = [_this, 0, "", [""]] call BIS_fnc_param;
 
 private _return = "";
 
-if (isClass (configfile >> "CfgPatches" >> _classname)) then {
-	_return = getText (configfile >> "CfgPatches" >> _classname >> "version");
+if (isClass (configFile >> "CfgPatches" >> _classname)) then {
+    _return = gettext (configFile >> "CfgPatches" >> _classname >> "version");
 };
 
 _return;

@@ -1,1 +1,1 @@
-TFS_CC_vehicleCamList = [];
+TFS_CC_vehicleCamlist = [];

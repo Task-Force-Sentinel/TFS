@@ -1,20 +1,20 @@
 /*
- *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfs\addons\modules\functions\fn_initialize.sqf
- *	by Ojemineh
- *	
- *	initialize modules addon
- *	
- *	Arguments:
- *	nothing
- *	
- *	Return:
- *	nothing
- *	
- *	Example:
- *	[] call TFS_modules_fnc_initialize;
- *	
- */
+*	ARMA EXTENDED ENVIRONMENT
+*	\z\tfs\addons\modules\functions\fn_initialize.sqf
+*	by Ojemineh
+*
+*	initialize modules addon
+*
+*	Arguments:
+*	nothing
+*
+*	Return:
+*	nothing
+*
+*	Example:
+*	[] call TFS_modules_fnc_initialize;
+*
+*/
 
 // -------------------------------------------------------------------------------------------------
 

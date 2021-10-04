@@ -1,302 +1,348 @@
-// Vehicle Crew List
+// vehicle crew list
 [
-    "TFS_Main_VehicleCrewList",
+    "TFS_Main_vehiclecrewlist",
     "CHECKBOX",
-    ["Vehicle Crew List", "Shows a list of players in a vehicle."],
+    ["vehicle crew list", "Shows a list of players in a vehicle."],
     "TFS Main",
     false,
     true,
     {
-        if (_this && { hasinterface }) then  { call YAINA_F_fnc_crewNames};
+        if (_this && {
+            hasinterface
+        }) then {
+            call YAinA_F_fnc_crewnames
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// Dynamic Groups
+// Dynamic groups
 [
-    "TFS_Main_DynamicGroups",
+    "TFS_Main_Dynamicgroups",
     "CHECKBOX",
-    ["BIS Dynamic Groups", "Enable Vanilla Dynamic Groups system (U Menu)"],
+    ["BIS Dynamic groups", "Enable Vanilla Dynamic groups system (U Menu)"],
     "TFS Main",
     false,
     true,
     {
-        if (_this) then { call TFS_fnc_DynamicGroups};
+        if (_this) then {
+            call TFS_fnc_Dynamicgroups
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// YAINA Earplugs
+// YAinA Earplugs
 [
     "TFS_Main_Earplugs",
     "CHECKBOX",
-    ["YAINA Earplugs", "Enable YAINA Earplugs addactions. Cannot be used with @ACE."],
+    ["YAinA Earplugs", "Enable YAinA Earplugs addActions. Cannot be used with @ACE."],
     "TFS Main",
     false,
     true,
     {
-         if (_this && { hasinterface }) then  { call TFS_fnc_Earplugs};
+        if (_this && {
+            hasinterface
+        }) then {
+            call TFS_fnc_Earplugs
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// PilotCheck
+// pilotCheck
 [
-    "TFS_Main_PilotCheck",
+    "TFS_Main_pilotCheck",
     "CHECKBOX",
-    ["Pilot Restrictions", "Restrict aircraft so only those with 'Pilot' Trait can fly."],
+    ["pilot Restrictions", "Restrict aircraft so only those with 'pilot' Trait can fly."],
     "TFS Main",
     false,
     true,
     {
-         if (_this && { hasinterface }) then  { call TFS_fnc_PilotCheck};
+        if (_this && {
+            hasinterface
+        }) then {
+            call TFS_fnc_pilotCheck
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// PilotCheck
+// pilotCheck
 [
     "TFS_Main_MaydayAccess",
-    "LIST",
-    ["Aircraft Emergency Access", "Restrict access to the emergency pilot takeover for helicopters (requires Pilot Check Enabled)"],
+    "list",
+    ["Aircraft Emergency Access", "Restrict access to the emergency pilot takeover for helicopters (requires pilot Check Enabled)"],
     "TFS Main",
-    [[0,1,2],["No One", "909 Only", "Everyone"], 2],
+    [[0, 1, 2], ["No One", "909 Only", "Everyone"], 2],
     true,
-    {
-
-    }
-] call CBA_Settings_fnc_init;
+    {}
+] call CBA_settings_fnc_init;
 
 // Voyager Compass
 [
     "TFS_Main_VoyagerCompass",
     "CHECKBOX",
-    ["Voyager Compass HUD", "Enable Voyager Compass HUD. Players can still disable locally."],
+    ["Voyager Compass HUD", "Enable Voyager Compass HUD. players can still disable locally."],
     "TFS Main",
     false,
     true,
     {
-         if (_this && { hasinterface }) then  { call TFS_fnc_VoyagerCompass};
+        if (_this && {
+            hasinterface
+        }) then {
+            call TFS_fnc_VoyagerCompass
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
 // QS Mag Repack
 [
     "TFS_Main_QSMagRepack",
     "CHECKBOX",
-    ["QS Repack Magazines", "Allows players to repack magazines through an add action. Not used with ACE."],
+    ["QS Repack magazines", "Allows players to repack magazines through an add action. not used with ACE."],
     "TFS Main",
     false,
     true,
     {
-         if (_this && { hasinterface }) then  { call TFS_fnc_QSRepackMags};        
+        if (_this && {
+            hasinterface
+        }) then {
+            call TFS_fnc_QSRepackMags
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// CH View Distance
+// CH View distance
 [
-    "TFS_Main_CHViewDistance",
+    "TFS_Main_CHviewDistance",
     "CHECKBOX",
-    ["CH View Distance", "Enable CHVD within TFS Fundamentals"],
+    ["CH View distance", "Enable CHVD within TFS Fundamentals"],
     "TFS Main",
     false,
     true,
     {
-        if (_this && { hasinterface }) then  { call CHVD_fnc_init};
+        if (_this && {
+            hasinterface
+        }) then {
+            call CHVD_fnc_init
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// CHVD - Max View Distance
+// CHVD - max View distance
 [
-    "TFS_Main_ViewDistanceMaxDistance",
+    "TFS_Main_viewDistancemaxdistance",
     "SLIDER",
-    ["CHVD - Max View Distance", "Max distance a player can set CHVD View Distance to."],
+    ["CHVD - max View distance", "max distance a player can set CHVD View distance to."],
     "TFS Main",
     [5000, 15000, 10000, 0],
     true,
-    {
+    {}
+] call CBA_settings_fnc_init;
 
-    }
-] call CBA_Settings_fnc_init;
-
-// CHVD - Max Object View Distance
+// CHVD - max Object View distance
 [
-    "TFS_Main_ViewDistanceMaxObjectDistance",
+    "TFS_Main_viewDistancemaxObjectdistance",
     "SLIDER",
-    ["CHVD - Max Object View Distance", "Max distance a player can set CHVD Object View Distance to."],
+    ["CHVD - max Object View distance", "max distance a player can set CHVD Object View distance to."],
     "TFS Main",
     [5000, 15000, 10000, 0],
     true,
-    {
-
-    }
-] call CBA_Settings_fnc_init;
+    {}
+] call CBA_settings_fnc_init;
 
 // CHVD - Allow No Grass
 [
-    "TFS_Main_ViewDistanceNoGrass",
+    "TFS_Main_viewDistanceNoGrass",
     "CHECKBOX",
     ["CHVD - Allow No Grass", "Should players be allowed to turn grass off?"],
     "TFS Main",
     false,
     true,
-    {
+    {}
+] call CBA_settings_fnc_init;
 
-    }
-] call CBA_Settings_fnc_init;
-
-// Arsenal - Save/Load
+// Arsenal - Save/load
 [
-    "TFS_Main_ArsenalSaveLoad",
+    "TFS_Main_ArsenalSaveload",
     "CHECKBOX",
-    ["Arsenal - Save/Load", "Should a player be allowed to Save/Load Loadouts in the Arsenal?"],
+    ["Arsenal - Save/load", "Should a player be allowed to Save/load loadouts in the Arsenal?"],
     "TFS Main",
     true,
     true,
     {
-        if (!_this && { hasinterface }) then  { call TFS_fnc_ArsenalLoadSave};
+        if (!_this && {
+            hasinterface
+        }) then {
+            call TFS_fnc_ArsenalloadSave
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// Flip Vehicle
+// Flip vehicle
 [
-    "TFS_Main_FlipVehicle",
+    "TFS_Main_Flipvehicle",
     "CHECKBOX",
-    ["Flip Vehicle", "Add an action to players to allow them to flip land vehicles."],
+    ["Flip vehicle", "Add an action to players to allow them to flip land vehicles."],
     "TFS Main",
     false,
     true,
     {
-        if (_this && { hasinterface }) then  { call TFS_fnc_FlipVehicle};
+        if (_this && {
+            hasinterface
+        }) then {
+            call TFS_fnc_Flipvehicle
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
 // TFAR - Range Multiplyer
 [
     "TFS_Main_TFARTransmitRange",
     "SLIDER",
-    ["TFAR - Range Multiplyer", "Increase or decrease max Transmit Range. 0.1 = poor range, 3.5 = All of Altis"],
+    ["TFAR - Range Multiplyer", "increase or decrease max Transmit Range. 0.1 = poor range, 3.5 = All of Altis"],
     "TFS Main",
     [0, 10, 2.5, 1],
     true,
-    {
+    {}
+] call CBA_settings_fnc_init;
 
-    }
-] call CBA_Settings_fnc_init;
-
-// TFAR - Terrain Interference
+// TFAR - Terrain interference
 [
-    "TFS_Main_TFARTerrainInterference",
+    "TFS_Main_TFARTerraininterference",
     "SLIDER",
-    ["TFAR - Terrain Interference", "How much Terrain interferes with range. 0.1 = little impact, 2.0 = large impact."],
+    ["TFAR - Terrain interference", "How much Terrain interferes with range. 0.1 = little impact, 2.0 = large impact."],
     "TFS Main",
     [0, 5, 1, 1],
     true,
-    {
-
-    }
-] call CBA_Settings_fnc_init;
+    {}
+] call CBA_settings_fnc_init;
 
 // Cue Cards
 [
     "TFS_Main_CueCards",
     "CHECKBOX",
-    ["Cue Cards", "Show/Hide Cue Cards in ACE Self Interaction Menu."],
+    ["Cue Cards", "Show/Hide Cue Cards in ACE Self interaction Menu."],
     "TFS Main",
     true,
     true,
     {
-        if (_this && { hasinterface }) then  { call TFS_fnc_AddCueCards};
+        if (_this && {
+            hasinterface
+        }) then {
+            call TFS_fnc_AddCueCards
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// Diary Defaults
+// Diary defaults
 [
     "TFS_Main_Diary",
     "CHECKBOX",
-    ["Diary Defaults", "Show/Hide Default TFS Diary Entries."],
+    ["Diary defaults", "Show/Hide default TFS Diary Entries."],
     "TFS Main",
     true,
     true,
     {
-        if (_this && { hasinterface }) then  { call TFS_fnc_Diary};
+        if (_this && {
+            hasinterface
+        }) then {
+            call TFS_fnc_Diary
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// MapIcons
+// Mapicons
 [
-    "TFS_Main_MapIcons",
+    "TFS_Main_Mapicons",
     "CHECKBOX",
-    ["Enable Save/Load Markers", "Enable the MapIcons system to save/load markers"],
+    ["Enable Save/load Markers", "Enable the Mapicons system to save/load markers"],
     "TFS Main",
     true,
     true,
     {
-		["tfs-saveMarkers",{
-            [] call TFS_MI_fnc_openDialog;
-        },"all"] call CBA_fnc_registerChatCommand;
-
-        [] call TFS_MI_fnc_loadNotification;
+        ["tfs-saveMarkers", {
+            [] call TFS_MI_fnc_opendialog;
+        }, "all"] call CBA_fnc_registerChatCommand;
+        
+        [] call TFS_MI_fnc_loadnotification;
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
 // Fatigue (Vanilla ONLY)
 [
     "TFS_Main_FatigueVanilla",
     "CHECKBOX",
-    ["Fatigue (Vanilla ONLY)", "Enable/Disable Vanilla Fatigue System. Does not apply with @ACE."],
+    ["Fatigue (Vanilla ONLY)", "Enable/Disable Vanilla Fatigue System. does not apply with @ACE."],
     "TFS Main",
     true,
     true,
     {
-        if (_this && { hasinterface }) then  { call TFS_fnc_VanillaFatigue};
+        if (_this && {
+            hasinterface
+        }) then {
+            call TFS_fnc_VanillaFatigue
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// FPS Counter
+// FPS counter
 [
-    "TFS_Main_FPSCounter",
+    "TFS_Main_FPScounter",
     "CHECKBOX",
-    ["FPS Counter", "Show FPS counter of Player, Server & Headless Client on the map."],
+    ["FPS counter", "Show FPS counter of player, Server & Headless Client on the map."],
     "TFS Main",
     false,
     true,
     {
-        if (_this) then { call YAINA_F_fnc_showFPS};
+        if (_this) then {
+            call YAinA_F_fnc_showFPS
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// TFS Logging
+// TFS logging
 [
-    "TFS_Main_Logging",
+    "TFS_Main_logging",
     "CHECKBOX",
-    ["TFS Logging", "Log connected players, their roles and if they go unconcious with ACE. Requires @A3Log"],
+    ["TFS logging", "log connected players, their roles and if they go unconcious with ACE. Requires @A3log"],
     "TFS Main",
     false,
     true,
     {
-        if (_this) then { call TFS_fnc_Logs};
+        if (_this) then {
+            call TFS_fnc_logs
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
 // TFS_Main_DynamicSim
 [
     "TFS_Main_DynamicSim",
     "CHECKBOX",
-    ["TFS Dynamic Sim", "Simple check for Dynamic Sim enabled. If not enabled it will enable it to default TFS Values. "],
+    ["TFS Dynamic Sim", "Simple check for Dynamic Sim enabled. if not enabled it will enable it to default TFS Values. "],
     "TFS Main",
     false,
     true,
     {
-        if (_this && { isserver }) then  { call TFS_fnc_DynamicSim};
+        if (_this && {
+            isServer
+        }) then {
+            call TFS_fnc_DynamicSim
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
 // TFS_Main_DynamicSim
 [
-    "TFS_Main_LockCamVehicle",
+    "TFS_Main_lockCamvehicle",
     "CHECKBOX",
-    ["TFS Lock Camera in Vehicle", "Locks the camera to first-person inside vehicles. If not enabled it will enable it to default TFS Values. "],
+    ["TFS lock Camera in vehicle", "locks the camera to first-person inside vehicles. if not enabled it will enable it to default TFS Values. "],
     "TFS Main",
     false,
     true,
     {
-        if (_this && {hasInterface}) then  { call TFS_fnc_LockCamVehicle};
+        if (_this && {
+            hasinterface
+        }) then {
+            call TFS_fnc_lockCamvehicle
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;

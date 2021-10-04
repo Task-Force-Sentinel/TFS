@@ -1,115 +1,116 @@
 // AMBIENT SOUND
 
-class TFS_ModuleAmbientSound: Module_F {
-	
-	scope = 2;
-	
-	displayName = "$STR_TFS_Module_AmbientSound_DisplayName";
-	category = "Task Force Sentinel";
-	author = AUTHOR;
-	icon = "\z\tfs\addons\modules\data\icons\module_sound_0_ca.paa";
-	
-
-
-	function = "TFS_fnc_moduleAmbientSound";
-	functionPriority = 1;
-	
-	isGlobal = 0;
-	isTriggerActivated = 0;
-	isDisposable = 0;
-	is3DEN = 1;
-	
-	class Attributes: AttributesBase {
-		
-		class Enabled {
-			displayName = "$STR_TFS_ModuleProperty_Sound_Enabled_Title";
-			tooltip = "$STR_TFS_ModuleProperty_Sound_Enabled_Tip";
-			defaultValue = 1;
-			typeName = "NUMBER";
-			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFS_ModuleAmbientSound_Enabled";
-			control = "Combo";
-			class Values {
-				class Enabled_0	{
-					name = "$STR_TFS_ModuleProperty_Sound_Enabled_0";
-					value = 0;
-				};
-				class Enabled_1	{
-					name = "$STR_TFS_ModuleProperty_Sound_Enabled_1";
-					value = 1;
-				};
-			};
-		};
-		
-		class Source {
-			displayName = "$STR_TFS_ModuleProperty_Sound_Source_Title";
-			tooltip = "$STR_TFS_ModuleProperty_Sound_Source_Tip";
-			defaultValue = "''";
-			typeName = "STRING";
-			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFS_ModuleAmbientSound_Source";
-			control = "Edit";
-		};
-		
-		class Sound {
-			displayName = "$STR_TFS_ModuleProperty_Sound_Classname_Title";
-			tooltip = "$STR_TFS_ModuleProperty_Sound_Classname_Tip";
-			defaultValue = "''";
-			typeName = "STRING";
-			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFS_ModuleAmbientSound_Sound";
-			control = "Sound";
-		};
-		
-		class Offset {
-			displayName = "$STR_TFS_ModuleProperty_Sound_Offset_Title";
-			tooltip = "$STR_TFS_ModuleProperty_Sound_Offset_Tip";
-			defaultValue = "'[0,0,0]'";
-			typeName = "STRING";
-			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFS_ModuleAmbientSound_Offset";
-			control = "EditShort";
-		};
-		
-		class Distance {
-			displayName = "$STR_TFS_ModuleProperty_Sound_Distance_Title";
-			tooltip = "$STR_TFS_ModuleProperty_Sound_Distance_Tip";
-			defaultValue = 100;
-			typeName = "NUMBER";
-			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFS_ModuleAmbientSound_Distance";
-			control = "EditShort";
-		};
-		
-		class MaxDistance {
-			displayName = "$STR_TFS_ModuleProperty_Sound_MaxDistance_Title";
-			tooltip = "$STR_TFS_ModuleProperty_Sound_MaxDistance_Tip";
-			defaultValue = -1;
-			typeName = "NUMBER";
-			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFS_ModuleAmbientSound_MaxDistance";
-			control = "EditShort";
-		};
-		
-		class Duration {
-			displayName = "$STR_TFS_ModuleProperty_Sound_Duration_Title";
-			tooltip = "$STR_TFS_ModuleProperty_Sound_Duration_Tip";
-			defaultValue = -1;
-			typeName = "NUMBER";
-			expression = "_this setVariable ['%s', _value, true];";
-			property = "TFS_ModuleAmbientSound_Duration";
-			control = "EditShort";
-		};
-		
-		class ModuleDescription: ModuleDescription {
-			property = "ModuleInfo";
-			control = "ModuleInfo";
-		};
-		
-	};
-	
-	class ModuleDescription: ModuleDescription {
-		description = "$STR_TFS_Module_AmbientSound_Description";
-	};
-	
+class TFS_moduleAmbientSound: module_F {
+    scope = 2;
+    
+    displayname = "$str_TFS_Modules_AmbientSound_Displayname";
+    category = "Task force Sentinel";
+    author = AUTHor;
+    icon = "\z\tfs\addons\modules\data\icons\module_sound_0_ca.paa";
+    
+    function = "TFS_fnc_moduleAmbientSound";
+    functionpriority = 1;
+    
+    isGlobal = 0;
+    istriggerActivated = 0;
+    isDisposable = 0;
+    is3DEN = 1;
+    
+    class Attributes: AttributesBase {
+        class Enabled {
+            displayname = "$str_TFS_Modules_Sound_Enabled_Title";
+            tooltip = "$str_TFS_Modules_Sound_Enabled_Tip";
+            defaultValue = 1;
+            typeName = "NUMBER";
+            expression = "_this setVariable ['%s', _value, true];
+            ";
+            property = "TFS_moduleAmbientSound_Enabled";
+            control = "Combo";
+            class Values {
+                class Enabled_0 {
+                    name = "$str_TFS_Modules_Sound_Enabled_0";
+                    value = 0;
+                };
+                class Enabled_1 {
+                    name = "$str_TFS_Modules_Sound_Enabled_1";
+                    value = 1;
+                };
+            };
+        };
+        
+        class Source {
+            displayname = "$str_TFS_Modules_Sound_Source_Title";
+            tooltip = "$str_TFS_Modules_Sound_Source_Tip";
+            defaultValue = "''";
+            typeName = "strinG";
+            expression = "_this setVariable ['%s', _value, true];
+            ";
+            property = "TFS_moduleAmbientSound_Source";
+            control = "Edit";
+        };
+        
+        class Sound {
+            displayname = "$str_TFS_Modules_Sound_classname_Title";
+            tooltip = "$str_TFS_Modules_Sound_classname_Tip";
+            defaultValue = "''";
+            typeName = "strinG";
+            expression = "_this setVariable ['%s', _value, true];
+            ";
+            property = "TFS_moduleAmbientSound_Sound";
+            control = "Sound";
+        };
+        
+        class Offset {
+            displayname = "$str_TFS_Modules_Sound_Offset_Title";
+            tooltip = "$str_TFS_Modules_Sound_Offset_Tip";
+            defaultValue = "'[0, 0, 0]'";
+            typeName = "strinG";
+            expression = "_this setVariable ['%s', _value, true];
+            ";
+            property = "TFS_moduleAmbientSound_Offset";
+            control = "EditShort";
+        };
+        
+        class distance {
+            displayname = "$str_TFS_Modules_Sound_distance_Title";
+            tooltip = "$str_TFS_Modules_Sound_distance_Tip";
+            defaultValue = 100;
+            typeName = "NUMBER";
+            expression = "_this setVariable ['%s', _value, true];
+            ";
+            property = "TFS_moduleAmbientSound_distance";
+            control = "EditShort";
+        };
+        
+        class maxdistance {
+            displayname = "$str_TFS_Modules_Sound_maxdistance_Title";
+            tooltip = "$str_TFS_Modules_Sound_maxdistance_Tip";
+            defaultValue = -1;
+            typeName = "NUMBER";
+            expression = "_this setVariable ['%s', _value, true];
+            ";
+            property = "TFS_moduleAmbientSound_maxdistance";
+            control = "EditShort";
+        };
+        
+        class Duration {
+            displayname = "$str_TFS_Modules_Sound_Duration_Title";
+            tooltip = "$str_TFS_Modules_Sound_Duration_Tip";
+            defaultValue = -1;
+            typeName = "NUMBER";
+            expression = "_this setVariable ['%s', _value, true];
+            ";
+            property = "TFS_moduleAmbientSound_Duration";
+            control = "EditShort";
+        };
+        
+        class moduleDescription: moduleDescription {
+            property = "moduleinfo";
+            control = "moduleinfo";
+        };
+    };
+    
+    class moduleDescription: moduleDescription {
+        description = "$str_TFS_Modules_AmbientSound_Description";
+    };
 };

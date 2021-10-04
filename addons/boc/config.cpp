@@ -1,13 +1,14 @@
 #include "script_component.hpp"
 
-class CfgPatches {
-    class ADDON {
+class CfgPatches
+{
+    class ADDON
+    {
         name = COMPONENT_NAME;
         units[] = {
             "TFS_boc_moduleAdd",
             "TFS_boc_moduleOnChest",
-            "TFS_boc_weaponHolder"
-        };
+            "TFS_boc_weaponHolder"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
@@ -16,8 +17,7 @@ class CfgPatches {
             "A3_Modules_F",
             "ace_main",
             "ace_common",
-            "ace_movement"
-        };
+            "ace_movement"};
         author = "NemesisRE";
         authors[] = {"DerZade"};
         VERSION_CONFIG;

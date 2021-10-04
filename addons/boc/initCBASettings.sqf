@@ -1,26 +1,26 @@
 [
     QGVAR(disabled),
     "CHECKBOX",
-    "Disable Backpack on Chest",
-    ["TFS BoC","Main"],
+    "Disable backpack on Chest",
+    ["TFS BoC", "Main"],
     false,
     1
-] call CBA_fnc_addSetting;
+] call CBA_fnc_addsetting;
 
 [
     QGVAR(forceWalk),
     "CHECKBOX",
-    "Enable force walk while Backpack on Chest",
-    ["TFS BoC","Main"],
+    "Enable force walk while backpack on Chest",
+    ["TFS BoC", "Main"],
     false,
     1
-] call CBA_fnc_addSetting;
+] call CBA_fnc_addsetting;
 
 [
-    QGVAR(removeKilledPlayerChestpack),
+    QGVAR(removeKilledplayerChestpack),
     "CHECKBOX",
     "Remove chestpack of dead players",
-    ["TFS BoC","Main"],
+    ["TFS BoC", "Main"],
     true,
     1
-] call CBA_fnc_addSetting;
+] call CBA_fnc_addsetting;

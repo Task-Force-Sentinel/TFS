@@ -1,4 +1,4 @@
-// not documented: postInit
+// not documented: postinit
 
 if (!hasinterface) exitwith {};
 
@@ -8,6 +8,6 @@ if (isClass (configFile >> "CfgPatches" >> "ace_main")) exitwith {};
 player enableFatigue TFS_Main_FatigueVanilla;
 
 player addEventHandler ["Respawn", {
-	params ["_unit", "_corpse"];
-	player enableFatigue TFS_Main_FatigueVanilla;
+    params ["_unit", "_corpse"];
+    player enableFatigue TFS_Main_FatigueVanilla;
 }];

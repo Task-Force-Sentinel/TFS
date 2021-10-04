@@ -1,20 +1,20 @@
 /*
- *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfs\addons\core\functions\sounds\fn_gainToDecibel.sqf
- *	by Ojemineh
- *	
- *	convert gain to decibel
- *	
- *	Arguments:
- *	0: gain - <NUMBER>
- *	
- *	Return:
- *	<NUMBER>
- *	
- *	Example:
- *	[1] call TFS_fnc_gainToDecibel;
- *	
- */
+*	ARMA EXTENDED ENVIRONMENT
+*	\z\tfs\addons\core\functions\sounds\fn_gaintoDecibel.sqf
+*	by Ojemineh
+*
+*	convert gain to decibel
+*
+*	Arguments:
+*	0: gain - <NUMBER>
+*
+*	Return:
+*	<NUMBER>
+*
+*	Example:
+*	[1] call TFS_fnc_gaintoDecibel;
+*
+*/
 
 // -------------------------------------------------------------------------------------------------
 
@@ -24,7 +24,9 @@ _gain = [_this, 0, 1, [0]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-if (_gain <= 0) exitWith {0};
+if (_gain <= 0) exitwith {
+    0
+};
 
 // -------------------------------------------------------------------------------------------------
 

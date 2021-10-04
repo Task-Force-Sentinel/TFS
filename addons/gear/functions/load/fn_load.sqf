@@ -1,23 +1,23 @@
 /*
- *	ARMA EXTENDED ENVIRONMENT
- *	\z\tfs\addons\gear\functions\load\fn_load.sqf
- *	by Ojemineh
- *
- *	load files
- *
- *	Arguments:
- *	0: unit	- <OBJECT>
- *	1: role	- <STRING>
- *	2: type	- <STRING>
- *	3: team	- <STRING>
- *
- *	Return:
- *	nothing
- *
- *	Example:
- *	[player, "curator"] call TFS_gear_fnc_load;
- *
- */
+*	ARMA EXTENDED ENVIRONMENT
+*	\z\tfs\addons\gear\functions\load\fn_load.sqf
+*	by Ojemineh
+*
+*	load files
+*
+*	Arguments:
+*	0: unit	- <OBJECT>
+*	1: role	- <strinG>
+*	2: type	- <strinG>
+*	3: team	- <strinG>
+*
+*	Return:
+*	nothing
+*
+*	Example:
+*	[player, "curator"] call TFS_gear_fnc_load;
+*
+*/
 
 // -------------------------------------------------------------------------------------------------
 
@@ -30,36 +30,42 @@ _team = [_this, 4, "", [""]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
-if (isNull _unit) exitWith {};
+if (isNull _unit) exitwith {};
 
 // -------------------------------------------------------------------------------------------------
 
-if (Not local _unit) exitWith {
-	[_unit, _role, _type, _team] remoteExecCall ["TFS_gear_fnc_load", _unit];
+if (not local _unit) exitwith {
+    [_unit, _role, _type, _team] remoteExecCall ["TFS_gear_fnc_load", _unit];
 };
 
 // -------------------------------------------------------------------------------------------------
 
-private _loadout_path = GEAR_LOADOUT_PATH;
-private _default_role = GEAR_DEFAULT_ROLE;
-private _default_type = GEAR_DEFAULT_TYPE;
-private _default_team = GEAR_DEFAULT_TEAM;
+private _loadout_path = GEAR_loadoUT_PATH;
+private _default_role = GEAR_default_ROLE;
+private _default_type = GEAR_default_type;
+private _default_team = GEAR_default_TEAM;
 
-private _gear_role = toUpper( _unit getVariable ["gear_role", _default_role] );
-private _gear_type = toUpper( _unit getVariable ["gear_type", _default_type] );
-private _gear_team = toUpper( _unit getVariable ["gear_team", _default_team] );
+private _gear_role = toUpper(_unit getVariable ["gear_role", _default_role]);
+private _gear_type = toUpper(_unit getVariable ["gear_type", _default_type]);
+private _gear_team = toUpper(_unit getVariable ["gear_team", _default_team]);
 
-if (_role isEqualTo "") then { _role = _gear_role; };
-if (_type isEqualTo "") then { _type = _gear_type; };
-if (_team isEqualTo "") then { _team = _gear_team; };
+if (_role isEqualto "") then {
+    _role = _gear_role;
+};
+if (_type isEqualto "") then {
+    _type = _gear_type;
+};
+if (_team isEqualto "") then {
+    _team = _gear_team;
+};
 
 // -------------------------------------------------------------------------------------------------
-// PLAYERS DEFAULT GOGGLES
+// playerS default goggles
 
-if (GEAR_KEEP_GOGGLES) then {
-	if ((goggles _unit) != "") then {
-		_unit setVariable ["TFS_gear_goggles", (goggles _unit)];
-	};
+if (GEAR_KEEP_goggles) then {
+    if ((goggles _unit) != "") then {
+        _unit setVariable ["TFS_gear_goggles", (goggles _unit)];
+    };
 };
 
 // -------------------------------------------------------------------------------------------------

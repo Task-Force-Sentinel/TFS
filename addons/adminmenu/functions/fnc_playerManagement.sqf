@@ -3,4 +3,4 @@
 disableSerialization;
 params ["_display"];
 
-_display call FUNC(playerManagement_updateList);
+_display call FUNC(playerManagement_updatelist);

@@ -1,47 +1,47 @@
 #include "script_component.hpp"
 /*
- * Author: 3Mydlo3
- * Function handles executing onShowCode and raising onShowEvents for given task
- *
- * Arguments:
- * 0: Task namespace <CBA_NAMESPACE>
- *
- * Return Value:
- * None
- *
- * Public: No
- */
+* Author: 3Mydlo3
+* Function handles executing onShowCode and raising onShowEvents for given task
+*
+* Arguments:
+* 0: Task namespace <CBA_nameSPACE>
+*
+* Return Value:
+* None
+*
+* Public: No
+*/
 
-params ["_taskNamespace"];
+params ["_tasknamespace"];
 
 // Check if task was shown already
-if (_taskNamespace getVariable ["shown", false]) exitWith {};
-_taskNamespace setVariable ["shown", true];
+if (_tasknamespace getVariable ["shown", false]) exitwith {};
+_tasknamespace setVariable ["shown", true];
 
-private _taskConfigName = _taskNamespace getVariable "taskConfigName";
-private _taskCreateArray = _taskNamespace getVariable "taskCreateArray";
+private _taskconfigname = _tasknamespace getVariable "taskconfigname";
+private _taskCreateArray = _tasknamespace getVariable "taskCreateArray";
 
 // Get scripted owners
-private _scriptedOwners = call compile (_taskNamespace getVariable ["ownersCode", ""]);
-if (!isNil "_scriptedOwners") then {
-    INFO_2("Scripted owners '%1' for task '%2'",_scriptedOwners,_taskConfigName);
-    _taskCreateArray set [0, _scriptedOwners];
+private _scriptedowners = call compile (_tasknamespace getVariable ["ownersCode", ""]);
+if (!isnil "_scriptedowners") then {
+    inFO_2("Scripted owners '%1' for task '%2'", _scriptedowners, _taskconfigname);
+    _taskCreateArray set [0, _scriptedowners];
 };
 
 // Create task
 _taskCreateArray call BIS_fnc_taskCreate;
 
-[QGVAR(taskCreated), [_taskConfigName]] call CBA_fnc_globalEvent;
+[QGVAR(taskCreated), [_taskconfigname]] call CBA_fnc_globalEvent;
 
-// Call onShowCode
-call compile (_taskNamespace getVariable ["onShowCode", ""]);
+// call onShowCode
+call compile (_tasknamespace getVariable ["onShowCode", ""]);
 
 // Raise onShowEvents
 {
     [_x] call CBA_fnc_serverEvent;
-} forEach (_taskNamespace getVariable ["onShowEvents", []]);
+} forEach (_tasknamespace getVariable ["onShowEvents", []]);
 
 // Prepare Success and Failed handling
-[_taskNamespace, "Success", FUNC(handleOnFinished)] call FUNC(handleFinish);
-[_taskNamespace, "Failed", FUNC(handleOnFinished)] call FUNC(handleFinish);
-[_taskNamespace, "Canceled", FUNC(handleOnFinished)] call FUNC(handleFinish);
+[_tasknamespace, "Success", FUNC(handleOnFinished)] call FUNC(handleFinish);
+[_tasknamespace, "Failed", FUNC(handleOnFinished)] call FUNC(handleFinish);
+[_tasknamespace, "Canceled", FUNC(handleOnFinished)] call FUNC(handleFinish);

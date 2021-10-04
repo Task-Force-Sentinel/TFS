@@ -1,70 +1,75 @@
 #include "script_component.hpp"
 /*
- * Author: veteran29
- * Randomize gear of the unit from available items.
- *
- * Arguments:
- * 0: Unit <OBJECT>
- *
- * Return Value:
- * None
- *
- *
- * Public: No
- */
+* Author: veteran29
+* randomize gear of the unit from available items.
+*
+* Arguments:
+* 0: Unit <OBJECT>
+*
+* Return Value:
+* None
+*
+*
+* Public: No
+*/
 params [
     ["_unit", objNull, [objNull]]
 ];
 
-private _currentLoadout = getUnitLoadout _unit;
-_currentLoadout set [7, ""]; // ignore facewear
+private _currentloadout = getUnitloadout _unit;
+_currentloadout set [7, ""];
+// ignore facewear
 
-if (!local _unit || {(EMPTY_LOADOUT isNotEqualTo _currentLoadout) || {is3DEN}}) exitWith {
-    LOG_1("Unit modified, no randomization - %1",_unit);
+if (!local _unit || {
+    (EMPTY_loadoUT isnotEqualto _currentloadout) || {
+        is3DEN
+    }
+}) exitwith {
+    log_1("Unit modified, no randomization - %1", _unit);
 };
 
-LOG_1("Randomizing gear - %1",_unit);
+log_1("randomizing gear - %1", _unit);
 
 // check if there is a chance for the unit to have headgear and facewear
-if (random 1 <= CHANCE_HEADGEAR) then {
-    _unit addHeadgear selectRandom RANDOM_GEAR(headgear);
+if (random 1 <= CHANCE_headgear) then {
+    _unit addheadgear selectRandom random_GEAR(headgear);
 };
 
-if (random 1 <= CHANCE_FACEWEAR) then {
+if (random 1 <= CHANCE_faceWEAR) then {
     removeGoggles _unit;
-    _unit addGoggles selectRandom RANDOM_GEAR(facewear);
+    _unit addgoggles selectRandom random_GEAR(facewear);
 };
 
-_unit forceAddUniform selectRandom RANDOM_GEAR(uniforms);
-_unit addVest selectRandom RANDOM_GEAR(vests);
+_unit forceAdduniform selectRandom random_GEAR(uniforms);
+_unit addvest selectRandom random_GEAR(vests);
 
 // add basic gear to the uniform
 {
-    _unit addItemToUniform _x;
+    _unit addItemtouniform _x;
 } forEach ["FirstAidKit", "HandGrenade", "SmokeShell"];
 
 // add primary weapon
-private _weapon = selectRandom RANDOM_GEAR(weapons);
+private _weapon = selectRandom random_GEAR(weapons);
 _unit addWeapon _weapon;
-[_unit, _weapon, 8, 4] call FUNC(addWeaponAmmo);
+[_unit, _weapon, 8, 4] call FUNC(addWeaponammo);
 
 // add pistol
-if (random 1 <= CHANCE_PISTOL) then {
-    private _pistol = selectRandom RANDOM_GEAR(pistols);
+if (random 1 <= CHANCE_piStoL) then {
+    private _pistol = selectRandom random_GEAR(pistols);
     _unit addWeapon _pistol;
-    [_unit, _pistol, 3, 1] call FUNC(addWeaponAmmo);
+    [_unit, _pistol, 3, 1] call FUNC(addWeaponammo);
 };
 
 // add launcher
 if (random 1 <= CHANCE_LAUNCHER) then {
-    private _launcher = selectRandom RANDOM_GEAR(launchers);
+    private _launcher = selectRandom random_GEAR(launchers);
     _unit addWeapon _launcher;
-
+    
     if (!IS_DISPOSABLE(_launcher)) then {
-        private _backpack = selectRandom RANDOM_GEAR(backpacks);
-        _unit addBackpack _backpack;
-
-        [_unit, _launcher, 3, 1] call FUNC(addWeaponAmmo);
+        private _backpack = selectRandom random_GEAR(backpacks);
+        _unit addbackpack _backpack;
+        
+        [_unit, _launcher, 3, 1] call FUNC(addWeaponammo);
     };
 };
 

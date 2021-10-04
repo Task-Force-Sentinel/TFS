@@ -1,31 +1,30 @@
-
 class IGUIBack;
 class RscStandardDisplay;
-class RscText;
-class RscPicture;
-class RscPictureKeepAspect;
-class RscActivePicture;
+class Rsctext;
+class Rscpicture;
+class RscpictureKeepAspect;
+class RscActivepicture;
 class RscButtonMenu;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
 class RscEdit;
 class RscEditMulti;
-class RscControlsGroup;
-class RscControlsGroupNoScrollbars;
+class RscControlsgroup;
+class RscControlsgroupNoScrollbars;
 class RscCombo;
 class RscButton;
 class RscButtonMenuSteam;
 class RscMapControl;
 class RscVignette;
-class RscInterlacingScreen;
-class RscLadderPicture;
+class RscinterlacingScreen;
+class RscLadderpicture;
 class VScrollbar;
 class HScrollbar;
 class RscXSliderH;
-class DefaultFont
+class defaultFont
 {
-	font = "RobotoCondensed";
+    font = "RobotoCondensed";
 };
 
 #include "RscDisplayCueCard.hpp"
-#include "RscNotePad.hpp"
+#include "RscnotePad.hpp"

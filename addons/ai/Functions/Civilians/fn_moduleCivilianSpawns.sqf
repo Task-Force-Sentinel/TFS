@@ -1,43 +1,53 @@
 // not documented: module called
-if !(isserver) exitwith {};
+if !(isServer) exitwith {};
 
-_logic = param [0,objNull,[objNull]];
+_logic = param [0, objNull, [objNull]];
 
-_SpawnLocation = (getPos _logic);
-_ObjName = _logic getVariable ["ObjName", "Objective 1"];
-_Faction = _logic getVariable ["Type", "CIV_F"];
-_Side = _logic getVariable ["Side", "civilian"];
-_GarrRadius = _logic getVariable ["GarrRadius", 200];
-_GarrisonedUnitsMin = _logic getVariable ["GarrisonedUnitsMin", 0];
-_GarrisonedUnitsMax = _logic getVariable ["GarrisonedUnitsMax", 0];
-_Radius = _logic getVariable ["Radius", 500];
-_civPedPatrolsMin = _logic getVariable ["CivPedPatrolsMin", 0];
-_civPedPatrolsMax = _logic getVariable ["CivPedPatrolsMax", 0];
-_civVehPatrolsMin = _logic getVariable ["CivVehPatrolsMin", 0];
-_civVehPatrolsMax = _logic getVariable ["CivVehPatrolsMax", 0];
-_civVehParkedMin = _logic getVariable ["CivVehParkedMin", 0];
-_civVehParkedMax = _logic getVariable ["CivVehParkedMax", 0];
+_spawnLocation = (getPos _logic);
+_Objname = _logic getVariable ["Objname", "Objective 1"];
+_faction = _logic getVariable ["type", "CIV_F"];
+_side = _logic getVariable ["side", "civilian"];
+_Garrradius = _logic getVariable ["Garrradius", 200];
+_Garrisonedunitsmin = _logic getVariable ["Garrisonedunitsmin", 0];
+_Garrisonedunitsmax = _logic getVariable ["Garrisonedunitsmax", 0];
+_radius = _logic getVariable ["radius", 500];
+_civPedPatrolsmin = _logic getVariable ["CivPedPatrolsmin", 0];
+_civPedPatrolsmax = _logic getVariable ["CivPedPatrolsmax", 0];
+_civVehPatrolsmin = _logic getVariable ["CivVehPatrolsmin", 0];
+_civVehPatrolsmax = _logic getVariable ["CivVehPatrolsmax", 0];
+_civVehParkedmin = _logic getVariable ["CivVehParkedmin", 0];
+_civVehParkedmax = _logic getVariable ["CivVehParkedmax", 0];
 
 // Figure out the side stuff
-_Side = toLower _Side;
+_side = toLower _side;
 
-switch (_Side) do {
-	case "west": {_Side = west;};
-	case "east": {_Side = east;};
-	case "independent": {_Side = independent;};
-	case "civilian": {_Side = civilian;};
-	default {_Side = civilian;};
+switch (_side) do {
+    case "west": {
+        _side = west;
+    };
+    case "east": {
+        _side = east;
+    };
+    case "independent": {
+        _side = independent;
+    };
+    case "civilian": {
+        _side = civilian;
+    };
+    default {
+        _side = civilian;
+    };
 };
 
 [
-    _SpawnLocation,
-    _ObjName,
-    _Faction,
-    _Side,
-    _GarrRadius,
-    [_GarrisonedUnitsMin, _GarrisonedUnitsMax],
-    _Radius,
-    [_civPedPatrolsMin, _civPedPatrolsMax],
-    [_civVehPatrolsMin, _civVehPatrolsMax],
-    [_civVehParkedMin, _civVehParkedMax]
-] call TFS_fnc_SpawnCivilians;
+    _spawnLocation,
+    _Objname,
+    _faction,
+    _side,
+    _Garrradius,
+    [_Garrisonedunitsmin, _Garrisonedunitsmax],
+    _radius,
+    [_civPedPatrolsmin, _civPedPatrolsmax],
+    [_civVehPatrolsmin, _civVehPatrolsmax],
+    [_civVehParkedmin, _civVehParkedmax]
+] call TFS_fnc_spawncivilians;

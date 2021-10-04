@@ -2,23 +2,22 @@
 
 disableSerialization;
 
-params["","_type"];
-//20 = T Key
+params["", "_type"];
+// 20 = T Key
 if (_type == 20) then {
-    if (isNull GVAR(adminEyeSelectedObj)) then {
-        hint "Nothing selected to Trigger";
-
+    if (isNull GVAR(adminEyeselectedobj)) then {
+        hint "nothing selected to Trigger";
     } else {
-        if (typeOf GVAR(adminEyeSelectedObj) == "TFS_ai_wavespawn") then {
+        if (typeOf GVAR(adminEyeselectedobj) == "TFS_ai_wavespawn") then {
             // Wave spawner trigger.
-            TRACE_1("Admin Eye triggered wave", GVAR(adminEyeSelectedObj));
+            TRACE_1("admin Eye triggered wave", GVAR(adminEyeselectedobj));
             [{
-                params ["_waveSpawner"];
-                [_waveSpawner] remoteExecCall [QEFUNC(ai,spawnWave), _waveSpawner];
-            }, GVAR(adminEyeSelectedObj)] call CBA_fnc_execNextFrame;
+                params ["_wavespawner"];
+                [_wavespawner] remoteExecCall [QEFUNC(ai, spawnWave), _wavespawner];
+            }, GVAR(adminEyeselectedobj)] call CBA_fnc_execNextFrame;
         } else {
-            private _trigger = GVAR(adminEyeSelectedObj);
-
+            private _trigger = GVAR(adminEyeselectedobj);
+            
             if (local _trigger) then {
                 [_trigger] call FUNC(adminEye_fireTrigger);
             } else {
@@ -27,5 +26,3 @@ if (_type == 20) then {
         };
     };
 };
-
-

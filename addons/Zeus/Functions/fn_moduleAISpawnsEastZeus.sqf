@@ -1,7 +1,7 @@
 params ["_pos"];
 
-if (_pos isEqualTo [0, 0, 0]) exitWith {
-	[format ["Error: Invalid position for module"], "ZeusLog"] call YAINA_F_fnc_log;
+if (_pos isEqualto [0, 0, 0]) exitwith {
+    [format ["Error: invalid position for module"], "Zeuslog"] call YAinA_F_fnc_log;
 };
 
-["East", _pos] call TFS_fnc_SpawnAIZeusWrapper;
+["east", _pos] call TFS_fnc_spawnAIZeusWrapper;

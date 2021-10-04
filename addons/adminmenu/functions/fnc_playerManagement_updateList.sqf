@@ -3,43 +3,43 @@
 disableSerialization;
 params ["_display"];
 
-private _list = _display displayCtrl IDC_TFS_ADMINMENU_PMAN_LIST;
-private _filterSide = [sideUnknown, blufor, opfor, resistance, civilian] param [(lbCurSel (_display displayCtrl IDC_TFS_ADMINMENU_PMAN_FILTER_SIDE)) max 0];
-private _filterState = (lbCurSel (_display displayCtrl IDC_TFS_ADMINMENU_PMAN_FILTER_STATE)) max 0;
+private _list = _display displayCtrl IDC_TFS_adminMENU_PMAN_list;
+private _filterside = [sideUnknown, blufor, opfor, resistance, civilian] param [(lbCurSel (_display displayCtrl IDC_TFS_adminMENU_PMAN_FILTER_side)) max 0];
+private _filterState = (lbCurSel (_display displayCtrl IDC_TFS_adminMENU_PMAN_FILTER_STATE)) max 0;
 
-private _allPlayers = allPlayers - entities "HeadlessClient_F";
+private _allplayers = allplayers - entities "HeadlessClient_F";
 if (!isMultiplayer) then {
-    _allPlayers = switchableUnits - entities "HeadlessClient_F";
+    _allplayers = switchableunits - entities "HeadlessClient_F";
 };
 
-private _newPlayers = [];
+private _newplayers = [];
 
 {
-    private _addPlayer = [true, alive _x, !alive _x] param [_filterState];
-
-    private _isSpectator = _x isKindOf QEGVAR(spectator,unit);
-    private _playerSide = side _x;
-
-    if (_addPlayer && !(_filterSide isEqualTo sideUnknown)) then {
+    private _addplayer = [true, alive _x, !alive _x] param [_filterState];
+    
+    private _isSpectator = _x isKindOf QEGVAR(spectator, unit);
+    private _playerside = side _x;
+    
+    if (_addplayer && !(_filterside isEqualto sideUnknown)) then {
         if (_isSpectator) then {
-            _playerSide = (_x getVariable [QEGVAR(spectator,side), sideUnknown]);
+            _playerside = (_x getVariable [QEGVAR(spectator, side), sideUnknown]);
         };
-
-        _addPlayer = _playerSide isEqualTo _filterSide;
+        
+        _addplayer = _playerside isEqualto _filterside;
     };
-
-    if (_addPlayer) then {
+    
+    if (_addplayer) then {
         private _text = "";
         private _role = "";
-
+        
         if (_isSpectator) then {
-            _text = groupId (_x getVariable [QEGVAR(spectator,group), grpNull]);
-            _role = toUpper (_x getVariable [QEGVAR(spectator,role), ""]);
+            _text = groupid (_x getVariable [QEGVAR(spectator, group), grpNull]);
+            _role = toUpper (_x getVariable [QEGVAR(spectator, role), ""]);
         } else {
-            _text = groupId group _x;
-            _role = toUpper (_x getVariable [QEGVAR(assigngear,role), ""]);
+            _text = groupid group _x;
+            _role = toUpper (_x getVariable [QEGVAR(assigngear, role), ""]);
         };
-
+        
         if (count _role > 0) then {
             if (count _text > 0) then {
                 _text = format ["%1: %2", _text, _role];
@@ -47,82 +47,82 @@ private _newPlayers = [];
                 _text = _role;
             };
         };
-
-        private _idx = count _newPlayers;
-        if (_idx >= lbSize _list) then {
+        
+        private _idx = count _newplayers;
+        if (_idx >= lbsize _list) then {
             _idx = _list lbAdd name _x;
-            _list lbSetPictureRight [_idx, "\a3\ui_f\data\IGUI\RscTitles\MPProgress\respawn_ca.paa"];
+            _list lbsetpictureRight [_idx, "\a3\ui_f\data\IGUI\RscTitles\MPProgress\respawn_ca.paa"];
         } else {
-            _list lbSetText [_idx, name _x];
+            _list lbsettext [_idx, name _x];
         };
-        _list lbSetTextRight [_idx, _text];
-
+        _list lbsettextRight [_idx, _text];
+        
         private _netId = _x call BIS_fnc_netId;
-        _list lbSetData [_idx, _netId];
-        _newPlayers pushBack _netId;
-
-        private _sideTexture = "\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa";
-
+        _list lbsetData [_idx, _netId];
+        _newplayers pushBack _netId;
+        
+        private _sidetexture = "\a3\Ui_F_Curator\Data\CfgMarkers\kia_ca.paa";
+        
         if (_isSpectator) then {
-            _list lbSetColor [_idx, [0.6,0.6,0.6,1]];
-            _list lbSetColorRight [_idx, [0.6,0.6,0.6,1]];
-            _list lbSetPicture [_idx, _sideTexture];
-
-            private _sideColor = _playerSide call FUNC(sideToColor);
-            _list lbSetPictureColor [_idx, _sideColor];
-            _list lbSetPictureColorSelected [_idx, _sideColor];
-
+            _list lbsetColor [_idx, [0.6, 0.6, 0.6, 1]];
+            _list lbsetColorRight [_idx, [0.6, 0.6, 0.6, 1]];
+            _list lbsetpicture [_idx, _sidetexture];
+            
+            private _sideColor = _playerside call FUNC(sidetoColor);
+            _list lbsetpictureColor [_idx, _sideColor];
+            _list lbsetpictureColorselected [_idx, _sideColor];
+            
             // if quick respawnable
             if (false) then {
-                _list lbSetPictureRightColor [_idx, [1,1,1,0.8]];
-                _list lbSetPictureRightColorSelected [_idx, [1,1,1,0.8]];
+                _list lbsetpictureRightColor [_idx, [1, 1, 1, 0.8]];
+                _list lbsetpictureRightColorselected [_idx, [1, 1, 1, 0.8]];
             } else {
-                _list lbSetPictureRightColor [_idx, [1,1,1,0]];
-                _list lbSetPictureRightColorSelected [_idx, [1,1,1,0]];
+                _list lbsetpictureRightColor [_idx, [1, 1, 1, 0]];
+                _list lbsetpictureRightColorselected [_idx, [1, 1, 1, 0]];
             };
         } else {
-            _list lbSetColor [_idx, [1,1,1,1]];
-            _list lbSetColorRight [_idx, [1,1,1,1]];
-
-            switch (_playerSide) do {
+            _list lbsetColor [_idx, [1, 1, 1, 1]];
+            _list lbsetColorRight [_idx, [1, 1, 1, 1]];
+            
+            switch (_playerside) do {
                 case blufor: {
-                    _sideTexture = "\a3\ui_f\data\Map\Diary\Icons\playerWest_ca.paa";
+                    _sidetexture = "\a3\ui_f\data\Map\Diary\Icons\playerwest_ca.paa";
                 };
                 case opfor: {
-                    _sideTexture = "\a3\ui_f\data\Map\Diary\Icons\playerEast_ca.paa";
+                    _sidetexture = "\a3\ui_f\data\Map\Diary\Icons\playereast_ca.paa";
                 };
                 case independent: {
-                    _sideTexture = "\a3\ui_f\data\Map\Diary\Icons\playerGuer_ca.paa";
+                    _sidetexture = "\a3\ui_f\data\Map\Diary\Icons\playerGuer_ca.paa";
                 };
                 case civilian: {
-                    _sideTexture = "\a3\ui_f\data\Map\Diary\Icons\playerCiv_ca.paa";
+                    _sidetexture = "\a3\ui_f\data\Map\Diary\Icons\playerCiv_ca.paa";
                 };
                 case sideLogic: {
-                    _sideTexture = "\a3\ui_f\data\Map\Diary\Icons\playerVirtual_ca.paa";
+                    _sidetexture = "\a3\ui_f\data\Map\Diary\Icons\playerVirtual_ca.paa";
                 };
                 default {
-                    _sideTexture = "\a3\ui_f\data\Map\Diary\Icons\playerBriefUnknown_ca.paa";
+                    _sidetexture = "\a3\ui_f\data\Map\Diary\Icons\playerBriefUnknown_ca.paa";
                 };
             };
-
-            _list lbSetPicture [_idx, _sideTexture];
-            _list lbSetPictureColor [_idx, [1,1,1,0.8]];
-            _list lbSetPictureColorSelected [_idx, [1,1,1,0.8]];
-            _list lbSetPictureRightColor [_idx, [1,1,1,0]];
-            _list lbSetPictureRightColorSelected [_idx, [1,1,1,0]];
+            
+            _list lbsetpicture [_idx, _sidetexture];
+            _list lbsetpictureColor [_idx, [1, 1, 1, 0.8]];
+            _list lbsetpictureColorselected [_idx, [1, 1, 1, 0.8]];
+            _list lbsetpictureRightColor [_idx, [1, 1, 1, 0]];
+            _list lbsetpictureRightColorselected [_idx, [1, 1, 1, 0]];
         };
     };
-} forEach _allPlayers;
+} forEach _allplayers;
 
-GVAR(playerManagement_players) = +_newPlayers;
-GVAR(playerManagement_selected) = GVAR(playerManagement_selected) arrayIntersect GVAR(playerManagement_players);
+GVAR(playerManagement_players) = +_newplayers;
+GVAR(playerManagement_selected) = GVAR(playerManagement_selected) arrayintersect GVAR(playerManagement_players);
 
-while {(lbSize _list) > count _newPlayers} do {
-    _list lbDelete ((lbSize _list) - 1);
+while {(lbsize _list) > count _newplayers} do {
+    _list lbDelete ((lbsize _list) - 1);
 };
 
-lbSort _list;
+lbsort _list;
 
-for "_i" from 0 to ((lbSize _list) - 1) do {
-    _list lbSetSelected [_i, (_list lbData _i) in GVAR(playerManagement_selected)];
+for "_i" from 0 to ((lbsize _list) - 1) do {
+    _list lbsetselected [_i, (_list lbData _i) in GVAR(playerManagement_selected)];
 };
