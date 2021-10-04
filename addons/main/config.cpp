@@ -25,7 +25,7 @@ class cfgPatches {
 #include "CfgRespawnTemplates.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgFactionClasses.hpp"
-#include " CfgFunctions.hpp"
+#include "CfgFunctions.hpp"
 #include "CfgScriptPaths.hpp"
 #include "CfgEditorCategories.hpp"
 #include "CfgVehicleIcons.hpp"

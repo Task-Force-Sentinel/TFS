@@ -23,6 +23,6 @@ class CfgPatches
 #include "CfgUnitInsignia.hpp"
 class CfgFunctions {
 
-    #include " CfgFunctions.hpp"
+    #include "CfgFunctions.hpp"
 };
 

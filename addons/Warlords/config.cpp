@@ -30,5 +30,5 @@ class Params {
 
 class CfgFunctions {
 
-    #include " CfgFunctions.hpp"
+    #include "CfgFunctions.hpp"
 };
