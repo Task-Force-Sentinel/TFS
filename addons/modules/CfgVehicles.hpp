@@ -4,7 +4,7 @@ class CfgVehicles {
     class logic;
     class module_F: logic {
         class AttributesBase {
-            class default;
+            class Default;
             class Edit;
             class Combo;
             class Checkbox;

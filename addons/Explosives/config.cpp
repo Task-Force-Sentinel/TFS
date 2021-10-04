@@ -22,7 +22,7 @@ class CfgPatches
 
 class CfgFunctions
 {
-    #include "cfgFunctions.hpp"
+    #include "CfgFunctions.hpp"
 };
 
 #include "CfgVehicles.hpp"

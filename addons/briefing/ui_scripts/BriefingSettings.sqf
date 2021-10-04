@@ -1,6 +1,6 @@
 params ["_mode",["_params",[]]];
 
-#include "\a3\3den\UI\dikCodes.inc"
+#include "\a3\3DEN\UI\dikcodes.inc"
 
 #define EDIT_CHANNEL_IDCS [313201,313202,313203,313204,313205,313206,313207,313208,313209,313210,313211]
 #define BEHIND_EDIT_CHANNELS_IDCS [189437,101]

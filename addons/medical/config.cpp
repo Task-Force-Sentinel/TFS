@@ -2,9 +2,9 @@
 
 class CfgPatches
 {
-    class TFS_CommandCentre
+    class TFS_Medical
     {
-        author = AUTHOR;
+        author = AUTHER;
         name = name;
         url = URL;
         units[] = {};
@@ -14,10 +14,15 @@ class CfgPatches
         };
         version = VERSION;
         authors[] = {
-            "MitchJC", "Mokka"
+            "MitchJC"
         };
         weapons[] = {};
     };
+};
+
+class CfgFunctions
+{
+    #include "CfgFunctions.hpp"
 };
 
 class CfgVehicles
@@ -32,7 +37,7 @@ class CfgVehicles
             class Combo;
             class Checkbox;
             class CheckboxNumber;
-            class ModuleDescription;
+            class moduleDescription;
             class Units;
         };
         
@@ -41,28 +46,5 @@ class CfgVehicles
             class AnyBrain;
         };
     };
-
-    #include "ModuleCommsTower.hpp"
-    #include "ModuleSingleScreen.hpp"
-    #include "ModuleMultiScreen.hpp"
-    #include "ModuleStationaryRadio.hpp"
-    #include "ModuleVehicleCam.hpp"
-};
-
-class CfgfactionClasses
-{
-    class NO_CATEGORY;
-    class TFS_CommandCentre : NO_CATEGORY
-    {
-        displayname = "TF Sentinel Command Center";
-    };
-};
-
-#include "GUI\defines.hpp"
-#include "GUI\DialogStationaryRadio.hpp"
-#include "GUI\DialogScreen.hpp"
-
-class CfgFunctions
-{
-    #include "CfgFunctions.hpp"
+    #include "MedicalModule.hpp"
 };

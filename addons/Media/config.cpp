@@ -24,10 +24,10 @@ class CfgPatches
 
 #include "CfgVehicles.hpp"
 #include "CfgMusic.hpp"
-#include "Cfgradio.hpp"
+#include "CfgRadio.hpp"
 #include "CfgSounds.hpp"
-#include "CfgUnitinsignia.hpp"
+#include "CfgUnitInsignia.hpp"
 class CfgFunctions
 {
-    #include "cfgFunctions.hpp"
+    #include "CfgFunctions.hpp"
 };

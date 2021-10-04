@@ -43,10 +43,10 @@ class CfgPatches
 class CfgFunctions
 {
 
-#include "cfgFunctions.hpp"
+#include "CfgFunctions.hpp"
 };
 
-#include "cfg3Den.hpp"
+#include "Cfg3DEN.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "jr_classes.hpp"

@@ -1,4 +1,4 @@
-﻿/*
+/*
 *	ARMA EXTENDED ENVIRONMENT
 *	\z\tfs\addons\core\functions\common\fn_isadmin.sqf
 *	by Ojemineh
