@@ -40,11 +40,11 @@ jobs:
       - name: Build addon with HEMTT
         uses: arma-actions/hemtt@master
         with:
-          command: 'build --release'
+          command: build --release --ci
       - uses: actions/upload-artifact@master
         with:
           name: '@TFS'
-          path: 'releases/@TFS_v*.zip'
+          path: 'releases/@TFS*.zip'
 
   stringtables:
     runs-on: ubuntu-latest
