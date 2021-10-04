@@ -30,10 +30,10 @@ class CfgWLRequisitionPresets
 
 class params
 {
-    #include "params.hpp"
+    #include "Params.hpp"
 };
 
 class CfgFunctions
 {
-    #include "cfgFunctions.hpp"
+    #include "CfgFunctions.hpp"
 };

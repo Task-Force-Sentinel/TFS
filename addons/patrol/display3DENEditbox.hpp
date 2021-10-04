@@ -12,7 +12,7 @@ class RscVignette;
 class RscMap;
 
 // Defines
-#include "\a3\3den\UI\dikCodes.inc"
+#include "\a3\3den\UI\dikcodes.inc"
 #include "\a3\3den\UI\macros.inc"
 #include "\a3\3den\UI\resincl.inc"
 

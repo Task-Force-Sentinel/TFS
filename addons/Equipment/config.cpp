@@ -43,7 +43,7 @@ class CfgPatches
 class CfgFunctions
 {
 
-#include "cfgFunctions.hpp"
+#include "CfgFunctions.hpp"
 };
 
 #include "cfg3Den.hpp"

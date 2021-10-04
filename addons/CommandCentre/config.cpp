@@ -27,13 +27,13 @@ class CfgVehicles
     {
         class AttributesBase
         {
-            class default;
-            class Edit;
-            class Combo;
-            class Checkbox;
-            class CheckboxNumber;
-            class moduleDescription;
-            class units;
+            class Default;
+			class Edit;
+			class Combo;
+			class Checkbox;
+			class CheckboxNumber;
+			class ModuleDescription;
+			class Units;
         };
         
         class moduleDescription
@@ -41,28 +41,28 @@ class CfgVehicles
             class AnyBrain;
         };
     };
-    
-    #include "moduleCommstower.hpp"
-    #include "modulesingleScreen.hpp"
-    #include "moduleMultiScreen.hpp"
-    #include "moduleStationaryradio.hpp"
-    #include "modulevehicleCam.hpp"
+
+    #include "ModuleCommsTower.hpp"
+	#include "ModuleSingleScreen.hpp"
+	#include "ModuleMultiScreen.hpp"
+	#include "ModuleStationaryRadio.hpp"
+	#include "ModuleVehicleCam.hpp"
 };
 
 class CfgfactionClasses
 {
-    class NO_CATEGorY;
-    class TFS_CommandCentre : NO_CATEGorY
+    class NO_CATEGORY;
+    class TFS_CommandCentre : NO_CATEGORY
     {
         displayname = "TF Sentinel Command Center";
     };
 };
 
 #include "GUI\defines.hpp"
-#include "GUI\dialogStationaryradio.hpp"
-#include "GUI\dialogScreen.hpp"
+#include "GUI\DialogStationaryRadio.hpp"
+#include "GUI\DialogScreen.hpp"
 
 class CfgFunctions
 {
-    #include "cfgFunctions.hpp"
+    #include "CfgFunctions.hpp"
 };

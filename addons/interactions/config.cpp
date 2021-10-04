@@ -23,6 +23,6 @@ class CfgPatches
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
 
-#include "Cfgactions.hpp"
+#include "CfgActions.hpp"
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"

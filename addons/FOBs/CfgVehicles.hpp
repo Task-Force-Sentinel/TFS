@@ -5,13 +5,13 @@ class CfgVehicles
     {
         class AttributesBase
         {
-            class default;
+            class Default;
             class Edit;
             class Combo;
             class Checkbox;
             class CheckboxNumber;
             class moduleDescription;
-            class units;
+            class Units;
         };
         
         class moduleDescription

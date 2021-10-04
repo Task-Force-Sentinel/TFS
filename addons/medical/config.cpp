@@ -22,7 +22,7 @@ class CfgPatches
 
 class CfgFunctions
 {
-    #include "cfgFunctions.hpp"
+    #include "CfgFunctions.hpp"
 };
 
 class CfgVehicles
@@ -32,13 +32,13 @@ class CfgVehicles
     {
         class AttributesBase
         {
-            class default;
+            class Default;
             class Edit;
             class Combo;
             class Checkbox;
             class CheckboxNumber;
             class moduleDescription;
-            class units;
+            class Units;
         };
         
         class moduleDescription

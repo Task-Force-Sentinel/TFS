@@ -30,4 +30,4 @@ class Extended_InitPost_EventHandlers
     };
 };
 
-#include "cfgFunctions.hpp"
+#include "CfgFunctions.hpp"

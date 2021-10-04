@@ -29,5 +29,5 @@ class CfgPatches
 #include "CfgUnitinsignia.hpp"
 class CfgFunctions
 {
-    #include "cfgFunctions.hpp"
+    #include "CfgFunctions.hpp"
 };

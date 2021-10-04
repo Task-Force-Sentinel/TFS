@@ -1,11 +1,11 @@
 class CfgfactionClasses {
-    class NO_CATEGorY;
+    class NO_CATEGORY;
     
-    class TFS: NO_CATEGorY
+    class TFS: NO_CATEGORY
     {
         displayname = PREFIX;
     };
-    class PREFIX: NO_CATEGorY {
+    class PREFIX: NO_CATEGORY {
         displayname = "Task force Sentinel";
         // faction name in-game
         icon = logO_PATH;
@@ -13,7 +13,7 @@ class CfgfactionClasses {
         side = 1;
         // 1 blufor 2 opfor 3 independant i think.
     };
-    class TFS_modules: NO_CATEGorY
+    class TFS_modules: NO_CATEGORY
     {
         displayname = PREFIX;
     };

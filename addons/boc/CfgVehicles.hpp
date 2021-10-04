@@ -25,7 +25,7 @@ class CfgVehicles {
     class logic;
     class module_F: logic {
         class ArgumentsBaseunits {
-            class units;
+            class Units;
         };
         class moduleDescription {
             class AnyBrain;
@@ -128,7 +128,7 @@ class CfgVehicles {
     class CAManBase: Man {
         class ACE_Selfactions {
             class ACE_Equipment {
-                #include "ACE_Selfactions.hpp"
+                #include "ACE_SelfActions.hpp"
             };
         };
     };
