@@ -1,24 +1,22 @@
 #include "script_component.hpp"
 
+class CfgPatches
+{
 
-class CfgPatches {
-
-	class TFS_Interactions {
+	class TFS_Interactions
+	{
 		author = AUTHOR;
 		name = COMPONENT_NAME;
 		url = URL;
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
-			"tfs_core"
-		};
+			"tfs_core"};
 		units[] = {};
 		weapons[] = {};
 		authors[] = {
-			"O. Jemineh"
-		};
+			"O. Jemineh"};
 		VERSION_CONFIG;
 	};
-
 };
 
 #include "CfgEventHandlers.hpp"

@@ -1,30 +1,30 @@
 // not documented: called by module
-if !(isserver) exitwith {};
+if !(isServer) exitwith {};
 
 params [
-    ["_logic",objNull,[objNull]],
-    ["_groups",[],[[]]],
-    "_localGroups",
+    ["_logic", objNull, [objNull]],
+    ["_groups", [], [[]]],
+    "_localgroups",
     "_logic"
 ];
 
 private _objects = synchronizedObjects _logic;
 
-private _detTime = _logic getVariable ["DetTime", 120];
-private _proxRadius = _logic getVariable ["ProxRadius", 20];
+private _dettime = _logic getVariable ["Dettime", 120];
+private _proxradius = _logic getVariable ["Proxradius", 20];
 private _secondaries = _logic getVariable ["Secondaries", true];
 private _announce = _logic getVariable ["Announce", false];
-private _annInterval = _logic getVariable ["AnnInterval", 30];
+private _anninterval = _logic getVariable ["Anninterval", 30];
 private _reqDefKit = _logic getVariable ["ReqDefKit", true];
 
 {
-	[
-		_x,
-		_detTime,
-		_proxRadius,
-		_secondaries,
-		_announce,
-		_annInterval,
-		_reqDefKit
-	] call TFS_fnc_makeIED;
+    [
+        _x,
+        _dettime,
+        _proxradius,
+        _secondaries,
+        _announce,
+        _anninterval,
+        _reqDefKit
+    ] call TFS_fnc_makeIED;
 } forEach _objects;

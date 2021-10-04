@@ -1,21 +1,22 @@
 #include "script_component.hpp"
 
-class cfgPatches {
-    class ADDON {
+class cfgPatches
+{
+    class ADDON
+    {
         author = AUTHOR;
-		name = COMPONENT_NAME;
+        name = COMPONENT_NAME;
         url = URL;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         /* Require CBA and all components below */
         requiredAddons[] = {
-			"A3_UI_F",
-			"cba_main",
-			"cba_xeh",
-			"cba_ui",
-            "cba_jr"
-		};
+            "A3_UI_F",
+            "cba_main",
+            "cba_xeh",
+            "cba_ui",
+            "cba_jr"};
         VERSION_CONFIG;
     };
 };

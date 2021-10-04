@@ -1,9 +1,9 @@
 PREP(cmndWhisper);
 PREP(cmndHeal);
-PREP(cmndLoadout);
+PREP(cmndloadout);
 PREP(cmndRP);
 PREP(cmndSpec);
 PREP(cmndTp);
-//PREP(cmndRadio);
+// PREP(cmndradio);
 PREP(findMatch);
 PREP(commandAvailable);

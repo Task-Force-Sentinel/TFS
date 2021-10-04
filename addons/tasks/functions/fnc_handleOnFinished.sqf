@@ -1,42 +1,52 @@
 #include "script_component.hpp"
 /*
- * Author: 3Mydlo3
- * Function changes task state to SUCCEEDED
- * and handles raising onSuccessEvents for given task.
- *
- * Arguments:
- * 0: Task namespace <CBA_NAMESPACE>
- * 1: Finish type "Success"/"Failed"/"Canceled" <STRING>
- * 2: Force new task state? <BOOL>
- *
- * Return Value:
- * None
- *
- * Public: No
- */
+* Author: 3Mydlo3
+* Function changes task state to SUCCEEDED
+* and handles raising onSuccessEvents for given task.
+*
+* Arguments:
+* 0: Task namespace <CBA_nameSPACE>
+* 1: Finish type "Success"/"Failed"/"Canceled" <strinG>
+* 2: force new task state? <BOOL>
+*
+* Return Value:
+* None
+*
+* Public: No
+*/
 
-params ["_taskNamespace", "_finishType", ["_force", false]];
+params ["_tasknamespace", "_finishtype", ["_force", false]];
 
-private _taskConfigName = _taskNamespace getVariable "taskConfigName";
+private _taskconfigname = _tasknamespace getVariable "taskconfigname";
 
 // Check if task was finished already or we force state change
-if (!_force && {(_taskConfigName call BIS_fnc_taskState) in FINISHED_TASK_STATES}) exitWith {nil};
-
-private _newTaskState = switch (_finishType) do {
-    case "Success": {"SUCCEEDED"};
-    case "Failed": {"FAILED"};
-    case "Canceled": {"CANCELED"};
+if (!_force && {
+    (_taskconfigname call BIS_fnc_taskState) in FinISHED_TASK_STATES
+}) exitwith {
+    nil
 };
 
-// Set task state
-[_taskConfigName, _newTaskState] call BIS_fnc_taskSetState;
+private _newtaskState = switch (_finishtype) do {
+    case "Success": {
+        "SUCCEEDED"
+    };
+    case "Failed": {
+        "FAILED"
+    };
+    case "Canceled": {
+        "CANCELED"
+    };
+};
 
-[QGVAR(taskStateChanged), [_taskConfigName, _newTaskState]] call CBA_fnc_globalEvent;
+// set task state
+[_taskconfigname, _newtaskState] call BIS_fnc_tasksetState;
 
-// Call code
-call compile (_taskNamespace getVariable [format ["on%1Code", _finishType], ""]);
+[QGVAR(taskStateChanged), [_taskconfigname, _newtaskState]] call CBA_fnc_globalEvent;
+
+// call code
+call compile (_tasknamespace getVariable [format ["on%1Code", _finishtype], ""]);
 
 // Raise events
 {
     [_x] call CBA_fnc_serverEvent;
-} forEach (_taskNamespace getVariable [format ["on%1Events", _finishType], []]);
+} forEach (_tasknamespace getVariable [format ["on%1Events", _finishtype], []]);

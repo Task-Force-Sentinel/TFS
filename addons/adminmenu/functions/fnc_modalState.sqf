@@ -2,6 +2,8 @@
 
 disableSerialization;
 
-if (isNull (uiNamespace getVariable [QGVAR(modalDisplay), displayNull])) exitWith {false};
+if (isNull (uiNamespace getVariable [QGVAR(modalDisplay), displayNull])) exitwith {
+    false
+};
 
 true

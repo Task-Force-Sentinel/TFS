@@ -1,18 +1,18 @@
 #include "script_component.hpp"
-ADDON = false;
+ADdoN = false;
 
-PREP_RECOMPILE_START;
+PREP_REcompile_START;
 #include "XEH_PREP.hpp"
-PREP_RECOMPILE_END;
+PREP_REcompile_END;
 
-#include "initSettings.sqf"
+#include "initsettings.sqf"
 
-["CAManBase", "GetOutMan", {
+["CAManBase", "GetoutMan", {
     _this call FUNC(onDisembark);
 }] call CBA_fnc_addClassEventHandler;
 
-["LandVehicle", "InitPost", {
-    (_this select 0) allowCrewInImmobile (random 1 < GVAR(stayInImmobileChance))
+["landvehicle", "initPost", {
+    (_this select 0) allowcrewinImmobile (random 1 < GVAR(stayinImmobileChance))
 }] call CBA_fnc_addClassEventHandler;
 
-ADDON = true;
+ADdoN = true;

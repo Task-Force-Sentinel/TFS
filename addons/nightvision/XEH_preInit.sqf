@@ -1,4 +1,4 @@
 #include "script_component.hpp"
-ADDON = false;
+ADdoN = false;
 #include "XEH_PREP.hpp"
-ADDON = true;
+ADdoN = true;

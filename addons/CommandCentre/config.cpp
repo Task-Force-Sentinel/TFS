@@ -9,7 +9,7 @@ class CfgPatches
 		url = URL;
 		units[] = {};
 		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {"A3_UI_F","cba_main","cba_xeh"};
+		requiredAddons[] = {"A3_UI_F", "cba_main", "cba_xeh"};
 		version = VERSION;
 		authors[] = {"MitchJC", "Mokka"};
 		weapons[] = {};
@@ -19,7 +19,7 @@ class CfgPatches
 class CfgVehicles
 {
 	class Logic;
-	class Module_F: Logic
+	class Module_F : Logic
 	{
 		class AttributesBase
 		{
@@ -38,17 +38,17 @@ class CfgVehicles
 		};
 	};
 
-	#include "ModuleCommsTower.hpp"
-	#include "ModuleSingleScreen.hpp"
-	#include "ModuleMultiScreen.hpp"
-	#include "ModuleStationaryRadio.hpp"
-	#include "ModuleVehicleCam.hpp"
+#include "ModuleCommsTower.hpp"
+#include "ModuleSingleScreen.hpp"
+#include "ModuleMultiScreen.hpp"
+#include "ModuleStationaryRadio.hpp"
+#include "ModuleVehicleCam.hpp"
 };
 
 class CfgFactionClasses
 {
 	class NO_CATEGORY;
-	class TFS_CommandCentre: NO_CATEGORY
+	class TFS_CommandCentre : NO_CATEGORY
 	{
 		displayName = "TF Sentinel Command Center";
 	};
@@ -58,8 +58,8 @@ class CfgFactionClasses
 #include "GUI\DialogStationaryRadio.hpp"
 #include "GUI\DialogScreen.hpp"
 
+class CfgFunctions
+{
 
-class CfgFunctions {
-
-    #include "cfgFunctions.hpp"
+#include "cfgFunctions.hpp"
 };

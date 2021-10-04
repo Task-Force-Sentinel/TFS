@@ -1,31 +1,33 @@
 #include "\z\tfs\addons\autotest\script_component.hpp"
 /* ----------------------------------------------------------------------------
-Internal Function: TFS_autotest_fnc_testHCs
+internal Function: TFS_autotest_fnc_testHCs
 
 Description:
-    Checks number of HCs and if they're set up correctly
+Checks number of HCs and if they're set up correctly
 
 Returns:
-    Warning array [Array of Warnings]
+Warning array [Array of Warnings]
 
 Author:
-    Freddo
+Freddo
 ---------------------------------------------------------------------------- */
 
 private _warnings = [];
 private _targetHCs = getNumber (_test >> "expectedHCs");
 
-private _HCs = (all3DENEntities # 3) select {_x isKindOf "HeadlessClient_F"};
+private _HCs = (all3DENentities # 3) select {
+    _x isKindOf "HeadlessClient_F"
+};
 
 // Check presence
 if (count _HCs < _targetHCs) then {
-    _warnings pushBack [1,format ["Less than %1 Headless Clients present",_targetHCs]];
+    _warnings pushBack [1, format ["Less than %1 Headless Clients present", _targetHCs]];
 };
 
 // Check if setup correctly
 {
-    if !(_x get3DENAttribute "ControlMP" isEqualTo [true]) then {
-        _warnings pushBack [0,format ["Headless Client %1 is not marked as playable.",_x]];
+    if !(_x get3DENAttribute "ControlMP" isEqualto [true]) then {
+        _warnings pushBack [0, format ["Headless Client %1 is not marked as playable.", _x]];
     };
 } forEach _HCs;
 

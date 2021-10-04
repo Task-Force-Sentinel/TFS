@@ -3,70 +3,73 @@
 disableSerialization;
 params ["_display"];
 
-
-private _control = (_display displayCtrl IDC_TFS_ADMINMENU_RESP_FACTION);
+private _control = (_display displayCtrl IDC_TFS_adminMENU_RESP_faction);
 lbClear _control;
 
-private _activeFactionCategory = GVAR(currentFactionCategory);
+private _activefactionCategory = GVAR(currentfactionCategory);
 
 private _factions = [];
 
-/* Fill Faction categories */
-private _playerFactions = [] call CBA_fnc_hashCreate;
+/* Fill faction categories */
+private _playerfactions = [] call CBA_fnc_hashCreate;
 {
-    private _faction = _x getVariable ["TFS_assignGear_faction",""];
+    private _faction = _x getVariable ["TFS_assignGear_faction", ""];
     if (_faction != "") then {
-        if ([_playerFactions,_faction] call CBA_fnc_hashHasKey) then {
-            private _value = [_playerFactions,_faction] call CBA_fnc_hashGet;
-            [_playerFactions,_faction,_value + 1] call CBA_fnc_hashSet;
+        if ([_playerfactions, _faction] call CBA_fnc_hashHasKey) then {
+            private _value = [_playerfactions, _faction] call CBA_fnc_hashGet;
+            [_playerfactions, _faction, _value + 1] call CBA_fnc_hashset;
         } else {
-            [_playerFactions,_faction,1] call CBA_fnc_hashSet;
+            [_playerfactions, _faction, 1] call CBA_fnc_hashset;
         };
     };
-} forEach allPlayers;
+} forEach allplayers;
 
-if (_activeFactionCategory == "mission") then {
+if (_activefactionCategory == "mission") then {
     // use missionConfigFile
     {
-        private _factionName = (toLower(configName _x));
-        _factions pushBackUnique [getText(_x >> "displayName"),_factionName];
-    } forEach (configProperties [missionConfigFile >> "CfgLoadouts","isClass _x"]);
-
+        private _factionname = (toLower(configname _x));
+        _factions pushBackUnique [gettext(_x >> "displayname"), _factionname];
+    } forEach (configProperties [missionConfigFile >> "Cfgloadouts", "isClass _x"]);
 } else {
-    // Then configFile
+    // then configFile
     {
-        private _category = toLower (getText (_x >> "category"));
-        if (_category == "") then {_category = "Other";};
-        if (_activeFactionCategory == _category) then {
-            private _factionName = (toLower(configName _x));
-            _factions pushBackUnique [getText(_x >> "displayName"),_factionName];
+        private _category = toLower (gettext (_x >> "category"));
+        if (_category == "") then {
+            _category = "Other";
         };
-    } forEach (configProperties [configFile >> "CfgLoadouts","isClass _x"]);
+        if (_activefactionCategory == _category) then {
+            private _factionname = (toLower(configname _x));
+            _factions pushBackUnique [gettext(_x >> "displayname"), _factionname];
+        };
+    } forEach (configProperties [configFile >> "Cfgloadouts", "isClass _x"]);
 };
 
-//Alphabetical sort.
+// Alphabetical sort.
 _factions sort true;
 
 {
-    _x params ["_displayName","_configName"];
+    _x params ["_displayname", "_configname"];
     private _players = 0;
     // Mission factioni class overrides so show 0 if configFile class is of same name.
-    if (_activeFactionCategory != "mission" && {isClass (missionConfigFile >> "CfgLoadouts" >> _configName)}) then {
+    if (_activefactionCategory != "mission" && {
+        isClass (missionConfigFile >> "Cfgloadouts" >> _configname)
+    }) then {
         _players = 0;
     } else {
-        if ([_playerFactions,_configName] call CBA_fnc_hashHasKey) then {
-            _players = [_playerFactions,_configName] call CBA_fnc_hashGet;
+        if ([_playerfactions, _configname] call CBA_fnc_hashHasKey) then {
+            _players = [_playerfactions, _configname] call CBA_fnc_hashGet;
         };
     };
-    private _text = _displayName;
+    private _text = _displayname;
     if (_players > 0) then {
-        _text = format ["%1 (%2p)",_displayName,_players];
+        _text = format ["%1 (%2p)", _displayname, _players];
     };
     private _index = _control lbAdd _text;
-    _control lbSetData [_index, _configName];
+    _control lbsetData [_index, _configname];
 } forEach _factions;
 // missionConfigFile first, only add unique factions now
 
-if (lbSize _control > 0) then {
-    _control lbSetCurSel 0; // set to first element.
+if (lbsize _control > 0) then {
+    _control lbsetCurSel 0;
+    // set to first element.
 };

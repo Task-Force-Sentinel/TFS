@@ -1,26 +1,26 @@
 #include "script_component.hpp"
-ADDON = false;
+ADdoN = false;
 
-PREP_RECOMPILE_START;
+PREP_REcompile_START;
 #include "XEH_PREP.hpp"
-PREP_RECOMPILE_END;
+PREP_REcompile_END;
 
-if (isServer || !hasInterface) then {
-    ["Tank_F", "Fired", {
-        if !(_this call FUNC(canHeat)) exitWith {};
-        TRACE_1("Tank shot by AI, heating up",_this);
+if (isServer || !hasinterface) then {
+    ["tank_F", "fired", {
+        if !(_this call FUNC(canHeat)) exitwith {};
+        TRACE_1("tank shot by AI, heating up", _this);
         params ["_vehicle"];
-        _vehicle setVariable [QGVAR(heatTime), CBA_missionTime + 30];
+        _vehicle setVariable [QGVAR(heattime), CBA_missiontime + 30];
         // heat up the vehicle
         [QGVAR(heat), _vehicle] call CBA_fnc_globalEvent;
     }] call CBA_fnc_addClassEventHandler;
 };
 
-if (hasInterface) then {
+if (hasinterface) then {
     [QGVAR(heat), {
-        private _tiPars = getVehicleTiPars _this vectorAdd [0.2,0.2,0.2];
-        _this setVehicleTiPars _tiPars;
+        private _tiPars = getvehicleTIPars _this vectorAdd [0.2, 0.2, 0.2];
+        _this setvehicleTIPars _tiPars;
     }] call CBA_fnc_addEventHandler;
 };
 
-ADDON = true;
+ADdoN = true;

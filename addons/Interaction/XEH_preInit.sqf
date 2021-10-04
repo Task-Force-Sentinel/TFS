@@ -1,78 +1,102 @@
-// Creator Actions
+// Creator actions
 [
-    "TFS_CreatorActions_Master",
+    "TFS_Creatoractions_Master",
     "CHECKBOX",
-    ["Enable Creator Actions", "Show/Hide Creator Actions in ACE Self Interaction Menu"],
-    "TFS Creator Actions",
+    ["Enable Creator actions", "Show/Hide Creator actions in ACE Self interaction Menu"],
+    "TFS Creator actions",
     true,
     true,
     {
-		if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitWith {};
-        if (_this && { hasinterface }) then  {call TFS_fnc_InitCreatorActions};
+        if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitwith {};
+        if (_this && {
+            hasinterface
+        }) then {
+            call TFS_fnc_initCreatoractions
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
 [
-    "TFS_CreatorActions_Channels",
+    "TFS_Creatoractions_Channels",
     "CHECKBOX",
-    ["Enable Channel Actions", "Add Creator Actions to enable/disable channels"],
-    "TFS Creator Actions",
+    ["Enable Channel actions", "Add Creator actions to enable/disable channels"],
+    "TFS Creator actions",
     true,
     true,
     {
-		if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitWith {};
-        if (_this && { hasinterface }) then  {call TFS_fnc_InitChannelActions};
+        if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitwith {};
+        if (_this && {
+            hasinterface
+        }) then {
+            call TFS_fnc_initChannelactions
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
 /*
 [
-    "TFS_CreatorActions_MarkerSaving",
+    "TFS_Creatoractions_MarkerSaving",
     "CHECKBOX",
-    ["Enable SaveMarkers", "Add Creator Actions to save/load markers"],
-    "TFS Creator Actions",
+    ["Enable SaveMarkers", "Add Creator actions to save/load markers"],
+    "TFS Creator actions",
     true,
     true,
     {
-		if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitWith {};
-        if (_this && { hasinterface }) then  {
-			[
-				"SaveMarkers",
-				"Save/Load Markers",
-				"",
-				{[] call TFS_MI_fnc_openDialog;},
-				{TFS_Main_MapIcons}
-			] call TFS_fnc_addCreatorAction;
-		};
+        if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitwith {};
+        if (_this && {
+            hasinterface
+        }) then {
+            [
+                "SaveMarkers",
+                "Save/load Markers",
+                "",
+                {
+                    [] call TFS_MI_fnc_opendialog;
+                },
+                {
+                    TFS_Main_Mapicons
+                }
+            ] call TFS_fnc_addCreatoraction;
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 */ // broken as fuck, crashes the game...
 
 [
-    "TFS_CreatorActions_EndMission",
+    "TFS_Creatoractions_endMission",
     "CHECKBOX",
-    ["Enable EndMission", "Add Creator Actions to end the mission and return players to the lobby"],
-    "TFS Creator Actions",
+    ["Enable endMission", "Add Creator actions to end the mission and return players to the lobby"],
+    "TFS Creator actions",
     true,
     true,
     {
-		if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitWith {};
-        if (_this && { hasinterface }) then  {
-			[
-				"EndMissionSuccess",
-				"<t color='#00ff00'>Mission Success</t>",
-				"",
-				{["EveryoneWins"] remoteExec ["BIS_fnc_endMissionServer", 2]},
-				{true}
-			] call TFS_fnc_addCreatorAction;
-
-			[
-				"EndMissionFail",
-				"<t color='#ff0000'>Mission Failure</t>",
-				"",
-				{["EveryoneLost"] remoteExec ["BIS_fnc_endMissionServer", 2]},
-				{true}
-			] call TFS_fnc_addCreatorAction;
-		};
+        if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitwith {};
+        if (_this && {
+            hasinterface
+        }) then {
+            [
+                "endMissionSuccess",
+                "<t color='#00ff00'>Mission Success</t>",
+                "",
+                {
+                    ["EveryoneWins"] remoteExec ["BIS_fnc_endMissionServer", 2]
+                },
+                {
+                    true
+                }
+            ] call TFS_fnc_addCreatoraction;
+            
+            [
+                "endMissionFail",
+                "<t color='#ff0000'>Mission Failure</t>",
+                "",
+                {
+                    ["EveryoneLost"] remoteExec ["BIS_fnc_endMissionServer", 2]
+                },
+                {
+                    true
+                }
+            ] call TFS_fnc_addCreatoraction;
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;

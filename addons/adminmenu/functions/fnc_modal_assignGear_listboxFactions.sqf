@@ -6,58 +6,58 @@ params ["_ctrlCheckBox", "_onlyPresent"];
 
 private _factions = [];
 
-if (_onlyPresent isEqualTo 1) then {
-    private _missionFactionsFound = [];
+if (_onlyPresent isEqualto 1) then {
+    private _missionfactionsFound = [];
     {
-        private _faction = _x getVariable [QEGVAR(assigngear,faction), ""];
-        if !(_faction isEqualTo "") then {
-            _missionFactionsFound pushBackUnique toLower _faction;
+        private _faction = _x getVariable [QEGVAR(assigngear, faction), ""];
+        if !(_faction isEqualto "") then {
+            _missionfactionsFound pushBackUnique toLower _faction;
         };
-    } forEach allPlayers;
-
+    } forEach allplayers;
+    
     {
-        private _displayName = getText (missionConfigFile >> "CfgLoadouts" >> _x >> "displayName");
+        private _displayname = gettext (missionConfigFile >> "Cfgloadouts" >> _x >> "displayname");
         private _fromMissionConfig = 1;
-        if (_displayName isEqualTo "") then {
-            _displayName = getText (configFile >> "CfgLoadouts" >> _x >> "displayName");
+        if (_displayname isEqualto "") then {
+            _displayname = gettext (configFile >> "Cfgloadouts" >> _x >> "displayname");
             _fromMissionConfig = 0;
         };
-
-        _factions pushBack [_displayName, _x, _fromMissionConfig];
-    } forEach _missionFactionsFound;
+        
+        _factions pushBack [_displayname, _x, _fromMissionConfig];
+    } forEach _missionfactionsFound;
 } else {
-    private _missionConfigFactions = [];
+    private _missionConfigfactions = [];
     {
-        _missionConfigFactions pushBack toLower configName _x;
-        _factions pushBack [getText (_x >> "displayName"), configName _x, 1];
-    } forEach ("true" configClasses (missionConfigFile >> "CfgLoadouts"));
-
+        _missionConfigfactions pushBack toLower configname _x;
+        _factions pushBack [gettext (_x >> "displayname"), configname _x, 1];
+    } forEach ("true" configClasses (missionConfigFile >> "Cfgloadouts"));
+    
     {
-        if !((toLower configName _x) in _missionConfigFactions) then {
-            _factions pushBack [getText (_x >> "displayName"), configName _x, 0];
+        if !((toLower configname _x) in _missionConfigfactions) then {
+            _factions pushBack [gettext (_x >> "displayname"), configname _x, 0];
         };
-    } forEach ("true" configClasses (configFile >> "CfgLoadouts"));
+    } forEach ("true" configClasses (configFile >> "Cfgloadouts"));
 };
 
 _factions sort true;
 
-private _ctrlComboFaction = _ctrlCheckBox getVariable [QGVAR(association), controlNull];
+private _ctrlCombofaction = _ctrlCheckBox getVariable [QGVAR(association), controlnull];
 {
-    _x params ["_displayName", "_className", "_fromMissionConfig"];
-    if (_fromMissionConfig isEqualTo 1) then {
-        _displayName = format ["%1 *", _displayName];
+    _x params ["_displayname", "_classname", "_fromMissionConfig"];
+    if (_fromMissionConfig isEqualto 1) then {
+        _displayname = format ["%1 *", _displayname];
     };
-
-    _ctrlComboFaction lbAdd _displayName;
-    _ctrlComboFaction lbSetData [_forEachIndex, _className];
-    _ctrlComboFaction lbSetValue [_forEachIndex, _fromMissionConfig];
+    
+    _ctrlCombofaction lbAdd _displayname;
+    _ctrlCombofaction lbsetData [_forEachindex, _classname];
+    _ctrlCombofaction lbsetValue [_forEachindex, _fromMissionConfig];
 } forEach _factions;
 
-private _numFactions = count _factions;
-while {lbSize _ctrlComboFaction > _numFactions} do {
-    _ctrlComboFaction lbDelete _numFactions;
+private _numfactions = count _factions;
+while {lbsize _ctrlCombofaction > _numfactions} do {
+    _ctrlCombofaction lbDelete _numfactions;
 };
 
-if (_numFactions > 0 && ((lbCurSel _ctrlComboFaction) < 0 || (lbCurSel _ctrlComboFaction) >= _numFactions)) then {
-    _ctrlComboFaction lbSetCurSel 0;
+if (_numfactions > 0 && ((lbCurSel _ctrlCombofaction) < 0 || (lbCurSel _ctrlCombofaction) >= _numfactions)) then {
+    _ctrlCombofaction lbsetCurSel 0;
 };

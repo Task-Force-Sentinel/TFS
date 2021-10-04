@@ -2,43 +2,43 @@
 Function: TFS_fnc_initScreen
 
 Description:
-	Initializes a Screen for the Command Centre based on the passed parameters.
+initializes a Screen for the Command Centre based on the passed parameters.
 
 Arguments:
-	_object - Screen object
-	_name - Name of the screen, used for the actions
-	_allowCam - If true, allows viewing Helmet Cameras through the screen
-	_allowDrone - If true, allows viewing Drone Cameras through the screen
-	_allowSat - If true, allows viewing Satellite imagery through the screen
-	_allowMap - If true, allows viewing the Tactical Map through the screen
-	_selection - The texture selection of the screen content
+_object - Screen object
+_name - name of the screen, used for the actions
+_allowCam - if true, allows viewing Helmet Cameras through the screen
+_allowDrone - if true, allows viewing Drone Cameras through the screen
+_allowSat - if true, allows viewing Satellite imagery through the screen
+_allowMap - if true, allows viewing the Tactical Map through the screen
+_selection - The texture selection of the screen content
 
 Return Values:
-	Nothing.
+nothing.
 
 Examples:
-    Nothing to see here
+nothing to see here
 
 Author:
-	Mokka
+Mokka
 */
 
 params [
-	"_object",
-	"_name",
-	["_allowCam", true],
-	["_allowDrone", true],
-	["_allowSat", true],
-	["_allowMap", true],
-	["_selection", 0]
+    "_object",
+    "_name",
+    ["_allowCam", true],
+    ["_allowDrone", true],
+    ["_allowSat", true],
+    ["_allowMap", true],
+    ["_selection", 0]
 ];
 
-if !(isServer) exitWith {};
-if !(isClass (configFile >> "CfgPatches" >> "cTab")) exitWith {};
+if !(isServer) exitwith {};
+if !(isClass (configFile >> "CfgPatches" >> "cTab")) exitwith {};
 
 // register screen, important to properly assign the render targets later down the line
-if (isNil "TFS_CC_nextScreenID") then {
-	TFS_CC_nextScreenID = 0;
+if (isnil "TFS_CC_nextScreenID") then {
+    TFS_CC_nextScreenID = 0;
 };
 
 _object setVariable [format ["TFS_CC_screen_%1_ID", _selection], TFS_CC_nextScreenID, true];
@@ -50,6 +50,6 @@ _object setVariable [format ["TFS_CC_screen_%1_mode", _selection], "", true];
 _object setVariable [format ["TFS_CC_screen_%1_target", _selection], "", true];
 
 // set default screen texture
-_object setObjectTextureGlobal [_selection, "z\tfs\addons\media\images\cc_screen_standby.paa"];
+_object setobjecttextureGlobal [_selection, "z\tfs\addons\media\images\cc_screen_standby.paa"];
 
-[_object, _selection, _name, [_allowCam, _allowDrone, _allowSat, _allowMap]] remoteExec ["TFS_fnc_addScreenActions", 0, true];
+[_object, _selection, _name, [_allowCam, _allowDrone, _allowSat, _allowMap]] remoteExec ["TFS_fnc_addScreenactions", 0, true];

@@ -23,7 +23,6 @@ class CfgVehicles {
 	class rhsusf_army_ocp_marksman { class EventHandlers; };
 	class rhsusf_army_ocp_engineer { class EventHandlers; };
 
-	//////////////////////////////////////////
 
 	class CLASS(officer): rhsusf_army_ocp_officer {
 		MACRO_TFS_CLASS_COMMON
@@ -43,7 +42,6 @@ class CfgVehicles {
 		respawnLinkedItems[] = {"USP_CRYE_CPC_LEAD_BELT_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
 	};
 
-	/////////////////////////////////////////
 
 	class CLASS(platoon_leader): rhsusf_army_ocp_officer {
 		MACRO_TFS_CLASS_COMMON
@@ -91,7 +89,7 @@ class CfgVehicles {
 		respawnLinkedItems[] = {"USP_CRYE_CPC_MEDIC_BELT_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
 	};
 
-	//////////////////////////////////////////////////////////////
+	
 
 	class CLASS(squad_leader): rhsusf_army_ocp_squadleader {
 		MACRO_TFS_CLASS_COMMON
@@ -112,7 +110,6 @@ class CfgVehicles {
 		respawnLinkedItems[] = {"USP_CRYE_CPC_MEDIC_BELT_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
 	};
 
-	///////////////////////////////////
 
 	class CLASS(teamleader): rhsusf_army_ocp_teamleader {
 		MACRO_TFS_CLASS_COMMON
@@ -168,7 +165,6 @@ class CfgVehicles {
 		respawnLinkedItems[] = {"USP_CRYE_CPC_FAST_BELT_MC", "USP_IHPS_COV_BLK_MC", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_rf7800str", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
 	};
 
-	//////////////////////////////////////
 	class CLASS(helipilot): rhsusf_army_ocp_helipilot {
 		dlc = QUOTE(PREFIX);
 		scope = 2;
@@ -188,7 +184,6 @@ class CfgVehicles {
 		respawnLinkedItems[] = {"USP_CRYE_CPC_MC", "rhsusf_hgu56p", "", "ItemMap", "ItemCompass", "ItemWatch", "TFAR_anprc152", "", "rhsusf_acc_anpeq15", "rhsusf_acc_ACOG2", "rhsusf_acc_kac_grip", "", "", "", ""};
 	};   
 
-	////////////////////////////////////
 	class CLASS(socom): rhsusf_infantry_socom_marsoc_base {
 		dlc = QUOTE(PREFIX);
 		scope = 2;

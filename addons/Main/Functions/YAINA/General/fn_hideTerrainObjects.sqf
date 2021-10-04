@@ -1,55 +1,56 @@
 /*
-Function: YAINA_F_fnc_hideTerrainObjects
+Function: YAinA_F_fnc_hideTerrainObjects
 
 Description:
-	Hides terrain objects, similar to that of 3DEN's ModuleHideTerrain_F.
-    To avoid the issue of exploding buildings re-appearing, we set their damage
-    handling to disabled.
+Hides terrain objects, similar to that of 3DEN's moduleHideTerrain_F.
+to avoid the issue of exploding buildings re-appearing, we set their damage
+handling to disabled.
 
-Parameters:
-    _pos - Position around which we want to hide terrain objects
-    _radius - Radius around given position in which to hide terrain objects
-    _excludes - Objects to exclude from being hidden
-    _types - The types of terrain objects to hide, defaults to ["BUILDINGS", "WALLS", "VEGETATION", "MISC"]
+parameters:
+_pos - position around which we want to hide terrain objects
+_radius - radius around given position in which to hide terrain objects
+_excludes - Objects to exclude from being hidden
+_types - The types of terrain objects to hide, defaults to ["BUILDinGS", "WALLS", "VEGETATION", "MISC"]
 
 Return Values:
-	Array containing the objects that were hidden
+Array containing the objects that were hidden
 
 Examples:
-    Nothing to see here
+nothing to see here
 
 Author:
-	Martin, modified by Mokka
+Martin, modified by Mokka
 */
-#define MAP_TYPES_BUILDING      ["BUILDING","HOUSE","CHURCH","CHAPEL","FUELSTATION","HOSPITAL","RUIN","BUNKER"]
-#define MAP_TYPES_VEGETATION    ["TREE","SMALL TREE","BUSH"]
-#define MAP_TYPES_WALL          ["WALL","FENCE"]
-#define MAP_TYPES_MISC          ["ROCK","ROCKS","FOREST BORDER","FOREST TRIANGLE","FOREST SQUARE","CROSS","FORTRESS","FOUNTAIN","VIEW-TOWER","LIGHTHOUSE","QUAY","HIDE","BUSSTOP","ROAD","FOREST","TRANSMITTER","STACK","TOURISM","WATERTOWER","TRACK","MAIN ROAD","POWER LINES","RAILWAY","POWERSOLAR","POWERWAVE","POWERWIND","SHIPWRECK","TRAIL"]
+#define MAP_typeS_BUILDinG ["BUILDinG", "HOUSE", "CHURCH", "CHAPEL", "fuelSTATION", "HOSpiTAL", "RUin", "BUNKER"]
+#define MAP_typeS_VEGETATION ["TREE", "SMALL TREE", "BUSH"]
+#define MAP_typeS_WALL ["WALL", "FENCE"]
+#define MAP_typeS_MISC ["ROCK", "ROCKS", "forEST BorDER", "forEST TRIANGLE", "forEST SQUARE", "CROSS", "forTRESS", "FOUNTAin", "VIEW-toWER", "LIGHTHOUSE", "QUAY", "HIDE", "BUSstop", "ROAD", "forEST", "TRANSMITTER", "STACK", "toURISM", "WATERtoWER", "TRACK", "MAin ROAD", "POWER LinES", "RAILWAY", "POWERSOLAR", "POWERWAVE", "POWERwind", "SHIPWRECK", "TRAIL"]
 
-#define CATEGORIES              ["BUILDINGS", "WALLS", "VEGETATION", "MISC"]
-#define CATEGORY_COMP           [MAP_TYPES_BUILDING,MAP_TYPES_WALL,MAP_TYPES_VEGETATION,MAP_TYPES_MISC]
+#define CATEGorIES ["BUILDinGS", "WALLS", "VEGETATION", "MISC"]
+#define CATEGorY_COMP [MAP_typeS_BUILDinG, MAP_typeS_WALL, MAP_typeS_VEGETATION, MAP_typeS_MISC]
 
-params ["_pos", "_radius", ["_excludes", []], ["_types", CATEGORIES, [[]]]];
+params ["_pos", "_radius", ["_excludes", []], ["_types", CATEGorIES, [[]]]];
 
-if !(isServer) exitWith {};
+if !(isServer) exitwith {};
 
-
-private _clearTypes  = [];
+private _cleartypes = [];
 {
-    _id = CATEGORIES find _x;
-    if (_id isEqualTo -1) exitWith { _clearTypes pushBackUnique _x; };
+    _id = CATEGorIES find _x;
+    if (_id isEqualto -1) exitwith {
+        _cleartypes pushBackUnique _x;
+    };
     {
-        _clearTypes pushBackUnique _x;
+        _cleartypes pushBackUnique _x;
         true;
-    } count (CATEGORY_COMP select _id);
+    } count (CATEGorY_COMP select _id);
 } forEach _types;
 
-private _hide = nearestTerrainObjects [_pos, _clearTypes, _radius, false, true];
+private _hide = nearestTerrainObjects [_pos, _cleartypes, _radius, false, true];
 
 {
     if !(_x in _excludes) then {
-        _x hideObjectGlobal true;
-        _x allowDamage false;
+        _x hideObjectglobal true;
+        _x allowdamage false;
     };
     true;
 } count _hide;

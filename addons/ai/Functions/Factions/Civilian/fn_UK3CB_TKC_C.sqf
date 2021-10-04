@@ -1,8 +1,8 @@
 _pedPool = [
     "UK3CB_TKC_C_CIV",
-    "UK3CB_TKC_C_DOC",
-    "UK3CB_TKC_C_PILOT",
-    "UK3CB_TKC_C_WORKER",
+    "UK3CB_TKC_C_doC",
+    "UK3CB_TKC_C_piLOT",
+    "UK3CB_TKC_C_WorKER",
     "UK3CB_TKC_C_SPOT"
 ];
 
@@ -14,7 +14,7 @@ _motPool = [
     "UK3CB_TKC_C_Hilux_Civ_Closed",
     "UK3CB_TKC_C_Hilux_Civ_Open",
     "UK3CB_TKC_C_Kamaz_Covered",
-    "UK3CB_TKC_C_Kamaz_Fuel",
+    "UK3CB_TKC_C_Kamaz_fuel",
     "UK3CB_TKC_C_Kamaz_Open",
     "UK3CB_TKC_C_Kamaz_Repair",
     "UK3CB_TKC_C_Lada",
@@ -33,8 +33,8 @@ _motPool = [
     "UK3CB_TKC_C_UAZ_Closed",
     "UK3CB_TKC_C_Ural",
     "UK3CB_TKC_C_Open",
-    "UK3CB_TKC_C_Fuel",
-    "UK3CB_TKC_C_Ural_Ammo",
+    "UK3CB_TKC_C_fuel",
+    "UK3CB_TKC_C_Ural_ammo",
     "UK3CB_TKC_C_Ural_Empty",
     "UK3CB_TKC_C_Ural_Recovery",
     "UK3CB_TKC_C_Ural_Repair",

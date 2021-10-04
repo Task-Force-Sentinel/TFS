@@ -2,26 +2,26 @@
 Function: TFS_fnc_GetKeys
 
 Description:
-	Get all the keys in a map as an array
+Get all the keys in a map as an array
 
 Arguments:
-	_map - The map to get the keys from
+_map - The map to get the keys from
 
 Return Values:
-	List of all the keys stored in the map
+list of all the keys stored in the map
 
 Examples:
-    Nothing to see here
+nothing to see here
 
 Author:
-	Mokka
+Mokka
 */
 params ["_map"];
 
 private _keys = [];
 
 {
-	_keys pushBack (_x select 0);
+    _keys pushBack (_x select 0);
 } forEach _map;
 
 _keys;

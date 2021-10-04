@@ -1,6 +1,6 @@
-///////////////////////////////////////////////////////////////////////////
+
 /// GUI
-///////////////////////////////////////////////////////////////////////////
+
 
 //--- Background color with defaults (not multipliable)
 #define GUI_BCG_RGB_R			"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.13])"
@@ -63,9 +63,9 @@
 #define GUI_TOOLTIP_SHADE_COLOR		{0, 0, 0, 0.65}
 
 
-///////////////////////////////////////////////////////////////////////////
+
 /// iGUI
-///////////////////////////////////////////////////////////////////////////
+
 //--- IGUI Background color
 #define IGUI_BCG_RGB_R			"(profilenamespace getvariable ['IGUI_BCG_RGB_R',0])"
 #define IGUI_BCG_RGB_G			"(profilenamespace getvariable ['IGUI_BCG_RGB_G',1])"
@@ -111,9 +111,9 @@
 
 
 
-///////////////////////////////////////////////////////////////////////////
+
 /// Sides
-///////////////////////////////////////////////////////////////////////////
+
 
 //--- BLUFOR
 #define Map_BLUFOR_R			"(profilenamespace getvariable ['Map_BLUFOR_R',0])"
@@ -157,9 +157,9 @@
 
 
 
-///////////////////////////////////////////////////////////////////////////
+
 /// Misc
-///////////////////////////////////////////////////////////////////////////
+
 //overwritten by Warka
 #define CA_UI_ACTION			{0.9,0.9,0.9,0.4}
 #define CA_UI_ACTION_AVAILABLE		IGUI_TEXT_COLOR
@@ -208,9 +208,9 @@
 #define ProcTextPurple			"#(argb,8,8,3)color(0.75,0,0.75,1)"
 
 
-///////////////////////////////////////////////////////////////////////////
+
 /// Task colors: 3D task marker
-///////////////////////////////////////////////////////////////////////////
+
 #define COLOR_TASK_ICON_UNASSIGNED_RGB		1,1,1
 #define COLOR_TASK_ICON_UNASSIGNED_A		0.5
 #define COLOR_TASK_ICON_UNASSIGNED_RGBA		COLOR_TASK_ICON_UNASSIGNED_RGB,COLOR_TASK_ICON_UNASSIGNED_A
@@ -243,9 +243,9 @@
 #define COLOR_TASK_TEXT_CUSTOM_RGBA		COLOR_TASK_TEXT_CUSTOM_RGB,COLOR_TASK_TEXT_CUSTOM_A
 
 
-///////////////////////////////////////////////////////////////////////////
+
 /// Task colors: generic
-///////////////////////////////////////////////////////////////////////////
+
 #define COLOR_TASK_UNASSIGNED_RGB			COLOR_TASK_BACKGROUND_UNASSIGNED_RGB
 #define COLOR_TASK_UNASSIGNED_RGBA			COLOR_TASK_UNASSIGNED_RGB,1
 
@@ -258,9 +258,9 @@
 //navigation elements
 #define IGUI_CURSOR_COLOR				{COLOR_TASK_TEXT_UNASSIGNED_RGBA}
 
-///////////////////////////////////////////////////////////////////////////
+
 /// Custom info / Sensors (duplicated in \A3\cfgSensors.hpp !!!)
-///////////////////////////////////////////////////////////////////////////
+
 
 #define COLOR_SENSORS_RADAR_RGB		0.0,1.0,1.0
 #define COLOR_SENSORS_RADAR_A		1.0

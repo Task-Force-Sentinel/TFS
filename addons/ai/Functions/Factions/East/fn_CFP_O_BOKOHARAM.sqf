@@ -1,10 +1,10 @@
-_InfantryType = "Infantry";
-_infaaList    = [];
-_infatList    = [];
-_sniperList   = [];
-_vehAAList    = [];
-_vehMrapList  = [];
-_vehLightList = ["CFP_O_BH_Humvee_M2_01","CFP_O_BH_Landrover_M2_01","CFP_O_BH_Landrover_SPG9_01","CFP_O_BH_Offroad_01","CFP_O_BH_Offroad_AT_01","CFP_O_BH_Offroad_MG_01","CFP_O_BH_Pickup_PK_01","CFP_O_BH_Ural_01"];
-_vehHeavyList = [];
+_infantrytype = "infantry";
+_infaalist = [];
+_infatlist = [];
+_sniperlist = [];
+_vehAAlist = [];
+_vehMraplist = [];
+_vehLightlist = ["CFP_O_BH_Humvee_M2_01", "CFP_O_BH_landrover_M2_01", "CFP_O_BH_landrover_SPG9_01", "CFP_O_BH_Offroad_01", "CFP_O_BH_Offroad_AT_01", "CFP_O_BH_Offroad_MG_01", "CFP_O_BH_pickup_PK_01", "CFP_O_BH_Ural_01"];
+_vehHeavylist = [];
 
-[_InfantryType, _infaaList, _infatList, _sniperList, _vehAAList, _vehMrapList, _vehLightList, _vehHeavyList]
+[_infantrytype, _infaalist, _infatlist, _sniperlist, _vehAAlist, _vehMraplist, _vehLightlist, _vehHeavylist]

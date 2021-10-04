@@ -2,31 +2,29 @@
 Function: TFS_fnc_DynamicSim
 
 Description:
-    Globally enables or disables dynamic simulation and sets proper parameters.
+Globally enables or disables dynamic simulation and sets proper parameters.
 
 Arguments:
-    None
+None
 
 Return Value:
-    None
+None
 
 Example:
-    Nothing to see here
+nothing to see here
 
 Author:
-	MitchJC
+MitchJC
 */
 
-if (!IsServer) exitwith {};
+if (!isServer) exitwith {};
 
 if !(dynamicSimulationSystemEnabled) exitwith {
-
-	enableDynamicSimulationSystem true;
-
-	"Group" setDynamicSimulationDistance 3000;
-	"Vehicle" setDynamicSimulationDistance 3000;
-	"EmptyVehicle" setDynamicSimulationDistance 250;
-	"Prop" setDynamicSimulationDistance 50;
-	"IsMoving" setDynamicSimulationDistanceCoef 3;
-
+    enableDynamicSimulationSystem true;
+    
+    "group" setDynamicSimulationDistance 3000;
+    "vehicle" setDynamicSimulationDistance 3000;
+    "Emptyvehicle" setDynamicSimulationDistance 250;
+    "Prop" setDynamicSimulationDistance 50;
+    "IsMoving" setDynamicSimulationDistanceCoef 3;
 };

@@ -1,7 +1,7 @@
 PREP(testBriefings);
 PREP(createCreditsPage);
 PREP(generateBriefing);
-PREP(generateLoadoutPage);
+PREP(generateloadoutPage);
 PREP(unitPage);
 PREP(vehiclePage);
 PREP(Diary);

@@ -1,10 +1,10 @@
-_InfantryType = "Infantry";
-_infaaList    = [];
-_infatList    = ["LOP_UVF_ATTeam"];
-_sniperList   = [];
-_vehAAList    = [];
-_vehMrapList  = [];
-_vehLightList = ["LOP_UVF_Landrover","LOP_UVF_Landrover_SPG9","LOP_UVF_Nissan_PKM","LOP_UVF_Landrover_M2","LOP_UVF_Offroad","LOP_UVF_Offroad_M2","LOP_UVF_Truck"];
-_vehHeavyList = [];
+_infantrytype = "infantry";
+_infaalist = [];
+_infatlist = ["LOP_UVF_ATTeam"];
+_sniperlist = [];
+_vehAAlist = [];
+_vehMraplist = [];
+_vehLightlist = ["LOP_UVF_landrover", "LOP_UVF_landrover_SPG9", "LOP_UVF_Nissan_PKM", "LOP_UVF_landrover_M2", "LOP_UVF_Offroad", "LOP_UVF_Offroad_M2", "LOP_UVF_Truck"];
+_vehHeavylist = [];
 
-[_InfantryType, _infaaList, _infatList, _sniperList, _vehAAList, _vehMrapList, _vehLightList, _vehHeavyList]
+[_infantrytype, _infaalist, _infatlist, _sniperlist, _vehAAlist, _vehMraplist, _vehLightlist, _vehHeavylist]

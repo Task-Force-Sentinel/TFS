@@ -1,18 +1,21 @@
 /*
-	TFS MISSION TEMPLATE
-	RespawnOnStartPosition.sqf
-	Author: MitchJC
-	Description: Scripts executed when a player respawns.
+TFS MISSION TEMPLATE
+RespawnOnStartposition.sqf
+Author: MitchJC
+Description: Scripts executed when a player respawns.
 */
-	player disableConversation true;
-	[player ,"NoVoice"] remoteExec ["setSpeaker",0,true];
-	
-	call TFS_fnc_PlayerAddActions;
-	
-	{_x addCuratorEditableObjects [[player],FALSE];} count allCurators;
+player disableConversation true;
+[player, "NoVoice"] remoteExec ["setspeaker", 0, true];
 
+call TFS_fnc_playeraddActions;
 
-if (isNil { player getVariable "StartingPos"; } ) then {
+{
+    _x addcuratorEditableObjects [[player], false];
+} count allCurators;
+
+if (isnil {
+    player getVariable "StartingPos";
+} ) then {
     player setVariable ["StartingPos", getPosATL player];
     player setVariable ["StartingDir", getDir player];
 } else {
@@ -21,6 +24,5 @@ if (isNil { player getVariable "StartingPos"; } ) then {
 };
 
 if (TFS_Main_Earplugs) then {
-
-	[] execVM "z\tfs\addons\Main\Scripts\Earplugs\earplugs.sqf";
+    [] execVM "z\tfs\addons\Main\Scripts\Earplugs\earplugs.sqf";
 };

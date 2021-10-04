@@ -1,65 +1,71 @@
-//adds ace actions to radio
+// adds ace actions to radio
 params ["_object", "_radio"];
 
-private _parentAction = [
-	"RadioParentAction",
-	"Stationary Radio",
-	"",
-	{ diag_log "hi" },
-	{ true },
-	nil,
-	[]
-] call ACE_interact_menu_fnc_createAction;
+private _parentaction = [
+    "radioParentaction",
+    "Stationary radio",
+    "",
+    {
+        diag_log "hi"
+    },
+    {
+        true
+    },
+    nil,
+    []
+] call ACE_interact_menu_fnc_createaction;
 
-private _configAction = [
-	"RadioConfigAction",
-	"Configure Radio",
-	"",
-	{
-		params ["_target", "_player", "_params"];
-		_params params ["_object", "_radio"];
-		[_object, _player, _radio] call TFS_fnc_configureRadio;
-	},
-	{ true },
-	nil,
-	[_object,_radio]
-] call ACE_interact_menu_fnc_createAction;
+private _configaction = [
+    "radioConfigaction",
+    "Configure radio",
+    "",
+    {
+        params ["_target", "_player", "_params"];
+        _params params ["_object", "_radio"];
+        [_object, _player, _radio] call TFS_fnc_configureradio;
+    },
+    {
+        true
+    },
+    nil,
+    [_object, _radio]
+] call ACE_interact_menu_fnc_createaction;
 
-private _turnOnAction = [
-	"RadioTurnOnAction",
-	"Turn On Radio",
-	"",
-	{
-		params ["_target", "_player", "_params"];
-		_params params ["_object", "_radio"];
-		[_object, _radio, true] call TFS_fnc_turnOnRadio;
-	},
-	{
-		params ["_target", "_player", "_params"];
-		!((_params select 1) call TFAR_fnc_getLrSpeakers);
-	},
-	nil,
-	[_object, _radio]
-] call ACE_interact_menu_fnc_createAction;
+private _turnOnaction = [
+    "radioTurnOnaction",
+    "Turn On radio",
+    "",
+    {
+        params ["_target", "_player", "_params"];
+        _params params ["_object", "_radio"];
+        [_object, _radio, true] call TFS_fnc_turnOnradio;
+    },
+    {
+        params ["_target", "_player", "_params"];
+        !((_params select 1) call TFAR_fnc_getLrspeakers);
+    },
+    nil,
+    [_object, _radio]
+] call ACE_interact_menu_fnc_createaction;
 
-private _turnOffAction = [
-	"RadioTurnOffAction",
-	"Turn Off Radio",
-	"",
-	{
-		params ["_target", "_player", "_params"];
-		_params params ["_object", "_radio"];
-		[_object, _radio, false] call TFS_fnc_turnOnRadio;
-	},
-	{
-		params ["_target", "_player", "_params"];
-		(_params select 1) call TFAR_fnc_getLrSpeakers;
-	},
-	nil,
-	[_object, _radio]
-] call ACE_interact_menu_fnc_createAction;
+private _turnOffaction = [
+    "radioTurnOffaction",
+    "Turn Off radio",
+    "",
+    {
+        params ["_target", "_player", "_params"];
+        _params params ["_object", "_radio"];
+        [_object, _radio, false] call TFS_fnc_turnOnradio;
+    },
+    {
+        params ["_target", "_player", "_params"];
+        (_params select 1) call TFAR_fnc_getLrspeakers;
+    },
+    nil,
+    [_object, _radio]
+] call ACE_interact_menu_fnc_createaction;
 
-[_object, 0, ["ACE_MainActions"], _parentAction] call ACE_interact_menu_fnc_addActionToObject;
-[_object, 0, ["ACE_MainActions", "RadioParentAction"], _configAction] call ACE_interact_menu_fnc_addActionToObject;
-[_object, 0, ["ACE_MainActions", "RadioParentAction"], _turnOnAction] call ACE_interact_menu_fnc_addActionToObject;
-[_object, 0, ["ACE_MainActions", "RadioParentAction"], _turnOffAction] call ACE_interact_menu_fnc_addActionToObject;
+[_object, 0, ["ACE_Mainactions"], _parentaction] call ACE_interact_menu_fnc_addActiontoObject;
+[_object, 0, ["ACE_Mainactions", "radioParentaction"], _configaction] call ACE_interact_menu_fnc_addActiontoObject;
+[_object, 0, ["ACE_Mainactions", "radioParentaction"], _turnOnaction] call ACE_interact_menu_fnc_addActiontoObject;
+[_object, 0, ["ACE_Mainactions", "radioParentaction"], _turnOffaction] call ACE_interact_menu_fnc_addActiontoObject;

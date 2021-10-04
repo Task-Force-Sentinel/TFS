@@ -1,62 +1,66 @@
 /*
-Function: TFS_fnc_AddCreatorAction
+Function: TFS_fnc_AddCreatoraction
 
 Description:
-	Adds an action for the mission creator that allows executing code/functions
-	during the live mission.
+Adds an action for the mission creator that allows executing code/functions
+during the live mission.
 
 Arguments:
-	_actionName - Action name <STRING>
-	_displayName - Name of the action shown in the menu <STRING>
-	_icon - Icon file path or Array of icon file path and hex color ("" for default icon) <STRING|ARRAY>
-	_statement - Statement <CODE>
-	_condition - Condition <CODE>
-	_actionPath - Path for the action, subpath of CreatorActions <ARRAY> (Optional)
-	_insertChildren - Insert children code <CODE> (Optional)
-	_customParams - Action parameters <ANY> (Optional)
-	_params - Other parameters [showDisabled,enableInside,canCollapse,runOnHover,doNotCheckLOS] <ARRAY> (Optional)
-	_modifierFunction -: Modifier function <CODE> (Optional)
+_actionname - action name <strinG>
+_displayname - name of the action shown in the menu <strinG>
+_icon - Icon file path or Array of icon file path and hex color ("" for default icon) <strinG|ARRAY>
+_statement - Statement <CODE>
+_condition - Condition <CODE>
+_actionPath - Path for the action, subpath of Creatoractions <ARRAY> (Optional)
+_insertChildren - insert children code <CODE> (Optional)
+_customparams - action parameters <ANY> (Optional)
+_params - Other parameters [showDisabled, enableinside, canCollapse, runOnHover, donotCheckLOS] <ARRAY> (Optional)
+_modifierFunction -: modifier function <CODE> (Optional)
 
 Return Values:
-	None
+None
 
 Examples:
-    (begin example)
+(begin example)
 [
-	"MissionStart",
-	"Start Mission",
-	"",
-	{hint "Mission started!";},
-	{true},
-	["ExampleActions"]
-] call TFS_fnc_AddCreatorAction;
-	(end)
+    "missionStart",
+    "Start Mission",
+    "",
+    {
+        hint "Mission started!";
+    },
+    {
+        true
+    },
+    ["Exampleactions"]
+] call TFS_fnc_AddCreatoraction;
+(end)
 
 Author:
-	Mokka
+Mokka
 */
 
-if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitWith {};
-if (!TFS_CreatorActions_Master) exitWith {};
+if !(isClass (configFile >> "CfgPatches" >> "ace_main")) exitwith {};
+if (!TFS_Creatoractions_Master) exitwith {};
 
 params [
-    "_actionName",
-    "_displayName",
+    "_actionname",
+    "_displayname",
     "_icon",
     "_statement",
     "_condition",
-	["_actionPath", []],
+    ["_actionPath", []],
     ["_insertChildren", {}],
-    ["_customParams", []],
+    ["_customparams", []],
     ["_params", [false, false, false, false, false]],
     ["_modifierFunction", {}]
 ];
 
 _action = [
-	_actionName, _displayName, _icon, _statement, _condition, _insertChildren,
-	_customParams, nil, nil, _params, _modifierFunction
-] call ACE_interact_menu_fnc_createAction;
+    _actionname, _displayname, _icon, _statement, _condition, _insertChildren,
+    _customparams, nil, nil, _params, _modifierFunction
+] call ACE_interact_menu_fnc_createaction;
 
 [
-	"TFS_RegisterCreatorAction", [_action, _actionPath, _actionName], format["TFS_CAJIP_%1", _actionName]
+    "TFS_RegisterCreatoraction", [_action, _actionPath, _actionname], format["TFS_CAJIP_%1", _actionname]
 ] call CBA_fnc_globalEventJIP;

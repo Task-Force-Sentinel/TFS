@@ -2,71 +2,66 @@
 
 #include "XEH_PREP.sqf"
 
-
 // Reporting AI
 [
     "TFS_AI_Reporting",
     "CHECKBOX",
-    ["Spawn Reporting", "Receive a systemchat message for any groups or vehicles that fail to spawn."],
+    ["spawn Reporting", "Receive a systemChat message for any groups or vehicles that fail to spawn."],
     "TFS AI",
     false,
     true,
-    {
+    {}
+] call CBA_settings_fnc_init;
 
-    }
-] call CBA_Settings_fnc_init;
-
-// Initial AI
+// initial AI
 [
-    "TFS_AI_InitialAI",
+    "TFS_AI_initialAI",
     "CHECKBOX",
-    ["Include Initial AI", "This will automatically apply to AI Spawns and Zeus placed AI. If enabled it will also apply to any Editor placed AI at mission start."],
+    ["include initial AI", "This will automatically apply to AI spawns and Zeus placed AI. if enabled it will also apply to any Editor placed AI at mission start."],
     "TFS AI",
     true,
     true,
     {
-        if (_this && { isserver }) then  { call TFS_fnc_SetInitialAI};
+        if (_this && {
+            isServer
+        }) then {
+            call TFS_fnc_setinitialAI
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
 // AI Aiming Accuracy
 [
     "TFS_AI_AimingAccuracy",
     "SLIDER",
-    ["Min Aiming Accuracy", "Higher value means the AI will be more likely to hit the target."],
+    ["min Aiming Accuracy", "Higher value means the AI will be more likely to hit the target."],
     "TFS AI",
     [0, 1, 0.10, 2],
     true,
-    {
-
-    }
-] call CBA_Settings_fnc_init;
+    {}
+] call CBA_settings_fnc_init;
 
 // AI Aiming Shake
 [
     "TFS_AI_AimingShake",
     "SLIDER",
-    ["Min Aiming Shake", "Higher value means the AI will be more precise."],
+    ["min Aiming Shake", "Higher value means the AI will be more precise."],
     "TFS AI",
     [0, 1, 0.45, 2],
     true,
-    {
+    {}
+] call CBA_settings_fnc_init;
 
-    }
-] call CBA_Settings_fnc_init;
-
-// AI Aiming Speed
+// AI Aiming speed
 [
-    "TFS_AI_AimingSpeed",
+    "TFS_AI_Aimingspeed",
     "SLIDER",
-    ["Min Aiming Speed", "Higher value means the AI can rotate and stabilize its aim faster."],
+    ["min Aiming speed", "Higher value means the AI can rotate and stabilize its aim faster."],
     "TFS AI",
     [0, 1, 0.30, 2],
     true,
-    {
-
-    }
-] call CBA_Settings_fnc_init;
+    {}
+] call CBA_settings_fnc_init;
 
 // AI Commanding
 [
@@ -76,10 +71,8 @@
     "TFS AI",
     [0, 1, 1.00, 2],
     true,
-    {
-
-    }
-] call CBA_Settings_fnc_init;
+    {}
+] call CBA_settings_fnc_init;
 
 // AI Courage
 [
@@ -89,10 +82,8 @@
     "TFS AI",
     [0, 1, 1.00, 2],
     true,
-    {
-
-    }
-] call CBA_Settings_fnc_init;
+    {}
+] call CBA_settings_fnc_init;
 
 // AI General
 [
@@ -102,46 +93,38 @@
     "TFS AI",
     [0, 1, 1.00, 2],
     true,
-    {
+    {}
+] call CBA_settings_fnc_init;
 
-    }
-] call CBA_Settings_fnc_init;
-
-// AI Min Reload Speed
+// AI min reload speed
 [
-    "TFS_AI_ReloadSpeed",
+    "TFS_AI_reloadspeed",
     "SLIDER",
-    ["Min Reload Speed", "Higher value means the AI can switch or reload weapons faster."],
+    ["min reload speed", "Higher value means the AI can switch or reload weapons faster."],
     "TFS AI",
     [0, 1, 0.50, 2],
     true,
-    {
+    {}
+] call CBA_settings_fnc_init;
 
-    }
-] call CBA_Settings_fnc_init;
-
-// AI Min Spot Distance
+// AI min Spot distance
 [
-    "TFS_AI_SpotDistance",
+    "TFS_AI_Spotdistance",
     "SLIDER",
-    ["Min Spot Distance", "Higher value means the AI is better at spotting targets."],
+    ["min Spot distance", "Higher value means the AI is better at spotting targets."],
     "TFS AI",
     [0, 1, 0.40, 2],
     true,
-    {
+    {}
+] call CBA_settings_fnc_init;
 
-    }
-] call CBA_Settings_fnc_init;
-
-// AI Min Spot Time
+// AI min Spot time
 [
-    "TFS_AI_SpotTime",
+    "TFS_AI_Spottime",
     "SLIDER",
-    ["Min Spot Time", "Higher value means the AI will react faster to death, damage or enemies."],
+    ["min Spot time", "Higher value means the AI will react faster to death, damage or enemies."],
     "TFS AI",
     [0, 1, 0.20, 2],
     true,
-    {
-
-    }
-] call CBA_Settings_fnc_init;
+    {}
+] call CBA_settings_fnc_init;

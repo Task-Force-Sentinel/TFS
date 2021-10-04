@@ -19,16 +19,16 @@ class cfgPatches
 #include "CfgWaypoints.hpp"
 #include "CfgModules.hpp"
 
+class CfgFunctions
+{
 
-class CfgFunctions {
-
-    #include "CfgFunctions.hpp"
+#include "CfgFunctions.hpp"
 };
 
 class Extended_PreInit_EventHandlers
 {
-	class TFS_AI_Event
-	{
-		init = "call compile preProcessFileLineNumbers 'z\tfs\addons\ai\XEH_preInit.sqf'";
-	};
+    class TFS_AI_Event
+    {
+        init = "call compile preProcessFileLineNumbers 'z\tfs\addons\ai\XEH_preInit.sqf'";
+    };
 };

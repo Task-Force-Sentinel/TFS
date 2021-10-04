@@ -1,49 +1,49 @@
 #include "script_component.hpp"
 /*
- * Author: 3Mydlo3
- * Function creates task from given task namespace.
- *
- * Arguments:
- * 0: Task namespace <CBA_NAMESPACE>
- *
- * Return Value:
- * None
- *
- * Example:
- * None
- *
- * Public: No
- */
+* Author: 3Mydlo3
+* Function creates task from given task namespace.
+*
+* Arguments:
+* 0: Task namespace <CBA_nameSPACE>
+*
+* Return Value:
+* None
+*
+* Example:
+* None
+*
+* Public: No
+*/
 
-params ["_taskConfigName", "_taskNamespace"];
+params ["_taskconfigname", "_tasknamespace"];
 
-INFO_1("Creating '%1'",_taskConfigName);
+inFO_1("Creating '%1'", _taskconfigname);
 
-private _title = _taskNamespace getVariable ["title", ""];
-private _description = _taskNamespace getVariable ["description", ""];
-private _marker = _taskNamespace getVariable ["marker", ""];
-private _object = _taskNamespace getVariable ["object", ""];
-private _position = _taskNamespace getVariable ["position", []];
+private _title = _tasknamespace getVariable ["title", ""];
+private _description = _tasknamespace getVariable ["description", ""];
+private _marker = _tasknamespace getVariable ["marker", ""];
+private _object = _tasknamespace getVariable ["object", ""];
+private _position = _tasknamespace getVariable ["position", []];
 private _destination = [_position, _object, _marker] call FUNC(readDestination);
-private _icon = _taskNamespace getVariable ["icon", ""];
-private _parentTask = _taskNamespace getVariable ["parentTask", ""];
-private _owners = _taskNamespace getVariable ["owners", ["true"]];
-private _ownersProcessed = [_owners] call FUNC(readOwners);
-private _initialState = _taskNamespace getVariable ["initialState", "CREATED"];
-private _priority = _taskNamespace getVariable ["priority", -1];
-private _createdShowNotification = _taskNamespace getVariable ["createdShowNotification", ""] == "true";
+private _icon = _tasknamespace getVariable ["icon", ""];
+private _parentTask = _tasknamespace getVariable ["parentTask", ""];
+private _owners = _tasknamespace getVariable ["owners", ["true"]];
+private _ownersProcessed = [_owners] call FUNC(readowners);
+private _initialState = _tasknamespace getVariable ["initialState", "CREATED"];
+private _priority = _tasknamespace getVariable ["priority", -1];
+private _createdShownotification = _tasknamespace getVariable ["createdShownotification", ""] == "true";
 
-TRACE_5("Creating",_taskConfigName,_parentTask,_owners,_ownersProcessed,_initialState);
+TRACE_5("Creating", _taskconfigname, _parentTask, _owners, _ownersProcessed, _initialState);
 
-private _taskID = if (_parentTask isEqualTo "") then {
-    _taskConfigName
+private _taskID = if (_parentTask isEqualto "") then {
+    _taskconfigname
 } else {
-    [_taskConfigName, _parentTask];
+    [_taskconfigname, _parentTask];
 };
 
 // Array used for BIS_fnc_taskCreate
-private _taskCreateArray = [_ownersProcessed, _taskID, [_description, _title, _marker], _destination, _initialState, _priority, _createdShowNotification, _icon];
-_taskNamespace setVariable ["taskCreateArray", _taskCreateArray];
+private _taskCreateArray = [_ownersProcessed, _taskID, [_description, _title, _marker], _destination, _initialState, _priority, _createdShownotification, _icon];
+_tasknamespace setVariable ["taskCreateArray", _taskCreateArray];
 
 // Handle task showing (and creation)
-[_taskNamespace] call FUNC(handleShow);
+[_tasknamespace] call FUNC(handleShow);

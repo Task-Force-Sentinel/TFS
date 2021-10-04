@@ -4,41 +4,41 @@
 disableSerialization;
 params ["_display"];
 
-if (!isNil QGVAR(EndMissionText)) then {
+if (!isnil QGVAR(endMissiontext)) then {
     [{
         disableSerialization;
         params ["_display"];
-        GVAR(EndMissionText) params [["_titleText",""],["_subtitleText",""]];
-        private _titleCtrl = _display displayctrl 20600;
-        private _subtitleCtrl = _display displayctrl 20601;
+        GVAR(endMissiontext) params [["_titleText", ""], ["_subtitleText", ""]];
+        private _titleCtrl = _display displayCtrl 20600;
+        private _subtitleCtrl = _display displayCtrl 20601;
         _titleCtrl ctrlsettext toUpper _titleText;
-
+        
         if (_subtitleText != "") then {
-            if (ctrlText _subtitleCtrl == "") then {
-                // If Hidden we need to emulate the effect.
-                private _subtitlePosFinal = ctrlPosition _subtitleCtrl;
+            if (ctrltext _subtitleCtrl == "") then {
+                // if Hidden we need to emulate the effect.
+                private _subtitlePosFinal = ctrlposition _subtitleCtrl;
                 private _subtitlePosStart = +_subtitlePosFinal;
-                _subtitlePosStart set [0,(_subtitlePosStart select 0) + (_subtitlePosStart select 2) / 2];
-                _subtitlePosStart set [2,0];
-                _subtitleCtrl ctrlsetposition _subtitlePosStart;
-                _subtitleCtrl ctrlSetFade 0;
-                _subtitleCtrl ctrlcommit 0;
-                _subtitleCtrl ctrlshow false;
-                [_subtitleCtrl,_subtitlePosFinal] spawn {
+                _subtitlePosStart set [0, (_subtitlePosStart select 0) + (_subtitlePosStart select 2) / 2];
+                _subtitlePosStart set [2, 0];
+                _subtitleCtrl ctrlsetPosition _subtitlePosStart;
+                _subtitleCtrl ctrlsetFade 0;
+                _subtitleCtrl ctrlCommit 0;
+                _subtitleCtrl ctrlShow false;
+                [_subtitleCtrl, _subtitlePosFinal] spawn {
                     disableSerialization;
-                    params ["_subtitleCtrl","_subtitlePosFinal"];
+                    params ["_subtitleCtrl", "_subtitlePosFinal"];
                     sleep 2;
-                    _subtitleCtrl ctrlshow true;
-                    _subtitleCtrl ctrlsetposition _subtitlePosFinal;
-                    _subtitleCtrl ctrlcommit 0.4;
+                    _subtitleCtrl ctrlShow true;
+                    _subtitleCtrl ctrlsetPosition _subtitlePosFinal;
+                    _subtitleCtrl ctrlCommit 0.4;
                 };
             };
             // Update the text.
-            _subtitleCtrl ctrlSetText toUpper _subtitleText;
+            _subtitleCtrl ctrlsettext toUpper _subtitleText;
         } else {
-            _subtitleCtrl ctrlSetFade 1;
+            _subtitleCtrl ctrlsetFade 1;
             _subtitleCtrl ctrlCommit 0;
-            _subtitleCtrl ctrlshow false;
+            _subtitleCtrl ctrlShow false;
         };
     }, [_display]] call CBA_fnc_execNextFrame;
 };

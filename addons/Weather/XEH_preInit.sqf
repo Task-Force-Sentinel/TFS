@@ -7,102 +7,104 @@
     false,
     true,
     {
-        if (_this) then { call TFS_fnc_RealWeather};
+        if (_this) then {
+            call TFS_fnc_RealWeather
+        };
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
 // TFS_Weather_StartWeather
 [
     "TFS_Weather_StartWeather",
-    "LIST",
-    ["Dynamic Weather - Start", "If Dynamic Weather enabled, what should the starting weather be?"],
+    "list",
+    ["Dynamic Weather - Start", "if Dynamic Weather enabled, what should the starting weather be?"],
     "TFS Weather",
     [[0, 1, 2, 3], [
-        ["Random", "Start with the Weather on a random setting."],
+        ["random", "Start with the Weather on a random setting."],
         ["Clear", "Start with the Weather Clear."],
         ["Cloudy", "Start with the Weather Cloudy."],
-        ["Rain", "Start with the Weather Raining"]
+        ["rain", "Start with the Weather raining"]
     ], 1],
     true,
     {
-       uiNamespace setVariable ["TFS_Weather_StartWeather", _this];
+        uiNamespace setVariable ["TFS_Weather_StartWeather", _this];
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// TFS_Weather_RealTime
+// TFS_Weather_Realtime
 [
-    "TFS_Weather_RealTime",
+    "TFS_Weather_Realtime",
     "CHECKBOX",
-    ["Real Time", "Real time is more realistic weather changes, disable for more rapid changes."],
+    ["Real time", "Real time is more realistic weather changes, disable for more rapid changes."],
     "TFS Weather",
     true,
     true,
     {
-       uiNamespace setVariable ["TFS_Weather_RealTime", _this];
+        uiNamespace setVariable ["TFS_Weather_Realtime", _this];
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// TFS_Weather_SyncTime
+// TFS_Weather_Synctime
 [
-    "TFS_Weather_SyncTime",
+    "TFS_Weather_Synctime",
     "SLIDER",
-    ["Sync Time", "How often the server broadcasts weather to clients in seconds. Lower = faster client updates at cost of higher network traffic."],
+    ["Sync time", "How often the server broadcasts weather to clients in seconds. Lower = faster client updates at cost of higher network traffic."],
     "TFS Weather",
     [1, 120, 60, 0],
     true,
     {
-       uiNamespace setVariable ["TFS_Weather_SyncTime", _this];
+        uiNamespace setVariable ["TFS_Weather_Synctime", _this];
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// TFS_Weather_MinTime
+// TFS_Weather_mintime
 [
-    "TFS_Weather_MinTime",
+    "TFS_Weather_mintime",
     "SLIDER",
-    ["Forcast Minimum Time", "Min time mins (real time) before a new weather forecast"],
+    ["forcast minimum time", "min time mins (real time) before a new weather forecast"],
     "TFS Weather",
     [1, 120, 1, 0],
     true,
     {
-       uiNamespace setVariable ["TFS_Weather_MinTime", _this];
+        uiNamespace setVariable ["TFS_Weather_mintime", _this];
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// TFS_Weather_MaxTime
+// TFS_Weather_maxtime
 [
-    "TFS_Weather_MaxTime",
+    "TFS_Weather_maxtime",
     "SLIDER",
-    ["Forcast Maximum Time", "Max time mins (real time) before a new weather forecast - Must be greater than Forcast Minimum Time"],
+    ["forcast maximum time", "max time mins (real time) before a new weather forecast - Must be greater than forcast minimum time"],
     "TFS Weather",
     [1, 240, 60, 0],
     true,
     {
-       uiNamespace setVariable ["TFS_Weather_MaxTime", _this];
+        uiNamespace setVariable ["TFS_Weather_maxtime", _this];
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// TFS_Weather_DayTimeAcc
+// TFS_Weather_daytimeAcc
 [
-    "TFS_Weather_DayTimeAcc",
+    "TFS_Weather_daytimeAcc",
     "SLIDER",
-    ["Day Time Acceleration", "Time Acceleration during daylight. 2.00 = 2 game seconds for every 1 real second."],
+    ["Day time Acceleration", "time Acceleration during daylight. 2.00 = 2 game seconds for every 1 real second."],
     "TFS Weather",
     [0, 60, 1, 2],
     true,
     {
-       uiNamespace setVariable ["TFS_Weather_DayTimeAcc", _this];
+        uiNamespace setVariable ["TFS_Weather_daytimeAcc", _this];
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;
 
-// TFS_Weather_NightTimeAcc
+// TFS_Weather_NighttimeAcc
 [
-    "TFS_Weather_NightTimeAcc",
+    "TFS_Weather_NighttimeAcc",
     "SLIDER",
-    ["Night Time Acceleration", "Time Acceleration during night. 2.00 = 2 game seconds for every 1 real second."],
+    ["Night time Acceleration", "time Acceleration during night. 2.00 = 2 game seconds for every 1 real second."],
     "TFS Weather",
     [0, 60, 1, 2],
     true,
     {
-       uiNamespace setVariable ["TFS_Weather_NightTimeAcc", _this];
+        uiNamespace setVariable ["TFS_Weather_NighttimeAcc", _this];
     }
-] call CBA_Settings_fnc_init;
+] call CBA_settings_fnc_init;

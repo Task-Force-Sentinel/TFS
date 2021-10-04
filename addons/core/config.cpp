@@ -1,25 +1,23 @@
 #include "script_component.hpp"
 
+class CfgPatches
+{
 
-class CfgPatches {
-	
-	class TFS_core {
+	class TFS_core
+	{
 		author = AUTHOR;
 		name = COMPONENT_NAME;
 		url = URL;
 		requiredVersion = REQUIRED_VERSION;
 		requiredAddons[] = {
 			"tfs_main",
-			"tfs_hints"
-		};
+			"tfs_hints"};
 		units[] = {};
 		weapons[] = {};
 		authors[] = {
-			"O. Jemineh"
-		};
+			"O. Jemineh"};
 		VERSION_CONFIG;
 	};
-	
 };
 
 #include "CfgEventHandlers.hpp"

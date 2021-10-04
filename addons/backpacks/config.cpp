@@ -1,7 +1,9 @@
 #include "script_component.hpp"
 
-class CfgPatches {
-    class ADDON {
+class CfgPatches
+{
+    class ADDON
+    {
         name = COMPONENT_NAME;
         units[] = {
             QCLASS(Backpack_AssaultExpanded_Black),
@@ -27,9 +29,9 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {};
-        author = ECSTRING(main,Author);
+        author = ECSTRING(main, Author);
         authors[] = {"Pomigit", "BadHabitz", "Jonpas", "Rory", "Kresky"};
-        url = ECSTRING(main,URL);
+        url = ECSTRING(main, URL);
         VERSION_CONFIG;
     };
 };

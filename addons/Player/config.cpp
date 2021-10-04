@@ -5,11 +5,11 @@ class CfgPatches
 	class TFS_Player
 	{
 		author = AUTHOR;
-        name = COMPONENT_NAME;
+		name = COMPONENT_NAME;
 		url = URL;
 		units[] = {};
 		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {"A3_UI_F","cba_main","cba_xeh"};
+		requiredAddons[] = {"A3_UI_F", "cba_main", "cba_xeh"};
 		version = VERSION;
 		authors[] = {"MitchJC"};
 		weapons[] = {};
@@ -18,7 +18,7 @@ class CfgPatches
 
 #include "Cfg3DEN.hpp"
 
-class CfgFunctions {
-    #include "cfgFunctions.hpp"
+class CfgFunctions
+{
+#include "cfgFunctions.hpp"
 };
-

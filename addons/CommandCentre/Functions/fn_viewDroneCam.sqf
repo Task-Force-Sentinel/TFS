@@ -1,13 +1,18 @@
-params ["_seat"]; //0 - pilot, 1 - gunner
+params ["_seat"];
+// 0 - pilot, 1 - gunner
 
 private _object = TFS_CC_currentScreenObject;
-private _selection = TFS_CC_currentScreenSelection;
+private _selection = TFS_CC_currentScreenselection;
 
-if ((_object isEqualTo objNull)) exitWith {systemChat "Couldn't init Drone Cam: object."};
-if ((_selection < 0)) exitWith {systemChat "Couldn't init Drone Cam: selection."};
+if ((_object isEqualto objNull)) exitwith {
+    systemChat "Couldn't init Drone Cam: object."
+};
+if ((_selection < 0)) exitwith {
+    systemChat "Couldn't init Drone Cam: selection."
+};
 
 private _idx = lbCurSel 2101;
-private _name = lbText [2101, _idx];
+private _name = lbtext [2101, _idx];
 private _data = lbData [2101, _idx];
 
 // set the mode
@@ -23,8 +28,8 @@ private _screen_JIP_ID = format ["TFS_CC_screen%1_JIP", _object getVariable [for
 [_object, _selection, _rendertarget, _data, _seat] remoteExec ["TFS_fnc_viewDCamGlobal", 0, _screen_JIP_ID];
 
 TFS_CC_currentScreenObject = nil;
-TFS_CC_currentScreenSelection = nil;
+TFS_CC_currentScreenselection = nil;
 
 _object setVariable [format ["TFS_CC_screen_%1_on", _selection], true, true];
 
-closeDialog 1;
+closedialog 1;

@@ -1,10 +1,10 @@
-_InfantryType = "Infantry";
-_infaaList    = [];
-_infatList    = [];
-_sniperList   = [];
-_vehAAList    = [];
-_vehMrapList  = [];
-_vehLightList = ["CFP_O_ALQAEDA_Offroad_M2_01","CFP_O_ALQAEDA_Offroad_01","CFP_O_ALQAEDA_Datsun_Pickup_PK_01","CFP_O_ALQAEDA_Datsun_Pickup_01"];
-_vehHeavyList = [];
+_infantrytype = "infantry";
+_infaalist = [];
+_infatlist = [];
+_sniperlist = [];
+_vehAAlist = [];
+_vehMraplist = [];
+_vehLightlist = ["CFP_O_ALQAEDA_Offroad_M2_01", "CFP_O_ALQAEDA_Offroad_01", "CFP_O_ALQAEDA_Datsun_pickup_PK_01", "CFP_O_ALQAEDA_Datsun_pickup_01"];
+_vehHeavylist = [];
 
-[_InfantryType, _infaaList, _infatList, _sniperList, _vehAAList, _vehMrapList, _vehLightList, _vehHeavyList]
+[_infantrytype, _infaalist, _infatlist, _sniperlist, _vehAAlist, _vehMraplist, _vehLightlist, _vehHeavylist]

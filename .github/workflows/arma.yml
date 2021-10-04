@@ -44,5 +44,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2-preview
       with:
-        name: tfs-${{ github.sha }}-nobin
+        name: TFS-${{ github.sha }}-nobin
         path: releases/tfs_*.zip

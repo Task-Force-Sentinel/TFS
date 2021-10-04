@@ -6,27 +6,27 @@ params ["_display"];
 [_display] call FUNC(endMission_occluder);
 
 // Populate mission ending list
-private _endingList = (_display displayCtrl IDC_TFS_ADMINMENU_ENDM_LIST);
-if ((lbSize _endingList) == 0) then {
+private _endinglist = (_display displayCtrl IDC_TFS_adminMENU_ENDM_list);
+if ((lbsize _endinglist) == 0) then {
     {
-        private _title = getText (_x >> "title");
-
-        private _extra = getText (_x >> "description");
-        if !(_extra isEqualTo "") then {
+        private _title = gettext (_x >> "title");
+        
+        private _extra = gettext (_x >> "description");
+        if !(_extra isEqualto "") then {
             _title = _title + " | " + _extra;
         };
-
-        _extra = getText (_x >> "subtitle");
-        if !(_extra isEqualTo "") then {
+        
+        _extra = gettext (_x >> "subtitle");
+        if !(_extra isEqualto "") then {
             _title = _title + " | " + _extra;
         };
-
-        _endingList lbAdd _title;
-        _endingList lbSetData [_forEachIndex, configName _x];
+        
+        _endinglist lbAdd _title;
+        _endinglist lbsetData [_forEachindex, configname _x];
     } forEach ("true" configClasses (missionConfigFile >> "CfgDebriefing"));
-
-    _endingList lbSetData [(_endingList lbAdd "Generic Success"), QGVAR(victory)];
-    _endingList lbSetData [(_endingList lbAdd "Generic Fail"), QGVAR(defeat)];
-    _endingList lbSetData [(_endingList lbAdd "Generic Draw"), QGVAR(draw)];
-    _endingList lbSetData [(_endingList lbAdd "Generic Technical Issues"), QGVAR(technical_issues)];
+    
+    _endinglist lbsetData [(_endinglist lbAdd "Generic Success"), QGVAR(victory)];
+    _endinglist lbsetData [(_endinglist lbAdd "Generic Fail"), QGVAR(defeat)];
+    _endinglist lbsetData [(_endinglist lbAdd "Generic Draw"), QGVAR(draw)];
+    _endinglist lbsetData [(_endinglist lbAdd "Generic Technical Issues"), QGVAR(technical_issues)];
 };

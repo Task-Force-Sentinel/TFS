@@ -1,62 +1,62 @@
 #include "script_component.hpp"
 /*
- * Author: Jonpas
- * Handles target pop-ups.
- *
- * Arguments:
- * 0: Per-Frame Handler ID <NUMBER>
- * 1: Controller <OBJECT>
- * 2: Controllers <ARRAY>
- * 3: Name <STRING>
- * 4: Targets <ARRAY>
- * 5: Invalid Targets <ARRAY>
- * 6: Mode (1 = Time, 2 = Hit (Time Limited), 3 = Hit (Target Limited), 4 = Trigger) <NUMBER>
- * 7: Success <BOOL>
- * 8: Current Score <NUMBER> (default: 0)
- * 9: Maximum Score <NUMBER> (default: 0)
- * 10: Time Elapsed <NUMBER> (default: 0)
- * 11: Triggers <ARRAY> (default: [])
- *
- * Return Value:
- * None
- *
- * Example:
- * [idPFH, controller, [controller1, controller2], "range", [target1, target2], [invalidTarget1, invalidTarget2], 1, true] call TFS_shootingrange_fnc_popupPFHexit;
- *
- * Public: No
- */
+* Author: Jonpas
+* Handles target pop-ups.
+*
+* Arguments:
+* 0: Per-Frame Handler ID <NUMBER>
+* 1: Controller <OBJECT>
+* 2: Controllers <ARRAY>
+* 3: name <strinG>
+* 4: targets <ARRAY>
+* 5: invalid targets <ARRAY>
+* 6: mode (1 = time, 2 = Hit (time Limited), 3 = Hit (Target Limited), 4 = Trigger) <NUMBER>
+* 7: Success <BOOL>
+* 8: Current score <NUMBER> (default: 0)
+* 9: maximum score <NUMBER> (default: 0)
+* 10: time Elapsed <NUMBER> (default: 0)
+* 11: Triggers <ARRAY> (default: [])
+*
+* Return Value:
+* None
+*
+* Example:
+* [idPFH, controller, [controller1, controller2], "range", [target1, target2], [invalidTarget1, invalidTarget2], 1, true] call TFS_shootingrange_fnc_popupPFHexit;
+*
+* Public: No
+*/
 
-params ["_idPFH", "_controller", "_controllers", "_name", "_targets", "_targetsInvalid", "_mode", "_success", ["_currentScore", 0], ["_maxScore", 0], ["_timeElapsed", 0], ["_triggers", []] ];
+params ["_idPFH", "_controller", "_controllers", "_name", "_targets", "_targetsinvalid", "_mode", "_success", ["_currentscore", 0], ["_maxscore", 0], ["_timeElapsed", 0], ["_triggers", []] ];
 
 // Remove PFH
 [_idPFH] call CBA_fnc_removePerFrameHandler;
 
-// Finish or Stop
-[_controller, _controllers, _name, _targets, _targetsInvalid, _success, _currentScore, _maxScore, _timeElapsed] call FUNC(stop);
+// Finish or stop
+[_controller, _controllers, _name, _targets, _targetsinvalid, _success, _currentscore, _maxscore, _timeElapsed] call FUNC(stop);
 
 // Cleanup variables
 GVAR(targetNumber) = nil;
-GVAR(currentScore) = nil;
-GVAR(maxScore) = nil;
-GVAR(firstRun) = nil;
+GVAR(currentscore) = nil;
+GVAR(maxscore) = nil;
+GVAR(firstrun) = nil;
 GVAR(nextTarget) = nil;
 GVAR(targetUp) = nil;
 
-// Remove Fired EH if needed
+// Remove fired EH if needed
 if (_mode > 1) then {
     if (_mode < 5) then {
-        ACE_player removeEventHandler ["Fired", GVAR(firedEHid)];
+        ACE_player removeEventHandler ["fired", GVAR(firedEHid)];
         GVAR(firedEHid) = nil;
     };
-
+    
     if (_mode == 4) then {
         {
             _x enableSimulation false;
         } forEach _triggers;
-
-        GVAR(targetGroup) = nil;
-        GVAR(targetGroupIndex) = nil;
+        
+        GVAR(targetgroup) = nil;
+        GVAR(targetgroupindex) = nil;
     };
 } else {
-    GVAR(lastPauseTime) = nil;
+    GVAR(lastPausetime) = nil;
 };

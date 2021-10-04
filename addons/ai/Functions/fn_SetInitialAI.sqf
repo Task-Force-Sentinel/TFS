@@ -1,26 +1,30 @@
-// not documented: postInit function
+// not documented: postinit function
 
-if (!isserver) exitwith {};
+if (!isServer) exitwith {};
 {
-	_class = typeOf (_x);
-
-	_result  = call {
-		if (_class isKindOf "Man") exitWith {
-			private _Group = call {
-				if ((typeName _x) isEqualTo "GROUP") exitWith { _x };
-				if ((typeName _x) isEqualTo "OBJECT") exitWith { group _x };
-				_x;
-			};
-
-			[_Group, "TFS Default"] remoteExec ["TFS_fnc_SetUnitSkill",2];
-			[_Group, true] remoteExec ["enableDynamicSimulation",2];
-		};
-
-		if (_class isKindOf "AllVehicles") exitWith {
-			{
-				[_x, "TFS Default"] remoteExec ["TFS_fnc_SetUnitSkill",2];
-			} forEach crew _x;
-			[group _x , true] remoteExec ["enableDynamicSimulation",2];
-		};
-	};
-} foreach Allunits;
+    _class = typeOf (_x);
+    
+    _result = call {
+        if (_class isKindOf "Man") exitwith {
+            private _group = call {
+                if ((typeName _x) isEqualto "group") exitwith {
+                    _x
+                };
+                if ((typeName _x) isEqualto "OBJECT") exitwith {
+                    group _x
+                };
+                _x;
+            };
+            
+            [_group, "TFS default"] remoteExec ["TFS_fnc_setunitskill", 2];
+            [_group, true] remoteExec ["enableDynamicSimulation", 2];
+        };
+        
+        if (_class isKindOf "Allvehicles") exitwith {
+            {
+                [_x, "TFS default"] remoteExec ["TFS_fnc_setunitskill", 2];
+            } forEach crew _x;
+            [group _x, true] remoteExec ["enableDynamicSimulation", 2];
+        };
+    };
+} forEach allunits;

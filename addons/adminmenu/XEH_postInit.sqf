@@ -9,71 +9,74 @@ GVAR(playerManagement_selected) = [];
 
 if (isTFS) then {
     [
-        {time > 5 && [] call FUNC(isAuthorized)},
         {
-            _this call FUNC(resyncLog);
-
+            time > 5 && [] call FUNC(isAuthorized)
+        },
+        {
+            _this call FUNC(resynclog);
+            
             GVAR(endedEH) = addMissionEventHandler ["Ended", {
-                params ["_endType"];
-
-                GVAR(logEntries) pushBack [CBA_missionTime, format ["Mission Ended, endtype: %1",_endType], false];
-
-                if GVAR(endLogToRPT) then {
-                    [] call FUNC(printLogToRPT);
+                params ["_endtype"];
+                
+                GVAR(logEntries) pushBack [CBA_missiontime, format ["Mission Ended, endtype: %1", _endtype], false];
+                
+                if GVAR(endlogtorPT) then {
+                    [] call FUNC(printlogtorPT);
                 };
-
+                
                 // Print to debriefing
                 private _strArr = GVAR(logEntries) apply {
                     _x params [
-                        ["_time",CBA_missionTime,[-1]],
-                        ["_text","",[""]],
-                        ["_isWarning",false,[false]]
+                        ["_time", CBA_missiontime, [-1]],
+                        ["_text", "", [""]],
+                        ["_isWarning", false, [false]]
                     ];
-
-                    private _text = format ["[%1]: %2", [_time,"MM:SS"] call BIS_fnc_secondsToString, _text];
-                    private _warning = if (_isWarning) then [{"[WARNING] "},{""}];
+                    
+                    private _text = format ["[%1]: %2", [_time, "MM:SS"] call BIS_fnc_secondstoString, _text];
+                    private _warning = if (_isWarning) then [{
+                        "[WARNinG] "
+                    }, {
+                        ""
+                    }];
                     (_warning + _text)
                 };
-                GVAR(debrief) = _strArr joinString "<br/>";
+                GVAR(debrief) = _strArr joinstring "<br/>";
             }];
         },
-        clientOwner,
-        30, // Timeout after 30 seconds
+        clientowner,
+        30, // timeout after 30 seconds
         {}
-    ] call CBA_fnc_waitUntilAndExecute;
-
+    ] call CBA_fnc_waitUntilandexecute;
 };
 
-
-
-if (isMultiplayer && hasInterface) then {
-    QGVAR(fps) addPublicVariableEventHandler {
+if (isMultiplayer && hasinterface) then {
+    QGVAR(fps) addpublicVariableEventHandler {
         disableSerialization;
-
-        private _ctrl = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_TFS_ADMINMENU_FPS;
-        if (isNull _ctrl) exitWith {};
-
-        _ctrl ctrlSetText format ["%1 SFPS", _this select 1];
+        
+        private _ctrl = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_TFS_adminMENU_FPS;
+        if (isNull _ctrl) exitwith {};
+        
+        _ctrl ctrlsettext format ["%1 SFPS", _this select 1];
     };
-    QGVAR(headlessInfo) addPublicVariableEventHandler {
+    QGVAR(headlessinfo) addpublicVariableEventHandler {
         disableSerialization;
-
-        private _ctrl = ((uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_TFS_ADMINMENU_G_DASH) controlsGroupCtrl IDC_TFS_ADMINMENU_DASH_HEADLESS;
-        if (isNull _ctrl) exitWith {};
-
-        _ctrl ctrlSetText (_this select 1);
-        _ctrl ctrlSetTooltip (_this select 1);
+        
+        private _ctrl = ((uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_TFS_adminMENU_G_DASH) controlsgroupCtrl IDC_TFS_adminMENU_DASH_HEADLESS;
+        if (isNull _ctrl) exitwith {};
+        
+        _ctrl ctrlsettext (_this select 1);
+        _ctrl ctrlsettooltip (_this select 1);
     };
-
-    QGVAR(currentAdmin) addPublicVariableEventHandler {
+    
+    QGVAR(currentadmin) addpublicVariableEventHandler {
         disableSerialization;
-
-        private _ctrl = ((uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_TFS_ADMINMENU_G_DASH) controlsGroupCtrl IDC_TFS_ADMINMENU_DASH_CURRADMIN;
-        if (isNull _ctrl) exitWith {};
-
-        _ctrl ctrlSetText (_this select 1);
+        
+        private _ctrl = ((uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_TFS_adminMENU_G_DASH) controlsgroupCtrl IDC_TFS_adminMENU_DASH_CURradmin;
+        if (isNull _ctrl) exitwith {};
+        
+        _ctrl ctrlsettext (_this select 1);
     };
-
+    
     [QGVAR(quickRespawn), {
         call FUNC(utility_quickRespawn_local);
     }] call CBA_fnc_addEventHandler;

@@ -1,21 +1,19 @@
 #include "script_component.hpp"
 /*
- * Author: DerZade
- * Called by postInit. Adds local "arsenalOpened" scriptedEventhandler.
- *
- * Arguments:
- * None
- *
- * Return Value:
- * Nothing
- *
- * Example:
- * [] call TFS_boc_fnc_arsenal_postInit;
- *
- * Public: No
- */
-if !(hasInterface) exitWith {};
+* Author: DerZade
+* called by postinit. Adds local "arsenalOpened" scriptedEventhandler.
+*
+* Arguments:
+* None
+*
+* Return Value:
+* nothing
+*
+* Example:
+* [] call TFS_boc_fnc_arsenal_postinit;
+*
+* Public: No
+*/
+if !(hasinterface) exitwith {};
 
-[missionNamespace, "arsenalOpened", FUNC(arsenal_opened)] call BIS_fnc_addScriptedEventHandler;
-
-//["ACE_arsenal_displayOpened", {QFUNC(arsenal_opened) call CBA_fnc_localEvent}] call CBA_fnc_addEventHandler;
+[missionnamespace, "arsenalOpened", FUNC(arsenal_opened)] call BIS_fnc_addScriptedEventHandler;

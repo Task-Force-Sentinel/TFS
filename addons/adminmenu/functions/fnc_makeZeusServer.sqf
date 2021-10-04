@@ -1,10 +1,11 @@
 #include "\z\tfs\addons\adminmenu\script_component.hpp"
 
-if !(isServer) exitWith {};
+if !(isServer) exitwith {};
 
 params ["_unit"];
-if (isNull _unit) exitWith {};
-if (!isNull (getAssignedCuratorLogic _unit)) exitWith {}; // already is a curator
+if (isNull _unit) exitwith {};
+if (!isNull (getAssignedCuratorlogic _unit)) exitwith {};
+// already is a curator
 
 private _isValidCurator = false;
 {
@@ -13,30 +14,30 @@ private _isValidCurator = false;
         if (isNull (getAssignedCuratorUnit _x)) then {
             _isValidCurator = true;
         } else {
-            if (!isPlayer (getAssignedCuratorUnit _x)) then {
+            if (!isplayer (getAssignedCuratorUnit _x)) then {
                 _isValidCurator = true;
             };
         };
     };
-
-    if (_isValidCurator) exitWith {
+    
+    if (_isValidCurator) exitwith {
         unassignCurator _x;
         _unit assignCurator _x;
-        "[TFS Admin Menu] You were given access to Zeus" remoteExec ["systemChat", _unit];
+        "[TFS admin Menu] You were given access to Zeus" remoteExec ["systemChat", _unit];
     };
 } forEach allCurators;
 
 if (!_isValidCurator) then {
-    private _curator = GVAR(zeusGroup) createUnit ["ModuleCurator_F", [0,0,0], [], 0, "NONE"];
+    private _curator = GVAR(zeusgroup) createUnit ["moduleCurator_F", [0, 0, 0], [], 0, "NONE"];
     _curator setVariable ["Addons", 3, true];
     _curator setVariable [QGVAR(zeus), true, true];
-    _curator setVariable ["showNotification", false, true];
-
+    _curator setVariable ["shownotification", false, true];
+    
     _curator setCuratorWaypointCost 0;
     {
         _curator setCuratorCoef [_x, 0];
-    } forEach ["place","edit","delete","destroy","group","synchronize"];
-
+    } forEach ["place", "edit", "delete", "destroy", "group", "synchronize"];
+    
     _unit assignCurator _curator;
-    "[TFS Admin Menu] You were given access to Zeus" remoteExec ["systemChat", _unit];
+    "[TFS admin Menu] You were given access to Zeus" remoteExec ["systemChat", _unit];
 };

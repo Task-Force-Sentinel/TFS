@@ -9,7 +9,7 @@ class CfgPatches
 		url = URL;
 		units[] = {};
 		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {"A3_UI_F","cba_main","cba_xeh"};
+		requiredAddons[] = {"A3_UI_F", "cba_main", "cba_xeh"};
 		version = VERSION;
 		authors[] = {"MitchJC"};
 		weapons[] = {};
@@ -19,7 +19,7 @@ class CfgPatches
 class CfgVehicles
 {
 	class Logic;
-	class Module_F: Logic
+	class Module_F : Logic
 	{
 		class AttributesBase
 		{
@@ -37,10 +37,11 @@ class CfgVehicles
 			class AnyBrain;
 		};
 	};
-	#include "SafeZoneModule.hpp"
+#include "SafeZoneModule.hpp"
 };
 
-class CfgFunctions {
+class CfgFunctions
+{
 
-    #include "cfgFunctions.hpp"
+#include "cfgFunctions.hpp"
 };

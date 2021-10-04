@@ -1,30 +1,30 @@
 #include "script_component.hpp"
 /*
- * Author: 3Mydlo3
- * Function shows given task and runs appropriate onShow handler.
- *
- * Arguments:
- * 0: Task to show <CBA_NAMESPACE/STRING>
- *
- * Return Value:
- * 0: Is task successfully showed? <BOOL>
- *
- * Example:
- * ["KnockHorse"] call tfs_tasks_fnc_showTask
- *
- * Public: Yes
- */
+* Author: 3Mydlo3
+* Function shows given task and runs appropriate onShow handler.
+*
+* Arguments:
+* 0: Task to show <CBA_nameSPACE/strinG>
+*
+* Return Value:
+* 0: Is task successfully showed? <BOOL>
+*
+* Example:
+* ["KnockHorse"] call tfs_tasks_fnc_showTask
+*
+* Public: Yes
+*/
 
-params ["_taskNamespace"];
+params ["_tasknamespace"];
 
-if (_taskNamespace isEqualType "") then {
-    _taskNamespace = GVAR(tasks) getOrDefault [_taskNamespace, objNull];
+if (_tasknamespace isEqualtype "") then {
+    _tasknamespace = GVAR(tasks) getordefault [_tasknamespace, objNull];
 };
 
-if (isNull _taskNamespace) exitWith {
-    WARNING("No task specified!");
+if (isNull _tasknamespace) exitwith {
+    WARNinG("No task specified!");
     false
 };
 
-[_taskNamespace] call FUNC(handleOnShow);
+[_tasknamespace] call FUNC(handleOnShow);
 true
