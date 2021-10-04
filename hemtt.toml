@@ -51,4 +51,5 @@ steps_windows = [
 only_release = true
 show_output = true
 
-
+[header_exts]
+version= "{{git \"id 8\"}}"
