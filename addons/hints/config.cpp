@@ -22,4 +22,4 @@ class CfgPatches
 
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
-#include "gui\Rschint.hpp"
+#include "gui\RscHint.hpp"

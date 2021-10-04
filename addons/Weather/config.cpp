@@ -30,5 +30,5 @@ class Extended_Preinit_EventHandlers
 
 class CfgFunctions
 {
-    #include "cfgFunctions.hpp"
+    #include "CfgFunctions.hpp"
 };

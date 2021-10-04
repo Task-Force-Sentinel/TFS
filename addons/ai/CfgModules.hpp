@@ -5,7 +5,7 @@ class CfgVehicles
     {
         class ArgumentsBaseunits
         {
-            class units;
+            class Units;
         };
         class moduleDescription
         {
@@ -15,23 +15,23 @@ class CfgVehicles
         };
         class AttributesBase
         {
-            class default;
+            class Default;
             class Edit;
             class Combo;
             class Checkbox;
             class CheckboxNumber;
             class moduleDescription;
-            class units;
+            class Units;
         };
     };
     #include "modules\area.hpp"
-    #include "modules\wavespawner.hpp"
-    #include "modules\huntmodule.hpp"
+    #include "modules\waveSpawner.hpp"
+    #include "modules\huntModule.hpp"
     #include "modules\rearm.hpp"
     #include "modules\garrison.hpp"
     #include "modules\arty.hpp"
-    #include "modules\AIspawnseastmodule.hpp"
-    #include "modules\AIspawnsindependentmodule.hpp"
-    #include "modules\AIspawnswestmodule.hpp"
-    #include "modules\civilianspawnsmodule.hpp"
+    #include "modules\AISpawnsEastModule.hpp"
+    #include "modules\AISpawnsIndependentModule.hpp"
+    #include "modules\AISpawnsWestModule.hpp"
+    #include "modules\CivilianSpawnsModule.hpp"
 };

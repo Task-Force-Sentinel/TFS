@@ -25,4 +25,4 @@ class CfgPatches
 #include "CfgAddons.hpp"
 #include "CfgCommands.hpp"
 
-#include "gui\versioninfo.hpp"
+#include "gui\versionInfo.hpp"

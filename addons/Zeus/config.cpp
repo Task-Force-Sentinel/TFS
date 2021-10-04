@@ -29,10 +29,10 @@ class CfgPatches
 
 class CfgFunctions
 {
-    #include "cfgFunctions.hpp"
+    #include "CfgFunctions.hpp"
 };
 
-#include "cfgvehicles.hpp"
+#include "cfgVehicles.hpp"
 
 class Extended_Preinit_EventHandlers
 {
@@ -42,4 +42,4 @@ class Extended_Preinit_EventHandlers
     };
 };
 
-#include "Zenactions.hpp"
+#include "ZenActions.hpp"
