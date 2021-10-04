@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="TFS">
+
+	<!-- ####################################################################################### -->
+	<Package name="Area">
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Medical_Area">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFS_Area_Title">
+				<English>TFS Medical Area</English>
+			</Key>
+			<Key ID="STR_TFS_Area_Author">
+				<English>TFS</English>
+			</Key>
+			<Key ID="STR_TFS_Area_URL">
+				<English>https://github.com/TFSmod/TFS</English>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Categories">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFS_Area_CBA_Category">
+				<English>TFS Medical</English>
+				<German>TFS Medizinisch</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFS_Area_CBA_Category_core">
+				<English>Dressing Station</English>
+				<German>Verbandsplatz</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="CBA_Settings">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFS_Area_CBA_Construct_Time_Title">
+				<English>Time to construct</English>
+				<German>Zeit zum Aufbauen</German>
+			</Key>
+			<Key ID="STR_TFS_Area_CBA_Construct_Time_Tip">
+				<English>Indicates how much time passes (seconds) until the dressing station is constructed.</English>
+				<German>Gibt an, wieviel Zeit vergeht (Sekunden), bis der Verbandsplatz aufgebaut ist.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFS_Area_CBA_Dismantle_Time_Title">
+				<English>Time to dismantle</English>
+				<German>Zeit zum Abbauen</German>
+			</Key>
+			<Key ID="STR_TFS_Area_CBA_Dismantle_Time_Tip">
+				<English>Indicates how much time passes (seconds) until the dressing station is dismantled.</English>
+				<German>Gibt an, wieviel Zeit vergeht (Sekunden), bis der Verbandsplatz abgebaut ist.</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFS_Area_CBA_Enable_Defibrillator_Title">
+				<English>Stationary Defibrillator</English>
+				<German>Stationärer Defibrillator</German>
+			</Key>
+			<Key ID="STR_TFS_Area_CBA_Enable_Defibrillator_Tip">
+				<English>Creates a usable defibrillator (Land_Defibrillator_F).\n(Adjustable in &quot;ADV - ACE CPR&quot;)</English>
+				<German>Erstellt einen benutzbaren Defibrillator (Land_Defibrillator_F).\n(Einstellbar in &quot;ADV - ACE CPR&quot;)</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container>
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Interactions">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFS_Area_Action_Construct">
+				<English>Construct Dressing-Station</English>
+				<German>Verbandsplatz aufbauen</German>
+			</Key>
+			<Key ID="STR_TFS_Area_Action_Dismantle">
+				<English>Dismantle Dressing-Station</English>
+				<German>Verbandsplatz abbauen</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFS_Area_Action_LightOff">
+				<English>Light OFF</English>
+				<German>Beleuchtung AUS</German>
+			</Key>
+			<Key ID="STR_TFS_Area_Action_LightOn">
+				<English>Light ON</English>
+				<German>Beleuchtung AN</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Messages">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFS_Area_Progress_Construct">
+				<English>Construct Dressing-Station...</English>
+				<German>Verbandsplatz aufbauen...</German>
+			</Key>
+			<Key ID="STR_TFS_Area_Progress_Dismantle">
+				<English>Dismantle Dressing-Station...</English>
+				<German>Verbandsplatz abbauen...</German>
+			</Key>
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFS_Area_Progress_LightOff">
+				<English>Remove Lights...</English>
+				<German>Beleuchtung abbauen...</German>
+			</Key>
+			<Key ID="STR_TFS_Area_Progress_LightOn">
+				<English>Install Lights...</English>
+				<German>Beleuchtung anbringen...</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+		<Container name="Items">
+			<!-- =============================================================================== -->
+			<Key ID="STR_TFS_Area_DisplayName">
+				<English>Dressing-Station</English>
+				<German>Verbandsplatz</German>
+			</Key>
+			<Key ID="STR_TFS_Area_Description">
+				<English>Allows the treatment of patients in field</English>
+				<German>Ermöglicht die Behandlung von Patienten im Feld</German>
+			</Key>
+			<!-- =============================================================================== -->
+		</Container >
+		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+	</Package>
+	<!-- ####################################################################################### -->
+
+</Project>
