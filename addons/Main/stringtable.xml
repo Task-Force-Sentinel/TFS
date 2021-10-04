@@ -6,6 +6,9 @@
 			<Key ID="STR_TFS_Main_Action">
 				<English>Website</English>
 			</Key>
+			<Key ID="STR_TFS_Main_Logo">
+				<Original>\z\dpso\addons\media\images\TFSLOGOopy.paa</Original>
+			</Key>
 			<Key ID="STR_TFS_Main_URL">
 				<English>http://tfsmod.userscreen.net</English>
 			</Key>

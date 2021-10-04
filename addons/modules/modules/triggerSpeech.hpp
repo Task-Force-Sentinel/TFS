@@ -5,7 +5,7 @@ class TFS_moduleTriggerSpeech: module_F {
     
     displayname = "$str_TFS_Modules_TriggerSpeech_Displayname";
     category = "Task force Sentinel";
-    author = AUTHor;
+    author = AUTHOR;
     icon = "\z\tfs\addons\modules\data\icons\module_speech_1_ca.paa";
     
     function = "TFS_fnc_moduleTriggerSpeech";
@@ -22,8 +22,7 @@ class TFS_moduleTriggerSpeech: module_F {
             tooltip = "$str_TFS_Modules_Speech_Enabled_Tip";
             defaultValue = 1;
             typeName = "NUMBER";
-            expression = "_this setVariable ['%s', _value, true];
-            ";
+            expression = "_this setVariable ['%s', _value, true];            ";
             property = "TFS_moduleTriggerSpeech_Enabled";
             control = "Combo";
             class Values {
@@ -42,9 +41,8 @@ class TFS_moduleTriggerSpeech: module_F {
             displayname = "$str_TFS_Modules_Speech_Source_Title";
             tooltip = "$str_TFS_Modules_Speech_Source_Tip";
             defaultValue = "''";
-            typeName = "strinG";
-            expression = "_this setVariable ['%s', _value, true];
-            ";
+            typeName = "STRING";
+            expression = "_this setVariable ['%s', _value, true];            ";
             property = "TFS_moduleTriggerSpeech_Source";
             control = "Edit";
         };
@@ -53,9 +51,8 @@ class TFS_moduleTriggerSpeech: module_F {
             displayname = "$str_TFS_Modules_Speech_classname_Title";
             tooltip = "$str_TFS_Modules_Speech_classname_Tip";
             defaultValue = "''";
-            typeName = "strinG";
-            expression = "_this setVariable ['%s', _value, true];
-            ";
+            typeName = "STRING";
+            expression = "_this setVariable ['%s', _value, true];            ";
             property = "TFS_moduleTriggerSpeech_Sound";
             control = "Sound";
         };
@@ -65,8 +62,7 @@ class TFS_moduleTriggerSpeech: module_F {
             tooltip = "$str_TFS_Modules_Speech_distance_Tip";
             defaultValue = 30;
             typeName = "NUMBER";
-            expression = "_this setVariable ['%s', _value, true];
-            ";
+            expression = "_this setVariable ['%s', _value, true];            ";
             property = "TFS_moduleTriggerSpeech_distance";
             control = "EditShort";
         };
@@ -76,8 +72,7 @@ class TFS_moduleTriggerSpeech: module_F {
             tooltip = "$str_TFS_Modules_Speech_maxdistance_Tip";
             defaultValue = -1;
             typeName = "NUMBER";
-            expression = "_this setVariable ['%s', _value, true];
-            ";
+            expression = "_this setVariable ['%s', _value, true];            ";
             property = "TFS_moduleTriggerSpeech_maxdistance";
             control = "EditShort";
         };
@@ -87,8 +82,7 @@ class TFS_moduleTriggerSpeech: module_F {
             tooltip = "$str_TFS_Modules_Speech_Duration_Tip";
             defaultValue = -1;
             typeName = "NUMBER";
-            expression = "_this setVariable ['%s', _value, true];
-            ";
+            expression = "_this setVariable ['%s', _value, true];            ";
             property = "TFS_moduleTriggerSpeech_Duration";
             control = "EditShort";
         };
@@ -98,8 +92,7 @@ class TFS_moduleTriggerSpeech: module_F {
             tooltip = "$str_TFS_Modules_Speech_Loop_Tip";
             defaultValue = "false";
             typeName = "BOOL";
-            expression = "_this setVariable ['%s', _value, true];
-            ";
+            expression = "_this setVariable ['%s', _value, true];            ";
             property = "TFS_moduleTriggerSpeech_Loop";
             control = "Checkbox";
         };
@@ -109,8 +102,7 @@ class TFS_moduleTriggerSpeech: module_F {
             tooltip = "$str_TFS_Modules_Speech_Ignorestop_Tip";
             defaultValue = "false";
             typeName = "BOOL";
-            expression = "_this setVariable ['%s', _value, true];
-            ";
+            expression = "_this setVariable ['%s', _value, true];            ";
             property = "TFS_moduleTriggerSpeech_Ignorestop";
             control = "Checkbox";
         };
@@ -119,9 +111,8 @@ class TFS_moduleTriggerSpeech: module_F {
             displayname = "$str_TFS_Modules_Speech_Animation2_Title";
             tooltip = "$str_TFS_Modules_Speech_Animation2_Tip";
             defaultValue = "''";
-            typeName = "strinG";
-            expression = "_this setVariable ['%s', _value, true];
-            ";
+            typeName = "STRING";
+            expression = "_this setVariable ['%s', _value, true];            ";
             property = "TFS_moduleGlobalSpeech_Animation";
             control = "Edit";
         };

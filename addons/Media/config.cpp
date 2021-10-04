@@ -4,8 +4,8 @@ class CfgPatches
 {
     class TFS_Media
     {
-        author = AUTHor;
-        name = COMPONENT_name;
+        author = AUTHOR;
+        name = COMPONENT_NAME;
         url = URL;
         units[] = {
             "TFS_flag_White", "TFS_flag_Black"
@@ -22,7 +22,7 @@ class CfgPatches
     };
 };
 
-#include "Cfgvehicles.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgMusic.hpp"
 #include "Cfgradio.hpp"
 #include "CfgSounds.hpp"

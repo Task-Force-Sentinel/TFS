@@ -1,5 +1,5 @@
 class CBA_Extended_EventHandlers;
-class Cfgvehicles {
+class CfgVehicles {
     class Man;
     class CAManBase: Man {
         class ACE_actions {

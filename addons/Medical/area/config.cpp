@@ -29,5 +29,5 @@ class CfgPatches
 #include "CfgEventHandlers.hpp"
 #include "CfgFunctions.hpp"
 #include "CfgSounds.hpp"
-#include "Cfgvehicles.hpp"
+#include "CfgVehicles.hpp"
 #include "Cfgweapons.hpp"

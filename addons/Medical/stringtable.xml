@@ -8,7 +8,7 @@
 		<Container name="Medical">
 			<!-- =============================================================================== -->
 			<Key ID="STR_TFS_Medical_Supplies_Title">
-				<English>TFS Medical</English>
+				<English>TFS Medical Supplies</English>
 			</Key>
 			<Key ID="STR_TFS_Medical_Supplies_Author">
 				<English>TFS</English>

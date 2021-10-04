@@ -4,7 +4,7 @@ class CfgPatches
 {
     class TFS_SafeZone
     {
-        author = AUTHor;
+        author = AUTHOR;
         name = name;
         url = URL;
         units[] = {};
@@ -20,7 +20,7 @@ class CfgPatches
     };
 };
 
-class Cfgvehicles
+class CfgVehicles
 {
     class logic;
     class module_F : logic

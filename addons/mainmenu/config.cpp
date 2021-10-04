@@ -4,8 +4,8 @@ class CfgPatches
 {
     class TFS_MainMenu
     {
-        author = AUTHor;
-        name = COMPONENT_name;
+        author = AUTHOR;
+        name = COMPONENT_NAME;
         url = URL;
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {

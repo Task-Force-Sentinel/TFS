@@ -53,7 +53,7 @@ if (not hasinterface) exitwith {};
 
 // CLEANUP hintS
 
-// ("TFS_Rschint" call BIS_fnc_rscLayer) cutRsc ["TFS_Rschint", "PLAin", 0, true];
-99 cutRsc ["TFS_Rschint", "PLAin", 0, true];
+// ("TFS_Rschint" call BIS_fnc_rscLayer) cutRsc ["TFS_Rschint", "PLAIN", 0, true];
+99 cutRsc ["TFS_Rschint", "PLAIN", 0, true];
 
 [] call TFS_hints_fnc_cleanup;

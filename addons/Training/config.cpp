@@ -4,7 +4,7 @@ class CfgPatches
 {
     class TFS_Training
     {
-        author = AUTHor;
+        author = AUTHOR;
         name = name;
         url = URL;
         units[] = {};
