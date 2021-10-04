@@ -46,5 +46,5 @@ class CfgVehicles
             class AnyBrain;
         };
     };
-    #include "Medicalmodule.hpp"
+    #include "MedicalModule.hpp"
 };

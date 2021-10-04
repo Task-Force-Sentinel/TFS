@@ -22,5 +22,5 @@ class CfgVehicles
         };
     };
     
-    #include "MakeIEDmodule.hpp"
+    #include "MakeIEDModule.hpp"
 };

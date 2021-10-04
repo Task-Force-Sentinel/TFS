@@ -27,4 +27,4 @@ class defaultFont
 };
 
 #include "RscDisplayCueCard.hpp"
-#include "RscnotePad.hpp"
+#include "RscNotePad.hpp"

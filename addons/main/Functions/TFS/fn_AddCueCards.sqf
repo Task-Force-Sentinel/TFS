@@ -107,7 +107,7 @@ _npaction = [
             diag_log format ["[[logGinG]] Target: %1", _target];
             
             disableSerialization;
-            ([] call bis_fnc_displayMission) createDisplay "Rscnotepad";
+            ([] call bis_fnc_displayMission) createDisplay "RscNotePad";
             [missionnamespace, "cueCardShown", [_target] + ["notepad"]] spawn bis_fnc_callScriptedEventHandler;
         };
     },

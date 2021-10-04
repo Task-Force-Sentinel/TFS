@@ -57,7 +57,7 @@ params["_fullmapwindow"];
     if (GVAR(adminEyeselectedobj) isEqualto _x) then {
         _color = [1, 0, 0, 0.75];
     };
-    _fullmapwindow drawIcon ["\a3\3den\data\cfg3den\logic\texturebackgroundmodule_ca.paa", _color, _pos, 26, 26, 0];
+    _fullmapwindow drawIcon ["\a3\3DEN\data\cfg3den\logic\texturebackgroundmodule_ca.paa", _color, _pos, 26, 26, 0];
     _fullmapwindow drawIcon ["\z\tfs\addons\media\images\TFSlogO@0.25x.paa", [0, 0, 0, 0.5], _pos, 20, 20, 0];
     
     private _text = "";
@@ -106,7 +106,7 @@ params["_fullmapwindow"];
     };
     
     // background
-    _fullmapwindow drawIcon ["\a3\3den\data\cfg3den\logic\texturebackgroundmodule_ca.paa", [1, 1, 1, 0.5], _pos, 26, 26, 0];
+    _fullmapwindow drawIcon ["\a3\3DEN\data\cfg3den\logic\texturebackgroundmodule_ca.paa", [1, 1, 1, 0.5], _pos, 26, 26, 0];
     _fullmapwindow drawIcon ["\z\tfs\addons\media\images\TFSlogO@0.25x.paa", [0, 0, 0, 0.5], _pos, 20, 20, 0];
     
     private _text = format["Garrison (Quantity: %1)", _x getVariable ["ainumbertospawn", 0]];

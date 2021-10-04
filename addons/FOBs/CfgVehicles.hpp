@@ -22,5 +22,5 @@ class CfgVehicles
         };
     };
     
-    #include "PortableFOBmodule.hpp"
+    #include "PortableFOBModule.hpp"
 };

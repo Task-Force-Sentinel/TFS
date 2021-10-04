@@ -1,12 +1,12 @@
-class Rscnotepad
+class RscNotePad
 {
     idd = 20306;
     enableSimulation = 1;
     closeOnMissionEnd = 0;
-    scriptName = "Rscnotepad";
+    scriptName = "RscNotePad";
     scriptPath = "TFSDisplays";
-    onload = "[""onload"", _this, ""Rscnotepad"", 'TFSDisplays'] call  (uiNamespace getVariable 'BIS_fnc_initDisplay')";
-    onUnload = "[""onUnload"", _this, ""Rscnotepad"", 'TFSDisplays'] call  (uiNamespace getVariable 'BIS_fnc_initDisplay')";
+    onload = "[""onload"", _this, ""RscNotePad"", 'TFSDisplays'] call  (uiNamespace getVariable 'BIS_fnc_initDisplay')";
+    onUnload = "[""onUnload"", _this, ""RscNotePad"", 'TFSDisplays'] call  (uiNamespace getVariable 'BIS_fnc_initDisplay')";
     onMouseButtondown = "\
     if ((_this select 1) != 0) exitwith {\
         _ctrl = ((_this select 0) displayCtrl 1004); \

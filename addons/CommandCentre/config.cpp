@@ -28,12 +28,12 @@ class CfgVehicles
         class AttributesBase
         {
             class Default;
-			class Edit;
-			class Combo;
-			class Checkbox;
-			class CheckboxNumber;
-			class ModuleDescription;
-			class Units;
+            class Edit;
+            class Combo;
+            class Checkbox;
+            class CheckboxNumber;
+            class ModuleDescription;
+            class Units;
         };
         
         class moduleDescription
@@ -43,10 +43,10 @@ class CfgVehicles
     };
 
     #include "ModuleCommsTower.hpp"
-	#include "ModuleSingleScreen.hpp"
-	#include "ModuleMultiScreen.hpp"
-	#include "ModuleStationaryRadio.hpp"
-	#include "ModuleVehicleCam.hpp"
+    #include "ModuleSingleScreen.hpp"
+    #include "ModuleMultiScreen.hpp"
+    #include "ModuleStationaryRadio.hpp"
+    #include "ModuleVehicleCam.hpp"
 };
 
 class CfgfactionClasses

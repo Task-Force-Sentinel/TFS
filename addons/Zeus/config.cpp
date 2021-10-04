@@ -32,7 +32,7 @@ class CfgFunctions
     #include "CfgFunctions.hpp"
 };
 
-#include "cfgvehicles.hpp"
+#include "cfgVehicles.hpp"
 
 class Extended_Preinit_EventHandlers
 {
