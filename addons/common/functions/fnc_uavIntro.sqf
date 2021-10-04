@@ -1,25 +1,25 @@
 #include "script_component.hpp"
 
-private ["_uavintro", "_uavintroposition", "_uavintrotext"];
+private ["_uavIntro","_uavIntroPosition","_uavIntroText"];
 
-if (getmarkerColor "TFS_uavintroMarker" == "") then {
-    _uavintroposition = vehicle TFS_unit;
+if (getMarkerColor "TFS_uavIntroMarker" == "") then {
+    _uavIntroPosition = vehicle TFS_unit;
 } else {
-    _uavintroposition = getmarkerPos "TFS_uavintroMarker";
+    _uavIntroPosition = getMarkerPos "TFS_uavIntroMarker";
 };
 
-if (GVAR(uavintrotext) == "") then {
-    _uavintrotext = gettext (missionConfigFile >> "onloadname");
+if (GVAR(uavIntroText) == "") then {
+    _uavIntroText = getText (missionConfigFile >> "onLoadName");
 } else {
-    _uavintrotext = GVAR(uavintrotext);
+    _uavIntroText = GVAR(uavIntroText);
 };
 
-_uavintro = [
-    _uavintroposition,
-    _uavintrotext,
-    GVAR(uavintroAltitude),
-    GVAR(uavintroradius),
-    GVAR(uavintroAngle),
+_uavIntro = [
+    _uavIntroPosition,
+    _uavIntroText,
+    GVAR(uavIntroAltitude),
+    GVAR(uavIntroRadius),
+    GVAR(uavIntroAngle),
     1,
     [],
     0,
@@ -27,34 +27,16 @@ _uavintro = [
     3
 ] spawn BIS_fnc_establishingShot;
 
-switch (GVAR(uavintroVision)) do {
-    case 1: {
-        camUseNVG true
-    };
-    case 2: {
-        true setCamUseTI 0
-    };
-    case 3: {
-        true setCamUseTI 1
-    };
-    case 4: {
-        true setCamUseTI 2
-    };
-    case 5: {
-        true setCamUseTI 3
-    };
-    case 6: {
-        true setCamUseTI 4
-    };
-    case 7: {
-        true setCamUseTI 5
-    };
-    case 8: {
-        true setCamUseTI 6
-    };
-    case 9: {
-        true setCamUseTI 7
-    };
+switch (GVAR(uavIntroVision)) do {
+    case 1: {camUseNVG true};
+    case 2: {true setCamUseTI 0};
+    case 3: {true setCamUseTI 1};
+    case 4: {true setCamUseTI 2};
+    case 5: {true setCamUseTI 3};
+    case 6: {true setCamUseTI 4};
+    case 7: {true setCamUseTI 5};
+    case 8: {true setCamUseTI 6};
+    case 9: {true setCamUseTI 7};
 };
 
-_uavintro;
+_uavIntro;

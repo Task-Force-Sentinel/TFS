@@ -1,27 +1,28 @@
+
 class IGUIBack;
 class RscStandardDisplay;
-class Rsctext;
-class Rscpicture;
-class RscpictureKeepAspect;
-class RscActivepicture;
+class RscText;
+class RscPicture;
+class RscPictureKeepAspect;
+class RscActivePicture;
 class RscButtonMenu;
 class RscButtonMenuOK;
 class RscButtonMenuCancel;
 class RscEdit;
 class RscEditMulti;
-class RscControlsgroup;
-class RscControlsgroupNoScrollbars;
+class RscControlsGroup;
+class RscControlsGroupNoScrollbars;
 class RscCombo;
 class RscButton;
 class RscButtonMenuSteam;
 class RscMapControl;
 class RscVignette;
-class RscinterlacingScreen;
-class RscLadderpicture;
+class RscInterlacingScreen;
+class RscLadderPicture;
 class VScrollbar;
 class HScrollbar;
 class RscXSliderH;
-class defaultFont
+class DefaultFont
 {
     font = "RobotoCondensed";
 };

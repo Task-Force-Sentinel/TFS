@@ -1,28 +1,28 @@
 #include "script_component.hpp"
 /*
-* Author: Jonpas
-* sets shooting course pause duration.
-*
-* Arguments:
-* 0: name <strinG>
-* 1: Controllers <ARRAY>
-* 2: countdown time <NUMBER>
-* 3: targets <ARRAY>
-*
-* Return Value:
-* None
-*
-* Example:
-* ["range", [controller1, controller2], 9, [target1, target2]] call TFS_shootingrange_fnc_setConfigcountdowntime;
-*
-* Public: No
-*/
+ * Author: Jonpas
+ * Sets shooting course pause duration.
+ *
+ * Arguments:
+ * 0: Name <STRING>
+ * 1: Controllers <ARRAY>
+ * 2: Countdown Time <NUMBER>
+ * 3: Targets <ARRAY>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * ["range", [controller1, controller2], 9, [target1, target2]] call TFS_shootingrange_fnc_setConfigCountdownTime;
+ *
+ * Public: No
+ */
 
-params ["_name", "_controllers", "_countdowntime", "_targets"];
+params ["_name", "_controllers", "_countdownTime", "_targets"];
 
 {
-    _x setVariable [QGVAR(countdowntime), _countdowntime, true];
+    _x setVariable [QGVAR(countdownTime), _countdownTime, true];
 } forEach _controllers;
 
-// notification
+// Notification
 [_controllers select 0, _name, _targets] call FUNC(checkConfig);

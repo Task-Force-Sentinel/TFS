@@ -1,10 +1,11 @@
-if (EGVAR(common, aceTagging)) then {
+
+if (EGVAR(common,aceTagging)) then {
     [
         QGVAR(enabled),
         "CHECKBOX",
-        [LstrinG(Enabled), LstrinG(Enabled_Description)],
-        LstrinG(Displayname),
+        [LSTRING(Enabled), LSTRING(Enabled_Description)],
+        LSTRING(DisplayName),
         false,
         true
-    ] call CBA_fnc_addsetting;
+    ] call CBA_fnc_addSetting;
 };

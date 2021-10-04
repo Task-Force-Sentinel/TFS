@@ -1,8 +1,8 @@
 PREP(init);
-PREP(playerinit);
-PREP(onaction);
-PREP(paradrop);
-PREP(serverinit);
+PREP(playerInit);
+PREP(onAction);
+PREP(paraDrop);
+PREP(serverInit);
 PREP(paradropWaypoint);
 PREP(paradropEffect);
-PREP(deployinit);
+PREP(deployInit);

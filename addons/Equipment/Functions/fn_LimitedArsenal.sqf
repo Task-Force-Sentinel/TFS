@@ -2,134 +2,126 @@
 Function: TFS_fnc_LimitedArsenal
 
 Description:
-Fills an ammobox with predefined equipment dependent on _type. Each ammobox can be a
-different type and have a different duration. This function is almost identical to
-TFS_fnc_Arsenal, only the items in the container change.
+ Fills an Ammobox with predefined equipment dependent on _Type. Each Ammobox can be a
+ different type and have a different duration.  This function is almost identical to
+ TFS_fnc_Arsenal, only the items in the container change.
 
 Arguments:
-_object - Object the ammobox is applied to. <OBJECT>
-_type- type of ammobox, can be "VAnilLA", "RHS" or "Aegis". <strinG>
-_Duration- How long in minutes until the ammobox is removed. 0 makes it permanent. <SCALAR>
+ _object - Object the Ammobox is applied to.  <OBJECT>
+ _type- Type of Ammobox, can be "VANILLA", "RHS" or "Aegis". <STRING>
+ _Duration- How long in minutes until the Ammobox is removed. 0 makes it permanent. <SCALAR>
 
 Examples:
-(begin example)
-[this] call TFS_fnc_LimitedArsenal;
-[this, "Aegis", 50] call TFS_fnc_LimitedArsenal;
-[this, "VAnilLA"] call TFS_fnc_LimitedArsenal;
-[MyammoCrate, "RHS", 0] call TFS_fnc_LimitedArsenal;
-(end)
+ (begin example)
+  [this] call TFS_fnc_LimitedArsenal;
+  [this, "Aegis", 50] call TFS_fnc_LimitedArsenal;
+  [this, "VANILLA"] call TFS_fnc_LimitedArsenal;
+  [MyAmmoCrate, "RHS", 0] call TFS_fnc_LimitedArsenal;
+ (end)
 
 Author:
-MitchJC
+ MitchJC
 */
 
 if (!isServer) exitwith {};
 
 params [
-    "_object",
-    ["_type", "TFS"],
-    ["_Duration", 0]
+ "_object",
+ ["_Type", "TFS"],
+ ["_Duration", 0]
 ];
 
 call {
-    if (_type isEqualto 0) exitwith {
-        _type = "TFS"
-    };
-    if (_type isEqualto 1) exitwith {
-        _type = "Winter"
-    };
-    if (_type isEqualto 2) exitwith {
-        _type = "UnderCover"
-    };
-    if (_type isEqualto 3) exitwith {
-        _type = "RHS"
-    };
+ if (_Type isEqualto 0) exitwith {_Type = "TFS"};
+ if (_Type isEqualto 1) exitwith {_Type = "Winter"};
+ if (_Type isEqualto 2) exitwith {_Type = "UnderCover"};
+    if (_Type isEqualto 3) exitwith {_Type = "RHS"};
 };
 
 if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
-    [_object, false] call ace_arsenal_fnc_initBox;
+ [_object, false] call ace_arsenal_fnc_initBox;
 } else {
-    ["ammoboxinit", [_object, false]] call BIS_fnc_arsenal;
+ ["AmmoboxInit", [_object, false]] call BIS_fnc_arsenal;
 };
 
 private [
-    "_Availableitems", "_Availableheadgear", "_Availablegoggles",
-    "_Availableuniforms", "_Availablevests", "_Availablebackpacks",
-    "_AvailableAttachments", "_Availablemagazines", "_Availableweapons"
+ "_AvailableItems", "_AvailableHeadgear", "_AvailableGoggles",
+ "_AvailableUniforms", "_AvailableVests", "_AvailableBackpacks",
+ "_AvailableAttachments", "_AvailableMagazines", "_AvailableWeapons"
 ];
 
 call {
-    if (_type isEqualto "TFS") exitwith {
-        _Availableitems = [
-            "ItemWatch",
-            "ItemCompass",
+ if (_Type isEqualTo "TFS") exitwith {
+  _AvailableItems = [
+   "ItemWatch",
+   "ItemCompass",
             "ACRE_PRC148",
-            "ItemGPS",
-            "Itemradio",
-            "ItemMap",
-            "NVgoggles",
-            "FirstAidKit",
-            "Medikit",
-            "toolKit",
-            "mineDetector",
-            "B_UavTerminal"
-            
-        ];
-        
-        _Availablemagazines = [
-            "Laserbatteries",
-            "30Rnd_545x39_Mag_Tracer_F",
-            "30Rnd_556x45_Stanag_red",
-            "150Rnd_556x45_Drum_Mag_Tracer_F",
-            "200Rnd_556x45_Box_Tracer_Red_F",
-            "20Rnd_650x39_cased_Mag_F",
-            "30Rnd_65x39_caseless_mag_Tracer",
-            "200Rnd_65x39_cased_Box_Tracer",
-            "10Rnd_762x54_Mag",
-            "20Rnd_762x51_Mag",
-            "30Rnd_762x39_Mag_Tracer_Green_F",
-            "150Rnd_762x51_Box",
-            "130Rnd_338_Mag",
-            "10Rnd_338_Mag",
-            "30Rnd_9x21_Mag_SMG_02_Tracer_Red",
-            "10Rnd_93x64_DMR_05_Mag",
-            "5Rnd_127x108_Mag",
-            "7Rnd_408_Mag",
-            "HandGrenade",
-            "SmokeShell",
-            "SmokeShellGreen",
-            "1Rnd_HE_Grenade_shell",
-            "3Rnd_HE_Grenade_shell",
-            "DemoCharge_Remote_Mag",
-            "SatchelCharge_Remote_Mag",
-            "RPG32_HE_F",
-            "Titan_AT",
-            "Titan_AA"
-        ];
-        
-        _Availableheadgear = [];
-        _Availablegoggles = [];
-        _Availableuniforms = [];
-        _Availablevests = [];
-        _AvailableAttachments = [];
-        _Availableweapons = [];
-        _Availablebackpacks = [];
-    };
-    if (_type isEqualto "ACETFAR") exitwith {
-        _Availableitems = [
-            "ItemWatch",
+   "ItemGPS",
+   "ItemRadio",
+   "ItemMap",
+   "NVGoggles",
+   "FirstAidKit",
+   "Medikit",
+   "ToolKit",
+   "MineDetector",
+   "B_UavTerminal"
+
+  ];
+
+  _AvailableMagazines = [
+   "Laserbatteries",
+   "30Rnd_545x39_Mag_Tracer_F",
+   "30Rnd_556x45_Stanag_red",
+   "150Rnd_556x45_Drum_Mag_Tracer_F",
+   "200Rnd_556x45_Box_Tracer_Red_F",
+   "20Rnd_650x39_Cased_Mag_F",
+   "30Rnd_65x39_caseless_mag_Tracer",
+   "200Rnd_65x39_cased_Box_Tracer",
+   "10Rnd_762x54_Mag",
+   "20Rnd_762x51_Mag",
+   "30Rnd_762x39_Mag_Tracer_Green_F",
+   "150Rnd_762x51_Box",
+   "130Rnd_338_Mag",
+   "10Rnd_338_Mag",
+   "30Rnd_9x21_Mag_SMG_02_Tracer_Red",
+   "10Rnd_93x64_DMR_05_Mag",
+   "5Rnd_127x108_Mag",
+   "7Rnd_408_Mag",
+   "HandGrenade",
+   "SmokeShell",
+   "SmokeShellGreen",
+   "1Rnd_HE_Grenade_shell",
+   "3Rnd_HE_Grenade_shell",
+   "DemoCharge_Remote_Mag",
+   "SatchelCharge_Remote_Mag",
+   "RPG32_HE_F",
+   "Titan_AT",
+   "Titan_AA"
+  ];
+
+  _AvailableHeadGear = [];
+  _AvailableGoggles = [];
+  _AvailableUniforms = [];
+  _AvailableVests = [];
+  _AvailableAttachments = [];
+  _AvailableWeapons = [];
+  _AvailableBackpacks = [];
+ };
+if (_Type isEqualTo "ACETFAR") exitwith {
+  _AvailableItems = [
+   "ItemWatch",
             "ACRE_PRC148",
-            "ItemCompass",
-            "ItemGPS",
-            "Itemradio",
-            "ItemMap",
-            "NVgoggles",
-            "FirstAidKit",
-            "Medikit",
-            "toolKit",
-            "mineDetector",
-            "B_UavTerminal",
-            "ACE_elasticBandage",
+   "ItemCompass",
+   "ItemGPS",
+   "ItemRadio",
+   "ItemMap",
+   "NVGoggles",
+   "FirstAidKit",
+   "Medikit",
+   "ToolKit",
+   "MineDetector",
+   "B_UavTerminal",
+   "ACE_elasticBandage",
             "ACE_packingBandage",
             "ACE_quikclot",
             "ACE_bloodIV_500",
@@ -137,55 +129,55 @@ call {
             "ACE_morphine",
             "ACE_tourniquet",
             "ACE_CableTie",
-            "ACE_IR_strobe_Item",
+            "ACE_IR_Strobe_Item",
             "optic_NVS"
-        ];
-        
-        _Availablemagazines = [
-            "Laserbatteries",
-            "30Rnd_545x39_Mag_Tracer_F",
-            "30Rnd_556x45_Stanag_red",
-            "150Rnd_556x45_Drum_Mag_Tracer_F",
-            "200Rnd_556x45_Box_Tracer_Red_F",
-            "20Rnd_650x39_cased_Mag_F",
-            "30Rnd_65x39_caseless_mag_Tracer",
-            "200Rnd_65x39_cased_Box_Tracer",
-            "10Rnd_762x54_Mag",
-            "20Rnd_762x51_Mag",
-            "30Rnd_762x39_Mag_Tracer_Green_F",
-            "150Rnd_762x51_Box",
-            "130Rnd_338_Mag",
-            "10Rnd_338_Mag",
-            "30Rnd_9x21_Mag_SMG_02_Tracer_Red",
-            "10Rnd_93x64_DMR_05_Mag",
-            "5Rnd_127x108_Mag",
-            "7Rnd_408_Mag",
-            "HandGrenade",
-            "SmokeShell",
-            "SmokeShellGreen",
-            "1Rnd_HE_Grenade_shell",
-            "3Rnd_HE_Grenade_shell",
-            "DemoCharge_Remote_Mag",
-            "SatchelCharge_Remote_Mag",
-            "RPG32_HE_F",
-            "Titan_AT",
-            "Titan_AA"
-        ];
-        
-        _Availableheadgear = [];
-        _Availablegoggles = [];
-        _Availableuniforms = [];
-        _Availablevests = [];
-        _AvailableAttachments = [];
-        _Availableweapons = [
-            "ACE_VMH3",
-            "ACE_VMM3"
-        ];
-        _Availablebackpacks = [];
-    };
-    
-    if (_type isEqualto "Aegis") exitwith {
-        _Availableitems = [
+  ];
+
+  _AvailableMagazines = [
+   "Laserbatteries",
+   "30Rnd_545x39_Mag_Tracer_F",
+   "30Rnd_556x45_Stanag_red",
+   "150Rnd_556x45_Drum_Mag_Tracer_F",
+   "200Rnd_556x45_Box_Tracer_Red_F",
+   "20Rnd_650x39_Cased_Mag_F",
+   "30Rnd_65x39_caseless_mag_Tracer",
+   "200Rnd_65x39_cased_Box_Tracer",
+   "10Rnd_762x54_Mag",
+   "20Rnd_762x51_Mag",
+   "30Rnd_762x39_Mag_Tracer_Green_F",
+   "150Rnd_762x51_Box",
+   "130Rnd_338_Mag",
+   "10Rnd_338_Mag",
+   "30Rnd_9x21_Mag_SMG_02_Tracer_Red",
+   "10Rnd_93x64_DMR_05_Mag",
+   "5Rnd_127x108_Mag",
+   "7Rnd_408_Mag",
+   "HandGrenade",
+   "SmokeShell",
+   "SmokeShellGreen",
+   "1Rnd_HE_Grenade_shell",
+   "3Rnd_HE_Grenade_shell",
+   "DemoCharge_Remote_Mag",
+   "SatchelCharge_Remote_Mag",
+   "RPG32_HE_F",
+   "Titan_AT",
+   "Titan_AA"
+  ];
+
+  _AvailableHeadGear = [];
+  _AvailableGoggles = [];
+  _AvailableUniforms = [];
+  _AvailableVests = [];
+  _AvailableAttachments = [];
+  _AvailableWeapons = [
+   "ACE_VMH3",
+   "ACE_VMM3"
+  ];
+  _AvailableBackpacks = [];
+ };
+
+if (_type isEqualTo "Aegis") exitwith {
+     _AvailableItems = [
             "ACE_elasticBandage",
             "ACE_packingBandage",
             "ACRE_PRC148",
@@ -195,11 +187,11 @@ call {
             "ACE_morphine",
             "ACE_tourniquet",
             "ACE_CableTie",
-            "ACE_IR_strobe_Item",
+            "ACE_IR_Strobe_Item",
             "optic_NVS"
         ];
-        
-        _Availablemagazines = [
+
+  _AvailableMagazines = [
             "UKAegis_BAF_SmokeShell",
             "HandGrenade",
             "DemoCharge_Remote_Mag",
@@ -208,48 +200,50 @@ call {
             "UKAegis_BAF_762_L42A1_20Rnd_T",
             "UKAegis_BAF_1Rnd_HEDP_Grenade_Shell",
             "UKAegis_BAF_1Rnd_60mm_Mo_Shells",
-            "UKAegis_BAF_9_13Rnd",
-            "UKAegis_BAF_9_15Rnd",
-            "UKAegis_BAF_9_17Rnd",
+   "UKAegis_BAF_9_13Rnd",
+   "UKAegis_BAF_9_15Rnd",
+   "UKAegis_BAF_9_17Rnd",
             "Laserbatteries",
-            "ACE_Chemlight_Hiorange",
-            "ACE_Chemlight_HiRed",
-            "ACE_Chemlight_HiWhite",
-            "ACE_Chemlight_HiYellow",
-            "ACE_Chemlight_IR",
-            "ACE_Chemlight_orange",
-            "Chemlight_red",
-            "ACE_Chemlight_White",
-            "Chemlight_yellow"
-        ];
-        
-        _Availableweapons = [
-            "ACE_VMH3",
-            "ACE_VMM3",
+   "ACE_Chemlight_HiOrange",
+   "ACE_Chemlight_HiRed",
+   "ACE_Chemlight_HiWhite",
+   "ACE_Chemlight_HiYellow",
+   "ACE_Chemlight_IR",
+   "ACE_Chemlight_Orange",
+   "Chemlight_red",
+   "ACE_Chemlight_White",
+   "Chemlight_yellow"
+  ];
+
+  _AvailableWeapons = [
+   "ACE_VMH3",
+   "ACE_VMM3",
             "UKAegis_BAF_M6",
             "UKAegis_BAF_Javelin_Slung_Tube",
             "UKAegis_BAF_NLAW_Launcher",
             "UKAegis_BAF_AT4_CS_AT_Launcher",
             "UKAegis_BAF_Javelin_CLU"
-        ];
-        
-        _Availableheadgear = [];
-        _Availablegoggles = [];
-        _Availableuniforms = [];
-        _Availablevests = [];
-        _AvailableAttachments = [];
-        _Availablebackpacks = [];
-    };
-    
-    if (_type isEqualto "RHS") exitwith {
-        _Availableitems = [
+  ];
+
+  _AvailableHeadGear = [];
+  _AvailableGoggles = [];
+  _AvailableUniforms = [];
+  _AvailableVests = [];
+  _AvailableAttachments = [];
+  _AvailableBackpacks = [];
+ };
+
+
+
+if (_type isEqualTo "RHS") exitwith {
+        _AvailableItems = [
             "kat_X_AED",
             "ItemcTab",
-            "Itemandroid",
+            "ItemAndroid",
             "ItemcTabHCam",
             "ItemMicroDAGR",
             "TFS_mopp",
-            "alive_Tablet",
+            "ALIVE_Tablet",
             "kat_aatKit",
             "kat_accuvac",
             "ACE_adenosine",
@@ -309,27 +303,27 @@ call {
             "ACE_ATragMX",
             "ACE_CableTie",
             "ACE_DefusalKit",
-            "AMP_door_Wedge",
+            "AMP_Door_Wedge",
             "ACE_EarPlugs",
-            "ACE_Entrenchingtool",
+            "ACE_EntrenchingTool",
             "ACE_DAGR",
             "ACE_Flashlight_MX991",
             "ACE_HuntIR_monitor",
-            "ACE_IR_strobe_Item",
+            "ACE_IR_Strobe_Item",
             "ACE_Kestrel4500",
             "ACE_Flashlight_KSF1",
             "ACE_M26_Clacker",
             "ACE_Clacker",
-            "ACE_Maptools",
+            "ACE_MapTools",
             "ACE_microDAGR",
-            "mineDetector",
+            "MineDetector",
             "ACE_RangeCard",
             "ACE_Sandbag_empty",
-            "toolKit",
+            "ToolKit",
             "ACE_SpottingScope",
             "ACE_SpraypaintBlack",
             "ACE_SpraypaintBlue",
-            "ACE_Spraypaintgreen",
+            "ACE_SpraypaintGreen",
             "ACE_SpraypaintRed",
             "ACE_wirecutter",
             "ACE_Tripod",
@@ -337,13 +331,13 @@ call {
             "TFAR_anprc152",
             "TFAR_rf7800str"
         ];
-        _Availableheadgear = [];
-        _Availablegoggles = [];
-        _Availableuniforms = [];
-        _Availablevests = [];
-        _Availablebackpacks = [];
+        _AvailableHeadgear = [];
+        _AvailableGoggles = [];
+        _AvailableUniforms = [];
+        _AvailableVests = [];
+        _AvailableBackpacks = [];
         _AvailableAttachments = [];
-        _Availablemagazines = [
+        _AvailableMagazines = [
             "200Rnd_556x45_Box_F",
             "200Rnd_556x45_Box_Red_F",
             "200Rnd_556x45_Box_Tracer_F",
@@ -412,7 +406,7 @@ call {
             "rhs_mag_30Rnd_556x45_M855_Stanag_Ranger_Tracer_Red",
             "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Green",
             "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Yellow",
-            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_orange",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Orange",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag_Pull",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger",
@@ -422,7 +416,7 @@ call {
             "rhs_mag_30Rnd_556x45_M855A1_Stanag_Ranger_Tracer_Red",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow",
-            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_orange",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Orange",
             "rhs_mag_30Rnd_556x45_Mk318_Stanag",
             "rhs_mag_30Rnd_556x45_Mk318_Stanag_Pull",
             "rhs_mag_30Rnd_556x45_Mk318_Stanag_Ranger",
@@ -447,12 +441,12 @@ call {
             "rhs_mag_30Rnd_556x45_M855_PMAG_Tracer_Red",
             "rhs_mag_30Rnd_556x45_Mk318_PMAG",
             "rhs_mag_30Rnd_556x45_Mk262_PMAG",
-            "rhs_mag_30Rnd_556x45_M855A1_PMAG_tan",
-            "rhs_mag_30Rnd_556x45_M855A1_PMAG_tan_Tracer_Red",
-            "rhs_mag_30Rnd_556x45_M855_PMAG_tan",
-            "rhs_mag_30Rnd_556x45_M855_PMAG_tan_Tracer_Red",
-            "rhs_mag_30Rnd_556x45_Mk318_PMAG_tan",
-            "rhs_mag_30Rnd_556x45_Mk262_PMAG_tan",
+            "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan",
+            "rhs_mag_30Rnd_556x45_M855A1_PMAG_Tan_Tracer_Red",
+            "rhs_mag_30Rnd_556x45_M855_PMAG_Tan",
+            "rhs_mag_30Rnd_556x45_M855_PMAG_Tan_Tracer_Red",
+            "rhs_mag_30Rnd_556x45_Mk318_PMAG_Tan",
+            "rhs_mag_30Rnd_556x45_Mk262_PMAG_Tan",
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
             "ACE_30Rnd_556x45_Stanag_Mk262_mag",
             "ACE_30Rnd_556x45_Stanag_Mk318_mag",
@@ -475,7 +469,7 @@ call {
             "1Rnd_SmokeYellow_Grenade_shell",
             "1Rnd_SmokePurple_Grenade_shell",
             "1Rnd_SmokeBlue_Grenade_shell",
-            "1Rnd_Smokeorange_Grenade_shell",
+            "1Rnd_SmokeOrange_Grenade_shell",
             "ACE_HuntIR_M203",
             "rhs_mag_M441_HE",
             "rhs_mag_M433_HEDP",
@@ -512,12 +506,12 @@ call {
             "ACE_20Rnd_762x51_Mag_Tracer_Dim",
             "ACE_20Rnd_762x51_Mag_SD",
             "ACE_10Rnd_762x51_M118LR_Mag",
-            "ACE_10Rnd_762x51_Mk316_mod_0_Mag",
-            "ACE_10Rnd_762x51_Mk319_mod_0_Mag",
+            "ACE_10Rnd_762x51_Mk316_Mod_0_Mag",
+            "ACE_10Rnd_762x51_Mk319_Mod_0_Mag",
             "ACE_10Rnd_762x51_M993_AP_Mag",
             "ACE_20Rnd_762x51_M118LR_Mag",
-            "ACE_20Rnd_762x51_Mk316_mod_0_Mag",
-            "ACE_20Rnd_762x51_Mk319_mod_0_Mag",
+            "ACE_20Rnd_762x51_Mk316_Mod_0_Mag",
+            "ACE_20Rnd_762x51_Mk319_Mod_0_Mag",
             "ACE_20Rnd_762x51_M993_AP_Mag",
             "ACE_20Rnd_762x51_Mag_tracer_green",
             "ACE_20Rnd_762x51_Mag_tracer_yellow",
@@ -572,9 +566,9 @@ call {
             "ACE_6Rnd_12Gauge_Pellets_No4_Bird",
             "10Rnd_338_Mag",
             "ACE_10Rnd_338_300gr_HPBT_Mag",
-            "ACE_10Rnd_338_Api526_Mag",
-            "ACE_20Rnd_762x67_Mk248_mod_0_Mag",
-            "ACE_20Rnd_762x67_Mk248_mod_1_Mag",
+            "ACE_10Rnd_338_API526_Mag",
+            "ACE_20Rnd_762x67_Mk248_Mod_0_Mag",
+            "ACE_20Rnd_762x67_Mk248_Mod_1_Mag",
             "ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag",
             "50Rnd_570x28_SMG_03",
             "200Rnd_65x39_cased_Box",
@@ -630,8 +624,8 @@ call {
             "rhsusf_mag_10Rnd_STD_50BMG_M33",
             "rhsusf_mag_10Rnd_STD_50BMG_mk211",
             "ACE_5Rnd_127x99_Mag",
-            "ACE_5Rnd_127x99_Api_Mag",
-            "ACE_5Rnd_127x99_Amax_Mag",
+            "ACE_5Rnd_127x99_API_Mag",
+            "ACE_5Rnd_127x99_AMAX_Mag",
             "rhsusf_5Rnd_300winmag_xm2010",
             "rhsusf_5Rnd_762x51_m118_special_Mag",
             "rhsusf_5Rnd_762x51_m993_Mag",
@@ -726,7 +720,7 @@ call {
             "3Rnd_SmokeYellow_Grenade_shell",
             "3Rnd_SmokePurple_Grenade_shell",
             "3Rnd_SmokeBlue_Grenade_shell",
-            "3Rnd_Smokeorange_Grenade_shell",
+            "3Rnd_SmokeOrange_Grenade_shell",
             "rhs_mag_smaw_HEAA",
             "rhs_mag_smaw_HEDP",
             "rhs_mag_smaw_SR",
@@ -792,11 +786,11 @@ call {
             "ACE_1Rnd_82mm_Mo_Smoke",
             "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Green",
             "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Yellow",
-            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_orange",
+            "rhs_mag_30Rnd_556x45_M855_Stanag_Tracer_Orange",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag_No_Tracer",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Green",
             "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Yellow",
-            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_orange",
+            "rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Orange",
             "rhsusf_50Rnd_762x51_m993",
             "rhsusf_100Rnd_762x51_m993",
             "rhs_mag_fold_stock",
@@ -826,7 +820,7 @@ call {
             "ACE_1Rnd_82mm_Mo_HE_Guided",
             "ACE_1Rnd_82mm_Mo_HE"
         ];
-        _Availableweapons = [
+        _AvailableWeapons = [
             "rhs_mag_an_m8hc",
             "Chemlight_blue",
             "Chemlight_green",
@@ -836,9 +830,9 @@ call {
             "ACE_Chemlight_HiWhite",
             "ACE_Chemlight_HiYellow",
             "ACE_Chemlight_IR",
-            "ACE_Chemlight_orange",
+            "ACE_Chemlight_Orange",
             "Chemlight_red",
-            "ACE_Chemlight_UltraHiorange",
+            "ACE_Chemlight_UltraHiOrange",
             "ACE_Chemlight_White",
             "Chemlight_yellow",
             "ACE_CTS9",
@@ -859,54 +853,60 @@ call {
             "rhsusf_m112_mag",
             "rhsusf_m112x4_mag",
             "rhsusf_mine_m14_mag",
-            "Claymoredirectionalmine_Remote_Mag",
+            "ClaymoreDirectionalMine_Remote_Mag",
             "rhs_mine_M19_mag",
             "rhsusf_mine_m49a1_10m_mag",
             "rhsusf_mine_m49a1_3m_mag",
             "rhsusf_mine_m49a1_6m_mag",
-            "SLAMdirectionalmine_Wire_Mag",
+            "SLAMDirectionalMine_Wire_Mag",
             "AMP_Breaching_Charge_Mag"
         ];
-    };
+ };
 };
 
+
 if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
-    [_object, _Availableheadgear, true] call ace_arsenal_fnc_addVirtualitems;
-    [_object, _Availablegoggles, true] call ace_arsenal_fnc_addVirtualitems;
-    [_object, _Availableuniforms, true] call ace_arsenal_fnc_addVirtualitems;
-    [_object, _Availablevests, true] call ace_arsenal_fnc_addVirtualitems;
-    [_object, _Availableitems, true] call ace_arsenal_fnc_addVirtualitems;
-    [_object, _AvailableAttachments, true] call ace_arsenal_fnc_addVirtualitems;
-    [_object, _Availableweapons, true] call ace_arsenal_fnc_addVirtualitems;
-    [_object, _Availablebackpacks, true] call ace_arsenal_fnc_addVirtualitems;
-    [_object, _Availablemagazines, true] call ace_arsenal_fnc_addVirtualitems;
+ [_object, _AvailableHeadGear, true] call ace_arsenal_fnc_addVirtualItems;
+ [_object, _AvailableGoggles, true] call ace_arsenal_fnc_addVirtualItems;
+ [_object, _AvailableUniforms, true] call ace_arsenal_fnc_addVirtualItems;
+ [_object, _AvailableVests, true] call ace_arsenal_fnc_addVirtualItems;
+ [_object, _AvailableItems, true] call ace_arsenal_fnc_addVirtualItems;
+ [_object, _AvailableAttachments, true] call ace_arsenal_fnc_addVirtualItems;
+ [_object, _AvailableWeapons, true] call ace_arsenal_fnc_addVirtualItems;
+ [_object, _AvailableBackpacks, true] call ace_arsenal_fnc_addVirtualItems;
+ [_object, _AvailableMagazines, true] call ace_arsenal_fnc_addVirtualItems;
 } else {
-    [_object, _Availableheadgear, true] call BIS_fnc_addVirtualitemCargo;
-    [_object, _Availablegoggles, true] call BIS_fnc_addVirtualitemCargo;
-    [_object, _Availableuniforms, true] call BIS_fnc_addVirtualitemCargo;
-    [_object, _Availablevests, true] call BIS_fnc_addVirtualitemCargo;
-    [_object, _Availableitems, true] call BIS_fnc_addVirtualitemCargo;
-    [_object, _AvailableAttachments, true] call BIS_fnc_addVirtualitemCargo;
-    [_object, _Availableweapons, true] call BIS_fnc_addVirtualweaponCargo;
-    [_object, _Availablebackpacks, true] call BIS_fnc_addVirtualbackpackCargo;
-    [_object, _Availablemagazines, true] call BIS_fnc_addVirtualmagazineCargo;
+ [_object, _AvailableHeadGear, true] call BIS_fnc_addVirtualItemCargo;
+ [_object, _AvailableGoggles, true] call BIS_fnc_addVirtualItemCargo;
+ [_object, _AvailableUniforms, true] call BIS_fnc_addVirtualItemCargo;
+ [_object, _AvailableVests, true] call BIS_fnc_addVirtualItemCargo;
+ [_object, _AvailableItems, true] call BIS_fnc_addVirtualItemCargo;
+ [_object, _AvailableAttachments, true] call BIS_fnc_addVirtualItemCargo;
+ [_object, _AvailableWeapons, true] call BIS_fnc_addVirtualWeaponCargo;
+ [_object, _AvailableBackpacks, true] call BIS_fnc_addVirtualBackpackCargo;
+ [_object, _AvailableMagazines, true] call BIS_fnc_addVirtualMagazineCargo;
 };
 
 {
-    _x addcuratorEditableObjects [[_object], false];
+ _x addCuratorEditableObjects [[_object], false];
 } forEach allCurators;
 
+
+
 _handle = [
-    {
-        (_this select 0) params ["_object", "_duration"];
-        
-        if (_duration == 0) exitwith {
-            [_handle] call CBA_fnc_removePerFrameHandler;
-        };
-        
-        if (time > (_duration * 60)) exitwith {
-            deletevehicle _object;
-            [_handle] call CBA_fnc_removePerFrameHandler;
-        };
-    }, 60, [_object, _duration]
+ {
+  (_this select 0) params ["_object", "_duration"];
+
+  if (_duration == 0) exitwith {
+   [_handle] call CBA_fnc_removePerFrameHandler;
+  };
+
+  if (time > (_duration * 60)) exitwith {
+   deletevehicle _object;
+   [_handle] call CBA_fnc_removePerFrameHandler;
+  };
+
+ }, 60, [_object, _duration]
 ] call CBA_fnc_addPerFrameHandler;
+
+

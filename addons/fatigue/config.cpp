@@ -1,9 +1,9 @@
 #include "script_component.hpp"
 
-class CfgPatches
-{
-    class TFS_Fatigue
-    {
+
+class CfgPatches {
+    
+    class TFS_Fatigue {
         author = AUTHOR;
         name = COMPONENT_NAME;
         url = URL;
@@ -19,6 +19,7 @@ class CfgPatches
         };
         VERSION_CONFIG;
     };
+    
 };
 
 #include "CfgEventHandlers.hpp"

@@ -1,116 +1,104 @@
 /*
-TFS MISSION TEMPLATE
-fn_RealWeather.sqf
-Author: Code34
-MitchJC - Conversion to PFH & Function
-Description: randomizes Weather
+    TFS MISSION TEMPLATE
+    fn_RealWeather.sqf
+    Author: Code34
+            MitchJC - Conversion to PFH & Function
+    Description: Randomizes Weather
 */
-// not documented: postinit
+// not documented: postInit
 private _TFS_Weather_StartWeather = uiNamespace getVariable ["TFS_Weather_StartWeather", 1];
-private _TFS_Weather_Realtime = uiNamespace getVariable ["TFS_Weather_Realtime", true];
-private _TFS_Weather_Synctime = uiNamespace getVariable ["TFS_Weather_Synctime", 60];
-private _TFS_Weather_mintime = uiNamespace getVariable ["TFS_Weather_mintime", 1];
-private _TFS_Weather_maxtime = uiNamespace getVariable ["TFS_Weather_maxtime", 60];
-private _TFS_Weather_daytimeAcc = uiNamespace getVariable ["TFS_Weather_daytimeAcc", 1];
-private _TFS_Weather_NighttimeAcc = uiNamespace getVariable ["TFS_Weather_NighttimeAcc", 1];
+private _TFS_Weather_RealTime = uiNamespace getVariable ["TFS_Weather_RealTime", true];
+private _TFS_Weather_SyncTime = uiNamespace getVariable ["TFS_Weather_SyncTime", 60];
+private _TFS_Weather_MinTime = uiNamespace getVariable ["TFS_Weather_MinTime", 1];
+private _TFS_Weather_MaxTime = uiNamespace getVariable ["TFS_Weather_MaxTime", 60];
+private _TFS_Weather_DayTimeAcc = uiNamespace getVariable ["TFS_Weather_DayTimeAcc", 1];
+private _TFS_Weather_NightTimeAcc = uiNamespace getVariable ["TFS_Weather_NightTimeAcc", 1];
 
-// Convert to minutes
-_TFS_Weather_mintime = _TFS_Weather_mintime * 60;
-_TFS_Weather_maxtime = _TFS_Weather_maxtime * 60;
+// Convert to Minutes
+_TFS_Weather_MinTime = _TFS_Weather_MinTime * 60;
+_TFS_Weather_MaxTime = _TFS_Weather_MaxTime * 60;
 
 private _StartingWeather = call {
-    if (_TFS_Weather_StartWeather isEqualto 0) exitwith {
-        selectRandom ["CLEAR", "CLEAR", "CLOUDY", "CLOUDY", "rain"]
-    };
-    if (_TFS_Weather_StartWeather isEqualto 1) exitwith {
-        "CLEAR"
-    };
-    if (_TFS_Weather_StartWeather isEqualto 2) exitwith {
-        "CLOUDY"
-    };
-    if (_TFS_Weather_StartWeather isEqualto 3) exitwith {
-        "rain"
-    };
+    if (_TFS_Weather_StartWeather IsEqualTo 0) exitwith {SelectRandom ["CLEAR", "CLEAR", "CLOUDY", "CLOUDY", "RAIN"]};
+    if (_TFS_Weather_StartWeather IsEqualTo 1) exitwith {"CLEAR"};
+    if (_TFS_Weather_StartWeather IsEqualTo 2) exitwith {"CLOUDY"};
+    if (_TFS_Weather_StartWeather IsEqualTo 3) exitwith {"RAIN"};
     "CLEAR";
 };
+///////////////////////////////////////////////////////////
+// Do not edit below
+/////////////////////////////////////////////////////////////////
 
-// do not edit below
+if(_TFS_Weather_MinTime > _TFS_Weather_MaxTime) then {
+    hint format["Min Time cannot be highter than max time. Min Time set to %1 ", _TFS_Weather_MaxTime, _TFS_Weather_MinTime];
+    _TFS_Weather_MinTime = _TFS_Weather_MaxTime;
+    };
 
-if (_TFS_Weather_mintime > _TFS_Weather_maxtime) then {
-    hint format["min time cannot be highter than max time. min time set to %1 ", _TFS_Weather_maxtime, _TFS_Weather_mintime];
-    _TFS_Weather_mintime = _TFS_Weather_maxtime;
-};
-
-// setDate startingdate;
+// setdate startingdate;
 
 wcweather = call {
-    if (_StartingWeather isEqualto "CLEAR") exitwith {
-        [0, 0, 0, [random 3, random 3, true], date];
-    };
-    if (_StartingWeather isEqualto "CLOUDY") exitwith {
-        [0, 0, 0.6, [random 3, random 3, true], date];
-    };
-    if (_StartingWeather isEqualto "rain") exitwith {
-        [1, 0, 1, [random 3, random 3, true], date];
-    };
+    if (_StartingWeather IsEqualTo "CLEAR") exitwith {[0, 0, 0, [random 3, random 3, true], date];};
+    if (_StartingWeather IsEqualTo "CLOUDY") exitwith {[0, 0, 0.6, [random 3, random 3, true], date];};
+    if (_StartingWeather IsEqualTo "RAIN") exitwith {[1, 0, 1, [random 3, random 3, true], date];};
     [0, 0, 0, [random 3, random 3, true], date];
 };
 
-// add handler
+    // add handler
 if (local player) then {
     wcweatherstart = true;
-    "wcweather" addpublicVariableEventHandler {
+    "wcweather" addPublicVariableEventHandler {
         // first JIP synchronization
-        if (wcweatherstart) then {
+        if(wcweatherstart) then {
             wcweatherstart = false;
-            skiptime -24;
+            skipTime -24;
             86400 setRain (wcweather select 0);
-            86400 setFog (wcweather select 1);
-            86400 setovercast (wcweather select 2);
-            skiptime 24;
-            simulWeatherSync;
+            86400 setfog (wcweather select 1);
+            86400 setOvercast (wcweather select 2);
+            skipTime 24;
+            simulweatherSync;
             setwind (wcweather select 3);
-            setDate (wcweather select 4);
-        } else {
+            setdate (wcweather select 4);
+        }else{
             wcweather = _this select 1;
             60 setRain (wcweather select 0);
-            60 setFog (wcweather select 1);
-            60 setovercast (wcweather select 2);
+            60 setfog (wcweather select 1);
+            60 setOvercast (wcweather select 2);
             setwind (wcweather select 3);
-            setDate (wcweather select 4);
+            setdate (wcweather select 4);
         };
     };
 };
 
-// SERVER side SCRIPT
-if (!isServer) exitwith {};
+// SERVER SIDE SCRIPT
+if (!isServer) exitWith{};
 
 // apply weather
-skiptime -24;
+skipTime -24;
 86400 setRain (wcweather select 0);
-86400 setFog (wcweather select 1);
-86400 setovercast (wcweather select 2);
-skiptime 24;
-simulWeatherSync;
+86400 setfog (wcweather select 1);
+86400 setOvercast (wcweather select 2);
+skipTime 24;
+simulweatherSync;
 setwind (wcweather select 3);
-setDate (wcweather select 4);
+setdate (wcweather select 4);
+
 
 // sync server & client weather & time
 [
     {
         params ["_args", "_pfhID"];
-        _args params ["_TFS_Weather_Realtime", "_TFS_Weather_NighttimeAcc", "_TFS_Weather_daytimeAcc"];
-        
+        _args params ["_TFS_Weather_RealTime", "_TFS_Weather_NightTimeAcc", "_TFS_Weather_DayTimeAcc"];
+
         wcweather set [4, date];
-        publicVariable "wcweather";
-        if (!_TFS_Weather_Realtime) then {
-            if ((date select 3 > 16) or (date select 3 <6)) then {
-                settimeMultiplier _TFS_Weather_NighttimeAcc;
+        publicvariable "wcweather";
+        if(!_TFS_Weather_RealTime) then {
+            if((date select 3 > 16) or (date select 3 <6)) then {
+                setTimeMultiplier _TFS_Weather_NightTimeAcc;
             } else {
-                settimeMultiplier _TFS_Weather_daytimeAcc;
+                setTimeMultiplier _TFS_Weather_DayTimeAcc;
             };
         };
-    }, _TFS_Weather_Synctime, [_TFS_Weather_Realtime, _TFS_Weather_NighttimeAcc, _TFS_Weather_daytimeAcc]
+    }, _TFS_Weather_SyncTime, [_TFS_Weather_RealTime, _TFS_Weather_NightTimeAcc, _TFS_Weather_DayTimeAcc]
 ] call CBA_fnc_addPerFrameHandler;
 
 private _lastrain = 0;
@@ -121,38 +109,40 @@ private _overcast = 0;
     {
         params ["_args", "_pfhID"];
         _args params ["_lastrain", "_rain", "_overcast"];
-        
-        _overcast = random 1;
-        if (_overcast > 0.70) then {
-            _rain = random 1;
+
+        _Overcast = random 1;
+        if(_Overcast > 0.70) then {
+            _Rain = random 1;
         } else {
-            _rain = 0;
+            _Rain = 0;
         };
-        if ((date select 3 > 2) and (date select 3 <6)) then {
-            if (random 1 > 0.9) then {
-                _fog = 0.1 + (random 0.4);
+        if((date select 3 > 2) and (date select 3 <6)) then {
+            if(random 1 > 0.9) then {
+                _Fog = 0.1 + (random 0.4);
             } else {
-                _fog = 0.1 + (random 0.2);
+                _Fog = 0.1 + (random 0.2);
             };
         } else {
-            if ((_lastrain > 0.6) and (_rain < 0.2)) then {
-                _fog = random 0.2;
+            if((_lastrain > 0.6) and (_Rain < 0.2)) then {
+                _Fog = random 0.2;
             } else {
-                _fog = 0;
+                _Fog = 0;
             };
         };
-        if (random 1 > 0.95) then {
+        if(random 1 > 0.95) then {
             _wind = [random 7, random 7, true];
         } else {
             _wind = [random 3, random 3, true];
         };
-        _lastrain = _rain;
-        
-        wcweather = [_rain, _fog, _overcast, _wind, date];
-        
+        _lastrain = _Rain;
+
+        wcweather = [_Rain, _Fog, _overcast, _wind, date];
+
         60 setRain (wcweather select 0);
-        60 setFog (wcweather select 1);
-        60 setovercast (wcweather select 2);
+        60 setfog (wcweather select 1);
+        60 setOvercast (wcweather select 2);
         setwind (wcweather select 3);
-    }, floor random [_TFS_Weather_mintime, ((_TFS_Weather_mintime + _TFS_Weather_maxtime)/2), _TFS_Weather_maxtime], [_lastrain, _rain, _overcast]
+
+    }, floor random [_TFS_Weather_MinTime, ((_TFS_Weather_MinTime + _TFS_Weather_MaxTime)/2)
+, _TFS_Weather_MaxTime], [_lastrain, _rain, _overcast]
 ] call CBA_fnc_addPerFrameHandler;

@@ -1,7 +1,7 @@
-// not documented: postinit
+// not documented: postInit
 
-if (isServer) then {
-    ["initialize"] call BIS_fnc_dynamicgroups;
+if (isserver) then {
+ ["Initialize"] call BIS_fnc_dynamicGroups;
 } else {
-    ["initializeplayer", [player]] call BIS_fnc_dynamicgroups;
+ ["InitializePlayer", [player]] call BIS_fnc_dynamicGroups;
 };

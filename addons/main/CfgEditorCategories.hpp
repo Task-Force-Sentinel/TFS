@@ -1,5 +1,7 @@
 class CfgEditorCategories {
+    
     class EdCat_TFS {
-        displayname =  PREFIX;
+        displayName = "$STR_TFS_EdCat";
     };
+    
 };

@@ -1,21 +1,20 @@
-class ScreenConfigdialog {
+class ScreenConfigDialog {
+
     idd = 21822;
-    
+
     class controlsBackground {
-        class Backdrop: TFS_CC_Rsctext
+        class Backdrop: TFS_CC_RscText
         {
             idc = 1001;
             x = 8 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
             y = 5 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
             w = 24 * GUI_GRID_CENTER_W;
             h = 13 * GUI_GRID_CENTER_H;
-            colorBackground[] = {
-                0.2, 0.2, 0.2, 1
-            };
+            colorBackground[] = {0.2,0.2,0.2,1};
         };
     };
     class controls {
-        class titleText: TFS_CC_Rsctext
+        class TitleText: TFS_CC_RscText
         {
             idc = 1000;
             style = "ST_TITLE_BAR";
@@ -24,11 +23,9 @@ class ScreenConfigdialog {
             y = 4 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
             w = 24 * GUI_GRID_CENTER_W;
             h = 1 * GUI_GRID_CENTER_H;
-            colorBackground[] = {
-                0.2, 0.4, 0.2, 1
-            };
+            colorBackground[] = {0.2,0.4,0.2,1};
         };
-        class Camtext: TFS_CC_Rsctext
+        class CamText: TFS_CC_RscText
         {
             idc = 1002;
             text = "View Helmet Camera";
@@ -37,7 +34,7 @@ class ScreenConfigdialog {
             w = 10 * GUI_GRID_CENTER_W;
             h = 1 * GUI_GRID_CENTER_H;
         };
-        class Dronetext: TFS_CC_Rsctext
+        class DroneText: TFS_CC_RscText
         {
             idc = 1003;
             text = "View Drone Camera";
@@ -46,10 +43,10 @@ class ScreenConfigdialog {
             w = 10 * GUI_GRID_CENTER_W;
             h = 1 * GUI_GRID_CENTER_H;
         };
-        class Sattext: TFS_CC_Rsctext
+        class SatText: TFS_CC_RscText
         {
             idc = 1004;
-            text = "View Satellite imagery";
+            text = "View Satellite Imagery";
             x = 9 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
             y = 14 * GUI_GRID_CENTER_H + GUI_GRID_CENTER_Y;
             w = 10 * GUI_GRID_CENTER_W;
@@ -64,7 +61,7 @@ class ScreenConfigdialog {
             h = 1 * GUI_GRID_CENTER_H;
             text = "Cancel";
         };
-        class Camselecttext: TFS_CC_Rsctext
+        class CamSelectText: TFS_CC_RscText
         {
             idc = 1006;
             text = "Target:";
@@ -73,7 +70,7 @@ class ScreenConfigdialog {
             w = 4 * GUI_GRID_CENTER_W;
             h = 1 * GUI_GRID_CENTER_H;
         };
-        class Droneselecttext: TFS_CC_Rsctext
+        class DroneSelectText: TFS_CC_RscText
         {
             idc = 1007;
             text = "Drone:";
@@ -82,7 +79,7 @@ class ScreenConfigdialog {
             w = 4 * GUI_GRID_CENTER_W;
             h = 1 * GUI_GRID_CENTER_H;
         };
-        class Satselecttext: TFS_CC_Rsctext
+        class SatSelectText: TFS_CC_RscText
         {
             idc = 1008;
             text = "Center on:";
@@ -91,7 +88,7 @@ class ScreenConfigdialog {
             w = 4 * GUI_GRID_CENTER_W;
             h = 1 * GUI_GRID_CENTER_H;
         };
-        class CamselectCombo: TFS_CC_RscCombo
+        class CamSelectCombo: TFS_CC_RscCombo
         {
             idc = 2100;
             x = 15 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
@@ -99,7 +96,7 @@ class ScreenConfigdialog {
             w = 11 * GUI_GRID_CENTER_W;
             h = 1 * GUI_GRID_CENTER_H;
         };
-        class DroneselectCombo: TFS_CC_RscCombo
+        class DroneSelectCombo: TFS_CC_RscCombo
         {
             idc = 2101;
             x = 15 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;
@@ -107,7 +104,7 @@ class ScreenConfigdialog {
             w = 11 * GUI_GRID_CENTER_W;
             h = 1 * GUI_GRID_CENTER_H;
         };
-        class SatselectCombo: TFS_CC_RscCombo
+        class SatSelectCombo: TFS_CC_RscCombo
         {
             idc = 2102;
             x = 15 * GUI_GRID_CENTER_W + GUI_GRID_CENTER_X;

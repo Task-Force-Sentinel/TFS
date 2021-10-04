@@ -1,20 +1,20 @@
 /*
-*	ARMA EXTENDED ENVIRONMENT
-*	\tfs_common\functions\addons\fn_getAddonweapons.sqf
-*	by Ojemineh
-*
-*	get addon weapons
-*
-*	Arguments:
-*	0: classname - <strinG>
-*
-*	Return:
-*	<ARRAY>
-*
-*	Example:
-*	["TFS_core"] call tfs_fnc_getAddonweapons;
-*
-*/
+ * ARMA EXTENDED ENVIRONMENT
+ * \tfs_common\functions\addons\fn_getAddonWeapons.sqf
+ * by Ojemineh
+ * 
+ * get addon weapons
+ * 
+ * Arguments:
+ * 0: classname - <STRING>
+ * 
+ * Return:
+ * <ARRAY>
+ * 
+ * Example:
+ * ["TFS_core"] call tfs_fnc_getAddonWeapons;
+ * 
+ */
 
 // -------------------------------------------------------------------------------------------------
 
@@ -26,8 +26,8 @@ _classname = [_this, 0, "", [""]] call BIS_fnc_param;
 
 private _return = [];
 
-if (isClass (configFile >> "CfgPatches" >> _classname)) then {
-    _return = getArray (configFile >> "CfgPatches" >> _classname >> "weapons");
+if (isClass (configfile >> "CfgPatches" >> _classname)) then {
+    _return = getArray (configfile >> "CfgPatches" >> _classname >> "weapons");
 };
 
 _return;

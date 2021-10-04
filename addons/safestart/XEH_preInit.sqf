@@ -1,28 +1,27 @@
 #include "script_component.hpp"
-ADdoN = false;
+ADDON = false;
 
-PREP_REcompile_START;
+PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
-PREP_REcompile_END;
+PREP_RECOMPILE_END;
 
-#include "initsettings.sqf"
+#include "initSettings.sqf"
 
 [QGVAR(enableSafety), {
     params ["_player"];
-    
+
     [_player] call FUNC(lowerWeapon);
-    
-    if (EGVAR(common, aceSafemode) && {
-        GVAR(startlocked)
-    }) then {
-        [_player, currentWeapon _player, true] call ACEFUNC(safemode, setweaponsafety);
+
+    if (EGVAR(common,aceSafemode) && {GVAR(startLocked)}) then {
+        [_player, currentWeapon _player, true] call ACEFUNC(safemode,setWeaponSafety);
     };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(lowerWeapon), {
     params ["_unit"];
-    
+
     _unit action ["WeaponOnBack", _unit];
+
 }] call CBA_fnc_addEventHandler;
 
-ADdoN = true;
+ADDON = true;

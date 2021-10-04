@@ -1,20 +1,20 @@
 /*
-*	ARMA EXTENDED ENVIRONMENT
-*	\tfs_common\functions\addons\fn_getAddonunits.sqf
-*	by Ojemineh
-*
-*	get addon units
-*
-*	Arguments:
-*	0: classname - <strinG>
-*
-*	Return:
-*	<ARRAY>
-*
-*	Example:
-*	["TFS_core"] call tfs_fnc_getAddonunits;
-*
-*/
+ * ARMA EXTENDED ENVIRONMENT
+ * \tfs_common\functions\addons\fn_getAddonUnits.sqf
+ * by Ojemineh
+ * 
+ * get addon units
+ * 
+ * Arguments:
+ * 0: classname - <STRING>
+ * 
+ * Return:
+ * <ARRAY>
+ * 
+ * Example:
+ * ["TFS_core"] call tfs_fnc_getAddonUnits;
+ * 
+ */
 
 // -------------------------------------------------------------------------------------------------
 
@@ -26,8 +26,8 @@ _classname = [_this, 0, "", [""]] call BIS_fnc_param;
 
 private _return = [];
 
-if (isClass (configFile >> "CfgPatches" >> _classname)) then {
-    _return = getArray (configFile >> "CfgPatches" >> _classname >> "units");
+if (isClass (configfile >> "CfgPatches" >> _classname)) then {
+    _return = getArray (configfile >> "CfgPatches" >> _classname >> "units");
 };
 
 _return;

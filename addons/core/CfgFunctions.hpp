@@ -1,95 +1,101 @@
 class CfgFunctions {
+    
     class TFS_core {
+        
         tag = "tfs_core";
         
         class core {
             file = "z\tfs\addons\core\functions";
             class initialize {};
-            class initsettings {};
+            class initSettings {};
         };
+        
     };
     
     class TFS_Functions {
+        
         tag = "tfs";
         
         class Addons {
             file = "z\tfs\addons\core\functions\addons";
             class getAddonAuthor {};
             class getAddonAuthors {};
-            class getAddonname {};
+            class getAddonName {};
             class getAddonRequiredAddons {};
-            class getAddonrequiredVersion {};
-            class getAddonunits {};
+            class getAddonRequiredVersion {};
+            class getAddonUnits {};
             class getAddonURL {};
             class getAddonVersion {};
             class getAddonVersionArray {};
-            class getAddonVersionstring {};
-            class getAddonweapons {};
+            class getAddonVersionString {};
+            class getAddonWeapons {};
             class isAddon {};
         };
         
         class core {
             file = "z\tfs\addons\core\functions\common";
             class addItem {};
-            class attachtorel {};
+            class attachToRel {};
             class createLitter {};
             class createLitterServer {};
-            class getUnitinsignia {};
-            class isadmin {};
+            class getUnitInsignia {};
+            class isAdmin {};
             class isCurator {};
-            class isinBuilding {};
+            class isInBuilding {};
             class screenshot {};
-            class setUnitinsignia {};
+            class setUnitInsignia {};
         };
         
         class Diagnostic {
             file = "z\tfs\addons\core\functions\diagnostics";
-            class diaglog {};
-            class diaglogGlobal {};
-            class diaglogServer {};
+            class diagLog {};
+            class diagLogGlobal {};
+            class diagLogServer {};
             class isDebug {};
             class log {};
             class logGlobal {};
             class logServer {};
         };
-        
-        class settings {
+                
+        class Settings {
             file = "z\tfs\addons\core\functions\settings";
-            class getKeybindstring {};
+            class getKeybindString {};
             class needRestart {};
-            class needRestartlocal {};
+            class needRestartLocal {};
         };
         
         class Sounds {
             file = "z\tfs\addons\core\functions\sounds";
-            class decibeltoGain {};
-            class gaintoDecibel {};
-            class getSounddistance {};
+            class decibelToGain {};
+            class gainToDecibel {};
+            class getSoundDistance {};
             class getSoundDuration {};
             class getSoundFile {};
-            class getSoundpitch {};
-            class getsoundVolume {};
+            class getSoundPitch {};
+            class getSoundVolume {};
             class isSpeaking {};
             class loop3dSound {};
-            class loop3dSoundlocal {};
+            class loop3dSoundLocal {};
             class play3dSound {};
-            class play3dSoundlocal {};
+            class play3dSoundLocal {};
             class playSound {};
-            class playSoundlocal {};
-            class playSound3D {};
-            class say3D {};
-            class say3Dlocal {};
+            class playSoundLocal {};
+            class playSound3d {};
+            class say3d {};
+            class say3dLocal {};
             class speak3d {};
-            class speak3dlocal {};
+            class speak3dLocal {};
             class stop3dSound {};
-            class stop3dSoundlocal {};
+            class stop3dSoundLocal {};
         };
         
         class Videos {
             file = "z\tfs\addons\core\functions\videos";
             class playVideo {};
             class playVideoOnce {};
-            class videoKeydown {};
+            class videoKeyDown {};
         };
+        
     };
+    
 };

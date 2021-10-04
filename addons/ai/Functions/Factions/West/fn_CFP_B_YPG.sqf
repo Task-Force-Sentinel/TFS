@@ -1,10 +1,10 @@
-_infantrytype = "infantry";
-_infaalist = [];
-_infatlist = ["cfp_b_grp_ypg_at_team"];
-_sniperlist = ["cfp_b_grp_ypg_sniper_squad"];
-_vehAAlist = [];
-_vehMraplist = [];
-_vehLightlist = ["cfp_b_ypg_offroad", "cfp_b_ypg_offroad_flag", "cfp_b_ypg_offroad_M2", "cfp_b_ypg_offroad_M2_flag"];
-_vehHeavylist = [];
+_InfantryType = "Infantry";
+_infaaList    = [];
+_infatList    = ["cfp_b_grp_ypg_at_team"];
+_sniperList   = ["cfp_b_grp_ypg_sniper_squad"];
+_vehAAList    = [];
+_vehMrapList  = [];
+_vehLightList = ["cfp_b_ypg_offroad","cfp_b_ypg_offroad_flag","cfp_b_ypg_offroad_M2","cfp_b_ypg_offroad_M2_flag"];
+_vehHeavyList = [];
 
-[_infantrytype, _infaalist, _infatlist, _sniperlist, _vehAAlist, _vehMraplist, _vehLightlist, _vehHeavylist]
+[_InfantryType, _infaaList, _infatList, _sniperList, _vehAAList, _vehMrapList, _vehLightList, _vehHeavyList]

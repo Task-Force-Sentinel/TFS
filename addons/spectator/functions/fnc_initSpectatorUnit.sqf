@@ -1,28 +1,26 @@
 #include "\z\tfs\addons\spectator\script_component.hpp"
 /* ----------------------------------------------------------------------------
-internal Function: TFS_spectator_fnc_initSpectatorUnit
+Internal Function: TFS_spectator_fnc_initSpectatorUnit
 
 Description:
-initializes the virtual spectator unit.
+    Initializes the virtual spectator unit.
 
-parameters:
-_unit - Spectator virtual entity [Object]
+Parameters:
+    _unit - Spectator virtual entity [Object]
 
 Examples:
-(begin example)
-[_specEntity] spawn TFS_spectator_fnc_initSpectatorUnit
-(end)
+    (begin example)
+        [_specEntity] spawn TFS_spectator_fnc_initSpectatorUnit
+    (end)
 
 Author:
-Freddo
+    Freddo
 ---------------------------------------------------------------------------- */
 params ['_unit'];
 
-if !(hasinterface) exitwith {};
-waitUntil {
-    !isNull player
-};
+if !(hasInterface) exitWith {};
+waitUntil {!isNull player};
 
 if (player == _unit) then {
-    [_unit, _unit, true] call FUNC(init);
+    [_unit,_unit,true] call FUNC(init);
 };

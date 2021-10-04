@@ -1,27 +1,25 @@
 #include "script_component.hpp"
 
-private ["_playableunits", "_aiunits", "_allgroups"];
+private ["_playableUnits","_aiUnits","_allGroups"];
 if (isMultiplayer) then {
-    _playableunits = count playableunits;
+    _playableUnits = count playableUnits;
 } else {
-    _playableunits = count switchableunits;
+    _playableUnits = count switchableUnits;
 };
 
-_aiunits = ((count allunits)-(_playableunits));
-_allgroups = count allgroups;
+_aiUnits = ((count allUnits)-(_playableUnits));
+_allGroups = count allGroups;
 
-// init reporting
-diag_log "";
-diag_log "";
+// Init reporting
+diag_log ""; diag_log "";
 diag_log "--------------------------------------------------------------------------------------";
-diag_log format ["RPT: init - Mission name: %1", (gettext (missionConfigFile >> "overviewtext"))];
-diag_log format ["RPT: init - Mission developer: %1", (gettext (missionConfigFile >> "author"))];
+diag_log format ["RPT: Init - Mission name: %1",(getText (missionConfigFile >> "overviewText"))];
+diag_log format ["RPT: Init - Mission developer: %1",(getText (missionConfigFile >> "author"))];
 diag_log "--------------------------------------------------------------------------------------";
-diag_log format ["RPT: init - Number of clients connected: %1", _playableunits];
+diag_log format ["RPT: Init - Number of clients connected: %1", _playableUnits];
 diag_log "--------------------------------------------------------------------------------------";
-diag_log format ["RPT: init - Number of AI's active: %1", _aiunits];
+diag_log format ["RPT: Init - Number of AI's active: %1", _aiUnits];
 diag_log "--------------------------------------------------------------------------------------";
-diag_log format ["RPT: init - Number of groups active: %1", _allgroups];
+diag_log format ["RPT: Init - Number of Groups active: %1", _allGroups];
 diag_log "--------------------------------------------------------------------------------------";
-diag_log "";
-diag_log "";
+diag_log ""; diag_log "";

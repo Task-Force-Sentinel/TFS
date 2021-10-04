@@ -1,50 +1,42 @@
 #include "script_component.hpp"
 /*
-* Author: 3Mydlo3
-* Function reads task owners from supplied array and returns processed array.
-*
-* Arguments:
-* 0: Task owners array <ARRAY>
-*
-* Return Value:
-* 0: Processed task owners <ARRAY>
-*
-* Example:
-* [["true", "west", "bob", "rob_group"]] call tfs_main_fnc_example
-*
-* Public: No
-*/
+ * Author: 3Mydlo3
+ * Function reads task owners from supplied array and returns processed array.
+ *
+ * Arguments:
+ * 0: Task owners array <ARRAY>
+ *
+ * Return Value:
+ * 0: Processed task owners <ARRAY>
+ *
+ * Example:
+ * [["true", "west", "bob", "rob_group"]] call tfs_main_fnc_example
+ *
+ * Public: No
+ */
 
-params ["_taskownersRaw"];
+params ["_taskOwnersRaw"];
 
-private _taskowners = [];
+private _taskOwners = [];
 
 {
-    // if "All" keyword is used just return [true]
-    if (_x isEqualto "All" || {
-        _x isEqualto "true"
-    }) exitwith {
-        _taskowners = [true]
-    };
+    // If "All" keyword is used just return [true]
+    if (_x isEqualTo "All" || {_x isEqualTo "true"}) exitWith {_taskOwners = [true]};
     // Check if side was given
     private _side = call compile _x;
-    if (!isnil "_side" && {
-        _side in [west, east, independent, civilian]
-    }) then {
-        _taskowners pushBackUnique _side;
+    if (!isNil "_side" && {_side in [WEST, EAST, INDEPENDENT, CIVILIAN]}) then {
+        _taskOwners pushBackUnique _side;
     } else {
-        // try to reach object
-        private _object = missionnamespace getVariable [_x, objNull];
-        if (isNull _object) exitwith {
-            WARNinG_1("Missing object '%1' for task owner", _x);
+        // Try to reach object
+        private _object = missionNamespace getVariable [_x, objNull];
+        if (isNull _object) exitWith {
+            WARNING_1("Missing object '%1' for task owner", _x);
         };
-        _taskowners pushBackUnique _object;
+        _taskOwners pushBackUnique _object;
     };
-} forEach _taskownersRaw;
+} forEach _taskOwnersRaw;
 
-// nothing eligible was found, show to everyone
-if (_taskowners isEqualto []) exitwith {
-    [true]
-};
+// Nothing eligible was found, show to everyone
+if (_taskOwners isEqualTo []) exitWith {[true]};
 
-_taskowners
+_taskOwners

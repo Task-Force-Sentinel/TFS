@@ -10,7 +10,7 @@ class CfgVehicles {
             "\a3\weapons_f\ammoboxes\bags\data\backpack_compact_blk_co.paa",
             QPATHTOEF(vests,data\vest_platecarrier_black_co.paa) // Expanded part - vest texture
         };
-         maximumLoad = 240;
+        maximumLoad = 200;
     };
     class CLASS(Backpack_AssaultExpanded_Green): B_AssaultPack_Kerry {
         dlc = QUOTE(PREFIX);
@@ -22,7 +22,7 @@ class CfgVehicles {
             "\a3\weapons_f\ammoboxes\bags\data\backpack_compact_rgr_co.paa",
             QPATHTOEF(vests,data\vest_platecarrier_green_co.paa) // Expanded part - vest texture
         };
-         maximumLoad = 240;
+        maximumLoad = 200;
     };
     class CLASS(Backpack_AssaultExpanded_Tan): B_AssaultPack_Kerry {
         dlc = QUOTE(PREFIX);
@@ -34,7 +34,7 @@ class CfgVehicles {
             QPATHTOF(data\backpack_assaultexpanded_tan_co.paa),
             QPATHTOEF(vests,data\vest_platecarrier_coyote_co.paa) // Expanded part - vest texture
         };
-         maximumLoad = 240;
+        maximumLoad = 200;
     };
     class CLASS(Backpack_AssaultExpanded_White): B_AssaultPack_Kerry {
         dlc = QUOTE(PREFIX);
@@ -46,7 +46,7 @@ class CfgVehicles {
             QPATHTOF(data\backpack_assaultexpanded_white_co.paa),
             QPATHTOEF(vests,data\vest_platecarrier_white_co.paa) // Expanded part - vest texture
         };
-         maximumLoad = 240;
+        maximumLoad = 200;
     };
     class CLASS(Backpack_AssaultExpanded_RGR): B_AssaultPack_Kerry {
         dlc = QUOTE(PREFIX);
@@ -58,7 +58,7 @@ class CfgVehicles {
             QPATHTOF(data\backpack_assaultexpanded_rgr_co.paa),
             QPATHTOEF(vests,data\vest_platecarrier_rgr_co.paa) // Expanded part - vest texture
         };
-         maximumLoad = 240;
+        maximumLoad = 200;
     };
 
     class B_AssaultPack_Base;
@@ -71,7 +71,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\backpack_assaultexpanded_rgr_co.paa)
         };
-         maximumLoad = 240;
+        maximumLoad = 180;
     };
 
     class B_Carryall_Base;
@@ -82,7 +82,7 @@ class CfgVehicles {
         displayName = CSTRING(Backpack_Carryall_DarkBlack);
         picture = "\a3\Weapons_F\Ammoboxes\Bags\data\UI\icon_B_C_Tortila_blk.paa";
         hiddenSelectionsTextures[] = {"\a3\weapons_f\ammoboxes\bags\data\backpack_tortila_blk_co.paa"};
-         maximumLoad = 320;
+        maximumLoad = 300;
     };
 
     class B_Kitbag_Base;
@@ -93,7 +93,7 @@ class CfgVehicles {
         displayName = CSTRING(Backpack_Kitbag_DarkBlack);
         picture = QPATHTOF(UI\backpack_kitbag_darkblack_ca.paa);
         hiddenSelectionsTextures[] = {"\a3\weapons_f\ammoboxes\bags\data\backpack_fast_blk_co.paa"};
-         maximumLoad = 320;
+        maximumLoad = 300;
     };
 
     class CLASS(Backpack_Kitbag_White): B_Kitbag_Base {
@@ -105,7 +105,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\backpack_kitbag_white_co.paa)
         };
-         maximumLoad = 320;
+        maximumLoad = 300;
     };
 
     class CLASS(Backpack_Kitbag_RGR): B_Kitbag_Base {
@@ -117,7 +117,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\backpack_kitbag_rgr_co.paa)
         };
-         maximumLoad = 320;
+        maximumLoad = 300;
     };
 
     class CLASS(Backpack_Kitbag_Medic_White): B_Kitbag_Base {
@@ -129,7 +129,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\backpack_kitbag_medic_white_co.paa)
         };
-         maximumLoad = 380;
+        maximumLoad = 320;
     };
 
     class CLASS(Backpack_Kitbag_Medic_Black): B_Kitbag_Base {
@@ -141,7 +141,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\backpack_kitbag_medic_black_co.paa)
         };
-         maximumLoad = 380;
+        maximumLoad = 320;
     };
 
     class CLASS(Backpack_Kitbag_Medic_Coyote): B_Kitbag_Base {
@@ -153,7 +153,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\backpack_kitbag_medic_coyote_co.paa)
         };
-         maximumLoad = 380;
+        maximumLoad = 320;
     };
 
     class CLASS(Backpack_Kitbag_Medic_Digital): B_Kitbag_Base {
@@ -165,7 +165,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\backpack_kitbag_medic_digital_co.paa)
         };
-         maximumLoad = 380;
+        maximumLoad = 320;
     };
 
     class CLASS(Backpack_Kitbag_Medic_MTP): B_Kitbag_Base {
@@ -177,7 +177,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\backpack_kitbag_medic_mtp_co.paa)
         };
-         maximumLoad = 380;
+        maximumLoad = 320;
     };
 
     class CLASS(Backpack_Kitbag_Medic_Green): B_Kitbag_Base {
@@ -189,7 +189,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\backpack_kitbag_medic_green_co.paa)
         };
-         maximumLoad = 380;
+        maximumLoad = 320;
     };
 
     class CLASS(Backpack_Kitbag_Medic_Sage): B_Kitbag_Base {
@@ -201,7 +201,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\backpack_kitbag_medic_sage_co.paa)
         };
-         maximumLoad = 380;
+        maximumLoad = 320;
     };
 
     class CLASS(Backpack_Kitbag_Medic_Tan): B_Kitbag_Base {
@@ -213,7 +213,7 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\backpack_kitbag_medic_tan_co.paa)
         };
-         maximumLoad = 380;
+        maximumLoad = 320;
     };
 
     class CLASS(Backpack_Kitbag_Medic_RGR): B_Kitbag_Base {
@@ -225,6 +225,6 @@ class CfgVehicles {
         hiddenSelectionsTextures[] = {
             QPATHTOF(data\backpack_kitbag_medic_rgr_co.paa)
         };
-         maximumLoad = 380;
+        maximumLoad = 320;
     };
 };

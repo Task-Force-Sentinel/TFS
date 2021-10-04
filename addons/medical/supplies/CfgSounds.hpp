@@ -1,4 +1,5 @@
 class CfgSounds {
+    
     sounds[] = {};
     
     /* MEDICAL SUPPLIES */
@@ -16,4 +17,5 @@ class CfgSounds {
         titles[] = {};
         duration = 1.400;
     };
+    
 };

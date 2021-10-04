@@ -1,62 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="TFS">
+<Project name="Arma_Extended_Environment">
 
-	<!-- ####################################################################################### -->
-	<Package name="Supplies">
+ <!-- ####################################################################################### -->
+ <Package name="TFS_Medical_Supplies">
 
-		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-		<Container name="Medical_Supplies">
-			<!-- =============================================================================== -->
-			<Key ID="STR_TFS_Supplies_Title">
-				<English>TFS Medical Supplies</English>
-			</Key>
-			<Key ID="STR_TFS_Supplies_Author">
-				<English>TFS</English>
-			</Key>
-			<Key ID="STR_TFS_Supplies_URL">
-				<English>https://github.com/TFSmod/TFS</English>
-			</Key>
-			<!-- =============================================================================== -->
-			<Key ID="STR_TFS_Supplies_Action_FirstAid">
-				<English>Unpack Boo Boo Bag</English>
-				<German>Erste-Hilfe-Pack auspacken</German>
-			</Key>
-			<Key ID="STR_TFS_Supplies_Action_MedicKit">
-				<English>Unpack Medic Bag</English>
-				<German>Verbandskasten auspacken</German>
-			</Key>
-			<!-- =============================================================================== -->
-			<Key ID="STR_TFS_Supplies_Progress_FirstAid">
-				<English>Unpack Boo Boo Bag...</English>
-				<German>Erste-Hilfe-Pack auspacken...</German>
-			</Key>
-			<Key ID="STR_TFS_Supplies_Progress_MedicKit">
-				<English>Unpack Medic Bag...</English>
-				<German>Verbandskasten auspacken...</German>
-			</Key>
-			<!-- =============================================================================== -->
-			<Key ID="STR_TFS_Supplies_DisplayName">
-				<English>Boo Boo Bag</English>
-				<German>Erste-Hilfe-Pack</German>
-			</Key>
-			<Key ID="STR_TFS_Supplies_Description">
-				<English>Contains material for first aid</English>
-				<German>Enthält Material für die Erste-Hilfe</German>
-			</Key>
-			<!-- =============================================================================== -->
-			<Key ID="STR_TFS_Supplies_MedicKitDisplayName">
-				<English>Medic Bag</English>
-				<German>Verbandskasten</German>
-			</Key>
-			<Key ID="STR_TFS_Supplies_MedicKitDescription">
-				<English>Contains material for first aid</English>
-				<German>Enthält Material für die Erste-Hilfe</German>
-			</Key>
-			<!-- =============================================================================== -->
-		</Container >
-		<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <Container name="Medical_Supplies">
+   <!-- =============================================================================== -->
+   <Key ID="STR_TFS_Medical_Supplies_Title">
+    < English>TFS Medical Supplies</ English>
+   </Key>
+   <Key ID="STR_TFS_Medical_Supplies_Author">
+    < English>TFS</ English>
+   </Key>
+   <Key ID="STR_TFS_Medical_Supplies_URL">
+    < English>https://github.com/TFSmod/TFS</ English>
+   </Key>
+   <!-- =============================================================================== -->
+  </Container >
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
-	</Package>
-	<!-- ####################################################################################### -->
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <Container name="Interactions">
+   <!-- =============================================================================== -->
+   <Key ID="STR_TFS_Medical_Supplies_Action_FirstAid">
+    < English>Unpack Boo Boo Bag</ English>
+    <German>Erste-Hilfe-Pack auspacken</German>
+   </Key>
+   <Key ID="STR_TFS_Medical_Supplies_Action_MedicKit">
+    < English>Unpack Medic Bag</ English>
+    <German>Verbandskasten auspacken</German>
+   </Key>
+   <!-- =============================================================================== -->
+  </Container >
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <Container name="Messages">
+   <!-- =============================================================================== -->
+   <Key ID="STR_TFS_Medical_Supplies_Progress_FirstAid">
+    < English>Unpack Boo Boo Bag...</ English>
+    <German>Erste-Hilfe-Pack auspacken...</German>
+   </Key>
+   <Key ID="STR_TFS_Medical_Supplies_Progress_MedicKit">
+    < English>Unpack Medic Bag...</ English>
+    <German>Verbandskasten auspacken...</German>
+   </Key>
+   <!-- =============================================================================== -->
+  </Container >
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <Container name="Items">
+   <!-- =============================================================================== -->
+   <Key ID="STR_TFS_Item_Medical_FirstAid_DisplayName">
+    < English>Boo Boo Bag</ English>
+    <German>Erste-Hilfe-Pack</German>
+   </Key>
+   <Key ID="STR_TFS_Item_Medical_FirstAid_Description">
+    < English>Contains material for first aid</ English>
+    <German>Enthält Material für die Erste-Hilfe</German>
+   </Key>
+   <!-- =============================================================================== -->
+   <Key ID="STR_TFS_Item_Medical_MedicKit_DisplayName">
+    < English>Medic Bag</ English>
+    <German>Verbandskasten</German>
+   </Key>
+   <Key ID="STR_TFS_Item_Medical_MedicKit_Description">
+    < English>Contains material for first aid</ English>
+    <German>Enthält Material für die Erste-Hilfe</German>
+   </Key>
+   <!-- =============================================================================== -->
+  </Container >
+  <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+
+ </Package>
+ <!-- ####################################################################################### -->
 
 </Project>

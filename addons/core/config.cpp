@@ -1,9 +1,9 @@
 #include "script_component.hpp"
 
-class CfgPatches
-{
-    class TFS_core
-    {
+
+class CfgPatches {
+    
+    class TFS_core {
         author = AUTHOR;
         name = COMPONENT_NAME;
         url = URL;
@@ -19,6 +19,7 @@ class CfgPatches
         };
         VERSION_CONFIG;
     };
+    
 };
 
 #include "CfgEventHandlers.hpp"

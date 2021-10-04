@@ -1,19 +1,17 @@
 #include "\z\tfs\addons\patrol\script_component.hpp"
-params ["_display", "_code"];
-if (_code != 1) exitwith {};
+params ["_display","_code"];
+if(_code != 1) exitWith {};
 
 _type = lbCurSel (_display displayCtrl 1337);
-_radius = parseNumber (ctrltext (_display displayCtrl 1338));
-_points = parseNumber (ctrltext (_display displayCtrl 1339));
+_radius = parseNumber (ctrlText (_display displayCtrl 1338));
+_points = parseNumber (ctrlText (_display displayCtrl 1339));
 _onroad = cbChecked (_display displayCtrl 1340);
 
-_groups = get3DENselected "group";
+
+
+_groups = get3DENSelected "Group";
 _over = get3DENMouseOver;
-if(count _over > 0 && {
-    (_over select 0) == "group"
-}) then {
-    _groups pushBackUnique (_over select 1)
-};
+if(count _over > 0 && {(_over select 0) == "Group"}) then {_groups pushBackUnique (_over select 1)};
 {
-    [_x, getPos leader _x, _type, _radius, _points, _onroad] call FUNC(patrol);
-} forEach _groups;
+    [_x,getpos leader _x,_type,_radius,_points,_onroad] call FUNC(patrol);
+} foreach _groups;

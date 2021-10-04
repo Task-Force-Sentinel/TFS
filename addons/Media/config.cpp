@@ -5,19 +5,13 @@ class CfgPatches
     class TFS_Media
     {
         author = AUTHOR;
-        name = COMPONENT_NAME;
+         name = COMPONENT_NAME;
         url = URL;
-        units[] = {
-            "TFS_flag_White", "TFS_flag_Black"
-        };
+        units[] = {"TFS_Flag_White", "TFS_Flag_Black"};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "A3_UI_F", "cba_main", "cba_xeh"
-        };
+        requiredAddons[] = {"A3_UI_F","cba_main","cba_xeh"};
         version = VERSION;
-        authors[] = {
-            "MitchJC"
-        };
+        authors[] = {"MitchJC"};
         weapons[] = {};
     };
 };
@@ -27,7 +21,8 @@ class CfgPatches
 #include "CfgRadio.hpp"
 #include "CfgSounds.hpp"
 #include "CfgUnitInsignia.hpp"
-class CfgFunctions
-{
+class CfgFunctions {
+
     #include "CfgFunctions.hpp"
 };
+

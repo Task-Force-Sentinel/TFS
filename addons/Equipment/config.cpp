@@ -15,7 +15,8 @@ class CfgPatches
             "TFS_Item_optic_AMS_snd",
             "TFS_Item_optic_AMSTI",
             "TFS_Item_optic_AMSTI_khk",
-            "TFS_Item_optic_AMSTI_snd"};
+            "TFS_Item_optic_AMSTI_snd"
+        };
         weapons[] = {
             "TFS_Vector_Designator",
             "TFS_optic_Nightstalker",
@@ -26,7 +27,8 @@ class CfgPatches
             "TFS_optic_AMSTI_base",
             "TFS_optic_AMSTI",
             "TFS_optic_AMSTI_khk",
-            "TFS_optic_AMSTI_snd"};
+            "TFS_optic_AMSTI_snd"
+        };
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "A3_UI_F",
@@ -34,16 +36,16 @@ class CfgPatches
             "cba_xeh",
             "ace_vector",
             "A3_Weapons_F",
-            "cba_jr"};
+            "cba_jr"
+        };
         version = VERSION;
         authors[] = {"MitchJC"};
     };
 };
 
-class CfgFunctions
-{
+class CfgFunctions {
 
-#include "CfgFunctions.hpp"
+    #include "CfgFunctions.hpp"
 };
 
 #include "Cfg3DEN.hpp"
@@ -53,82 +55,61 @@ class CfgFunctions
 #include "RscInGameUI.hpp"
 #include "CfgEventHandlers.hpp"
 
-class Extended_InitPost_EventHandlers
-{
-    class ReammoBox_F
-    {
-        class Storage_MedicalSupplies
-        {
+
+class Extended_InitPost_EventHandlers {
+    class ReammoBox_F {
+        class Storage_MedicalSupplies {
             init = "[_this select 0] call TFS_fnc_MedicalSupplies";
         };
-        class Storage_Ammobox
-        {
+        class Storage_Ammobox {
             init = "[_this select 0] call TFS_fnc_Ammobox";
         };
     };
-    class Car
-    {
-        class Car_MedicalSupplies
-        {
+    class Car {
+        class Car_MedicalSupplies {
             init = "[_this select 0] call TFS_fnc_MedicalSupplies";
         };
-        class Car_Ammobox
-        {
+        class Car_Ammobox {
             init = "[_this select 0] call TFS_fnc_Ammobox";
         };
     };
-    class Tank
-    {
-        class Tank_MedicalSupplies
-        {
+    class Tank {
+        class Tank_MedicalSupplies {
             init = "[_this select 0] call TFS_fnc_MedicalSupplies";
         };
-        class Tank_Ammobox
-        {
+        class Tank_Ammobox {
             init = "[_this select 0] call TFS_fnc_Ammobox";
         };
     };
-    class Motorcycle
-    {
-        class Motorcycle_MedicalSupplies
-        {
+    class Motorcycle {
+        class Motorcycle_MedicalSupplies {
             init = "[_this select 0] call TFS_fnc_MedicalSupplies";
         };
-        class Motorcycle_Ammobox
-        {
+        class Motorcycle_Ammobox {
             init = "[_this select 0] call TFS_fnc_Ammobox";
         };
     };
-    class Helicopter
-    {
-        class Helicopter_MedicalSupplies
-        {
+    class Helicopter {
+        class Helicopter_MedicalSupplies {
             init = "[_this select 0] call TFS_fnc_MedicalSupplies";
         };
-        class Helicopter_Ammobox
-        {
+        class Helicopter_Ammobox {
             init = "[_this select 0] call TFS_fnc_Ammobox";
         };
     };
-    class Plane
-    {
-        class Plane_MedicalSupplies
-        {
+    class Plane {
+        class Plane_MedicalSupplies {
             init = "[_this select 0] call TFS_fnc_MedicalSupplies";
         };
-        class Plane_Ammobox
-        {
+        class Plane_Ammobox {
             init = "[_this select 0] call TFS_fnc_Ammobox";
         };
     };
-    class Ship_F
-    {
-        class Ship_MedicalSupplies
-        {
+    class Ship_F {
+        class Ship_MedicalSupplies {
             init = "[_this select 0] call TFS_fnc_MedicalSupplies";
         };
-        class Ship_Ammobox
-        {
+        class Ship_Ammobox {
             init = "[_this select 0] call TFS_fnc_Ammobox";
         };
     };

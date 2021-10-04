@@ -1,14 +1,12 @@
 class CfgMarkers {
-    // units
+    // Units
     class iconcasap {
-        name = "CAS action Point";
+        name = "CAS Action Point";
         icon = "z\tfs\addons\Media\images\map\AP.paa";
         size = 24;
         shadow = true;
         scope = 2;
-        color[] = {
-            1, 1, 1, 1
-        };
+        color[] = {1, 1, 1, 1};
     };
     class iconcasbp {
         name = "CAS Battle Point";
@@ -16,9 +14,7 @@ class CfgMarkers {
         size = 24;
         shadow = true;
         scope = 2;
-        color[] = {
-            1, 1, 1, 1
-        };
+        color[] = {1, 1, 1, 1};
     };
     class iconcascp {
         name = "CAS Control Point";
@@ -26,19 +22,15 @@ class CfgMarkers {
         size = 24;
         shadow = true;
         scope = 2;
-        color[] = {
-            1, 1, 1, 1
-        };
+        color[] = {1, 1, 1, 1};
     };
     class iconcasdz {
-        name = "drop Zone";
+        name = "Drop Zone";
         icon = "z\tfs\addons\Media\images\map\DZ.paa";
         size = 24;
         shadow = true;
         scope = 2;
-        color[] = {
-            1, 1, 1, 1
-        };
+        color[] = {1, 1, 1, 1};
     };
     class iconcasep {
         name = "CAS Egress Point";
@@ -46,19 +38,15 @@ class CfgMarkers {
         size = 24;
         shadow = true;
         scope = 2;
-        color[] = {
-            1, 1, 1, 1
-        };
+        color[] = {1, 1, 1, 1};
     };
     class iconcasip {
-        name = "CAS initiation Point";
+        name = "CAS Initiation  Point";
         icon = "z\tfs\addons\Media\images\map\IP.paa";
         size = 24;
         shadow = true;
         scope = 2;
-        color[] = {
-            1, 1, 1, 1
-        };
+        color[] = {1, 1, 1, 1};
     };
     class iconassultd {
         name = "Assult";
@@ -66,9 +54,7 @@ class CfgMarkers {
         size = 24;
         shadow = true;
         scope = 2;
-        color[] = {
-            1, 1, 1, 1
-        };
+        color[] = {1, 1, 1, 1};
     };
     class iconsupportd {
         name = "Support";
@@ -76,9 +62,7 @@ class CfgMarkers {
         size = 24;
         shadow = true;
         scope = 2;
-        color[] = {
-            1, 1, 1, 1
-        };
+        color[] = {1, 1, 1, 1};
     };
     class icontfsx {
         name = "X";
@@ -86,9 +70,7 @@ class CfgMarkers {
         size = 24;
         shadow = true;
         scope = 2;
-        color[] = {
-            1, 1, 1, 1
-        };
+        color[] = {1, 1, 1, 1};
     };
     class hd_dot {
         scope=01;
@@ -96,4 +78,5 @@ class CfgMarkers {
     class mil_objective {
         scope=2;
     };
+
 };

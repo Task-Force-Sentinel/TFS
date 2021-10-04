@@ -1,31 +1,31 @@
 class TFS_CommandCentre {
+
     tag = "TFS";
-    class module {
+    class Module {
+
         file = "z\tfs\addons\CommandCentre\Functions";
-        class addradioactions {};
-        class addScreenactions {};
-        class configureradio {};
+        class addRadioActions {};
+        class addScreenActions {};
+        class configureRadio {};
         class configureScreen {};
         class deleteCamera {};
-        class handleradioConfig {};
-        class initradio {};
+        class handleRadioConfig {};
+        class initRadio {};
         class initScreen {};
-        class moduleCommstower {};
+        class moduleCommsTower {};
         class moduleMultiScreen {};
-        class modulesingleScreen {};
-        class moduleStationaryradio {};
-        class modulevehicleCam {};
-        class preinitCC {
-            preinit = 1;
-        };
-        class toggleVisualmode {};
-        class turnOnradio {};
+        class moduleSingleScreen {};
+        class moduleStationaryRadio {};
+        class moduleVehicleCam {};
+        class preInitCC { preInit = 1; };
+        class toggleVisualMode {};
+        class turnOnRadio {};
         class turnOnScreen {};
         class viewDCamGlobal {};
         class viewDroneCam {};
         class viewHCamGlobal {};
         class viewHelmetCam {};
-        class viewSatglobal {};
-        class viewSatimage {};
+        class viewSatGlobal {};
+        class viewSatImage {};
     };
 };

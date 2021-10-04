@@ -1,17 +1,18 @@
 class CfgVehicles {
-    // modULES
     
-    class logic;
-    class module_F: logic {
+    // MODULES
+    
+    class Logic;
+    class Module_F: Logic {
         class AttributesBase {
             class Default;
             class Edit;
             class Combo;
             class Checkbox;
             class CheckboxNumber;
-            class moduleDescription;
+            class ModuleDescription;
         };
-        class moduleDescription {
+        class ModuleDescription {
             class AnyBrain;
         };
     };
@@ -20,4 +21,5 @@ class CfgVehicles {
     #include "modules\triggerSound.hpp"
     #include "modules\globalSpeech.hpp"
     #include "modules\triggerSpeech.hpp"
+    
 };

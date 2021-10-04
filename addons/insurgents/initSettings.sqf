@@ -1,14 +1,14 @@
 // add setting for all gear from settings
 {
-    private _class = configname _x;
+    private _class = configName _x;
     [
-        GEAR_setTinG(_class),
+        GEAR_SETTING(_class),
         "CHECKBOX",
-        [format [LLstrinG(GearEnabled), _class], LstrinG(GearEnabled_Description)],
-        [LstrinG(Displayname), LstrinG(Gear)],
+        [format [LLSTRING(GearEnabled), _class], LSTRING(GearEnabled_Description)],
+        [LSTRING(DisplayName), LSTRING(Gear)],
         true,
         1,
         {},
         true
-    ] call CBA_fnc_addsetting;
+    ] call CBA_fnc_addSetting;
 } forEach ("true" configClasses (configFile >> QGVAR(gear)));

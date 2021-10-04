@@ -2,9 +2,9 @@
     QGVAR(loggingEnabled),
     "CHECKBOX",
     "Friendly fire logging",
-    "TFS Friendly fire",
+    "TFS Friendly Fire",
     false,
     1,
     {},
     true
-] call CBA_fnc_addsetting;
+] call CBA_fnc_addSetting;

@@ -1,34 +1,34 @@
 /*
-Function: YAinA_F_fnc_hintC
+Function: YAINA_F_fnc_hintC
 
 Description
-Show a cadet hint (hintC) on the machine that called this function.
-We handle confirmation of the hint with an EH, to stop a second, normal
-hint from appearing at the top of the screen.
+ Show a cadet hint (hintC) on the machine that called this function.
+    We handle confirmation of the hint with an EH, to stop a second, normal
+    hint from appearing at the top of the screen.
 
 Arguments:
-_text - The message that is supposed to be displayed
+ _text - The message that is supposed to be displayed
 
 Return Values:
-None
+ None
 
 Examples:
-nothing to see here
+    Nothing to see here
 
 Author:
-Martin
+ Martin
 */
 
 params ["_text"];
 
 hintC _text;
 
-// and to stop it showing up on the right side as soon as we OK
+// And to stop it showing up on the right side as soon as we OK
 // the message for unload on 57, blat it from 0
 
-YAinA_F_hintC_EH = findDisplay 57 displayAddEventHandler ["unload", {
+YAINA_F_hintC_EH = findDisplay 57 displayAddEventHandler ["unload", {
     0 = _this spawn {
-        _this select 0 displayremoveEventHandler ["unload", YAinA_F_hintC_EH];
+        _this select 0 displayRemoveEventHandler ["unload", YAINA_F_hintC_EH];
         hintSilent "";
     };
 }];

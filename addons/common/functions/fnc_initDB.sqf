@@ -1,31 +1,31 @@
 #include "script_component.hpp"
 /*
-* Author: NemesisRE
-* initiliases the database named missionname + date + time
-*
-* Arguments:
-* None
-*
-* Return Value:
-* None
-*
-* Example:
-* call TFS_common_fnc_initDB;
-*
-*/
-private ["_datetime", "_datetimestr", "_joinedmissionname", "_databasename"];
+ * Author: NemesisRE
+ * initiliases the database named missionName + Date + Time
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call TFS_common_fnc_initDB;
+ *
+ */
+private ["_dateTime","_dateTimeStr","_joinedMissionName","_databasename"];
 
-if !(isDedicated) exitwith {};
+if !(isDedicated) exitWith {};
 
-_datetime = missionStart;
-_datetimestr = format ["_%1-%2-%3_%4-%5",
-    _datetime select 0,
-    _datetime select 1,
-    _datetime select 2,
-    _datetime select 3,
-    _datetime select 4
+_dateTime = missionStart;
+_dateTimeStr = format ["_%1-%2-%3_%4-%5",
+    _dateTime select 0,
+    _dateTime select 1,
+    _dateTime select 2,
+    _dateTime select 3,
+    _dateTime select 4
 ];
-_joinedmissionname = missionname splitstring " " joinstring "_";
-_databasename = _joinedmissionname + _datetimestr;
+_joinedMissionName = missionName splitString " " joinString "_";
+_databasename = _joinedMissionName + _dateTimeStr;
 
-GVAR(iniDB) = ["new", _databasename] call OO_inIDBI;
+GVAR(iniDB) = ["new", _databasename] call OO_INIDBI;

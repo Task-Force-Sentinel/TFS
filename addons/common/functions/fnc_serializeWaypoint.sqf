@@ -1,17 +1,17 @@
 /*
-* name: TFS_common_fnc_serializeWaypoint
-* Author: Head
-*
-* Arguments:
-* _this: Waypoint
-*
-* Return:
-* array: waypoint data
-*
-*/
+ * Name: TFS_common_fnc_serializeWaypoint
+ * Author: Head
+ *
+ * Arguments:
+ * _this: Waypoint
+ *
+ * Return:
+ * array: waypoint data
+ *
+ */
 private _way = [
     waypointName _this,
-    waypointPosition _this,
+    waypointPosition  _this,
     waypointType _this,
     waypointBehaviour _this,
     waypointCombatMode _this,

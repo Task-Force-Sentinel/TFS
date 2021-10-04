@@ -1,5 +1,7 @@
 class CfgFunctions {
+    
     class TFS_Medical_Supplies {
+        
         tag = "tfs_medical_supplies";
         
         class Medical_Supplies {
@@ -9,7 +11,9 @@ class CfgFunctions {
             class doUnpackFirstAid {};
             class doUnpackMedicKit {};
             class initialize {};
-            class initsettings {};
+            class initSettings {};
         };
+        
     };
+    
 };

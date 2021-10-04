@@ -1,129 +1,133 @@
 // TRIGGER SOUND
 
-class TFS_moduleTriggerSound: module_F {
+class TFS_ModuleTriggerSound: Module_F {
+    
     scope = 2;
     
-    displayname = "$str_TFS_Modules_TriggerSound_Displayname";
-    category = "Task force Sentinel";
+    displayName = "$STR_TFS_Module_TriggerSound_DisplayName";
+    category = "Task Force Sentinel";
     author = AUTHOR;
     icon = "\z\tfs\addons\modules\data\icons\module_sound_1_ca.paa";
     
     function = "TFS_fnc_moduleTriggerSound";
-    functionpriority = 1;
+    functionPriority = 1;
     
     isGlobal = 0;
-    istriggerActivated = 1;
+    isTriggerActivated = 1;
     isDisposable = 0;
     is3DEN = 1;
     
     class Attributes: AttributesBase {
+        
         class Enabled {
-            displayname = "$str_TFS_Modules_Sound_Enabled_Title";
-            tooltip = "$str_TFS_Modules_Sound_Enabled_Tip";
+            displayName = "$STR_TFS_ModuleProperty_Sound_Enabled_Title";
+            tooltip = "$STR_TFS_ModuleProperty_Sound_Enabled_Tip";
             defaultValue = 1;
             typeName = "NUMBER";
-            expression = "_this setVariable ['%s', _value, true];            ";
-            property = "TFS_moduleTriggerSound_Enabled";
+            expression = "_this setVariable ['%s', _value, true];";
+            property = "TFS_ModuleTriggerSound_Enabled";
             control = "Combo";
             class Values {
                 class Enabled_0 {
-                    name = "$str_TFS_Modules_Sound_Enabled_0";
+                    name = "$STR_TFS_ModuleProperty_Sound_Enabled_0";
                     value = 0;
                 };
                 class Enabled_1 {
-                    name = "$str_TFS_Modules_Sound_Enabled_1";
+                    name = "$STR_TFS_ModuleProperty_Sound_Enabled_1";
                     value = 1;
                 };
             };
         };
         
         class Source {
-            displayname = "$str_TFS_Modules_Sound_Source_Title";
-            tooltip = "$str_TFS_Modules_Sound_Source_Tip";
+            displayName = "$STR_TFS_ModuleProperty_Sound_Source_Title";
+            tooltip = "$STR_TFS_ModuleProperty_Sound_Source_Tip";
             defaultValue = "''";
             typeName = "STRING";
-            expression = "_this setVariable ['%s', _value, true];            ";
-            property = "TFS_moduleTriggerSound_Source";
+            expression = "_this setVariable ['%s', _value, true];";
+            property = "TFS_ModuleTriggerSound_Source";
             control = "Edit";
         };
         
         class Sound {
-            displayname = "$str_TFS_Modules_Sound_classname_Title";
-            tooltip = "$str_TFS_Modules_Sound_classname_Tip";
+            displayName = "$STR_TFS_ModuleProperty_Sound_Classname_Title";
+            tooltip = "$STR_TFS_ModuleProperty_Sound_Classname_Tip";
             defaultValue = "''";
             typeName = "STRING";
-            expression = "_this setVariable ['%s', _value, true];            ";
-            property = "TFS_moduleTriggerSound_Sound";
+            expression = "_this setVariable ['%s', _value, true];";
+            property = "TFS_ModuleTriggerSound_Sound";
             control = "Sound";
         };
         
         class Offset {
-            displayname = "$str_TFS_Modules_Sound_Offset_Title";
-            tooltip = "$str_TFS_Modules_Sound_Offset_Tip";
-            defaultValue = "'[0, 0, 0]'";
+            displayName = "$STR_TFS_ModuleProperty_Sound_Offset_Title";
+            tooltip = "$STR_TFS_ModuleProperty_Sound_Offset_Tip";
+            defaultValue = "'[0,0,0]'";
             typeName = "STRING";
-            expression = "_this setVariable ['%s', _value, true];            ";
-            property = "TFS_moduleTriggerSound_Offset";
+            expression = "_this setVariable ['%s', _value, true];";
+            property = "TFS_ModuleTriggerSound_Offset";
             control = "EditShort";
         };
         
-        class distance {
-            displayname = "$str_TFS_Modules_Sound_distance_Title";
-            tooltip = "$str_TFS_Modules_Sound_distance_Tip";
+        class Distance {
+            displayName = "$STR_TFS_ModuleProperty_Sound_Distance_Title";
+            tooltip = "$STR_TFS_ModuleProperty_Sound_Distance_Tip";
             defaultValue = 100;
             typeName = "NUMBER";
-            expression = "_this setVariable ['%s', _value, true];            ";
-            property = "TFS_moduleTriggerSound_distance";
+            expression = "_this setVariable ['%s', _value, true];";
+            property = "TFS_ModuleTriggerSound_Distance";
             control = "EditShort";
         };
         
-        class maxdistance {
-            displayname = "$str_TFS_Modules_Sound_maxdistance_Title";
-            tooltip = "$str_TFS_Modules_Sound_maxdistance_Tip";
+        class MaxDistance {
+            displayName = "$STR_TFS_ModuleProperty_Sound_MaxDistance_Title";
+            tooltip = "$STR_TFS_ModuleProperty_Sound_MaxDistance_Tip";
             defaultValue = -1;
             typeName = "NUMBER";
-            expression = "_this setVariable ['%s', _value, true];            ";
-            property = "TFS_moduleTriggerSound_maxdistance";
+            expression = "_this setVariable ['%s', _value, true];";
+            property = "TFS_ModuleTriggerSound_MaxDistance";
             control = "EditShort";
         };
         
         class Duration {
-            displayname = "$str_TFS_Modules_Sound_Duration_Title";
-            tooltip = "$str_TFS_Modules_Sound_Duration_Tip";
+            displayName = "$STR_TFS_ModuleProperty_Sound_Duration_Title";
+            tooltip = "$STR_TFS_ModuleProperty_Sound_Duration_Tip";
             defaultValue = -1;
             typeName = "NUMBER";
-            expression = "_this setVariable ['%s', _value, true];            ";
-            property = "TFS_moduleTriggerSound_Duration";
+            expression = "_this setVariable ['%s', _value, true];";
+            property = "TFS_ModuleTriggerSound_Duration";
             control = "EditShort";
         };
         
         class Loop {
-            displayname = "$str_TFS_Modules_Sound_Loop_Title";
-            tooltip = "$str_TFS_Modules_Sound_Loop_Tip";
+            displayName = "$STR_TFS_ModuleProperty_Sound_Loop_Title";
+            tooltip = "$STR_TFS_ModuleProperty_Sound_Loop_Tip";
             defaultValue = "false";
             typeName = "BOOL";
-            expression = "_this setVariable ['%s', _value, true];            ";
-            property = "TFS_moduleTriggerSound_Loop";
+            expression = "_this setVariable ['%s', _value, true];";
+            property = "TFS_ModuleTriggerSound_Loop";
             control = "Checkbox";
         };
         
-        class Ignorestop {
-            displayname = "$str_TFS_Modules_Sound_Ignorestop_Title";
-            tooltip = "$str_TFS_Modules_Sound_Ignorestop_Tip";
+        class IgnoreStop {
+            displayName = "$STR_TFS_ModuleProperty_Sound_IgnoreStop_Title";
+            tooltip = "$STR_TFS_ModuleProperty_Sound_IgnoreStop_Tip";
             defaultValue = "false";
             typeName = "BOOL";
-            expression = "_this setVariable ['%s', _value, true];            ";
-            property = "TFS_moduleTriggerSound_Ignorestop";
+            expression = "_this setVariable ['%s', _value, true];";
+            property = "TFS_ModuleTriggerSound_IgnoreStop";
             control = "Checkbox";
         };
         
-        class moduleDescription: moduleDescription {
-            property = "moduleinfo";
-            control = "moduleinfo";
+        class ModuleDescription: ModuleDescription {
+            property = "ModuleInfo";
+            control = "ModuleInfo";
         };
+        
     };
     
-    class moduleDescription: moduleDescription {
-        description = "$str_TFS_Modules_TriggerSound_Description";
+    class ModuleDescription: ModuleDescription {
+        description = "$STR_TFS_Module_TriggerSound_Description";
     };
+    
 };

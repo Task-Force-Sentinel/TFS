@@ -39,25 +39,25 @@ switch (_size) do {
         ];
         _name = "Large";
     };
-    default {};
+    default { };
 };
 
 private _dialogResult = [
     format ["Create Portable FOB - %1", _name],
     [
-        ["COMBO", "type", _fobs]
+        ["COMBO", "Type", _fobs]
     ],
     {
         params ["_results", "_args"];
         _results params ["_fob"];
         _args params ["_hoveredEntity", "_size"];
-        
+
         [_hoveredEntity, _fob, _size] remoteExec ["TFS_fnc_createPortableFOB", 2];
     },
     {},
     [_hoveredEntity, _size]
 ] call zen_dialog_fnc_create;
 
-if !(_dialogResult) exitwith {
-    ["Failed to create zen dialog!", "Errorlog"] call YAinA_F_fnc_log;
+if !(_dialogResult) exitWith {
+    ["Failed to create zen dialog!", "ErrorLog"] call YAINA_F_fnc_log;
 };

@@ -1,13 +1,15 @@
-// Global text
+// Global Text
 [
-    "TFS_Channels_Globaltext",
+    "TFS_Channels_GlobalText",
     "CHECKBOX",
-    ["Global text", "Allow players to use Global text Channel and draw on map."],
+    ["Global Text", "Allow players to use Global Text Channel and draw on map."],
     "TFS Channels",
     true,
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
+
+    }
+] call CBA_Settings_fnc_init;
 
 // Global Voice
 [
@@ -17,63 +19,75 @@
     "TFS Channels",
     true,
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
+
+    }
+] call CBA_Settings_fnc_init;
 
 // Global Duration
 [
     "TFS_Channels_GlobalDuration",
     "SLIDER",
-    ["Global Duration", "if enabled, how long till selected channels are disabled. 0 is permanent."],
+    ["Global Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
     "TFS Channels",
     [0, 300, 0, 0],
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
 
-// side text
+    }
+] call CBA_Settings_fnc_init;
+
+// Side Text
 [
-    "TFS_Channels_sidetext",
+    "TFS_Channels_SideText",
     "CHECKBOX",
-    ["side text", "Allow players to use side text Channel and draw on map."],
+    ["Side Text", "Allow players to use Side Text Channel and draw on map."],
     "TFS Channels",
     true,
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
 
-// side Voice
+    }
+] call CBA_Settings_fnc_init;
+
+// Side Voice
 [
-    "TFS_Channels_sideVoice",
+    "TFS_Channels_SideVoice",
     "CHECKBOX",
-    ["side Voice", "Allow players to speak in side Voice Channel."],
+    ["Side Voice", "Allow players to speak in Side Voice Channel."],
     "TFS Channels",
     true,
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
 
-// side Duration
+    }
+] call CBA_Settings_fnc_init;
+
+// Side Duration
 [
-    "TFS_Channels_sideDuration",
+    "TFS_Channels_SideDuration",
     "SLIDER",
-    ["side Duration", "if enabled, how long till selected channels are disabled. 0 is permanent."],
+    ["Side Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
     "TFS Channels",
     [0, 300, 0, 0],
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
 
-// Command text
+    }
+] call CBA_Settings_fnc_init;
+
+// Command Text
 [
-    "TFS_Channels_Commandtext",
+    "TFS_Channels_CommandText",
     "CHECKBOX",
-    ["Command text", "Allow players to use Command text Channel and draw on map."],
+    ["Command Text", "Allow players to use Command Text Channel and draw on map."],
     "TFS Channels",
     true,
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
+
+    }
+] call CBA_Settings_fnc_init;
 
 // Command Voice
 [
@@ -83,96 +97,114 @@
     "TFS Channels",
     true,
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
+
+    }
+] call CBA_Settings_fnc_init;
 
 // Command Duration
 [
     "TFS_Channels_CommandDuration",
     "SLIDER",
-    ["Command Duration", "if enabled, how long till selected channels are disabled. 0 is permanent."],
+    ["Command Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
     "TFS Channels",
     [0, 300, 0, 0],
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
 
-// group text
+    }
+] call CBA_Settings_fnc_init;
+
+// Group Text
 [
-    "TFS_Channels_grouptext",
+    "TFS_Channels_GroupText",
     "CHECKBOX",
-    ["group text", "Allow players to use group text Channel and draw on map."],
+    ["Group Text", "Allow players to use Group Text Channel and draw on map."],
     "TFS Channels",
     true,
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
 
-// group Voice
+    }
+] call CBA_Settings_fnc_init;
+
+// Group Voice
 [
-    "TFS_Channels_groupVoice",
+    "TFS_Channels_GroupVoice",
     "CHECKBOX",
-    ["group Voice", "Allow players to speak in group Voice Channel."],
+    ["Group Voice", "Allow players to speak in Group Voice Channel."],
     "TFS Channels",
     true,
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
 
-// group Duration
+    }
+] call CBA_Settings_fnc_init;
+
+// Group Duration
 [
-    "TFS_Channels_groupDuration",
+    "TFS_Channels_GroupDuration",
     "SLIDER",
-    ["group Duration", "if enabled, how long till selected channels are disabled. 0 is permanent."],
+    ["Group Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
     "TFS Channels",
     [0, 300, 0, 0],
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
 
-// vehicle text
+    }
+] call CBA_Settings_fnc_init;
+
+// Vehicle Text
 [
-    "TFS_Channels_vehicletext",
+    "TFS_Channels_VehicleText",
     "CHECKBOX",
-    ["vehicle text", "Allow players to use vehicle text Channel and draw on map."],
+    ["Vehicle Text", "Allow players to use Vehicle Text Channel and draw on map."],
     "TFS Channels",
     true,
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
 
-// vehicle Voice
+    }
+] call CBA_Settings_fnc_init;
+
+// Vehicle Voice
 [
-    "TFS_Channels_vehicleVoice",
+    "TFS_Channels_VehicleVoice",
     "CHECKBOX",
-    ["vehicle Voice", "Allow players to speak in vehicle Voice Channel."],
+    ["Vehicle Voice", "Allow players to speak in Vehicle Voice Channel."],
     "TFS Channels",
     true,
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
 
-// vehicle Duration
+    }
+] call CBA_Settings_fnc_init;
+
+// Vehicle Duration
 [
-    "TFS_Channels_vehicleDuration",
+    "TFS_Channels_VehicleDuration",
     "SLIDER",
-    ["vehicle Duration", "if enabled, how long till selected channels are disabled. 0 is permanent."],
+    ["Vehicle Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
     "TFS Channels",
     [0, 300, 0, 0],
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
 
-// Direct text
+    }
+] call CBA_Settings_fnc_init;
+
+// Direct Text
 [
-    "TFS_Channels_Directtext",
+    "TFS_Channels_DirectText",
     "CHECKBOX",
-    ["Direct text", "Allow players to use Direct text Channel and draw on map."],
+    ["Direct Text", "Allow players to use Direct Text Channel and draw on map."],
     "TFS Channels",
     true,
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
+
+    }
+] call CBA_Settings_fnc_init;
 
 // Direct Voice
 [
@@ -182,16 +214,20 @@
     "TFS Channels",
     true,
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
+
+    }
+] call CBA_Settings_fnc_init;
 
 // Direct Duration
 [
     "TFS_Channels_DirectDuration",
     "SLIDER",
-    ["Direct Duration", "if enabled, how long till selected channels are disabled. 0 is permanent."],
+    ["Direct Duration", "If enabled, how long till selected channels are disabled. 0 is permanent."],
     "TFS Channels",
     [0, 300, 0, 0],
     true,
-    {}
-] call CBA_settings_fnc_init;
+    {
+
+    }
+] call CBA_Settings_fnc_init;

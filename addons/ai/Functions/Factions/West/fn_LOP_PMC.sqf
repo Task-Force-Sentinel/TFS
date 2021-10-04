@@ -1,10 +1,10 @@
-_infantrytype = "infantry";
-_infaalist = [];
-_infatlist = ["LOP_PMC_AT_section"];
-_sniperlist = [];
-_vehAAlist = [];
-_vehMraplist = [];
-_vehLightlist = [];
-_vehHeavylist = [];
+_InfantryType = "Infantry";
+_infaaList    = [];
+_infatList    = ["LOP_PMC_AT_section"];
+_sniperList   = [];
+_vehAAList    = [];
+_vehMrapList  = [];
+_vehLightList = [];
+_vehHeavyList = [];
 
-[_infantrytype, _infaalist, _infatlist, _sniperlist, _vehAAlist, _vehMraplist, _vehLightlist, _vehHeavylist]
+[_InfantryType, _infaaList, _infatList, _sniperList, _vehAAList, _vehMrapList, _vehLightList, _vehHeavyList]

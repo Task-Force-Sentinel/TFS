@@ -2,53 +2,52 @@
 Function: TFS_fnc_ConfigZeus
 
 Description:
-Used to configure a Zeus module. Ensures that any AI placed down by that Zeus have Dynamic Sim
-enabled and their difficulty settings configured to the TFS default.
+    Used to configure a Zeus Module. Ensures that any AI placed down by that Zeus have Dynamic Sim
+    enabled and their difficulty settings configured to the TFS Default.
 
 Arguments:
-_object - Zeus module to apply the function to. <OBJECT>
+    _object - Zeus Module to apply the function to. <OBJECT>
 
 Examples:
-(begin example)
-[this] call TFS_fnc_ConfigZeus;
-(end)
+    (begin example)
+        [this] call TFS_fnc_ConfigZeus;
+    (end)
 
 Author:
-MitchJC
+    MitchJC
 */
 params [
-    "_object"
+"_object"
 ];
 
 _object addEventHandler [
     "CuratorObjectPlaced", {
         params ["_curator", "_entity"];
-        
+
         _class = typeOf (_entity);
-        _result = call {
-            if (_class isKindOf "Man") exitwith {
-                private _group = call {
-                    if ((typeName _entity) isEqualto "group") exitwith {
-                        _entity
-                    };
-                    if ((typeName _entity) isEqualto "OBJECT") exitwith {
-                        group _entity
-                    };
+        _result  = call {
+            if (_class isKindOf "Man") exitWith {
+
+                private _Group = call {
+                    if ((typeName _entity) isEqualTo "GROUP") exitWith { _entity };
+                    if ((typeName _entity) isEqualTo "OBJECT") exitWith { group _entity };
                     _entity;
                 };
-                
-                [_group, "TFS default"] remoteExec ["TFS_fnc_setunitskill", 2];
-                [_group, true] remoteExec ["enableDynamicSimulation", 2];
+
+                [_Group, "TFS Default"] remoteExec ["TFS_fnc_SetUnitSkill",2];
+                [_Group, true] remoteExec ["enableDynamicSimulation",2];
             };
-            
-            if (_class isKindOf "Allvehicles") exitwith {
+
+            if (_class isKindOf "AllVehicles") exitWith {
                 {
-                    [_x, "TFS default"] remoteExec ["TFS_fnc_setunitskill", 2];
+                    [_x, "TFS Default"] remoteExec ["TFS_fnc_SetUnitSkill",2];
                 } forEach crew _entity;
-                [group _entity, true] remoteExec ["enableDynamicSimulation", 2];
+                [group _entity , true] remoteExec ["enableDynamicSimulation",2];
             };
         };
     }
 ];
-_object setVariable ["shownotification", false];
-_object setVariable ["birdtype", "", true];
+_object setVariable ["showNotification", false];
+_object setVariable ["birdType", "", true];
+
+

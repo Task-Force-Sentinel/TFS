@@ -5,17 +5,13 @@ class CfgPatches
     class TFS_Warlords
     {
         author = AUTHOR;
-        name = name;
+        name = NAME;
         url = URL;
         units[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "A3_UI_F", "cba_main", "cba_xeh"
-        };
+        requiredAddons[] = {"A3_UI_F","cba_main","cba_xeh"};
         version = VERSION;
-        authors[] = {
-            "MitchJC"
-        };
+        authors[] = {"MitchJC"};
         weapons[] = {};
     };
 };
@@ -28,12 +24,11 @@ class CfgWLRequisitionPresets
 
 #include "CfgRespawnTemplates.hpp"
 
-class params
-{
+class Params {
     #include "Params.hpp"
 };
 
-class CfgFunctions
-{
+class CfgFunctions {
+
     #include "CfgFunctions.hpp"
 };

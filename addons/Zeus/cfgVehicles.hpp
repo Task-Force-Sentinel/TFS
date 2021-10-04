@@ -14,7 +14,9 @@ class CfgVehicles {
                 expression = "if (_value isequalto true) then {[_this] call TFS_fnc_ConfigZeus;}";
                 condition = "logicModule";
                 defaultValue = "(true)";
-                };
-            };            
+            };
+        };
     };
+
+
 };

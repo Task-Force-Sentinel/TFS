@@ -5,30 +5,26 @@ class CfgPatches
     class TFS_Weather
     {
         author = AUTHOR;
-        name = name;
+        name = NAME;
         url = URL;
         units[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {
-            "A3_UI_F", "cba_main", "cba_xeh"
-        };
+        requiredAddons[] = {"A3_UI_F","cba_main","cba_xeh"};
         version = VERSION;
-        authors[] = {
-            "MitchJC"
-        };
+        authors[] = {"MitchJC"};
         weapons[] = {};
     };
 };
 
-class Extended_Preinit_EventHandlers
-{
-    class TFS_Weather_Event
-    {
-        init = "call compile preprocessFileLineNumbers 'z\tfs\addons\Weather\XEH_preinit.sqf'";
+class Extended_PreInit_EventHandlers {
+    class TFS_Weather_Event {
+        init = "call compile preprocessFileLineNumbers 'z\tfs\addons\Weather\XEH_preInit.sqf'";
     };
 };
 
-class CfgFunctions
-{
+
+class CfgFunctions {
+
     #include "CfgFunctions.hpp"
+
 };

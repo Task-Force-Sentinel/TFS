@@ -1,10 +1,9 @@
 #include "..\script_component.hpp"
 
-class CfgPatches
-{
-    class TFS_Medical_Area
-    {
-        name = "$str_TFS_Area_Title";
+class CfgPatches {
+    
+    class TFS_Medical_Area {
+        name = "$STR_TFS_Medical_Area_Title";
         addonRootClass = "TFS_Medical";
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
@@ -17,13 +16,14 @@ class CfgPatches
         weapons[] = {
             "TFS_MedicArea"
         };
-        author = "$str_TFS_Area_Author";
+        author = "$STR_TFS_Medical_Area_Author";
         authors[] = {
             "O. Jemineh"
         };
-        url = "$str_TFS_Area_URL";
+        url = "$STR_TFS_Medical_Area_URL";
         VERSION_CONFIG;
     };
+    
 };
 
 #include "CfgEventHandlers.hpp"

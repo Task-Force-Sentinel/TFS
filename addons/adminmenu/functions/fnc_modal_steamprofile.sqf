@@ -1,20 +1,20 @@
 #include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
-params ["_ctrlgroup"];
+params ["_ctrlGroup"];
 
-private _ctrltextPos = [0, 0];
-_ctrltextPos append ((ctrlposition _ctrlgroup) select [2, 2]);
-private _ctrltext = (uiNamespace getVariable [QGVAR(modalDisplay), displayNull]) ctrlCreate ["Rscstructuredtext", -1, _ctrlgroup];
-_ctrltext ctrlsetPosition _ctrltextPos;
-_ctrltext ctrlCommit 0;
+private _ctrlTextPos = [0, 0];
+_ctrlTextPos append ((ctrlPosition _ctrlGroup) select [2, 2]);
+private _ctrlText = (uiNamespace getVariable [QGVAR(modalDisplay), displayNull]) ctrlCreate ["RscStructuredText", -1, _ctrlGroup];
+_ctrlText ctrlSetPosition _ctrlTextPos;
+_ctrlText ctrlCommit 0;
 
 private _textArray = GVAR(utilityData) apply {
     format [
-        "<t size='1'><a color='#FFC04D' href='http:// steamcommunity.com/profiles/%1'>%2</a></t>",
-        getplayerUID _x,
+        "<t size='1'><a color='#FFC04D' href='http://steamcommunity.com/profiles/%1'>%2</a></t>",
+        getPlayerUID _x,
         name _x
     ]
 };
 
-_ctrltext ctrlsetstructuredtext parsetext (_textArray joinstring ", ");
+_ctrlText ctrlSetStructuredText parseText (_textArray joinString ", ");

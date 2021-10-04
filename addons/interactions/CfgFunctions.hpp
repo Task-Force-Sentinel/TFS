@@ -1,14 +1,16 @@
 class CfgFunctions {
-    class TFS_interactions {
+    
+    class TFS_Interactions {
+        
         tag = "tfs_interactions";
         
-        class interactions {
+        class Interactions {
             file = "z\tfs\addons\interactions\functions";
             class initialize {};
-            class initsettings {};
+            class initSettings {};
         };
         
-        class inventory {
+        class Inventory {
             file = "z\tfs\addons\interactions\functions\inventory";
             class backpack_canAccess {};
             class backpack_doAccess {};
@@ -24,5 +26,7 @@ class CfgFunctions {
             class tapshoulder_doTap {};
             class tapshoulder_tap {};
         };
+        
     };
+    
 };

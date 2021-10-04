@@ -1,10 +1,8 @@
 #include "\z\tfs\addons\spectator\script_component.hpp"
 
-[] call FUNC(handleUnitlist);
+[] call FUNC(handleUnitList);
 {
-    [_x] call FUNC(updategroupCache);
-} forEach allgroups;
+    [_x] call FUNC(updateGroupCache);
+} forEach allGroups;
 
-GVAR(vehicles) = GVAR(vehicles) select {
-    !isNull _x
-};
+GVAR(vehicles) = GVAR(vehicles) select {!isNull _x};

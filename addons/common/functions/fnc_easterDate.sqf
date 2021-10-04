@@ -1,24 +1,24 @@
 #include "script_component.hpp"
 /*
-* Author: veteran29
-* Calculate easter date for given year. Based on http:// c-for-dummies.com/blog/?p=2446
-*
-* Arguments:
-* 0: Year <NUMBER>
-*
-* Return Value:
-* 0: easter year <NUMBER>
-* 1: easter month <NUMBER>
-* 2: easter day <NUMBER>
-*
-* Example:
-* [2021] call afm_common_fnc_easterdate
-*
-* Public: No
-*/
+ * Author: veteran29
+ * Calculate easter date for given year. Based on http://c-for-dummies.com/blog/?p=2446
+ *
+ * Arguments:
+ * 0: Year <NUMBER>
+ *
+ * Return Value:
+ * 0: Easter year <NUMBER>
+ * 1: Easter month <NUMBER>
+ * 2: Easter day <NUMBER>
+ *
+ * Example:
+ * [2021] call afm_common_fnc_easterDate
+ *
+ * Public: No
+ */
 
 params [
-    ["_year", systemtime select 0, [0]]
+    ["_year", systemTime select 0, [0]]
 ];
 
 // https://en.wikipedia.org/wiki/Computus#Anonymous_Gregorian_algorithm

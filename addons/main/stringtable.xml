@@ -1,29 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project name="TFS">
-
-	<Package name="Main">
-		<Container name="Main">
-			<Key ID="STR_TFS_Main_Action">
-				<English>Website</English>
-			</Key>
-			<Key ID="STR_TFS_Main_Logo">
-				<English>\z\dpso\addons\media\images\TFSLOGOopy.paa</English>
-			</Key>
-			<Key ID="STR_TFS_Main_URL">
-				<English>http://tfsmod.userscreen.net</English>
-			</Key>
-			<Key ID="STR_TFS_Main_URL_Issues">
-				<English>https://github.com/TFSmod/TFS/issues</English>
-			</Key>
-			<Key ID="STR_TFS_Main_URL_Releases">
-				<English>https://github.com/TFSmod/TFS/releases</English>
-			</Key>
-			<Key ID="STR_TFS_Main_URL_Version">
-				<English>http://tfsmod.userscreen.net/version.html</English>
-			</Key>
-			<Key ID="STR_TFS_Main_URL_Wiki">
-				<English>https://github.com/TFSmod/TFS/wiki</English>
-			</Key>
-		</Container>
-	</Package>
+<Project name="Arma_eXtended_Environment">
+    
+    <!-- ####################################################################################### -->
+    <Package name="TFS_Main">
+        
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <Container name="Main">
+            <!-- =============================================================================== -->
+            <Key ID="STR_TFS_Main_Title">
+                < English>TFS Main</ English>
+            </Key>
+            <Key ID="STR_TFS_Main_Author">
+                < English>TFS</ English>
+            </Key>
+            <Key ID="STR_TFS_Main_URL">
+                < English>https://github.com/TFSmod/TFS</ English>
+            </Key>
+            <Key ID="STR_TFS_main_http">
+                < English>https://github.com/TFSmod/TFS</ English>
+            </Key>
+            <!-- =============================================================================== -->
+        </Container>
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <Container name="EditorCategories">
+            <!-- =============================================================================== -->
+            <Key ID="STR_TFS_EdCat">
+                < English>TFS</ English>
+            </Key>
+            <!-- =============================================================================== -->
+        </Container>
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <Container name="FactionClasses">
+            <!-- =============================================================================== -->
+            <Key ID="STR_TFS_FactionClass">
+                < English>TFS</ English>
+            </Key>
+            <!-- =============================================================================== -->
+        </Container>
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        
+    </Package>
+    <!-- ####################################################################################### -->
+    
+    <!-- ####################################################################################### -->
+    <Package name="TFS">
+        
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <Container name="Addon">
+            <!-- =============================================================================== -->
+            <Key ID="STR_TFS_Addon_Author">
+                < English>TFS</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_Title">
+                < English>Arma eXtended Environment</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_Name">
+                < English>Arma eXtended Environment 1.3.0</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_Short">
+                < English>TFS</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_Description">
+                < English>Bugtracker: https://github.com/TFSmod/TFS/issues</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_Tooltip">
+                < English>TFS</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_Logo">
+                < English>\z\tfs\addons\media\images\TFSLOGO@0.25x.paa</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_Logo_Over">
+                < English>\z\tfs\addons\media\images\TFSLOGO@0.25x.paa</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_Logo_Small">
+                < English>\z\tfs\addons\media\images\TFSLOGO@0.25x.paa</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_Picture">
+                < English>\z\tfs\addons\media\images\cow.paa</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_Overview">
+                < English>Arma eXtended Environment, also known as TFS, adds a variety of additional functions and features on top of Arma3, CBA and the ACE3 framework.</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_Footnote">
+                < English>&lt;br /&gt;&lt;br /&gt;&lt;t color='#999999'&gt;Arma eXtended Environment - Copyright &copy; 2019 by TFS&lt;t /&gt;</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_Action">
+                < English>Website</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_URL">
+                < English>http://tfsmod.userscreen.net</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_URL_Issues">
+                < English>https://github.com/TFSmod/TFS/issues</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_URL_Releases">
+                < English>https://github.com/TFSmod/TFS/releases</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_URL_Version">
+                < English>http://tfsmod.userscreen.net/version.html</ English>
+            </Key>
+            <Key ID="STR_TFS_Addon_URL_Wiki">
+                < English>https://github.com/TFSmod/TFS/wiki</ English>
+            </Key>
+            <!-- =============================================================================== -->
+        </Container>
+        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        
+    </Package>
+    <!-- ####################################################################################### -->
+    
 </Project>

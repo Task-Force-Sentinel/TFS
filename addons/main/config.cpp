@@ -1,9 +1,7 @@
 #include "script_component.hpp"
 
-class cfgPatches
-{
-    class ADDON
-    {
+class cfgPatches {
+    class ADDON {
         author = AUTHOR;
         name = COMPONENT_NAME;
         url = URL;
@@ -16,17 +14,9 @@ class cfgPatches
             "cba_main",
             "cba_xeh",
             "cba_ui",
-            "cba_jr"};
+            "cba_jr"
+        };
         VERSION_CONFIG;
-    };
-};
-
-class CfgMods {
-    class PREFIX {
-        name = "Task Force Sentinel Custom Mod";
-        actionName = "Website";
-        action = CSTRING(URL);
-        description = "Issue Tracker: https://github.com/Task-Force-Sentinel/TFS/issues";
     };
 };
 

@@ -1,78 +1,72 @@
 #include "\z\tfs\addons\adminmenu\script_component.hpp"
 
 disableSerialization;
-params ["_ctrlgroup"];
+params ["_ctrlGroup"];
 
-(ctrlposition _ctrlgroup) params ["", "", "_ctrlGrpWidth", "_ctrlGrpHeight"];
+(ctrlPosition _ctrlGroup) params ["", "", "_ctrlGrpWidth", "_ctrlGrpHeight"];
 
 private _display = uiNamespace getVariable [QGVAR(modalDisplay), displayNull];
-private _ctrlEdit = _display ctrlCreate [QGVAR(RscEditMultiCode), -1, _ctrlgroup];
-_ctrlEdit ctrlsetPosition [0.1 * TFS_adminMENU_STD_WIDTH, 1.1 * TFS_adminMENU_STD_HEIGHT, _ctrlGrpWidth - (0.2 * TFS_adminMENU_STD_WIDTH), _ctrlGrpHeight - (2.3 * TFS_adminMENU_STD_HEIGHT)];
+private _ctrlEdit = _display ctrlCreate [QGVAR(RscEditMultiCode), -1, _ctrlGroup];
+_ctrlEdit ctrlSetPosition [0.1 * TFS_ADMINMENU_STD_WIDTH, 1.1 * TFS_ADMINMENU_STD_HEIGHT, _ctrlGrpWidth - (0.2 * TFS_ADMINMENU_STD_WIDTH), _ctrlGrpHeight - (2.3 * TFS_ADMINMENU_STD_HEIGHT)];
 _ctrlEdit ctrlCommit 0;
-_ctrlEdit ctrlsettext (missionnamespace getVariable [QGVAR(utility_runcode_last), ""]);
+_ctrlEdit ctrlSetText (missionNamespace getVariable [QGVAR(utility_runcode_last), ""]);
 
-private _ctrlhintEdit = _display ctrlCreate [QGVAR(Rsctext), -1, _ctrlgroup];
-_ctrlhintEdit ctrlsetPosition [0, 0, _ctrlGrpWidth, TFS_adminMENU_STD_HEIGHT];
-_ctrlhintEdit ctrlCommit 0;
-_ctrlhintEdit ctrlsettext "'_this' is the targetted player object";
+private _ctrlHintEdit = _display ctrlCreate [QGVAR(RscText), -1, _ctrlGroup];
+_ctrlHintEdit ctrlSetPosition [0, 0, _ctrlGrpWidth, TFS_ADMINMENU_STD_HEIGHT];
+_ctrlHintEdit ctrlCommit 0;
+_ctrlHintEdit ctrlSetText "'_this' is the targetted player object";
 
-private _bottomY = _ctrlGrpHeight - TFS_adminMENU_STD_HEIGHT;
+private _bottomY = _ctrlGrpHeight - TFS_ADMINMENU_STD_HEIGHT;
 
-private _ctrlhintCombo = _display ctrlCreate [QGVAR(Rsctext), -1, _ctrlgroup];
-_ctrlhintCombo ctrlsetPosition [0, _bottomY, 0.15 * _ctrlGrpWidth, TFS_adminMENU_STD_HEIGHT];
-_ctrlhintCombo ctrlCommit 0;
-_ctrlhintCombo ctrlsettext "execute on:";
+private _ctrlHintCombo = _display ctrlCreate [QGVAR(RscText), -1, _ctrlGroup];
+_ctrlHintCombo ctrlSetPosition [0, _bottomY, 0.15 * _ctrlGrpWidth, TFS_ADMINMENU_STD_HEIGHT];
+_ctrlHintCombo ctrlCommit 0;
+_ctrlHintCombo ctrlSetText "Execute on:";
 
-private _ctrlCombo = _display ctrlCreate [QGVAR(RscCombo), -1, _ctrlgroup];
-_ctrlCombo ctrlsetPosition [0.15 * _ctrlGrpWidth, _bottomY, 0.25 * _ctrlGrpWidth, TFS_adminMENU_STD_HEIGHT];
+private _ctrlCombo = _display ctrlCreate [QGVAR(RscCombo), -1, _ctrlGroup];
+_ctrlCombo ctrlSetPosition [0.15 * _ctrlGrpWidth, _bottomY, 0.25 * _ctrlGrpWidth, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlCombo ctrlCommit 0;
 _ctrlCombo lbAdd "Your Client";
-_ctrlCombo lbAdd "targets' Clients";
+_ctrlCombo lbAdd "Targets' Clients";
 _ctrlCombo lbAdd "Server";
 _ctrlCombo lbAdd "All Clients and Server";
-_ctrlCombo lbsetCurSel 0;
+_ctrlCombo lbSetCurSel 0;
 
-private _ctrlButton = _display ctrlCreate [QGVAR(RscButtonMenu), -1, _ctrlgroup];
-_ctrlButton ctrlsetPosition [0.8 * _ctrlGrpWidth, _bottomY, 0.2 * _ctrlGrpWidth, TFS_adminMENU_STD_HEIGHT];
+private _ctrlButton = _display ctrlCreate [QGVAR(RscButtonMenu), -1, _ctrlGroup];
+_ctrlButton ctrlSetPosition [0.8 * _ctrlGrpWidth, _bottomY, 0.2 * _ctrlGrpWidth, TFS_ADMINMENU_STD_HEIGHT];
 _ctrlButton ctrlCommit 0;
-_ctrlButton ctrlsettext "execute";
+_ctrlButton ctrlSetText "Execute";
 _ctrlButton setVariable [QGVAR(association), [_ctrlEdit, _ctrlCombo]];
 _ctrlButton ctrlAddEventHandler ["buttonClick", {
     params ["_ctrlButton"];
-    (_ctrlButton getVariable [QGVAR(association), [controlnull, controlnull]]) params ["_ctrlEdit", "_ctrlCombo"];
+    (_ctrlButton getVariable [QGVAR(association), [controlNull, controlNull]]) params ["_ctrlEdit", "_ctrlCombo"];
     _ctrlButton call FUNC(debounceButton);
-    
-    private _edittext = ctrltext _ctrlEdit;
-    if (_edittext isEqualto "") then {
-        systemChat "[TFS admin Menu] Code field is empty";
+
+    private _editText = ctrlText _ctrlEdit;
+    if (_editText isEqualTo "") then {
+        systemChat "[TFS Admin Menu] Code field is empty";
     } else {
-        private _code = compile _edittext;
+        private _code = compile _editText;
         private _selected = lbCurSel _ctrlCombo;
         private _target = call {
-            if (_selected isEqualto 0) exitwith {
-                -1
-            };
-            if (_selected isEqualto 1) exitwith {
-                GVAR(utilityData)
-            };
-            if (_selected isEqualto 2) exitwith {
-                2
-            };
+            if (_selected isEqualTo 0) exitWith {-1};
+            if (_selected isEqualTo 1) exitWith {GVAR(utilityData)};
+            if (_selected isEqualTo 2) exitWith {2};
             0
         };
-        
-        if (_target isEqualto -1) then {
+
+        if (_target isEqualTo -1) then {
             {
                 _x call _code;
             } forEach GVAR(utilityData);
         } else {
-            if (_target isEqualtype []) then {
-                [compile _edittext, {
+            if (_target isEqualType []) then {
+                [compile _editText, {
                     params ["_code"];
                     player call _code;
                 }] remoteExec ["call", GVAR(utilityData)];
             } else {
-                [[GVAR(utilityData), compile _edittext], {
+                [[GVAR(utilityData), compile _editText], {
                     params ["_players", "_code"];
                     {
                         _x call _code;
@@ -80,9 +74,9 @@ _ctrlButton ctrlAddEventHandler ["buttonClick", {
                 }] remoteExec ["call", _target];
             };
         };
-        
-        systemChat format ["[TFS admin Menu] Code was executed on %1", _ctrlCombo lbtext (lbCurSel _ctrlCombo)];
-        [format ["%1 executed code:%2, on %3", profileName, _code, _target], false, "admin Menu"] call FUNC(log);
-        GVAR(utility_runcode_last) = _edittext;
+
+        systemChat format ["[TFS Admin Menu] Code was executed on %1", _ctrlCombo lbText (lbCurSel _ctrlCombo)];
+        [format ["%1 Executed code:%2, on %3",profileName,_code,_target],false,"Admin Menu"] call FUNC(log);
+        GVAR(utility_runcode_last) = _editText;
     };
 }];
