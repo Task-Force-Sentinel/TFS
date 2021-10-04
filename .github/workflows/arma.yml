@@ -46,21 +46,18 @@ jobs:
           name: TFS-${{ github.sha }}-nobin
           path: 'releases/@TFS*.zip'
 
-  stringtables:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Install Python packages
-      run: |
-        pip3 install wheel
-        pip3 install setuptools
-        pip3 install pygithub
-        pip3 install pygithub3
-    - name: Checkout the source code
-      uses: actions/checkout@master
-    - name: Validate Stringtables
-      run: python3 tools/stringtable_validator.py
-    - name: Update Translation issue
-      if: github.repository == 'Task-Force-Sentinel/TFS' && github.ref	== 'refs/heads/master' && ! contains(github.event.head_commit.message, '[ci skip]')
-      env:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: python3 tools/stringtableDeploy.py
+  SQFC:
+    windows:
+      name: Windows
+
+      runs-on: windows-latest
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v2
+
+        - name: Create work drive
+          run: 'subst P: .'
+
+        - uses: arma-actions/sqfc@latest
+          with:
+            directory: .
