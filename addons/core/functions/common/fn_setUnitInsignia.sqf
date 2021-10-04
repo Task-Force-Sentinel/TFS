@@ -1,19 +1,19 @@
 ﻿/*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\common\fn_setUnitinsignia.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \z\tfs\addons\core\functions\common\fn_setUnitinsignia.sqf
+* by Ojemineh
 *
-*	set unit insignia
+* set unit insignia
 *
-*	Arguments:
-*	0: unit		- <OBJECT>
-*	1: insignia	- <strinG>
+* Arguments:
+* 0: unit - <OBJECT>
+* 1: insignia - <strinG>
 *
-*	Return:
-*	nothing
+* Return:
+* nothing
 *
-*	Example:
-*	[player, "curator"] call TFS_fnc_setUnitinsignia;
+* Example:
+* [player, "curator"] call TFS_fnc_setUnitinsignia;
 *
 */
 
@@ -21,8 +21,8 @@
 
 private ["_unit", "_insignia"];
 
-_unit		= [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_insignia	= [_this, 1, "", [""]] call BIS_fnc_param;
+_unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+_insignia = [_this, 1, "", [""]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 

@@ -76,7 +76,7 @@ private _return = [_filename, _videoID, _canSkip, _showSkip, _showtime] spawn {
             private _rgb = [_r, _g, _b] call BIS_fnc_colorRGBtoHTML;
             
             private _keyname = format ["<t color='%1'>[%2]</t>", _rgb, toUpper(((keyname 57) splitstring '"') joinstring '')];
-            private _skipMsg = format ["<t font='RobotoCondensed' color='#ffffff' shadow='2' size='1.6'>%1</t>", localize "str_TFS_Message_SkipVideo"];
+            private _skipMsg = format ["<t font='RobotoCondensed' color='#ffffff' shadow='2' size='1.6'>%1</t>", localize "str_TFS_Core_SkipVideo"];
             private _message = format [_skipMsg, _keyname];
             
             uiSleep (_showtime select 0);

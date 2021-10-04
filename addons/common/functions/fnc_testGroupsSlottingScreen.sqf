@@ -53,10 +53,8 @@ if ([[1, 1, 0]] call FUNC(checkTFSVersion)) then {
                         }
                     };
                 } forEach _descriptions;
-                // diag_log str ["group", _common, "d", _descriptions];
-                // _common = _common apply {
-                    /*toUpper*/ (_x select [0, 1]) + (_x select [1])
-                };
+                //diag_log str ["group",_common,"d",_descriptions];
+                //_common = _common apply {/*toUpper*/ (_x select [0,1]) + (_x select [1])};
                 if (count _common == 0) then {
                     // No common part.
                     _outputgroups pushBackUnique _group;

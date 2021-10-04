@@ -1,21 +1,21 @@
 ﻿/*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\videos\fn_playVideo.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \z\tfs\addons\core\functions\videos\fn_playVideo.sqf
+* by Ojemineh
 *
-*	play video
+* play video
 *
-*	Arguments:
-*	0: filename	- <strinG>
-*	1: canSkip	- <BOOLEAN>
-*	2: showSkip	- <BOOLEAN>
-*	3: showtime	- <ARRAY>		(Fadein, FadeOut)
+* Arguments:
+* 0: filename - <strinG>
+* 1: canSkip - <BOOLEAN>
+* 2: showSkip - <BOOLEAN>
+* 3: showtime - <ARRAY>  (Fadein, FadeOut)
 *
-*	Return:
-*	<NUMBER>
+* Return:
+* <NUMBER>
 *
-*	Example:
-*	["data\video\intro.ogv"] call TFS_fnc_playVideo;
+* Example:
+* ["data\video\intro.ogv"] call TFS_fnc_playVideo;
 *
 */
 
@@ -27,10 +27,10 @@ if (not hasinterface) exitwith {};
 
 private ["_filename", "_canSkip", "_showSkip", "_showtime"];
 
-_filename	= [_this, 0, "", [""]] call BIS_fnc_param;
-_canSkip	= [_this, 1, true, [true]] call BIS_fnc_param;
-_showSkip	= [_this, 2, true, [true]] call BIS_fnc_param;
-_showtime	= [_this, 3, [3, 3], [[]]] call BIS_fnc_param;
+_filename = [_this, 0, "", [""]] call BIS_fnc_param;
+_canSkip = [_this, 1, true, [true]] call BIS_fnc_param;
+_showSkip = [_this, 2, true, [true]] call BIS_fnc_param;
+_showtime = [_this, 3, [3, 3], [[]]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
@@ -65,7 +65,7 @@ private _return = [_filename, _canSkip, _showSkip, _showtime] spawn {
             private _rgb = [_r, _g, _b] call BIS_fnc_colorRGBtoHTML;
             
             private _keyname = format ["<t color='%1'>[%2]</t>", _rgb, toUpper(((keyname 57) splitstring '"') joinstring '')];
-            private _skipMsg = format ["<t font='RobotoCondensed' color='#ffffff' shadow='2' size='1.6'>%1</t>", localize "str_TFS_Message_SkipVideo"];
+            private _skipMsg = format ["<t font='RobotoCondensed' color='#ffffff' shadow='2' size='1.6'>%1</t>", localize "str_TFS_Core_SkipVideo"];
             private _message = format [_skipMsg, _keyname];
             
             uiSleep (_showtime select 0);

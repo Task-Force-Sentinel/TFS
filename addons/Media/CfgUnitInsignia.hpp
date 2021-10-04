@@ -1,17 +1,17 @@
-class CfgUnitInsignia
+class CfgUnitinsignia
 {
-	class Logo
-	{
-		displayName = "TFS Logo";
-		author = AUTHOR;
-		texture = "z\tfs\addons\Media\images\TFSPATCH.paa";
-		textureVehicle = "";
-	};
-	class bolo
-	{
-		displayName = "TFS BOLO";
-		author = AUTHOR;
-		texture = "z\tfs\addons\Media\images\TFSPATCH.paa";
-		textureVehicle = "";
-	};
+    class logo
+    {
+        displayname = "TFS logo";
+        author = AUTHor;
+        texture = "z\tfs\addons\Media\images\TFSPATCH.paa";
+        texturevehicle = "";
+    };
+    class bolo
+    {
+        displayname = "TFS BOLO";
+        author = AUTHor;
+        texture = "z\tfs\addons\Media\images\TFSPATCH.paa";
+        texturevehicle = "";
+    };
 };

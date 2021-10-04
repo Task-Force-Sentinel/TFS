@@ -1,18 +1,18 @@
 ﻿/*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\common\fn_screenshot.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \z\tfs\addons\core\functions\common\fn_screenshot.sqf
+* by Ojemineh
 *
-*	take a screenshot without hud/gui
+* take a screenshot without hud/gui
 *
-*	Arguments:
-*	0: Filename - <strinG>
+* Arguments:
+* 0: Filename - <strinG>
 *
-*	Return:
-*	nothing
+* Return:
+* nothing
 *
-*	Example:
-*	[] call TFS_fnc_screenshot;
+* Example:
+* [] call TFS_fnc_screenshot;
 *
 */
 
@@ -20,8 +20,8 @@
 
 private ["_filename"];
 
-_filename	= [_this, 0, "", [""]] call BIS_fnc_param;
-_shutter	= [_this, 1, true, [true]] call BIS_fnc_param;
+_filename = [_this, 0, "", [""]] call BIS_fnc_param;
+_shutter = [_this, 1, true, [true]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 

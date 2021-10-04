@@ -8,7 +8,7 @@ if (isnil {
 } ) then {
     player addEventHandler ["Respawn", {
         params ["_unit", "_corpse"];
-        [] execVM "z\tfs\addons\Main\Scripts\Earplugs\earplugs.sqf";
+        [] execVM "z\tfs\addons\main\Scripts\Earplugs\earplugs.sqf";
     }];
     player setVariable ["EarplugsAdded", true];
 };

@@ -65,7 +65,7 @@ if (isNull _area) exitwith {
         {
             TFS_MEDICAL_AREA_DISMANTLE_FAILURE = true;
         },
-        localize "str_TFS_Medical_Area_Progress_Dismantle",
+        localize "str_TFS_Area_Progress_Dismantle",
         {
             true
         },

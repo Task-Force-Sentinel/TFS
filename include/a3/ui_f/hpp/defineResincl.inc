@@ -954,7 +954,7 @@ enum
 #define IDC_AS_PRESENCE       722
 
 #define IDC_AS_ARGUMENTS      733
-
+////////////////////////////////////////
 
 // Virtual keyboard
 #define IDC_VK_SHIFT              1001

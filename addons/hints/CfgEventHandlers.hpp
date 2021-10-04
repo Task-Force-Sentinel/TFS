@@ -1,15 +1,11 @@
-class Extended_PreInit_EventHandlers {
-	
-	class TFS_Hints_EH_initSettings {
-		init = "call TFS_hints_fnc_initSettings";
-	};
-	
+class Extended_Preinit_EventHandlers {
+    class TFS_hints_EH_initsettings {
+        init = "call TFS_hints_fnc_initsettings";
+    };
 };
 
-class Extended_PostInit_EventHandlers {
-	
-	class TFS_Hints_EH_initialize {
-		init = "call TFS_hints_fnc_initialize";
-	};
-	
+class Extended_Postinit_EventHandlers {
+    class TFS_hints_EH_initialize {
+        init = "call TFS_hints_fnc_initialize";
+    };
 };

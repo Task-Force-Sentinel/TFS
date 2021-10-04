@@ -52,7 +52,7 @@ if (isNull _unit) exitwith {};
         {
             TFS_MEDICAL_SUPPLIES_UNPACK_FAILURE = true;
         },
-        localize "str_TFS_Medical_Supplies_Progress_MedicKit",
+        localize "str_TFS_Supplies_Progress_MedicKit",
         {
             true
         },

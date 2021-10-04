@@ -2,42 +2,44 @@
 
 class CfgPatches
 {
-	class TFS_Zeus
-	{
-		author = AUTHOR;
-		name = NAME;
-		url = URL;
-		units[] = {};
-		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {
-			"A3_UI_F",
-			"A3_UI_F_Curator",
-			"A3_Functions_F_Curator",
-			"A3_Modules_F",
-			"A3_Modules_F_Curator",
-			"A3_Modules_F_Bootcamp_Misc",
-			"cba_main",
-			"cba_xeh"};
-		version = VERSION;
-		authors[] = {"MitchJC"};
-		weapons[] = {};
-	};
+    class TFS_Zeus
+    {
+        author = AUTHor;
+        name = name;
+        url = URL;
+        units[] = {};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {
+            "A3_UI_F",
+            "A3_UI_F_Curator",
+            "A3_Functions_F_Curator",
+            "A3_modules_F",
+            "A3_modules_F_Curator",
+            "A3_modules_F_Bootcamp_Misc",
+            "cba_main",
+            "cba_xeh"
+        };
+        version = VERSION;
+        authors[] = {
+            "MitchJC"
+        };
+        weapons[] = {};
+    };
 };
 
 class CfgFunctions
 {
-
-#include "cfgFunctions.hpp"
+    #include "cfgFunctions.hpp"
 };
 
-#include "cfgVehicles.hpp"
+#include "cfgvehicles.hpp"
 
-class Extended_PreInit_EventHandlers
+class Extended_Preinit_EventHandlers
 {
-	class TFS_Zeus_Event
-	{
-		init = "call compile preprocessFileLineNumbers 'z\tfs\Addons\Zeus\XEH_preInit.sqf'";
-	};
+    class TFS_Zeus_Event
+    {
+        init = "call compile preprocessFileLineNumbers 'z\tfs\Addons\Zeus\XEH_preinit.sqf'";
+    };
 };
 
-#include "ZenActions.hpp"
+#include "Zenactions.hpp"

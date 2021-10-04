@@ -1,19 +1,19 @@
 ﻿/*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\settings\fn_getKeybindstring.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \z\tfs\addons\core\functions\settings\fn_getKeybindstring.sqf
+* by Ojemineh
 *
-*	get keybind string
+* get keybind string
 *
-*	Arguments:
-*	0: addon		- <strinG>
-*	1: actionname	- <strinG>
+* Arguments:
+* 0: addon - <strinG>
+* 1: actionname - <strinG>
 *
-*	Return:
-*	strinG
+* Return:
+* strinG
 *
-*	Example:
-*	["CH View distance", "open_settings"] call TFS_fnc_getKeybindstring;
+* Example:
+* ["CH View distance", "open_settings"] call TFS_fnc_getKeybindstring;
 *
 */
 
@@ -21,8 +21,8 @@
 
 private ["_addon", "_actionname"];
 
-_addon		= [_this, 0, "", [""]] call BIS_fnc_param;
-_actionname	= [_this, 1, "", [""]] call BIS_fnc_param;
+_addon = [_this, 0, "", [""]] call BIS_fnc_param;
+_actionname = [_this, 1, "", [""]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
@@ -47,17 +47,17 @@ if (!isnil "_entry") then {
     
     private _modifier =
     (if (_useShift) then {
-        localize "str_TFS_KeyBinds_Shift_modifier"
+        localize "str_TFS_Core_ShiftModifier"
     } else {
         ""
     }) +
     (if (_useCtrl) then {
-        localize "str_TFS_KeyBinds_Ctrl_modifier"
+        localize "str_TFS_Core_CtrlModifier"
     } else {
         ""
     }) +
     (if (_useAlt) then {
-        localize "str_TFS_KeyBinds_Alt_modifier"
+        localize "str_TFS_Core_AltModifier"
     } else {
         ""
     });

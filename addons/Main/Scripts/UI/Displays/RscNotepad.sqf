@@ -3,7 +3,7 @@
 #include "\a3\UI_F_orange\UI\resincl.inc"
 #include "\a3\UI_F_orange\UI\dikCodes.inc"
 
-#define PREVIEW_soundVolume	0.25
+#define PREVIEW_soundVolume 0.25
 
 _mode = _this select 0;
 _params = _this select 1;

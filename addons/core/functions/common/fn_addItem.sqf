@@ -1,24 +1,24 @@
 /*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\common\fn_addItem.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \z\tfs\addons\core\functions\common\fn_addItem.sqf
+* by Ojemineh
 *
-*	add item to unit/vehicle
+* add item to unit/vehicle
 *
-*	Arguments:
-*	0: unit			- <OBJECT>
-*	1: item			- <strinG>
-*	2: amount		- <NUMBER>
-*	3: priority		- <ARRAY>	[1 = uniform, 2 = vest, 3 = backpack]
-*	4: overflow		- <BOOLEAN>	[default = true]
+* Arguments:
+* 0: unit - <OBJECT>
+* 1: item - <strinG>
+* 2: amount - <NUMBER>
+* 3: priority - <ARRAY> [1 = uniform, 2 = vest, 3 = backpack]
+* 4: overflow - <BOOLEAN> [default = true]
 *
-*	Return:
-*	0: addtoUnit	- <BOOLEAN>
-*	1: addtoGround	- <BOOLEAN>
+* Return:
+* 0: addtoUnit - <BOOLEAN>
+* 1: addtoGround - <BOOLEAN>
 *
-*	Examples:
-*	[player, "ACE_EarPlugs", 1, [3, 2, 1], true] call TFS_fnc_addItem;
-*	[truck1, "ACE_EarPlugs", 1] call TFS_fnc_addItem;
+* Examples:
+* [player, "ACE_EarPlugs", 1, [3, 2, 1], true] call TFS_fnc_addItem;
+* [truck1, "ACE_EarPlugs", 1] call TFS_fnc_addItem;
 *
 */
 
@@ -26,11 +26,11 @@
 
 private ["_unit", "_item", "_amount", "_priority", "_overflow"];
 
-_unit		= [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_item		= [_this, 1, "", [""]] call BIS_fnc_param;
-_amount		= [_this, 2, 1, [0]] call BIS_fnc_param;
-_priority	= [_this, 3, [0], [[]]] call BIS_fnc_param;
-_overflow	= [_this, 4, false, [true]] call BIS_fnc_param;
+_unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+_item = [_this, 1, "", [""]] call BIS_fnc_param;
+_amount = [_this, 2, 1, [0]] call BIS_fnc_param;
+_priority = [_this, 3, [0], [[]]] call BIS_fnc_param;
+_overflow = [_this, 4, false, [true]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 

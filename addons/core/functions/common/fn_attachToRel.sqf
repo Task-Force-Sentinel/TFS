@@ -1,19 +1,19 @@
 ﻿/*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\common\fn_attachtorel.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \z\tfs\addons\core\functions\common\fn_attachtorel.sqf
+* by Ojemineh
 *
-*	attach object relative to parent
+* attach object relative to parent
 *
-*	Arguments:
-*	0: object	- <OBJECT>
-*	1: parent	- <OBJECT>
+* Arguments:
+* 0: object - <OBJECT>
+* 1: parent - <OBJECT>
 *
-*	Return:
-*	nothing
+* Return:
+* nothing
 *
-*	Example:
-*	[player, vehicle1] call TFS_fnc_attachtorel;
+* Example:
+* [player, vehicle1] call TFS_fnc_attachtorel;
 *
 */
 
@@ -21,8 +21,8 @@
 
 private ["_object", "_parent"];
 
-_object	= [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_parent	= [_this, 1, objNull, [objNull]] call BIS_fnc_param;
+_object = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+_parent = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 

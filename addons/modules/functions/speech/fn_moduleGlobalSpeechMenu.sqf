@@ -40,7 +40,7 @@ if !(_unit isKindOf "Man") exitwith {};
 // -------------------------------------------------------------------------------------------------
 
 private _unitname = [_unit] call ACE_common_fnc_getname;
-private _holdtext = format [localize "str_TFS_module_GlobalSpeech_Holdaction", _unitname];
+private _holdtext = format [localize "str_TFS_Modules_GlobalSpeech_Holdaction", _unitname];
 private _holdIcon = "\z\tfs\addons\modules\data\gui\holdaction_speech_ca.paa";
 
 [

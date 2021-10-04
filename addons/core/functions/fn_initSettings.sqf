@@ -24,12 +24,12 @@
     "tfs_debug_enabled",
     "CHECKBOX",
     [
-        localize "str_TFS_core_CBA_Debug_Enabled_Title",
-        localize "str_TFS_core_CBA_Debug_Enabled_Tip"
+        localize "str_TFS_Core_CBA_Debug_Enabled_Title",
+        localize "str_TFS_Core_CBA_Debug_Enabled_Tip"
     ],
     [
-        localize "str_TFS_core_CBA_Category",
-        localize "str_TFS_core_CBA_Category_core"
+        localize "str_TFS_Core_CBA_Category",
+        localize "str_TFS_Core_CBA_Category_core"
     ],
     false,
     0,
@@ -40,12 +40,12 @@
     "tfs_showNewsOnMainMenu",
     "CHECKBOX",
     [
-        localize "str_TFS_core_CBA_Show_News_Title",
-        localize "str_TFS_core_CBA_Show_News_Tip"
+        localize "str_TFS_Core_CBA_Show_News_Title",
+        localize "str_TFS_Core_CBA_Show_News_Tip"
     ],
     [
-        localize "str_TFS_core_CBA_Category",
-        localize "str_TFS_core_CBA_Category_core"
+        localize "str_TFS_Core_CBA_Category",
+        localize "str_TFS_Core_CBA_Category_core"
     ],
     true,
     0,
@@ -67,12 +67,12 @@
     "tfs_tactical_view_enabled",
     "CHECKBOX",
     [
-        localize "str_TFS_core_CBA_Tactical_View_Title",
-        localize "str_TFS_core_CBA_Tactical_View_Tip"
+        localize "str_TFS_Core_CBA_Tactical_View_Title",
+        localize "str_TFS_Core_CBA_Tactical_View_Tip"
     ],
     [
-        localize "str_TFS_core_CBA_Category",
-        localize "str_TFS_core_CBA_Category_Options"
+        localize "str_TFS_Core_CBA_Category",
+        localize "str_TFS_Core_CBA_Category_Options"
     ],
     false,
     1,

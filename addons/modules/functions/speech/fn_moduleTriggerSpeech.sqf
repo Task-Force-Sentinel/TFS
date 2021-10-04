@@ -50,20 +50,20 @@ switch _mode do {
         // VALIdate SOURCE
         
         if (_source isEqualto "") exitwith {
-            [format [localize "str_TFS_moduleError_UnitIsEmpty", _source]] call BIS_fnc_error;
-            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_moduleError_UnitIsEmpty", _source]], "modules"] call TFS_fnc_log;
+            [format [localize "str_TFS_Modules_UnitIsEmpty", _source]] call BIS_fnc_error;
+            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_Modules_UnitIsEmpty", _source]], "modules"] call TFS_fnc_log;
         };
         
         if (isNull (missionnamespace getVariable [_source, objNull])) exitwith {
-            [format [localize "str_TFS_moduleError_VarIsUnknown", _source]] call BIS_fnc_error;
-            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_moduleError_VarIsUnknown", _source]], "modules"] call TFS_fnc_log;
+            [format [localize "str_TFS_Modules_VarIsUnknown", _source]] call BIS_fnc_error;
+            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_Modules_VarIsUnknown", _source]], "modules"] call TFS_fnc_log;
         };
         
         private _unit = missionnamespace getVariable _source;
         
         if !(_unit isKindOf "Man") exitwith {
-            [format [localize "str_TFS_moduleError_IsnotUnit", _unit]] call BIS_fnc_error;
-            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_moduleError_IsnotUnit", _unit]], "modules"] call TFS_fnc_log;
+            [format [localize "str_TFS_Modules_IsnotUnit", _unit]] call BIS_fnc_error;
+            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_Modules_IsnotUnit", _unit]], "modules"] call TFS_fnc_log;
         };
         
         // VALIdate classname
@@ -79,22 +79,22 @@ switch _mode do {
         };
         
         if (_soundExist isEqualto 0) exitwith {
-            [format [localize "str_TFS_moduleError_UnknowninCfgSounds", _sound]] call BIS_fnc_error;
-            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_moduleError_UnknowninCfgSounds", _sound]], "modules"] call TFS_fnc_log;
+            [format [localize "str_TFS_Modules_UnknowninCfgSounds", _sound]] call BIS_fnc_error;
+            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_Modules_UnknowninCfgSounds", _sound]], "modules"] call TFS_fnc_log;
         };
         
         // VALIdate distance
         
         if (_distance <= 0) exitwith {
-            [format [localize "str_TFS_moduleError_distanceGreaterZero", _distance]] call BIS_fnc_error;
-            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_moduleError_distanceGreaterZero", _distance]], "modules"] call TFS_fnc_log;
+            [format [localize "str_TFS_Modules_distanceGreaterZero", _distance]] call BIS_fnc_error;
+            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_Modules_distanceGreaterZero", _distance]], "modules"] call TFS_fnc_log;
         };
         
         // VALIdate max distance
         
         if ((_maxdistance > 0) && (_maxdistance <= _distance)) exitwith {
-            [format [localize "str_TFS_moduleError_maxGreaterdistance", _distance, _maxdistance]] call BIS_fnc_error;
-            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_moduleError_maxGreaterdistance", _distance, _maxdistance]], "modules"] call TFS_fnc_log;
+            [format [localize "str_TFS_Modules_maxGreaterdistance", _distance, _maxdistance]] call BIS_fnc_error;
+            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_Modules_maxGreaterdistance", _distance, _maxdistance]], "modules"] call TFS_fnc_log;
         };
         
         // VALIdate DURATION
@@ -103,8 +103,8 @@ switch _mode do {
             _duration = [_sound] call TFS_fnc_getSoundDuration;
         };
         if (_duration <= 0) exitwith {
-            [format [localize "str_TFS_moduleError_DurationnotDefined", _sound]] call BIS_fnc_error;
-            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_moduleError_DurationnotDefined", _sound]], "modules"] call TFS_fnc_log;
+            [format [localize "str_TFS_Modules_DurationnotDefined", _sound]] call BIS_fnc_error;
+            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_Modules_DurationnotDefined", _sound]], "modules"] call TFS_fnc_log;
         };
         
         // modULE
@@ -204,8 +204,8 @@ switch _mode do {
         // VALIdate SOURCE
         
         if (_source isEqualto "") exitwith {
-            [format [localize "str_TFS_moduleError_UnitIsEmpty", _source]] call BIS_fnc_error;
-            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_moduleError_UnitIsEmpty", _source]], "modules"] call TFS_fnc_log;
+            [format [localize "str_TFS_Modules_UnitIsEmpty", _source]] call BIS_fnc_error;
+            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_Modules_UnitIsEmpty", _source]], "modules"] call TFS_fnc_log;
         };
         
         // VALIdate classname
@@ -221,22 +221,22 @@ switch _mode do {
         };
         
         if (_soundExist isEqualto 0) exitwith {
-            [format [localize "str_TFS_moduleError_UnknowninCfgSounds", _sound]] call BIS_fnc_error;
-            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_moduleError_UnknowninCfgSounds", _sound]], "modules"] call TFS_fnc_log;
+            [format [localize "str_TFS_Modules_UnknowninCfgSounds", _sound]] call BIS_fnc_error;
+            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_Modules_UnknowninCfgSounds", _sound]], "modules"] call TFS_fnc_log;
         };
         
         // VALIdate distance
         
         if (_distance <= 0) exitwith {
-            [format [localize "str_TFS_moduleError_distanceGreaterZero", _distance]] call BIS_fnc_error;
-            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_moduleError_distanceGreaterZero", _distance]], "modules"] call TFS_fnc_log;
+            [format [localize "str_TFS_Modules_distanceGreaterZero", _distance]] call BIS_fnc_error;
+            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_Modules_distanceGreaterZero", _distance]], "modules"] call TFS_fnc_log;
         };
         
         // VALIdate max distance
         
         if ((_maxdistance > 0) && (_maxdistance <= _distance)) exitwith {
-            [format [localize "str_TFS_moduleError_maxGreaterdistance", _distance, _maxdistance]] call BIS_fnc_error;
-            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_moduleError_maxGreaterdistance", _distance, _maxdistance]], "modules"] call TFS_fnc_log;
+            [format [localize "str_TFS_Modules_maxGreaterdistance", _distance, _maxdistance]] call BIS_fnc_error;
+            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_Modules_maxGreaterdistance", _distance, _maxdistance]], "modules"] call TFS_fnc_log;
         };
         
         // VALIdate DURATION
@@ -245,8 +245,8 @@ switch _mode do {
             _duration = [_sound] call TFS_fnc_getSoundDuration;
         };
         if (_duration <= 0) exitwith {
-            [format [localize "str_TFS_moduleError_DurationnotDefined", _sound]] call BIS_fnc_error;
-            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_moduleError_DurationnotDefined", _sound]], "modules"] call TFS_fnc_log;
+            [format [localize "str_TFS_Modules_DurationnotDefined", _sound]] call BIS_fnc_error;
+            [2, "moduleTriggerpeech '%1' - %2", [_logic, format [localize "str_TFS_Modules_DurationnotDefined", _sound]], "modules"] call TFS_fnc_log;
         };
     };
 };

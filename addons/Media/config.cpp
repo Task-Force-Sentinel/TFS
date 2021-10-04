@@ -2,27 +2,32 @@
 
 class CfgPatches
 {
-	class TFS_Media
-	{
-		author = AUTHOR;
-		name = COMPONENT_NAME;
-		url = URL;
-		units[] = {"TFS_Flag_White", "TFS_Flag_Black"};
-		requiredVersion = REQUIRED_VERSION;
-		requiredAddons[] = {"A3_UI_F", "cba_main", "cba_xeh"};
-		version = VERSION;
-		authors[] = {"MitchJC"};
-		weapons[] = {};
-	};
+    class TFS_Media
+    {
+        author = AUTHor;
+        name = COMPONENT_name;
+        url = URL;
+        units[] = {
+            "TFS_flag_White", "TFS_flag_Black"
+        };
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {
+            "A3_UI_F", "cba_main", "cba_xeh"
+        };
+        version = VERSION;
+        authors[] = {
+            "MitchJC"
+        };
+        weapons[] = {};
+    };
 };
 
-#include "CfgVehicles.hpp"
+#include "Cfgvehicles.hpp"
 #include "CfgMusic.hpp"
-#include "CfgRadio.hpp"
+#include "Cfgradio.hpp"
 #include "CfgSounds.hpp"
-#include "CfgUnitInsignia.hpp"
+#include "CfgUnitinsignia.hpp"
 class CfgFunctions
 {
-
-#include "cfgFunctions.hpp"
+    #include "cfgFunctions.hpp"
 };

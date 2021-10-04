@@ -1,18 +1,18 @@
 /*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\sounds\fn_getsoundVolume.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \z\tfs\addons\core\functions\sounds\fn_getsoundVolume.sqf
+* by Ojemineh
 *
-*	get volume of a sound-class
+* get volume of a sound-class
 *
-*	Arguments:
-*	0: soundClass - <strinG>
+* Arguments:
+* 0: soundClass - <strinG>
 *
-*	Return:
-*	<NUMBER>
+* Return:
+* <NUMBER>
 *
-*	Example:
-*	["AlarmBell"] call TFS_fnc_getsoundVolume;
+* Example:
+* ["AlarmBell"] call TFS_fnc_getsoundVolume;
 *
 */
 
@@ -28,8 +28,8 @@ if (_soundClass isEqualto "") exitwith {};
 
 // -------------------------------------------------------------------------------------------------
 
-private _soundArray	= [];
-private _return		= 0;
+private _soundArray = [];
+private _return = 0;
 
 if (isClass (missionConfigFile >> "CfgSounds" >> _soundClass)) then {
     _soundArray = getArray (missionConfigFile >> "CfgSounds" >> _soundClass >> "sound");

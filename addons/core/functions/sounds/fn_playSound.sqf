@@ -1,19 +1,19 @@
 /*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\sounds\fn_playSound.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \z\tfs\addons\core\functions\sounds\fn_playSound.sqf
+* by Ojemineh
 *
-*	play sound for all players
+* play sound for all players
 *
-*	Arguments:
-*	0: soundClass - <strinG>
-*	1: isSpeech - <BOOLEAN>
+* Arguments:
+* 0: soundClass - <strinG>
+* 1: isSpeech - <BOOLEAN>
 *
-*	Return:
-*	nothing
+* Return:
+* nothing
 *
-*	Example:
-*	["Earthquake_01"] call TFS_fnc_playSound;
+* Example:
+* ["Earthquake_01"] call TFS_fnc_playSound;
 *
 */
 
@@ -21,8 +21,8 @@
 
 private ["_soundClass", "_isSpeech"];
 
-_soundClass	= [_this, 0, "", [""]] call BIS_fnc_param;
-_isSpeech	= [_this, 1, true, [true]] call BIS_fnc_param;
+_soundClass = [_this, 0, "", [""]] call BIS_fnc_param;
+_isSpeech = [_this, 1, true, [true]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 

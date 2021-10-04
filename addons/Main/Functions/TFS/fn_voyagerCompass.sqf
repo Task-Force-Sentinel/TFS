@@ -376,7 +376,7 @@ fnc_showsettings =
                                                                 
                                                                 // hint format ["degr: %1", getDir player];
                                                             }] call BIS_fnc_addStackedEventHandler;
-                                                            // waitUntil {
+                                                            waitUntil {
                                                                 ncMarkerVisibility == 1;
                                                             };
                                                             
@@ -413,9 +413,8 @@ fnc_showsettings =
                                                                         
                                                                         currentMarkers pushBack _x;
                                                                         combMarkers pushBack [_idc, _x];
-                                                                    // };
-                                                                };
-                                                            } forEach allUserMarkers;
+                                                                    };
+                                                                } forEach allUserMarkers;
                                                             // delete if marker from [idc, marker] aint alive anymore
                                                             {
                                                                 if !(_x in allMapMarkers) then {
@@ -431,7 +430,7 @@ fnc_showsettings =
                                                                     combMarkers = combMarkers - [_x];
                                                                 };
                                                             } forEach combMarkers;
-                                                            // sleep 0.2;
+                                                            sleep 0.2;
                                                         };
                                                     };
                                                     
@@ -516,7 +515,7 @@ fnc_showsettings =
                                                         compass_pos_a3 = [
                                                             [3410, 0, "no" ]
                                                         ];
-                                                        // _nc_lb_type = [compass_pos, compass_pos_a3];
+                                                        _nc_lb_type = [compass_pos, compass_pos_a3];
                                                         
                                                         disableSerialization;
                                                         params ["_compasstype", "_ncNeedle", "_ncFontsize", "_ncShadow", "_ncFontoption", "_ncAlpha", "_ncColorOption"];

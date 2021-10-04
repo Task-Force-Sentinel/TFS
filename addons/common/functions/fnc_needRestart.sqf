@@ -1,19 +1,19 @@
 /*
-*	ARMA EXTENDED ENVIRONMENT
-*	\tfs_common\functions\settings\fn_needRestart.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \tfs_common\functions\settings\fn_needRestart.sqf
+* by Ojemineh
 *
-*	settings restart notification
+* settings restart notification
 *
-*	Arguments:
-*	0: setting		- <strinG>
-*	1: restartID	- <NUMBER>
+* Arguments:
+* 0: setting - <strinG>
+* 1: restartID - <NUMBER>
 *
-*	Return:
-*	nothing
+* Return:
+* nothing
 *
-*	Example:
-*	["TFS_debug_enabled", 2] call tfs_fnc_needRestart;
+* Example:
+* ["TFS_debug_enabled", 2] call tfs_fnc_needRestart;
 *
 */
 
@@ -21,8 +21,8 @@
 
 private ["_setting", "_restartID"];
 
-_setting	= [_this, 0, "", [""]] call BIS_fnc_param;
-_restartID	= [_this, 1, 0, [0]] call BIS_fnc_param;
+_setting = [_this, 0, "", [""]] call BIS_fnc_param;
+_restartID = [_this, 1, 0, [0]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 

@@ -1,77 +1,99 @@
-class CfgFunctions {
-	class TFS_Main {
-
-		tag = "TFS";
-		class Main {
-
-			file = "z\tfs\addons\Main\Functions\TFS";
-			class AddCueCards {};
-			class ArsenalLoadSave {};
-			class Diary {};
-			class DynamicSim {};
-			class DynamicGroups {};
-			class Earplugs {};
-			class FlipVehicle {};
-			class LockCamVehicle {};
-			class Logs {};
-			class PilotCheck {};
-			class QSRepackMags {};
-			class TFARSettings {PostInit = 1;};
-			class VanillaFatigue {};
-			class FindReplaceString {};
-			class FindInArrayMap {};
-			class voyagerCompass {};
-			class clientRepackMagazines {};
-			class SafePos {};
-			class GetKeys {};
-			class GetValues {};
-			class DLog {};
-			class ObjectsMapper {};
-		};
-	};
-
-	class CHVD
-	{
-		tag = "CHVD";
-		class script
-		{
-			file = "z\tfs\addons\Main\Functions\CHVD";
-			class onSliderChange {};
-			class onLBSelChanged {};
-			class onLBSelChanged_syncmode {};
-			class onEBinput {};
-			class onEBterrainInput {};
-			class onEBinput_syncmode {};
-			class selTerrainQuality {};
-			class updateTerrain {};
-			class updateSettings {};
-			class updateVehType {};
-			class fovViewDistance {};
-			class UAVstatus {};
-			class openDialog {};
-			class localize {};
-			class trueZoom {};
-			class keyDown {};
-			class keyDownTerrain {};
-			class init {};
-		};
-	};
-
-	class YAINA_F {
-		tag = "YAINA_F";
-
-		class General {
-			file = "z\tfs\addons\Main\Functions\YAINA\General";
-			class crewNames {};
-			class formatDuration {};
-			class showFPS {};
-			class log {};
-			class hintC {};
-			class hideTerrainObjects {};
-			class GetFunctions {};
-		};
-	};
+class CfgMarkers {
+    // units
+    class iconcasap {
+        name = "CAS action Point";
+        icon = "z\tfs\addons\Media\images\map\AP.paa";
+        size = 24;
+        shadow = true;
+        scope = 2;
+        color[] = {
+            1, 1, 1, 1
+        };
+    };
+    class iconcasbp {
+        name = "CAS Battle Point";
+        icon = "z\tfs\addons\Media\images\map\BP.paa";
+        size = 24;
+        shadow = true;
+        scope = 2;
+        color[] = {
+            1, 1, 1, 1
+        };
+    };
+    class iconcascp {
+        name = "CAS Control Point";
+        icon = "z\tfs\addons\Media\images\map\CP.paa";
+        size = 24;
+        shadow = true;
+        scope = 2;
+        color[] = {
+            1, 1, 1, 1
+        };
+    };
+    class iconcasdz {
+        name = "drop Zone";
+        icon = "z\tfs\addons\Media\images\map\DZ.paa";
+        size = 24;
+        shadow = true;
+        scope = 2;
+        color[] = {
+            1, 1, 1, 1
+        };
+    };
+    class iconcasep {
+        name = "CAS Egress Point";
+        icon = "z\tfs\addons\Media\images\map\EP.paa";
+        size = 24;
+        shadow = true;
+        scope = 2;
+        color[] = {
+            1, 1, 1, 1
+        };
+    };
+    class iconcasip {
+        name = "CAS initiation Point";
+        icon = "z\tfs\addons\Media\images\map\IP.paa";
+        size = 24;
+        shadow = true;
+        scope = 2;
+        color[] = {
+            1, 1, 1, 1
+        };
+    };
+    class iconassultd {
+        name = "Assult";
+        icon = "z\tfs\addons\Media\images\map\assult.paa";
+        size = 24;
+        shadow = true;
+        scope = 2;
+        color[] = {
+            1, 1, 1, 1
+        };
+    };
+    class iconsupportd {
+        name = "Support";
+        icon = "z\tfs\addons\Media\images\map\support.paa";
+        size = 24;
+        shadow = true;
+        scope = 2;
+        color[] = {
+            1, 1, 1, 1
+        };
+    };
+    class icontfsx {
+        name = "X";
+        icon = "z\tfs\addons\Media\images\map\x.paa";
+        size = 24;
+        shadow = true;
+        scope = 2;
+        color[] = {
+            1, 1, 1, 1
+        };
+    };
+    class hd_dot {
+        scope=01;
+    };
+    class mil_objective {
+        scope=2;
+    };
 };
-
-#include "Functions\CHVD\dialog.hpp"
-#include "Functions\YAINA\General\crewNamesTitles.hpp"

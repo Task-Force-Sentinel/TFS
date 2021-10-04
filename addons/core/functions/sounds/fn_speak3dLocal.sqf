@@ -1,24 +1,24 @@
 /*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\sounds\fn_speak3dlocal.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \z\tfs\addons\core\functions\sounds\fn_speak3dlocal.sqf
+* by Ojemineh
 *
-*	play local sound with random lip sync
+* play local sound with random lip sync
 *
-*	Arguments:
-*	0: unit			- <OBJECT>
-*	1: soundClass	- <strinG>
-*	2: distance		- <NUMBER>	(default: 30m)
-*	3: maxdistance	- <NUMBER>	(default: no limitation)
-*	4: duration		- <NUMBER>	(seconds)
-*	5: pitch		- <NUMBER>
-*	6: isSpeech		- <BOOLEAN>
+* Arguments:
+* 0: unit   - <OBJECT>
+* 1: soundClass - <strinG>
+* 2: distance  - <NUMBER> (default: 30m)
+* 3: maxdistance - <NUMBER> (default: no limitation)
+* 4: duration  - <NUMBER> (seconds)
+* 5: pitch  - <NUMBER>
+* 6: isSpeech  - <BOOLEAN>
 *
-*	Return:
-*	nothing
+* Return:
+* nothing
 *
-*	Example:
-*	[player, "cp_mission_accomplished_1", -1, -1, 4.5] call TFS_fnc_speak3dlocal;
+* Example:
+* [player, "cp_mission_accomplished_1", -1, -1, 4.5] call TFS_fnc_speak3dlocal;
 *
 */
 
@@ -30,13 +30,13 @@ if (not hasinterface) exitwith {};
 
 private ["_unit", "_soundClass", "_distance", "_maxdistance", "_duration", "_pitch", "_isSpeech"];
 
-_unit 	= [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_soundClass 	= [_this, 1, "", [""]] call BIS_fnc_param;
-_distance 		= [_this, 2, -1, [0]] call BIS_fnc_param;
-_maxdistance	= [_this, 3, -1, [0]] call BIS_fnc_param;
-_duration 	= [_this, 4, -1, [0]] call BIS_fnc_param;
-_pitch 	= [_this, 5, -1, [0]] call BIS_fnc_param;
-_isSpeech 	= [_this, 6, false, [true]] call BIS_fnc_param;
+_unit  = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+_soundClass  = [_this, 1, "", [""]] call BIS_fnc_param;
+_distance   = [_this, 2, -1, [0]] call BIS_fnc_param;
+_maxdistance = [_this, 3, -1, [0]] call BIS_fnc_param;
+_duration  = [_this, 4, -1, [0]] call BIS_fnc_param;
+_pitch  = [_this, 5, -1, [0]] call BIS_fnc_param;
+_isSpeech  = [_this, 6, false, [true]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 

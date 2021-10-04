@@ -21,6 +21,15 @@ class cfgPatches
     };
 };
 
+class CfgMods {
+    class PREFIX {
+        name = "Task Force Sentinel Custom Mod";
+        actionName = "Website";
+        action = CSTRING(URL);
+        description = "Issue Tracker: https://github.com/Task-Force-Sentinel/TFS/issues";
+    };
+};
+
 #include "CfgSettings.hpp"
 #include "Dialogs\CfgDisplays.hpp"
 #include "CfgRespawnTemplates.hpp"

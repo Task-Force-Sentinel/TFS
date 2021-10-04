@@ -1,14 +1,12 @@
-class CfgActions {
-	
+class Cfgactions {
     class None;
-	class Land: None {
-        showWindow = 0;
-		show = 0;		
-	};
-	
-    class OpenBag: None {
-        showWindow = 0;
-		show = 0;
+    class land: None {
+        showwindow = 0;
+        show = 0;
     };
-	
+    
+    class OpenBag: None {
+        showwindow = 0;
+        show = 0;
+    };
 };

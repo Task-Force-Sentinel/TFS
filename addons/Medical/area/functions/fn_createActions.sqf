@@ -41,7 +41,7 @@ if (isNull _menu) exitwith {};
 
 private _medical_area_action_dismantle = [
     "TFS_Medical_Area_action_Dismantle",
-    localize "str_TFS_Medical_Area_action_Dismantle",
+    localize "str_TFS_Area_action_Dismantle",
     "\z\tfs\addons\medical\data\icons\medical_cross_ca.paa",
     {
         params ["_target", "_player", "_params"];
@@ -61,7 +61,7 @@ private _medical_area_action_dismantle = [
 
 private _medical_area_action_lightoff = [
     "TFS_Medical_Area_action_Lightoff",
-    localize "str_TFS_Medical_Area_action_Lightoff",
+    localize "str_TFS_Area_action_Lightoff",
     "",
     {
         params ["_target", "_player", "_params"];
@@ -81,7 +81,7 @@ private _medical_area_action_lightoff = [
 
 private _medical_area_action_lighton = [
     "TFS_Medical_Area_action_Lighton",
-    localize "str_TFS_Medical_Area_action_Lighton",
+    localize "str_TFS_Area_action_Lighton",
     "",
     {
         params ["_target", "_player", "_params"];

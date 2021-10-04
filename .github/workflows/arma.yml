@@ -22,6 +22,7 @@ jobs:
       run: python3 tools/check_strings.py
     - name: Check for BOM
       uses: arma-actions/bom-check@master
+    
 
   lint:
     runs-on: ubuntu-latest
@@ -35,14 +36,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the source code
-      uses: actions/checkout@master
-    - name: Build using HEMTT
-      uses: arma-actions/hemtt@master
-      with:
-        command: build --release --ci
-    - name: Upload Artifact
-      uses: actions/upload-artifact@v2-preview
-      with:
-        name: TFS-${{ github.sha }}-nobin
-        path: releases/tfs_*.zip
+      - name: Checkout the source code
+        uses: actions/checkout@v2
+      - name: Build with HEMTT
+        uses: arma-actions/hemtt@master
+        with:
+          command: build --release --ci
+      - name: Set short commit hash
+        run: echo "SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: tfs-${{ env.SHA_SHORT }}-nobin
+          path: releases/*/*  # Upload folder to avoid double-zip artifacts

@@ -1,5 +1,3 @@
-class CfgVehicleIcons {
-	
-	TFS_iconCrateDefault = "\z\tfs\addons\media\images\vehicleicons\iconCrateDefault_ca.paa";
-	
+class CfgvehicleIcons {
+    TFS_iconCratedefault = "\z\tfs\addons\media\images\vehicleicons\iconCratedefault_ca.paa";
 };

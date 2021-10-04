@@ -4,9 +4,7 @@ _logic = param [0, objNull, [objNull]];
 
 // if (hasinterface && !isServer) exitwith {};
 
-// _localgroups = _groups select {
-    local _x
-};
+// _localgroups = _groups select {local _x};
 
 // if (_localgroups isEqualto []) exitwith {};
 

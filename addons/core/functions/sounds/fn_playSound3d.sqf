@@ -1,24 +1,24 @@
 /*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\sounds\fn_playSound3D.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \z\tfs\addons\core\functions\sounds\fn_playSound3D.sqf
+* by Ojemineh
 *
-*	play global sound (classname) at object position
+* play global sound (classname) at object position
 *
-*	Arguments:
-*	0: soundClass - <strinG>
-*	1: object - <OBJECT>
-*	2: position - <ARRAY>
-*	3: distance - <NUMBER>
-*	4: volume - <NUMBER>
-*	5: pitch - <NUMBER>
-*	6: isinside - <BOOLEAN>
+* Arguments:
+* 0: soundClass - <strinG>
+* 1: object - <OBJECT>
+* 2: position - <ARRAY>
+* 3: distance - <NUMBER>
+* 4: volume - <NUMBER>
+* 5: pitch - <NUMBER>
+* 6: isinside - <BOOLEAN>
 *
-*	Return:
-*	nothing
+* Return:
+* nothing
 *
-*	Example:
-*	["AlarmBell", player, (player modeltoWorld [0, 0, 3])] call TFS_fnc_playSound3D;
+* Example:
+* ["AlarmBell", player, (player modeltoWorld [0, 0, 3])] call TFS_fnc_playSound3D;
 *
 */
 
@@ -26,7 +26,7 @@
 
 private ["_soundClass", "_object", "_position", "_distance", "_volume", "_pitch", "_isinside"];
 
-_soundClass	= [_this, 0, "", [""]] call BIS_fnc_param;
+_soundClass = [_this, 0, "", [""]] call BIS_fnc_param;
 _object = [_this, 1, objNull, [objNull]] call BIS_fnc_param;
 _position = [_this, 2, [], [[]]] call BIS_fnc_param;
 _distance = [_this, 3, -1, [0]] call BIS_fnc_param;
@@ -43,13 +43,13 @@ if (_position isEqualto []) then {
 
 // -------------------------------------------------------------------------------------------------
 
-private _missionRoot	= str missionConfigFile select [0, count str missionConfigFile - 15];
-private _soundArray		= [];
-private _soundPath		= "";
-private _soundFile		= "";
-private _sounddistance	= 100;
-private _soundVolume	= 1;
-private _soundpitch		= 1;
+private _missionRoot = str missionConfigFile select [0, count str missionConfigFile - 15];
+private _soundArray  = [];
+private _soundPath  = "";
+private _soundFile  = "";
+private _sounddistance = 100;
+private _soundVolume = 1;
+private _soundpitch  = 1;
 
 if (isClass (missionConfigFile >> "CfgSounds" >> _soundClass)) then {
     _soundArray = getArray (missionConfigFile >> "CfgSounds" >> _soundClass >> "sound");

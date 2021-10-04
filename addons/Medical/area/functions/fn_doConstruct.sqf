@@ -109,7 +109,7 @@ if (isNull _unit) exitwith {
         {
             TFS_MEDICAL_AREA_CONstrUCT_FAILURE = true;
         },
-        localize "str_TFS_Medical_Area_Progress_Construct",
+        localize "str_TFS_Area_Progress_Construct",
         {
             true
         },

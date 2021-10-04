@@ -24,5 +24,5 @@ if (isnil {
 };
 
 if (TFS_Main_Earplugs) then {
-    [] execVM "z\tfs\addons\Main\Scripts\Earplugs\earplugs.sqf";
+    [] execVM "z\tfs\addons\main\Scripts\Earplugs\earplugs.sqf";
 };

@@ -1,12 +1,12 @@
 class CfgRespawnTemplates
 {
-	class TFS_RespawnForWarlords
-	{
-		displayName = "TFS Respawn for Warlords";
-		onPlayerRespawn = "z\tfs\addons\Warlords\Scripts\RespawnForWarlords.sqf";
-		respawnOnStart = 1;
-		respawn = "BASE";
-		respawnDelay = 5;
-		respawnDialog = 0;
-	};	
+    class TFS_RespawnforWarlords
+    {
+        displayname = "TFS Respawn for Warlords";
+        onplayerRespawn = "z\tfs\addons\Warlords\Scripts\RespawnforWarlords.sqf";
+        respawnOnStart = 1;
+        respawn = "BASE";
+        respawnDelay = 5;
+        respawndialog = 0;
+    };
 };

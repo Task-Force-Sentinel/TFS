@@ -1,18 +1,18 @@
 /*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\sounds\fn_getSoundFile.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \z\tfs\addons\core\functions\sounds\fn_getSoundFile.sqf
+* by Ojemineh
 *
-*	get filename (incl. path) of a sound-class
+* get filename (incl. path) of a sound-class
 *
-*	Arguments:
-*	0: soundClass - <strinG>
+* Arguments:
+* 0: soundClass - <strinG>
 *
-*	Return:
-*	<strinG>
+* Return:
+* <strinG>
 *
-*	Example:
-*	["AlarmBell"] call TFS_fnc_getSoundFile;
+* Example:
+* ["AlarmBell"] call TFS_fnc_getSoundFile;
 *
 */
 
@@ -28,11 +28,11 @@ if (_soundClass isEqualto "") exitwith {};
 
 // -------------------------------------------------------------------------------------------------
 
-private _missionRoot	= str missionConfigFile select [0, count str missionConfigFile - 15];
-private _soundArray		= [];
-private _soundPath 	= "";
-private _soundFile 	= "";
-private _return 	= "";
+private _missionRoot = str missionConfigFile select [0, count str missionConfigFile - 15];
+private _soundArray = [];
+private _soundPath = "";
+private _soundFile = "";
+private _return = "";
 
 if (isClass (missionConfigFile >> "CfgSounds" >> _soundClass)) then {
     _soundArray = getArray (missionConfigFile >> "CfgSounds" >> _soundClass >> "sound");

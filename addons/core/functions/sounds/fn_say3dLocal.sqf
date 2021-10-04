@@ -1,23 +1,23 @@
 /*
-*	ARMA EXTENDED ENVIRONMENT
-*	\z\tfs\addons\core\functions\sounds\fn_say3Dlocal.sqf
-*	by Ojemineh
+* ARMA EXTENDED ENVIRONMENT
+* \z\tfs\addons\core\functions\sounds\fn_say3Dlocal.sqf
+* by Ojemineh
 *
-*	play local sound at object position
+* play local sound at object position
 *
-*	Arguments:
-*	0: object 		- <OBJECT>
-*	1: soundClass	- <strinG>
-*	2: distance		- <NUMBER>	(default: 100m)
-*	3: maxdistance	- <NUMBER>	(default: no limitation)
-*	4: pitch		- <NUMBER>
-*	5: isSpeech		- <BOOLEAN>
+* Arguments:
+* 0: object   - <OBJECT>
+* 1: soundClass - <strinG>
+* 2: distance  - <NUMBER> (default: 100m)
+* 3: maxdistance - <NUMBER> (default: no limitation)
+* 4: pitch  - <NUMBER>
+* 5: isSpeech  - <BOOLEAN>
 *
-*	Return:
-*	nothing
+* Return:
+* nothing
 *
-*	Example:
-*	[player, "AlarmBell"] call TFS_fnc_say3Dlocal;
+* Example:
+* [player, "AlarmBell"] call TFS_fnc_say3Dlocal;
 *
 */
 
@@ -29,12 +29,12 @@ if (not hasinterface) exitwith {};
 
 private ["_object", "_soundClass", "_distance", "_maxdistance", "_pitch", "_isSpeech"];
 
-_object 	= [_this, 0, objNull, [objNull]] call BIS_fnc_param;
-_soundClass 	= [_this, 1, "", [""]] call BIS_fnc_param;
-_distance		= [_this, 2, -1, [0]] call BIS_fnc_param;
-_maxdistance	= [_this, 3, -1, [0]] call BIS_fnc_param;
-_pitch 	= [_this, 4, -1, [0]] call BIS_fnc_param;
-_isSpeech 	= [_this, 5, false, [true]] call BIS_fnc_param;
+_object  = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
+_soundClass  = [_this, 1, "", [""]] call BIS_fnc_param;
+_distance  = [_this, 2, -1, [0]] call BIS_fnc_param;
+_maxdistance = [_this, 3, -1, [0]] call BIS_fnc_param;
+_pitch  = [_this, 4, -1, [0]] call BIS_fnc_param;
+_isSpeech  = [_this, 5, false, [true]] call BIS_fnc_param;
 
 // -------------------------------------------------------------------------------------------------
 
