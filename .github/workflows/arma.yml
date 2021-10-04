@@ -43,7 +43,7 @@ jobs:
           command: build --release --ci
       - uses: actions/upload-artifact@master
         with:
-          name: '@TFS'
+          name: TFS-${{ github.sha }}-nobin
           path: 'releases/@TFS*.zip'
 
   stringtables:
