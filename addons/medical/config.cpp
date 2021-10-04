@@ -18,7 +18,7 @@ class CfgPatches
 
 class CfgFunctions {
 
-    #include "cfgFunctions.hpp"
+    #include " CfgFunctions.hpp"
 };
 
 class CfgVehicles

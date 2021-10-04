@@ -1,7 +1,7 @@
 // not documented: called at display creation
 
 #include "\a3\UI_F_Orange\UI\resincl.inc"
-#include "\a3\UI_F_Orange\UI\dikCodes.inc"
+#include "\a3\UI_F_Orange\UI\dikcodes.inc"
 
 #define PREVIEW_SOUNDVOLUME 0.25
 
