@@ -43,9 +43,9 @@ if (!isNil "_entry") then {
     private _useAlt = (_keybind select 1) select 2;
     
     private _modifier = 
-        (if (_useShift) then {localize "STR_tfs_KeyBinds_Shift_Modifier"} else {""}) +
-        (if (_useCtrl) then {localize "STR_tfs_KeyBinds_Ctrl_Modifier"} else {""}) +
-        (if (_useAlt) then {localize "STR_tfs_KeyBinds_Alt_Modifier"} else {""});
+        (if (_useShift) then {localize "STR_TFS_Common_Shift-Modifier"} else {""}) +
+        (if (_useCtrl) then {localize "STR_TFS_Common_Ctrl-Modifier"} else {""}) +
+        (if (_useAlt) then {localize "STR_TFS_Common_Alt-Modifier"} else {""});
     
     _return = toUpper(format ["%1%2", _modifier, [_keybind select 0] call BIS_fnc_keyCode]);
     

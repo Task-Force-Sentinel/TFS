@@ -70,7 +70,7 @@ if (profileNamespace getVariable ["tfs_showNewsOnMainMenu", true]) then {
     _versionStr = _versionStr joinString ".";
     
     (_display displayCtrl 90091) ctrlSetText format ["Version: %1", _versionStr];
-    (_display displayCtrl 90092) htmlLoad (localize "STR_TFS_Addon_URL_Version");
+    (_display displayCtrl 90092) htmlLoad (localize "STR_TFS_MainMenu_URL_Version");
     
 } else {
     

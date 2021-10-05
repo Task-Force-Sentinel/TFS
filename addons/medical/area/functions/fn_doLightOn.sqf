@@ -44,7 +44,7 @@ if (isNull _area) exitWith {false};
   [],
   { TFS_MEDICAL_AREA_LIGHT_ON_SUCCESS = true; },
   { TFS_MEDICAL_AREA_LIGHT_ON_FAILURE = true; },
-  localize "STR_TFS_Medical_Area_Progress_LightOn"
+  localize "STR_TFS_Area_Progress_LightOn"
  ] call ACE_common_fnc_progressBar;
  
  waitUntil {if ((TFS_MEDICAL_AREA_LIGHT_ON_SUCCESS) || (TFS_MEDICAL_AREA_LIGHT_ON_FAILURE)) exitWith {true}; false};

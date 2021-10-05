@@ -102,7 +102,7 @@ if (isNull _unit) exitWith {false};
   [],
   { TFS_MEDICAL_AREA_CONSTRUCT_SUCCESS = true; },
   { TFS_MEDICAL_AREA_CONSTRUCT_FAILURE = true; },
-  localize "STR_TFS_Medical_Area_Progress_Construct",
+  localize "STR_TFS_Area_Progress_Construct",
   {true},
   ["isNotInside", "isNotSitting", "isNotSwimming"]
  ] call ACE_common_fnc_progressBar;

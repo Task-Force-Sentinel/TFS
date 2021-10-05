@@ -56,7 +56,7 @@ if (isNull _area) exitWith {false};
   [],
   { TFS_MEDICAL_AREA_DISMANTLE_SUCCESS = true; },
   { TFS_MEDICAL_AREA_DISMANTLE_FAILURE = true; },
-  localize "STR_TFS_Medical_Area_Progress_Dismantle",
+  localize "STR_TFS_Area_Progress_Dismantle",
   {true},
   ["isNotInside", "isNotSitting", "isNotSwimming"]
  ] call ACE_common_fnc_progressBar;

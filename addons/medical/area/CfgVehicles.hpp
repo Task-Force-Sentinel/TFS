@@ -11,7 +11,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_Equipment {
                 class TFS_Medical_Area_Action_Construct {
-                    displayName = "$STR_TFS_Medical_Area_Action_Construct";
+                    displayName = "$STR_TFS_Area_Action_Construct";
                     condition = "[_player] call TFS_medical_area_fnc_canConstruct";
                     statement = "[_player] call TFS_medical_area_fnc_doConstruct";
                     exceptions[] = {"isNotInside", "isNotSitting", "isNotSwimming"};
@@ -30,8 +30,8 @@ class CfgVehicles {
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
-        author = "$STR_TFS_Medical_Area_Author";
-        displayName = "$STR_TFS_Item_Medical_Area_DisplayName";
+        author = "$STR_TFS_Area_Author";
+        displayName = "$STR_TFS_Area_DisplayName";
         editorPreview = "\z\tfs\addons\medical\area\data\previews\medical_area.jpg";
         vehicleClass = "Items";
         class TransportItems {

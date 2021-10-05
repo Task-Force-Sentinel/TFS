@@ -1,30 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project name="Arma_Extended_Environment">
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="TFS">
  
  <!-- ####################################################################################### -->
- <Package name="TFS_MainMenu">
+ <Package name="MainMenu">
 
   <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <Container name="MainMenu">
    <!-- =============================================================================== -->
    <Key ID="STR_TFS_MainMenu_Title">
-    < English>TFS MainMenu</ English>
+    <English>TFS MainMenu</English>
    </Key>
    <Key ID="STR_TFS_MainMenu_Author">
-    < English>TFS</ English>
+    <English>TFS</English>
    </Key>
    <Key ID="STR_TFS_MainMenu_URL">
-    < English>https://github.com/TFSmod/TFS</ English>
+    <English>https://github.com/TFSmod/TFS</English>
    </Key>
-   <!-- =============================================================================== -->
+   <Key ID="STR_TFS_MainMenu_URL_Version">
+        <English>http://tfsmod.userscreen.net/version.html</English>
+    </Key>
+    <Key ID="STR_TFS_MainMenu_Logo">
+                <English>\z\tfs\addons\media\images\TFSLOGO@0.25x.paa</English>
+    </Key>
+    <Key ID="STR_TFS_MainMenu_URL_Releases">
+        <English>https://github.com/TFSmod/TFS/releases</English>
+    </Key>
+<!-- =============================================================================== -->
   </Container>
   <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
   <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <Container name="VersionInfo">
    <!-- =============================================================================== -->
-   <Key ID="STR_TFS_VersionInfo_Tooltip">
-    < English>Download latest and report issues:</ English>
+   <Key ID="STR_TFS_MainMenu_Tooltip">
+    <English>Download latest and report issues:</English>
     <German>Neuste Version und Probleme melden:</German>
    </Key>
    <!-- =============================================================================== -->

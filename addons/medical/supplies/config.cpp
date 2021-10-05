@@ -3,7 +3,7 @@
 class CfgPatches {
     
     class TFS_Medical_Supplies {
-        name = "$STR_TFS_Medical_Supplies_Title";
+        name = "$STR_TFS_Supplies_Title";
         addonRootClass = "TFS_Medical";
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
@@ -18,11 +18,11 @@ class CfgPatches {
             "TFS_FirstAid",
             "TFS_MedicKit"
         };
-        author = "$STR_TFS_Medical_Supplies_Author";
+        author = "$STR_TFS_Supplies_Author";
         authors[] = {
             "O. Jemineh"
         };
-        url = "$STR_TFS_Medical_Supplies_URL";
+        url = "$STR_TFS_Supplies_URL";
         VERSION_CONFIG;
     };
     

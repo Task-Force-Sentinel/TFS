@@ -8,9 +8,9 @@ class CfgWeapons {
     
     class TFS_FirstAid: ACE_ItemCore {
         scope = 2;
-        author = "$STR_TFS_Medical_Supplies_Author";
-        displayName = "$STR_TFS_Item_Medical_FirstAid_DisplayName";
-        descriptionShort = "$STR_TFS_Item_Medical_FirstAid_Description";
+        author = "$STR_TFS_Supplies_Author";
+        displayName = "$STR_TFS_Supplies_FirstAid_DisplayName";
+        descriptionShort = "$STR_TFS_Supplies_FirstAid_Description";
         editorPreview = "\z\tfs\addons\medical\supplies\data\previews\firstaid.jpg";
         picture = "\z\tfs\addons\medical\supplies\data\ui\firstaid_ca.paa";
         model = "\a3\weapons_f\ammo\mag_firstaidkit.p3d";
@@ -23,9 +23,9 @@ class CfgWeapons {
     
     class TFS_MedicKit: ACE_ItemCore {
         scope = 2;
-        author = "$STR_TFS_Medical_Supplies_Author";
-        displayName = "$STR_TFS_Item_Medical_MedicKit_DisplayName";
-        descriptionShort = "$STR_TFS_Item_Medical_MedicKit_Description";
+        author = "$STR_TFS_Supplies_Author";
+        displayName = "$STR_TFS_Supplies_MedicKit_DisplayName";
+        descriptionShort = "$STR_TFS_Supplies_MedicKit_Description";
         editorPreview = "\z\tfs\addons\medical\supplies\data\previews\medickit.jpg";
         picture = "\z\tfs\addons\medical\supplies\data\ui\medickit_ca.paa";
         model = "\a3\props_f_orange\humanitarian\camps\firstaidkit_01_closed_f.p3d";
