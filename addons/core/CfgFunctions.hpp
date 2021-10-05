@@ -56,13 +56,6 @@ class CfgFunctions {
             class logGlobal {};
             class logServer {};
         };
-                
-        class Settings {
-            file = "z\tfs\addons\core\functions\settings";
-            class getKeybindString {};
-            class needRestart {};
-            class needRestartLocal {};
-        };
         
         class Sounds {
             file = "z\tfs\addons\core\functions\sounds";

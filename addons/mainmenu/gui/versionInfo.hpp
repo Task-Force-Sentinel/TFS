@@ -31,7 +31,7 @@ class RscDisplayMain: RscStandardDisplay {
                 class Background: Background {};
                 class BackgroundIcon: BackgroundIcon {};
                 class Icon: Icon {
-                    text = "$STR_TFS_Addon_Logo";
+                    text = "$STR_TFS_MainMenu_Logo";
                 };
                 
                 class CurrentVersionInfo: RscText {
@@ -72,8 +72,8 @@ class RscDisplayMain: RscStandardDisplay {
                 };
                 
                 class Button: Button {
-                    tooltip = "$STR_TFS_VersionInfo_Tooltip";
-                    url = "$STR_TFS_Addon_URL_Releases";
+                    tooltip = "$STR_TFS_MainMenu_Tooltip";
+                    url = "$STR_TFS_MainMenu_URL_Releases";
                 };
                 
             };

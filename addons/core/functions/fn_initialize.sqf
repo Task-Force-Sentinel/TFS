@@ -52,9 +52,9 @@ if !(hasInterface) exitWith {};
 // KEY: SCREENSHOT
 
 [
- "STR_TFS_core_CBA_Category", 
+ "STR_TFS_Core_CBA_Category", 
  "TFS_core_KEY_Screenshot", 
- ["STR_TFS_core_KEY_Screenshot_Title", "STR_TFS_core_KEY_Screenshot_Tip"], 
+ ["STR_TFS_Core_KEY_Screenshot_Title", "STR_TFS_Core_KEY_Screenshot_Tip"], 
  {
   [] call TFS_fnc_screenshot;
  }, 

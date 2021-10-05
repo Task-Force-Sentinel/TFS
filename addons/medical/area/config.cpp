@@ -3,7 +3,7 @@
 class CfgPatches {
     
     class TFS_Medical_Area {
-        name = "$STR_TFS_Medical_Area_Title";
+        name = "$STR_TFS_Area_Title";
         addonRootClass = "TFS_Medical";
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
@@ -16,11 +16,11 @@ class CfgPatches {
         weapons[] = {
             "TFS_MedicArea"
         };
-        author = "$STR_TFS_Medical_Area_Author";
+        author = "$STR_TFS_Area_Author";
         authors[] = {
             "O. Jemineh"
         };
-        url = "$STR_TFS_Medical_Area_URL";
+        url = "$STR_TFS_Area_URL";
         VERSION_CONFIG;
     };
     

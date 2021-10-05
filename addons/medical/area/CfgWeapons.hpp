@@ -8,9 +8,9 @@ class CfgWeapons {
     
     class TFS_MedicArea: ACE_ItemCore {
         scope = 2;
-        author = "$STR_TFS_Medical_Area_Author";
-        displayName = "$STR_TFS_Item_Medical_Area_DisplayName";
-        descriptionShort = "$STR_TFS_Item_Medical_Area_Description";
+        author = "$STR_TFS_Area_Author";
+        displayName = "$STR_TFS_Area_DisplayName";
+        descriptionShort = "$STR_TFS_Area_Description";
         editorPreview = "\z\tfs\addons\medical\area\data\previews\medical_area.jpg";
         picture = "\z\tfs\addons\medical\area\data\ui\medical_area_ca.paa";
         model = "\a3\weapons_f\items\medikit.p3d";

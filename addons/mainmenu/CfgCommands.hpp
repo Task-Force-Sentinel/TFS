@@ -1,7 +1,7 @@
 class CfgCommands {
     
     allowedHTMLLoadURIs[] += {
-        "$STR_TFS_Addon_URL_Version"
+        "$STR_TFS_MainMenu_URL_Version"
     };
     
 };

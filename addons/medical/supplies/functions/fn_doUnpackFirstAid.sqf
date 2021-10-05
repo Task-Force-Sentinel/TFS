@@ -49,7 +49,7 @@ if (isNull _unit) exitWith {};
   [],
   { TFS_MEDICAL_SUPPLIES_UNPACK_SUCCESS = true; },
   { TFS_MEDICAL_SUPPLIES_UNPACK_FAILURE = true; },
-  localize "STR_TFS_Medical_Supplies_Progress_FirstAid",
+  localize "STR_TFS_Supplies_Progress_FirstAid",
   {true},
   ["isNotInside", "isNotSitting", "isNotSwimming"]
  ] call ACE_common_fnc_progressBar;

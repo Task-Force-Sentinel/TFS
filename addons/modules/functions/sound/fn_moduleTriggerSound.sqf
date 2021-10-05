@@ -60,13 +60,13 @@ switch _mode do {
         if (_soundOffset isEqualTo []) then {_soundOffset = [0,0,0];};
         
         if !((typeName _soundOffset) isEqualType "ARRAY") exitWith {
-            [format [localize "STR_TFS_ModuleError_OffsetNotValid", _soundOffset]] call BIS_fnc_error;
-            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_OffsetNotValid", _soundOffset]], "modules"] call TFS_fnc_log;
+            [format [localize "STR_TFS_Modules_OffsetNotValid", _soundOffset]] call BIS_fnc_error;
+            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_OffsetNotValid", _soundOffset]], "modules"] call TFS_fnc_log;
         };
         
         if !((count _soundOffset) isEqualTo 3) exitWith {
-            [format [localize "STR_TFS_ModuleError_OffsetNotValid", _soundOffset]] call BIS_fnc_error;
-            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_OffsetNotValid", _soundOffset]], "modules"] call TFS_fnc_log;
+            [format [localize "STR_TFS_Modules_OffsetNotValid", _soundOffset]] call BIS_fnc_error;
+            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_OffsetNotValid", _soundOffset]], "modules"] call TFS_fnc_log;
         };
         
         // VALIDATE SOURCE
@@ -76,15 +76,15 @@ switch _mode do {
         if (_source != "") then {
             
             if (isNull (missionNamespace getVariable [_source, objNull])) exitWith {
-                [format [localize "STR_TFS_ModuleError_VarIsUnknown", _source]] call BIS_fnc_error;
-                [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_VarIsUnknown", _source]], "modules"] call TFS_fnc_log;
+                [format [localize "STR_TFS_Modules_VarIsUnknown", _source]] call BIS_fnc_error;
+                [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_VarIsUnknown", _source]], "modules"] call TFS_fnc_log;
             };
             
             _soundSource = missionNamespace getVariable _source;
             
             if !((typeName _soundSource) isEqualType "OBJECT") exitWith {
-                [format [localize "STR_TFS_ModuleError_IsNotObject", _soundSource]] call BIS_fnc_error;
-                [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_IsNotObject", _soundSource]], "modules"] call TFS_fnc_log;
+                [format [localize "STR_TFS_Modules_IsNotObject", _soundSource]] call BIS_fnc_error;
+                [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_IsNotObject", _soundSource]], "modules"] call TFS_fnc_log;
             };
             
         } else {
@@ -107,30 +107,30 @@ switch _mode do {
         };
         
         if (_soundExist isEqualTo 0) exitWith {
-            [format [localize "STR_TFS_ModuleError_UnknownInCfgSounds", _sound]] call BIS_fnc_error;
-            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_UnknownInCfgSounds", _sound]], "modules"] call TFS_fnc_log;
+            [format [localize "STR_TFS_Modules_UnknownInCfgSounds", _sound]] call BIS_fnc_error;
+            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_UnknownInCfgSounds", _sound]], "modules"] call TFS_fnc_log;
         };
         
         // VALIDATE DISTANCE
         
         if (_distance <= 0) exitWith {
-            [format [localize "STR_TFS_ModuleError_DistanceGreaterZero", _distance]] call BIS_fnc_error;
-            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_DistanceGreaterZero", _distance]], "modules"] call TFS_fnc_log;
+            [format [localize "STR_TFS_Modules_DistanceGreaterZero", _distance]] call BIS_fnc_error;
+            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_DistanceGreaterZero", _distance]], "modules"] call TFS_fnc_log;
         };
         
         // VALIDATE MAX DISTANCE
         
         if ((_maxDistance > 0) && (_maxDistance <= _distance)) exitWith {
-            [format [localize "STR_TFS_ModuleError_MaxGreaterDistance", _distance, _maxDistance]] call BIS_fnc_error;
-            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_MaxGreaterDistance", _distance, _maxDistance]], "modules"] call TFS_fnc_log;
+            [format [localize "STR_TFS_Modules_MaxGreaterDistance", _distance, _maxDistance]] call BIS_fnc_error;
+            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_MaxGreaterDistance", _distance, _maxDistance]], "modules"] call TFS_fnc_log;
         };
         
         // VALIDATE DURATION
         
         if (_duration <= 0) then {_duration = [_sound] call TFS_fnc_getSoundDuration;};
         if (_duration <= 0) exitWith {
-            [format [localize "STR_TFS_ModuleError_DurationNotDefined", _sound]] call BIS_fnc_error;
-            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_DurationNotDefined", _sound]], "modules"] call TFS_fnc_log;
+            [format [localize "STR_TFS_Modules_DurationNotDefined", _sound]] call BIS_fnc_error;
+            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_DurationNotDefined", _sound]], "modules"] call TFS_fnc_log;
         };
         
         // MODULE
@@ -185,13 +185,13 @@ switch _mode do {
         if (_soundOffset isEqualTo []) then {_soundOffset = [0,0,0];};
         
         if !((typeName _soundOffset) isEqualType "ARRAY") exitWith {
-            [format [localize "STR_TFS_ModuleError_OffsetNotValid", _soundOffset]] call BIS_fnc_error;
-            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_OffsetNotValid", _soundOffset]], "modules"] call TFS_fnc_log;
+            [format [localize "STR_TFS_Modules_OffsetNotValid", _soundOffset]] call BIS_fnc_error;
+            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_OffsetNotValid", _soundOffset]], "modules"] call TFS_fnc_log;
         };
         
         if !((count _soundOffset) isEqualTo 3) exitWith {
-            [format [localize "STR_TFS_ModuleError_OffsetNotValid", _soundOffset]] call BIS_fnc_error;
-            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_OffsetNotValid", _soundOffset]], "modules"] call TFS_fnc_log;
+            [format [localize "STR_TFS_Modules_OffsetNotValid", _soundOffset]] call BIS_fnc_error;
+            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_OffsetNotValid", _soundOffset]], "modules"] call TFS_fnc_log;
         };
         
         // VALIDATE CLASSNAME
@@ -207,30 +207,30 @@ switch _mode do {
         };
         
         if (_soundExist isEqualTo 0) exitWith {
-            [format [localize "STR_TFS_ModuleError_UnknownInCfgSounds", _sound]] call BIS_fnc_error;
-            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_UnknownInCfgSounds", _sound]], "modules"] call TFS_fnc_log;
+            [format [localize "STR_TFS_Modules_UnknownInCfgSounds", _sound]] call BIS_fnc_error;
+            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_UnknownInCfgSounds", _sound]], "modules"] call TFS_fnc_log;
         };
         
         // VALIDATE DISTANCE
         
         if (_distance <= 0) exitWith {
-            [format [localize "STR_TFS_ModuleError_DistanceGreaterZero", _distance]] call BIS_fnc_error;
-            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_DistanceGreaterZero", _distance]], "modules"] call TFS_fnc_log;
+            [format [localize "STR_TFS_Modules_DistanceGreaterZero", _distance]] call BIS_fnc_error;
+            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_DistanceGreaterZero", _distance]], "modules"] call TFS_fnc_log;
         };
         
         // VALIDATE MAX DISTANCE
         
         if ((_maxDistance > 0) && (_maxDistance <= _distance)) exitWith {
-            [format [localize "STR_TFS_ModuleError_MaxGreaterDistance", _distance, _maxDistance]] call BIS_fnc_error;
-            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_MaxGreaterDistance", _distance, _maxDistance]], "modules"] call TFS_fnc_log;
+            [format [localize "STR_TFS_Modules_MaxGreaterDistance", _distance, _maxDistance]] call BIS_fnc_error;
+            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_MaxGreaterDistance", _distance, _maxDistance]], "modules"] call TFS_fnc_log;
         };
         
         // VALIDATE DURATION
         
         if (_duration <= 0) then {_duration = [_sound] call TFS_fnc_getSoundDuration;};
         if (_duration <= 0) exitWith {
-            [format [localize "STR_TFS_ModuleError_DurationNotDefined", _sound]] call BIS_fnc_error;
-            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_ModuleError_DurationNotDefined", _sound]], "modules"] call TFS_fnc_log;
+            [format [localize "STR_TFS_Modules_DurationNotDefined", _sound]] call BIS_fnc_error;
+            [2, "ModuleTriggerSound '%1' - %2", [_logic, format [localize "STR_TFS_Modules_DurationNotDefined", _sound]], "modules"] call TFS_fnc_log;
         };
         
     };

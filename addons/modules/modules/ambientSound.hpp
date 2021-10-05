@@ -4,7 +4,7 @@ class TFS_ModuleAmbientSound: Module_F {
     
     scope = 2;
     
-    displayName = "$STR_TFS_Module_AmbientSound_DisplayName";
+    displayName = "$STR_TFS_Modules_AmbientSound_DisplayName";
     category = "Task Force Sentinel";
     author = AUTHOR;
     icon = "\z\tfs\addons\modules\data\icons\module_sound_0_ca.paa";
@@ -22,8 +22,8 @@ class TFS_ModuleAmbientSound: Module_F {
     class Attributes: AttributesBase {
         
         class Enabled {
-            displayName = "$STR_TFS_ModuleProperty_Sound_Enabled_Title";
-            tooltip = "$STR_TFS_ModuleProperty_Sound_Enabled_Tip";
+            displayName = "$STR_TFS_Modules_Property_Sound_Enabled_Title";
+            tooltip = "$STR_TFS_Modules_Property_Sound_Enabled_Tip";
             defaultValue = 1;
             typeName = "NUMBER";
             expression = "_this setVariable ['%s', _value, true];";
@@ -31,19 +31,19 @@ class TFS_ModuleAmbientSound: Module_F {
             control = "Combo";
             class Values {
                 class Enabled_0 {
-                    name = "$STR_TFS_ModuleProperty_Sound_Enabled_0";
+                    name = "$STR_TFS_Modules_Property_Sound_Enabled_0";
                     value = 0;
                 };
                 class Enabled_1 {
-                    name = "$STR_TFS_ModuleProperty_Sound_Enabled_1";
+                    name = "$STR_TFS_Modules_Property_Sound_Enabled_1";
                     value = 1;
                 };
             };
         };
         
         class Source {
-            displayName = "$STR_TFS_ModuleProperty_Sound_Source_Title";
-            tooltip = "$STR_TFS_ModuleProperty_Sound_Source_Tip";
+            displayName = "$STR_TFS_Modules_Property_Sound_Source_Title";
+            tooltip = "$STR_TFS_Modules_Property_Sound_Source_Tip";
             defaultValue = "''";
             typeName = "STRING";
             expression = "_this setVariable ['%s', _value, true];";
@@ -52,8 +52,8 @@ class TFS_ModuleAmbientSound: Module_F {
         };
         
         class Sound {
-            displayName = "$STR_TFS_ModuleProperty_Sound_Classname_Title";
-            tooltip = "$STR_TFS_ModuleProperty_Sound_Classname_Tip";
+            displayName = "$STR_TFS_Modules_Property_Sound_Classname_Title";
+            tooltip = "$STR_TFS_Modules_Property_Sound_Classname_Tip";
             defaultValue = "''";
             typeName = "STRING";
             expression = "_this setVariable ['%s', _value, true];";
@@ -62,8 +62,8 @@ class TFS_ModuleAmbientSound: Module_F {
         };
         
         class Offset {
-            displayName = "$STR_TFS_ModuleProperty_Sound_Offset_Title";
-            tooltip = "$STR_TFS_ModuleProperty_Sound_Offset_Tip";
+            displayName = "$STR_TFS_Modules_Property_Sound_Offset_Title";
+            tooltip = "$STR_TFS_Modules_Property_Sound_Offset_Tip";
             defaultValue = "'[0,0,0]'";
             typeName = "STRING";
             expression = "_this setVariable ['%s', _value, true];";
@@ -72,8 +72,8 @@ class TFS_ModuleAmbientSound: Module_F {
         };
         
         class Distance {
-            displayName = "$STR_TFS_ModuleProperty_Sound_Distance_Title";
-            tooltip = "$STR_TFS_ModuleProperty_Sound_Distance_Tip";
+            displayName = "$STR_TFS_Modules_Property_Sound_Distance_Title";
+            tooltip = "$STR_TFS_Modules_Property_Sound_Distance_Tip";
             defaultValue = 100;
             typeName = "NUMBER";
             expression = "_this setVariable ['%s', _value, true];";
@@ -82,8 +82,8 @@ class TFS_ModuleAmbientSound: Module_F {
         };
         
         class MaxDistance {
-            displayName = "$STR_TFS_ModuleProperty_Sound_MaxDistance_Title";
-            tooltip = "$STR_TFS_ModuleProperty_Sound_MaxDistance_Tip";
+            displayName = "$STR_TFS_Modules_Property_Sound_MaxDistance_Title";
+            tooltip = "$STR_TFS_Modules_Property_Sound_MaxDistance_Tip";
             defaultValue = -1;
             typeName = "NUMBER";
             expression = "_this setVariable ['%s', _value, true];";
@@ -92,8 +92,8 @@ class TFS_ModuleAmbientSound: Module_F {
         };
         
         class Duration {
-            displayName = "$STR_TFS_ModuleProperty_Sound_Duration_Title";
-            tooltip = "$STR_TFS_ModuleProperty_Sound_Duration_Tip";
+            displayName = "$STR_TFS_Modules_Property_Sound_Duration_Title";
+            tooltip = "$STR_TFS_Modules_Property_Sound_Duration_Tip";
             defaultValue = -1;
             typeName = "NUMBER";
             expression = "_this setVariable ['%s', _value, true];";
@@ -109,7 +109,7 @@ class TFS_ModuleAmbientSound: Module_F {
     };
     
     class ModuleDescription: ModuleDescription {
-        description = "$STR_TFS_Module_AmbientSound_Description";
+        description = "$STR_TFS_Modules_AmbientSound_Description";
     };
     
 };

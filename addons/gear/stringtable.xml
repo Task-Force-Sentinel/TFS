@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Project name="Arma_Extended_Environment">
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="TFS">
 
  <!-- ####################################################################################### -->
- <Package name="TFS_Gear">
+ <Package name="Gear">
 
   <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   <Container name="Gear">
    <!-- =============================================================================== -->
    <Key ID="STR_TFS_Gear_Title">
-    < English>TFS Gear</ English>
+    <English>TFS Gear</English>
    </Key>
    <Key ID="STR_TFS_Gear_Author">
-    < English>TFS-Team</ English>
+    <English>TFS-Team</English>
    </Key>
    <Key ID="STR_TFS_Gear_URL">
-    < English>https://purplesmoke.info</ English>
+    <English>https://purplesmoke.info</English>
    </Key>
    <!-- =============================================================================== -->
   </Container>

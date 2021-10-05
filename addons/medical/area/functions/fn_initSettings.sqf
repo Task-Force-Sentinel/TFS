@@ -24,12 +24,12 @@
  "tfs_medical_area_constuct_time",
  "SLIDER",
  [
-  localize "STR_TFS_Medical_Area_CBA_Construct_Time_Title", 
-  localize "STR_TFS_Medical_Area_CBA_Construct_Time_Tip"
+  localize "STR_TFS_Area_CBA_Construct_Time_Title", 
+  localize "STR_TFS_Area_CBA_Construct_Time_Tip"
  ],
  [
-  localize "STR_TFS_Medical_Area_CBA_Category", 
-  localize "STR_TFS_Medical_Area_CBA_Category_core"
+  localize "STR_TFS_Area_CBA_Category", 
+  localize "STR_TFS_Area_CBA_Category_core"
  ],
  [3,90,30,0],
  1,
@@ -40,12 +40,12 @@
  "tfs_medical_area_dismantle_time",
  "SLIDER",
  [
-  localize "STR_TFS_Medical_Area_CBA_Dismantle_Time_Title", 
-  localize "STR_TFS_Medical_Area_CBA_Dismantle_Time_Tip"
+  localize "STR_TFS_Area_CBA_Dismantle_Time_Title", 
+  localize "STR_TFS_Area_CBA_Dismantle_Time_Tip"
  ],
  [
-  localize "STR_TFS_Medical_Area_CBA_Category", 
-  localize "STR_TFS_Medical_Area_CBA_Category_core"
+  localize "STR_TFS_Area_CBA_Category", 
+  localize "STR_TFS_Area_CBA_Category_core"
  ],
  [3,90,30,0],
  1,
@@ -59,12 +59,12 @@ if (["adv_aceCPR"] call TFS_fnc_isAddon) then {
  "tfs_medical_area_enable_defibrillator",
  "CHECKBOX",
  [
-  localize "STR_TFS_Medical_Area_CBA_Enable_Defibrillator_Title", 
-  localize "STR_TFS_Medical_Area_CBA_Enable_Defibrillator_Tip"
+  localize "STR_TFS_Area_CBA_Enable_Defibrillator_Title", 
+  localize "STR_TFS_Area_CBA_Enable_Defibrillator_Tip"
  ],
  [
-  localize "STR_TFS_Medical_Area_CBA_Category", 
-  localize "STR_TFS_Medical_Area_CBA_Category_core"
+  localize "STR_TFS_Area_CBA_Category", 
+  localize "STR_TFS_Area_CBA_Category_core"
  ],
  false,
  1,

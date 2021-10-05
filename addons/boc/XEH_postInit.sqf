@@ -15,6 +15,6 @@ TFS_unit setVariable [QGVAR(preventProne),false,true];
         {!(TFS_unit getVariable ["ACE_isUnconscious", false]) || lifeState TFS_unit != "INCAPACITATED"}
        ) then {
         TFS_unit playAction "PlayerCrouch";
-        hint localize "str_TFS_boc_crouch";
+        hint localize "STR_TFS_BOC_crouch";
     };
 },1] call CBA_fnc_addPerFrameHandler;
