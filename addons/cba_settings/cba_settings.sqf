@@ -160,12 +160,10 @@ force force ace_medical_feedback_painEffecttype = 2;
 force force ace_medical_fractureChance = 0.45;
 force force ace_medical_fractures = 1;
 force force ace_medical_gui_enableSelfactions = true;
-ace_medical_gui_interactionMenuShowTriage = 1;
 force force ace_medical_gui_maxdistance = 3;
 force force ace_medical_ivFlowRate = 2;
 force force ace_medical_limping = 1;
 force force ace_medical_painCoefficient = 1;
-force ace_medical_painUnconsciousChance = 0.1;
 force force ace_medical_playerdamageThreshold = 2;
 force force ace_medical_spontaneousWakeUpChance = 0.15;
 force force ace_medical_spontaneousWakeUpEpinephrineBoost = 2.45;
@@ -226,7 +224,6 @@ force force ace_nightvision_shutterEffects = true;
 force force ace_overheating_displaytextonJam = true;
 force force ace_overheating_enabled = true;
 force force ace_overheating_overheatingDispersion = true;
-ace_overheating_showParticleEffects = true;
 force force ace_overheating_showParticleEffectsforEveryone = true;
 force force ace_overheating_unJamFailChance = 0.1;
 force force ace_overheating_unJamOnreload = true;
@@ -386,14 +383,9 @@ force force acex_viewrestriction_preserveView = true;
 // AI
 force force cfp_autoEquipNVG = true;
 
-// CBA UI
-cba_ui_notifyLifetime = 4;
-cba_ui_StorePasswords = 1;
-
 // CBA weapons
 force force cba_disposable_dropUsedLauncher = 2;
 force force cba_disposable_replaceDisposableLauncher = false;
-cba_events_repetitionmode = 1;
 force force cba_optics_usepipOptics = false;
 
 // cTab
@@ -499,7 +491,7 @@ force force TFS_Channels_CommandDuration = 0;
 force force TFS_Channels_Commandtext = false;
 force force TFS_Channels_CommandVoice = false;
 force force TFS_Channels_DirectDuration = 0;
-force force TFS_Channels_Directtext = false;
+force force TFS_Channels_Directtext = true;
 force force TFS_Channels_DirectVoice = false;
 force force TFS_Channels_GlobalDuration = 0;
 force force TFS_Channels_Globaltext = false;
