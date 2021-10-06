@@ -259,8 +259,7 @@ _ArsenalType = call {
             "USP_MECHANIX_CBR",
             "USP_NIGHTCAP",
             "USP_EARMUFF"     
-             ];
-
+        ];
         _AvailableHeadgear = [
             "USP_PELTOR_COMTAC3",
             "USP_PELTOR_COMTAC3_GRN",
@@ -9720,7 +9719,6 @@ _ArsenalType = call {
             "3Rnd_UGL_FlareCIR_F",
             "3Rnd_UGL_FlareGreen_F"
         ];
-
         _AvailableWeapons = [
             "FLB_HK416_TanCamo1",
             "FLB_HK416_TanCamo_A",
@@ -10135,9 +10133,6 @@ _ArsenalType = call {
 
  };
 };
-
-
-
 
 
 if (isClass (configFile >> "CfgPatches" >> "ace_main")) then {
