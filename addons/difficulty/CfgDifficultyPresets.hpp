@@ -13,7 +13,7 @@ class CfgDifficultyPresets {
 
         class Options {
             // Simulation
-            reducedDamage = 0;  // Reduced damage  (0 = disabled, 1 = enabled)
+            reducedDamage = 1;  // Reduced damage  (0 = disabled, 1 = enabled)
 
             // Situational awareness
             groupIndicators = 0; // Group indicators  (0 = never, 1 = limited distance, 2 = always)
@@ -33,7 +33,7 @@ class CfgDifficultyPresets {
 
             // View
             thirdPersonView = 1; // 3rd person view  (0 = disabled, 1 = enabled)
-            cameraShake = 0;  // Camera shake   (0 = disabled, 1 = enabled)
+            cameraShake = 1;  // Camera shake   (0 = disabled, 1 = enabled)
 
             // Multiplayer
             scoreTable = 0;   // Score table   (0 = disabled, 1 = enabled)

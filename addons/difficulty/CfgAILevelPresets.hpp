@@ -3,7 +3,7 @@ class CfgAILevelPresets {
     class GVAR(LevelAI): Custom {
         displayName = PREFIX;
 
-        skillAI = 1;
+        skillAI = .75;
         precisionAI = 0.4;
     };
 };
