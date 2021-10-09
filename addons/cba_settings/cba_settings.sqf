@@ -149,12 +149,12 @@ force force ace_maptools_drawstraightLines = true;
 
 // ACE Medical
 force force ace_medical_ai_enabledfor = 2;
-force force ace_medical_AIdamageThreshold = 1;
+force force ace_medical_AIdamageThreshold = 1;// Decreased AI damage threshold so AI dies in single headshot and few torso taps depending on vest
 force force ace_medical_bleedingCoefficient = 0.1;
 force force ace_medical_blood_bloodLifetime = 900;
 force force ace_medical_blood_enabledfor = 2;
 force force ace_medical_blood_maxBloodobjects = 500;
-force force ace_medical_fataldamageSource = 0;
+force force ace_medical_fataldamageSource = 0; // Sum of Trauma death condition
 force force ace_medical_feedback_bloodVolumeEffecttype = 2;
 force force ace_medical_feedback_painEffecttype = 2;
 force force ace_medical_fractureChance = 0.45;
@@ -164,8 +164,8 @@ force force ace_medical_gui_maxdistance = 3;
 force force ace_medical_ivFlowRate = 2;
 force force ace_medical_limping = 1;
 force force ace_medical_painCoefficient = 1;
-force force ace_medical_playerdamageThreshold = 3;
-force force ace_medical_spontaneousWakeUpChance = 0.15;
+force force ace_medical_playerdamageThreshold = 3.5; // Increased damage threshold for players, high caliber weapons should still be fatal
+force force ace_medical_spontaneousWakeUpChance = 0.25;
 force force ace_medical_spontaneousWakeUpEpinephrineBoost = 2.45;
 force force ace_medical_statemachine_AIUnconsciousness = true;
 force force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
