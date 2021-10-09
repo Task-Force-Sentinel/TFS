@@ -413,7 +413,7 @@ force TFS_AI_AimingShake = 0.45;
 force TFS_AI_Aimingspeed = 0.3;
 force TFS_AI_Commanding = .75;
 force TFS_AI_Courage = .75;
-force TFS_AI_General = 1;
+force TFS_AI_General = .675;
 force TFS_AI_initialAI = true;
 force TFS_AI_reloadspeed = 0.5;
 force TFS_AI_Reporting = false;
@@ -537,7 +537,7 @@ force force TFS_fries_autoAdd = true;
 force force TFS_grass_enabled = true;
 
 // TFS insurgents
-force force TFS_insurgents_enabled_CUP = true;
+force force TFS_insurgents_enabled_CUP = false;
 force force TFS_insurgents_enabled_Vanilla = true;
 
 // TFS interactions
@@ -696,7 +696,7 @@ force force lambs_danger_disableAIHidefromtanksandAircraft = false;
 force force lambs_danger_disableAIplayergroup = false;
 force force lambs_danger_disableAIplayergroupReaction = false;
 force force lambs_danger_disableAutonomousFlares = false;
-force force lambs_danger_panicChance = 0.1;
+force force lambs_danger_panicChance = 0.2;
 
 // LAMBS Danger Eventhandlers
 force force lambs_eventhandlers_explosionEventHandlerEnabled = true;
