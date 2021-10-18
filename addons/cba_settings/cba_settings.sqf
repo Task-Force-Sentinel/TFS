@@ -1,3 +1,12 @@
+// Rank
+force force Ranks_CAPTAIN = "";
+force force Ranks_COLONEL = """76561198009131913""";
+force force Ranks_CORPORAL = "";
+force force Ranks_SERGEANT = """76561198000002705""";
+force force Ranks_LIEUTENANT = """76561198136101810""";
+force force Ranks_MAJOR = "";
+
+
 // ACE Advanced Ballistics
 force force ace_advanced_ballistics_ammoTemperatureEnabled = true;
 force force ace_advanced_ballistics_barrelLengthinfluenceEnabled = true;
@@ -488,7 +497,7 @@ force force TFS_boc_removeKilledplayerChestpack = false;
 
 // TFS Channels
 force force TFS_Channels_CommandDuration = 0;
-force force TFS_Channels_Commandtext = false;
+force force TFS_Channels_Commandtext = true;
 force force TFS_Channels_CommandVoice = false;
 force force TFS_Channels_DirectDuration = 0;
 force force TFS_Channels_Directtext = true;
@@ -566,7 +575,7 @@ force force TFS_Main_lockCamvehicle = false;
 force force TFS_Main_logging = true;
 force force TFS_Main_Mapicons = false;
 force force TFS_Main_MaydayAccess = 2;
-force force TFS_Main_pilotCheck = true;
+force force TFS_Main_pilotCheck = false;
 force force TFS_Main_QSMagRepack = false;
 force force TFS_Main_TFARTerraininterference = 1;
 force force TFS_Main_TFARTransmitRange = 2.5;
@@ -728,6 +737,32 @@ force lambs_main_radioeast = 500;
 force lambs_main_radioGuer = 500;
 force lambs_main_radioShout = 100;
 force lambs_main_radiowest = 500;
+
+
+// qipBFT - BFT
+force force qipBFT_bft_bftEnabled = true;
+force force qipBFT_bft_friendlySides_CIVILIAN = [0,2];
+force force qipBFT_bft_friendlySides_EAST = [3];
+force force qipBFT_bft_friendlySides_RESISTANCE = [1,3];
+force force qipBFT_bft_friendlySides_WEST = [2];
+force force qipBFT_bft_friendlySidesDynamic = true;
+force force qipBFT_bft_groupIconsInteraction = "hover";
+force force qipBFT_bft_medicalSystem = "ACE";
+force force qipBFT_bft_requireItemGPS = true;
+force force qipBFT_bft_showAIGroups = true;
+force force qipBFT_bft_showAINames = true;
+force force qipBFT_bft_showCivilians = false;
+force force qipBFT_bft_showGroupIcons = true;
+force force qipBFT_bft_showGroupText = true;
+force force qipBFT_bft_showLifeState = true;
+force force qipBFT_bft_showOwnFactionOnly = true;
+force force qipBFT_bft_showOwnGroup = true;
+force force qipBFT_bft_showOwnGroupUnits = true;
+force force qipBFT_bft_showPlayerNames = true;
+force force qipBFT_bft_showUnitNames = true;
+force force force qipBFT_bft_teamColors = "ACE";
+force force qipBFT_bft_updateInterval = 0;
+
 
 // Simplex Support Services
 force force SSS_setting_adminFullAccess = false;

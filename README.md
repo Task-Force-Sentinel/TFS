@@ -13,7 +13,7 @@ Its based/inspired on/by the following projects;
 - https://github.com/ArmaForces/Mods  -  GNU GENERAL PUBLIC LICENSE
 - https://github.com/AXEmod/AXE - GNU General Public License (GPLv3)
 - https://github.com/Theseus-Aegis/Mods - GNU General Public License (GPLv2).
-- https://github.com/DPSO/TheseusServices  - GNU General Public License (GPLv2).
+- https://github.com/tfs/TheseusServices  - GNU General Public License (GPLv2).
 - https://github.com/last-resort-gaming/LRG-Fundamentals - MIT License
 - https://github.com/TMF3/TMF - Offical license: Arma Public License Share-Alike (APL-SA)
 - https://github.com/BourbonWarfare/POTATO - GNU General Public License (GPLv2).
