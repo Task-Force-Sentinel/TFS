@@ -8,7 +8,6 @@ Thumbs.db
 *.cache
 *.swp
 *.swo
-
 @*
 *.zip
 release/*
@@ -29,6 +28,5 @@ Thumbs.db
 CHANGELOG.md
 sqfvm.exe
 ArmaScriptCompiler.exe
-*.sqfc
 ## Added by HEMTT
 ####
