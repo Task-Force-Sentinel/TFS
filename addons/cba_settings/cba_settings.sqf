@@ -411,7 +411,6 @@ force TFS_spectator_showgroupMarkers = 0;
 force TFS_AI_AimingAccuracy = 0.4;
 force TFS_AI_AimingShake = 0.45;
 force TFS_AI_Aimingspeed = 0.3;
-
 force TFS_AI_Commanding = .9;
 force TFS_AI_Courage = .9;
 force TFS_AI_General = .85;
