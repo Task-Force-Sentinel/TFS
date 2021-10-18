@@ -40,15 +40,15 @@ if (hasInterface) then {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 private _tfsmakecom = [
-	"tfsmakecom",
-	"Communications",
-	"",
-	{
-		player call tfs_rankrole_fnc_makecom;
-	},
-	{true},
-	{},
-	[_area]
+    "tfsmakecom",
+    "Communications",
+    "",
+    {
+        player call tfs_rankrole_fnc_makecom;
+    },
+    {true},
+    {},
+    [_area]
 ] call ACE_interact_menu_fnc_createAction;
 
 [this, 0, ["ACE_MainActions"], _tfsmakecom] call ACE_interact_menu_fnc_addActionToObject;
@@ -56,14 +56,14 @@ private _tfsmakecom = [
 ////////////////////////////////////////////////////////////////////////////////////////////////
 private _tfsmakeeng = [
     "tfsmakeeng",
-	"Engineer",
-	"",
-	{
-		player call tfs_rankrole_fnc_makeeng;
-	},
-	{true},
-	{},
-	[_area]
+    "Engineer",
+    "",
+    {
+        player call tfs_rankrole_fnc_makeeng;
+    },
+    {true},
+    {},
+    [_area]
 ] call ACE_interact_menu_fnc_createAction;
 
 [this, 0, ["ACE_MainActions"], _tfsmakeeng] call ACE_interact_menu_fnc_addActionToObject;
@@ -71,14 +71,14 @@ private _tfsmakeeng = [
 ////////////////////////////////////////////////////////////////////////////////////////////////
 private _tfsmakemed = [
     "tfsmakemed",
-	"Medic",
-	"",
-	{
-		player call tfs_rankrole_fnc_makemed;
-	},
-	{true},
-	{},
-	[_area]
+    "Medic",
+    "",
+    {
+        player call tfs_rankrole_fnc_makemed;
+    },
+    {true},
+    {},
+    [_area]
 ] call ACE_interact_menu_fnc_createAction;
 
 [this, 0, ["ACE_MainActions"], _tfsmakemed] call ACE_interact_menu_fnc_addActionToObject;
@@ -87,14 +87,14 @@ private _tfsmakemed = [
 ////////////////////////////////////////////////////////////////////////////////////////////////
 private _tfsmakewep = [
     "tfsmakewep",
-	"Weapons",
-	"",
-	{
-		player call tfs_rankrole_fnc_makewep;
-	},
-	{true},
-	{},
-	[_area]
+    "Weapons",
+    "",
+    {
+        player call tfs_rankrole_fnc_makewep;
+    },
+    {true},
+    {},
+    [_area]
 ] call ACE_interact_menu_fnc_createAction;
 
 [this, 0, ["ACE_MainActions"], _tfsmakewep] call ACE_interact_menu_fnc_addActionToObject;
