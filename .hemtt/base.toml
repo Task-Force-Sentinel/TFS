@@ -1,0 +1,28 @@
+name = "TFS"
+prefix = "tfs"
+author = "TFS"
+template = "cba"
+mainprefix = "z"
+folder_optionals = true
+sig_version = 3
+
+files = [
+    "mod.cpp",
+    "README.md",
+    "LICENSE.md",
+    "extras/addons",
+    "extras/keys"
+    ]
+
+exclude = ["*.psd", "*.png", "*.tga"]
+
+
+modname = "{{name}}"
+key_name = "{{prefix}}_{{version}}"
+authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
+releasebuild = [
+    "@zip @TFS_{{version}}"
+]
+
+[header_exts]
+version = "{{git \"id 8\"}}"
