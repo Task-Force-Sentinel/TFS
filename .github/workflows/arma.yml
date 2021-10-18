@@ -32,17 +32,12 @@ jobs:
       continue-on-error: true # No failure due to many false-positives
 
   sqfc:
-    windows:
-      name: Windows
-
       runs-on: windows-latest
       steps:
         - name: Checkout
           uses: actions/checkout@v2
-
         - name: Create work drive
           run: 'subst P: .'
-
         - uses: arma-actions/sqfc@latest
           with:
             directory: .
