@@ -3,7 +3,7 @@ name: Arma
 on:
   push:
     branches:
-    - master
+    - main
   pull_request:
 
 jobs:
@@ -44,5 +44,5 @@ jobs:
           command: build --release --ci
       - uses: actions/upload-artifact@master
         with:
-          name: TFS-${{ github.sha }}-nobin
+          name: TFS-${{ github.sha }}
           path: 'releases/@TFS*.zip'
