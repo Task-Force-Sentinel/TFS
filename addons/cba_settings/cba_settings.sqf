@@ -415,10 +415,10 @@ force TFS_AI_Commanding = .9;
 force TFS_AI_Courage = .9;
 force TFS_AI_General = .85;
 force TFS_AI_initialAI = true;
-force TFS_AI_reloadspeed = 0.5;
+force TFS_AI_reloadspeed = 0.7;
 force TFS_AI_Reporting = false;
-force TFS_AI_Spotdistance = 0.4;
-force TFS_AI_Spottime = 0.2;
+force TFS_AI_Spotdistance = 0.6;
+force TFS_AI_Spottime = 0.4;
 
 // TFS AI Disembark
 force force TFS_ai_disembark_enabled = true;
