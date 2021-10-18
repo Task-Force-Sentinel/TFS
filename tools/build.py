@@ -5,20 +5,9 @@ import sys
 import subprocess
 
 ######## GLOBALS #########
-MAINPREFIX = "x"
-PREFIX = "zen_"
+MAINPREFIX = "z"
+PREFIX = "tfs_"
 ##########################
-
-def tryHemttBuild(projectpath):
-    hemttExe = os.path.join(projectpath, "hemtt.exe")
-    if os.path.isfile(hemttExe):
-        os.chdir(projectpath)
-        ret = subprocess.call([hemttExe, "pack"], stderr=subprocess.STDOUT)
-        print("Using HEMTT: {}".format(ret));
-        return True
-    else:
-        print("HEMTT is not available");
-    return False
 
 def mod_time(path):
     if not os.path.isdir(path):
@@ -42,16 +31,14 @@ def check_for_obsolete_pbos(addonspath, file):
 
 def main():
     print("""
-  ###################
-  # ZEN Debug Build #
-  ###################
+  ####################
+  # PROJ_TEMPL3 Debug Build #
+  ####################
 """)
 
     scriptpath = os.path.realpath(__file__)
     projectpath = os.path.dirname(os.path.dirname(scriptpath))
     addonspath = os.path.join(projectpath, "addons")
-
-    if (tryHemttBuild(projectpath)): return
 
     os.chdir(addonspath)
 

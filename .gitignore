@@ -27,6 +27,8 @@ texHeaders.bin
 Thumbs.db
 CHANGELOG.md
 sqfvm.exe
-ArmaScriptCompiler.exe
+.vscode/
+*.sqfc
+ArmaScriptCompiler.*
 ## Added by HEMTT
 ####
