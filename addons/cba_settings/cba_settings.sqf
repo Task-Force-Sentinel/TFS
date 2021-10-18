@@ -417,17 +417,17 @@ force TFS_spectator_isJIPAllowed = 2;
 force TFS_spectator_showgroupMarkers = 0;
 
 // TFS AI
-force TFS_AI_AimingAccuracy = 0.4;
+force TFS_AI_AimingAccuracy = 0.45;
 force TFS_AI_AimingShake = 0.45;
-force TFS_AI_Aimingspeed = 0.3;
-force TFS_AI_Commanding = .75;
-force TFS_AI_Courage = .75;
-force TFS_AI_General = .675;
+force TFS_AI_Aimingspeed = 0.45;
+force TFS_AI_Commanding = .9;
+force TFS_AI_Courage = .9;
+force TFS_AI_General = .85;
 force TFS_AI_initialAI = true;
-force TFS_AI_reloadspeed = 0.5;
+force TFS_AI_reloadspeed = 0.7;
 force TFS_AI_Reporting = false;
-force TFS_AI_Spotdistance = 0.4;
-force TFS_AI_Spottime = 0.2;
+force TFS_AI_Spotdistance = .85;
+force TFS_AI_Spottime = .85;
 
 // TFS AI Disembark
 force force TFS_ai_disembark_enabled = true;
@@ -664,13 +664,13 @@ force force kat_breathing_hemopneumothoraxChance = 25;
 force force kat_breathing_medLvl_Chestseal = 1;
 force force kat_breathing_medLvl_hemopneumothoraxTreatment = 1;
 force force kat_breathing_medLvl_Pulseoximeter = 0;
-force force kat_breathing_pneumothorax = 40;
+force force kat_breathing_pneumothorax = 25;
 force force kat_breathing_pneumothorax_hardcore = false;
 force force kat_breathing_pneumothoraxdamageThreshold = 0.4;
-force force kat_breathing_spo2_big_value = 66;
+force force kat_breathing_spo2_big_value = 30;
 force force kat_breathing_SpO2_dieActive = false;
-force force kat_breathing_SpO2_dieValue = 49.7444;
-force force kat_breathing_spo2_small_value = 30;
+force force kat_breathing_SpO2_dieValue = 29.7444;
+force force kat_breathing_spo2_small_value = 20;
 force force kat_breathing_Stable_spo2 = 80.25;
 force force kat_breathing_tensionhemothorax_hardcore = false;
 
