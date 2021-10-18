@@ -149,12 +149,12 @@ force force ace_maptools_drawstraightLines = true;
 
 // ACE Medical
 force force ace_medical_ai_enabledfor = 2;
-force force ace_medical_AIdamageThreshold = 1;
+force force ace_medical_AIdamageThreshold = 1;// Decreased AI damage threshold so AI dies in single headshot and few torso taps depending on vest
 force force ace_medical_bleedingCoefficient = 0.1;
 force force ace_medical_blood_bloodLifetime = 900;
 force force ace_medical_blood_enabledfor = 2;
 force force ace_medical_blood_maxBloodobjects = 500;
-force force ace_medical_fataldamageSource = 0;
+force force ace_medical_fataldamageSource = 0; // Sum of Trauma death condition
 force force ace_medical_feedback_bloodVolumeEffecttype = 2;
 force force ace_medical_feedback_painEffecttype = 2;
 force force ace_medical_fractureChance = 0.45;
@@ -164,10 +164,10 @@ force force ace_medical_gui_maxdistance = 3;
 force force ace_medical_ivFlowRate = 2;
 force force ace_medical_limping = 1;
 force force ace_medical_painCoefficient = 1;
-force force ace_medical_playerdamageThreshold = 2;
-force force ace_medical_spontaneousWakeUpChance = 0.15;
+force force ace_medical_playerdamageThreshold = 3.5; // Increased damage threshold for players, high caliber weapons should still be fatal
+force force ace_medical_spontaneousWakeUpChance = 0.25;
 force force ace_medical_spontaneousWakeUpEpinephrineBoost = 2.45;
-force force ace_medical_statemachine_AIUnconsciousness = true;
+force force ace_medical_statemachine_AIUnconsciousness = false;
 force force ace_medical_statemachine_cardiacArrestBleedoutEnabled = true;
 force force ace_medical_statemachine_cardiacArresttime = 360;
 force force ace_medical_statemachine_fatalinjuriesAI = 0;
@@ -198,7 +198,7 @@ force force ace_medical_treatment_medicEpinephrine = 1;
 force force ace_medical_treatment_medicIV = 1;
 force force ace_medical_treatment_medicPAK = 1;
 force force ace_medical_treatment_medicSurgicalKit = 1;
-force force ace_medical_treatment_timeCoefficientPAK = 2;
+force force ace_medical_treatment_timeCoefficientPAK = 1;
 force force ace_medical_treatment_treatmenttimeAutoinjector = 5;
 force force ace_medical_treatment_treatmenttimeBodyBag = 15;
 force force ace_medical_treatment_treatmenttimeCPR = 15;
@@ -411,9 +411,9 @@ force TFS_spectator_showgroupMarkers = 0;
 force TFS_AI_AimingAccuracy = 0.4;
 force TFS_AI_AimingShake = 0.45;
 force TFS_AI_Aimingspeed = 0.3;
-force TFS_AI_Commanding = 1;
-force TFS_AI_Courage = 1;
-force TFS_AI_General = 1;
+force TFS_AI_Commanding = .75;
+force TFS_AI_Courage = .75;
+force TFS_AI_General = .675;
 force TFS_AI_initialAI = true;
 force TFS_AI_reloadspeed = 0.5;
 force TFS_AI_Reporting = false;
@@ -537,7 +537,7 @@ force force TFS_fries_autoAdd = true;
 force force TFS_grass_enabled = true;
 
 // TFS insurgents
-force force TFS_insurgents_enabled_CUP = true;
+force force TFS_insurgents_enabled_CUP = false;
 force force TFS_insurgents_enabled_Vanilla = true;
 
 // TFS interactions
@@ -651,17 +651,17 @@ force force kat_airway_TurnAround_time = 2;
 
 // KAT - ADV Medical: Breathing
 force force kat_breathing_enable = true;
-force force kat_breathing_hemopneumothoraxChance = 10;
+force force kat_breathing_hemopneumothoraxChance = 25;
 force force kat_breathing_medLvl_Chestseal = 1;
 force force kat_breathing_medLvl_hemopneumothoraxTreatment = 1;
 force force kat_breathing_medLvl_Pulseoximeter = 0;
-force force kat_breathing_pneumothorax = 20;
+force force kat_breathing_pneumothorax = 25;
 force force kat_breathing_pneumothorax_hardcore = false;
 force force kat_breathing_pneumothoraxdamageThreshold = 0.4;
-force force kat_breathing_spo2_big_value = 66;
+force force kat_breathing_spo2_big_value = 30;
 force force kat_breathing_SpO2_dieActive = false;
-force force kat_breathing_SpO2_dieValue = 49.7444;
-force force kat_breathing_spo2_small_value = 30;
+force force kat_breathing_SpO2_dieValue = 29.7444;
+force force kat_breathing_spo2_small_value = 20;
 force force kat_breathing_Stable_spo2 = 80.25;
 force force kat_breathing_tensionhemothorax_hardcore = false;
 
@@ -696,7 +696,7 @@ force force lambs_danger_disableAIHidefromtanksandAircraft = false;
 force force lambs_danger_disableAIplayergroup = false;
 force force lambs_danger_disableAIplayergroupReaction = false;
 force force lambs_danger_disableAutonomousFlares = false;
-force force lambs_danger_panicChance = 0.1;
+force force lambs_danger_panicChance = 0.2;
 
 // LAMBS Danger Eventhandlers
 force force lambs_eventhandlers_explosionEventHandlerEnabled = true;
