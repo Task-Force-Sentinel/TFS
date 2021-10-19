@@ -1,6 +1,6 @@
 /*
  * ARMA EXTENDED ENVIRONMENT
- * \tfs_common\functions\addons\fn_getAddonURL.sqf
+ * \z\tfs\addons\core\functions\addons\fn_getAddonURL.sqf
  * by Ojemineh
  * 
  * get addon url
@@ -12,7 +12,7 @@
  * <STRING>
  * 
  * Example:
- * ["TFS_core"] call tfs_fnc_getAddonURL;
+ * ["tfs_core"] call TFS_fnc_getAddonURL;
  * 
  */
 
@@ -27,7 +27,7 @@ _classname = [_this, 0, "", [""]] call BIS_fnc_param;
 private _return = "";
 
 if (isClass (configfile >> "CfgPatches" >> _classname)) then {
-    _return = getText (configfile >> "CfgPatches" >> _classname >> "url");
+ _return = getText (configfile >> "CfgPatches" >> _classname >> "url");
 };
 
 _return;

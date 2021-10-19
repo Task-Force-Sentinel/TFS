@@ -1,6 +1,6 @@
 /*
  * ARMA EXTENDED ENVIRONMENT
- * \tfs_common\functions\common\fn_createLitter.sqf
+ * \z\tfs\addons\core\functions\common\fn_createLitter.sqf
  * by Ojemineh
  * 
  * create litter on ground
@@ -14,7 +14,7 @@
  * nothing
  * 
  * Example:
- * [player, "MedicalGarbage_01_FirstAidKit_F"] call tfs_fnc_createLitter;
+ * [player, "MedicalGarbage_01_FirstAidKit_F"] call TFS_fnc_createLitter;
  * 
  */
 
@@ -36,5 +36,5 @@ if (_offset isEqualTo []) then {_offset = [0,0,0];};
 // -------------------------------------------------------------------------------------------------
 
 if (missionNamespace getVariable ["ace_medical_allowLitterCreation", false]) then {
-    [_unit, _className, _offset] remoteExecCall ["TFS_fnc_createLitterServer", 2];
+ [_unit, _className, _offset] remoteExecCall ["TFS_fnc_createLitterServer", 2];
 };

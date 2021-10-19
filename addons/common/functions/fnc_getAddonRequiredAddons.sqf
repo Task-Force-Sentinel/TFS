@@ -1,6 +1,6 @@
 /*
  * ARMA EXTENDED ENVIRONMENT
- * \tfs_common\functions\addons\fn_getAddonRequiredAddons.sqf
+ * \z\tfs\addons\core\functions\addons\fn_getAddonRequiredAddons.sqf
  * by Ojemineh
  * 
  * get addon required addons
@@ -12,7 +12,7 @@
  * <ARRAY>
  * 
  * Example:
- * ["TFS_core"] call tfs_fnc_getAddonRequiredAddons;
+ * ["tfs_core"] call TFS_fnc_getAddonRequiredAddons;
  * 
  */
 
@@ -27,7 +27,7 @@ _classname = [_this, 0, "", [""]] call BIS_fnc_param;
 private _return = [];
 
 if (isClass (configfile >> "CfgPatches" >> _classname)) then {
-    _return = getArray (configfile >> "CfgPatches" >> _classname >> "requiredAddons");
+ _return = getArray (configfile >> "CfgPatches" >> _classname >> "requiredAddons");
 };
 
 _return;

@@ -2,7 +2,7 @@ PREP(dummy);
 PREP(numToColor);
 PREP(getCfgEntry);
 PREP(getCfgEntryFromPath);
-PREP(numToSide);
+PREP(numToSide); // rename
 PREP(numToTexture);
 PREP(sideToNum);
 PREP(sideToString);
@@ -11,7 +11,6 @@ PREP(sideToHexColor);
 PREP(sideToTexture);
 PREP(sideType);
 PREP(evaluateCondArray);
-PREP(isAdmin);
 PREP(capitalize);
 PREP(initGroupVar);
 PREP(getNearestRoad);
@@ -48,40 +47,71 @@ PREP(readConfigToNamespace);
 PREP(easterDate);
 PREP(runAfterSettingsInit);
 
-//// Addons 
-PREP (getAddonAuthor);
-PREP (getAddonAuthors);
-PREP (getAddonName);
-PREP (getAddonRequiredAddons);
-PREP (getAddonRequiredVersion);
-PREP (getAddonUnits);
-PREP (getAddonURL);
-PREP (getAddonVersion);
-PREP (getAddonVersionArray);
-PREP (getAddonVersionString);
-PREP (getAddonWeapons);
-PREP (isAddon);
-////// Common 
-PREP (addItem);
-PREP (attachToRel);
-PREP (createLitter);
-PREP (createLitterServer);
-PREP (getUnitInsignia);
-PREP (isAdmin);
-PREP (isInBuilding);
-
 /////// Settings 
 PREP (getKeybindString);
 PREP (needRestart);
 PREP (needRestartLocal);
 
-///tfs
-// PREP(customMark);
-// PREP(initDB);
-// PREP(initIntelObject);
-// PREP(isAdmin);
-// PREP(missionInitialization);
-// PREP(objectMarkers);
-// PREP(paramToBool);
-// PREP(rptLog);
-// PREP(uavIntro);
+//////Addons
+PREP(getAddonAuthor);
+PREP(getAddonAuthors);
+PREP(getAddonName);
+PREP(getAddonRequiredAddons);
+PREP(getAddonRequiredVersion);
+PREP(getAddonUnits);
+PREP(getAddonURL);
+PREP(getAddonVersion);
+PREP(getAddonVersionArray);
+PREP(getAddonVersionString);
+PREP(getAddonWeapons);
+PREP(isAddon);
+
+///core
+PREP(addItem);
+PREP(attachToRel);
+PREP(createLitter);
+PREP(createLitterServer);
+PREP(getUnitInsignia);
+PREP(isAdmin);
+PREP(isCurator);
+PREP(isInBuilding);
+PREP(screenshot);
+PREP(setUnitInsignia);
+
+
+////Diagnostic 
+PREP(diagLog);
+PREP(diagLogGlobal);
+PREP(diagLogServer);
+PREP(isDebug);
+PREP(log);
+PREP(logGlobal);
+PREP(logServer);
+
+////Sounds
+PREP(decibelToGain);
+PREP(gainToDecibel);
+PREP(getSoundDistance);
+PREP(getSoundDuration);
+PREP(getSoundFile);
+PREP(getSoundPitch);
+PREP(getSoundVolume);
+PREP(isSpeaking);
+PREP(loop3dSound);
+PREP(loop3dSoundLocal);
+PREP(play3dSound);
+PREP(play3dSoundLocal);
+PREP(playSound);
+PREP(playSoundLocal);
+PREP(playSound3d);
+PREP(say3d);
+PREP(say3dLocal);
+PREP(speak3d);
+PREP(speak3dLocal);
+PREP(stop3dSound);
+PREP(stop3dSoundLocal);
+
+////Videos
+PREP(playVideo);
+PREP(playVideoOnce);
+PREP(videoKeyDown);

@@ -1,29 +1,40 @@
 /*
- * Name: TFS_common_fnc_isAdmin
- * Author: Snippers
- *
+ * ARMA EXTENDED ENVIRONMENT
+ * \z\tfs\addons\core\functions\common\fn_isAdmin.sqf
+ * by Ojemineh
+ * 
+ * check if player is admin
+ * 
  * Arguments:
- * None
- *
+ * nothing
+ * 
  * Return:
- * boolean
- *
- * Description:
- * Use this function to determine if the local client is admin
+ * <BOOLEAN>
+ * 
+ * Example:
+ * [] call TFS_fnc_isAdmin;
+ * 
  */
- 
+
+// -------------------------------------------------------------------------------------------------
+
 private _return = false;
 
-if (isServer or serverCommandAvailable "#kick") then {
-    _return = true;
+if (isMultiplayer) then {
+ 
+ if (hasInterface && isServer) then {
+  // HOSTED
+  _return = true;
+ } else {
+  if ((call BIS_fnc_admin) > 0) then {
+   // DEDICATED
+   _return = true;
+  };
+ };
+ 
+} else {
+ // SINGLEPLAYER
+ _return = true;
 };
 
-// Check 1Tac Admin IDs.
-if (!isNil "tac1_adminIDs") then {
-    private _localID = [] call tac1_admin_local_uid;
-    if (_localID in ([] call tac1_adminIDs)) then {
-        _return = true;
-    };
-}; 
-
-_return
+_return;

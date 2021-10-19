@@ -35,7 +35,7 @@ releasebuild = [
 ]
 
 [header_exts]
-version = "{{version}}_{{git \"id 8\"}}"
+version = "{{git \"id 8\"}}"
 
 
 [scripts.compile_scripts]

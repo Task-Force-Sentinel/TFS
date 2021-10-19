@@ -1,6 +1,6 @@
 /*
  * ARMA EXTENDED ENVIRONMENT
- * \tfs_common\functions\common\fn_attachToRel.sqf
+ * \z\tfs\addons\core\functions\common\fn_attachToRel.sqf
  * by Ojemineh
  * 
  * attach object relative to parent
@@ -13,7 +13,7 @@
  * nothing
  * 
  * Example:
- * [player, vehicle1] call tfs_fnc_attachToRel;
+ * [player, vehicle1] call TFS_fnc_attachToRel;
  * 
  */
 
@@ -32,19 +32,19 @@ if (isNull _parent) exitWith {};
 // -------------------------------------------------------------------------------------------------
 
 private _vectorDirAndUpRel = {
-    
+ 
     private ["_o", "_p", "_v"];
-    
+ 
     _o = _this select 0;
     _p = _this select 1;
-    
+ 
     _v = _p worldToModelVisual [0,0,0];
-    
+ 
     [
         _p worldToModelVisual vectorDirVisual _o vectorDiff _v,
         _p worldToModelVisual vectorUpVisual _o vectorDiff _v
     ]
-    
+ 
 };
 
 private _vector = _this call _vectorDirAndUpRel;

@@ -1,6 +1,6 @@
 /*
  * ARMA EXTENDED ENVIRONMENT
- * \tfs_common\functions\addons\fn_getAddonRequiredVersion.sqf
+ * \z\tfs\addons\core\functions\addons\fn_getAddonRequiredVersion.sqf
  * by Ojemineh
  * 
  * get addon required version
@@ -12,7 +12,7 @@
  * <STRING>
  * 
  * Example:
- * ["TFS_core"] call tfs_fnc_getAddonRequiredVersion;
+ * ["tfs_core"] call TFS_fnc_getAddonRequiredVersion;
  * 
  */
 
@@ -27,7 +27,7 @@ _classname = [_this, 0, "", [""]] call BIS_fnc_param;
 private _return = 0;
 
 if (isClass (configfile >> "CfgPatches" >> _classname)) then {
-    _return = getNumber (configfile >> "CfgPatches" >> _classname >> "requiredVersion");
+ _return = getNumber (configfile >> "CfgPatches" >> _classname >> "requiredVersion");
 };
 
 _return;

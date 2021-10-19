@@ -66,7 +66,7 @@ private _fnc_fileExists = {
 } forEach _indexesToTrigger;
 
 //Do Admin briefing.
-if ([] call tfs_common_fnc_isAdmin) then {
+if ([] call tfs_fnc_isAdmin) then {
     if (("briefing\admin.sqf") call _fnc_fileExists) then {
         call compile preprocessfilelinenumbers "briefing\admin.sqf";
     } else {
