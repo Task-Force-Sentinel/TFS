@@ -1,6 +1,6 @@
 /*
  * ARMA EXTENDED ENVIRONMENT
- * \tfs_common\functions\common\fn_createLitterServer.sqf
+ * \z\tfs\addons\core\functions\common\fn_createLitterServer.sqf
  * by Ojemineh
  * 
  * create litter on ground
@@ -14,7 +14,7 @@
  * nothing
  * 
  * Example:
- * [player, "MedicalGarbage_01_FirstAidKit_F"] call tfs_fnc_createLitterServer;
+ * [player, "MedicalGarbage_01_FirstAidKit_F"] call TFS_fnc_createLitterServer;
  * 
  */
 
@@ -41,22 +41,22 @@ if (Not (missionNamespace getVariable ["ace_medical_allowLitterCreation", false]
 // -------------------------------------------------------------------------------------------------
 
 [_unit, _className, _offset] spawn {
-    
-    params ["_unit", "_className", "_offset"];
-    
-    private _posASL = AGLtoASL (_unit modelToWorld _offset);
-    private _litter = createSimpleObject [_className, _posASL];
-    
-    _litter setDir (random 360);
-    
-    if ([_unit] call tfs_fnc_isInBuilding) then {
-        _litter setVectorUp [0,0,1];
-    } else {
-        _litter setVectorUp surfaceNormal position _litter;
-    };
-    
-    private _delay = round (missionNamespace getVariable ["ace_medical_litterCleanUpDelay", 120]);
-    
-    [{deleteVehicle _this;}, _litter, _delay] call CBA_fnc_waitAndExecute;
-    
+ 
+ params ["_unit", "_className", "_offset"];
+ 
+ private _posASL = AGLtoASL (_unit modelToWorld _offset);
+ private _litter = createSimpleObject [_className, _posASL];
+ 
+ _litter setDir (random 360);
+ 
+ if ([_unit] call TFS_fnc_isInBuilding) then {
+  _litter setVectorUp [0,0,1];
+ } else {
+  _litter setVectorUp surfaceNormal position _litter;
+ };
+ 
+ private _delay = round (missionNamespace getVariable ["ace_medical_litterCleanUpDelay", 120]);
+ 
+ [{deleteVehicle _this;}, _litter, _delay] call CBA_fnc_waitAndExecute;
+ 
 };

@@ -11,26 +11,12 @@ class CfgFunctions {
         };
         
     };
-    
+    /* 
     class TFS_Functions {
         
         tag = "tfs";
         
-        class Addons {
-            file = "z\tfs\addons\core\functions\addons";
-            class getAddonAuthor {};
-            class getAddonAuthors {};
-            class getAddonName {};
-            class getAddonRequiredAddons {};
-            class getAddonRequiredVersion {};
-            class getAddonUnits {};
-            class getAddonURL {};
-            class getAddonVersion {};
-            class getAddonVersionArray {};
-            class getAddonVersionString {};
-            class getAddonWeapons {};
-            class isAddon {};
-        };
+      
         
         class core {
             file = "z\tfs\addons\core\functions\common";
@@ -89,6 +75,6 @@ class CfgFunctions {
             class videoKeyDown {};
         };
         
-    };
+    }; */
     
 };

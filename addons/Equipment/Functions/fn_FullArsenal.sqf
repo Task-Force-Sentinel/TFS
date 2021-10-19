@@ -51,6 +51,7 @@ _ArsenalType = call {
  if (_Type isEqualTo "TFS") exitwith {
         _AvailableItems = [
             "ACE_RangeTable_82mm",
+            "ALIVE_Tablet",
             "ACE_adenosine",
             "ACE_artilleryTable",
             "ACE_ATragMX",

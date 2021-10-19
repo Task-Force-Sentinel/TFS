@@ -1,6 +1,6 @@
 /*
  * ARMA EXTENDED ENVIRONMENT
- * \tfs_common\functions\common\fn_getUnitInsignia.sqf
+ * \z\tfs\addons\core\functions\common\fn_getUnitInsignia.sqf
  * by Ojemineh
  * 
  * get unit insignia
@@ -12,7 +12,7 @@
  * <STRING>
  * 
  * Example:
- * [player] call tfs_fnc_getUnitInsignia;
+ * [player] call TFS_fnc_getUnitInsignia;
  * 
  */
 

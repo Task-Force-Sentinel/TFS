@@ -1,6 +1,6 @@
 /*
  * ARMA EXTENDED ENVIRONMENT
- * \tfs_common\functions\addons\fn_getAddonVersionArray.sqf
+ * \z\tfs\addons\core\functions\addons\fn_getAddonVersionArray.sqf
  * by Ojemineh
  * 
  * get addon version array
@@ -12,7 +12,7 @@
  * <ARRAY>
  * 
  * Example:
- * ["TFS_core"] call tfs_fnc_getAddonVersionArray;
+ * ["tfs_core"] call TFS_fnc_getAddonVersionArray;
  * 
  */
 
@@ -27,7 +27,7 @@ _classname = [_this, 0, "", [""]] call BIS_fnc_param;
 private _return = [];
 
 if (isClass (configfile >> "CfgPatches" >> _classname)) then {
-    _return = getArray (configfile >> "CfgPatches" >> _classname >> "versionAr");
+ _return = getArray (configfile >> "CfgPatches" >> _classname >> "versionAr");
 };
 
 _return;

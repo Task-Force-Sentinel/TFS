@@ -1,5 +1,5 @@
 class CfgMarkers {
-    // Units
+    /// Units
     class iconcasap {
         name = "CAS Action Point";
         icon = "z\tfs\addons\Media\images\map\AP.paa";

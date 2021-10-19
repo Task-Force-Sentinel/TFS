@@ -1,3 +1,12 @@
+// Rank
+force force Ranks_CAPTAIN = "";
+force force Ranks_COLONEL = """76561198009131913""";
+force force Ranks_CORPORAL = "";
+force force Ranks_SERGEANT = """76561198000002705""";
+force force Ranks_LIEUTENANT = """76561198136101810""";
+force force Ranks_MAJOR = "";
+
+
 // ACE Advanced Ballistics
 force force ace_advanced_ballistics_ammoTemperatureEnabled = true;
 force force ace_advanced_ballistics_barrelLengthinfluenceEnabled = true;
@@ -408,17 +417,17 @@ force TFS_spectator_isJIPAllowed = 2;
 force TFS_spectator_showgroupMarkers = 0;
 
 // TFS AI
-force TFS_AI_AimingAccuracy = 0.4;
+force TFS_AI_AimingAccuracy = 0.45;
 force TFS_AI_AimingShake = 0.45;
-force TFS_AI_Aimingspeed = 0.3;
-force TFS_AI_Commanding = .75;
-force TFS_AI_Courage = .75;
-force TFS_AI_General = .675;
+force TFS_AI_Aimingspeed = 0.45;
+force TFS_AI_Commanding = .9;
+force TFS_AI_Courage = .9;
+force TFS_AI_General = .85;
 force TFS_AI_initialAI = true;
-force TFS_AI_reloadspeed = 0.5;
+force TFS_AI_reloadspeed = 0.7;
 force TFS_AI_Reporting = false;
-force TFS_AI_Spotdistance = 0.4;
-force TFS_AI_Spottime = 0.2;
+force TFS_AI_Spotdistance = .85;
+force TFS_AI_Spottime = .85;
 
 // TFS AI Disembark
 force force TFS_ai_disembark_enabled = true;
@@ -488,7 +497,7 @@ force force TFS_boc_removeKilledplayerChestpack = false;
 
 // TFS Channels
 force force TFS_Channels_CommandDuration = 0;
-force force TFS_Channels_Commandtext = false;
+force force TFS_Channels_Commandtext = true;
 force force TFS_Channels_CommandVoice = false;
 force force TFS_Channels_DirectDuration = 0;
 force force TFS_Channels_Directtext = true;
@@ -566,7 +575,7 @@ force force TFS_Main_lockCamvehicle = false;
 force force TFS_Main_logging = true;
 force force TFS_Main_Mapicons = false;
 force force TFS_Main_MaydayAccess = 2;
-force force TFS_Main_pilotCheck = true;
+force force TFS_Main_pilotCheck = false;
 force force TFS_Main_QSMagRepack = false;
 force force TFS_Main_TFARTerraininterference = 1;
 force force TFS_Main_TFARTransmitRange = 2.5;
@@ -655,13 +664,13 @@ force force kat_breathing_hemopneumothoraxChance = 25;
 force force kat_breathing_medLvl_Chestseal = 1;
 force force kat_breathing_medLvl_hemopneumothoraxTreatment = 1;
 force force kat_breathing_medLvl_Pulseoximeter = 0;
-force force kat_breathing_pneumothorax = 40;
+force force kat_breathing_pneumothorax = 25;
 force force kat_breathing_pneumothorax_hardcore = false;
 force force kat_breathing_pneumothoraxdamageThreshold = 0.4;
-force force kat_breathing_spo2_big_value = 66;
+force force kat_breathing_spo2_big_value = 30;
 force force kat_breathing_SpO2_dieActive = false;
-force force kat_breathing_SpO2_dieValue = 49.7444;
-force force kat_breathing_spo2_small_value = 30;
+force force kat_breathing_SpO2_dieValue = 29.7444;
+force force kat_breathing_spo2_small_value = 20;
 force force kat_breathing_Stable_spo2 = 80.25;
 force force kat_breathing_tensionhemothorax_hardcore = false;
 
@@ -728,6 +737,32 @@ force lambs_main_radioeast = 500;
 force lambs_main_radioGuer = 500;
 force lambs_main_radioShout = 100;
 force lambs_main_radiowest = 500;
+
+
+// qipBFT - BFT
+force force qipBFT_bft_bftEnabled = true;
+force force qipBFT_bft_friendlySides_CIVILIAN = [0,2];
+force force qipBFT_bft_friendlySides_EAST = [3];
+force force qipBFT_bft_friendlySides_RESISTANCE = [1,3];
+force force qipBFT_bft_friendlySides_WEST = [2];
+force force qipBFT_bft_friendlySidesDynamic = true;
+force force qipBFT_bft_groupIconsInteraction = "hover";
+force force qipBFT_bft_medicalSystem = "ACE";
+force force qipBFT_bft_requireItemGPS = true;
+force force qipBFT_bft_showAIGroups = true;
+force force qipBFT_bft_showAINames = true;
+force force qipBFT_bft_showCivilians = false;
+force force qipBFT_bft_showGroupIcons = true;
+force force qipBFT_bft_showGroupText = true;
+force force qipBFT_bft_showLifeState = true;
+force force qipBFT_bft_showOwnFactionOnly = true;
+force force qipBFT_bft_showOwnGroup = true;
+force force qipBFT_bft_showOwnGroupUnits = true;
+force force qipBFT_bft_showPlayerNames = true;
+force force qipBFT_bft_showUnitNames = true;
+force force force qipBFT_bft_teamColors = "ACE";
+force force qipBFT_bft_updateInterval = 0;
+
 
 // Simplex Support Services
 force force SSS_setting_adminFullAccess = false;

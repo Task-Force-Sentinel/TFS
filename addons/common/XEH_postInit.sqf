@@ -87,8 +87,3 @@ if (isServer) then {
 
     }] call CBA_fnc_waitUntilAndExecute;
 };
-
-if (hasInterface) then {
-    call compile preprocessFileLineNumbers QPATHTOF(tplCredits.sqf);
-    [] spawn FUNC(missionInitialization);
-};

@@ -107,11 +107,10 @@ class Extended_PreStart_EventHandlers {                 \
         count = COUNT; \
     }
 
-#define MACRO_ADDITEM(ITEM,COUNT) \
-    class _xx_##ITEM { \
-        name = #ITEM; \
-        count = COUNT; \
-    }
+#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
+    name = #ITEM; \
+    count = COUNT; \
+}
 
 #define MACRO_ADDMAGAZINE(MAGAZINE,COUNT) \
     class _xx_##MAGAZINE { \
@@ -154,10 +153,6 @@ class Extended_PreStart_EventHandlers {                 \
     class TransportWeapons {};
 
 
-#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
-    name = #ITEM; \
-    count = COUNT; \
-}
 
 
 #define GETPRVAR(var1,var2) (profileNamespace getVariable [ARR_2(var1,var2)])

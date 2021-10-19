@@ -1,6 +1,6 @@
 /*
  * ARMA EXTENDED ENVIRONMENT
- * \tfs_common\functions\addons\fn_getAddonName.sqf
+ * \z\tfs\addons\core\functions\addons\fn_getAddonName.sqf
  * by Ojemineh
  * 
  * get addon name
@@ -12,7 +12,7 @@
  * <STRING>
  * 
  * Example:
- * ["TFS_core"] call tfs_fnc_getAddonName;
+ * ["tfs_core"] call TFS_fnc_getAddonName;
  * 
  */
 
@@ -27,7 +27,7 @@ _classname = [_this, 0, "", [""]] call BIS_fnc_param;
 private _return = "";
 
 if (isClass (configfile >> "CfgPatches" >> _classname)) then {
-    _return = getText (configfile >> "CfgPatches" >> _classname >> "name");
+ _return = getText (configfile >> "CfgPatches" >> _classname >> "name");
 };
 
 _return;
