@@ -7,7 +7,7 @@ class TFS_AI {
         class InfantryGarrison {};
         class moduleAISpawns {};
         class SetInitialAI {};
-        class SetUnitSkill {};
+        //class SetUnitSkill {};
         class SpawnAI {};
         class SpawnAIZeusWrapper {};
         class RoadPatrol {};

@@ -57,7 +57,7 @@ if sys.platform == "win32":
     import winreg
 
 ######## GLOBALS #########
-project = "@zen"
+project = "@tfs"
 project_version = "1.0.0"
 arma3tools_path = ""
 work_drive = ""
@@ -66,11 +66,11 @@ make_root = ""
 release_dir = ""
 module_root_parent = ""
 optionals_root = ""
-key_name = "zen"
+key_name = "tfs"
 key = ""
 dssignfile = ""
-prefix = "zen"
-pbo_name_prefix = "zen_"
+prefix = "tfs"
+pbo_name_prefix = "tfs_"
 signature_blacklist = []
 importantFiles = ["mod.cpp", "meta.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_zen_ca.paa", "logo_zen_small_ca.paa"]
 versionFiles = ["README.md", "mod.cpp"]
