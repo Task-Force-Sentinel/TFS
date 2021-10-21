@@ -23,7 +23,10 @@ class GVAR(authorized_players) {
     };
     class storke {
         uid = "76561198009131913"
-    }
+    };
+    class Nichols {
+        uid = "76561198068698052"
+    };
 };
 
 #include "CfgFunctions.hpp"
