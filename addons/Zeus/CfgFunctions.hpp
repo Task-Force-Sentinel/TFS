@@ -5,10 +5,6 @@ class TFS_Zeus {
 
         file = "z\tfs\Addons\Zeus\Functions";
         class ConfigZeus {};
-        class moduleAISpawnsEastZeus {};
-        class moduleAISpawnsIndepZeus {};
-        class moduleAISpawnsWestZeus {};
-        class moduleCivilianSpawnsZeus {};
         class moduleSafeZoneZeus {};
         class moduleCasualty {};
         class canBeFOB {};
