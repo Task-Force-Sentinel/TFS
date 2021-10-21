@@ -22,14 +22,14 @@ jobs:
         uses: arma-actions/bom-check@master
     
 
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout the source code
-      uses: actions/checkout@master
-    - name: Lint (sqflint)
-      uses: jokoho48/sqflint@master
-      continue-on-error: true # No failure due to many false-positives
+  # lint:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Checkout the source code
+  #     uses: actions/checkout@master
+  #   - name: Lint (sqflint)
+  #     uses: jokoho48/sqflint@master
+  #     continue-on-error: true # No failure due to many false-positives
 
 
   build:
