@@ -4,6 +4,7 @@ author = "TFS"
 template = "cba"
 mainprefix = "z"
 folder_optionals = true
+sig_version = 3
 
 
 files = [
@@ -18,6 +19,8 @@ exclude = ["*.psd", "*.png", "*.tga"]
 
 
 modname = "{{name}}"
+key_name = "{{prefix}}_{{version}}"
+authority = "{{prefix}}_{{version}}-{{git \"id 8\"}}"
 
 
 check = [
