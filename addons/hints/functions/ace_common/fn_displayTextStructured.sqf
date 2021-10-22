@@ -46,7 +46,7 @@ if (_hint_enabled && _hint_option_ace) then {
         };
     };
     
-    _text = format [hint_tpl_liner_1, _text];
+    _text = format [hint_tfs_liner_1, _text];
     
     [_text] call tfs_fnc_hint;
     

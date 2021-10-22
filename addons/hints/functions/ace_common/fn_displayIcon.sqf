@@ -29,7 +29,7 @@ private _hint_option_ace = (missionNamespace getVariable ["tfs_hint_option_ace",
 
 if (_hint_enabled && _hint_option_ace) then {
  
- private _text = format [hint_tpl_icon_1, _icon, _color];
+ private _text = format [hint_tfs_icon_1, _icon, _color];
  
  [_text, -1, 0] call TFS_fnc_hint;
  

@@ -4,22 +4,17 @@
 
 #include "script_version.hpp"
 
-// Change PREP to point to folder
-#define DFUNC(module) TRIPLES(ADDON,fnc,module)
+
+#define DFUNC(var1) TRIPLES(ADDON,fnc,var1)
 
 #ifdef DISABLE_COMPILE_CACHE
     #undef PREP
-    #define PREP(var1) TRIPLES(ADDON,fnc,var1) = compile preProcessFileLineNumbers 'PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(functions\fnc,var1))'
     #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)
-    #undef PREPMAIN
-    #define PREPMAIN(var1) TRIPLES(PREFIX,fnc,var1) = compile preProcessFileLineNumbers 'PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(functions\fnc,var1))'
 #else
     #undef PREP
-    #define PREP(var1) ['PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(functions\fnc,var1))', 'TRIPLES(ADDON,fnc,var1)'] call SLX_XEH_COMPILE_NEW
-     #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
-    #undef PREPMAIN
-    #define PREPMAIN(var1) ['PATHTO_SYS(PREFIX,COMPONENT_F,DOUBLES(functions\fnc,var1))', 'TRIPLES(PREFIX,fnc,var1)'] call SLX_XEH_COMPILE_NEW
+    #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
 #endif
+
 
 #define ACE_MASSTOKG(x) ((round ((x) * 0.1 * (1/2.2046) * 100)) / 100)
 

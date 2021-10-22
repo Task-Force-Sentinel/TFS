@@ -60,5 +60,5 @@ switch (_restartID) do {
     
 };
 
-private _hint = format [hint_tpl_image_2, "\tfs_common\data\icons\settings_ca.paa", _message];
+private _hint = format [hint_tfs_image_2, "\tfs_common\data\icons\settings_ca.paa", _message];
 [_hint, 1] call tfs_fnc_hint;

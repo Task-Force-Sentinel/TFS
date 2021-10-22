@@ -1,9 +1,11 @@
-#include "\z\tfs\addons\common\script_component.hpp"
+#include "script_component.hpp"
 
-#include "XEH_PREP.sqf"
 #include "initSettings.sqf"
 
 ADDON = false;
+
+#include "XEH_PREP.hpp"
+
 
 TFS_unit = objNull;
 uiNamespace setVariable ["TFS_unit", objNull];

@@ -19,5 +19,5 @@ if (hasInterface) then {
     daoWhitelisted=false;
 
 };
-[ format [hint_tpl_default, "Engineer"] ] call tfs_fnc_hint;
+[ format [hint_tfs_default, "Engineer"] ] call tfs_fnc_hint;
 

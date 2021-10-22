@@ -48,9 +48,9 @@ PREP(easterDate);
 PREP(runAfterSettingsInit);
 
 /////// Settings 
-PREP (getKeybindString);
-PREP (needRestart);
-PREP (needRestartLocal);
+PREP(getKeybindString);
+PREP(needRestart);
+PREP(needRestartLocal);
 
 //////Addons
 PREP(getAddonAuthor);

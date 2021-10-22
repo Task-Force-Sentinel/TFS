@@ -31,7 +31,7 @@ if (_hint_option_cba) then {
         if (count _text > 0) then {_text = _text select 0;};
     };
     
-    _text = format [hint_tpl_liner_1, _text];
+    _text = format [hint_tfs_liner_1, _text];
     
     [_text, -1, -1] call TFS_fnc_hint;
     

@@ -17,4 +17,4 @@ if (hasInterface) then {
 
 };
 
-[ format [hint_tpl_default, "Weapons"] ] call tfs_fnc_hint;
+[ format [hint_tfs_default, "Weapons"] ] call tfs_fnc_hint;

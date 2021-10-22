@@ -169,10 +169,10 @@ force force ace_magazinerepack_timePerBeltLink = 8;
 force force ace_magazinerepack_timePerMagazine = 2;
 
 // ACE Map
-force force ace_map_BFT_Enabled = false;
+force force ace_map_BFT_Enabled = true;
 force force ace_map_BFT_HideAiGroups = false;
 force force ace_map_BFT_Interval = 1;
-force force ace_map_BFT_ShowPlayerNames = true;
+force force ace_map_BFT_ShowPlayerNames = false;
 force force ace_map_DefaultChannel = 1;
 force force ace_map_mapGlow = true;
 force force ace_map_mapIllumination = true;
@@ -723,13 +723,13 @@ force force TFS_Channels_GlobalDuration = 0;
 force force TFS_Channels_GlobalText = false;
 force force TFS_Channels_GlobalVoice = false;
 force force TFS_Channels_GroupDuration = 0;
-force force TFS_Channels_GroupText = false;
+force force TFS_Channels_GroupText = true;
 force force TFS_Channels_GroupVoice = false;
 force force TFS_Channels_SideDuration = 0;
-force force TFS_Channels_SideText = false;
+force force TFS_Channels_SideText = true;
 force force TFS_Channels_SideVoice = false;
 force force TFS_Channels_VehicleDuration = 0;
-force force TFS_Channels_VehicleText = false;
+force force TFS_Channels_VehicleText = true;
 force force TFS_Channels_VehicleVoice = false;
 
 // TFS Chat Commands
@@ -859,6 +859,90 @@ force force Fat_Lurch_ShowAz = true;
 force force Fat_Lurch_ShowEl = true;
 force force Fat_Lurch_ShowNorth = true;
 force force Fat_Lurch_ShowTarget = true;
+
+// VCOM AI East Skill
+force force Vcm_AISkills_East_AimingAccuracy = 0.25;
+force force Vcm_AISkills_East_aimingShake = 0.15;
+force force Vcm_AISkills_East_aimingSpeed = 0.15;
+force force Vcm_AISkills_East_commanding = 0.85;
+force force Vcm_AISkills_East_courage = 0.5;
+force force Vcm_AISkills_East_general = 0.5;
+force force Vcm_AISkills_East_reloadSpeed = 1;
+force force Vcm_AISkills_East_spotDistance = 0.85;
+force force Vcm_AISkills_East_spotTime = 0.85;
+
+// VCOM AI General Skill
+force force Vcm_AISkills_General_AimingAccuracy = 0.25;
+force force Vcm_AISkills_General_aimingShake = 0.15;
+force force Vcm_AISkills_General_aimingSpeed = 0.35;
+force force Vcm_AISkills_General_commanding = 0.85;
+force force Vcm_AISkills_General_courage = 0.5;
+force force Vcm_AISkills_General_general = 0.5;
+force force Vcm_AISkills_General_reloadSpeed = 1;
+force force Vcm_AISkills_General_spotDistance = 0.85;
+force force Vcm_AISkills_General_spotTime = 0.85;
+
+// VCOM AI Resistance Skill
+force force Vcm_AISkills_Resistance_AimingAccuracy = 0.25;
+force force Vcm_AISkills_Resistance_aimingShake = 0.15;
+force force Vcm_AISkills_Resistance_aimingSpeed = 0.15;
+force force Vcm_AISkills_Resistance_commanding = 0.85;
+force force Vcm_AISkills_Resistance_courage = 0.5;
+force force Vcm_AISkills_Resistance_general = 0.5;
+force force Vcm_AISkills_Resistance_reloadSpeed = 1;
+force force Vcm_AISkills_Resistance_spotDistance = 0.85;
+force force Vcm_AISkills_Resistance_spotTime = 0.85;
+
+// VCOM AI West Skill
+force force Vcm_AISkills_West_AimingAccuracy = 0.25;
+force force Vcm_AISkills_West_aimingShake = 0.15;
+force force Vcm_AISkills_West_aimingSpeed = 0.15;
+force force Vcm_AISkills_West_commanding = 0.85;
+force force Vcm_AISkills_West_courage = 0.5;
+force force Vcm_AISkills_West_general = 0.5;
+force force Vcm_AISkills_West_reloadSpeed = 1;
+force force Vcm_AISkills_West_spotDistance = 0.85;
+force force Vcm_AISkills_West_spotTime = 0.85;
+
+// VCOM SETTINGS
+force force VCM_ActivateAI = true;
+force force VCM_ADVANCEDMOVEMENT = true;
+force force VCM_AIDISTANCEVEHPATH = 100;
+force force VCM_AIMagLimit = 5;
+force force VCM_AISkills_General_EM = true;
+force force VCM_AISkills_General_EM_CHN = 10;
+force force VCM_AISkills_General_EM_CLDWN = 10;
+force force Vcm_AISkills_SideSpecific = true;
+force force VCM_AISNIPERS = true;
+force force VCM_AISUPPRESS = true;
+force force VCM_ARTYDELAY = 30;
+force force VCM_ARTYENABLE = true;
+force force VCM_ARTYSIDES = [GUER,EAST];
+force force VCM_CARGOCHNG = true;
+force force VCM_ClassSteal = true;
+force force VCM_Debug = false;
+force force VCM_DISEMBARKRANGE = 200;
+force force Vcm_DrivingActivated = false;
+force force VCM_ForceSpeed = true;
+force force VCM_FRMCHANGE = true;
+force force Vcm_GrenadeChance = 20;
+force force VCM_HEARINGDISTANCE = 1200;
+force force VCM_MEDICALACTIVE = true;
+force force VCM_MINECHANCE = 75;
+force force VCM_MINEENABLED = true;
+force force Vcm_PlayerAISkills = true;
+force force VCM_RAGDOLL = true;
+force force VCM_RAGDOLLCHC = 100;
+force force VCM_SIDEENABLED = [GUER,EAST];
+force force VCM_SKILLCHANGE = true;
+force force Vcm_SmokeGrenadeChance = 10;
+force force VCM_STATICARMT = 300;
+force force VCM_StealVeh = true;
+force force VCM_SUPDIST = 200;
+force force VCM_TURRETUNLOAD = true;
+force force VCM_USECBASETTINGS = true;
+force force VCM_WARNDELAY = 30;
+force force VCM_WARNDIST = 1000;
 
 // Zeus Enhanced
 force zen_common_ascensionMessages = false;

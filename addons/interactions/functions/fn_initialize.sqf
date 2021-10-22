@@ -36,14 +36,14 @@ if ((Not hasInterface) || (is3DEN)) exitWith {};
         params ["_unit", "_container"];
         
         if (Not (simulationEnabled _container)) then {
-            [ format [hint_tpl_default, localize "STR_TFS_Interactions_Inventory_Disabled"] ] call TFS_fnc_hint;
+            [ format [hint_tfs_default, localize "STR_TFS_Interactions_Inventory_Disabled"] ] call TFS_fnc_hint;
             closeDialog 0;
             true;
         } else {
             
             if (_container isKindOf "CAManBase") then {
                 if ((missionNamespace getVariable ["tfs_interactions_gear_access_enabled", 0]) == 0) then {
-                    [ format [hint_tpl_default, localize "STR_TFS_Interactions_Gear_Disabled"] ] call TFS_fnc_hint;
+                    [ format [hint_tfs_default, localize "STR_TFS_Interactions_Gear_Disabled"] ] call TFS_fnc_hint;
                     closeDialog 0;
                     true;
                 } else {

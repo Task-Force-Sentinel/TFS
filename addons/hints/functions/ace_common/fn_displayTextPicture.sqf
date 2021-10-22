@@ -47,7 +47,7 @@ if (_hint_enabled && _hint_option_ace) then {
   };
  };
  
- _text = format [hint_tpl_image_3, _image, _imageColor call BIS_fnc_colorRGBtoHTML, _text];
+ _text = format [hint_tfs_image_3, _image, _imageColor call BIS_fnc_colorRGBtoHTML, _text];
  
  [_text] call tfs_fnc_hint;
  

@@ -44,22 +44,22 @@ addCamShake [5, 1, 5];
 
 if (missionNamespace getVariable ["tfs_interactions_tapshoulder_hint", true]) then {
     
-    private _playerName = format [hint_tpl_var_1, [_player] call ACE_common_fnc_getName];
+    private _playerName = format [hint_tfs_var_1, [_player] call ACE_common_fnc_getName];
     private _shoulderName = "";
     private _iconTemplate = "<img size='2.0' shadow='0' image='%1' /><br/>%2";
     private _iconFile = "";
     
     if (_shoulder == 0) then {
-        _shoulderName = format [hint_tpl_var_1, localize "STR_TFS_Interactions_Hint_TapShoulder_Left"];
+        _shoulderName = format [hint_tfs_var_1, localize "STR_TFS_Interactions_Hint_TapShoulder_Left"];
         _iconFile = "\z\tfs\addons\interactions\data\icons\shoulder_left_ca.paa";
     } else {
-        _shoulderName = format [hint_tpl_var_1, localize "STR_TFS_Interactions_Hint_TapShoulder_Right"];
+        _shoulderName = format [hint_tfs_var_1, localize "STR_TFS_Interactions_Hint_TapShoulder_Right"];
         _iconFile = "\z\tfs\addons\interactions\data\icons\shoulder_right_ca.paa";
     };
     
     private _shoulderIcon = format [_iconTemplate, _iconFile, _shoulderName];
     private _hintMessage = format [localize "STR_TFS_Interactions_Hint_TapShoulder", _playerName, _shoulderIcon];
-    [format [hint_tpl_default, _hintMessage]] call TFS_fnc_hint;
+    [format [hint_tfs_default, _hintMessage]] call TFS_fnc_hint;
     
     if !(missionNamespace getVariable ["tfs_interactions_global_sounds", false]) then {
         playSound "TFS_Action_Shoulder_Tap_1";

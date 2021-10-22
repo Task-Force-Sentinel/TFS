@@ -18,4 +18,4 @@ if (hasInterface) then {
     daoWhitelisted=true;
 };
 
-[ format [hint_tpl_default, "Communications"] ] call tfs_fnc_hint;
+[ format [hint_tfs_default, "Communications"] ] call tfs_fnc_hint;
